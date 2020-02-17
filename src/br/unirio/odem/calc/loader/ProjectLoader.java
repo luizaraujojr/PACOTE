@@ -94,27 +94,27 @@ public class ProjectLoader
 	 */
 	private static String[] REAL_VERSION_EXTERNAL_DEPENDENCIES = 
 	{
-		// Vers�o 1.1.0
+		// Versao 1.1.0
 		"org.apache.tools.ant.taskdefs.optional.XalanLiaison",
 		"org.apache.tools.ant.taskdefs.optional.XslpLiaison",
-		// Vers�o 1.3.0
+		// Versao 1.3.0
 		"org.apache.tools.ant.taskdefs.optional.TraXLiaison",
-		// Vers�o 1.4.0
+		// Versao 1.4.0
 		"at.dms.kjc.Main",
-		// Vers�o 1.5.0
+		// Versao 1.5.0
 		"org.apache.tools.ant.taskdefs.optional.Test",
 		"org.apache.tools.ant.taskdefs.Get",
 		"org.apache.tools.ant.taskdefs.email.UUMailer",
 		"org.apache.tools.ant.taskdefs.email.MimeMailer",
-		// Vers�o 1.6.0
+		// Versao 1.6.0
 		"org.apache.tools.ant.launch.AntMain",
 		"org.apache.tools.ant.launch.Locator",
 		"org.apache.tools.ant.util.optional.WeakishReference12",
-		// Vers�o 1.7.0
+		// Versao 1.7.0
 		"org.apache.tools.ant.launch.Launcher",
 		"org.apache.tools.ant.util.java15.ProxyDiagnostics",
 		"org.apache.tools.ant.filters.util.JavaClassHelper",
-		// Vers�o 1.8.0
+		// Versao 1.8.0
 		"org.apache.tools.ant.loader.AntClassLoader5",
 		"org.apache.tools.ant.taskdefs.optional.EchoProperties"
 	};
