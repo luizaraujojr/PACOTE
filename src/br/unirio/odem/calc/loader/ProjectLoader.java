@@ -1,6 +1,7 @@
 package br.unirio.odem.calc.loader;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +26,8 @@ public class ProjectLoader
 	/**
 	 * Input directory for real versions
 	 */
-	private static String INPUT_DIRECTORY = "data\\odem\\";
+	
+	private static String INPUT_DIRECTORY =  new File(".").getAbsolutePath() + "D:\\Backup\\eclipse-workspace\\projetotese\\data\\odem\\";
 
 	/**
 	 * Datas das versoes do Apache Ant
@@ -94,30 +96,226 @@ public class ProjectLoader
 	 */
 	private static String[] REAL_VERSION_EXTERNAL_DEPENDENCIES = 
 	{
-		// Versao 1.1.0
-		"org.apache.tools.ant.taskdefs.optional.XalanLiaison",
-		"org.apache.tools.ant.taskdefs.optional.XslpLiaison",
-		// Versao 1.3.0
-		"org.apache.tools.ant.taskdefs.optional.TraXLiaison",
-		// Versao 1.4.0
-		"at.dms.kjc.Main",
-		// Versao 1.5.0
-		"org.apache.tools.ant.taskdefs.optional.Test",
-		"org.apache.tools.ant.taskdefs.Get",
-		"org.apache.tools.ant.taskdefs.email.UUMailer",
-		"org.apache.tools.ant.taskdefs.email.MimeMailer",
-		// Versao 1.6.0
-		"org.apache.tools.ant.launch.AntMain",
-		"org.apache.tools.ant.launch.Locator",
-		"org.apache.tools.ant.util.optional.WeakishReference12",
-		// Versao 1.7.0
-		"org.apache.tools.ant.launch.Launcher",
-		"org.apache.tools.ant.util.java15.ProxyDiagnostics",
-		"org.apache.tools.ant.filters.util.JavaClassHelper",
-		// Versao 1.8.0
-		"org.apache.tools.ant.loader.AntClassLoader5",
-		"org.apache.tools.ant.taskdefs.optional.EchoProperties"
-	};
+//		// Versao 1.1.0
+//		"org.apache.tools.ant.taskdefs.optional.XalanLiaison",
+//		"org.apache.tools.ant.taskdefs.optional.XslpLiaison",
+//		// Versao 1.3.0
+//		"org.apache.tools.ant.taskdefs.optional.TraXLiaison",
+//		// Versao 1.4.0
+//		"at.dms.kjc.Main",
+//		// Versao 1.5.0
+//		"org.apache.tools.ant.taskdefs.optional.Test",
+//		"org.apache.tools.ant.taskdefs.Get",
+//		"org.apache.tools.ant.taskdefs.email.UUMailer",
+//		"org.apache.tools.ant.taskdefs.email.MimeMailer",
+//		// Versao 1.6.0
+//		"org.apache.tools.ant.launch.AntMain",
+//		"org.apache.tools.ant.launch.Locator",
+//		"org.apache.tools.ant.util.optional.WeakishReference12",
+//		// Versao 1.7.0
+//		"org.apache.tools.ant.launch.Launcher",
+//		"org.apache.tools.ant.util.java15.ProxyDiagnostics",
+//		"org.apache.tools.ant.filters.util.JavaClassHelper",
+//		// Versao 1.8.0
+//		"org.apache.tools.ant.loader.AntClassLoader5",
+//		"org.apache.tools.ant.taskdefs.optional.EchoProperties",
+		
+		
+		"com.sun.awt.AWTUtilities",
+        "com.sun.image.codec.jpeg.JPEGCodec",
+        "com.sun.image.codec.jpeg.JPEGDecodeParam",
+        "com.sun.image.codec.jpeg.JPEGImageDecoder",
+        "edu.umd.cs.findbugs.annotations.Nullable",
+		"java.beans.PropertyChangeEvent",
+		"java.beans.PropertyChangeListener",
+        "java.beans.PropertyChangeSupport",
+        "java.beans.PropertyVetoException",
+        "java.math.BigInteger",
+        "java.net.MalformedURLException",
+        "java.net.URI",
+        "java.net.URISyntaxException",
+        "java.net.URL",
+        "java.net.URLConnection",
+        "java.net.URLDecoder",
+        "java.net.URLEncoder",
+		"java.security.AccessControlException",
+        "java.security.AccessControlException",
+		"java.security.AccessController",
+        "java.security.Permission",
+		"java.security.PrivilegedAction",
+        "java.security.PrivilegedAction",
+		"java.text.AttributedCharacterIterator",
+		"java.text.AttributedCharacterIterator$Attribute",
+        "java.text.AttributedString",
+        "java.text.CollationKey",
+        "java.text.Collator",
+		"java.text.DateFormat",
+		"java.text.DateFormat$Field",
+        "java.text.DecimalFormat",
+		"java.text.Format",
+		"java.text.Format$Field",
+        "java.text.MessageFormat",
+        "java.text.NumberFormat",
+		"java.text.ParseException",
+        "java.text.ParseException",
+        "java.text.RuleBasedCollator",
+		"java.text.SimpleDateFormat",
+		"javax.accessibility.Accessible",
+		"javax.accessibility.AccessibleContext",
+		"javax.annotation.Nullable",
+		"javax.imageio.ImageIO",
+		"javax.jnlp.ServiceManager",
+		"javax.print.attribute.Attribute",
+		"javax.print.attribute.HashPrintRequestAttributeSet",
+		"javax.print.attribute.PrintRequestAttributeSet",
+		"javax.print.attribute.standard.PrinterResolution",
+        "netscape.javascript.JSObject",        
+        "org.jdesktop.layout.Baseline",
+		"org.jdesktop.layout.LayoutStyle",	
+		"sun.awt.CausedFocusEvent",
+        "sun.awt.CausedFocusEvent$Cause",
+		"sun.security.util.SecurityConstants",
+		"java.net.InetAddress",
+		"java.net.Socket",
+		"java.net.ServerSocket",
+		"java.net.URLStreamHandler",
+		"FirewallPlugin",
+		"com.sun.tools.javac.Main",
+		"sun.tools.javac.Main",
+		"java.net.PasswordAuthentication",
+		"java.net.Authenticator",
+		"javax.print.attribute.standard.MediaSize",
+		"javax.print.attribute.standard.Chromaticity",
+		"javax.print.attribute.standard.OrientationRequested",
+		"javax.print.attribute.standard.MediaPrintableArea",
+		"javax.print.attribute.standard.MediaSizeName",
+		"javax.print.attribute.standard.JobName",
+		"bsh.classpath.ClassManagerImpl",
+		"java.net.HttpURLConnection",
+		"java.nio.charset.Charset",
+		"org.xml.sax.Attributes",
+		"org.xml.sax.InputSource", 
+		"org.xml.sax.helpers.DefaultHandler", 
+		"java.security.MessageDigest", 
+		"java.nio.CharBuffer",
+		"java.nio.ByteBuffer",
+		"java.security.NoSuchAlgorithmException",
+		"java.nio.charset.MalformedInputException",
+		"org.xml.sax.SAXParseException",
+		"java.net.URLClassLoader",
+		"java.nio.charset.CharacterCodingException",
+		"java.nio.charset.UnsupportedCharsetException",
+		"java.nio.charset.CharsetDecoder",
+		"java.nio.charset.CodingErrorAction",
+		"java.nio.charset.CharsetEncoder",
+		"java.nio.charset.IllegalCharsetNameException",
+		"org.xml.sax.SAXException",
+		"org.xml.sax.ErrorHandler",
+		"org.xml.sax.EntityResolver",
+		"org.xml.sax.DTDHandler",
+		"org.xml.sax.ContentHandler",
+		"org.xml.sax.XMLReader",
+		"org.xml.sax.helpers.XMLReaderFactory",
+		"javax.print.attribute.standard.Media",
+		"java.beans.BeanInfo",
+		"java.beans.Introspector",
+		"java.beans.IntrospectionException",
+		"java.beans.PropertyDescriptor",
+		"java.nio.Buffer",
+		"java.nio.channels.FileChannel",
+		"java.net.UnknownHostException",
+		"java.text.CharacterIterator",
+		"java.text.BreakIterator",
+		"javax.annotation.Nonnull",
+		"javax.annotation.concurrent.ThreadSafe",
+		"javax.annotation.concurrent.GuardedBy",
+		"java.text.FieldPosition",
+		"java.nio.file.FileSystem",
+		"java.nio.file.FileSystems",
+		"java.nio.file.Path",
+		"java.nio.file.Files",
+		"java.nio.file.StandardCopyOption",
+		"java.nio.file.CopyOption",
+		"javax.print.attribute.standard.PageRanges",
+		"javax.print.DocPrintJob",
+		"javax.print.PrintException",
+		"javax.print.Doc",
+		"javax.print.PrintService",
+		"javax.print.StreamPrintService",
+		"javax.print.event.PrintJobEvent",
+		"javax.print.event.PrintJobAdapter",
+		"javax.print.PrintServiceLookup",
+		"javax.print.DocFlavor",
+		"javax.print.DocFlavor$SERVICE_FORMATTED",
+		"javax.print.event.PrintJobListener",
+		"javax.print.attribute.DocAttributeSet",
+		"javax.print.SimpleDoc",
+		"javax.print.attribute.DocAttribute",
+		"javax.print.attribute.HashDocAttributeSet",
+		"javax.print.attribute.Size2DSyntax",
+		"javax.print.attribute.PrintJobAttribute",
+		"javax.print.attribute.PrintRequestAttribute",
+		"javax.print.attribute.AttributeSet",
+		"javax.print.attribute.standard.NumberUp",
+		"javax.print.attribute.standard.PrintQuality",
+		"javax.print.attribute.HashAttributeSet",
+		"javax.print.attribute.standard.SheetCollate",
+		"javax.print.attribute.standard.Copies",
+		"javax.print.attribute.standard.JobHoldUntil",
+		"javax.print.attribute.standard.Finishings",
+		"javax.print.attribute.standard.JobPriority",
+		"javax.print.attribute.standard.Sides",
+		"javax.print.attribute.standard.MediaTray",
+		"javax.print.attribute.standard.PresentationDirection",
+		"javax.print.StreamPrintServiceFactory",
+		"javax.print.attribute.standard.Destination",
+		"javax.print.attribute.IntegerSyntax",
+		
+		"CH.ifa.draw.standard.AlignCommand$1",
+		"org.w3c.dom.DocumentType",
+		"org.apache.batik.dom.GenericDOMImplementation",
+		"org.apache.batik.svggen.SVGGraphics2D",
+		"org.w3c.dom.Document",
+		"org.w3c.dom.DOMImplementation",
+		"net.roydesign.app.QuitJMenuItem",
+		"net.roydesign.app.AboutJMenuItem",
+		"ch.randelshofer.quaqua.QuaquaManager",
+		"net.roydesign.app.Application",
+		"net.roydesign.event.ApplicationEvent",
+		"com.apple.mrj.swing.MacFileChooserUI",
+		"apple.laf.AquaFileChooserUI",
+		"com.apple.mrj.macos.libraries.InterfaceLib",
+		"com.apple.mrj.jdirect.MethodClosureUPP",
+		"com.apple.mrj.jdirect.MethodClosure",
+		"com.apple.mrj.jdirect.Linker",
+		"com.apple.mrj.MRJPrefsHandler",
+		"com.apple.mrj.MRJQuitHandler",
+		"com.apple.mrj.MRJPrintDocumentHandler",
+		"com.apple.mrj.MRJOpenDocumentHandler",
+		"com.apple.mrj.MRJOpenApplicationHandler",
+		"com.apple.mrj.MRJAboutHandler",
+		"com.apple.mrj.MRJAboutHandler",
+		"com.apple.mrj.MRJApplicationUtils",
+		"com.apple.eawt.ApplicationEvent",
+		"com.apple.eawt.ApplicationAdapter",
+		"com.apple.eawt.ApplicationListener",
+		"com.apple.eawt.Application",
+		"com.apple.eio.FileManager",
+		"edu.stanford.ejalbert.BrowserLauncher",
+		"glguerin.io.Pathname",
+		"glguerin.util.MacPlatform",
+		"glguerin.io.FileForker", 
+		"com.apple.mrj.MRJFileUtils",
+		"com.apple.mrj.MRJOSType",
+		"quicktime.app.view.QTImageProducer",		
+		"quicktime.QTSession", 
+        "quicktime.util.QTHandle", 
+        "quicktime.util.QTUtils", 
+        "quicktime.std.image.GraphicsImporter", 
+        "quicktime.util.QTHandleRef",
+        "quicktime.app.view.GraphicsImporterDrawer",
+        "quicktime.app.view.QTImageProducer"
+		};
 
 	/**
 	 * Returns all real versions
@@ -144,6 +342,18 @@ public class ProjectLoader
 		reader.setIgnoredClasses(REAL_VERSION_EXTERNAL_DEPENDENCIES);
 		return reader.execute(INPUT_DIRECTORY + versao + ".odem");
 	}
+	
+	
+	/**
+	 * Loads a ODEM real version into a project
+	 */
+	public Project loadODEMRealVersion(String file) throws XMLParseException
+	{
+		CDAReader reader = new CDAReader();
+		reader.setIgnoredClasses(REAL_VERSION_EXTERNAL_DEPENDENCIES);
+		return reader.execute(file);
+	}
+	
 	
 	/**
 	 * Loads an optimized version into a project

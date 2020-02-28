@@ -53,7 +53,7 @@ public class CDAReader
 	private Document loadDocument(String filename) throws XMLParseException
 	{
 		File file = new File(filename);
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+ 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
 		try
 		{

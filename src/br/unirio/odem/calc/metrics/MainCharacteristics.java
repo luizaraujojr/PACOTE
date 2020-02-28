@@ -1,14 +1,19 @@
 package br.unirio.odem.calc.metrics;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+
+import javax.management.modelmbean.XMLParseException;
 
 import org.apache.bcel.Constants;
 import org.apache.bcel.classfile.ClassParser;
@@ -27,9 +32,13 @@ import br.unirio.odem.model.Project;
 @SuppressWarnings("unused")
 public class MainCharacteristics
 {
-	private static String JAR_DIRECTORY = "\\Users\\Marcio\\Desktop\\Resultados Pesquisa\\Resultados Clustering Apache ANT\\versoes";
+//	private static String JAR_DIRECTORY = "..\\Users\\Marcio\\Desktop\\Resultados Pesquisa\\Resultados Clustering Apache ANT\\versoes";
 
-	/**
+	private static String JAR_DIRECTORY = new File("").getAbsolutePath() + "\\data\\jar";
+	
+	private static String ODEM_DIRECTORY = new File("").getAbsolutePath() + "\\data\\odem";
+	
+		/**
 	 * Publishes information about a JAva class
 	 */
     private void processClass(InputStream is, String version, String filename, PrintStream ps) throws ClassNotFoundException, IOException
@@ -102,7 +111,36 @@ public class MainCharacteristics
 		double elegance = cc.calculateClassElegance();
 		System.out.println(versao + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
 	}
-
+	
+	/**
+	 * List all the files from the main directory and its subdirectories
+	 * @param inputFile - the main directory
+	 * @param files - return a list of files
+	 */
+	private static void listFilesOnly(File inputFile, List<File> files) {
+		File[] listfiles = inputFile.listFiles();
+		for (File file: listfiles) {
+			if(file.isDirectory()) {
+				listFilesOnly(file, files);
+			}
+			else {
+				files.add(file);
+			}
+		}
+	}
+	
+	/**
+	 * Get the file extension of a file
+	 * @param file under analysis
+	 * @return the extension without the dot
+	 */
+	private static String getFileExtension(File file) {
+		String fileName = file.getName();
+		if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0)
+			return fileName.substring(fileName.lastIndexOf(".")+1);
+		else return "";
+	}
+	
 	/**
 	 * Loads and publishes data for all projects
 	 */
@@ -114,14 +152,22 @@ public class MainCharacteristics
 		
 		MainCharacteristics mc = new MainCharacteristics();
 		ProjectLoader loader = new ProjectLoader();
+				
 		
-		/*for (String versao : loader.getRealVersions())
-		{
-			mc.transverseJarFile(JAR_DIRECTORY + "\\" + versao + "\\ant.jar", versao.substring(11), ps);
-			Project project = loader.loadRealVersion(versao);
-			publishCouplingInformation(versao, project);
-		}*/
+		List<File> files = new ArrayList<File>();
 		
+		File dir = new File(ODEM_DIRECTORY);
+		
+		listFilesOnly(dir,files);
+		
+		for (File file: files) {
+			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
+//				mc.transverseJarFile(JAR_DIRECTORY + "\\jhotdraw\\jhotdraw.jar", "jhotdraw", ps);
+				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
+				publishCouplingInformation(file.getName(), project);			
+			}			
+		}
+			
 		List<Project> projectsEVM = loader.loadOptimizedVersionsEVM();
 		
 		for (Project project : projectsEVM)
