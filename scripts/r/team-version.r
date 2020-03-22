@@ -1,6 +1,13 @@
 data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/log_versions.data", header=TRUE);
-versions <- rev(unique(data$version));
-columns <- c("team", "inTeam", "outTeam", "rev", "NAR");
+
+
+
+data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdrawlog_versions.data", header=TRUE);
+
+#versions <- rev(unique(data$version));
+versions <- sort(unique(data$version));
+
+columns <- c("team", "inTeam", "outTeam", "num_commits", "NAR");
 result <- matrix(nrow=length(versions), ncol=length(columns), dimnames=list(versions, columns));
 
 oldTeam <- c();
@@ -13,6 +20,7 @@ for (version_ in versions)
 	team <- unique(vdata$author);
 	inTeam <- setdiff(team, oldTeam);
 	outTeam <- setdiff(oldTeam, team);
+	
 	oldTeam <- team;
 
 	commits <- unlist(lapply(developers, nrow));
@@ -22,7 +30,7 @@ for (version_ in versions)
 	result[version_, "team"] <- length(team);
 	result[version_, "inTeam"] <- length(inTeam);
 	result[version_, "outTeam"] <- length(outTeam);
-	result[version_, "rev"] <- nrow(vdata);
+	result[version_, "num_commits"] <- nrow(vdata);
 	result[version_, "NAR"] <- sd(commits);
 }
 

@@ -15,7 +15,7 @@ import br.unirio.odem.model.ProjectPackage;
 
 public class MainOptimizedLog
 {
-	private String findVersion(String sdata)
+	private String findVersion(String sdata) throws XMLParseException
 	{
 		ProjectLoader pl = new ProjectLoader();
 		String versions[] = pl.getRealVersions();
@@ -30,7 +30,7 @@ public class MainOptimizedLog
 		return "";
 	}
 	
-	private void loadRevisionsForVersion(String filename, String version, List<Revision> revisions) throws IOException
+	private void loadRevisionsForVersion(String filename, String version, List<Revision> revisions) throws IOException, XMLParseException
 	{
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line;

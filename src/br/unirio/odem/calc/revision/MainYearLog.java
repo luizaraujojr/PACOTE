@@ -44,7 +44,7 @@ public class MainYearLog
 				
 				clazz = clazz.substring(0, clazz.lastIndexOf('.'));
 				//String className = clazz.substring(clazz.lastIndexOf('.') + 1);
-				String packageName = clazz.substring(0, clazz.lastIndexOf('.'));
+				String packageName = clazz.substring(0, clazz.lastIndexOf('/'));
 
 				if (revision.compareToIgnoreCase(lastRevision) != 0)
 				{
@@ -73,12 +73,15 @@ public class MainYearLog
 
 	public static void main(String[] args) throws IOException
 	{
-		FileOutputStream out = new FileOutputStream("results\\versioncontrol\\log_years.data"); 
+//		FileOutputStream out = new FileOutputStream("results\\versioncontrol\\log_years.data");
+//		FileOutputStream out = new FileOutputStream("results\\jhotdraw_years.data");
+		FileOutputStream out = new FileOutputStream("results\\jedit_years.data");
 		PrintStream ps = new PrintStream(out);
 
 		MainYearLog me = new MainYearLog();
-		me.saveRevisionsByYear("data\\log\\log_summary.data", ps);
-
+//		me.saveRevisionsByYear("data\\log\\jhotdrawlog_list.data", ps);
+		me.saveRevisionsByYear("data\\log\\jeditlog_list.data", ps);
+		
 		ps.close();
 		System.out.println("Finished!");
 	}

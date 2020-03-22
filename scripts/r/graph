@@ -1,0 +1,48 @@
+library(igraph)
+par(mfrow = c(4,4), oma = c(4,1,1,1))
+m <-read.table (row.names=1, file=file.choose(), header=FALSE, sep=";")
+m<-as.matrix(m)
+g<-graph.adjacency(m, mode="undirected", weighted=TRUE)
+l<-layout_in_circle(g)
+plot(g, layout=l, edge.color="red", vertex.color="black", vertex.label="", vertex.size=2)
+
+plot(g, 
+
+
+
+#Diretório  raiz
+rootDir <- 'C:\\Users\\user\\Desktop\\'
+#Diretório da base de dados observados a ser lida
+dataDir <- paste(rootDir,'entrada\\',sep='')
+#Diretório onde escreverá os arquivos 
+outputloc <- paste(rootDir,'saida\\',sep='')
+ 
+#nomes dos arquivos no diretorio (sem a extensao)
+cidades = c("abelardoluz","aguaclara")
+ 
+#vetor de latitudes, escritas na ordem correspondente as cidades acima
+lat = c(-30, 0)
+ 
+for (i in cidades){
+  
+  estacao = i
+  a = read.table(paste(dataDir,estacao,'.txt',sep=''), sep = ";", header = T); str(a)
+ 
+  #--------------------Separar colunas de interesse--------------------#
+  a$DATE = as.Date(levels(a$DATE))[a$DATE]; str(a)
+  a$DiaJuliano = format(a$DATE, trim = T, '%j') ; a$DiaJuliano
+  a$DiaJuliano = as.numeric(format(a$DATE, trim = T, '%j')); str(a$DiaJuliano) 
+ 
+  #--------------------Calculo das Variaves Astronomicas--------------------#
+  head(a)
+  corr = pi/180
+  a$decl = 23.45*sin(corr*((a$DiaJuliano-80)*360/365)); a$decl
+ 
+#----Aqui esta o problema----#
+    a$hn = 1/corr*acos(-tan(corr*lat[(as.numeric(length(i)))])*tan(corr*a$decl))
+    a$N = 2*a$hn/15
+    head(a)
+  
+  write.table(a,file=paste(outputloc,i,'.txt',sep=''),col.names=T, row.names=F, sep="\t")
+ }
+#--FIM DO SCRIPT--#

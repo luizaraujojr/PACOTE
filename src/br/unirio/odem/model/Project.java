@@ -166,7 +166,7 @@ public class Project
 	 */
 	public ProjectClass getClassName(String name)
 	{
-		for (ProjectClass c : classes)
+ 		for (ProjectClass c : classes)
 			if (c.getName().compareToIgnoreCase(name) == 0)
 				return c;
 		

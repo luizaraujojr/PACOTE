@@ -1,0 +1,14 @@
+             org.gjt.sp.jedit.browser;0;0;0;0;0;0;1;0;0;1;0;0;0;0
+              org.gjt.sp.jedit.search;0;0;0;0;0;0;1;0;0;1;0;0;0;0
+                  org.gjt.sp.jedit.io;1;1;0;0;0;0;1;0;0;1;0;0;0;0
+             org.gjt.sp.jedit.options;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+            org.gjt.sp.jedit.textarea;0;1;0;0;0;0;1;0;0;1;0;0;0;0
+                 org.gjt.sp.jedit.msg;1;1;1;0;0;0;1;0;0;1;0;0;0;0
+                 org.gjt.sp.jedit.gui;1;1;0;1;1;1;0;0;0;1;0;0;0;0
+ org.gjt.sp.jedit.proto.jeditresource;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+              org.gjt.sp.jedit.syntax;0;0;0;1;1;0;0;0;0;1;0;0;0;0
+                     org.gjt.sp.jedit;1;1;1;1;1;1;1;1;1;0;0;0;0;0
+                                  bsh;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+                    com.microstar.xml;0;0;0;0;0;0;1;0;1;1;0;0;0;0
+                           gnu.regexp;1;1;0;0;0;0;0;0;0;1;0;0;0;0
+                      org.gjt.sp.util;1;1;1;1;1;0;1;0;1;1;0;0;0;0

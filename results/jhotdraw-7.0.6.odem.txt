@@ -1,0 +1,16 @@
+     org.jhotdraw.samples.draw;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+      org.jhotdraw.draw.action;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+       org.jhotdraw.app.action;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+        org.jhotdraw.gui.event;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+              org.jhotdraw.gui;1;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0
+             org.jhotdraw.draw;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+              org.jhotdraw.app;1;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0
+             org.jhotdraw.geom;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+             org.jhotdraw.undo;1;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+              org.jhotdraw.xml;1;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0
+                       nanoxml;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+ org.jhotdraw.gui.datatransfer;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+       org.jhotdraw.util.prefs;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+            org.jhotdraw.beans;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0
+               org.jhotdraw.io;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+             org.jhotdraw.util;1;1;1;0;1;1;1;0;1;0;0;0;0;0;0;0

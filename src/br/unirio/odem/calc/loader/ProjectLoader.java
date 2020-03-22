@@ -21,14 +21,19 @@ import br.unirio.odem.model.ProjectPackage;
  */
 public class ProjectLoader
 {
-	private static String OPTIMIZED_DIRECTORY = "\\Users\\Marcio\\Desktop\\Resultados Pesquisa\\Resultados Clustering Apache ANT\\multi run\\v1.9.0\\";
+//	private static String OPTIMIZED_DIRECTORY = "\\Users\\Marcio\\Desktop\\Resultados Pesquisa\\Resultados Clustering Apache ANT\\multi run\\v1.9.0\\";
+	
+	private static String OPTIMIZED_DIRECTORY = "\\results\\";
 	
 	/**
 	 * Input directory for real versions
 	 */
 	
-	private static String INPUT_DIRECTORY =  new File(".").getAbsolutePath() + "D:\\Backup\\eclipse-workspace\\projetotese\\data\\odem\\";
+	private static String INPUT_DIRECTORY =  new File("").getAbsolutePath() + "\\data\\odem";
 
+	
+	public static String[][] PROJECT_INFO; 
+	
 	/**
 	 * Datas das versoes do Apache Ant
 	 */
@@ -90,6 +95,12 @@ public class ProjectLoader
 		"apache-ant-1.8.4",
 		"apache-ant-1.9.0"
 	};
+
+	public  ProjectLoader() throws XMLParseException{
+		loadODEMRealVersionInfo();	
+	}
+	
+	
 	
 	/**
 	 * Known external dependencies for real versions
@@ -353,6 +364,61 @@ public class ProjectLoader
 		reader.setIgnoredClasses(REAL_VERSION_EXTERNAL_DEPENDENCIES);
 		return reader.execute(file);
 	}
+	
+	/**
+	 * Loads a ODEM real version into a project
+	 * @return 
+	 */
+	public void loadODEMRealVersionInfo() throws XMLParseException
+	{
+		List<File> files = new ArrayList<File>();
+		
+		File dir = new File(INPUT_DIRECTORY);
+		
+		listFilesOnly(dir,files);
+		
+		PROJECT_INFO = new String[files.size()][3];
+		int count =0;
+		for (File file1: files) {
+			if(file1.isDirectory() == false && getFileExtension(file1).equals("odem")) {
+				String tokens[] = file1.getName().split("-");
+				
+				PROJECT_INFO[count][0] = tokens[0];
+				PROJECT_INFO[count][1] = tokens[1];
+				PROJECT_INFO[count][2] = tokens[2].substring(0,8);	
+			}
+			count++;
+		}				
+	}
+		
+		/**
+		 * Get the file extension of a file
+		 * @param file under analysis
+		 * @return the extension without the dot
+		 */
+		private static String getFileExtension(File file) {
+			String fileName = file.getName();
+			if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0)
+				return fileName.substring(fileName.lastIndexOf(".")+1);
+			else return "";
+		}
+		
+		/**
+		 * List all the files from the main directory and its subdirectories
+		 * @param inputFile - the main directory
+		 * @param files - return a list of files
+		 */
+		private static void listFilesOnly(File inputFile, List<File> files) {
+			File[] listfiles = inputFile.listFiles();
+			for (File file: listfiles) {
+				if(file.isDirectory()) {
+					listFilesOnly(file, files);
+				}
+				else {
+					files.add(file);
+				}
+			}
+		}
 	
 	
 	/**

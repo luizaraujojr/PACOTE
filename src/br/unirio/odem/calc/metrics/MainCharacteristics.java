@@ -41,7 +41,7 @@ public class MainCharacteristics
 		/**
 	 * Publishes information about a JAva class
 	 */
-    private void processClass(InputStream is, String version, String filename, PrintStream ps) throws ClassNotFoundException, IOException
+    private static void processClass(InputStream is, String version, String filename, PrintStream ps) throws ClassNotFoundException, IOException
 	{
 		ClassParser cp = new ClassParser(is, filename);
 		JavaClass clazz = cp.parse();
@@ -62,25 +62,45 @@ public class MainCharacteristics
     /**
      * Transverses a JAR file to publish information about its contents
      */
-	private void transverseJarFile(String jarFile, String version, PrintStream ps) throws IOException, FileNotFoundException, ClassNotFoundException
-	{
-		JarFile jar = new JarFile(jarFile);
-		Enumeration<JarEntry> e = jar.entries();
+	private static void transverseJarFile() throws IOException, FileNotFoundException, ClassNotFoundException
+	{	
+		
+		FileOutputStream out = new FileOutputStream("results\\jar_file_metrics.data"); 
+		PrintStream ps = new PrintStream(out);
+		ps.println("version\tpackage\tcbo\taff\teff\tlcom\tmf\tcs");
+		
+		List<File> files = new ArrayList<File>();
+		
+		File dir = new File(JAR_DIRECTORY);
+		
+		listFilesOnly(dir,files);
+		
+		for (File file: files) {
+			if(file.isDirectory() == false && getFileExtension(file).equals("jar")) {
+				
+				JarFile jar = new JarFile(file);
+				Enumeration<JarEntry> e = jar.entries();
 
-		while (e.hasMoreElements())
-		{
-			JarEntry file = e.nextElement();
-			String fileName = file.getName();
-			
-			if (fileName.endsWith(".class"))
-			{
-				InputStream is = jar.getInputStream(file);
-				processClass(is, version, fileName, ps);
-				is.close();
-			}
+				while (e.hasMoreElements())
+				{
+					JarEntry jarEntry = e.nextElement();
+					String fileName = jarEntry.getName();
+					
+					if (fileName.endsWith("PluginManagerProgress$WindowHandler.class")){
+						System.out.println ("aaaa");
+					}
+					
+					if (fileName.endsWith(".class") && !fileName.equals("install.class") && !fileName.equals("Install.class"))
+					{
+						InputStream is = jar.getInputStream(jarEntry);
+						processClass(is, file.getName(), fileName, ps);
+						is.close();
+					}
+				}
+
+				jar.close();
+			}			
 		}
-
-		jar.close();
 	}
 	
 	/**
@@ -146,39 +166,42 @@ public class MainCharacteristics
 	 */
 	public static final void main(String[] args) throws Exception
 	{
-		FileOutputStream out = new FileOutputStream("size_metrics.data"); 
-		PrintStream ps = new PrintStream(out);
-		ps.println("version\tpackage\tclasse\tattr\tmeth\tpmeth");
-		
-		MainCharacteristics mc = new MainCharacteristics();
-		ProjectLoader loader = new ProjectLoader();
-				
-		
-		List<File> files = new ArrayList<File>();
-		
-		File dir = new File(ODEM_DIRECTORY);
-		
-		listFilesOnly(dir,files);
-		
-		for (File file: files) {
-			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
-//				mc.transverseJarFile(JAR_DIRECTORY + "\\jhotdraw\\jhotdraw.jar", "jhotdraw", ps);
-				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
-				publishCouplingInformation(file.getName(), project);			
-			}			
-		}
+//		FileOutputStream out = new FileOutputStream("size_metrics.data"); 
+//		PrintStream ps = new PrintStream(out);
+//		ps.println("version\tpackage\tclasse\tattr\tmeth\tpmeth");
+//		
+//		MainCharacteristics mc = new MainCharacteristics();
+//		ProjectLoader loader = new ProjectLoader();
+//				
+//		
+//		List<File> files = new ArrayList<File>();
+//		
+//		File dir = new File(ODEM_DIRECTORY);
+//		
+//		listFilesOnly(dir,files);
+//		
+//		for (File file: files) {
+//			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
+//				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
+//				publishCouplingInformation(file.getName(), project);			
+//			}			
+//		}
 			
-		List<Project> projectsEVM = loader.loadOptimizedVersionsEVM();
 		
-		for (Project project : projectsEVM)
-			publishSizeInformation("EMVopt", project);
-
-		List<Project> projectsMQ = loader.loadOptimizedVersionsMQ();
-
-		for (Project project : projectsMQ)
-			publishSizeInformation("MQopt", project);
 		
-		ps.close();
-		System.out.println("Finished!");
+		transverseJarFile();
+		
+//		List<Project> projectsEVM = loader.loadOptimizedVersionsEVM();
+//		
+//		for (Project project : projectsEVM)
+//			publishSizeInformation("EMVopt", project);
+//
+//		List<Project> projectsMQ = loader.loadOptimizedVersionsMQ();
+//
+//		for (Project project : projectsMQ)
+//			publishSizeInformation("MQopt", project);
+//		
+//		ps.close();
+//		System.out.println("Finished!");
 	}
 }
