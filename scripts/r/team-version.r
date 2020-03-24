@@ -1,10 +1,11 @@
-data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/log_versions.data", header=TRUE);
+#data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/log_versions.data", header=TRUE);
 
 
 
-data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdrawlog_versions.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdraw_versions.data", header=TRUE);
 
-#versions <- rev(unique(data$version));
+data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jedit_versions.data", header=TRUE);
+
 versions <- sort(unique(data$version));
 
 columns <- c("team", "inTeam", "outTeam", "num_commits", "NAR");

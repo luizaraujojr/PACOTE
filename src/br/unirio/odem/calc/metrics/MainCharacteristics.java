@@ -86,9 +86,9 @@ public class MainCharacteristics
 					JarEntry jarEntry = e.nextElement();
 					String fileName = jarEntry.getName();
 					
-					if (fileName.endsWith("PluginManagerProgress$WindowHandler.class")){
-						System.out.println ("aaaa");
-					}
+//					if (fileName.endsWith("PluginManagerProgress$WindowHandler.class")){
+//						System.out.println ("aaaa");
+//					}
 					
 					if (fileName.endsWith(".class") && !fileName.equals("install.class") && !fileName.equals("Install.class"))
 					{
@@ -106,7 +106,7 @@ public class MainCharacteristics
 	/**
 	 * Publishes the characteristics and metrics for the coupling a given project
 	 */
-	private static void publishCouplingInformation(String versao, Project project) throws Exception
+	private static void publishCouplingInformation(String versao, Project project, PrintStream ps) throws Exception
 	{
 		ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
 		int dependencyCount = project.getDependencyCount();
@@ -116,20 +116,22 @@ public class MainCharacteristics
 		double eff = cc.calculateEfferentCoupling();
 		double lcom5 = cc.calculateLCOM5();
 		double cbo = cc.calculateCBO();
-		System.out.println(versao + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5);
+//		System.out.println(versao + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5);
+		ps.println(versao + "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
 	}
 
 	/**
 	 * Publishes the characteristics and metrics for the size of a given project
 	 */
-	private static void publishSizeInformation(String versao, Project project) throws Exception
+	private static void publishSizeInformation(String versao, Project project, PrintStream ps) throws Exception
 	{
 		ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
 		int packageCount = cc.getPackageCount();
 		int singleClassPackages = cc.countSingleClassPackages();
 		int maximumClassConcentration = cc.getMaximumClassCount();
 		double elegance = cc.calculateClassElegance();
-		System.out.println(versao + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
+//		System.out.println(versao + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
+		ps.println(versao + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration);
 	}
 	
 	/**
@@ -166,30 +168,38 @@ public class MainCharacteristics
 	 */
 	public static final void main(String[] args) throws Exception
 	{
-//		FileOutputStream out = new FileOutputStream("size_metrics.data"); 
-//		PrintStream ps = new PrintStream(out);
-//		ps.println("version\tpackage\tclasse\tattr\tmeth\tpmeth");
-//		
-//		MainCharacteristics mc = new MainCharacteristics();
-//		ProjectLoader loader = new ProjectLoader();
-//				
-//		
-//		List<File> files = new ArrayList<File>();
-//		
-//		File dir = new File(ODEM_DIRECTORY);
-//		
-//		listFilesOnly(dir,files);
-//		
-//		for (File file: files) {
-//			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
-//				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
-//				publishCouplingInformation(file.getName(), project);			
-//			}			
-//		}
+		FileOutputStream out = new FileOutputStream("results\\projects_coupling_metrics.data");
+//		FileOutputStream out = new FileOutputStream("results\\projects_size_metrics.data");
+		PrintStream ps = new PrintStream(out);
+		ps.println("versao\tpackageCount\telegance\tsingleClassPackages\tmaximumClassConcentration");
+		
+		
+		
+		MainCharacteristics mc = new MainCharacteristics();
+		ProjectLoader loader = new ProjectLoader();
+				
+		
+		List<File> files = new ArrayList<File>();
+		
+		File dir = new File(ODEM_DIRECTORY);
+		
+		listFilesOnly(dir,files);
+		
+		for (File file: files) {
+			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
+				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
+				publishCouplingInformation(file.getName(), project, ps);
+				System.out.println(file.getName());
+//				publishSizeInformation(file.getName(), project, ps);
+			}			
+		}
 			
+		ps.close();
+		System.out.println("Finished!");
+
 		
 		
-		transverseJarFile();
+//		transverseJarFile();
 		
 //		List<Project> projectsEVM = loader.loadOptimizedVersionsEVM();
 //		

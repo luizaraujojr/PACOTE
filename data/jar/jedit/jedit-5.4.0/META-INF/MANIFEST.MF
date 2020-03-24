@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.9.0
-Created-By: 1.8.0_20-b26 (Oracle Corporation)
-Main-Class: org.gjt.sp.jedit.jEdit
-

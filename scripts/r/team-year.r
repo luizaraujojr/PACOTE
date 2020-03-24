@@ -1,6 +1,7 @@
 #data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/log_years.data", header=TRUE);
 
-data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdrawlog_years.data", header=TRUE);
+data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdraw_years.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jedit_years.data", header=TRUE);
 
 #years <- rev(unique(data$year));
 years <- sort(unique(data$year));
