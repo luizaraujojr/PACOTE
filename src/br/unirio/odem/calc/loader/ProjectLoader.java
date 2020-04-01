@@ -32,7 +32,7 @@ public class ProjectLoader
 	private static String INPUT_DIRECTORY =  new File("").getAbsolutePath() + "\\data\\odem";
 
 	
-	public static String[][] PROJECT_INFO; 
+	public String[][] PROJECT_INFO; 
 	
 	/**
 	 * Datas das versoes do Apache Ant

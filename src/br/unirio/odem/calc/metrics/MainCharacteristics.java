@@ -9,13 +9,11 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import javax.management.modelmbean.XMLParseException;
-
-import org.apache.bcel.Constants;
+import org.apache.bcel.Const;
+//import org.apache.bcel.Constants;
 import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
@@ -51,7 +49,7 @@ public class MainCharacteristics
 		int countPublicMethods = 0;
 		
 		for (Method method : clazz.getMethods())
-			if ((method.getAccessFlags() & Constants.ACC_PUBLIC) != 0)
+			if ((method.getAccessFlags() & Const.ACC_PUBLIC) != 0)
 				countPublicMethods++;
 		
 		String packageName = filename.substring(0, filename.lastIndexOf("/")).replace('/', '.');

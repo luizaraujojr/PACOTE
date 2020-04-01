@@ -108,25 +108,37 @@ public class MainVersionLog
 	
 	public static void main(String[] args) throws IOException, ParseException, XMLParseException
 	{		
-//		FileOutputStream out = new FileOutputStream("results\\jeditlog_list.data");
-////		FileOutputStream out = new FileOutputStream("results\\jhotdrawlog_list.data");
-//		PrintStream ps = new PrintStream(out);
-//		
-////		loadLogFile("data\\log\\jhotdrawlog_raw.data", ps);
-//		loadLogFile("data\\log\\jeditlog_raw.data", ps);
 		
-		//-----------------------------------------------------------
+		int option = 0;
 		
-//		FileOutputStream out = new FileOutputStream("results\\jhotdraw_versions.data");
-		FileOutputStream out = new FileOutputStream("results\\jedit_versions.data");
-
-		PrintStream ps = new PrintStream(out);
+		switch (option) {
+		case 1:
+		FileOutputStream out1 = new FileOutputStream("results\\jeditlog_list.data");
+		PrintStream ps1 = new PrintStream(out1);
+		loadLogFile("data\\log\\jeditlog_raw.data", ps1);
+		ps1.close();
 		
-		MainVersionLog me = new MainVersionLog();
-//		me.saveRevisionsByVersion("data\\log\\jhotdrawlog_versions.data", ps, "jhotdraw");
-		me.saveRevisionsByVersion("data\\log\\jeditlog_list.data", ps, "jedit");
-
-		ps.close();
+		case 2:
+		FileOutputStream out2 = new FileOutputStream("results\\jhotdrawlog_list.data");
+		PrintStream ps2 = new PrintStream(out2);
+		loadLogFile("data\\log\\jeditlog_raw.data", ps2);
+		ps2.close();
+		
+		case 3:
+		FileOutputStream out3 = new FileOutputStream("results\\jedit_versions.data");
+		PrintStream ps3 = new PrintStream(out3);
+		MainVersionLog me3 = new MainVersionLog();
+		me3.saveRevisionsByVersion("data\\log\\jeditlog_list.data", ps3, "jedit");
+		ps3.close();
+		
+		case 4:
+		FileOutputStream out4 = new FileOutputStream("results\\jhotdraw_versions.data");
+		PrintStream ps4 = new PrintStream(out4);
+		MainVersionLog me4 = new MainVersionLog();
+		me4.saveRevisionsByVersion("data\\log\\jhotdrawlog_versions.data", ps4, "jhotdraw");
+		ps4.close();
+		}
+	
 		System.out.println("Finished!");
 	}
 	

@@ -85,9 +85,4 @@ public class MainPackages
 		ps.close();
 		System.out.println("Finished!");
 	}
-
-	private static char[] subtring(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

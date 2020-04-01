@@ -12,13 +12,13 @@ import java.util.List;
 import br.unirio.odem.calc.loader.ProjectLoader;
 import br.unirio.odem.model.Project;
 import br.unirio.odem.model.ProjectPackage;
-import br.unirio.odem.controller.ClusteringCalculator;
 
 /**
  * Class that publishes architectural charts for all versions of Apache Ant
  * 
  * @author Marcio
  */
+@SuppressWarnings("unused")
 public class MainArchitectureDSM
 {
 	
