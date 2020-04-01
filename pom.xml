@@ -29,7 +29,12 @@
 		    <version>6.4.1</version>
 		</dependency>
     </dependencies>
-
+	<properties>
+	  <sonar.projectKey>luizaraujojr_projetotese</sonar.projectKey>
+	  <sonar.organization>luizaraujojr</sonar.organization>
+	  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+	  <sonar.login>8173c9783dace4aa731296a1a8839f0871ba9a2d</sonar.login>
+	</properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
