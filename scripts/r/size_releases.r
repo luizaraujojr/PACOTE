@@ -1,22 +1,80 @@
-data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/size_metrics.data", header=TRUE);
-versions <- unique(data$version);
-colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths", "NAC");
-result <- matrix(nrow=length(versions), ncol=length(colnames), dimnames=list(versions, colnames));
+#data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/size_metrics.data", header=TRUE);
 
-for (version_ in versions)
-{
-	vdata <- subset(data, version == version_);
-	classes <- split(vdata, vdata$package);
+
+	data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jar_file_metrics.data", header=TRUE);
+	unique_versions <- unique(data$versions);
+	colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths", "NAC");
+	result <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
+
+	for (version_ in unique_versions)
+	{
+		vdata <- subset(data, versions == version_);
+		classes <- split(vdata, vdata$package);
+		
+		result[version_, "Packages"] <- length(unique(vdata$packages));
+		result[version_, "Classes"] <- length(vdata$classes);
+		result[version_, "Attrs"] <- sum(vdata$attrs);
+		result[version_, "Meths"] <- sum(vdata$meths);
+		result[version_, "PMeths"] <- sum(vdata$pmeth);	
+		result[version_, "NAC"] <- sd(unlist(lapply(classes, nrow)));
+	}
+	result
+
+
+
+# box-plot for the number of classes per package
+	data_classespackages <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jar_file_metrics.data", header=TRUE);
+	unique_versions <- unique(data_classespackages$versions);
+	uniqueVersionPackage <- unique(data_classespackages[,c("versions","packages")])
+	colnames <- c("version", "package", "ClassesPackages");
+	result1 <- matrix(nrow=nrow(uniqueVersionPackage),  ncol=length(colnames))
+	colnames(result1) <- c("version", "package", "ClassesPackages");
+
+	i <-1
+	for (version_ in unique_versions)
+	{
+		vdata <- subset(data_classespackages, versions == version_);
+		unique_packages <- unique(vdata$packages);
+		for (packages_ in unique_packages)
+		{
+			zdata <- subset(vdata, packages == packages_);
+			result1[i, 1] <- substring (version_,1,nchar(version_)-4); 
+			result1[i, 2] <- packages_; 
+			result1[i, 3] <- length(zdata$classes); 
+			
+			i<- i+1
+		}
+	}
 	
-	result[version_, "Packages"] <- length(unique(vdata$package));
-	result[version_, "Classes"] <- length(vdata$classe);
-	result[version_, "Attrs"] <- sum(vdata$attr);
-	result[version_, "Meths"] <- sum(vdata$meth);
-	result[version_, "PMeths"] <- sum(vdata$pmeth);	
-	result[version_, "NAC"] <- sd(unlist(lapply(classes, nrow)));
-}
+	par(mar=c(7,3,3,3))
+	
+	boxplot(as.numeric(result1[,3]) ~ result1[,1], data = result1, main="Class/Package", xlab='', ylab='Number of Classes/Package', las=2)
+	
 
-result
+# box-plot for the number of attributes per class
+par(mar=c(9,3,3,3))
+boxplot(data[,"attrs"] ~data[,"versions"], data= data, main="Attribute/Class", xlab='', las=2)
+
+	# box-plot for the number of methods per class
+	par(mar=c(9,3,3,3))
+	boxplot(data[,"meths"] ~data[,"versions"], data= data, main="Methods/Class", xlab='', las=2)
+
+par(mar=c(9,3,3,3))
+boxplot(data[,"pmeths"] ~data[,"versions"], data= data, main="Public Methods/Class", xlab='', las=2)
+
+
+# box-plot for the number of dependencies per class
+data1 <- read.table("D:/Backup/eclipse-workspace/projetotese/results/projects_coupling_metrics.data", header=TRUE);
+par(mar=c(15,3,3,3))
+boxplot(data1[,"dependencyCount"] ~data1[,"versao"], data= data1, main="Dependency/Class", xlab='', las=2)
+
+
+
+
+
+
+
+
 
 # Publishes results from the normality test (95%)
 publishNormal <- function(pvalue, name) {
@@ -49,26 +107,3 @@ publishNormal(shapiro.test(d)$p.value, "numero de dependencias");
 nac <- c(8.305131, 11.919944, 13.014406, 16.849349, 16.849349, 20.834375, 20.834375, 21.118125, 21.231429, 21.231429, 26.048523, 26.132067, 27.700993, 29.272665, 29.272665, 29.272665, 34.451254, 34.936447, 38.476841, 38.567758, 38.27966, 38.35064, 38.346258, 37.336256);
 publishNormal(shapiro.test(nac)$p.value, "elegancia de classes");
 
-# prepare the plots
-pdf("c:/Users/Marcio Barros/Desktop/size_boxplots.pdf", width=16, height=5)
-par(mfrow=c(1, 4))
-
-# box-plot for the number of classes per package
-cp <- c(25.5, 13.3076923076923, 23.375, 20.3846153846154, 20.3846153846154, 19.0952380952381, 19.0952380952381, 19.3333333333333, 19.3809523809524, 19.3809523809524, 21.7916666666667, 21.8333333333333, 23.0416666666667, 23.04, 23.04, 23.04, 25.9310344827586, 26.5172413793103, 29, 29.1, 18.4745762711864, 18.5254237288136, 18.5423728813559, 18.6);
-boxplot(cp, main="Class/Package");
-
-# box-plot for the number of attributes per class
-ac <- c(1.38235294117647, 1.4393063583815, 1.57219251336898, 1.54716981132075, 1.54716981132075, 1.45635910224439, 1.45635910224439, 1.45566502463054, 1.45700245700246, 1.46683046683047, 1.52390057361377, 1.52099236641221, 1.5244122965642, 1.52777777777778, 1.52777777777778, 1.52777777777778, 1.54521276595745, 1.54876462938882, 1.56436781609195, 1.56128293241695, 1.57706422018349, 1.57639524245197, 1.57678244972578, 1.68010752688172);
-boxplot(ac, main="Attribute/Class");
-
-# box-plot for the number of methods per class
-mc <- c(8, 8.79190751445087, 8.27807486631016, 8.27547169811321, 8.30943396226415, 8.42643391521197, 8.45137157107232, 8.51477832512315, 8.51351351351351, 8.51351351351351, 8.89292543021032, 8.9293893129771, 8.83182640144665, 8.89583333333333, 8.89930555555556, 8.90451388888889, 8.75132978723404, 8.83355006501951, 8.87931034482759, 8.90034364261168, 9.06330275229358, 9.07776761207685, 9.08043875685558, 9.05286738351255);
-pmc <- c(6.20588235294118, 6.85549132947977, 6.54010695187166, 6.52452830188679, 6.54716981132075, 6.58104738154613, 6.59351620947631, 6.6576354679803, 6.65356265356265, 6.65356265356265, 6.95793499043977, 6.99427480916031, 6.90235081374322, 6.89409722222222, 6.89756944444444, 6.89756944444444, 6.61968085106383, 6.61638491547464, 6.53563218390805, 6.55211912943872, 6.64954128440367, 6.65599268069533, 6.64990859232176, 6.69802867383513);
-boxplot(mc, pmc, main="Functionality/Class");
-axis(1, labels=c("m/c", "pm/c"), at=c(1,2));
-
-# box-plot for the number of dependencies per class
-dc <- c(3.54901960784314, 4.64161849710983, 4.57219251336898, 4.63396226415094, 4.64150943396226, 4.72069825436409, 4.72319201995012, 4.78325123152709, 4.78378378378378, 4.78378378378378, 4.88910133843212, 4.88931297709924, 4.42133815551537, 4.45486111111111, 4.45486111111111, 4.45833333333333, 4.66090425531915, 4.6592977893368, 4.74367816091954, 4.73997709049255, 4.88899082568807, 4.89569990850869, 4.89396709323583, 4.94802867383513);
-boxplot(dc, main="Dependency/Class");
-
-dev.off();

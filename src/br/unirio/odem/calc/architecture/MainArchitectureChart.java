@@ -77,10 +77,10 @@ public class MainArchitectureChart
 	{
 		ProjectLoader loader = new ProjectLoader();
 		
-		for (String versao : loader.getRealVersions())
+		for (String version : loader.getRealVersions())
 		{
-			Project project = loader.loadRealVersion(versao);
-			saveDependencies(project, DIRETORIO_SAIDA + versao + ".txt");
+			Project project = loader.loadRealVersion(version);
+			saveDependencies(project, DIRETORIO_SAIDA + version + ".txt");
 		}
 
 		Project projectEVM = loader.loadOptimizedVersionsEVM().get(0);

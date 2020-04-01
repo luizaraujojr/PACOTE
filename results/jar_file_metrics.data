@@ -1,4 +1,4 @@
-version	package	classe	attr	meth	pmeth
+versions	packages	classes	attrs	meths	pmeths
 jedit-2.3.2.jar	org.gjt.sp.sim	ConsoleInstall	1	2	1
 jedit-2.3.2.jar	org.gjt.sp.sim	InstallThread	1	5	4
 jedit-2.3.2.jar	org.gjt.sp.sim	OperatingSystem$HalfAnOS	2	3	3

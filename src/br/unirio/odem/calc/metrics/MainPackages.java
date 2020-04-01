@@ -54,7 +54,7 @@ public class MainPackages
 	 */
 	public static final void main(String[] args) throws Exception
 	{
-		FileOutputStream out = new FileOutputStream("package_metrics.data"); 
+		FileOutputStream out = new FileOutputStream("results\\package_metrics.data"); 
 		PrintStream ps = new PrintStream(out);
 		ps.println("version\tpackage\tcbo\taff\teff\tlcom\tmf\tcs");
 		
@@ -72,7 +72,7 @@ public class MainPackages
 				ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
 				
 				for (int i = 0; i < project.getPackageCount(); i++)
-					ps.println(file.getName() + "\t" + project.getPackageIndex(i).getName() + 
+					ps.println(file.getName().substring(0, file.getName().length() -14) + "\t" + (project.getPackageIndex(i).getName().equals("") != true ? project.getPackageIndex(i).getName() : "NONAME") + 
 								"\t" + cc.calculateCBO(i) + 
 								"\t" + cc.calculateAfferentCoupling(i) + 
 								"\t" + cc.calculateEfferentCoupling(i) + 
@@ -84,5 +84,10 @@ public class MainPackages
 		
 		ps.close();
 		System.out.println("Finished!");
+	}
+
+	private static char[] subtring(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

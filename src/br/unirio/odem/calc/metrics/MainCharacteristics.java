@@ -67,8 +67,8 @@ public class MainCharacteristics
 		
 		FileOutputStream out = new FileOutputStream("results\\jar_file_metrics.data"); 
 		PrintStream ps = new PrintStream(out);
-		ps.println("version\tpackage\tcbo\taff\teff\tlcom\tmf\tcs");
-		
+		ps.println("versions\tpackages\tclasses\tattrs\tmeths\tpmeths");
+				
 		List<File> files = new ArrayList<File>();
 		
 		File dir = new File(JAR_DIRECTORY);
@@ -106,7 +106,7 @@ public class MainCharacteristics
 	/**
 	 * Publishes the characteristics and metrics for the coupling a given project
 	 */
-	private static void publishCouplingInformation(String versao, Project project, PrintStream ps) throws Exception
+	private static void publishCouplingInformation(String version, Project project, PrintStream ps) throws Exception
 	{
 		ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
 		int dependencyCount = project.getDependencyCount();
@@ -116,22 +116,22 @@ public class MainCharacteristics
 		double eff = cc.calculateEfferentCoupling();
 		double lcom5 = cc.calculateLCOM5();
 		double cbo = cc.calculateCBO();
-//		System.out.println(versao + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5);
-		ps.println(versao + "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
+//		System.out.println(version + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5);
+		ps.println(version.substring(0, version.length() -14) + "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
 	}
 
 	/**
 	 * Publishes the characteristics and metrics for the size of a given project
 	 */
-	private static void publishSizeInformation(String versao, Project project, PrintStream ps) throws Exception
+	private static void publishSizeInformation(String version, Project project, PrintStream ps) throws Exception
 	{
 		ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
 		int packageCount = cc.getPackageCount();
 		int singleClassPackages = cc.countSingleClassPackages();
 		int maximumClassConcentration = cc.getMaximumClassCount();
 		double elegance = cc.calculateClassElegance();
-//		System.out.println(versao + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
-		ps.println(versao + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration);
+//		System.out.println(version + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
+		ps.println(version.substring(0, version.length() -14) + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration);
 	}
 	
 	/**
@@ -171,9 +171,9 @@ public class MainCharacteristics
 		FileOutputStream out = new FileOutputStream("results\\projects_coupling_metrics.data");
 //		FileOutputStream out = new FileOutputStream("results\\projects_size_metrics.data");
 		PrintStream ps = new PrintStream(out);
-		ps.println("versao\tpackageCount\telegance\tsingleClassPackages\tmaximumClassConcentration");
 		
-		
+		ps.println("version\tdependencyCount\tcbo\taff\teff\tmq\tevm\tlcom5"); //for coupling_metrics
+//		ps.println("version\tpackageCount\telegance\tsingleClassPackages\tmaximumClassConcentration");  // for size_metrics
 		
 		MainCharacteristics mc = new MainCharacteristics();
 		ProjectLoader loader = new ProjectLoader();
@@ -189,7 +189,7 @@ public class MainCharacteristics
 			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
 				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
 				publishCouplingInformation(file.getName(), project, ps);
-				System.out.println(file.getName());
+//				System.out.println(file.getName());
 //				publishSizeInformation(file.getName(), project, ps);
 			}			
 		}
@@ -199,7 +199,7 @@ public class MainCharacteristics
 
 		
 		
-//		transverseJarFile();
+		transverseJarFile();
 		
 //		List<Project> projectsEVM = loader.loadOptimizedVersionsEVM();
 //		

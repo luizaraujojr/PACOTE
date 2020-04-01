@@ -1,4 +1,6 @@
-data <- read.table("/Users/Marcio Barros/Documents/GitHub/sbse-ant-unirio/results/versioncontrol/log_versions.data", header=TRUE);
+#data <- read.table("/Users/Marcio Barros/Documents/GitHub/sbse-ant-unirio/results/versioncontrol/log_versions.data", header=TRUE);
+
+#data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jedit_versions.data", header=TRUE);
 
 data$version[data$version == "1.4.1"] <- "1.4.0";
 data$version[data$version == "1.5.1"] <- "1.5.0";
@@ -15,12 +17,17 @@ data$version[data$version == "1.8.1"] <- "1.8.0";
 data$version[data$version == "1.8.3"] <- "1.8.2";
 data$version[data$version == "1.8.4"] <- "1.8.2";
 data$version <- factor(data$version);
+#data$version <- factor(data$version);
 
-versions <- rev(unique(data$version));
+
+data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jedit_versions.data", header=TRUE);
+
+#versions <- rev(unique(data$version));
+versions <- sort(unique(data$version));
 columns <- c("rev", "single", "revmc", "revsc", "pv_c", "revmp", "revsp", "sw_p", "pv_p");
 result <- matrix(nrow=length(versions), ncol=length(columns), dimnames=list(versions, columns));
 lastVersion <- "";
-
+	
 for (version_ in versions)
 {
 	versionData <- subset(data, version == version_);
@@ -34,28 +41,38 @@ for (version_ in versions)
 	result[version_, "revmp"] <- mean(versionData$packages);
 	result[version_, "revsp"] <- sd(versionData$packages);
 	
-	if (version_ != "1.1.0")
+	if (version_ != versions[1])
 	{
 		lastVersionData <- subset(data, version == lastVersion);
 		result[version_, "pv_c"] <- wilcox.test(lastVersionData$classes, versionData$classes)$p.value;
 		result[version_, "pv_p"] <- wilcox.test(lastVersionData$packages, versionData$packages)$p.value;
 	}
 	
-	result[version_, "sw_p"] <- shapiro.test(versionData$classes)$p.value;		
+	if (nrow(versionData)>=3 & nrow(versionData)<=5000)
+	{
+		result[version_, "sw_p"] <- shapiro.test(versionData$classes)$p.value;		
+	}
+	
 	lastVersion = version_;
 }
 
 result
 
+
+data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdraw_versions.data", header=TRUE);
+
+
 # prepare the plots
-pdf("c:/Users/Marcio Barros/Desktop/revision_classes.pdf", width=16, height=5)
+#pdf("c:/Users/Marcio Barros/Desktop/revision_classes.pdf", width=16, height=5)
 par(mfrow=c(1, 2))
 boxplot(data$classes~data$version, range=0, cex.axis=0.75, main="Classes affected by commits (with outliers)")
 boxplot(data$classes~data$version, outline=FALSE, cex.axis=0.75, main="Classes affected by commits (without outliers)")
-dev.off();
+
+#dev.off();
 
 pdf("c:/Users/Marcio Barros/Desktop/revision_packages.pdf", width=16, height=5)
-par(mfrow=c(1, 2))
-boxplot(data$packages~data$version, range=0, cex.axis=0.75, main="Packages affected by commits (with outliers)")
-boxplot(data$packages~data$version, outline=FALSE, cex.axis=0.75, main="Packages affected by commits (without outliers)")
+	par(mfrow=c(1, 2))
+	boxplot(data$packages~data$version, range=0, cex.axis=0.75, main="Packages affected by commits (with outliers)")
+	boxplot(data$packages~data$version, outline=FALSE, cex.axis=0.75, main="Packages affected by commits (without outliers)")
+
 dev.off();
