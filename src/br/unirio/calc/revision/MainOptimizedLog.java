@@ -1,4 +1,4 @@
-package br.unirio.odem.calc.revision;
+package br.unirio.calc.revision;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,10 +8,10 @@ import java.util.List;
 
 import javax.management.modelmbean.XMLParseException;
 
-import br.unirio.odem.calc.loader.ProjectLoader;
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectClass;
-import br.unirio.odem.model.ProjectPackage;
+import br.unirio.calc.loader.ProjectLoader;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectClass;
+import br.unirio.model.ProjectPackage;
 
 public class MainOptimizedLog
 {

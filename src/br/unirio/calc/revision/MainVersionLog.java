@@ -1,4 +1,4 @@
-package br.unirio.odem.calc.revision;
+package br.unirio.calc.revision;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;

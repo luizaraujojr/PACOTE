@@ -1,4 +1,4 @@
-package br.unirio.odem.model;
+package br.unirio.model;
 
 import java.util.Vector;
 

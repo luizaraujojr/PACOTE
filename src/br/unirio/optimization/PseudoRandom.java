@@ -6,7 +6,7 @@
  *
  */
 
-package br.unirio.odem.optimization;
+package br.unirio.optimization;
 
 import java.util.Random;
 

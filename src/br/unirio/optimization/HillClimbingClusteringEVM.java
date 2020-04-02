@@ -1,15 +1,22 @@
-package br.unirio.odem.optimization;
+package br.unirio.optimization;
 
-import br.unirio.odem.controller.ClusteringCalculator;
-import br.unirio.odem.model.Project;
+import java.io.PrintWriter;
+
+import br.unirio.calc.revision.controller.ClusteringCalculator;
+import br.unirio.model.Project;
 
 /**
  * Hill Climbing searcher for the clustering problem
  * 
  * @author Marcio Barros
  */
-public class HillClimbingClusteringMQ
+public class HillClimbingClusteringEVM
 {
+	/**
+	 * File where details of the search process will be printed
+	 */
+	private PrintWriter detailsFile;
+
 	/**
 	 * Calculator used in the search process
 	 */
@@ -53,13 +60,26 @@ public class HillClimbingClusteringMQ
 	 * @param maxEvaluations Budget of fitness evaluations
 	 * @param maxMovements Maximum number of acceptable movements
 	 */
-	public HillClimbingClusteringMQ(Project project, long maxEvaluations, int maxMovements) throws Exception
+	public HillClimbingClusteringEVM(PrintWriter detailsFile, Project project, long maxEvaluations, int maxMovements) throws Exception
 	{
 		this.classCount = project.getClassCount();
 		this.packageCount = classCount;
 		this.calculator = new ClusteringCalculator(project, packageCount);
 		this.maxEvaluations = maxEvaluations;
 		this.maxMovements = maxMovements;
+		this.detailsFile = detailsFile;
+	}
+
+	/**
+	 * Initializes the Hill Climbing search process
+	 * 
+	 * @param project Project whose classes will be distributed into clusters
+	 * @param maxEvaluations Budget of fitness evaluations
+	 * @param maxMovements Maximum number of acceptable movements
+	 */
+	public HillClimbingClusteringEVM(Project project, long maxEvaluations, int maxMovements) throws Exception
+	{
+		this(null, project, maxEvaluations, maxMovements);
 	}
 	
 	/**
@@ -106,10 +126,10 @@ public class HillClimbingClusteringMQ
 	 */
 	private double evaluate()
 	{
-		double fit = calculator.calculateModularizationQuality();
+		double fit = calculator.calculateEVM();
 
-		if (++evaluations % (classCount * classCount) == 0)
-			System.out.print(evaluations / (classCount * classCount) + " ");
+		if (++evaluations % 10000 == 0 && detailsFile != null)
+			detailsFile.println(evaluations + "; " + fitness);
 
 		return fit;
 	}
@@ -156,7 +176,7 @@ public class HillClimbingClusteringMQ
 		this.fitness = evaluate();
 		this.evaluations = 0;
 		boolean foundBetterSolution = true;
-		
+
 		while (foundBetterSolution && evaluations < maxEvaluations && countMovements(startSolution, solution) < maxMovements)
 		{
 			foundBetterSolution = false;

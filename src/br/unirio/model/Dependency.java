@@ -1,4 +1,4 @@
-package br.unirio.odem.model;
+package br.unirio.model;
 
 /**
  * Classe que representa uma depend�ncia entre duas classes

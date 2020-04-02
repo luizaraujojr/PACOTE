@@ -1,4 +1,4 @@
-package br.unirio.odem.controller;
+package br.unirio.controller;
 
 /**
  * Class that calculates simple statistics

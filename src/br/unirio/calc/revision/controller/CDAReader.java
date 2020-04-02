@@ -1,4 +1,4 @@
-package br.unirio.odem.controller;
+package br.unirio.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,12 +13,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import br.unirio.odem.model.DependencyType;
-import br.unirio.odem.model.ElementType;
-import br.unirio.odem.model.ElementVisibility;
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectClass;
-import br.unirio.odem.model.ProjectPackage;
+import br.unirio.model.DependencyType;
+import br.unirio.model.ElementType;
+import br.unirio.model.ElementVisibility;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectClass;
+import br.unirio.model.ProjectPackage;
 
 public class CDAReader
 {

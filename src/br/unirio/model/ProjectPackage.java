@@ -1,4 +1,4 @@
-package br.unirio.odem.model;
+package br.unirio.model;
 
 /**
  * Classe que representa um pacote em um programa

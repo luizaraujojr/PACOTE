@@ -1,4 +1,4 @@
-package br.unirio.odem.calc.architecture;
+package br.unirio.calc.architecture;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,9 +9,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import br.unirio.odem.calc.loader.ProjectLoader;
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectPackage;
+import br.unirio.calc.loader.ProjectLoader;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectPackage;
 
 /**
  * Class that publishes architectural charts for all versions of Apache Ant

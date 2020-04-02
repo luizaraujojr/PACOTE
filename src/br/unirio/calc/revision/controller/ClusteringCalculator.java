@@ -1,9 +1,7 @@
+package br.unirio.controller;
 
-
-package br.unirio.odem.controller;
-
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectClass;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectClass;
 
 /**
  * DEFINIC�ES:

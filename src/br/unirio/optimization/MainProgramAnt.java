@@ -1,12 +1,12 @@
-package br.unirio.odem.optimization;
+package br.unirio.optimization;
 
 import java.io.File;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 
-import br.unirio.odem.controller.CDAReader;
-import br.unirio.odem.controller.ClusteringCalculator;
-import br.unirio.odem.model.Project;
+import br.unirio.calc.revision.controller.CDAReader;
+import br.unirio.calc.revision.controller.ClusteringCalculator;
+import br.unirio.model.Project;
 
 public class MainProgramAnt
 {

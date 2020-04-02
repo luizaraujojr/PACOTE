@@ -1,10 +1,10 @@
-package br.unirio.odem.controller;
+package br.unirio.controller;
 
 import java.util.Vector;
 
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectClass;
-import br.unirio.odem.model.ProjectPackage;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectClass;
+import br.unirio.model.ProjectPackage;
 
 @SuppressWarnings("unused")
 public class Publicador

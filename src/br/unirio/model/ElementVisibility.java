@@ -1,4 +1,4 @@
-package br.unirio.odem.model;
+package br.unirio.model;
 
 /**
  * Tipo de visibilidade de uma classe

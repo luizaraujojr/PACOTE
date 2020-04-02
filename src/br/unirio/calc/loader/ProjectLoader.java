@@ -1,4 +1,4 @@
-package br.unirio.odem.calc.loader;
+package br.unirio.calc.loader;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,10 +9,10 @@ import java.util.List;
 
 import javax.management.modelmbean.XMLParseException;
 
-import br.unirio.odem.controller.CDAReader;
-import br.unirio.odem.model.Project;
-import br.unirio.odem.model.ProjectClass;
-import br.unirio.odem.model.ProjectPackage;
+import br.unirio.calc.revision.controller.CDAReader;
+import br.unirio.model.Project;
+import br.unirio.model.ProjectClass;
+import br.unirio.model.ProjectPackage;
 
 /**
  * Class that loads real and optimized versions of Apache Ant

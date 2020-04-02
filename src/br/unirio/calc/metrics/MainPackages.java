@@ -1,4 +1,4 @@
-package br.unirio.odem.calc.metrics;
+package br.unirio.calc.metrics;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,9 +6,9 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.unirio.odem.calc.loader.ProjectLoader;
-import br.unirio.odem.controller.ClusteringCalculator;
-import br.unirio.odem.model.Project;
+import br.unirio.calc.loader.ProjectLoader;
+import br.unirio.calc.revision.controller.ClusteringCalculator;
+import br.unirio.model.Project;
 
 /**
  * Publishes metrics and characteristics for a set of projects
