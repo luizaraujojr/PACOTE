@@ -53,14 +53,14 @@ Global server settings:
 Project server settings:
 Project scanner properties:
   - sonar.host.url=https://sonarcloud.io
+  - sonar.java.source=13
   - sonar.login=******
   - sonar.organization=luizaraujojr
-  - sonar.projectBaseDir=D:\Backup\eclipse-workspace\projetotese
+  - sonar.projectBaseDir=D:\Backup\eclipse-workspace\PACOTE
   - sonar.projectKey=luizaraujojr_projetotese
   - sonar.scanner.app=ScannerCli
   - sonar.scanner.appVersion=4.2.0.1873
   - sonar.scm.exclusions.disabled=true
   - sonar.sourceEncoding=windows-1252
-  - sonar.sources=.
   - sonar.verbose=true
-  - sonar.working.directory=D:\Backup\eclipse-workspace\projetotese\.scannerwork
+  - sonar.working.directory=D:\Backup\eclipse-workspace\PACOTE\.scannerwork
