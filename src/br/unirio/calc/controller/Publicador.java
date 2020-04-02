@@ -1,4 +1,4 @@
-package br.unirio.controller;
+package br.unirio.calc.controller;
 
 import java.util.Vector;
 

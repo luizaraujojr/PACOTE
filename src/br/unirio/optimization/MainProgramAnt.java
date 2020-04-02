@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 
-import br.unirio.calc.revision.controller.CDAReader;
-import br.unirio.calc.revision.controller.ClusteringCalculator;
+import br.unirio.calc.controller.CDAReader;
+import br.unirio.calc.controller.ClusteringCalculator;
 import br.unirio.model.Project;
 
 public class MainProgramAnt

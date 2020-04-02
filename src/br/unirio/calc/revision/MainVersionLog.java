@@ -15,7 +15,7 @@ import java.util.Locale;
 
 import javax.management.modelmbean.XMLParseException;
 
-import br.unirio.odem.calc.loader.ProjectLoader;
+import br.unirio.calc.loader.ProjectLoader;
 
 public class MainVersionLog
 {

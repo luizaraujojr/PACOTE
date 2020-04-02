@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.management.modelmbean.XMLParseException;
 
-import br.unirio.calc.revision.controller.CDAReader;
+import br.unirio.calc.controller.CDAReader;
 import br.unirio.model.Project;
 import br.unirio.model.ProjectClass;
 import br.unirio.model.ProjectPackage;

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.unirio.calc.loader.ProjectLoader;
-import br.unirio.calc.revision.controller.ClusteringCalculator;
+import br.unirio.calc.controller.ClusteringCalculator;
 import br.unirio.model.Project;
 
 /**
