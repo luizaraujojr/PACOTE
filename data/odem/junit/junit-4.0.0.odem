@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ODEM PUBLIC "-//PFSW//DTD ODEM 1.2" "http://pfsw.org/ODEM/schema/dtd/odem-1.2.dtd">
+
+<ODEM version="1">
+  <header>
+    <created-by>
+      <exporter version="1.4.0">org.pfsw.tools.cda.ext.export.xml.XmlFileODEMExporter</exporter>
+      <provider>Manfred Duchrow Consulting &amp; Software</provider>
+    </created-by>
+  </header>
+  <context name="New Workset">
+    <container name="D:/Backup/eclipse-workspace/PACOTE/data/jar/junit/junit-4.0.0.jar" classification="jar">
+      <namespace name="junit.extensions">
+        <type name="junit.extensions.ActiveTestSuite$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="4">
+            <depends-on name="java.lang.Thread" classification="extends" />
+            <depends-on name="junit.extensions.ActiveTestSuite" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.ActiveTestSuite" classification="class" visibility="public">
+          <dependencies count="10">
+            <depends-on name="junit.framework.TestSuite" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Thread" classification="uses" />
+            <depends-on name="java.lang.InterruptedException" classification="uses" />
+            <depends-on name="junit.extensions.ActiveTestSuite$1" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.RepeatedTest" classification="class" visibility="public">
+          <dependencies count="7">
+            <depends-on name="junit.extensions.TestDecorator" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.IllegalArgumentException" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.TestDecorator" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="junit.framework.Assert" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.TestSetup$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Protectable" classification="implements" />
+            <depends-on name="junit.extensions.TestSetup" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.TestSetup" classification="class" visibility="public">
+          <dependencies count="6">
+            <depends-on name="junit.extensions.TestDecorator" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.Protectable" classification="uses" />
+            <depends-on name="junit.extensions.TestSetup$1" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.framework">
+        <type name="junit.framework.Assert" classification="class" visibility="public">
+          <dependencies count="14">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="junit.framework.ComparisonFailure" classification="uses" />
+            <depends-on name="java.lang.Double" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+            <depends-on name="java.lang.Float" classification="uses" />
+            <depends-on name="java.lang.Long" classification="uses" />
+            <depends-on name="java.lang.Boolean" classification="uses" />
+            <depends-on name="java.lang.Byte" classification="uses" />
+            <depends-on name="java.lang.Character" classification="uses" />
+            <depends-on name="java.lang.Short" classification="uses" />
+            <depends-on name="java.lang.Integer" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.AssertionFailedError" classification="class" visibility="public">
+          <dependencies count="3">
+            <depends-on name="java.lang.AssertionError" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.ComparisonCompactor" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.Assert" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.ComparisonFailure" classification="class" visibility="public">
+          <dependencies count="3">
+            <depends-on name="junit.framework.AssertionFailedError" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.ComparisonCompactor" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.JUnit4TestAdapter" classification="class" visibility="public">
+          <dependencies count="11">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestAdapterCache" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.Request" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.JUnit4TestAdapterCache$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="10">
+            <depends-on name="org.junit.runner.notification.RunListener" classification="extends" />
+            <depends-on name="junit.framework.JUnit4TestAdapterCache" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestAdapter" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.JUnit4TestAdapterCache" classification="class" visibility="public">
+          <dependencies count="16">
+            <depends-on name="java.util.HashMap" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestAdapter" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestCaseFacade" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestAdapterCache$1" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.util.Arrays" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.JUnit4TestCaseFacade" classification="class" visibility="public">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.RuntimeException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.Protectable" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.Test" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestCase" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="14">
+            <depends-on name="junit.framework.Assert" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.NoSuchMethodException" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestFailure" classification="class" visibility="public">
+          <dependencies count="10">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.io.StringWriter" classification="uses" />
+            <depends-on name="java.io.PrintWriter" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.io.Writer" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestListener" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="4">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestResult$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Protectable" classification="implements" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestResult" classification="class" visibility="public">
+          <dependencies count="16">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="junit.framework.TestFailure" classification="uses" />
+            <depends-on name="junit.framework.TestListener" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="junit.framework.Protectable" classification="uses" />
+            <depends-on name="java.lang.ThreadDeath" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.util.Collection" classification="uses" />
+            <depends-on name="java.util.Collections" classification="uses" />
+            <depends-on name="junit.framework.TestResult$1" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestSuite$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="4">
+            <depends-on name="junit.framework.TestCase" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestSuite" classification="class" visibility="public">
+          <dependencies count="25">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.Vector" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="java.lang.NoSuchMethodException" classification="uses" />
+            <depends-on name="java.lang.InstantiationException" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.io.StringWriter" classification="uses" />
+            <depends-on name="java.io.PrintWriter" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="junit.framework.TestSuite$1" classification="uses" />
+            <depends-on name="java.io.Writer" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.lang.Void" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.runner">
+        <type name="junit.runner.BaseTestRunner" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="35">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.TestListener" classification="implements" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.Properties" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.io.FileOutputStream" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="java.io.File" classification="uses" />
+            <depends-on name="java.io.InputStream" classification="uses" />
+            <depends-on name="java.io.IOException" classification="uses" />
+            <depends-on name="java.io.StringWriter" classification="uses" />
+            <depends-on name="java.io.PrintWriter" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.io.StringReader" classification="uses" />
+            <depends-on name="java.io.BufferedReader" classification="uses" />
+            <depends-on name="java.io.OutputStream" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.text.NumberFormat" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="java.io.FileInputStream" classification="uses" />
+            <depends-on name="java.lang.Integer" classification="uses" />
+            <depends-on name="java.lang.NumberFormatException" classification="uses" />
+            <depends-on name="java.io.Writer" classification="uses" />
+            <depends-on name="java.io.Reader" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.runner.TestRunListener" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.runner.Version" classification="class" visibility="public">
+          <dependencies count="4">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.textui">
+        <type name="junit.textui.ResultPrinter" classification="class" visibility="public">
+          <dependencies count="13">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.TestListener" classification="implements" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="junit.framework.TestFailure" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="junit.runner.BaseTestRunner" classification="uses" />
+            <depends-on name="java.text.NumberFormat" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.textui.TestRunner" classification="class" visibility="public">
+          <dependencies count="17">
+            <depends-on name="junit.runner.BaseTestRunner" classification="extends" />
+            <depends-on name="junit.textui.ResultPrinter" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="junit.framework.TestListener" classification="uses" />
+            <depends-on name="java.io.InputStream" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="junit.runner.Version" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit">
+        <type name="org.junit.After" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.AfterClass" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.Assert" classification="class" visibility="public">
+          <dependencies count="9">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.AssertionError" classification="uses" />
+            <depends-on name="org.junit.ComparisonFailure" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Double" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+            <depends-on name="java.lang.Float" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.Before" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.BeforeClass" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.ComparisonFailure$ComparisonCompactor" classification="class" visibility="default">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.Assert" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+            <depends-on name="org.junit.ComparisonFailure" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.ComparisonFailure" classification="class" visibility="public">
+          <dependencies count="4">
+            <depends-on name="java.lang.AssertionError" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="org.junit.ComparisonFailure$ComparisonCompactor" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.Ignore" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="7">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.Test$None" classification="class" visibility="public">
+          <dependencies count="2">
+            <depends-on name="java.lang.Throwable" classification="extends" />
+            <depends-on name="org.junit.Test" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.Test" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="9">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.Test$None" classification="uses" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.internal.requests">
+        <type name="org.junit.internal.requests.ClassRequest" classification="class" visibility="public">
+          <dependencies count="12">
+            <depends-on name="org.junit.runner.Request" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="org.junit.runner.RunWith" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="org.junit.internal.runners.OldTestClassRunner" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestClassRunner" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.requests.ClassesRequest" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.Request" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.internal.runners.CompositeRunner" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.requests.ErrorReportingRequest" classification="class" visibility="public">
+          <dependencies count="14">
+            <depends-on name="org.junit.runner.Request" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.internal.runners.CompositeRunner" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="org.junit.internal.runners.ErrorReportingRunner" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="org.junit.internal.runners.InitializationError" classification="uses" />
+            <depends-on name="java.util.Arrays" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.requests.FilterRequest" classification="class" visibility="public" isFinal="yes">
+          <dependencies count="9">
+            <depends-on name="org.junit.runner.Request" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.requests.SortingRequest" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.Request" classification="extends" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.internal.runners">
+        <type name="org.junit.internal.runners.BeforeAndAfterRunner$FailedBefore" classification="class" visibility="default">
+          <dependencies count="2">
+            <depends-on name="java.lang.Exception" classification="extends" />
+            <depends-on name="org.junit.internal.runners.BeforeAndAfterRunner" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.BeforeAndAfterRunner" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="11">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestIntrospector" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="org.junit.internal.runners.BeforeAndAfterRunner$FailedBefore" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.CompositeRunner$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+            <depends-on name="org.junit.internal.runners.CompositeRunner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.CompositeRunner" classification="class" visibility="public">
+          <dependencies count="17">
+            <depends-on name="org.junit.runner.Runner" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Filterable" classification="implements" />
+            <depends-on name="org.junit.runner.manipulation.Sortable" classification="implements" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.util.Collection" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+            <depends-on name="org.junit.internal.runners.CompositeRunner$1" classification="uses" />
+            <depends-on name="java.util.Collections" classification="uses" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.ErrorReportingRunner" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.Runner" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.InitializationError" classification="class" visibility="public">
+          <dependencies count="6">
+            <depends-on name="java.lang.Exception" classification="extends" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.Arrays" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.MethodValidator" classification="class" visibility="public">
+          <dependencies count="21">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.internal.runners.TestIntrospector" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="org.junit.After" classification="uses" />
+            <depends-on name="org.junit.Before" classification="uses" />
+            <depends-on name="org.junit.Test" classification="uses" />
+            <depends-on name="org.junit.BeforeClass" classification="uses" />
+            <depends-on name="org.junit.AfterClass" classification="uses" />
+            <depends-on name="org.junit.internal.runners.InitializationError" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Void" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.OldTestClassRunner$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="13">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.TestListener" classification="implements" />
+            <depends-on name="org.junit.internal.runners.OldTestClassRunner" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestCaseFacade" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.OldTestClassRunner" classification="class" visibility="public">
+          <dependencies count="14">
+            <depends-on name="org.junit.runner.Runner" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.framework.TestListener" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="junit.framework.JUnit4TestAdapter" classification="uses" />
+            <depends-on name="junit.extensions.TestDecorator" classification="uses" />
+            <depends-on name="org.junit.internal.runners.OldTestClassRunner$1" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestClassMethodsRunner$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestClassMethodsRunner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestClassMethodsRunner" classification="class" visibility="public">
+          <dependencies count="24">
+            <depends-on name="org.junit.runner.Runner" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Filterable" classification="implements" />
+            <depends-on name="org.junit.runner.manipulation.Sortable" classification="implements" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestMethodRunner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestIntrospector" classification="uses" />
+            <depends-on name="org.junit.Test" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestClassMethodsRunner$1" classification="uses" />
+            <depends-on name="java.util.Collections" classification="uses" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestClassRunner$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="9">
+            <depends-on name="org.junit.internal.runners.BeforeAndAfterRunner" classification="extends" />
+            <depends-on name="org.junit.internal.runners.TestClassRunner" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestClassRunner" classification="class" visibility="public">
+          <dependencies count="18">
+            <depends-on name="org.junit.runner.Runner" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Filterable" classification="implements" />
+            <depends-on name="org.junit.runner.manipulation.Sortable" classification="implements" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.internal.runners.MethodValidator" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.internal.runners.BeforeAndAfterRunner" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+            <depends-on name="org.junit.internal.runners.InitializationError" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestClassMethodsRunner" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestClassRunner$1" classification="uses" />
+            <depends-on name="org.junit.BeforeClass" classification="uses" />
+            <depends-on name="org.junit.AfterClass" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestIntrospector" classification="class" visibility="public">
+          <dependencies count="15">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="org.junit.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.util.Collections" classification="uses" />
+            <depends-on name="org.junit.Ignore" classification="uses" />
+            <depends-on name="org.junit.Before" classification="uses" />
+            <depends-on name="org.junit.BeforeClass" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.Test$None" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestMethodRunner$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="4">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.concurrent.Callable" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestMethodRunner" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TestMethodRunner" classification="class" visibility="public">
+          <dependencies count="26">
+            <depends-on name="org.junit.internal.runners.BeforeAndAfterRunner" classification="extends" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestIntrospector" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.util.concurrent.ExecutorService" classification="uses" />
+            <depends-on name="java.util.concurrent.Callable" classification="uses" />
+            <depends-on name="java.util.concurrent.Future" classification="uses" />
+            <depends-on name="java.util.concurrent.TimeoutException" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.Before" classification="uses" />
+            <depends-on name="org.junit.After" classification="uses" />
+            <depends-on name="java.util.concurrent.Executors" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TestMethodRunner$1" classification="uses" />
+            <depends-on name="java.util.concurrent.TimeUnit" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Long" classification="uses" />
+            <depends-on name="java.lang.AssertionError" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.internal.runners.TextListener" classification="class" visibility="public">
+          <dependencies count="12">
+            <depends-on name="org.junit.runner.notification.RunListener" classification="extends" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.text.NumberFormat" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.runner">
+        <type name="org.junit.runner.Description" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.JUnitCore" classification="class" visibility="public">
+          <dependencies count="19">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="org.junit.runner.Request" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="junit.runner.Version" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="org.junit.internal.runners.TextListener" classification="uses" />
+            <depends-on name="org.junit.internal.runners.OldTestClassRunner" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.Request$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="7">
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="extends" />
+            <depends-on name="org.junit.runner.Request" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.Request" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="14">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+            <depends-on name="org.junit.internal.requests.ClassRequest" classification="uses" />
+            <depends-on name="org.junit.internal.requests.ClassesRequest" classification="uses" />
+            <depends-on name="org.junit.internal.requests.ErrorReportingRequest" classification="uses" />
+            <depends-on name="org.junit.internal.requests.FilterRequest" classification="uses" />
+            <depends-on name="org.junit.runner.Request$1" classification="uses" />
+            <depends-on name="org.junit.internal.requests.SortingRequest" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.Result$Listener" classification="class" visibility="default">
+          <dependencies count="8">
+            <depends-on name="org.junit.runner.notification.RunListener" classification="extends" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.Result" classification="class" visibility="public">
+          <dependencies count="6">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="org.junit.runner.Result$Listener" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.RunWith" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="8">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.Runner" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="3">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.runner.manipulation">
+        <type name="org.junit.runner.manipulation.Filter$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="3">
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.manipulation.Filter" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="7">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filterable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Filter$1" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.manipulation.Filterable" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="3">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Filter" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.NoTestsRemainException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.manipulation.NoTestsRemainException" classification="class" visibility="public">
+          <dependencies count="1">
+            <depends-on name="java.lang.Exception" classification="extends" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.manipulation.Sortable" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.manipulation.Sorter" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.manipulation.Sorter" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.Comparator" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runner.manipulation.Sortable" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.runner.notification">
+        <type name="org.junit.runner.notification.Failure" classification="class" visibility="public">
+          <dependencies count="9">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.io.StringWriter" classification="uses" />
+            <depends-on name="java.io.PrintWriter" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.io.Writer" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunListener" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$1" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$2" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$3" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$4" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$5" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$6" classification="class" visibility="default" isFinal="yes">
+          <dependencies count="5">
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="class" visibility="default" isAbstract="yes">
+          <dependencies count="9">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="org.junit.runner.notification.RunNotifier" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.RunNotifier" classification="class" visibility="public">
+          <dependencies count="15">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunListener" classification="uses" />
+            <depends-on name="org.junit.runner.Description" classification="uses" />
+            <depends-on name="org.junit.runner.Result" classification="uses" />
+            <depends-on name="org.junit.runner.notification.Failure" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$1" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$2" classification="uses" />
+            <depends-on name="org.junit.runner.notification.StoppedByUserException" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$3" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$4" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$5" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$6" classification="uses" />
+            <depends-on name="org.junit.runner.notification.RunNotifier$SafeNotifier" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runner.notification.StoppedByUserException" classification="class" visibility="public">
+          <dependencies count="1">
+            <depends-on name="java.lang.RuntimeException" classification="extends" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="org.junit.runners">
+        <type name="org.junit.runners.AllTests" classification="class" visibility="public">
+          <dependencies count="11">
+            <depends-on name="org.junit.internal.runners.OldTestClassRunner" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Parameterized$Parameters" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="7">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Parameterized$RunAllParameterMethods" classification="class" visibility="public">
+          <dependencies count="17">
+            <depends-on name="org.junit.internal.runners.CompositeRunner" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.util.Collection" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.Iterator" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized$TestClassRunnerForParameters" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized$Parameters" classification="uses" />
+            <depends-on name="java.lang.StringBuilder" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Parameterized$TestClassRunnerForParameters" classification="class" visibility="default">
+          <dependencies count="10">
+            <depends-on name="org.junit.internal.runners.TestClassMethodsRunner" classification="extends" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.Integer" classification="uses" />
+            <depends-on name="org.junit.Assert" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Parameterized" classification="class" visibility="public">
+          <dependencies count="12">
+            <depends-on name="org.junit.internal.runners.TestClassRunner" classification="extends" />
+            <depends-on name="java.util.Collection" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.util.List" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.internal.runners.MethodValidator" classification="uses" />
+            <depends-on name="java.util.ArrayList" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized$RunAllParameterMethods" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized$Parameters" classification="uses" />
+            <depends-on name="org.junit.runners.Parameterized$TestClassRunnerForParameters" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Suite$SuiteClasses" classification="annotation" visibility="public" isAbstract="yes">
+          <dependencies count="8">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.lang.annotation.Annotation" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.annotation.Retention" classification="uses" />
+            <depends-on name="java.lang.annotation.RetentionPolicy" classification="uses" />
+            <depends-on name="java.lang.annotation.Target" classification="uses" />
+            <depends-on name="java.lang.annotation.ElementType" classification="uses" />
+            <depends-on name="org.junit.runners.Suite" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="org.junit.runners.Suite" classification="class" visibility="public">
+          <dependencies count="9">
+            <depends-on name="org.junit.internal.runners.TestClassRunner" classification="extends" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="org.junit.runners.Suite$SuiteClasses" classification="uses" />
+            <depends-on name="org.junit.internal.runners.InitializationError" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="org.junit.runner.Request" classification="uses" />
+            <depends-on name="org.junit.runner.Runner" classification="uses" />
+            <depends-on name="java.lang.annotation.Annotation" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+    </container>
+  </context>
+</ODEM>

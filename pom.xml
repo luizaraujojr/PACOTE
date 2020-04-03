@@ -23,11 +23,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/bcel/bcel -->
-		<dependency>
-			<groupId>bcel</groupId>
-			<artifactId>bcel</artifactId>
-			<version>6.4.1</version>
-		</dependency>
+<dependency>
+  <groupId>org.apache.bcel</groupId>
+  <artifactId>bcel</artifactId>
+  <version>6.4.1</version>
+</dependency>
 	</dependencies>
 	<properties>
 		<sonar.projectKey>luizaraujojr_projetotese</sonar.projectKey>
