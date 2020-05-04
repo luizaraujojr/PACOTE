@@ -39,7 +39,7 @@ public class MainCharacteristics
 		/**
 	 * Publishes information about a JAva class
 	 */
-    private static void processClass(InputStream is, String version, String filename, PrintStream ps) throws ClassNotFoundException, IOException
+    public void processClass(InputStream is, String version, String filename, PrintStream ps) throws ClassNotFoundException, IOException
 	{
 		ClassParser cp = new ClassParser(is, filename);
 		JavaClass clazz = cp.parse();
@@ -63,42 +63,38 @@ public class MainCharacteristics
 	private static void transverseJarFile() throws IOException, FileNotFoundException, ClassNotFoundException
 	{	
 		
-		FileOutputStream out = new FileOutputStream("results\\jar_file_metrics.data"); 
-		PrintStream ps = new PrintStream(out);
-		ps.println("versions\tpackages\tclasses\tattrs\tmeths\tpmeths");
-				
-		List<File> files = new ArrayList<File>();
-		
-		File dir = new File(JAR_DIRECTORY);
-		
-		listFilesOnly(dir,files);
-		
-		for (File file: files) {
-			if(file.isDirectory() == false && getFileExtension(file).equals("jar")) {
-				
-				JarFile jar = new JarFile(file);
-				Enumeration<JarEntry> e = jar.entries();
-
-				while (e.hasMoreElements())
-				{
-					JarEntry jarEntry = e.nextElement();
-					String fileName = jarEntry.getName();
-					
-//					if (fileName.endsWith("PluginManagerProgress$WindowHandler.class")){
-//						System.out.println ("aaaa");
+//		FileOutputStream out = new FileOutputStream("results\\jar_file_metrics.data"); 
+//		PrintStream ps = new PrintStream(out);
+//		ps.println("versions\tpackages\tclasses\tattrs\tmeths\tpmeths");
+//				
+//		List<File> files = new ArrayList<File>();
+//		
+//		File dir = new File(JAR_DIRECTORY);
+//		
+//		listFilesOnly(dir,files);
+//		
+//		for (File file: files) {
+//			if(file.isDirectory() == false && getFileExtension(file).equals("jar")) {
+//				
+//				JarFile jar = new JarFile(file);
+//				Enumeration<JarEntry> e = jar.entries();
+//
+//				while (e.hasMoreElements())
+//				{
+//					JarEntry jarEntry = e.nextElement();
+//					String fileName = jarEntry.getName();
+//					
+//					if (fileName.endsWith(".class") && !fileName.equals("install.class") && !fileName.equals("Install.class"))
+//					{
+//						InputStream is = jar.getInputStream(jarEntry);
+//						processClass(is, file.getName(), fileName, ps);
+//						is.close();
 //					}
-					
-					if (fileName.endsWith(".class") && !fileName.equals("install.class") && !fileName.equals("Install.class"))
-					{
-						InputStream is = jar.getInputStream(jarEntry);
-						processClass(is, file.getName(), fileName, ps);
-						is.close();
-					}
-				}
-
-				jar.close();
-			}			
-		}
+//				}
+//
+//				jar.close();
+//			}			
+//		}
 	}
 	
 	/**
@@ -131,6 +127,31 @@ public class MainCharacteristics
 //		System.out.println(version + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration);
 		ps.println(version.substring(0, version.length() -14) + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration);
 	}
+	
+	
+	/**
+	 * Extract the characteristics and metrics for the size and coupling of a given project
+	 */
+	public void extractCharacteristics(String version, Project project, PrintStream ps) throws Exception
+	{
+		ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount());
+		int dependencyCount = project.getDependencyCount();
+		double mq = cc.calculateModularizationQuality();
+		int evm = cc.calculateEVM();
+		double aff = cc.calculateAfferentCoupling();
+		double eff = cc.calculateEfferentCoupling();
+		double lcom5 = cc.calculateLCOM5();
+		double cbo = cc.calculateCBO();
+		int packageCount = cc.getPackageCount();
+		int singleClassPackages = cc.countSingleClassPackages();
+		int maximumClassConcentration = cc.getMaximumClassCount();
+		double elegance = cc.calculateClassElegance();
+		
+//		System.out.println(version + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5););
+		
+		ps.println(version.substring(0, version.length() -14) + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration+ "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
+	}
+	
 	
 	/**
 	 * List all the files from the main directory and its subdirectories

@@ -1,7 +1,6 @@
 package br.unirio.calc.revision;
 
 import java.io.BufferedReader;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -19,7 +18,7 @@ import br.unirio.calc.loader.ProjectLoader;
 
 public class MainVersionLog
 {
-	private String findVersion(String sdata, String project) throws XMLParseException, ParseException
+	private static String findVersion(String sdata, String project) throws XMLParseException, ParseException
 	{
 		ProjectLoader pl = new ProjectLoader();
 		String version="";		
@@ -45,7 +44,7 @@ public class MainVersionLog
 		return version;
 	}
 	
-	private boolean hasPackage(List<String> packages, String packageName)
+	private static boolean hasPackage(List<String> packages, String packageName)
 	{
 		for (String name : packages)
 			if (name.compareToIgnoreCase(packageName) == 0)
@@ -54,7 +53,7 @@ public class MainVersionLog
 		return false;
 	}
 	
-	private void saveRevisionsByVersion(String filename, PrintStream ps, String project) throws IOException, XMLParseException, ParseException
+	public void saveRevisionsByVersion(String filename, PrintStream ps, String project) throws IOException, XMLParseException, ParseException
 	{
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line;
@@ -65,7 +64,7 @@ public class MainVersionLog
 		int lastClasses = 0;
 		List<String> lastPackages = new ArrayList<String>();
 		ps.println("version\tauthor\tclasses\tpackages");
-		
+		br.readLine(); // jumping the title of the file. 
 		while ((line = br.readLine()) != null) 
 		{
 			if (line.length() > 0)
@@ -109,40 +108,40 @@ public class MainVersionLog
 	public static void main(String[] args) throws IOException, ParseException, XMLParseException
 	{		
 		
-		int option = 0;
-		
-		switch (option) {
-		case 1:
-		FileOutputStream out1 = new FileOutputStream("results\\jeditlog_list.data");
-		PrintStream ps1 = new PrintStream(out1);
-		loadLogFile("data\\log\\jeditlog_raw.data", ps1);
-		ps1.close();
-		
-		case 2:
-		FileOutputStream out2 = new FileOutputStream("results\\jhotdrawlog_list.data");
-		PrintStream ps2 = new PrintStream(out2);
-		loadLogFile("data\\log\\jeditlog_raw.data", ps2);
-		ps2.close();
-		
-		case 3:
-		FileOutputStream out3 = new FileOutputStream("results\\jedit_versions.data");
-		PrintStream ps3 = new PrintStream(out3);
-		MainVersionLog me3 = new MainVersionLog();
-		me3.saveRevisionsByVersion("data\\log\\jeditlog_list.data", ps3, "jedit");
-		ps3.close();
-		
-		case 4:
-		FileOutputStream out4 = new FileOutputStream("results\\jhotdraw_versions.data");
-		PrintStream ps4 = new PrintStream(out4);
-		MainVersionLog me4 = new MainVersionLog();
-		me4.saveRevisionsByVersion("data\\log\\jhotdrawlog_versions.data", ps4, "jhotdraw");
-		ps4.close();
-		}
-	
-		System.out.println("Finished!");
+//		int option = 0;
+//		
+//		switch (option) {
+//		case 1:
+//		FileOutputStream out1 = new FileOutputStream("results\\jeditlog_list.data");
+//		PrintStream ps1 = new PrintStream(out1);
+//		loadLogFile("data\\log\\jeditlog_raw.data", ps1);
+//		ps1.close();
+//		
+//		case 2:
+//		FileOutputStream out2 = new FileOutputStream("results\\jhotdrawlog_list.data");
+//		PrintStream ps2 = new PrintStream(out2);
+//		loadLogFile("data\\log\\jeditlog_raw.data", ps2);
+//		ps2.close();
+//		
+//		case 3:
+//		FileOutputStream out3 = new FileOutputStream("results\\jedit_versions.data");
+//		PrintStream ps3 = new PrintStream(out3);
+//		MainVersionLog me3 = new MainVersionLog();
+//		me3.saveRevisionsByVersion("data\\log\\jeditlog_list.data", ps3, "jedit");
+//		ps3.close();
+//		
+//		case 4:
+//		FileOutputStream out4 = new FileOutputStream("results\\jhotdraw_versions.data");
+//		PrintStream ps4 = new PrintStream(out4);
+//		MainVersionLog me4 = new MainVersionLog();
+//		me4.saveRevisionsByVersion("data\\log\\jhotdrawlog_versions.data", ps4, "jhotdraw");
+//		ps4.close();
+//		}
+//	
+//		System.out.println("Finished!");
 	}
 	
-	private static void loadLogFile(String filename, PrintStream ps) throws IOException, ParseException
+	public void loadLogFile(String filename, PrintStream ps) throws IOException, ParseException
 	{
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line;

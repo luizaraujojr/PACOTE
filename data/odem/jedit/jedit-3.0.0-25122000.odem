@@ -866,10 +866,8 @@
           </dependencies>
         </type>
         <type name="bsh.JThis" classification="class" visibility="default">
-          <dependencies count="8">
+          <dependencies count="6">
             <depends-on name="bsh.This" classification="extends" />
-            <depends-on name="java.beans.PropertyChangeListener" classification="uses" />
-            <depends-on name="java.beans.PropertyChangeEvent" classification="uses" />
             <depends-on name="bsh.NameSpace" classification="uses" />
             <depends-on name="bsh.Interpreter" classification="uses" />
             <depends-on name="bsh.BshMethod" classification="uses" />

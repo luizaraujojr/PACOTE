@@ -146,7 +146,7 @@ public class MainArchitectureDSM
 	/**
 	 * Saves a file conveying dependencies among packages
 	 */
-	private static void saveDependencies(Project project, String outputFilename) throws IOException
+	public void saveDependencies(Project project, String outputFilename) throws IOException
 	{
 		FileWriter fw = new FileWriter(new File(outputFilename));
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -231,24 +231,22 @@ public class MainArchitectureDSM
 	 */
 	public static final void main(String[] args) throws Exception
 	{
-		ProjectLoader loader = new ProjectLoader();
-		
-		
-		
-		List<File> files = new ArrayList<File>();
-		
-		File dir = new File(ODEM_DIRECTORY);
-		
-		listFilesOnly(dir,files);
-		
-		for (File file: files) {
-			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
-//				mc.transverseJarFile(JAR_DIRECTORY + "\\jhotdraw\\jhotdraw.jar", "jhotdraw", ps);
-				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
-				saveDependencies(project, DIRETORIO_SAIDA + file.getName() + ".graph.txt");
-				System.out.println (DIRETORIO_SAIDA + file.getName() + ".graph.txt");
-			}			
-		}
+//		ProjectLoader loader = new ProjectLoader();
+//		
+//		List<File> files = new ArrayList<File>();
+//		
+//		File dir = new File(ODEM_DIRECTORY);
+//		
+//		listFilesOnly(dir,files);
+//		
+//		for (File file: files) {
+//			if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
+////				mc.transverseJarFile(JAR_DIRECTORY + "\\jhotdraw\\jhotdraw.jar", "jhotdraw", ps);
+//				Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
+//				me.saveDependencies(project, DIRETORIO_SAIDA + file.getName() + ".graph.txt");
+//				System.out.println (DIRETORIO_SAIDA + file.getName() + ".graph.txt");
+//			}			
+//		}
 		
 		
 		
@@ -268,6 +266,6 @@ public class MainArchitectureDSM
 //		if (Math.abs(mq - 101.5269) > 0.0001) throw new Exception("Erro no cálculo do MQ");
 //		saveDependencies(projectMQ, DIRETORIO_SAIDA + "mq_optimized.txt");
 		
-		System.out.println("Finished!");
+//		System.out.println("Finished!");
 	}
 }

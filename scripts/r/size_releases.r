@@ -1,7 +1,7 @@
 #data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/size_metrics.data", header=TRUE);
 
 
-	data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jar_file_metrics.data", header=TRUE);
+	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristics.data", header=TRUE);
 	unique_versions <- unique(data$versions);
 	colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths", "NAC");
 	result <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
@@ -23,7 +23,10 @@
 
 
 # box-plot for the number of classes per package
-	data_classespackages <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jar_file_metrics.data", header=TRUE);
+	data_classespackages <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristics.data", header=TRUE);
+	
+	data_classespackages <- subset(data_classespackages, substring (versions,1,2) == "ju");
+	
 	unique_versions <- unique(data_classespackages$versions);
 	uniqueVersionPackage <- unique(data_classespackages[,c("versions","packages")])
 	colnames <- c("version", "package", "ClassesPackages");
@@ -52,15 +55,31 @@
 	
 
 # box-plot for the number of attributes per class
-par(mar=c(9,3,3,3))
-boxplot(data[,"attrs"] ~data[,"versions"], data= data, main="Attribute/Class", xlab='', las=2)
+	par(mar=c(9,3,3,3))
+
+		data_classesattributes <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJhotdraw.data", header=TRUE);
+		
+		#data_classesattributes <- subset(data_classesattributes, substring (versions,1,2) == "ju");
+
+	boxplot(data_classesattributes[,"attrs"] ~data_classesattributes[,"versions"], data= data_classesattributes, main="Attribute/Class", xlab='', las=2)
+
+
+
+
 
 	# box-plot for the number of methods per class
+	
+	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJunit.data", header=TRUE);
+	
 	par(mar=c(9,3,3,3))
 	boxplot(data[,"meths"] ~data[,"versions"], data= data, main="Methods/Class", xlab='', las=2)
 
-par(mar=c(9,3,3,3))
-boxplot(data[,"pmeths"] ~data[,"versions"], data= data, main="Public Methods/Class", xlab='', las=2)
+# box-plot for the number of public methods per class
+
+data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJunit.data", header=TRUE);
+
+	par(mar=c(9,3,3,3))
+	boxplot(data[,"pmeths"] ~data[,"versions"], data= data, main="Public Methods/Class", xlab='', las=2)
 
 
 # box-plot for the number of dependencies per class

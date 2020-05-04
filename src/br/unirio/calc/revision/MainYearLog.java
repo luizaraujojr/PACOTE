@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MainYearLog
 {
-	private boolean hasPackage(List<String> packages, String packageName)
+	private static boolean hasPackage(List<String> packages, String packageName)
 	{
 		for (String name : packages)
 			if (name.compareToIgnoreCase(packageName) == 0)
@@ -19,7 +19,7 @@ public class MainYearLog
 		return false;
 	}
 	
-	private void saveRevisionsByYear(String filename, PrintStream ps) throws IOException
+	public void saveRevisionsByYear(String filename, PrintStream ps) throws IOException
 	{
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line;
@@ -30,7 +30,7 @@ public class MainYearLog
 		int lastClasses = 0;
 		List<String> lastPackages = new ArrayList<String>();
 		ps.println("year\tauthor\tclasses\tpackages");
-		
+		br.readLine(); // jumping the title of the file. 
 		while ((line = br.readLine()) != null) 
 		{
 			if (line.length() > 0)
@@ -73,6 +73,8 @@ public class MainYearLog
 
 	public static void main(String[] args) throws IOException
 	{
+		String projectName ="jedit";
+		
 //		FileOutputStream out = new FileOutputStream("results\\versioncontrol\\log_years.data");
 //		FileOutputStream out = new FileOutputStream("results\\jhotdraw_years.data");
 		FileOutputStream out = new FileOutputStream("results\\jedit_years.data");
@@ -81,6 +83,8 @@ public class MainYearLog
 		MainYearLog me = new MainYearLog();
 //		me.saveRevisionsByYear("data\\log\\jhotdrawlog_list.data", ps);
 		me.saveRevisionsByYear("data\\log\\jeditlog_list.data", ps);
+		me.saveRevisionsByYear("data\\log\\" + projectName + "log_list.data", ps);
+
 		
 		ps.close();
 		System.out.println("Finished!");

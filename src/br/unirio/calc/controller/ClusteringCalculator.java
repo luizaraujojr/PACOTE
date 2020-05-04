@@ -76,9 +76,9 @@ public class ClusteringCalculator
 				int classIndex = project.getClassIndex(targetName);
 				
 				if (classIndex == -1)
-					throw new Exception ("Class not registered in project: " + targetName);
-				
-				dependencies[i][classIndex]++;
+//					throw new Exception ("Class not registered in project: " + targetName);
+					System.out.println("Class not registered in project: " + targetName);
+				else {dependencies[i][classIndex]++;}
 			}
 		}
 	}

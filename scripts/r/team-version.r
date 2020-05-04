@@ -1,10 +1,8 @@
-#data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/log_versions.data", header=TRUE);
 
 
-
-#data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jhotdraw_versions.data", header=TRUE);
-
-data <- read.table("D:/Backup/eclipse-workspace/projetotese/results/jedit_versions.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByVersion.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jedit_RevisionsByVersion.data", header=TRUE);
+data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByVersion.data", header=TRUE);
 
 versions <- sort(unique(data$version));
 

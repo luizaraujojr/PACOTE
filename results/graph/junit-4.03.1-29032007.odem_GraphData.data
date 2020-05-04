@@ -1,0 +1,12 @@
+   org.junit.internal.requests;0;0;0;0;0;1;0;0;0;0;0;0
+             org.junit.runners;1;0;0;0;0;0;0;0;0;0;0;0
+    org.junit.internal.runners;1;1;0;0;0;1;0;0;0;0;0;0
+ org.junit.runner.manipulation;1;0;1;0;0;1;0;0;0;0;0;0
+ org.junit.runner.notification;1;0;1;0;0;1;0;0;0;1;0;0
+              org.junit.runner;1;1;1;1;1;0;0;0;0;1;0;0
+                  junit.textui;0;0;0;0;0;0;0;0;0;0;0;0
+              junit.extensions;0;0;1;0;0;0;0;0;0;0;0;0
+                  junit.runner;0;0;0;0;0;1;1;0;0;0;0;0
+               junit.framework;1;1;1;0;0;1;1;1;1;0;0;0
+                     org.junit;1;1;1;0;0;0;0;0;0;0;0;0
+            org.junit.internal;0;0;0;0;0;0;0;0;0;0;1;0
