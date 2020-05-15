@@ -1,7 +1,7 @@
 
 
 #data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByVersion.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jedit_RevisionsByVersion.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByVersion.data", header=TRUE);
 data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByVersion.data", header=TRUE);
 
 versions <- sort(unique(data$version));
@@ -30,7 +30,7 @@ for (version_ in versions)
 	result[version_, "inTeam"] <- length(inTeam);
 	result[version_, "outTeam"] <- length(outTeam);
 	result[version_, "num_commits"] <- nrow(vdata);
-	result[version_, "NAR"] <- sd(commits);
+	result[version_, "NAR"] <- round(sd(commits),2);
 }
 
 result

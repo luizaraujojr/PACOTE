@@ -1,9 +1,10 @@
 	library(igraph)
 	library("lubridate")
-	par(mfrow = c(4,4), cex=0.2)
+	pdf("D:/Backup/eclipse-workspace/pacote/results/jhotdraw_graph.pdf", width=8,height=10)
+	par(mfrow = c(5,5), cex=0.2)
 	
 	#Diretório da base de dados observados a ser lida
-		dataDir <- 'D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jhotdraw'
+		dataDir <- "D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jhotdraw"
 		 
 		larquivos<-list.files(dataDir,full.names=TRUE)
 	 
@@ -17,16 +18,17 @@
 		date_version<-as.Date(substr(strsplit(strsplit(larquivos[i],'/')[[1]][2],'-')[[1]][3],0,8),format="%d%m%Y")
 		text(0,-1.4,  paste(month(date_version), year(date_version),sep="/"), col="black", cex=2)
 	 }
+	 dev.off();
 	 
 	 
-	 
-	#pdf('D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jedit\\jedit_graph.pdf', width=16, height=10)
+	 pdf("D:/Backup/eclipse-workspace/pacote/results/jedit_graph.pdf", width=8,height=15)
+	#pdf('D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jhotdraw\\jhotdraw_graph.pdf', width=16, height=10)
 	library(igraph)
 	library("lubridate")
 	par(mfrow = c(8,5), cex=0.2)
 	
 	#Diretório da base de dados observados a ser lida
-		dataDir <- 'D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jedit'
+		dataDir <- "D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\jedit"
 		 
 		larquivos<-list.files(dataDir,full.names=TRUE)
 	 
@@ -45,6 +47,7 @@
 	 
 	 
 	 	 
+		 pdf("D:/Backup/eclipse-workspace/pacote/results/junit_graph.pdf", width=8,height=10)
 	library(igraph)
 	library("lubridate")
 	par(mfrow = c(5,5), cex=0.2)
@@ -65,3 +68,4 @@
 		text(0,-1.4,  paste(month(date_version), year(date_version),sep="/"), col="black", cex=2)
 	 }
 	 
+	 dev.off();

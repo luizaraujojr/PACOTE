@@ -1,0 +1,1408 @@
+Signature-Version: 1.0
+Created-By: 1.5.0_16 (Apple Inc.)
+SHA1-Digest-Manifest-Main-Attributes: CEGPUtN0zx875zz/gPXrOek6DKg=
+SHA1-Digest-Manifest: DvOttpPK2boAB799XaJGkE7iJFI=
+
+Name: org/jhotdraw/draw/BezierTool.class
+SHA1-Digest: qKn4F4/2NK3nFtHfLf8deBeKcE0=
+
+Name: org/jhotdraw/draw/HandleEvent.class
+SHA1-Digest: 9BcMxaO9tH7yCf8YrNcRFz4EPEI=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingViewAction.class
+SHA1-Digest: uq02dmgKnWX6G+79yewrK7eFd0w=
+
+Name: org/jhotdraw/draw/RectangleFigure.class
+SHA1-Digest: 7YkbYyD+NOD0xe3UR8sI2wHCQFw=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingEditorAction.class
+SHA1-Digest: 2sdsT4LVafx95oelGPgFcWyBC2w=
+
+Name: org/jhotdraw/draw/Locator.class
+SHA1-Digest: 76aB5jcE+5MVZpmY0V36OOM9NNI=
+
+Name: org/jhotdraw/draw/action/images/attribute.color.colorChooser.png
+SHA1-Digest: fV8xkTeVczmEwb9AyddO0iTPhYE=
+
+Name: org/jhotdraw/draw/AbstractConnectionHandle.class
+SHA1-Digest: +o9Ya9YDS87Z5B1K9gZH143+HEg=
+
+Name: org/jhotdraw/draw/action/MoveAction$North.class
+SHA1-Digest: 8v5kofRX+UyIC5ztQ5+ox+wY/CQ=
+
+Name: org/jhotdraw/geom/GrowStroke.class
+SHA1-Digest: 25KVttN5hh5aY+UDvuilq3a+AhY=
+
+Name: net/n3/nanoxml/StdXMLReader$1.class
+SHA1-Digest: oVxXNx80OGHzRjMpgeuqDAKvnu0=
+
+Name: org/jhotdraw/draw/action/images/moveToBack.png
+SHA1-Digest: J9taVMRPkW1okOmKVvVitAn+gNU=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$7.class
+SHA1-Digest: 85ps3x1qgF0/sgB+6xUpW/ynkcw=
+
+Name: org/jhotdraw/draw/CompositeFigure.class
+SHA1-Digest: Z2GhyBaEiGgNlOcgGdl9/WwD5GQ=
+
+Name: org/jhotdraw/samples/svg/SVGAttributeKeys.class
+SHA1-Digest: 57i4h6EdsSyZcTzSaJR8HWFkUAM=
+
+Name: org/jhotdraw/gui/fontchooser/FontFamilyNode.class
+SHA1-Digest: hZLWZPk4QVKe9tQQ0ec0T5RpxVg=
+
+Name: org/jhotdraw/gui/fontchooser/DefaultFontChooserModel$UIResource.
+ class
+SHA1-Digest: Q0HvHZKFoJxAxYDH8pTwJY4w8h8=
+
+Name: org/jhotdraw/draw/AttributeKeys$WindingRule.class
+SHA1-Digest: 1veAjLTN9insS4hd10R/ETx+X1A=
+
+Name: org/jhotdraw/draw/TransformHandleKit$SouthWestHandle.class
+SHA1-Digest: v7F5Ud2oMEYbeEa/ivM0QjyXYBc=
+
+Name: org/jhotdraw/draw/AttributeKeys$1.class
+SHA1-Digest: xBbkkyxJ2UQquNMblX56DuYSdns=
+
+Name: org/jhotdraw/draw/action/MoveAction$South.class
+SHA1-Digest: 5CrT3CVa7OIzfcLIB+bLm9T83TU=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeDecoration.png
+SHA1-Digest: cdhR6xf/BQzbHZ5G42Yd5N69LKU=
+
+Name: net/n3/nanoxml/StdXMLReader$StackedReader.class
+SHA1-Digest: bIPCrTwudrLklLR7Q7Isgba76KU=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$1.class
+SHA1-Digest: bZSV8InEOvzHWM2nTAsgR5CYumw=
+
+Name: org/jhotdraw/draw/TransformHandleKit$WestHandle.class
+SHA1-Digest: FpdH/roFBD6yeq5YH2h4e16WOss=
+
+Name: org/jhotdraw/draw/Connector.class
+SHA1-Digest: c0DhXSTjjOqOMDiU1X60Z9A13fs=
+
+Name: org/jhotdraw/draw/HandleTracker.class
+SHA1-Digest: zdc/S4qFCqm7adRWCoucGXpt21k=
+
+Name: org/jhotdraw/draw/action/IncreaseHandleDetailLevelAction.class
+SHA1-Digest: 7kd1bdhjjeu/ECG891xdfJP5PYM=
+
+Name: org/jhotdraw/draw/action/DrawingAttributeAction$1.class
+SHA1-Digest: +XTNz6Jp2XxYdsf8pxyiMQ+5+/o=
+
+Name: org/jhotdraw/draw/AbstractRotateHandle.class
+SHA1-Digest: mIb13mhg1S4MaBCZ/Mt5DFi9m7I=
+
+Name: org/jhotdraw/gui/plaf/FontChooserUI.class
+SHA1-Digest: RWQjT/K4ouB+68l0kqjMF0hou/A=
+
+Name: org/jhotdraw/draw/BezierTool$1.class
+SHA1-Digest: rGBJX0l61WSQnFfRe+D/EJV+VeU=
+
+Name: org/jhotdraw/app/action/Actions$1.class
+SHA1-Digest: Hzlk0+ddJuvK+J8uZtqB5aqLx1I=
+
+Name: org/jhotdraw/draw/action/VerticalGridLayout.class
+SHA1-Digest: 8ZqjFgQ0QzQg47XEN+mVm4ZNcY4=
+
+Name: org/jhotdraw/undo/UndoRedoManager$UndoAction.class
+SHA1-Digest: Op8DH80UZ+OFLWakMlfqc4ZQo0w=
+
+Name: org/jhotdraw/samples/draw/DrawApplet$1.class
+SHA1-Digest: ZY3cwt3X+gzqsTVZBXGnCXs3HcQ=
+
+Name: org/jhotdraw/draw/TextAreaCreationTool$1.class
+SHA1-Digest: uXKEH8Hb6d8iP+Ea6j01z2FRhK8=
+
+Name: org/jhotdraw/draw/action/AttributeToggler$1.class
+SHA1-Digest: d9UOajbkdZnG+SB8uvmlczhLHEI=
+
+Name: org/jhotdraw/draw/TextAreaCreationTool.class
+SHA1-Digest: sjivJkl0gTyHoO6MRZszMSjxajc=
+
+Name: org/jhotdraw/gui/datatransfer/ImageTransferable.class
+SHA1-Digest: ZEkVdks+byZpX1rdjVxDpevWa4A=
+
+Name: org/jhotdraw/draw/action/images/createText.png
+SHA1-Digest: VOFPpM2bSDmpfKU3jwdegHELhpc=
+
+Name: org/jhotdraw/draw/action/DrawingColorIcon.class
+SHA1-Digest: o/5NI+GVQhR4pFIKV/SnPCRVhdQ=
+
+Name: org/jhotdraw/draw/TextFigure.class
+SHA1-Digest: OkJqB/PdlvtqyVohGbqQnnHj8DY=
+
+Name: org/jhotdraw/app/action/Actions.class
+SHA1-Digest: dKFSdw2LIX8ib4AePH0U+6fdJHU=
+
+Name: org/jhotdraw/draw/action/images/attributeTextColor.png
+SHA1-Digest: fXg46bnAQTUhR8LuaOJxsC5ydVs=
+
+Name: org/jhotdraw/geom/BezierPathIterator.class
+SHA1-Digest: lglHpTvCGygYqVA/QG33eCa5qFQ=
+
+Name: net/n3/nanoxml/XMLUtil.class
+SHA1-Digest: 5Wkz365bE0enKoCgegpU7ReTEBU=
+
+Name: org/jhotdraw/draw/LineFigure$1.class
+SHA1-Digest: 6gOw+jFv8Yg+FzPcOLj6vE4UMr8=
+
+Name: org/jhotdraw/draw/AttributeKey$1.class
+SHA1-Digest: vINjG1hI+y3LYebwEdkzqDpRE4c=
+
+Name: org/jhotdraw/draw/ChopRectangleConnector.class
+SHA1-Digest: z7VBvWflZVCWjUybeCmiBSLKFyM=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$2.class
+SHA1-Digest: ORC3cNnq/1a++pJDWpTb4jIrac8=
+
+Name: org/jhotdraw/draw/ToolEvent.class
+SHA1-Digest: 4maoR9MngjkQ2hS3BuWGzqKAvfU=
+
+Name: org/jhotdraw/draw/action/SelectSameAction.class
+SHA1-Digest: vsFYTYXrO4sMzEOWQdPIzepddAM=
+
+Name: org/jhotdraw/geom/Geom.class
+SHA1-Digest: qyvlx6GYw0c9uMA+jweGoegJPRY=
+
+Name: org/jhotdraw/draw/TransformHandleKit$EastHandle.class
+SHA1-Digest: 1gYbBxkkMmKBPYC3/75SrpOdbCc=
+
+Name: org/jhotdraw/draw/action/BringToFrontAction.class
+SHA1-Digest: M0YzZUNnOxGmGJUPQQ0Uthikeb8=
+
+Name: org/jhotdraw/draw/ResizeHandleKit.class
+SHA1-Digest: rdHzvg2sz242rzjcUzQWHKN0yRE=
+
+Name: org/jhotdraw/draw/DrawingView.class
+SHA1-Digest: /MgxFeKChpGYgxGM8BHuTzPfi34=
+
+Name: org/jhotdraw/gui/JFontChooser.class
+SHA1-Digest: /O/OG9zRA85ChjWK7G5OB1FsZCU=
+
+Name: org/jhotdraw/draw/TextAreaFigure$1.class
+SHA1-Digest: sExVYB0UaVXGTh8AaZLbxW6cK/Q=
+
+Name: org/jhotdraw/draw/ConnectionStartHandle.class
+SHA1-Digest: gRx5gz4sFvSBVcuTmHj5EWDSJgk=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeType.png
+SHA1-Digest: 1MQu8rZNw+stdVtnQUHw/1nvZVE=
+
+Name: org/jhotdraw/app/action/DuplicateAction.class
+SHA1-Digest: D3RpyEqhuFXIYGPPt9dYWJkqiGQ=
+
+Name: net/n3/nanoxml/XMLEntityResolver.class
+SHA1-Digest: IpPLvFldL+qMs2ahgIwAU2AuWSQ=
+
+Name: org/jhotdraw/draw/DrawingEditor.class
+SHA1-Digest: ct4mFd+7B7t96DFFG+rGHYZVuhs=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$SouthHandle.class
+SHA1-Digest: re04BxiIlreFCAomwTFDCJdOsSk=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction$EventHandler.cla
+ ss
+SHA1-Digest: sMgAwKddDmWCOMc6VqHFLtGkww0=
+
+Name: org/jhotdraw/draw/action/GroupAction.class
+SHA1-Digest: DZBaIlzAWvZKaK1fTL8+n4lwU1U=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction.class
+SHA1-Digest: UgTnsJN+xuUHh8ajrVP1XS1VosY=
+
+Name: org/jhotdraw/draw/action/images/createLine.png
+SHA1-Digest: WbWhRIThOq+GGPUfR8dgxW+rPes=
+
+Name: org/jhotdraw/draw/action/AlignAction$Horizontal.class
+SHA1-Digest: 41xe4EnwHN+Pxx5eFR3SnmxYofM=
+
+Name: org/jhotdraw/gui/JFontChooser$3.class
+SHA1-Digest: j+OKYbmK5QqcrwVJ22qw/r6pzeA=
+
+Name: org/jhotdraw/draw/TextOverflowHandle.class
+SHA1-Digest: DsRKqOUHiQT/DTY+ZCBVICAU6KM=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeCap.png
+SHA1-Digest: M9c2ogmeqvmCryQwQO0+4uicVnY=
+
+Name: org/jhotdraw/draw/DelegationSelectionTool$1.class
+SHA1-Digest: /gGK0g0nO2e3kAuV/kXWefuAooo=
+
+Name: org/jhotdraw/draw/action/MoveAction$West.class
+SHA1-Digest: La8xMwV7/D24v7Lh1W1OieSzSS8=
+
+Name: org/jhotdraw/gui/datatransfer/CompositeTransferable.class
+SHA1-Digest: 4/NakPW2a9UOaEb7PXUfXaop3JE=
+
+Name: org/jhotdraw/xml/DOMFactory.class
+SHA1-Digest: rVco331SMRXEbeUnlclKN8TpF5A=
+
+Name: org/jhotdraw/gui/JPopupButton$1.class
+SHA1-Digest: 1XUNyYGXcf63qrHH9SwNwou3t94=
+
+Name: org/jhotdraw/draw/TranslationDirection.class
+SHA1-Digest: PuJrNxPSPGOKLdW9QeCeawPvts8=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet.class
+SHA1-Digest: IBAxRCY35LLL1WCWnmBSjAEtcJ0=
+
+Name: org/jhotdraw/draw/Handle.class
+SHA1-Digest: 1eOzwPqCJrvYTC9FKNYW11lovbk=
+
+Name: org/jhotdraw/draw/DOMStorableInputOutputFormat.class
+SHA1-Digest: DsXplnZbWX9EUXfUVzb/awcmYsM=
+
+Name: org/jhotdraw/draw/action/images/attributesPick.png
+SHA1-Digest: eCgn/Izu/2vlcj2bbF03bPu8V2c=
+
+Name: org/jhotdraw/draw/DefaultSelectAreaTracker.class
+SHA1-Digest: WntJ2H+3HBhO9ieeXzUcpWfu8yQ=
+
+Name: org/jhotdraw/draw/action/images/attributeFontBold_de.png
+SHA1-Digest: mUq+Z/LvmoUc4hibyHli3DnagmQ=
+
+Name: org/jhotdraw/draw/ConnectionFigure.class
+SHA1-Digest: hj4/UNFjiU++KjwFRDjdObq3yg4=
+
+Name: org/jhotdraw/draw/MoveHandle.class
+SHA1-Digest: guvw5QscD173WkAXvaRUXmEm/Bc=
+
+Name: org/jhotdraw/draw/InputFormat.class
+SHA1-Digest: 4RwJpSbJupjAo1gU0qR03Ij7ZZA=
+
+Name: org/jhotdraw/draw/AttributeKeys$Underfill.class
+SHA1-Digest: TtfIlOn+/3yId3QUW6FhqrdZX4Y=
+
+Name: org/jhotdraw/draw/action/ZoomAction.class
+SHA1-Digest: KIB3fr2lgAzgXuN7NMMKqj7AN/8=
+
+Name: org/jhotdraw/util/ResourceBundleUtil.class
+SHA1-Digest: GYxEzg0zYSygG1OehRXBqiyBjPA=
+
+Name: org/jhotdraw/draw/RotationDirection.class
+SHA1-Digest: DDcMEA+U3igmI+4/rOK/nVJV3Mk=
+
+Name: org/jhotdraw/draw/OutputFormat.class
+SHA1-Digest: e+zN4P+UpJKk3yapQnqM1OR0zZQ=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$NorthWestHandle.class
+SHA1-Digest: Q3tjumsTUVINJYjK26FP6oDWKV4=
+
+Name: org/jhotdraw/draw/AbstractLineDecoration.class
+SHA1-Digest: XUIES0YBk1AMTVBGwgAieRqwi9c=
+
+Name: org/jhotdraw/draw/HandleAttributeKeys.class
+SHA1-Digest: 9/+fbpapjP75gIc/wRlKwvwlnqc=
+
+Name: org/jhotdraw/app/action/CopyAction.class
+SHA1-Digest: DUuTTKtYZW8D7HfPXgeM77U0A7Q=
+
+Name: org/jhotdraw/gui/plaf/palette/BackdropBorder.class
+SHA1-Digest: SASg7eYRxbNJzUbrtV437p9p4sk=
+
+Name: org/jhotdraw/draw/action/images/attributeFontItalic.png
+SHA1-Digest: TMQvQu8WXvNFOAd3+cg2N73VE18=
+
+Name: org/apache/batik/ext/awt/MultipleGradientPaint$CycleMethodEnum.c
+ lass
+SHA1-Digest: dVuK4Z5uSjRACJZzpHNXzHR9Ea8=
+
+Name: org/jhotdraw/draw/BezierNodeHandle$3.class
+SHA1-Digest: 71yS6KQwNPsTgZDgvY+Z2uTxDrQ=
+
+Name: org/jhotdraw/draw/GridConstrainer$1.class
+SHA1-Digest: nBzP9af0QHs756vkVS7UBuvURp8=
+
+Name: org/jhotdraw/draw/action/MoveAction.class
+SHA1-Digest: Huk1l6XdMMp44MhLmAv8tUhpxwk=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet$FormListener.cla
+ ss
+SHA1-Digest: kZ0gnJWIbJNaEaE2h54TqY+8sAI=
+
+Name: org/jhotdraw/undo/UndoRedoManager.class
+SHA1-Digest: mcHdX+g3w7SYyrOnTCzOXE4meDE=
+
+Name: org/jhotdraw/draw/DecoratedFigure.class
+SHA1-Digest: pMEyCIDmKC0T2qZMYGJBI9/+ZIo=
+
+Name: org/jhotdraw/draw/action/AlignAction$Vertical.class
+SHA1-Digest: uyAW5bD25SNnmNC74i8f0jvKpKQ=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingViewAction$1.class
+SHA1-Digest: YgDjc05z/XI2TYtTxfTQ2fqn4yI=
+
+Name: org/jhotdraw/draw/LocatorHandle.class
+SHA1-Digest: v+G5PN+QehbLBpdFRnXXvdPgRvQ=
+
+Name: org/jhotdraw/draw/CompositeFigureListener.class
+SHA1-Digest: AZrSzqa2cOaR8E1GD4fu28yJQUQ=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$East.class
+SHA1-Digest: GFgAgkWNebcvrlsHDdCX5X5EqvU=
+
+Name: org/jhotdraw/gui/fontchooser/DefaultFontChooserModel.class
+SHA1-Digest: ZH0KCetBXQGusIDondXbtfLKbgU=
+
+Name: org/jhotdraw/undo/UndoRedoManager$RedoAction.class
+SHA1-Digest: qhL60YUAKH/Oao3GZX4t4uHEKHI=
+
+Name: org/jhotdraw/draw/RotateHandle.class
+SHA1-Digest: wlRCRccrlErI2oiQcfbn0hyJWck=
+
+Name: org/jhotdraw/app/action/images/editPaste.png
+SHA1-Digest: ND+TgXGA4+Fh1XYhPEDOoPw0vNE=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeWidth.png
+SHA1-Digest: 6qPwffpb8FDdoOSjQ+8uqD+VPmM=
+
+Name: org/jhotdraw/draw/action/PickAttributesAction.class
+SHA1-Digest: Z82tEqrvkPyTvdGhkwoqNcROWGA=
+
+Name: org/jhotdraw/draw/DefaultDrawingEditor.class
+SHA1-Digest: xFaRNwzKWsyxRvmJHpw6McdwjX0=
+
+Name: org/jhotdraw/samples/draw/DrawingPanel.class
+SHA1-Digest: JIk2h4viKegyTurEFm4Vq2Y4i8E=
+
+Name: org/jhotdraw/draw/LineConnectionFigure$1.class
+SHA1-Digest: LQH0iaJskQUEsVr2EvC1phzEleM=
+
+Name: org/jhotdraw/draw/TextCreationTool$1.class
+SHA1-Digest: wgqmU6r+Pzv90orlEIVIqMzdnYs=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$West.class
+SHA1-Digest: NYRgycZL0m6XputsvINRFIgqNLE=
+
+Name: org/jhotdraw/draw/TextHolderFigure.class
+SHA1-Digest: cGXt+SUXlNgrzm0NHTJLPVO599U=
+
+Name: org/jhotdraw/draw/action/AlignAction.class
+SHA1-Digest: HoYa8COLe/ryANTrHxX77/H0w6g=
+
+Name: org/jhotdraw/draw/action/images/popupIcon.png
+SHA1-Digest: p6daYSBLEtRTLNg+Z1BfahUleSc=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserSelectionPanel.c
+ lass
+SHA1-Digest: 0CXLQQPRYtW0om0AQM0jRz4JwMM=
+
+Name: org/jhotdraw/draw/FigureListener.class
+SHA1-Digest: QGyXXbjn9bUl6x116aVOtKNHQxI=
+
+Name: org/jhotdraw/io/Base64.class
+SHA1-Digest: RixV7uaWrf+A9unTPhf3m93F9I8=
+
+Name: org/jhotdraw/draw/action/images/moveSouth.png
+SHA1-Digest: bIfLNRMniAGFTwbXP7nBKY4JphU=
+
+Name: org/jhotdraw/draw/Constrainer.class
+SHA1-Digest: sAdI1YE1H8c7L2RCZoBsaM43GNc=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserPreviewPanel.cla
+ ss
+SHA1-Digest: SjSfmGCV76caQ5MjslKwagB5NWw=
+
+Name: org/jhotdraw/draw/TransformHandleKit$NorthEastHandle.class
+SHA1-Digest: F+wUDLS4AOX89JXiVxrKyVumNgY=
+
+Name: org/jhotdraw/draw/Labels_de.properties
+SHA1-Digest: VsQxltelmsYHRvVTaBEsgzzqNdY=
+
+Name: org/apache/batik/ext/awt/MultipleGradientPaintContext.class
+SHA1-Digest: C1vhekwpQ2F+7WDpXCZ8LpDnH38=
+
+Name: org/jhotdraw/draw/action/BringToFrontAction$1.class
+SHA1-Digest: gJ0USj/i5/0Co/ACdjXVtTZvP2g=
+
+Name: org/jhotdraw/draw/TransformHandleKit.class
+SHA1-Digest: ZeYyNnxLBSR8dVRP+XXCX0HQMaU=
+
+Name: org/jhotdraw/xml/NanoXMLDOMOutput.class
+SHA1-Digest: BF+GGmtEhCuTOPSfTd7pm4HMhKE=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$SwingDragGes
+ tureRecognizer.class
+SHA1-Digest: 625BAi1HgGjmZxeplALlyaHNQv4=
+
+Name: org/jhotdraw/draw/AbstractCompositeFigure$EventHandler.class
+SHA1-Digest: 0CwGP1vBZjA9CckfKhVg9gU3MOk=
+
+Name: META-INF/INDEX.LIST
+SHA1-Digest: jJS1oTt50y+6eUmrmx5YiU1z//E=
+
+Name: org/jhotdraw/draw/BezierNodeHandle.class
+SHA1-Digest: YrdaUUrPFiUhtwbqLdOtriJpMas=
+
+Name: org/jhotdraw/draw/AbstractConnector.class
+SHA1-Digest: Uqavh/OTywO/Uaxafq3x9s5HJvY=
+
+Name: org/jhotdraw/draw/FloatingTextArea$1.class
+SHA1-Digest: f1vQ3mv/KT9K4qS0rZ9UfluKWhU=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$ResizeHandle.class
+SHA1-Digest: jRIEGBH071moUb9LRNbZptjPuhk=
+
+Name: org/jhotdraw/draw/FloatingTextArea.class
+SHA1-Digest: T+tntiYq9v9y3dYURmtCsBKJL0I=
+
+Name: org/jhotdraw/draw/FontSizeLocator.class
+SHA1-Digest: BvBph/65OYxwXMtcgV74HV3gRQ4=
+
+Name: org/jhotdraw/draw/action/SelectionColorChooserAction.class
+SHA1-Digest: jdEt8GOrNkqwzYTKjX5JMYoqfNg=
+
+Name: org/jhotdraw/draw/action/images/createScribble.png
+SHA1-Digest: gxLbIFoXdxZYPh8RxKd1miDWh/k=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction$1.class
+SHA1-Digest: /VCh/RHKaMB0KU4PxAUT1am4XbY=
+
+Name: org/jhotdraw/draw/action/GroupAction$1.class
+SHA1-Digest: ifcAwH/OtQJCYmBk23e/HDHr/Dc=
+
+Name: org/jhotdraw/samples/svg/SVGAttributeKeys$TextAlign.class
+SHA1-Digest: T953rA2dNJ0TzJLjFSoOO7oShTM=
+
+Name: net/n3/nanoxml/IXMLElement.class
+SHA1-Digest: p3C71ICU2nhfgHgOcTdNWvgiOtY=
+
+Name: org/jhotdraw/samples/draw/DrawApplet$2.class
+SHA1-Digest: jLosWNrbeCPEt8efX6lq4iDlfRk=
+
+Name: org/jhotdraw/draw/action/images/createImage.png
+SHA1-Digest: CbrgtU7QzIoMWxqbzl+vj0xt+rU=
+
+Name: org/jhotdraw/gui/datatransfer/InputStreamTransferable.class
+SHA1-Digest: 8KMhoVzrH3vw/IZGkJDytjNgGps=
+
+Name: org/jhotdraw/app/action/images/editCut.png
+SHA1-Digest: GU+9dj5w31VLBIjn22I244qIRz8=
+
+Name: net/n3/nanoxml/IXMLParser.class
+SHA1-Digest: PyR2bEnNioHtklfx9mV24omTMaQ=
+
+Name: org/jhotdraw/draw/AbstractConstrainer.class
+SHA1-Digest: Gl7+0pTUeabF2pvx66Yx4sWoMLc=
+
+Name: org/jhotdraw/draw/action/LineDecorationIcon.class
+SHA1-Digest: 5aeHS9GLrmUUyqTbtI/eylkoVm8=
+
+Name: org/jhotdraw/app/action/images/editUndo.png
+SHA1-Digest: AW+5HhkuyQ+jijsFBpEDGjj9jnA=
+
+Name: org/jhotdraw/draw/FontSizeHandle$2.class
+SHA1-Digest: uuvW9K/YW5zBtiSS8gBymuEscOQ=
+
+Name: org/jhotdraw/io/Base64$InputStream.class
+SHA1-Digest: nqCJJoR6Lq6JzNsEPZHaUU4ER08=
+
+Name: org/jhotdraw/draw/RestoreDataEdit.class
+SHA1-Digest: ofPiztVyqfR9+5+3FV2kXq8dyA0=
+
+Name: org/jhotdraw/draw/BezierNodeEdit.class
+SHA1-Digest: jfhfm9UXbkgg+7+hIL2IStOk4XE=
+
+Name: org/jhotdraw/util/Methods.class
+SHA1-Digest: Tqgk3lD1odf9OcK7uPHJ5CAKOYw=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$3.class
+SHA1-Digest: H8Awa+LPmAmPsvjgoDP1fkFGD9Q=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler.class
+SHA1-Digest: OlLZjvLODOrnSxcIDguG8xww9Lg=
+
+Name: org/jhotdraw/draw/TransformHandleKit$NorthHandle.class
+SHA1-Digest: Ud9SIqwLyAAU4lvKYdpT2Db+nXQ=
+
+Name: org/jhotdraw/draw/BezierControlPointHandle.class
+SHA1-Digest: psAGjS2XDwvg/cnyhUW5LrSHcPQ=
+
+Name: org/jhotdraw/xml/DOMOutput.class
+SHA1-Digest: yY352nwuEzUF3IIs+zz23FwU1a0=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$NorthHandle.class
+SHA1-Digest: g7ZSeLv3BVibe6g/rVQJhZtGXrk=
+
+Name: org/jhotdraw/samples/svg/SVGAttributeKeys$TextAnchor.class
+SHA1-Digest: HojqqMB9MrcBW8Wq4yx7AOBRKg0=
+
+Name: org/jhotdraw/app/action/images/editRedo.png
+SHA1-Digest: eQoz998jFAZjphVSTmwO29f69nA=
+
+Name: org/jhotdraw/draw/RelativeLocator.class
+SHA1-Digest: SZ3JujIgVyj0Fp+jHMwQLYfWoxg=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeJoin.png
+SHA1-Digest: jFSa76ih54RSMiAtEZMpQeWKhf8=
+
+Name: org/jhotdraw/draw/BezierOutlineHandle.class
+SHA1-Digest: ZBd9M5rwn92Um+jx9F7UA2M34EY=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteButtonBorder.class
+SHA1-Digest: 604Z/u16foHnvC7KZthDW4b5Hys=
+
+Name: org/jhotdraw/draw/action/ZoomAction$1.class
+SHA1-Digest: 6FR0rtRPI+FIpEfz+9iednnmytU=
+
+Name: org/jhotdraw/draw/action/ColorIcon.class
+SHA1-Digest: GHFWJun1mIIp4DjZV8y21QoCzfM=
+
+Name: org/jhotdraw/geom/Shapes.class
+SHA1-Digest: 6ISxXSftDFx0/DP0OvwIyyUo15U=
+
+Name: org/jhotdraw/draw/AttributeKeys.class
+SHA1-Digest: xnYXLsaBOVIKqiUL6/lKzRe7Gjc=
+
+Name: org/jhotdraw/gui/fontchooser/FontFaceNode.class
+SHA1-Digest: nA4Fg/xwCh4XW6zVJvyfrCJaxYA=
+
+Name: org/jhotdraw/geom/Insets2D.class
+SHA1-Digest: KbbpLYMR91k7uPgQ1RMgVKYUlNA=
+
+Name: org/jhotdraw/undo/Labels_de.properties
+SHA1-Digest: AO32kACHul2t+QoXC16/YjSk1a8=
+
+Name: org/jhotdraw/draw/action/PaletteMenuItemUI.class
+SHA1-Digest: qOSGgV9IGATBatPcGuFJmumqg7c=
+
+Name: org/jhotdraw/geom/DoubleStroke.class
+SHA1-Digest: EOfx4WQBp9pWgia3JiA+/UuogbY=
+
+Name: org/jhotdraw/draw/action/images/attributeFontUnderline_de.png
+SHA1-Digest: W1b+xsHk3b90KIHbk3rnzYX3/No=
+
+Name: org/jhotdraw/draw/RoundRectangleRadiusUndoableEdit.class
+SHA1-Digest: CtQtZZSSW2P6tUUYH4ZYbh1R8lM=
+
+Name: org/jhotdraw/draw/ChopDiamondConnector.class
+SHA1-Digest: cQBZPL3DHMTxLw2ypAhW/QRn8vI=
+
+Name: org/jhotdraw/draw/action/UngroupAction.class
+SHA1-Digest: 4DUdjNyCkbBVgP7X1a+rteaXQ/Y=
+
+Name: org/jhotdraw/draw/TriangleRotationHandler.class
+SHA1-Digest: oLagtNYSNii6BEzeRSCubR9jDNA=
+
+Name: org/jhotdraw/draw/SelectionTool.class
+SHA1-Digest: VPljqGYXuQEKXtoqVnMr99Prtoc=
+
+Name: org/jhotdraw/draw/action/images/alignVertical.png
+SHA1-Digest: 5S6CQoizsI4Yif5EgpfYMw6+cA0=
+
+Name: org/jhotdraw/draw/action/images/moveToFront.png
+SHA1-Digest: Zds0cPnfkjWlOO9dbjbJrrc5nC4=
+
+Name: org/jhotdraw/draw/AttributeKeys$Orientation.class
+SHA1-Digest: EoxClkqXn5gD2GpSe1Vo0o77Xzk=
+
+Name: org/jhotdraw/draw/ChopBezierConnector.class
+SHA1-Digest: HHr6Vy+0qWTmxFlsJpqeIuc13iQ=
+
+Name: org/jhotdraw/draw/action/images/selectionGroup.png
+SHA1-Digest: n/Hexc+9TXXC/8Cizmc+wV6bsoE=
+
+Name: org/jhotdraw/draw/AttributeKeys$Alignment.class
+SHA1-Digest: KfSggip6TnVJzMifqFKgz7us5O4=
+
+Name: org/jhotdraw/draw/action/AttributeToggler.class
+SHA1-Digest: txCQ3ritkabw8lXaxSYGzEsypF8=
+
+Name: org/jhotdraw/draw/AbstractAttributedFigure.class
+SHA1-Digest: T/7cGe9m9wXzwMI0ZPURZ7516Hw=
+
+Name: org/jhotdraw/draw/ChopRectangleConnector$1.class
+SHA1-Digest: 8sOcb8Re84RgxVDwV6TL7Wa1O8s=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$4.class
+SHA1-Digest: UfzUEgzUjg5eVtWNN76HX0XJJNw=
+
+Name: org/jhotdraw/draw/CreationTool.class
+SHA1-Digest: qICXhs0B3zJz371/x6AA8iIi0pM=
+
+Name: org/jhotdraw/xml/DefaultDOMFactory.class
+SHA1-Digest: 5PrRib63bCcL73RTiAmRBJlQtt0=
+
+Name: org/jhotdraw/draw/BezierFigure.class
+SHA1-Digest: vEKugtOZeu+4ENJaERQrcLYGET8=
+
+Name: org/jhotdraw/draw/FontSizeHandle$1.class
+SHA1-Digest: hwWcLeobm/C8pzb9AwR8y2gWeMw=
+
+Name: net/n3/nanoxml/NonValidator.class
+SHA1-Digest: 4MXaCBiridAR49V/uwBB/x02muk=
+
+Name: org/jhotdraw/draw/AttributeKeys$StrokePlacement.class
+SHA1-Digest: aPLysW+OONj/ZobawvJwN1iB1Bg=
+
+Name: org/jhotdraw/draw/action/AlignAction$North.class
+SHA1-Digest: 0dn7pYr1ox910zT3yi7RLhCs79Q=
+
+Name: org/jhotdraw/draw/action/FontChooserHandler$1.class
+SHA1-Digest: 8Z2TzRNbQPBe6tUjan07ohl4/Q4=
+
+Name: org/jhotdraw/gui/plaf/palette/BackdropBorder$UIResource.class
+SHA1-Digest: Ggcpgo9yUGv0JJKdpIqzjbvqYdE=
+
+Name: org/jhotdraw/geom/BezierPath$Node.class
+SHA1-Digest: ndZZ8kNqXfKL6Papb8CW7TcpaRU=
+
+Name: net/n3/nanoxml/XMLException.class
+SHA1-Digest: vP3idw5eeAKpAyc1c6yeuS1Wni4=
+
+Name: org/jhotdraw/draw/action/images/attributeFontItalic_de.png
+SHA1-Digest: Foi21r9ma0d2fsOQ2vMCtNeBS08=
+
+Name: org/jhotdraw/draw/Options.class
+SHA1-Digest: NhKq89Z9sX54vxlSVg90AIkpMBk=
+
+Name: org/jhotdraw/draw/TextAreaFigure.class
+SHA1-Digest: MOPJ1zETv63dO+wrmg5up/3nj94=
+
+Name: org/jhotdraw/app/action/CutAction.class
+SHA1-Digest: onOxK2RwSxHz0L4czhMpT9vrQPE=
+
+Name: org/jhotdraw/draw/action/DefaultAttributeAction.class
+SHA1-Digest: +K+l6E3HLZY2XBELWhkdvGSsB0Q=
+
+Name: org/jhotdraw/draw/DefaultDrawingView.class
+SHA1-Digest: ysajhXruE+eQS/C/cbkIuYRMflQ=
+
+Name: org/jhotdraw/draw/action/StrokeIcon.class
+SHA1-Digest: oVYCBvSFxNPBF+Kec6qy0ICOrRw=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$4.class
+SHA1-Digest: lbydCALiCwH4j3TrjAWvaTQOpt4=
+
+Name: org/jhotdraw/draw/action/SendToBackAction.class
+SHA1-Digest: 5JxKzWp9a8XIhaizMk5JSPaZHa4=
+
+Name: org/jhotdraw/draw/SetBoundsEdit.class
+SHA1-Digest: ZMgGjNVUR/YkAGM+wI/8ZoZQaQc=
+
+Name: org/jhotdraw/draw/GeometryEdit.class
+SHA1-Digest: 4YAuln8ccirCqbcg+n22XcXVYrY=
+
+Name: org/jhotdraw/draw/AttributeKeys$StrokeType.class
+SHA1-Digest: Bxuf93VV7ayoxjLneR8ZQZHqimA=
+
+Name: net/n3/nanoxml/XMLAttribute.class
+SHA1-Digest: JFqEJWT1Wh5jCkMDrFY29462HuU=
+
+Name: net/n3/nanoxml/IXMLReader.class
+SHA1-Digest: 0ud9XhtAsXpfVddUto7O4yh3L6c=
+
+Name: org/jhotdraw/draw/action/images/createLineConnection.png
+SHA1-Digest: xTlSknAJmecJRT9bk/LG0TccNaU=
+
+Name: org/jhotdraw/draw/action/ButtonFactory.class
+SHA1-Digest: vA1dk17U5WWjE0o0NYEqrPltQOg=
+
+Name: org/jhotdraw/draw/ChopEllipseConnector.class
+SHA1-Digest: csfaMboWLevaopKfBKgr5uj9taU=
+
+Name: org/jhotdraw/draw/DiamondFigure.class
+SHA1-Digest: 3WFfIdbP9bQNibd3E6TejZB8RqU=
+
+Name: org/jhotdraw/io/Base64$OutputStream.class
+SHA1-Digest: D0xLu0JqqSdZ5o9pwYQ5ts6HdsY=
+
+Name: org/jhotdraw/geom/Insets2D$Double.class
+SHA1-Digest: WcHoGFVzhx/IUlTz2zkSFQzCccA=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$2.class
+SHA1-Digest: NsllOn5m/R4xbBM7U44zBlG9OSE=
+
+Name: org/jhotdraw/draw/action/images/alignGrid.png
+SHA1-Digest: rhLYdnJnSLGFOvYke3QXWV8TXWE=
+
+Name: net/n3/nanoxml/ContentReader.class
+SHA1-Digest: BaX6Gq0CRXR+VTfsQ1rlNFzCLfg=
+
+Name: org/jhotdraw/draw/TextAreaEditingTool$1.class
+SHA1-Digest: 83YsHugaDqAuiw4e44H5yh2Ctkg=
+
+Name: org/jhotdraw/xml/NanoXMLDOMInput.class
+SHA1-Digest: b+wSEEk+55ximXPEdkuQarDMhts=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$ToolButtonListener.class
+SHA1-Digest: Vfl4Tf2435LRE6fDGLYK7EHftxA=
+
+Name: org/jhotdraw/draw/FloatingTextField$1.class
+SHA1-Digest: pXbfoenqzMGsNdPo9Q75xmPtTY0=
+
+Name: org/jhotdraw/geom/Dimension2DDouble.class
+SHA1-Digest: ZlfRkr50bGrtfrD1X8cMqXLXxgs=
+
+Name: org/jhotdraw/app/EditableComponent.class
+SHA1-Digest: he4MkhAckFr/aLZlokS+n0GKC5I=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet$1.class
+SHA1-Digest: jpSZ2MFSHwWkqpKxyP3nLOMztH0=
+
+Name: org/jhotdraw/draw/DefaultDragTracker.class
+SHA1-Digest: y0UFZ+4GHQnJrddWtYkDH9y55Bs=
+
+Name: net/n3/nanoxml/StdXMLParser.class
+SHA1-Digest: GebKv32EXq9GbCKUxfegMzvTEpk=
+
+Name: net/n3/nanoxml/XMLWriter.class
+SHA1-Digest: wq/cohKUKSQ+Q1N4LJ59Vl8j//8=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$EventHandler.class
+SHA1-Digest: dPX3xu/hjp98Q+k1sLJ3jR16Los=
+
+Name: org/jhotdraw/draw/action/images/actions.png
+SHA1-Digest: 1hE8rSgVj0lk/NU4ecE/Zgy6eSE=
+
+Name: org/jhotdraw/draw/RoundRectangleFigure.class
+SHA1-Digest: I0m4fjYRt0JekrWRcnBTgXNOBTU=
+
+Name: org/jhotdraw/draw/action/images/attributeFillColor.png
+SHA1-Digest: jYsrfqIn6nPZ4Kf95cD2upEGer8=
+
+Name: org/jhotdraw/draw/DragTracker.class
+SHA1-Digest: Rn2SvhAQ7RkVCIVWrCmeN82p8t8=
+
+Name: org/jhotdraw/draw/ImageFigure.class
+SHA1-Digest: MrdWqoL6+GYH89LVF4JnmhJ0wCQ=
+
+Name: net/n3/nanoxml/StdXMLReader.class
+SHA1-Digest: iofrLD/KDQZTky14hLtY88XWSv4=
+
+Name: org/jhotdraw/draw/Drawing.class
+SHA1-Digest: T7modA3WOfwisDdMYnpTJYYAqAA=
+
+Name: org/jhotdraw/draw/action/DrawingEditorProxy.class
+SHA1-Digest: /rcAx0e3wPY0ZvjYRjjbpRZ1C40=
+
+Name: org/jhotdraw/draw/BezierFigure$1.class
+SHA1-Digest: qSabu/i6+6k5tn73R6I6ws04w/I=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeDashes.png
+SHA1-Digest: phOV7jRn9edQtHZbKPCGFwi5KBs=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$8.class
+SHA1-Digest: Mi/bcUeV2ymnem4Xzxd1boAmEKM=
+
+Name: org/jhotdraw/draw/ChopRoundRectangleConnector$1.class
+SHA1-Digest: dlKSPEN8+LeY4MOSR87XopZtfYY=
+
+Name: org/jhotdraw/draw/FigureEvent.class
+SHA1-Digest: 7D4QY64ebHElK2bwU12IvnZXBdI=
+
+Name: org/jhotdraw/draw/action/DrawingAttributeAction.class
+SHA1-Digest: n330I4zmbPIAJE3XgUy1y8uRUko=
+
+Name: org/jhotdraw/draw/ToolListener.class
+SHA1-Digest: +nYQE04j7Z6EA/OLsIGopDjwwSk=
+
+Name: org/jhotdraw/draw/BezierNodeHandle$2.class
+SHA1-Digest: bJF1kva0zzHwZYzoSWspLLedeCI=
+
+Name: org/jhotdraw/draw/action/images/createRectangle.png
+SHA1-Digest: lISgIJQd1qFHjo8qYT9n0uMXMOU=
+
+Name: org/jhotdraw/draw/action/images/attributeFontUnderline.png
+SHA1-Digest: 7OabT+CJHN3zz3OCrWtrk0qh97g=
+
+Name: org/jhotdraw/draw/action/GroupAction$2.class
+SHA1-Digest: 9si/Sfmi8gqyQfnBAKUf28+dp04=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteLookAndFeel.class
+SHA1-Digest: UhcUd1Y7zxO+snIhMix6gclH7BY=
+
+Name: org/jhotdraw/draw/action/images/createPolygon.png
+SHA1-Digest: K6gKMCKE8Xr9h0gZW9HKXH0IsCQ=
+
+Name: org/jhotdraw/draw/AbstractHandle.class
+SHA1-Digest: bjOZkN+whwUo8cnq6aIOH2b6Fzo=
+
+Name: org/jhotdraw/draw/CompositeFigureEvent.class
+SHA1-Digest: l4d07gJIjREPwm0fdfJ14vpcZhE=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingEditorAction$1.class
+SHA1-Digest: 1R9Qplw2/4JA7YG4Jo6J0EnXBkI=
+
+Name: net/n3/nanoxml/XMLElement.class
+SHA1-Digest: ocD1FoSZIsuMz794wKj/wv1D0q8=
+
+Name: org/jhotdraw/draw/AbstractLocator.class
+SHA1-Digest: QGs8J6ZkXMR7EPkjVwkjjSbVPbo=
+
+Name: org/jhotdraw/draw/FigureSelectionListener.class
+SHA1-Digest: NJtcpLF7EMYYLsbIj2bDQzxGdlA=
+
+Name: org/jhotdraw/draw/BezierControlPointHandle$1.class
+SHA1-Digest: N3FXJm4nzfcYH1SdUKEyRDCKstY=
+
+Name: org/jhotdraw/draw/action/MoveAction$East.class
+SHA1-Digest: LIG10RG+N36O/bd2ijcBD5c1LJM=
+
+Name: org/jhotdraw/app/Labels.properties
+SHA1-Digest: OrNzhoHmvw4jTmBrgylTq73jz5c=
+
+Name: org/jhotdraw/draw/TextCreationTool.class
+SHA1-Digest: 5ha78ko68R2SxnCCBGUlYdio9wM=
+
+Name: org/jhotdraw/samples/svg/Gradient.class
+SHA1-Digest: UnC01oQbfLJ8vOCWIMkP20IwovA=
+
+Name: org/jhotdraw/draw/action/images/selectionTool.png
+SHA1-Digest: ai2oe7dBYBVKDLgLLTu3YjVVu+o=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteUtilities.class
+SHA1-Digest: 7pI+1/5MdaJ2nIb4EY/k+AjkX/4=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$NorthEastHandle.class
+SHA1-Digest: MV9f6Bw+hqO2VF64ssask11bL+8=
+
+Name: org/jhotdraw/draw/ImageOutputFormat.class
+SHA1-Digest: N+RYqX6jjccycO922MWq7z5jdlk=
+
+Name: org/apache/batik/ext/awt/LinearGradientPaint.class
+SHA1-Digest: 0mxWyditnAKaBQ+eeFJlFei4IBY=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$3.class
+SHA1-Digest: wbjYMuktpdQ+kF5o4/GwR8IQZNw=
+
+Name: org/jhotdraw/draw/Labels.properties
+SHA1-Digest: 8FkSSrVybN+f91dEqa1pfla4a4c=
+
+Name: org/jhotdraw/draw/action/images/moveDown.png
+SHA1-Digest: plmrVrWwGu5vlmNyA/ew6pLXyYA=
+
+Name: org/jhotdraw/draw/action/images/moveNorth.png
+SHA1-Digest: eoAJqV4gxrEg28F8gyhOYpLxN7M=
+
+Name: org/jhotdraw/draw/AbstractAttributedDecoratedFigure.class
+SHA1-Digest: C2QRihub9u3fDxDHjKo1GGNGGMw=
+
+Name: org/jhotdraw/draw/DefaultDrawingEditor$1.class
+SHA1-Digest: NkZmLUXfhJboHM5QfOf0/xxMjsc=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$DragHandler.
+ class
+SHA1-Digest: ByCZvprGo5xQ1XLNEBn0QLichLk=
+
+Name: org/jhotdraw/geom/Insets2D$Float.class
+SHA1-Digest: jEY3BQ4kJsTrdFkS8qPjPcJJDLM=
+
+Name: org/jhotdraw/draw/action/images/alignHorizontal.png
+SHA1-Digest: Kztqpke0GVmvb8+pGgasrtGn0m0=
+
+Name: org/jhotdraw/draw/action/images/alignGridSmall.png
+SHA1-Digest: 0CiW30BvqWj4Ma8ph+MICv+mXR0=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$4.class
+SHA1-Digest: y9uwRSSY3fRGh+B70tHsULjVrDg=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$1.class
+SHA1-Digest: eE6DVeK0WpET9vQ/C25ayT8DuQI=
+
+Name: org/jhotdraw/draw/action/DrawingColorChooserAction.class
+SHA1-Digest: uf1ehxzqfBLZQuXC4TDaOD0XIhU=
+
+Name: org/jhotdraw/draw/action/SelectionColorIcon.class
+SHA1-Digest: YTSS38EJcGCzKY+NVYzDj3I+a+g=
+
+Name: org/jhotdraw/draw/action/images/createDiamond.png
+SHA1-Digest: sl3GFJVMXo/reMQEUMJRyTN1kO4=
+
+Name: org/jhotdraw/draw/action/images/spacerIcon.png
+SHA1-Digest: tY36+87JFa+TQWF/pJyfDdoGX8A=
+
+Name: org/jhotdraw/draw/action/DrawingEditorProxy$Forwarder.class
+SHA1-Digest: Av1wWvQ5bbhBm1em8SCuzoT55RE=
+
+Name: org/jhotdraw/draw/Figure.class
+SHA1-Digest: YByfVYtwoXUaqXiaNf4j5gNUFw0=
+
+Name: org/jhotdraw/draw/ConnectionTool.class
+SHA1-Digest: aLzF1vHK4xMKAwRvyKXCF3YhA3s=
+
+Name: net/n3/nanoxml/StdXMLBuilder.class
+SHA1-Digest: QhZAooQcBjBxDk+FL6sqvpsvowo=
+
+Name: org/jhotdraw/draw/AbstractFigure.class
+SHA1-Digest: dMYBmsP5K9SkjZbHvmH2KCOzzYE=
+
+Name: org/jhotdraw/draw/action/SendToBackAction$1.class
+SHA1-Digest: WexpowlFPkVMp6qHtbltGe/43fc=
+
+Name: org/jhotdraw/draw/FigureLayerComparator.class
+SHA1-Digest: pNqc5IkrHG0Gw3Y73/q2dReVgCc=
+
+Name: org/jhotdraw/geom/BezierPath.class
+SHA1-Digest: CtolRygdw1iiRjFQnUR1zcr00aU=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI.class
+SHA1-Digest: MGneI7kmbeO6Lyibdn7wi2UqC0c=
+
+Name: org/jhotdraw/draw/FigureAdapter.class
+SHA1-Digest: NpLmj3BvOiEIB36+tkl3R66YYqU=
+
+Name: org/jhotdraw/draw/DefaultDrawing.class
+SHA1-Digest: 4IvNQNB++nFylo/18lHGbsA8IF0=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$SelectionPane
+ lHandler.class
+SHA1-Digest: gAt5hIbe/AEyqoTp7Nz2zohADCM=
+
+Name: org/apache/batik/ext/awt/LinearGradientPaintContext.class
+SHA1-Digest: J57Tz2KoGeRaUp0J8RxYJK6Kitw=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$2.class
+SHA1-Digest: IuUZ7dmSZks6poOZA2VLTAnkqSE=
+
+Name: org/jhotdraw/draw/action/images/moveUp.png
+SHA1-Digest: VS6PSgjl8NQ2aW1556YSzSAYmRA=
+
+Name: org/jhotdraw/draw/HandleMulticaster.class
+SHA1-Digest: OjrZ8RZ19IIhBP/aaG/M0bcMLtk=
+
+Name: org/jhotdraw/draw/action/SelectionComponentRepainter.class
+SHA1-Digest: V3dMgEj2+Lw05U5Y0gPKsHSae+Y=
+
+Name: org/jhotdraw/draw/TextEditingTool$1.class
+SHA1-Digest: QopPns+IVBiiMSNykicBc+a01pk=
+
+Name: org/jhotdraw/app/action/SelectAllAction.class
+SHA1-Digest: uFCsiHxBs7aM/cIX+ffqmPq+Mu8=
+
+Name: org/jhotdraw/draw/TriangleFigure.class
+SHA1-Digest: ECkB05Q98lDW99280ZMiljEVthk=
+
+Name: org/jhotdraw/draw/TextAreaEditingTool.class
+SHA1-Digest: XhGj+nG65JHnoHmlMNE0AF70FAY=
+
+Name: org/jhotdraw/draw/ImageInputFormat.class
+SHA1-Digest: hoJSFmh1n0HlhnsQ6VUGpHw30dk=
+
+Name: org/jhotdraw/draw/action/images/alignNorth.png
+SHA1-Digest: AmUYrCJldqQneBbV/W73TzAQOz0=
+
+Name: org/jhotdraw/draw/LineFigure.class
+SHA1-Digest: 7neBu4qxoXsUUdqtLE68nLMWaio=
+
+Name: net/n3/nanoxml/XMLParseException.class
+SHA1-Digest: nECuq7w4xoX/Z+d4dvx83Nkmm8Y=
+
+Name: org/jhotdraw/geom/Bezier.class
+SHA1-Digest: gU99xgsmgMIMbLM8OM7VI7o292w=
+
+Name: org/jhotdraw/draw/ElbowLiner.class
+SHA1-Digest: wN0cFZpRUk+fiW3uvBWRIZceWZg=
+
+Name: org/jhotdraw/draw/AbstractDrawing.class
+SHA1-Digest: yuZ91RruB66FS0abEHmhfQQHxyI=
+
+Name: org/jhotdraw/io/ExtensionFileFilter.class
+SHA1-Digest: ahYJKmZWpcM53RElbQiTSCHz+1s=
+
+Name: org/jhotdraw/draw/Tool.class
+SHA1-Digest: PobkstzGPIMfwY2WKNwnF5MpIMY=
+
+Name: org/jhotdraw/xml/DOMStorable.class
+SHA1-Digest: OFg+DZQhyLS0ojTZ+2ZWu+EZdYQ=
+
+Name: org/jhotdraw/gui/datatransfer/AbstractTransferable.class
+SHA1-Digest: o0dNaKEIrEwCZKwqKrMb/wV49DY=
+
+Name: org/jhotdraw/draw/QuadTreeDrawing$QuadTreeEventHandler.class
+SHA1-Digest: e5LCLKkyxOfmXBR8poVyEwhodn0=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$SouthWestHandle.class
+SHA1-Digest: a/+rjczD0AnbC3qZdBq92lqzf04=
+
+Name: org/jhotdraw/gui/JFontChooser$2.class
+SHA1-Digest: PK1vJ3ERnrbxHCyidwgDgZM50ao=
+
+Name: org/jhotdraw/draw/action/images/createElbowConnection.png
+SHA1-Digest: zdPCktfNf/j2Nsa8ZOot2Y76AZ4=
+
+Name: org/jhotdraw/app/action/PasteAction.class
+SHA1-Digest: naLYWzsZr52bveAKMmXk4C6MPPA=
+
+Name: org/jhotdraw/util/ReversedList.class
+SHA1-Digest: SqB1GaV7sYaE6zwP0taoMl6uN+U=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$WestHandle.class
+SHA1-Digest: iWFYhk0TdIp6Wi+BWEidj0A+R2c=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$1.class
+SHA1-Digest: XovdZqA2dXS2QTfyVHWEehdPpSk=
+
+Name: org/jhotdraw/gui/JPopupButton.class
+SHA1-Digest: GzvpTzFAWXSec4KoVr8NOD5gCdc=
+
+Name: org/jhotdraw/draw/AttributeKey.class
+SHA1-Digest: +3xJg3e1JsY3a19+waUA7Dle9/A=
+
+Name: org/jhotdraw/gui/fontchooser/AbstractFontChooserModel.class
+SHA1-Digest: /NVrQAI//K948wZzAK2hbULAe3Q=
+
+Name: org/jhotdraw/draw/LineConnectionFigure$ConnectionHandler.class
+SHA1-Digest: y3Ex3UqpEZFn4h6vQGT3H3J0QyQ=
+
+Name: org/jhotdraw/undo/Labels.properties
+SHA1-Digest: 6iGPfKK7QNbNEz9JOp5D/xTe7CA=
+
+Name: org/jhotdraw/draw/action/AlignAction$South.class
+SHA1-Digest: JpxrMGTxCrK6ajVPWEngmImYUKc=
+
+Name: org/jhotdraw/gui/JPopupButton$ActionPropertyHandler.class
+SHA1-Digest: ShzUbA50LKzGHMCB03lxsp4/oeM=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteTextComponentBorder.class
+SHA1-Digest: Q7llDvj8GH7WNKk9sGGAORjvgTc=
+
+Name: org/apache/batik/ext/awt/MultipleGradientPaint.class
+SHA1-Digest: iGigbQqFnrqzXWgoxVssbD0poH4=
+
+Name: org/jhotdraw/draw/GridConstrainer.class
+SHA1-Digest: pjk6w/Mh8PTWJ5yBinCaSZ4csmU=
+
+Name: org/jhotdraw/draw/BezierScaleHandle.class
+SHA1-Digest: lSWKG/ahoyDsUew5As4EfHD3kLc=
+
+Name: org/jhotdraw/draw/action/images/alignSouth.png
+SHA1-Digest: 4RX72Ipwd3DVhIIkmiZsrROQgvk=
+
+Name: org/jhotdraw/draw/action/images/attributeFontBold.png
+SHA1-Digest: 0+UEwQHMHqovjlk8vqWdPg5i6nE=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$South.class
+SHA1-Digest: OHgkkZAeowbE+EIXHuldv3yzqq4=
+
+Name: org/jhotdraw/draw/CreationTool$1.class
+SHA1-Digest: aYkA+rJKWdc5Shoq2lPfzfXChfo=
+
+Name: org/jhotdraw/draw/TextEditingTool.class
+SHA1-Digest: VQYnT12HpmS2YJLfHUVhwnZrXTU=
+
+Name: org/jhotdraw/undo/images/editRedo.png
+SHA1-Digest: GqEcckdGfMPDZuAMCWBL8SoHI+Q=
+
+Name: org/jhotdraw/draw/ChopDiamondConnector$1.class
+SHA1-Digest: 4m1dWdKneEY6fNqDnMUlE6Uy1w0=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$North.class
+SHA1-Digest: ZktC5gQLlQBqHSFBKUwnwe1wIxc=
+
+Name: org/jhotdraw/draw/action/images/createArrow.png
+SHA1-Digest: pl3RA7Rr9JcpOsO0GfA4AVvcAgk=
+
+Name: org/jhotdraw/draw/action/images/createTextArea.png
+SHA1-Digest: vHcAUNIjsTxEcxIzeAvdpAuw2w0=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$5.class
+SHA1-Digest: aOETahOO7byHgxMMN0VX1zUdb+I=
+
+Name: org/jhotdraw/gui/fontchooser/FontCollectionNode.class
+SHA1-Digest: aRJELr8XO+yT5WO8gqnjwBLmmio=
+
+Name: org/jhotdraw/draw/QuadTreeDrawing.class
+SHA1-Digest: uF1lQTFqSBM+y2Rhd7XA9aaR42w=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokePlacement.png
+SHA1-Digest: G860einCRvh352Ia4mb936cJU8Q=
+
+Name: org/jhotdraw/draw/action/images/attributeOpacity.png
+SHA1-Digest: xIcp+ihcTVqx/GKUaMURitX19H8=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$2$1.class
+SHA1-Digest: NVP1xMYzevSlDKl0/ox0rWF0T0Y=
+
+Name: org/jhotdraw/draw/Liner.class
+SHA1-Digest: hq2S/M9U4D3G50cTdErRmBj6krU=
+
+Name: org/jhotdraw/draw/LineDecoration.class
+SHA1-Digest: IT5Xu2Qy6mz4vWWmlAW2lX5v7aI=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeColor.png
+SHA1-Digest: KEhC8un6Cv5GIvlH+bgx3A755Gc=
+
+Name: org/jhotdraw/draw/TransformHandleKit$NorthWestHandle.class
+SHA1-Digest: QJhfQ0KTFtYxS5kXdPAgPTPZ0fo=
+
+Name: net/n3/nanoxml/XMLParserFactory.class
+SHA1-Digest: qvhylFJvpCK5Dvc3AouQOyIaOCo=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$1.class
+SHA1-Digest: e+y6HRLNHFZO0sou+IX9Cx38CO4=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$1.class
+SHA1-Digest: 6pRaaygOov0WjkHVZCqDtkLiQjo=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$EastHandle.class
+SHA1-Digest: WY94aX9AqIdg4I2EO7ejKmM2pZs=
+
+Name: org/jhotdraw/draw/BoundsOutlineHandle.class
+SHA1-Digest: tBf1McMqFTkzER3BdpPg2JJUwo4=
+
+Name: org/jhotdraw/geom/QuadTree.class
+SHA1-Digest: fbWbjVsSNtmP7S5N+CLwsaauA/w=
+
+Name: org/jhotdraw/draw/DelegationSelectionTool.class
+SHA1-Digest: o14xGXjN4U3MOJT131YFjPiri3s=
+
+Name: org/jhotdraw/draw/action/AlignAction$West.class
+SHA1-Digest: qswCL53cR13+wyfOZVBobrr3HI8=
+
+Name: org/jhotdraw/draw/action/DefaultAttributeAction$1.class
+SHA1-Digest: JB+F7jdCT9I45DosYwPnaOnRCEw=
+
+Name: org/jhotdraw/draw/TransformHandleKit$SouthHandle.class
+SHA1-Digest: jx5SHQNioOSmC5/s24K9mAbkkdg=
+
+Name: org/jhotdraw/draw/FontSizeHandle.class
+SHA1-Digest: XIcrqnYJyDWJEv4jAY7P+BTiaKE=
+
+Name: org/jhotdraw/app/action/images/editCopy.png
+SHA1-Digest: 8aUmc3Zn4CQD6/dYaDc/YRJQYDY=
+
+Name: org/jhotdraw/draw/action/images/attribute.color.noColor.png
+SHA1-Digest: 4ttp/zilw77UA+Oz937mxe8HAsY=
+
+Name: org/jhotdraw/app/action/DeleteAction.class
+SHA1-Digest: 5YYgXuiSicNJknDGYlJP+bSOtr4=
+
+Name: org/jhotdraw/draw/BezierNodeHandle$1.class
+SHA1-Digest: N3SD0IjOh8eLOwHTUgJFXkuc5hE=
+
+Name: org/jhotdraw/draw/AbstractCompositeFigure.class
+SHA1-Digest: n0G5XyIWbR8U1cn6VzD+6wXHOzQ=
+
+Name: org/jhotdraw/draw/action/AttributeAction.class
+SHA1-Digest: +mdXU3Q6MElQErZJpJed1Ti+XFw=
+
+Name: org/jhotdraw/draw/ChopRoundRectangleConnector.class
+SHA1-Digest: ghjR7wsuQmzVqc+Cqr63rh7+2ws=
+
+Name: org/jhotdraw/draw/AbstractAttributedCompositeFigure.class
+SHA1-Digest: gl9wVrr6LgUdR8O2r6LSe9gFfyc=
+
+Name: org/jhotdraw/draw/action/images/attributesApply.png
+SHA1-Digest: 2r/LjbkQO6ofMUJa3QAA2FWs4s0=
+
+Name: org/jhotdraw/draw/action/FontChooserHandler.class
+SHA1-Digest: qSUfLS23Z0xZ5FSRrj3sVA8KhL0=
+
+Name: org/jhotdraw/draw/FloatingTextField.class
+SHA1-Digest: zKR8+XdX+rL9/djWOfqXc6gUXfY=
+
+Name: org/jhotdraw/draw/ResizeHandleKit$SouthEastHandle.class
+SHA1-Digest: C2z+HnnRVPGElS2eKx0QT44rm2U=
+
+Name: org/jhotdraw/draw/action/images/createEllipse.png
+SHA1-Digest: hUGmSl0xCkj8MAkhUm82mHGI9YQ=
+
+Name: org/jhotdraw/draw/SelectAreaTracker.class
+SHA1-Digest: MzXDlxy/nzFZz+a+lMpElWS4qYU=
+
+Name: net/n3/nanoxml/CDATAReader.class
+SHA1-Digest: 3OPThLQu1ocvvtwfolPaZNjKvp4=
+
+Name: org/jhotdraw/draw/TriangleRotationHandler$1.class
+SHA1-Digest: u183777XtxuUjXv96YqsFWy1dUM=
+
+Name: org/jhotdraw/draw/action/images/moveWest.png
+SHA1-Digest: djggg838YomKETEScFl2rwWJEAA=
+
+Name: org/jhotdraw/draw/action/ZoomEditorAction.class
+SHA1-Digest: /lAAA/UudptUTw8hwn4Moz4GVdo=
+
+Name: org/jhotdraw/draw/TextInputFormat.class
+SHA1-Digest: eVCp150seHyRiri+1ngkTAIa1uY=
+
+Name: org/jhotdraw/draw/ChopEllipseConnector$1.class
+SHA1-Digest: hMVe+CT5jdeX0K4CKBCfUtCX3pA=
+
+Name: org/jhotdraw/draw/AttributeChangeEdit.class
+SHA1-Digest: D/g9qAaPh2jJodRBNh1cK19X6vQ=
+
+Name: org/jhotdraw/draw/action/ApplyAttributesAction.class
+SHA1-Digest: zHqtjTKdoidHjEgSwa8Kdg6uPSg=
+
+Name: net/n3/nanoxml/IXMLEntityResolver.class
+SHA1-Digest: yzu1dObF6yGz8hPKWEhCT11ZjyY=
+
+Name: org/jhotdraw/util/LocaleUtil.class
+SHA1-Digest: USxK0GFSS7QFkORsS63kCthDZDM=
+
+Name: net/n3/nanoxml/XMLValidationException.class
+SHA1-Digest: IB1jy0fMTGLCltOrqcF6wz03VpQ=
+
+Name: org/jhotdraw/draw/ArrowTip.class
+SHA1-Digest: Gbu7QLAPwrxM2p6XxD5ShfJUb2w=
+
+Name: org/jhotdraw/draw/TransformEdit.class
+SHA1-Digest: 4EXq6GZp9We+HgXCCxEBdCk7BuY=
+
+Name: org/jhotdraw/gui/fontchooser/FontChooserModel.class
+SHA1-Digest: vQ9eOQvw2n+IsOTI1t8uiyfdYJs=
+
+Name: org/jhotdraw/draw/action/images/selectionUngroup.png
+SHA1-Digest: 0M6dZ2XpXHjcPkA/uFkzqakS+M4=
+
+Name: org/jhotdraw/draw/action/images/createRoundRectangle.png
+SHA1-Digest: 1u+vCSdAqfsLOWFQcm58AtW16mU=
+
+Name: org/jhotdraw/draw/action/images/alignWest.png
+SHA1-Digest: hRgn9QTkKp12RakUVZyN68uOqo8=
+
+Name: org/jhotdraw/gui/JFontChooser$1.class
+SHA1-Digest: enr2IcjGAUaTknWY8SqfEF1Azdk=
+
+Name: org/jhotdraw/draw/TransformHandleKit$SouthEastHandle.class
+SHA1-Digest: iIN/owOfv/L+fgV3vfBgjg68L7Q=
+
+Name: org/jhotdraw/draw/action/images/createTriangle.png
+SHA1-Digest: KqjE5aSNx75uNPI0rZZeaqd+ckc=
+
+Name: org/jhotdraw/gui/Worker.class
+SHA1-Digest: IrFCnfnQYqhexmtJfd82rtUgPFY=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$FontChooserHa
+ ndler.class
+SHA1-Digest: 8CTvcXHpehP4VV3yWljLPLLV3Vs=
+
+Name: org/jhotdraw/samples/draw/DrawApplet.class
+SHA1-Digest: LL2jWLmlOWfX7EK3xKHmzuZQW34=
+
+Name: org/jhotdraw/draw/action/EditorColorChooserAction.class
+SHA1-Digest: dod6R/CsBiFBzNvRE4JkGDMm9fo=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteLabelUI.class
+SHA1-Digest: nTx76uX0zRFY4C/4rqUtEoqJzfw=
+
+Name: org/jhotdraw/draw/DefaultHandleTracker.class
+SHA1-Digest: pRda8JwEXuhoJiuBrNB5pDV0Mr4=
+
+Name: org/jhotdraw/gui/Labels.properties
+SHA1-Digest: /ks7O9BebkrspG2wYtKj3j87LDY=
+
+Name: net/n3/nanoxml/ValidatorPlugin.class
+SHA1-Digest: rW3ZknBaj6N+Y+EIKUS8D18c2Xg=
+
+Name: org/jhotdraw/draw/action/EditorColorIcon.class
+SHA1-Digest: IvmEpMqXCjs4rjlxahskcoVoWxw=
+
+Name: org/jhotdraw/draw/FigureSelectionEvent.class
+SHA1-Digest: nUT892nCdhmj+O0fxT8AflEUI6A=
+
+Name: org/jhotdraw/util/Images.class
+SHA1-Digest: sRcqBy0s8r+Mhu9HMSaoSi2ZHkM=
+
+Name: org/jhotdraw/draw/HandleListener.class
+SHA1-Digest: M0eLBAkhoSu9Q2R0MNPpzuXl/ug=
+
+Name: org/jhotdraw/draw/RoundRectangleRadiusHandle.class
+SHA1-Digest: w1Cb3JNYZKLU95lulL5A4bzN9Kw=
+
+Name: org/jhotdraw/draw/action/images/alignEast.png
+SHA1-Digest: BCTpv0HmTwXKwJALSxaad+vOz+U=
+
+Name: org/apache/batik/ext/awt/image/GraphicsUtil.class
+SHA1-Digest: mzQ1mI35DWloX8drMpnQ0tBxGqg=
+
+Name: org/jhotdraw/draw/TriangleFigure$1.class
+SHA1-Digest: G+f3KHjEcl3SaH3yeofw6HIwIio=
+
+Name: org/jhotdraw/beans/AbstractBean.class
+SHA1-Digest: aFANi/+Cr4evSZvzaJSZ3w6+MZo=
+
+Name: org/jhotdraw/draw/EllipseFigure.class
+SHA1-Digest: DrOZ7i2G5Ihf+NaYoI3u45m7tCE=
+
+Name: org/jhotdraw/draw/ImageHolderFigure.class
+SHA1-Digest: V0eRK1+oezgOvJdIvCdCWQhC/Ys=
+
+Name: org/jhotdraw/draw/ConnectionEndHandle.class
+SHA1-Digest: XZFj6jaewZPxK6n7mMglltX6RFg=
+
+Name: org/jhotdraw/draw/TransformHandleKit$TransformHandle.class
+SHA1-Digest: x128t0xNYxNsZwybhKLKFI/qFWU=
+
+Name: net/n3/nanoxml/PIReader.class
+SHA1-Digest: FhJwrOcA+DHU0yGnTYSkAjuABrc=
+
+Name: org/jhotdraw/draw/AbstractTool.class
+SHA1-Digest: bOO57QDHJN/siyoWd/Go0RYHdYA=
+
+Name: org/jhotdraw/draw/action/images/moveEast.png
+SHA1-Digest: +SjA9QUPCzZqjEfTsYo4eg1n6fo=
+
+Name: org/jhotdraw/draw/action/AlignAction$East.class
+SHA1-Digest: WWBNIX9mXV9tHCwqVE8IHrKsYho=
+
+Name: org/jhotdraw/draw/Layouter.class
+SHA1-Digest: RNEKezQKgZqqgPvLdiQpHcwogFU=
+
+Name: org/jhotdraw/draw/GroupFigure.class
+SHA1-Digest: wLUys4wlmppS2JbSUwlmRRcl9Xc=
+
+Name: net/n3/nanoxml/IXMLBuilder.class
+SHA1-Digest: upVBcjTYVZh/EFJegaA3hRPLtE0=
+
+Name: org/jhotdraw/gui/Worker$1.class
+SHA1-Digest: ETh/ebUNTDVExPXZ0v0YAK4kpbk=
+
+Name: org/jhotdraw/samples/draw/DrawFigureFactory.class
+SHA1-Digest: OU05FAFY1Kt3Z6NeOIYRnFbjhbI=
+
+Name: org/jhotdraw/draw/action/images/attributeFont.png
+SHA1-Digest: ud5nsey1bJf2G7quN+MKUG1voxY=
+
+Name: org/jhotdraw/undo/CompositeEdit.class
+SHA1-Digest: nARzjlmGBCjn1VZ7BhNBGn8Mjl0=
+
+Name: org/jhotdraw/draw/action/DrawingEditorProxy$1.class
+SHA1-Digest: uOBxiuykNUCAxcG66DD0tKGxngY=
+
+Name: org/jhotdraw/undo/images/editUndo.png
+SHA1-Digest: qSHKYjF7qpzN0iUkuRZwOzBYhaY=
+
+Name: org/jhotdraw/undo/UndoRedoManager$1.class
+SHA1-Digest: x19DJHeMPExi5/vFD2AX3QlTWH0=
+
+Name: org/jhotdraw/xml/DOMInput.class
+SHA1-Digest: aUzA8Vj9bI2wJAKfSZwZWO/lRIQ=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction.class
+SHA1-Digest: CAQD+Hdj5yUNdqzRgihAMS2FMzE=
+
+Name: org/jhotdraw/draw/action/AttributeAction$1.class
+SHA1-Digest: Jfz2WHe6mhGGCMN5yxF01cSSrz0=
+
+Name: org/jhotdraw/draw/LineConnectionFigure.class
+SHA1-Digest: UjHQ3m2WfKpnFeAdOJqMw+Zl/gU=
+
+Name: org/jhotdraw/draw/ConnectionTool$1.class
+SHA1-Digest: myJgVVm4o3WjoiJiZFWvxvBwpj4=
+
+Name: org/jhotdraw/app/Labels_de.properties
+SHA1-Digest: y7EMj7Ey4A6hwUTZtyecDbulqBk=
+
+Name: org/jhotdraw/draw/ChopTriangleConnector.class
+SHA1-Digest: Utc4KA8Jw7c4UTP+fdJgVWwLrdo=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$6.class
+SHA1-Digest: 2l1cMU+kyjeJZvyO9ie/c9kAdY4=
+
+Name: org/apache/batik/ext/awt/MultipleGradientPaint$ColorSpaceEnum.cl
+ ass
+SHA1-Digest: Tpr5JddDgfiZdxFYWltyHq5DvoU=
+
+Name: net/n3/nanoxml/IXMLValidator.class
+SHA1-Digest: 9WT3GUcpsVlGdWxMhgWxaoR31j0=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$3.class
+SHA1-Digest: 75HQ35PccZqGwMiiR+zwgAc4FZ8=
+
+Name: org/jhotdraw/geom/QuadTree$QuadNode.class
+SHA1-Digest: lUPfnPAr7xkkwValLtSHWUYJqO0=
+

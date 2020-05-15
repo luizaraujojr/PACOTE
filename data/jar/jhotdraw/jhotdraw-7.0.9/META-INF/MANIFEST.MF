@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.5.0_07-87 ("Apple Computer, Inc.")
+Built-By: Werner Randelshofer
+Main-Class: org.jhotdraw.samples.draw.Main
+Class-Path: quaqua.jar lib/quaqua.jar ../lib/quaqua.jar MRJAdapter.jar
+  lib/MRJAdapter.jar ../lib/MRJAdapter.jar
+

@@ -72,8 +72,8 @@ public class MainAnalyzer {
 //		/**
 //		 * generate a list of years by commit, including the developer, the number of classes and packages
 //		 */
-//		extractJARProjectCharacteristics();
-////		
+		extractJARProjectCharacteristics();
+////			
 ////		/**
 ////		 * generate a list of years by commit, including the developer, the number of classes and packages
 ////		 */
@@ -166,7 +166,7 @@ public class MainAnalyzer {
 		FileOutputStream out = new FileOutputStream("results\\ODEMProjectCharacteristics.data");
 		PrintStream ps = new PrintStream(out);
 		
-		ps.println("version\tpackageCount\telegance\tsingleClassPackages\tmaximumClassConcentration\tdependencyCount\tcbo\taff\teff\tmq\tevm\tlcom5");
+		ps.println("version\tpackageCount\tclassCount\telegance\tsingleClassPackages\tmaximumClassConcentration\tdependencyCount\tcbo\taff\teff\tmq\tevm\tlcom5");
 		
 //		MainCharacteristics mc = new MainCharacteristics();
 		ProjectLoader loader = new ProjectLoader();

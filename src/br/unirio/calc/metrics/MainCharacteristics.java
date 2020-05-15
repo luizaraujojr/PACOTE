@@ -143,13 +143,14 @@ public class MainCharacteristics
 		double lcom5 = cc.calculateLCOM5();
 		double cbo = cc.calculateCBO();
 		int packageCount = cc.getPackageCount();
+		int classCount = project.getClassCount();
 		int singleClassPackages = cc.countSingleClassPackages();
 		int maximumClassConcentration = cc.getMaximumClassCount();
 		double elegance = cc.calculateClassElegance();
 		
 //		System.out.println(version + "; P: " + packageCount + "; ELG: " + elegance + "; SCP: " + singleClassPackages + "; CONC: " + maximumClassConcentration + "; D: " + dependencyCount + "; CBO: " + cbo + "; AFF: " + aff + "; EFF: " + eff + "; MQ: " + mq + "; EVM: " + evm + "; LCOM: " + lcom5););
 		
-		ps.println(version.substring(0, version.length() -14) + "\t" + packageCount + "\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration+ "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
+		ps.println(version.substring(0, version.length() -14) + "\t" + packageCount + "\t" + classCount +"\t" + elegance + "\t" + singleClassPackages + "\t" + maximumClassConcentration+ "\t" + dependencyCount + "\t" + cbo + "\t" + aff + "\t" + eff + "\t" + mq + "\t" + evm + "\t" + lcom5);
 	}
 	
 	

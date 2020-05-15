@@ -1,6 +1,6 @@
 
 #data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jedit_RevisionsByYear.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
 data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByYear.data", header=TRUE);
 
 years <- sort(unique(data$year));
@@ -27,7 +27,7 @@ for (year_ in years)
 	result[year_ - 2000 + 1, "inTeam"] <- length(inTeam);
 	result[year_ - 2000 + 1, "outTeam"] <- length(outTeam);
 	result[year_ - 2000 + 1, "num_commits"] <- nrow(vdata);
-	result[year_ - 2000 + 1, "NAR"] <- sd(commits);
+	result[year_ - 2000 + 1, "NAR"] <- round(sd(commits),2);
 }
 
 result

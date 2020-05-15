@@ -1,5 +1,3 @@
-#data <- read.table("/Users/Marcio/Documents/GitHub/Pesquisa/SBSE/sbse-ant-unirio/size_metrics.data", header=TRUE);
-
 
 	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristics.data", header=TRUE);
 	unique_versions <- unique(data$versions);
@@ -22,10 +20,9 @@
 
 
 
-# box-plot for the number of classes per package
-	data_classespackages <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristics.data", header=TRUE);
-	
-	data_classespackages <- subset(data_classespackages, substring (versions,1,2) == "ju");
+	# box-plot for the number of classes per package
+	pdf("D:/Backup/eclipse-workspace/pacote/results/jedit_classpackage.pdf", width=8,height=5)
+	data_classespackages <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsjedit.data", header=TRUE);
 	
 	unique_versions <- unique(data_classespackages$versions);
 	uniqueVersionPackage <- unique(data_classespackages[,c("versions","packages")])
@@ -50,45 +47,46 @@
 	}
 	
 	par(mar=c(7,3,3,3))
-	
 	boxplot(as.numeric(result1[,3]) ~ result1[,1], data = result1, main="Class/Package", xlab='', ylab='Number of Classes/Package', las=2)
-	
+	dev.off();
 
-# box-plot for the number of attributes per class
+	# box-plot for the number of attributes per class
+	pdf("D:/Backup/eclipse-workspace/pacote/results/jedit_classattribute.pdf", width=8,height=5)
 	par(mar=c(9,3,3,3))
-
-		data_classesattributes <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJhotdraw.data", header=TRUE);
-		
-		#data_classesattributes <- subset(data_classesattributes, substring (versions,1,2) == "ju");
-
+	data_classesattributes <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsjedit.data", header=TRUE);
 	boxplot(data_classesattributes[,"attrs"] ~data_classesattributes[,"versions"], data= data_classesattributes, main="Attribute/Class", xlab='', las=2)
-
-
-
-
+	dev.off();
 
 	# box-plot for the number of methods per class
-	
-	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJunit.data", header=TRUE);
-	
+	pdf("D:/Backup/eclipse-workspace/pacote/results/jedit_classmethod.pdf", width=8,height=5)
+	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsjedit.data", header=TRUE);
 	par(mar=c(9,3,3,3))
 	boxplot(data[,"meths"] ~data[,"versions"], data= data, main="Methods/Class", xlab='', las=2)
+	dev.off();
 
-# box-plot for the number of public methods per class
-
-data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJunit.data", header=TRUE);
+	# box-plot for the number of public methods per class
+	pdf("D:/Backup/eclipse-workspace/pacote/results/jedit_classpublicmethod.pdf", width=8,height=5)
+	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsjedit.data", header=TRUE);
 
 	par(mar=c(9,3,3,3))
 	boxplot(data[,"pmeths"] ~data[,"versions"], data= data, main="Public Methods/Class", xlab='', las=2)
+	dev.off();
+
+
+
+
+
+
+
+
+
 
 
 # box-plot for the number of dependencies per class
+
 data1 <- read.table("D:/Backup/eclipse-workspace/projetotese/results/projects_coupling_metrics.data", header=TRUE);
 par(mar=c(15,3,3,3))
 boxplot(data1[,"dependencyCount"] ~data1[,"versao"], data= data1, main="Dependency/Class", xlab='', las=2)
-
-
-
 
 
 

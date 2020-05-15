@@ -1,0 +1,5193 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Implementation-Version: 7.4.1
+Built-By: the authors and contributors of JHotDraw
+Created-By: 14.3-b01-101 (Apple Inc.)
+Main-Class: org.jhotdraw.samples.draw.Main
+
+Name: org/jhotdraw/draw/action/images/_notes/moveUp.png.mno
+SHA1-Digest: 3vKipHy5aoBEdaslHGNyiYYuOCw=
+
+Name: org/jhotdraw/draw/action/AttributeAction$1.class
+SHA1-Digest: DCGYRWf7fuGNFDqkiiGkZn61ZdQ=
+
+Name: ch/randelshofer/quaqua/images/CheckBoxMenuItem.icons.png
+SHA1-Digest: G6y6KDXwqk8nh6OWcu285tSEktg=
+
+Name: org/jhotdraw/draw/event/FigureListener.class
+SHA1-Digest: Wq3whStpegZKGr5nTagJkBrODdQ=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuBorder.class
+SHA1-Digest: kUsvQXLcnMxQhYIrEhvrClIg9x0=
+
+Name: ch/randelshofer/quaqua/util/ConcurrentDispatcher$1.class
+SHA1-Digest: RUqz0Tw6y4K1+D2hFH5VoAwNSHE=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.smallSep.vButtons.png
+SHA1-Digest: osU9Ku9WdjzN70bJflxwrY4pNUc=
+
+Name: org/jhotdraw/app/action/file/PrintFileAction.class
+SHA1-Digest: +CPo2vb0Cj2BcNb8hVA3Xarr4QY=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeTraverseAction.class
+SHA1-Digest: qZxpYlTGJSTDXd+eAAtaioZVGGw=
+
+Name: org/jhotdraw/draw/action/LineDecorationIcon.class
+SHA1-Digest: 13AfgkfoG0WZ9yOcLUuCEwQFmqg=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.hThumbBody.png
+SHA1-Digest: 1ltCxzmksWoIB5D24XlBdPtocJM=
+
+Name: ch/randelshofer/quaqua/images/RoundedBevel.focusRing.png
+SHA1-Digest: NUEJ7XAODgStHf33FbZHOWUUfVg=
+
+Name: ch/randelshofer/quaqua/images/Slider.northThumbs.small.png
+SHA1-Digest: HmTpr1fCHoc2MMWbVDLUSfuu9w4=
+
+Name: org/jhotdraw/draw/QuadTreeDrawing.class
+SHA1-Digest: WT9PwQmiOB8vrihyKdCdRa2u+ms=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Alia
+ sNode$1.class
+SHA1-Digest: ToUQrqDWzTQd5dXYHX5qz2L0hps=
+
+Name: org/jhotdraw/undo/images/editRedo.png
+SHA1-Digest: ILEJDfTvkrYUtmRfh6rXGH48aio=
+
+Name: org/jhotdraw/gui/JSheet$8.class
+SHA1-Digest: 9eS/vNt4vvtWX6jw2Ik32otOwR8=
+
+Name: org/jhotdraw/app/action/window/MinimizeWindowAction.class
+SHA1-Digest: CxeTtECZH+HhBF10p+1xL7zhMIM=
+
+Name: ch/randelshofer/quaqua/util/ShadowFilter.class
+SHA1-Digest: EkciKDE1NG/UeXLtYbfhh3Z8fjo=
+
+Name: ch/randelshofer/quaqua/images/Button.small.focusRing.png
+SHA1-Digest: LYWCABcUYKZBQW/JKtwP8O0Trbg=
+
+Name: org/jhotdraw/draw/handle/HandleAttributeKeys.class
+SHA1-Digest: 7ULcpvWUeJbHnc65KaTkwTMYYzw=
+
+Name: ch/randelshofer/quaqua/DefaultColumnCellRenderer$2.class
+SHA1-Digest: RW1T2QN2f7G+NBiqB5lSZjEUfAI=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$Handler$2.class
+SHA1-Digest: xP8IJ9ULiBfikBmqSI/tyRi9Vg4=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.ver
+ tical.mini.png
+SHA1-Digest: 9GWomH9uXtRPeCtE8yFDNSdotDI=
+
+Name: org/jhotdraw/draw/io/ImageOutputFormat.class
+SHA1-Digest: mpDOgga/x7szVL6g+WfN+VUjkWY=
+
+Name: org/jhotdraw/beans/PropertyChangeEdit.class
+SHA1-Digest: NmjfNy1jD4sGSvpN4N1C/8w+EmM=
+
+Name: ch/randelshofer/quaqua/util/BinaryPListParser$BPLArray.class
+SHA1-Digest: rm3SDMFILerfeHjJKTCAXCpsz/s=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.previousIcon.D
+ .png
+SHA1-Digest: kYv5DF7spBP/7kMCKDREtCIQZCs=
+
+Name: org/jhotdraw/draw/event/HandleListener.class
+SHA1-Digest: /kzNbArrfhMv6iIhBxAh01Pucz0=
+
+Name: ch/randelshofer/quaqua/subset/QuaquaLeopardFileChooserLAF.class
+SHA1-Digest: 69jsNaYzczX8R9y0fwKTCAGYGV8=
+
+Name: org/jhotdraw/draw/tool/BezierTool$1.class
+SHA1-Digest: l0B97vsyXavBdDEA9sKhmNSZGzk=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$2.clas
+ s
+SHA1-Digest: PnMkpKd1B1IEvwA5RmLm+Zmy/ss=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.min
+ i.png
+SHA1-Digest: IUFHKuLU+8sxJNhEoEpJD0lbl5I=
+
+Name: ch/randelshofer/quaqua/DefaultColumnCellRenderer$3.class
+SHA1-Digest: ULMzfW1JVv9aj3UVhDq+mfJjWMc=
+
+Name: org/jhotdraw/draw/action/DefaultAttributeAction.class
+SHA1-Digest: t0iuGjCcMJC08T7AOLkSTUL+l2E=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$North.class
+SHA1-Digest: R+RGYUwVMBApJoVEMP/V7a8eNXM=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/FileView.hardDriveIco
+ n.png
+SHA1-Digest: SkxiT5ZYjeGQcCoa1JYunebxpqw=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$1.class
+SHA1-Digest: YXEFPL2ht2OSHkHprHPvocEYsDY=
+
+Name: ch/randelshofer/quaqua/Quaqua14TextFieldFocusHandler.class
+SHA1-Digest: OsfXQ1ABLUFlsoqKFrVBVhZ+xvw=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.ihThumb.png
+SHA1-Digest: RRbyMcvaoKSuZRnCxG4JnpEzOPc=
+
+Name: ch/randelshofer/quaqua/JBrowser$BrowserLayout.class
+SHA1-Digest: TV+lrizDJGY1uGPc2BQ14sXXhQw=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI$MouseInputHandler.clas
+ s
+SHA1-Digest: eA/oPRLXHVPjSomcgB/O+AiT4eA=
+
+Name: org/jhotdraw/draw/BezierFigure.class
+SHA1-Digest: Vwy+mimui9tnokNCiMO0FUakDKU=
+
+Name: org/jhotdraw/draw/tool/ConnectionTool$1.class
+SHA1-Digest: Jk7xdvl89tE0hM1uyjAV7deFj3E=
+
+Name: ch/randelshofer/quaqua/Labels_sv.properties
+SHA1-Digest: pdKbg9oTA4om32UPKl/JFguONtc=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$Handler$1.class
+SHA1-Digest: 0GaJVTv8TqhvAL2W6doubRrlTmg=
+
+Name: ch/randelshofer/quaqua/QuaquaDragGestureRecognizer.class
+SHA1-Digest: JRjcM6gUDBQwtioewHJE22sAdsA=
+
+Name: org/jhotdraw/draw/AttributeKeys$WindingRule.class
+SHA1-Digest: vLuG1Cz+8i/F5TMUdxAfD1bdMro=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeTextColor.png.mn
+ o
+SHA1-Digest: e99bctN4GejK0zaYMjArwlpLRVE=
+
+Name: ch/randelshofer/quaqua/QuaquaTextFieldBorder.class
+SHA1-Digest: 8HgX9QFmQCI/JiJCmCuqxrd9GjE=
+
+Name: ch/randelshofer/quaqua/QuaquaListUI$ListDataHandler.class
+SHA1-Digest: 8Rl58JXZtAEU5D3QuSo9XQgjbmU=
+
+Name: org/jhotdraw/draw/action/DrawingColorIcon.class
+SHA1-Digest: JPiomWkKtcPBuESxgAzIYLvFRUk=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/LinearGradientPaintCont
+ ext.class
+SHA1-Digest: pzkIzkEdO7hEyLedazA/cxzvpo0=
+
+Name: ch/randelshofer/quaqua/images/Toggle.east.focusRing.png
+SHA1-Digest: v2pht/LEWnxdQlf0qAUOz2VyQs4=
+
+Name: org/jhotdraw/app/action/images/spacerIcon.png
+SHA1-Digest: Gx5aKO0eV9GPY1TGc6+RRakoznc=
+
+Name: ch/randelshofer/quaqua/QuaquaBaseline.class
+SHA1-Digest: hsgEg4mQZicLOvdEdusZiKD9ib0=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayColorSliderModel.class
+SHA1-Digest: nAxESVuEeqOp74cryxyF5ewNdvs=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$DragHandler.
+ class
+SHA1-Digest: vC5GMWN5ZLWqt0d00c48DP83tyg=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.sep.hButtons.png
+SHA1-Digest: /QSJGlaHmNklqnST0ZzVculMdeM=
+
+Name: org/jhotdraw/draw/AbstractFigure.class
+SHA1-Digest: omIN1N7SAsWgfOMcuD1oyQcnkao=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignWest.png.mno
+SHA1-Digest: g01hlsB1/IJXrmzVxrpw5lA4CCk=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$ResizeHandle.class
+SHA1-Digest: nivaQkU0Yr2b/fHkRL0wdV8q7Zk=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil$4.class
+SHA1-Digest: QC14uMY8XKYe/12Ukcw1I+dBw2k=
+
+Name: org/jhotdraw/draw/action/images/createRectangle.png
+SHA1-Digest: B2tKouJ8D8MV005DPU9jL8D1iaM=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Root
+ Node.class
+SHA1-Digest: /pHpBG3/gUH6TfJ3Bh6Z1qlvIvk=
+
+Name: org/jhotdraw/draw/locator/RelativeLocator.class
+SHA1-Digest: FMj2P7UbF5mWso3gnr+TflhTxwU=
+
+Name: org/jhotdraw/geom/Insets2D.class
+SHA1-Digest: hMim3sYb4/hVTrphhF2TLwRqFp4=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$NorthWestHandle.class
+SHA1-Digest: ZlYXssaHcIENQO6E4a5ZZ6yJCH8=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$2.class
+SHA1-Digest: yOiepKjv/HLaBkWtnNHgk0giIuI=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFDe
+ codeParam.class
+SHA1-Digest: vt5JeZJeHceHolnlYlicu0f5tHA=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$Side
+ barViewToModelNode.class
+SHA1-Digest: xYrF6xgpIRaEMdKV/LhLD8HMUnM=
+
+Name: org/jhotdraw/draw/LineConnectionFigure$1.class
+SHA1-Digest: +OMHAg0cc6E1xK88PYaXpYtaI9I=
+
+Name: org/jhotdraw/draw/action/images/alignGridSmall.png
+SHA1-Digest: 9ggzbtoYrATjV7hOYGjNqYkoHNo=
+
+Name: org/jhotdraw/draw/action/MoveAction$South.class
+SHA1-Digest: yRDczP5mplfWwn8mQ6G8u3Sx/xg=
+
+Name: org/jhotdraw/draw/event/ToolAdapter.class
+SHA1-Digest: R7Yt8vAOTZw2TOp8nzO9LZMnibo=
+
+Name: org/jhotdraw/xml/DefaultDOMFactory.class
+SHA1-Digest: EaP3XemOyGuY6mG/hZXRK6PadTg=
+
+Name: ch/randelshofer/quaqua/colorchooser/PaletteEntry.class
+SHA1-Digest: syZjXo47akNrLYRNRse/u0qOdk0=
+
+Name: net/n3/nanoxml/CDATAReader.class
+SHA1-Digest: QwTtSx7Gm8Ck0lE1eSy7kEXu6rM=
+
+Name: org/jhotdraw/draw/event/FigureSelectionListener.class
+SHA1-Digest: fZh2G3etIVT5cPpBlQrrYkP6hQg=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$DragWindow0.class
+SHA1-Digest: RdM9wnHZuZ7F9hOUJ/TxFsICqjQ=
+
+Name: org/jhotdraw/draw/layouter/Layouter.class
+SHA1-Digest: z6eYogo+AHiJvkECH8CBrjHWsHM=
+
+Name: ch/randelshofer/quaqua/color/MutableColorUIResource.class
+SHA1-Digest: HO+keec6lxxIuWVun7SUiRQQYQs=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Dire
+ ctoryNode$DirectoryValidator.class
+SHA1-Digest: gP7JoGwVob4ucAdpN/5JCKySNzA=
+
+Name: org/jhotdraw/app/action/file/NewFileAction.class
+SHA1-Digest: I9NayRY3w63t2cC79X5unEX4QLU=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.vThumbBottom.png
+SHA1-Digest: w8yUsBi16MVxgBWKVLBTK4OG3vM=
+
+Name: ch/randelshofer/quaqua/images/Button.helpFocusRings.png
+SHA1-Digest: 2uDm3Jbv++LKBrtCGi1PCIP8bPc=
+
+Name: ch/randelshofer/quaqua/util/SizeConstrainedPanel.class
+SHA1-Digest: 6KUo3Y+iThcwHDdQrsdfMeXTFxs=
+
+Name: org/jhotdraw/draw/action/AlignAction$Horizontal.class
+SHA1-Digest: 9TTErHPO7sPiRxAgm4yrehQlzZk=
+
+Name: ch/randelshofer/quaqua/QuaquaSliderUI$1.class
+SHA1-Digest: X+Ll+2zfKjlNm9WDq0ExlnERx78=
+
+Name: ch/randelshofer/quaqua/util/BinaryPListParser.class
+SHA1-Digest: A0v9seoMTCV/SK6OivUHYXbV1+k=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokePlacement.
+ png.mno
+SHA1-Digest: YgMIBSh+fFnw0x8ZgYW3Nvomi3I=
+
+Name: org/jhotdraw/io/Base64.class
+SHA1-Digest: QoyFDwXttWMXotomoAN+UuqWx9s=
+
+Name: org/jhotdraw/draw/action/images/moveToBack.png
+SHA1-Digest: quS9ulvKWIMaQcoSxeZfIVF0tB0=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/LeopardFileRenderer$1
+ .class
+SHA1-Digest: aeUJ7EhpYbviwS+9lgxnupGu+rM=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $NextAction.class
+SHA1-Digest: umG4HXGRx/0orslVq1Wjtbsh3eY=
+
+Name: org/jhotdraw/app/action/file/LoadFileAction$2.class
+SHA1-Digest: gSohXjdQvDXGYt2YijlaGlIA5Y0=
+
+Name: org/jhotdraw/gui/datatransfer/AbstractClipboard.class
+SHA1-Digest: CaLDmAaKKf1VB2xv49DUIFmfBik=
+
+Name: org/jhotdraw/draw/action/images/attributeFontUnderline_de.png
+SHA1-Digest: Rio7rs44AhIOchw7hirRJp3LhTk=
+
+Name: org/jhotdraw/gui/datatransfer/JNLPClipboard.class
+SHA1-Digest: Ir4jvkE1na43sNhX55I2XI9YeD4=
+
+Name: ch/randelshofer/quaqua/ext/batik/i18n/Localizable.class
+SHA1-Digest: H8PEKntaUmfl4Xm/scCfopT1QRY=
+
+Name: org/jhotdraw/draw/connector/ChopDiamondConnector.class
+SHA1-Digest: McICwV+qg64CFLagyMgDBjWH+iw=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $QuaquaPropertyHandler.class
+SHA1-Digest: 0COuABHyK6ybxpXGBXkGQqMeSuc=
+
+Name: org/jhotdraw/draw/tool/ImageTool$1.class
+SHA1-Digest: ZIpsJiU0nDc2FC6pjodY6cuJGos=
+
+Name: org/jhotdraw/draw/tool/TextAreaCreationTool.class
+SHA1-Digest: VINBndoky10cbGGnl9GZ9FBBkj4=
+
+Name: ch/randelshofer/quaqua/Quaqua16LayoutStyle.class
+SHA1-Digest: muwVItsyc9NljErHaUKOTuxsaCY=
+
+Name: ch/randelshofer/quaqua/util/ResourceBundleUtil.class
+SHA1-Digest: p+a6E1DZunedPHcLCfxabo0GFEs=
+
+Name: org/jhotdraw/draw/event/FigureSelectionEvent.class
+SHA1-Digest: iRyhLw/pkw+QK4sBgKhTs49ESAE=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.hTrack.png
+SHA1-Digest: M/NPRF2PSRJOjGf8B4Whh16L7Iw=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabTop.D.png
+SHA1-Digest: rRrfM2969xF23I2++kPfuulSsGw=
+
+Name: ch/randelshofer/quaqua/Quaqua13ColorChooserUI.class
+SHA1-Digest: 9YVZBD5R7P0PGjhXRaa4oi841+U=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.ver
+ tical.small.png
+SHA1-Digest: bzWBlJrkldfvTEZROGFjFlIjLM4=
+
+Name: org/jhotdraw/app/action/AbstractSelectionAction$1.class
+SHA1-Digest: 7nmqkdPkY/MhfLLNQJsMl0pK8w4=
+
+Name: org/jhotdraw/draw/action/images/createLineConnection.png
+SHA1-Digest: 22lZuvZb4FLnnc8BRrKwFRo6PkA=
+
+Name: org/jhotdraw/draw/AttributeKeys$Alignment.class
+SHA1-Digest: lPZTkFe2UpnfqlZGeCa9U/1mkAQ=
+
+Name: org/jhotdraw/beans/Disposable.class
+SHA1-Digest: TTQh8G4rZC1wzDWko+7HFSg5dik=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneDivider$1.class
+SHA1-Digest: Si/YERyH0oipxjGyXyBzuSN95PA=
+
+Name: org/jhotdraw/gui/JFontChooser.class
+SHA1-Digest: oS+pZmci0Lc4D+zubD71F/QKtUY=
+
+Name: org/jhotdraw/draw/tool/TextCreationTool.class
+SHA1-Digest: cf+HWiZCQc4RZ0ETNkGjNk7UVm4=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $ContainerHandler.class
+SHA1-Digest: G9RZIbV3q7zydBmSVUBK3F9cdS8=
+
+Name: ch/randelshofer/quaqua/Labels_it.properties
+SHA1-Digest: WjS0CiVoSAa+Y2r2URk2l9l6oDU=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser$2.class
+SHA1-Digest: ZJLHtJSpfev7j4N/8aD3by6/KFo=
+
+Name: org/jhotdraw/samples/draw/Main.class
+SHA1-Digest: WIqvB0qYElpp9VFxPYxEdhCOTK8=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ .class
+SHA1-Digest: dp+Kppkh0ur9lssXO2bf+ewwpsw=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Direct
+ oryComboBoxModel.class
+SHA1-Digest: C7aYwEwa4t4CIQrCc2AzQnwEC74=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Quaqua
+ ApproveSelectionAction.class
+SHA1-Digest: tcOvTYe8qlc5LChpNnFC4Hv+dUc=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$EventHandler.class
+SHA1-Digest: 5zDHTI8HeBHaF0eQVD7XzeI7p9E=
+
+Name: ch/randelshofer/quaqua/images/Frame.titlePane.mini.png
+SHA1-Digest: z0h+QW/XOOJ255zZm/Cjse4JNh8=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$BrowserS
+ electionListener.class
+SHA1-Digest: FUq3l0XcqOyYR19QifHfd/kSX3U=
+
+Name: ch/randelshofer/quaqua/panther/images/MenuBar.texture.S.png
+SHA1-Digest: CpXII0nTiutqFRyqjvcUdhWl2F8=
+
+Name: ch/randelshofer/quaqua/DefaultColumnCellRenderer$1.class
+SHA1-Digest: Msnsds/eZ+xPn9ffLoH16Xn9cow=
+
+Name: org/jhotdraw/draw/io/ImageInputFormat.class
+SHA1-Digest: 3ZcRDkpY6zU/kvM1OKfQhaSUyr4=
+
+Name: net/n3/nanoxml/StdXMLReader$1.class
+SHA1-Digest: hKb/PUo5BJaTv7mqS6k3Ssr9Rlk=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Dire
+ ctoryNode$DirectoryValidator$1.class
+SHA1-Digest: 1pY8K32oEcKaVZy/9TyZcK46Irk=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$6.class
+SHA1-Digest: aU92Jz/XyK/GrWS9743N72IZN90=
+
+Name: org/jhotdraw/app/action/file/OpenFileAction$3.class
+SHA1-Digest: BmxG+nNS4MUn1++h1GsnYEQUT00=
+
+Name: ch/randelshofer/quaqua/images/Toggle.center.focusRing.png
+SHA1-Digest: jFC8LAsx6+3SOpduYNw9h9gklmE=
+
+Name: ch/randelshofer/quaqua/images/Frame.titlePane.png
+SHA1-Digest: tlYSzdqFSa/0T7UhnH5sK+p2Qhw=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabRight.png
+SHA1-Digest: keH+ejQcl/txwUB2u4/oQ9zZKCw=
+
+Name: org/jhotdraw/app/action/ActionUtil.class
+SHA1-Digest: 7MP++u096JursPMSX3ziZua9ppY=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBChooser$2.class
+SHA1-Digest: MEsiR+mjBqnSdSPqcsItfUF3QOA=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.iconifyIcons.png
+SHA1-Digest: mbnCMPgFDUsY+Stx9cY3bqZRTro=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker$1.class
+SHA1-Digest: mT3xwhAhOBGWzj9W0pZ+0nPXLJI=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $RequestFocusForVisibleAction.class
+SHA1-Digest: kawdJXNlg2w5X1QElWaf56Nb6JM=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabTop.S.png
+SHA1-Digest: b0nuO4wAsxUIjLMfPhANtNdkLl8=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $TabsComboBox.class
+SHA1-Digest: Ze0RYYRREHpbEYRAdHBTDVTopLM=
+
+Name: org/jhotdraw/draw/ConnectionFigure.class
+SHA1-Digest: +l5Z0TWGHzbQKw9VW1M/OZyCpgM=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker.class
+SHA1-Digest: dnm59Gosow8C+2RTLEB3ECEtEic=
+
+Name: org/jhotdraw/draw/event/ToolListener.class
+SHA1-Digest: 1zgwS6iQeQNRrGHNXLyhcgnAz7o=
+
+Name: ch/randelshofer/quaqua/QuaquaViewportUI$ContainerHandler.class
+SHA1-Digest: rdy/r0oBl/iTqbR9BkxEFJBCWm8=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $DownAction.class
+SHA1-Digest: 1cTX74CDFMq5d7megxbRRIguJUI=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$3.class
+SHA1-Digest: J3FfDZejSfd1bFnKkBrZ1/etBMI=
+
+Name: org/jhotdraw/app/Application.class
+SHA1-Digest: ySWMvbL4vuJN60HVXE9T1ZJZapc=
+
+Name: ch/randelshofer/quaqua/Quaqua13ColorChooserUI$PreviewListener.cl
+ ass
+SHA1-Digest: 2gGdoiqyQTjFF5NF5RJ9X4JOWF0=
+
+Name: org/jhotdraw/draw/action/images/alignNorth.png
+SHA1-Digest: aqIvFa+l+0TB2qFTAArS/JWeqVY=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.vert
+ ical.png
+SHA1-Digest: qbk8aJyT6pn7q80AkxgfFGsMOtk=
+
+Name: org/jhotdraw/draw/action/images/createElbowConnection.png
+SHA1-Digest: /07GlEjyLmt4sriT5GsW5jPO5as=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSlidersChooser.class
+SHA1-Digest: OpmVW0/WzuinAn6+EcVm1+KyzgI=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.tog.hButtons.png
+SHA1-Digest: uJsLqQAx/H2em1EazdrbI7nupY8=
+
+Name: org/jhotdraw/draw/action/images/popupIcon.png
+SHA1-Digest: ii3lSmKGDSkqN5hTR8/KymKQHiw=
+
+Name: ch/randelshofer/quaqua/color/InactivatableColorUIResource.class
+SHA1-Digest: y2+YTpK2I0kEEpoLuyJlYU0ZMKg=
+
+Name: ch/randelshofer/quaqua/util/NavigatableTabbedPaneUI.class
+SHA1-Digest: jX70z9SFsMhGS+7VXSMv+m4v200=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$8.class
+SHA1-Digest: srCQVIsk0l2cfV1xsnskrktP6cA=
+
+Name: org/jhotdraw/gui/datatransfer/ImageTransferable.class
+SHA1-Digest: jrCa0ogdCp093N80iitrjEj4q78=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Double
+ ClickListener.class
+SHA1-Digest: SLdr/ennvJqJy1hK3GmzSR1YS1Q=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$EastHandle.class
+SHA1-Digest: e4w0jhAsddcGkn887NXx6kJSNvs=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.popupIcons.png
+SHA1-Digest: xX3Sx6QGW/17FGcV+64ICRz9DAk=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI.class
+SHA1-Digest: OPU/ZDEoTdaA9Xf28wPFOsv3IM8=
+
+Name: org/jhotdraw/draw/TextAreaFigure$1.class
+SHA1-Digest: wgVMO+yF3+mJR+axqhmg1Lx2W0c=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$2.class
+SHA1-Digest: 6py/PvPwbgzxjmFm5rN/g6718JI=
+
+Name: org/jhotdraw/gui/fontchooser/FontFaceNode.class
+SHA1-Digest: oKUMPipQSKeWTXCpQXzXuOh4cP0=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveEast.png.mno
+SHA1-Digest: zcBqRdD7HZOUtyOXxxhqZuCeB/0=
+
+Name: ch/randelshofer/quaqua/colorchooser/Crayons$MouseHandler.class
+SHA1-Digest: PWTZQdBqazIBbpH6PXRN1StOefY=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderBorder$UIResource.class
+SHA1-Digest: dcDCQZ+9ZrAxibHmt48k+3eOmAk=
+
+Name: org/jhotdraw/undo/UndoRedoManager$UndoAction.class
+SHA1-Digest: TVOYTWGf6oQgao+m+IVeyqRJe48=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardSideBarSelectionBord
+ er.class
+SHA1-Digest: qJ+GZ3LJXqjhUAmKKTDLBJJ/tBs=
+
+Name: ch/randelshofer/quaqua/ext/nanoxml/XMLElement.class
+SHA1-Digest: f/wSJ92xcCvWgSDHEuXEgnquXrs=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Arit
+ hCompositeContext_INT_PACK_LUT.class
+SHA1-Digest: BZ12SzcBGSF0m5bdrBrGgb7XTq0=
+
+Name: ch/randelshofer/quaqua/colorchooser/SwatchesChooser$1.class
+SHA1-Digest: /Q3feHglLppTYCAZioSQHDjCcd0=
+
+Name: ch/randelshofer/quaqua/images/Toggle.west.borders.png
+SHA1-Digest: 3xjdauNQhTqGnp+rVoG3Hu+H+sk=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.maximizeIcons.p
+ ng
+SHA1-Digest: bM7kaAZmukD32bdvV3eDiANGbsw=
+
+Name: org/jhotdraw/app/OSXApplication.class
+SHA1-Digest: HjL5hpeP5v3jjbfRBjEUIGc8y/E=
+
+Name: ch/randelshofer/quaqua/QuaquaButtonBorder.class
+SHA1-Digest: Y3h/71ywgfNZ/lyQvhAbiTubQ/I=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBChooser$4.class
+SHA1-Digest: rV9tgU8mcoJLLYJLW3s1a4/C4NQ=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$NorthEastHandle.clas
+ s
+SHA1-Digest: iXdk/DWf9r5mRe7BRCpL8UkaH9w=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/GraphicsUtil.clas
+ s
+SHA1-Digest: 5nnweVY4cJy7EgiHn3XtGXSdBC0=
+
+Name: ch/randelshofer/quaqua/util/EventLoop.class
+SHA1-Digest: EgI1SoJhrWoylpdQn5qmQf/8T0E=
+
+Name: org/jhotdraw/draw/action/IncreaseHandleDetailLevelAction.class
+SHA1-Digest: Q8SNmvPNq7jK0pB6404aO7EJhKI=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.iconifyIcons.small.p
+ ng
+SHA1-Digest: GMpDEemfNgztOcTFk6oEBmSE91c=
+
+Name: org/jhotdraw/draw/DiamondFigure.class
+SHA1-Digest: 3YsPNlYCEjBJc8HAGnP+x3fYw/s=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$NewFolde
+ rAction.class
+SHA1-Digest: 8bIVyoF68ZQPiguPc2XlF5UTfwQ=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$2.clas
+ s
+SHA1-Digest: F9tDQzRU+9S9qZJA/fJyCsl2cpA=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.vButtons.png
+SHA1-Digest: WNEUqmajhGmAPA0r1mgJsRsXQD4=
+
+Name: org/jhotdraw/draw/Figure.class
+SHA1-Digest: 9UlVQe2ao6a0NFTlt8k57iRxVN4=
+
+Name: org/jhotdraw/draw/connector/Connector.class
+SHA1-Digest: G8DI70b4hTsYk+u2GnUpYX6emqg=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBChooser$2.class
+SHA1-Digest: 8d89RzcbTOQbiTYXYWVbQwF4QL4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFIm
+ age.class
+SHA1-Digest: JYnlbARUp6qXR5oI+lB6tMdQTXo=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser$4.class
+SHA1-Digest: VBjrWE4V2mgLRyM7Csio/zgCtT0=
+
+Name: org/jhotdraw/app/action/images/fileOpen.png
+SHA1-Digest: pxYXxlmRl/REtOFW/YVtl4Av024=
+
+Name: org/jhotdraw/draw/DefaultDrawingEditor$1.class
+SHA1-Digest: a8fOkLLptD6HNsfDmfWdhPBzIwM=
+
+Name: org/jhotdraw/draw/tool/TextAreaCreationTool$1.class
+SHA1-Digest: sCM5XgzF11MeU5J/XkA+NwUnBGs=
+
+Name: ch/randelshofer/quaqua/filechooser/FileRenderer$1.class
+SHA1-Digest: AtvNrsBs5NXmn/MDuDtuIlUxmS8=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit.class
+SHA1-Digest: VOeKBWHU8jQWBZgi7KdiPTFJU6s=
+
+Name: ch/randelshofer/quaqua/JBrowser$BrowserCellRendererWrapper.class
+SHA1-Digest: EyI/yuH75qvkxvVfZVRauPv7rzM=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBChooser$1.class
+SHA1-Digest: 8mMAxYdg44A0tgMa/XmQDyjHV74=
+
+Name: org/jhotdraw/app/action/file/PrintFileAction$1.class
+SHA1-Digest: a8dvRzJIWEdh5rsUV09Aj7BtFLU=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/CompositeRule.cla
+ ss
+SHA1-Digest: f7FTsm63Y7TnSIiAH81kkOyOAx4=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel.clas
+ s
+SHA1-Digest: F2vfaCll7jLYCI2FvjnbkLgH0YI=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction.class
+SHA1-Digest: xSI4o5IfwZZaEZEiiKFk2lPMKyI=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$Alia
+ sNode.class
+SHA1-Digest: 0fpEUoTnJaU3uIPK5zx/er/wVEE=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory$MediumWeightPopup.clas
+ s
+SHA1-Digest: pjS++IfNhPwMLFTt+2t7QJikyqQ=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.png
+SHA1-Digest: Y+aJPmGZCeB1Caqkwbzac876EWY=
+
+Name: net/n3/nanoxml/XMLUtil.class
+SHA1-Digest: tUXg2WI2VkPJ+qgSweQ3+5Hlxto=
+
+Name: org/jhotdraw/gui/URIChooser.class
+SHA1-Digest: UxrEFNcYX9xOZ1X9NI0d75/5xfc=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$QuaquaTreeCellEditor.class
+SHA1-Digest: 1gN9a2coQYZdAYCvYBbCRmQD0NE=
+
+Name: ch/randelshofer/quaqua/images/Browser.sizeHandleIcon.png
+SHA1-Digest: FSRYmtZVXTqMp3pJsACIdPtJfwU=
+
+Name: org/jhotdraw/undo/images/editUndo.png
+SHA1-Digest: U3KtHWEacNeJKwyvIuVdca0qmwY=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.vertical.small.png
+SHA1-Digest: OmtHAJDtBgKF9rvVJdXeUmbTABU=
+
+Name: ch/randelshofer/quaqua/images/FileChooser.homeFolderIcon.png
+SHA1-Digest: 78mbfcUwak0PRnapIen3Qo3b+nw=
+
+Name: org/jhotdraw/app/action/file/ClearFileAction$1.class
+SHA1-Digest: WtaqveHFQEas2q7aSo3SXTTzA0c=
+
+Name: net/n3/nanoxml/XMLValidationException.class
+SHA1-Digest: l9Q3Aro2BXOgV97W1PzeZtfirAY=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/FilePreview$1.class
+SHA1-Digest: uSIm8wNe+J9ZvXB/QW8WjvHXohQ=
+
+Name: org/jhotdraw/draw/handle/BezierControlPointHandle$1.class
+SHA1-Digest: jZbriQtIZs/sD7HOn3GjxBcR8h8=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$FileChoo
+ serAncestorListener.class
+SHA1-Digest: rSOwWrgLJuLmS7eHlCKP+gL4m5E=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.ihThumb.png
+SHA1-Digest: 2RBWZSQCpxCF/Np8LH576eEwDps=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $QuaquaTabbedPaneLayout.class
+SHA1-Digest: xahWJayjrfpddw5CYxNcf9OrGDI=
+
+Name: ch/randelshofer/quaqua/SheetListener.class
+SHA1-Digest: 7IM+rWp+Fv/A51AX/ADZJN+b7cs=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorPalettesChooser$2.class
+SHA1-Digest: 0y3V0CCqdInJIxySL4Iq7MHuZjA=
+
+Name: ch/randelshofer/quaqua/ext/batik/i18n/LocalizableSupport.class
+SHA1-Digest: /Pb8DKIdRH2mt0Scvf+wCDVk36M=
+
+Name: ch/randelshofer/quaqua/util/Debug.class
+SHA1-Digest: St53Q2QBFfrgyloCWC3fgpex248=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingViewAction$1.class
+SHA1-Digest: BCKOLARJes7OQl7xd/cv9buO7GE=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$2.class
+SHA1-Digest: bioL3AMyoDWGcslYb6xo1U87rgI=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$1.cl
+ ass
+SHA1-Digest: nTAkB9y2ZSEGLcto5RYPMbahaAQ=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingEditorAction.class
+SHA1-Digest: 08gkg67PXJ8ZHJkQ1qHT4kHdJbc=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorPickerMagnifier.
+ png
+SHA1-Digest: THrlClKT5nMdMTPGMthwebuAQe4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/Proper
+ tyUtil.class
+SHA1-Digest: 4AgOaW85vSNspPdTFFOUvrDNHu4=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Browser.disclosureIcons.png
+SHA1-Digest: P+XbTH5Zt6yUhwKVcZ5UuLAnFOM=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory$LightWeightPopup.class
+SHA1-Digest: jkwwD0jWE9WFiz4D+L8iUHXArIw=
+
+Name: ch/randelshofer/quaqua/osx/OSXSheetSupport.class
+SHA1-Digest: yaJVHvEAV2YqDyuAVwGd/bKBamA=
+
+Name: ch/randelshofer/quaqua/QuaquaPasswordView.class
+SHA1-Digest: GR73FUnO04uZ1k0D07+TLbpdqQA=
+
+Name: ch/randelshofer/quaqua/BasicBrowserUI$BrowserTransferHandler.cla
+ ss
+SHA1-Digest: HOVPhTIESfKXvktUA1l9+nI7+Dg=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.vert
+ ical.mini.png
+SHA1-Digest: gbWySDoYCw9U+PX+vTv7xL+nqKs=
+
+Name: org/jhotdraw/geom/QuadTree.class
+SHA1-Digest: JqM8BKakuY973+LUn74AE89yZ38=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua14JaguarTabbedPaneUI$TabSele
+ ctionHandler.class
+SHA1-Digest: 0UrT9GBszrKRlqxxhvQrhL8flg8=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI$1.class
+SHA1-Digest: k0PSaUV2gXXLz4TZIXQJnyTleQ8=
+
+Name: org/jhotdraw/draw/QuadTreeDrawing$QuadTreeEventHandler.class
+SHA1-Digest: HSdBZlMnWRZb2G5rM8xpoN7BKvQ=
+
+Name: ch/randelshofer/quaqua/QuaquaEditorKit$VerticalAction.class
+SHA1-Digest: LlmuFT31aMwT7y8qK3KG2PIHYVo=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabTop.I.png
+SHA1-Digest: vMuE1EHZZ96biwUlkPtZ7ck71T8=
+
+Name: ch/randelshofer/quaqua/QuaquaComboPopup.class
+SHA1-Digest: cLrAe2G/KDN1o7QQXkLxGq1RE4s=
+
+Name: org/jhotdraw/draw/action/images/createArrow.png
+SHA1-Digest: v4aU9k12ErLs0Xkd7UXmSXqoUV0=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$5.class
+SHA1-Digest: TqKMLv0iiSAiPoooL3L7Z1p8NNw=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker$2.class
+SHA1-Digest: Xu1gPL+reOz+ZXiUYytciohSMA0=
+
+Name: org/jhotdraw/draw/action/BringToFrontAction.class
+SHA1-Digest: vlH5SWoYHqEQ/RnHLiu/hakXLRA=
+
+Name: org/jhotdraw/app/osx/OSXAdapter$3.class
+SHA1-Digest: cSacVYz52/rQl7Fhfaeyw1O/TS8=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.cellBorders.png
+SHA1-Digest: NgktS94mE/+zbeUk6jTMqOZUd/U=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxCellRenderer.class
+SHA1-Digest: Rqa3SAqwqtjp8oS57aPXi4fteDM=
+
+Name: ch/randelshofer/quaqua/QuaquaDragRecognitionSupport.class
+SHA1-Digest: iebZn4B+aeVc0nNIFZnvnODmvYQ=
+
+Name: ch/randelshofer/quaqua/images/Slider.eastThumbs.png
+SHA1-Digest: jlDGltddkdE0AMlI1+NdhuUGvZk=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$QuaquaButtonAreaLayout
+ .class
+SHA1-Digest: 69Tzw2uQ2J5wCxyeBc4tcCmxrwY=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingEditorAction$EventHandle
+ r.class
+SHA1-Digest: a1zOWpucbH9R0uQPDfSsK8yO7x4=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignGridSmall.png.mno
+SHA1-Digest: IpO5IcthFUKQf4ron3UHKgCbWJE=
+
+Name: ch/randelshofer/quaqua/images/Frame.maximizeIcons.png
+SHA1-Digest: 47hfE3SVPsTLzeywdx89P0F0RXs=
+
+Name: org/jhotdraw/draw/io/TextInputFormat.class
+SHA1-Digest: hVpbpG7JrkTPr4kB1GwEAsJC2co=
+
+Name: org/jhotdraw/draw/action/MoveAction.class
+SHA1-Digest: gqvav5q9G2tbfFUw16Fuaf27NZc=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$EastHandle.class
+SHA1-Digest: PcPT9rVYcd5KWgcsqJzpCNK4lf4=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $FocusHandler.class
+SHA1-Digest: chgN30F6VHYafSX51os5xHNSWMU=
+
+Name: org/jhotdraw/draw/action/images/_notes/editCopy.png.mno
+SHA1-Digest: 9J5XcuKXv5xRrnFLNmWd6b/1p+8=
+
+Name: org/jhotdraw/draw/handle/AbstractRotateHandle.class
+SHA1-Digest: SvMUll4hXWqmo1VrAh8ftvAzaRk=
+
+Name: org/jhotdraw/draw/action/images/_notes/createText.png.mno
+SHA1-Digest: j1QMc74mFOWNfFosfpiS9B31giU=
+
+Name: org/jhotdraw/draw/action/images/_notes/filePrint.png.mno
+SHA1-Digest: hF5qPwGCLg1xGCjywW/4OLWSdt4=
+
+Name: ch/randelshofer/quaqua/leopard/images/FileView.computerIcon.png
+SHA1-Digest: 9VvkNScOnFKPuNhGZsUhPs9b5IU=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollBarUI$QuaquaArrowButtonListen
+ er.class
+SHA1-Digest: mzgSQHd/k3EC+o8W9VscU1cfTZA=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.ver
+ tical.small.png
+SHA1-Digest: cflttOAb2dqBTy5/tGhsfpiW4lI=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.openIcon.png
+SHA1-Digest: Nx/HrKCHiti5l00P+91p9MjbU8g=
+
+Name: net/n3/nanoxml/ValidatorPlugin.class
+SHA1-Digest: oUnQdSPF1JdIGF1jqaWFPWEn+DA=
+
+Name: ch/randelshofer/quaqua/JBrowserViewport.class
+SHA1-Digest: HuQAzK2mrlQykphDP6+OzfVvwhk=
+
+Name: ch/randelshofer/quaqua/Quaqua14ColorChooserUI$PropertyHandler.cl
+ ass
+SHA1-Digest: 6D6Hg9lfQhkJe86PMD6stTLN3Jc=
+
+Name: org/jhotdraw/app/AbstractView.class
+SHA1-Digest: Izu81fA4TYCUd/ITnQmeJ3Wf+IU=
+
+Name: org/jhotdraw/draw/action/images/_notes/createRectangle.png.mno
+SHA1-Digest: IQKraJ2dXg1BZRix/rx7Ss8f2ts=
+
+Name: org/jhotdraw/draw/action/MoveAction$North.class
+SHA1-Digest: 7RZln+jXEYPD3rLF+lvcDBO0he8=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFDi
+ rectory.class
+SHA1-Digest: ux2/ZVRRMbF7kwj2gAIAons74Kw=
+
+Name: org/jhotdraw/draw/action/images/moveUp.png
+SHA1-Digest: RifZe4ToPUsElIJBb7QqTsWndb4=
+
+Name: org/jhotdraw/draw/TriangleFigure$1.class
+SHA1-Digest: aOqs4TglA/fAoFQryUMEYGmnPg4=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$3.class
+SHA1-Digest: EQ+jkl13/Uj2RAD5o7lh2So+sjI=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$Alia
+ sNode$1.class
+SHA1-Digest: jegLzao+C/tpbIcKKqCNhqbLFtk=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Direct
+ oryComboBoxRenderer.class
+SHA1-Digest: LUVhHGECan+qjfofUopSx9Fa/rM=
+
+Name: ch/randelshofer/quaqua/QuaquaSliderUI$Handler.class
+SHA1-Digest: nsdON6YIKI2u5qi0vUkHIA2+Mow=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$5.class
+SHA1-Digest: ATXZDuhTQMg/Q8XEvX9cYFdnReY=
+
+Name: ch/randelshofer/quaqua/util/SwingWorker$ThreadVar.class
+SHA1-Digest: Oo//HZWYBRxrtWkiMNd0AC8ETgc=
+
+Name: org/jhotdraw/draw/action/GroupAction$1.class
+SHA1-Digest: G2dXO8ooqcib38VP9vOl7VpP/AI=
+
+Name: ch/randelshofer/quaqua/JBrowserViewport$1.class
+SHA1-Digest: Y4fkQ27LXQpqwpw51CMhBrCvkiQ=
+
+Name: org/jhotdraw/app/action/app/OpenApplicationFileAction.class
+SHA1-Digest: ivi7wjrKzyt2t+PrTbJAB6WO1BE=
+
+Name: org/jhotdraw/draw/action/ApplyAttributesAction.class
+SHA1-Digest: WHvcJ9KcBqTWKDlvOmxq75ctFc8=
+
+Name: ch/randelshofer/quaqua/BasicBrowserUI.class
+SHA1-Digest: 5MaUwaaljtmlnVn+7g7wNMCO7f8=
+
+Name: ch/randelshofer/quaqua/util/ScriptSystem$Spec.class
+SHA1-Digest: Tb6Aa6QzVXaWQoQHF70K2atjwqk=
+
+Name: org/jhotdraw/draw/action/images/_notes/editRedo.png.mno
+SHA1-Digest: HM5jJY7RkKP4MoqcEebKLrhB+qQ=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.downArrow.png
+SHA1-Digest: YfFCesGiSksUk1nj3cd6GgXva2c=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorPalettesIcons.pn
+ g
+SHA1-Digest: RpD2TBeKKq+Rbxf9R4mLrqiHjD0=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/AvoidTilingHintKey.clas
+ s
+SHA1-Digest: pxQNRDMMfwCSoBWPWlxYHScR0so=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Filter
+ ComboBoxRenderer.class
+SHA1-Digest: 5PcVzj/O30nuc8AHoXZiJIpRPyo=
+
+Name: ch/randelshofer/quaqua/tiger/images/MenuBar.border.png
+SHA1-Digest: 7sTSclcsItZD6dbU0iI+rQpstrc=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarBorder$1.class
+SHA1-Digest: mjUNJXA6tAjr7WiaRIRtTISSN/o=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveToBack.png.mno
+SHA1-Digest: QA/I4P1nhGiDD2yf4Ycw6GnlS8Q=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.openIcon.png
+SHA1-Digest: X+GZnH/p8AWJbl89wKKesR7Mwjw=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Browse
+ rSelectionListener.class
+SHA1-Digest: va+Vl2VssHzsi0zz2g0ZiNHPQXE=
+
+Name: org/jhotdraw/draw/event/ToolEvent.class
+SHA1-Digest: OH6cUA12QZiSsDKT/QRwsVxr1S0=
+
+Name: ch/randelshofer/quaqua/tiger/Quaqua15TigerCrossPlatformLookAndFe
+ el.class
+SHA1-Digest: ILwxquW+K9DcHcRN6nD+feQcPoE=
+
+Name: org/jhotdraw/draw/DrawingEditorProxy.class
+SHA1-Digest: 6czx/aAo/sKqyGvd0eF/puUG+5w=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeJoin.png
+SHA1-Digest: WuyGoORhf5SevynD6qrhrmhkYZQ=
+
+Name: org/jhotdraw/draw/action/images/_notes/createPolygon.png.mno
+SHA1-Digest: 0cdyOpLL52QZzQgt3Kts6Q2DByk=
+
+Name: ch/randelshofer/quaqua/util/Fonts.class
+SHA1-Digest: 0oAXNGe+b6j2/c8vCS38J9QfJyU=
+
+Name: org/jhotdraw/gui/JSheet$6.class
+SHA1-Digest: IEXoEfsMgLPzy/84tDQFDxnB+OA=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua15JaguarLookAndFeel.class
+SHA1-Digest: wZF2n3U7KBu2shxKoN1I6Y27FDY=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignGrid.png.mno
+SHA1-Digest: fEYWcpzvt3rMRM4S7pAits3CPeU=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBChooser.class
+SHA1-Digest: hCNOuAxKIGh7laQtGWj1cP6vxKQ=
+
+Name: ch/randelshofer/quaqua/images/Slider.westThumbs.small.png
+SHA1-Digest: Lb+o6Kswf4PmTEPjmMsULiDryRE=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$1ToolBarDialog$1.class
+SHA1-Digest: SNvkjFCxABXEFirSnFZ1W+1+TnI=
+
+Name: org/jhotdraw/app/action/app/AboutAction.class
+SHA1-Digest: jqxFQipvXAn8E1Gg4lz714pK8RQ=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $ItemHandler.class
+SHA1-Digest: F1Qc3Of4/hMxZI8PAWNNVNOa4tw=
+
+Name: ch/randelshofer/quaqua/colorchooser/Crayons.class
+SHA1-Digest: Cbyya4G+457ETGKKm0BCnJLLOD0=
+
+Name: ch/randelshofer/quaqua/panther/images/Panel.texture.png
+SHA1-Digest: AxdGrZ+pKcyPg8yBswLGRSyfRAg=
+
+Name: net/n3/nanoxml/IXMLElement.class
+SHA1-Digest: UN/Btb17qL8YatStOBZIZleJhwE=
+
+Name: org/jhotdraw/draw/tool/Tool.class
+SHA1-Digest: mtcKhQ+wg4tjx1N/zrbjBDhUErk=
+
+Name: org/jhotdraw/gui/fontchooser/DefaultFontChooserModel.class
+SHA1-Digest: vrY6aIBlvfO3e2h617OdZ5VxxOE=
+
+Name: ch/randelshofer/quaqua/filechooser/QuaquaFileSystemView.class
+SHA1-Digest: ZrphV18+HxOVe43KRNgWibHab7g=
+
+Name: org/jhotdraw/draw/handle/FontSizeHandle$1.class
+SHA1-Digest: CiYQzgqN4ja/DSZSeL8uhHfkxtc=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory$1.class
+SHA1-Digest: 31znBpJbF9MEB77ISPL+ZiV+E4g=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$3$1.class
+SHA1-Digest: 61EEjFud8blYKczyDrQMvxoCoNw=
+
+Name: ch/randelshofer/quaqua/BrowserUI.class
+SHA1-Digest: SXidiX9hZba3AXkUylM+8dQkAfg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/renderable/PaintR
+ able.class
+SHA1-Digest: slzxMCX28N2npmUjvfM+IyR3eus=
+
+Name: org/jhotdraw/geom/BezierPath$Node.class
+SHA1-Digest: uQE6MQwWEORLVqDe8cyBkEqVx9U=
+
+Name: org/jhotdraw/draw/action/images/_notes/editUndo.png.mno
+SHA1-Digest: +5hJdBlFZtqwEvWhFyBp1uCWiBA=
+
+Name: ch/randelshofer/quaqua/QuaquaTextCursorHandler.class
+SHA1-Digest: Ku9kKmKhUmOwpOSfxSKKwVPpyhA=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneUI.class
+SHA1-Digest: ob4PiEHalvdNiWwyXM0xXpBCg/8=
+
+Name: ch/randelshofer/quaqua/QuaquaButtonUI.class
+SHA1-Digest: Zyp0/SCsXiIDxnXShTYOomJn8PE=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI.class
+SHA1-Digest: U/WkC340d9ehkHVYv0Uhya00efI=
+
+Name: org/jhotdraw/io/Base64$InputStream.class
+SHA1-Digest: 9P1kFN03O5RjxfTFrEkagCj5GJI=
+
+Name: org/jhotdraw/draw/action/images/_notes/createLineConnection.png.
+ mno
+SHA1-Digest: 5Dy3vXbtyN1caOQ9Is92IKHFrWM=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$1.class
+SHA1-Digest: Wwuhj1M/gT62hR0cYUp4y9IfkyE=
+
+Name: org/jhotdraw/draw/action/images/alignEast.png
+SHA1-Digest: iZlefJkG2rT+mnk9ONJsPrVRnTk=
+
+Name: org/jhotdraw/undo/CompositeEdit.class
+SHA1-Digest: Z6l/WaIa1MNg32BoQrt/084LEOU=
+
+Name: net/n3/nanoxml/StdXMLParser.class
+SHA1-Digest: PCp7DSF+cXl2rCgu+VZA3l65LMg=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI.class
+SHA1-Digest: Mng33815ZAno2tnn1YeTj2HyPhQ=
+
+Name: ch/randelshofer/quaqua/border/BackgroundBorderUIResource.class
+SHA1-Digest: dr3H1v+2Z0KnbHI384OXm/sJNCc=
+
+Name: ch/randelshofer/quaqua/Quaqua14LayoutStyle.class
+SHA1-Digest: 3MawOBuDFXTwGITxqsMB1AE0oMQ=
+
+Name: ch/randelshofer/quaqua/tiger/Quaqua14TigerLookAndFeel.class
+SHA1-Digest: d2/CtOPNcIkc2/ZBkhB/+nzXgNo=
+
+Name: org/jhotdraw/draw/event/CompositeFigureListener.class
+SHA1-Digest: 87viGFoaeq0tqam6bPLIcMpw+bg=
+
+Name: org/jhotdraw/app/action/edit/PasteAction.class
+SHA1-Digest: nc9RPBz2m0qpPBv8qzZUQP7x8Ng=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$InCo
+ mpositeContext_INT_PACK.class
+SHA1-Digest: xxWmLImTQzPcrRIUo9CH15s4Pck=
+
+Name: ch/randelshofer/quaqua/QuaquaSliderUI.class
+SHA1-Digest: lSKohBrjH1ZZGh1O+jq8JiQGpdk=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.iconifyIcons.sm
+ all.png
+SHA1-Digest: kbiRL96G1xDfrok2ph7oVK9MrA8=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFillColor.png.mn
+ o
+SHA1-Digest: AeD7pjLrZxZPVzZ/HTZfZ+vzkHQ=
+
+Name: ch/randelshofer/quaqua/filechooser/FileTransferHandler.class
+SHA1-Digest: DZLWSgA0rf8JHUXHMOhuHcZ5jCA=
+
+Name: org/jhotdraw/app/action/AbstractViewAction$1.class
+SHA1-Digest: /Y+1FDDm1yENeyhZzJeTbz1DjFE=
+
+Name: org/jhotdraw/app/action/app/AbstractPreferencesAction.class
+SHA1-Digest: ZiHYuptqE3cMg3NEDzNIJAi8zSo=
+
+Name: org/jhotdraw/geom/QuadTree$QuadNode.class
+SHA1-Digest: dGb3FrYOg4KFW80cfuCTbezqhAE=
+
+Name: ch/randelshofer/quaqua/leopard/Quaqua14LeopardCrossPlatformLookA
+ ndFeel.class
+SHA1-Digest: EQOt3q6pnG6vEQMj3AJoBdA92/8=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Over
+ CompositeContext_NA.class
+SHA1-Digest: weE6Op2ZQulA8yQiYYnBG/wEXIA=
+
+Name: org/jhotdraw/app/action/edit/UndoAction.class
+SHA1-Digest: qQKNDpfSwJ+FG2YDGumfGF4YJ8o=
+
+Name: ch/randelshofer/quaqua/QuaquaBrowserUI.class
+SHA1-Digest: pJVq/sJMsSR4G1WGVxugA5PY0Ho=
+
+Name: ch/randelshofer/quaqua/icon/ShiftedIcon.class
+SHA1-Digest: GarIj+UccAQ8wo27PL1Jih1KKAg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/Memory
+ CacheSeekableStream.class
+SHA1-Digest: 6049EZBNIc2/mEzJz6WqRq5Iu40=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeColor.png.
+ mno
+SHA1-Digest: z7h+Dv+IzGwMcofX1ce7VnodX08=
+
+Name: org/jhotdraw/app/action/AbstractViewAction$2.class
+SHA1-Digest: IPWab5HkcRZAYs42O4u8Kryj+hA=
+
+Name: org/jhotdraw/draw/locator/FontSizeLocator.class
+SHA1-Digest: O6SaIVCycO4JHzfYE0f8M5tGchE=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$NewFol
+ derAction.class
+SHA1-Digest: VgIsK4zzSlozKCCrjpnur3KlFI4=
+
+Name: ch/randelshofer/quaqua/QuaquaRadioButtonUI$PropertyChangeHandler
+ .class
+SHA1-Digest: 7emLcZJz+/Gkdhr3rySg6vGcyLE=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.sideBar.icons.pn
+ g
+SHA1-Digest: fu/51H8ZjA6KYVts1EzmhF0lGXo=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$3.class
+SHA1-Digest: 0Awb/betc/YjMRRFpE8XhM21aJM=
+
+Name: org/jhotdraw/draw/action/images/selectionGroup.png
+SHA1-Digest: 1BYqecceI9pqr5Dwa7n9EEP0u10=
+
+Name: ch/randelshofer/quaqua/jaguar/images/MenuBar.texture.png
+SHA1-Digest: iNoksep6s0ojIgc7IeR9voPu4gw=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.leafIcon.png
+SHA1-Digest: V8W8ZbPYhlqvVJKIzp+mP4Pf1R0=
+
+Name: org/jhotdraw/xml/NanoXMLDOMOutput.class
+SHA1-Digest: hzihaDaPh6WhsrF/myl5KVrTSa4=
+
+Name: org/jhotdraw/draw/action/AlignAction$East.class
+SHA1-Digest: gR7O5GMIpuuxp6Ub2ULpeWPR1U0=
+
+Name: ch/randelshofer/quaqua/images/Frame.vTitlePane.png
+SHA1-Digest: mdnk2fwSV74NLlDJDgMcpRjn9fY=
+
+Name: ch/randelshofer/quaqua/colorchooser/PaletteEntryCellRenderer.cla
+ ss
+SHA1-Digest: 1leCGW+LJYXB09Kdzc6RgTEmiDk=
+
+Name: org/jhotdraw/app/action/file/SaveFileAction$2.class
+SHA1-Digest: 2oGB1vZBpCqBvj31iD7v106FaNQ=
+
+Name: ch/randelshofer/quaqua/QuaquaViewportUI.class
+SHA1-Digest: bBIfqDmkYLsky+1hNFkwuCUFs1o=
+
+Name: org/jhotdraw/gui/PlacardScrollPaneLayout$UIResource.class
+SHA1-Digest: yzJDdjnMSYnnyUIOnn5zIv9fgMQ=
+
+Name: ch/randelshofer/quaqua/DefaultBrowserCellRenderer.class
+SHA1-Digest: tvlmffR7KvvfHdW4SxJfFVF5QD8=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontItalic_de.pn
+ g.mno
+SHA1-Digest: K5JUWUIGuQCTL1PLG41+2UU3TZw=
+
+Name: ch/randelshofer/quaqua/images/CheckBox.small.icons.png
+SHA1-Digest: 9I2n4hl7nfF6vsYX21J2hK5pS6A=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titleBar.png
+SHA1-Digest: j3C/Xv+rOJb/uMBzq1KoGvqD0qg=
+
+Name: ch/randelshofer/quaqua/images/MenuItem.checkIcon.png
+SHA1-Digest: FUDmKJMPQ5dT9TLzr29gBIfOOsk=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barLeft.png
+SHA1-Digest: nHzDNj5dBqNpjxArRgbccEgEbzE=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$1.class
+SHA1-Digest: V2y3jLL+wh6vdRrG5TS7KKwF+PY=
+
+Name: org/jhotdraw/app/AbstractApplicationModel.class
+SHA1-Digest: ekVR++wBzkhCqQxoxFYtfeNPCFs=
+
+Name: ch/randelshofer/quaqua/filechooser/SubtreeTreeModel.class
+SHA1-Digest: r+bXjDg5N2CmZf3Asd8dTHOmI3o=
+
+Name: ch/randelshofer/quaqua/color/TextureColor.class
+SHA1-Digest: m1vuEwp+vYi8ZTyBQ/8YbL57rHk=
+
+Name: ch/randelshofer/quaqua/util/Images.class
+SHA1-Digest: +nABtqcNfEnjFChgY/sdLwmV3Rk=
+
+Name: net/n3/nanoxml/XMLException.class
+SHA1-Digest: U22xQSW2oGLyW5585HhIbSzlRk8=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$SouthWestHandle.clas
+ s
+SHA1-Digest: Th1vC4MHAEtFG6a8h3A6j4h0oPI=
+
+Name: org/jhotdraw/draw/DrawingEditor.class
+SHA1-Digest: /72FqVnpz7UNKDOgSsTwP+h0ycI=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.icons.png
+SHA1-Digest: Ssy9bTKxRL3nWvIi/iZlt4xbQR4=
+
+Name: ch/randelshofer/quaqua/ext/base64/Base64$InputStream.class
+SHA1-Digest: UfGcxxTlGsjwGpmdGYmpsn8uesU=
+
+Name: ch/randelshofer/quaqua/QuaquaDragRecognitionSupport$BeforeDrag.c
+ lass
+SHA1-Digest: b6kPcrWQegHq2VR5gRnNvqDSbKw=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Over
+ CompositeContext_INT_PACK_UNPRE.class
+SHA1-Digest: jGwPCK9aBto8CuLl14JkjUMLMUo=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Node
+ .class
+SHA1-Digest: u8Rbbrg9cZq8qY9anpTNlW54gEg=
+
+Name: ch/randelshofer/quaqua/colorchooser/Crayons$Crayon.class
+SHA1-Digest: MSjX3z0+3JbZQPwuoExwGp1m9DU=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$SaveTe
+ xtDocumentListener$1.class
+SHA1-Digest: q7C43H7zJzLdiDdXfyBEkOWQFOk=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Sideba
+ rRenderer$1.class
+SHA1-Digest: scp/4uPMKavS3FkcclffMGCfnCI=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser.class
+SHA1-Digest: PDRdso+tsvpOC2IsfEIU39R7y5k=
+
+Name: org/jhotdraw/app/AbstractApplication$OpenRecentMenuHandler.class
+SHA1-Digest: 2dA6eaQokEkFSYQvXJ4DIBHXRQg=
+
+Name: org/jhotdraw/draw/action/images/_notes/createEllipse.png.mno
+SHA1-Digest: uD1dx6L7g6mx/y2Pp6lgJyg+Ez4=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.closeIcons.png
+SHA1-Digest: lL0bf242u5TmES4HZ/DAtIOglH0=
+
+Name: ch/randelshofer/quaqua/QuaquaDropTargetListener.class
+SHA1-Digest: cEt/yRJDkuj/p1mtEgTuIGc0tdQ=
+
+Name: ch/randelshofer/quaqua/filechooser/FileInfo.class
+SHA1-Digest: puUepbmuS41Mw7Jic4InKM7Tss0=
+
+Name: ch/randelshofer/quaqua/ext/base64/Base64$OutputStream.class
+SHA1-Digest: gYg83CLiLC+FkaLPL5liqubRQfk=
+
+Name: org/jhotdraw/draw/tool/DefaultDragTracker.class
+SHA1-Digest: y89lNen8FZALD8qzM6KPNm5gLtI=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI.class
+SHA1-Digest: 9MFfbaMUd6ASIDDdX04pHUI6c/w=
+
+Name: org/jhotdraw/app/DefaultApplicationModel.class
+SHA1-Digest: /4sH18uuAf++3InVMR4xEKXBHws=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel.clas
+ s
+SHA1-Digest: o/vpOcNnbdGvQBE8pxwMLH9X0hQ=
+
+Name: ch/randelshofer/quaqua/QuaquaArrowButton.class
+SHA1-Digest: vTemCZxDn/bEEnJqIrRxeKqYsmc=
+
+Name: org/jhotdraw/draw/action/DrawingAttributeAction$1.class
+SHA1-Digest: OJ9bZFHdsXIkeuB/j58cWUMICtQ=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $PageDownAction.class
+SHA1-Digest: R0xB+1Qt3l6u17fopoyeBHOi4cI=
+
+Name: ch/randelshofer/quaqua/JBrowser$1.class
+SHA1-Digest: BgqwnUUM203wU9rNAQGoiqB2p8w=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$1.class
+SHA1-Digest: Fdr8u2MQ0tJcRzLCbkuDJ9ffGWo=
+
+Name: ch/randelshofer/quaqua/leopard/images/FileView.hardDriveIcon.png
+SHA1-Digest: 5IMKsW0Nqle7q8AAhMxlOQu6SRg=
+
+Name: ch/randelshofer/quaqua/images/OptionPane.warningIcon.png
+SHA1-Digest: W/b+tdeQtyuIHKF2SdYQi1hC4UA=
+
+Name: ch/randelshofer/quaqua/images/TextField.small.searchBorders.png
+SHA1-Digest: P079487hNqA9h910/eOFJqOCNw8=
+
+Name: ch/randelshofer/quaqua/VisuallyLayoutable.class
+SHA1-Digest: VAr5D7uWwBU14TzgPwAETqg3TL0=
+
+Name: org/jhotdraw/app/Labels_de.properties
+SHA1-Digest: PcMXHYw4uU0gKLqTDoma5IZduE4=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.leafIcon.png
+SHA1-Digest: ynpD/gnwMdYRghpqCJD629F9uVA=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeDashes.png
+SHA1-Digest: kP+Dlt6l3GrFKjGMOsvPrKRYqpw=
+
+Name: ch/randelshofer/quaqua/colorchooser/Generic CMYK Profile.icc
+SHA1-Digest: 53B8JLGHWw1yVOu885F/kfWe1ng=
+
+Name: ch/randelshofer/quaqua/leopard/images/FileView.fileIcon.png
+SHA1-Digest: ynpD/gnwMdYRghpqCJD629F9uVA=
+
+Name: ch/randelshofer/quaqua/VisualMargin.class
+SHA1-Digest: 5h5XKIFRUA/Frx7JG4c9Jiv8Eos=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeHomeAction.class
+SHA1-Digest: tCg28CNRiwiwGsON5sGRmkmlIfI=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$RootPropertyHandler.cla
+ ss
+SHA1-Digest: 9huHkeRHmBBiskIBM0bjwCCwZIs=
+
+Name: ch/randelshofer/quaqua/QuaquaTextPaneUI.class
+SHA1-Digest: 2gI5AWXE1fr4eDyRwRLia6IID0I=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Browse
+ rSelectionListener.class
+SHA1-Digest: mS3M+hcOgs043cpeY0oGKU2G6hM=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneBorder.class
+SHA1-Digest: 2QfaIWSVDjmYYlBoj45OlUeb8vU=
+
+Name: org/jhotdraw/samples/draw/DrawView$3.class
+SHA1-Digest: 2FKEBTZQyLdXLAzlj1hKZsu6V6U=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Any2sRGB
+ Red.class
+SHA1-Digest: GsbZor9V2uHb2nTX7OjKtQwpnVM=
+
+Name: org/jhotdraw/draw/action/images/attributeFontItalic.png
+SHA1-Digest: aY6GQIaytCeeA2O8G2vDxp2gII8=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollBarUI.class
+SHA1-Digest: s5w2aj8JDF2uJ3xlMBqizBpeYjE=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Indent
+ Icon.class
+SHA1-Digest: nvINTuqrLsQBGUAj0Hj2P4D6y9Y=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorPalettesChooser.class
+SHA1-Digest: t1iO3aYJWxcJl3kM1aetL5sRnY0=
+
+Name: org/jhotdraw/draw/action/ZoomAction.class
+SHA1-Digest: hO/slNX9J82a+MJ5l5pU+0jPN9w=
+
+Name: ch/randelshofer/quaqua/images/Frame.closeIcons.mini.png
+SHA1-Digest: OcARgVFzA3y8E6VX6sRlUWhXMnU=
+
+Name: org/jhotdraw/draw/RotationDirection.class
+SHA1-Digest: po/RwsXuW4jZmWKNkGpoB0Tr+cQ=
+
+Name: org/jhotdraw/draw/action/images/_notes/popupIcon.png.mno
+SHA1-Digest: k2CtkSJHndntZxJNhPtaKrrr61Q=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Double
+ ClickListener.class
+SHA1-Digest: 81X4jVmXg208D5Z86hGAhGeQOHw=
+
+Name: org/jhotdraw/draw/action/images/attribute.color.noColor.png
+SHA1-Digest: aCEExSdJ9mdQ7+bk2BR2W/3+7Cg=
+
+Name: ch/randelshofer/quaqua/border/ImageBevelBorder$UIResource.class
+SHA1-Digest: AGY/xglfvgJJNkP4JtQeeJOw2/s=
+
+Name: org/jhotdraw/draw/action/SendToBackAction.class
+SHA1-Digest: EeGYF361G7+8QjJdffBzcx3rS/Y=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorSlidersIcons.png
+SHA1-Digest: QTfVZshQNo8ZzUUWtaYXJMJ8se4=
+
+Name: ch/randelshofer/quaqua/icon/MultiIcon.class
+SHA1-Digest: aYhieR3qLlg0j44aP/tx39EHPlo=
+
+Name: ch/randelshofer/quaqua/Labels_fr.properties
+SHA1-Digest: V9khbi9UNbcrV29A/65Hemf+DKA=
+
+Name: ch/randelshofer/quaqua/QuaquaTextCursorHandler$QuaquaCursor.clas
+ s
+SHA1-Digest: B1bwF5UEoRR665nBrC4NwRf/ZY4=
+
+Name: org/jhotdraw/app/action/edit/UndoAction$1.class
+SHA1-Digest: 9kY5Bus13I3Fph8TOB2x5qC7dnI=
+
+Name: org/jhotdraw/gui/JSheet.class
+SHA1-Digest: laC9cO1VzfY/R4D2zB0O2aVoQjk=
+
+Name: org/jhotdraw/app/action/app/OpenApplicationFileAction$1.class
+SHA1-Digest: ybwEr6n6T0ySllUzZFJA6P5n64A=
+
+Name: org/jhotdraw/beans/AbstractBean.class
+SHA1-Digest: tE5wVnlEqj6nBZquuNl7HIy8qig=
+
+Name: net/n3/nanoxml/XMLParseException.class
+SHA1-Digest: KInQPMt/HcgvKuk0124l4EbYNpc=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeType.png.m
+ no
+SHA1-Digest: nCl0oibX3eQBrBNOtr8iaWLmy/E=
+
+Name: org/jhotdraw/draw/connector/ChopRectangleConnector$1.class
+SHA1-Digest: a4PG3+TX6uX2hqE7UExI7Ha6m60=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderUI$QuaquaTrackLis
+ tener.class
+SHA1-Digest: Ee7EhaBGvUAtmn6cbWe1dJ+zWMY=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$File
+ Item.class
+SHA1-Digest: +HosAbXJ+E/6gCUtZ/hg1XzKMfI=
+
+Name: org/jhotdraw/draw/RoundRectangleFigure.class
+SHA1-Digest: B0ag0voxSv3CHlZx/xc0350NkQY=
+
+Name: org/jhotdraw/draw/DefaultDrawingView.class
+SHA1-Digest: Tph8JwFR9HyFCsM6S4Qe4xd6kbw=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$1ToolBarDialog.class
+SHA1-Digest: THQ1lO9OeVQALmRfylKzZSp4UiQ=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$1.clas
+ s
+SHA1-Digest: BI/P0uvNEtDmPda1v+Yzz4jQp44=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI.class
+SHA1-Digest: 6byNIxy/4EVsarfb7gjHQfd2acM=
+
+Name: org/jhotdraw/app/AbstractApplication$1.class
+SHA1-Digest: 9BwtZSylr0UqmsMzIK6kAKSkhoo=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$SaveTe
+ xtDocumentListener.class
+SHA1-Digest: f/Hq/SRmnSCUKelQmBYvhSwyl6Q=
+
+Name: org/jhotdraw/draw/action/images/selectionTool.png
+SHA1-Digest: D/7Jf56lfa7WjSorxdFIyicvozo=
+
+Name: ch/randelshofer/quaqua/icon/SliderThumbIcon.class
+SHA1-Digest: Vi+1JvFhLPQBLdUjk0oHa/QBczU=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderUI.class
+SHA1-Digest: Vc/EfuFDX5IEoLBFoHl5p4ka7q0=
+
+Name: org/jhotdraw/draw/action/FontChooserHandler$1.class
+SHA1-Digest: KZ7hVnIH5sBCJeCW8caa0KaTVlg=
+
+Name: net/n3/nanoxml/XMLWriter.class
+SHA1-Digest: fFEIMN7ZPorOvGv32LfEFxniSzk=
+
+Name: org/jhotdraw/draw/action/images/alignGrid.png
+SHA1-Digest: W3gC/d89T60o/ZcXd0KlvHl9qac=
+
+Name: ch/randelshofer/quaqua/util/SwingWorker$2.class
+SHA1-Digest: x7cr6pqdGQei0FFAj10AjfRjMVg=
+
+Name: org/jhotdraw/draw/text/FloatingTextArea$1.class
+SHA1-Digest: miNhNVXe+2ulfxi9550c38A4Ur0=
+
+Name: org/jhotdraw/geom/Geom.class
+SHA1-Digest: XJSRGXkpbN+EMmtV8Id6V/xPOHs=
+
+Name: ch/randelshofer/quaqua/images/RadioButton.focusRing.png
+SHA1-Digest: GZLT4ndVD1nGlXL2NRjeWR05iqI=
+
+Name: org/jhotdraw/app/PrintableView.class
+SHA1-Digest: HSKMHtU+Y73pT+IaaijDuZ9dY9E=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Ligh
+ tenCompositeContext_INT_PACK.class
+SHA1-Digest: ct+MjAmjosRf8stlIcvvplAGwXY=
+
+Name: org/jhotdraw/draw/action/images/_notes/createLine.png.mno
+SHA1-Digest: VJD/gZbLAwIAENqZUz661tePgSo=
+
+Name: org/jhotdraw/draw/tool/DefaultHandleTracker.class
+SHA1-Digest: dMzp8gjOJns/tECEjPyOSFWTnCE=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $TabsComboBoxModel.class
+SHA1-Digest: KPA55b/fqDcDga4/N0ssj9vxBmY=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet$FormListener.cla
+ ss
+SHA1-Digest: DlomFh3vUSRUw1vCS8UcqKYTgFU=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Arit
+ hCompositeContext.class
+SHA1-Digest: TMbFj6V79A3/ZwVAACOQH5O8W2s=
+
+Name: org/jhotdraw/draw/handle/ConnectionEndHandle.class
+SHA1-Digest: 6FTn8nFwBYd/A/oxM7cf0cmeYoE=
+
+Name: org/jhotdraw/draw/print/DrawingPageable.class
+SHA1-Digest: XTZM9sm4venAXPAjfHQi+snWCz4=
+
+Name: org/jhotdraw/draw/AbstractAttributedDecoratedFigure.class
+SHA1-Digest: olpqbwRdTURcOVI4Y6qUO6RI4FY=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Filter
+ ComboBoxRenderer.class
+SHA1-Digest: bPzuGZ2HjjkaqG757dWqQ6Kuxq4=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$7.class
+SHA1-Digest: VQxRWV2U5KN++0iFnbD/542/VpA=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuPainterClient.class
+SHA1-Digest: lx1Qv+OtzuUo2V0nKXEYg2jxwRU=
+
+Name: org/jhotdraw/draw/action/images/attributesPick.png
+SHA1-Digest: D4ZyhS51GSLlmT5Z9U2+vqfY0mk=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.tableIcon.png
+SHA1-Digest: AvJ2lkCErNbW3jay2Eubtj0eggA=
+
+Name: net/n3/nanoxml/NonValidator.class
+SHA1-Digest: E03AiEG0QbI6ka4Yreb0nE3nGFE=
+
+Name: org/jhotdraw/gui/datatransfer/AWTClipboard.class
+SHA1-Digest: MsERT0Q5fGxfgpmKU7chJG3nyjc=
+
+Name: org/jhotdraw/geom/Bezier.class
+SHA1-Digest: fU6IVhc6U9Qn4vdtcezrtA7fJcY=
+
+Name: ch/randelshofer/quaqua/QuaquaSliderUI$QuaquaTrackListener.class
+SHA1-Digest: B543te9jtxv5esOu7AF6R/0/+1A=
+
+Name: org/jhotdraw/draw/LineFigure.class
+SHA1-Digest: J9tXOq3mFQ1iZ3aEW8oaDKqssZ4=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$ApproveS
+ electionAction.class
+SHA1-Digest: Uz2yl1pMHg2uj9nPs9CggjItUNk=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBColorSliderModel.class
+SHA1-Digest: KalSBYuePc9By5hYnpUtjP5a/lU=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$NorthEastHandle.class
+SHA1-Digest: a6axWcf4URJbIN0TsB1TeCjAVo0=
+
+Name: org/jhotdraw/gui/JSheet$1.class
+SHA1-Digest: itLAS9MnFx9XSAeullhCKuEXUug=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane.class
+SHA1-Digest: LImYAsSUane1M5aKOzwazwOpYRg=
+
+Name: org/jhotdraw/draw/action/DefaultAttributeAction$1.class
+SHA1-Digest: 7F5M2+cwBcHfyGeyXG30XwoVBRM=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.collapsedIcon.pn
+ g
+SHA1-Digest: dI/2ydSovUaD4je6ItYjfKkRq/4=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barRight.I.png
+SHA1-Digest: cqMbmUEUAZ82fCydxlWUJzDF18I=
+
+Name: ch/randelshofer/quaqua/osx/OSXClipboardTransferable.class
+SHA1-Digest: 7AjDot6Kmd3Ukz4LODP8lzCLz4k=
+
+Name: org/jhotdraw/draw/DefaultDrawingEditor$ToolHandler.class
+SHA1-Digest: hZxspof3sBsSSQkH/oZs/rRzZis=
+
+Name: org/jhotdraw/draw/action/images/attributeFontBold_de.png
+SHA1-Digest: cHKwM1ePo2GEyvNRreYc43CIqkk=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.vThumbTop.png
+SHA1-Digest: xzmTHsdyK+FgUhto+l1FfPW5qmk=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory$HeavyWeightPopup.class
+SHA1-Digest: ayqMLq0aLmhom34n6szK/9CK7Cs=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherTabbedPaneUI$Prope
+ rtyChangeHandler.class
+SHA1-Digest: fIE46Cb/NpVMA657IHqQdrJmR9A=
+
+Name: org/jhotdraw/draw/tool/BezierTool.class
+SHA1-Digest: xoTILa9Be8cD2bgdGE3QoRTkZKo=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/QuaquaLeopardFileChoo
+ serPanel.class
+SHA1-Digest: GyOe+V6FLt+pdQDN8240CbZa1d0=
+
+Name: ch/randelshofer/quaqua/icon/FrameButtonStateIcon.class
+SHA1-Digest: 0HL83kgDAyNd160kD3ZoBe7SYCo=
+
+Name: ch/randelshofer/quaqua/images/Spinner.south.png
+SHA1-Digest: uXuHrvHfDzm4rZRqSnPQpsUca9o=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.thumbDimple.png
+SHA1-Digest: 5mGMGhlZ18GQSiwrbem7/mqFD/U=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteButtonBorder.class
+SHA1-Digest: l961CWzTV0fmK7n8dO2eyUdRs6A=
+
+Name: ch/randelshofer/quaqua/colorchooser/CrayonsChooser$1.class
+SHA1-Digest: CymzYC587eiiyC3L2UU4bYU4qRg=
+
+Name: org/jhotdraw/geom/DoubleStroke.class
+SHA1-Digest: DbJncMPS2OhtuZdqrVC1lxEYNnA=
+
+Name: ch/randelshofer/quaqua/JBrowser.class
+SHA1-Digest: wqwqqiEjVq14p9nOM6p9A52auuY=
+
+Name: ch/randelshofer/quaqua/tiger/filechooser/OSXTigerFileSystemView.
+ class
+SHA1-Digest: vcVI/fNCzlz9Aws4Ilry7podjBk=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $LeftAction.class
+SHA1-Digest: vV+jN91/cH83wE0cGTFd8id3DWo=
+
+Name: org/jhotdraw/draw/action/images/moveDown.png
+SHA1-Digest: Sbb2e2qWu2PrzzuU80qGOxv99Tk=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.resize.png
+SHA1-Digest: oFUW10x0igrPTSFwIro3KRfA7ps=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorPickerIcon.png
+SHA1-Digest: //g9x2cm9ThoRiXXOqcqPaqSOzQ=
+
+Name: ch/randelshofer/quaqua/QuaquaBrowserUI$1.class
+SHA1-Digest: TOfQVwSGmaCq32yqnhE1nN+zPwA=
+
+Name: ch/randelshofer/quaqua/border/CachedImageBevelBorder.class
+SHA1-Digest: 43yKoLUq4TaLlaE7BV/vdfhskEI=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabTop.DS.png
+SHA1-Digest: TdanJ4G2m9rGl8kiEQHCOmMHTlQ=
+
+Name: org/jhotdraw/app/OSXApplication$FrameHandler.class
+SHA1-Digest: FHQC+e6jIcNZ6MeN3wMi9ZaSWG8=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSlidersChooser$1.class
+SHA1-Digest: 8binoYU8mAU8Mxj2U5lL90lN3A8=
+
+Name: org/jhotdraw/draw/action/ZoomAction$1.class
+SHA1-Digest: 4FXajBodPAZ19sca4nTPbkWB1BM=
+
+Name: ch/randelshofer/quaqua/images/RadioButton.small.focusRing.png
+SHA1-Digest: 4LsCKvbu8X7ObiAoyzr9pf1fudM=
+
+Name: net/n3/nanoxml/XMLElement.class
+SHA1-Digest: hVM4WrA/5gSXwhc0lFYt3Kvgsv0=
+
+Name: ch/randelshofer/quaqua/tiger/Quaqua15TigerLookAndFeel.class
+SHA1-Digest: qw4ZUKPbqTjl4SZlly+CLOnN+Nk=
+
+Name: org/jhotdraw/draw/action/images/createTextArea.png
+SHA1-Digest: 5yZauNIdIQEWycuQXHhEyG4nS4s=
+
+Name: ch/randelshofer/quaqua/QuaquaUtilities.class
+SHA1-Digest: OJpcoDScYsuyB+G5f18oUvNUvEc=
+
+Name: net/n3/nanoxml/XMLAttribute.class
+SHA1-Digest: OjEvrR0BUctnw8KCwY+0VXNrFGw=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingViewAction.class
+SHA1-Digest: YfYwhpGEcTQPvJ1eGFYwXdZ6+RQ=
+
+Name: org/jhotdraw/draw/action/images/fileSave.png
+SHA1-Digest: mJwotXwFCRBRStPlKY6G3y7q/gg=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.maximizeIcons.s
+ mall.png
+SHA1-Digest: pQRQMkkuVs2w2svIy6hGfYsh860=
+
+Name: org/jhotdraw/draw/action/images/alignHorizontal.png
+SHA1-Digest: Hw2WtmMWT+RQsYB4mJbBJ1Bz3rM=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua13JaguarTabbedPaneUI$QuaquaM
+ ouseHandler.class
+SHA1-Digest: C9/osXSunPbXw4xaf2BirBewxz8=
+
+Name: org/jhotdraw/undo/UndoRedoManager$RedoAction.class
+SHA1-Digest: 5F1tLdASz9OYiziUM4/iuxIvp9c=
+
+Name: ch/randelshofer/quaqua/JSheet$9.class
+SHA1-Digest: ywJAGE2qkTkEb9yhyN0gkyCWHwo=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$SaveText
+ DocumentListener.class
+SHA1-Digest: Vc3WBU4tqJoMFtgci5BdJ9e4Frc=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $PageUpAction.class
+SHA1-Digest: sJK/oqlTItjZV3f8sqR6BdX9Aj4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/Seekab
+ leStream.class
+SHA1-Digest: qTIlBHLBXTfSVyBs11PRkEeREoo=
+
+Name: org/jhotdraw/draw/liner/CurvedLiner.class
+SHA1-Digest: 4PvCej6aB4ZEoFbXDVVJ58vVjXc=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFIm
+ ageDecoder.class
+SHA1-Digest: hBfPHoNvF7+FCqT4iGKX3FjeFLY=
+
+Name: org/jhotdraw/draw/EllipseFigure.class
+SHA1-Digest: sqhQ5HVWIuS4wTDtCzsXuWecSlM=
+
+Name: org/jhotdraw/draw/action/images/createImage.png
+SHA1-Digest: Ugk6XvyDQFoTjNA5DM4r98QAWtM=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.leftArrow.png
+SHA1-Digest: qzkfdbqJXufeLsU66I1v1Wtikqk=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$FocusHandler.class
+SHA1-Digest: bFy04iTi3tD4B/xnGGUxMN9vpno=
+
+Name: org/jhotdraw/app/action/window/TogglePaletteAction.class
+SHA1-Digest: rOUvuXQibaRT/4PHN7ozf8019Vs=
+
+Name: org/jhotdraw/gui/fontchooser/AbstractFontChooserModel.class
+SHA1-Digest: Vkn+mqlGs+LxKDmLko1L6TrMQoQ=
+
+Name: org/jhotdraw/draw/tool/DelegationSelectionTool.class
+SHA1-Digest: C+pXuBBNu+Um2+WG3SUjqNGa9iA=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$DialogBorder.class
+SHA1-Digest: UNqhCiep7rM0y8scOPkvPQaGv70=
+
+Name: org/jhotdraw/app/action/file/LoadFileAction$2$1.class
+SHA1-Digest: 7Zc9ZoV+V/r24XEznlL1G7wnipk=
+
+Name: org/jhotdraw/app/action/app/ExitAction$2.class
+SHA1-Digest: tXCDTScMCYhcu+rDn33eBTAfp1Q=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.vert
+ ical.small.png
+SHA1-Digest: vjwJlGaKrjlPStg8y7tO89izdg4=
+
+Name: org/jhotdraw/draw/handle/AbstractHandle.class
+SHA1-Digest: 5k8g/IbEgOSkfs7xmged1YmP4NA=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.rightArrow.png
+SHA1-Digest: Plom+S59UgGEag91oTeFrG+KJ/8=
+
+Name: org/jhotdraw/draw/handle/FontSizeHandle.class
+SHA1-Digest: npBcGGrgtm6s+FG4goIAgm9M/Vw=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.selectedExpandedIcon.
+ sideBar.png
+SHA1-Digest: uYjTaW/3Ywa87fKW1NXEw+doBXo=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.expandedIcon.png
+SHA1-Digest: J0et9Un6JBJHCD1ZhtctCqS5Rr0=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$3.class
+SHA1-Digest: ZOIZYd4SfwaPjK7rfHHNVrv/XnU=
+
+Name: org/jhotdraw/app/action/AbstractViewAction.class
+SHA1-Digest: 9EbixDf8BnRCFzpcFq00WN/UDTM=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Arit
+ hCompositeContext_INT_PACK.class
+SHA1-Digest: lL7Xqe70C5Sv7a5t47IK/M8pc+o=
+
+Name: ch/randelshofer/quaqua/images/Slider.roundThumbs.small.png
+SHA1-Digest: rAsgre6yJsGhjGSNHmWy401MzEQ=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/FilePreview$3.class
+SHA1-Digest: 4t3Q25jtLCt+vC2UTNHwA2ts9f8=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheel$ModelHandler.clas
+ s
+SHA1-Digest: IkRnAr+wLz126lZWJExFTI9L7N0=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteUtilities.class
+SHA1-Digest: mDU4MP0YSFX8TqtkotMATZ4dYN0=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.mini
+ .png
+SHA1-Digest: GbTRK4ELnZJ/5SebKNA44zsSimA=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxUI$QuaquaComboBoxLayoutMana
+ ger.class
+SHA1-Digest: rMJf1Z7WP5iFIt9hBaM+viawdL4=
+
+Name: org/jhotdraw/draw/action/images/attributeFontBold.png
+SHA1-Digest: RNXm9N0jgtdlWLAwuHOmd7u4vbA=
+
+Name: ch/randelshofer/quaqua/images/TableHeader.borders.png
+SHA1-Digest: 8Y2kd4UzVb/9rREJi9vf/0cHh7g=
+
+Name: ch/randelshofer/quaqua/colorchooser/SwatchPanel.class
+SHA1-Digest: OkhEKDyKsRAT2Hgqz3eay282SEw=
+
+Name: org/jhotdraw/app/action/file/CloseFileAction.class
+SHA1-Digest: AYQa8MVPQzq+j+PYQLL++PoGfbo=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$IndentIc
+ on.class
+SHA1-Digest: HSOf6zFPPmXzTa1ltL8cwHScr2o=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $UpAction.class
+SHA1-Digest: ZgGwXlTOmy6zYO8v794f3aK4nok=
+
+Name: org/jhotdraw/draw/action/images/_notes/actions.png.mno
+SHA1-Digest: oKhrMyCMRcMJC2SqPHa3xWnyYNE=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$FileCh
+ ooserAncestorListener.class
+SHA1-Digest: L/W5cv7SoZZ0+AQ1HaccBJFot2g=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $RequestFocusAction.class
+SHA1-Digest: uYnt4zBHIS1WRo7GexYlt0QWJEo=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction$EventHandler.cla
+ ss
+SHA1-Digest: Fw22MggaM7OPJ0tf4UIRVxipjq0=
+
+Name: org/jhotdraw/app/action/file/SaveFileAction$1.class
+SHA1-Digest: dFpJDpZiyTDR87V/77uNuEKQnqg=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$SaveText
+ FocusListener.class
+SHA1-Digest: AY7T84J/tJ0YW9yuszfXnxzqi1E=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.maximizeIcons.small.
+ png
+SHA1-Digest: +sM/7IfpdAgDx+Re+eySCHrlUCI=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.expandedIcon.png
+SHA1-Digest: ZNzIOS3537K3l4cRJODauw6ceME=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barRight.png
+SHA1-Digest: 2aE3LSVChfHv77XsGmvAL9xFTsU=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$FileCh
+ ooserAncestorListener.class
+SHA1-Digest: 44NaLaCmlq8Dlnwrpee/Y5ZmIr0=
+
+Name: org/jhotdraw/draw/tool/SelectAreaTracker.class
+SHA1-Digest: fZAS3NQtodCXPI+gvcZo2chMTdo=
+
+Name: ch/randelshofer/quaqua/images/Frame.vTitlePane.mini.png
+SHA1-Digest: t/lAmHboUhSf8KK/UYm2OCk0ZAo=
+
+Name: ch/randelshofer/quaqua/LookAndFeelProxy.class
+SHA1-Digest: u8hJI2D8A0iJy4HFBuPRa2MyQZE=
+
+Name: org/jhotdraw/draw/tool/DefaultSelectAreaTracker.class
+SHA1-Digest: sQ8wgbKfZJAHm8DigvlZ92EZS6I=
+
+Name: org/jhotdraw/draw/action/ColorIcon.class
+SHA1-Digest: qCjsK3kSL1QH6WziPs7qt96FlBc=
+
+Name: ch/randelshofer/quaqua/images/CheckBox.focusRings.png
+SHA1-Digest: oDsN+D21+88IuJ9CH9/nt7XizBY=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollBarUI$QuaquaPropertyChangeHan
+ dler.class
+SHA1-Digest: Ue/JCMutkCcUlGSxmjh96x/VXtY=
+
+Name: org/jhotdraw/draw/decoration/ArrowTip.class
+SHA1-Digest: w+ivOxTex6DBnNVahxGWk+tcz9E=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Indent
+ Icon.class
+SHA1-Digest: lcSKG0vUuAeVM+P//sMTXNT5M30=
+
+Name: ch/randelshofer/quaqua/tiger/Quaqua14TigerCrossPlatformLookAndFe
+ el.class
+SHA1-Digest: HxVrKmH+Ix6iJteH28kkzVotapE=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributesPick.png.mno
+SHA1-Digest: /3yKin7TCMGsSeYPUbCnrHZwSRY=
+
+Name: ch/randelshofer/quaqua/JBrowser$ColumnListModel.class
+SHA1-Digest: p+QVILT27U/TIWJwjdMw0m42WM8=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabBottom.png
+SHA1-Digest: b8QetTjoD9CWsZJbb5vt046TBqc=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$4.class
+SHA1-Digest: dcK8rW5XYMOvFwVdqhe3k4zXhKI=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveWest.png.mno
+SHA1-Digest: Q/6m0waZGu9A3qKLhmyJCdbFOOQ=
+
+Name: org/jhotdraw/draw/action/images/attributeFontItalic_de.png
+SHA1-Digest: Smnc7PLuqFlhSYt7q3OThnyUtW0=
+
+Name: org/jhotdraw/draw/handle/OrientationHandle.class
+SHA1-Digest: v4dOpK06RFhhFzdmXjj3XDqIyao=
+
+Name: org/jhotdraw/geom/Shapes.class
+SHA1-Digest: rUjf48GQwBqU7AtjFwwohZV6oWI=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/FileView.computerIcon
+ .png
+SHA1-Digest: IK5+B4ihAXkpUpfrQqPOVwcjXdc=
+
+Name: ch/randelshofer/quaqua/images/Tree.expandedIcon.png
+SHA1-Digest: /Q/gDcSlya5fU5D1a1RsJQr00Rs=
+
+Name: ch/randelshofer/quaqua/util/CachedPainter$Cache$Entry.class
+SHA1-Digest: l15eHGCec4kvTzb1cG3BEFf3tJE=
+
+Name: ch/randelshofer/quaqua/panther/images/MenuBar.texture.png
+SHA1-Digest: plx5EwBUQjWqz33MMWolWt2HCks=
+
+Name: org/jhotdraw/draw/AbstractAttributedFigure.class
+SHA1-Digest: mHYC/3eJY3KebN9MblvCynUGtxI=
+
+Name: org/jhotdraw/xml/DOMFactory.class
+SHA1-Digest: cnC1Qy0niBta4LtHVbiuWeUCh3Y=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontItalic.png.m
+ no
+SHA1-Digest: CT75gCxUM1+qMvTP5gcFNCzQqx0=
+
+Name: ch/randelshofer/quaqua/images/Frame.iconifyIcons.png
+SHA1-Digest: k+XrHMZVEtb8I4rD0rFxNwOAF2U=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua14JaguarTabbedPaneUI.class
+SHA1-Digest: m/Di3RzxffTC1rMlkle/WxK7LGg=
+
+Name: org/jhotdraw/draw/action/SendToBackAction$1.class
+SHA1-Digest: GImzceixYu570fFh/649ZWWzF1Q=
+
+Name: ch/randelshofer/quaqua/util/ViewportPainter.class
+SHA1-Digest: PxEs8a5hz30Th2HW4VlWWQACols=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$3.clas
+ s
+SHA1-Digest: ziBDYv/IqVWCH3B8+S/c9MNqDVQ=
+
+Name: org/jhotdraw/app/action/file/ClearRecentFilesMenuAction$1.class
+SHA1-Digest: DK8mSrKZx8wGGEC2X+ZrfoBiWqo=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$FilterCo
+ mboBoxModel.class
+SHA1-Digest: OuHOOaYKX6qDTM/rcRMhoXodKvc=
+
+Name: org/jhotdraw/io/Base64$OutputStream.class
+SHA1-Digest: KHf9jglI5FvdjrT/6sCRqDBbbu4=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheelChooser.class
+SHA1-Digest: 4B4ia1Y5bDKJ28lWUbJHruA3V/I=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.wrapBarsRight.pn
+ g
+SHA1-Digest: hv+pG68KYawssLG9IM8S+xI7kH8=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeOpacity.png.mno
+SHA1-Digest: 0Y94ZLbwklrm6aiAQaYSFiLnCbM=
+
+Name: org/jhotdraw/gui/JFontChooser$3.class
+SHA1-Digest: ntd/NgoAyIVDF+qN/nk57NOFSu8=
+
+Name: ch/randelshofer/quaqua/osx/OSXFile.class
+SHA1-Digest: ANtn9ocICaCci/qgOhaObvqNRQQ=
+
+Name: org/jhotdraw/draw/DefaultDrawing.class
+SHA1-Digest: fCSUt2w7Na69Qdkhsd9R1l2rZ+g=
+
+Name: org/jhotdraw/draw/action/AlignAction$Vertical.class
+SHA1-Digest: +7MM9Ax0/G9wonkT6HcaH9n+zFY=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabRight.I.png
+SHA1-Digest: gTgcNcmQPZfFIkAkIE3EMM2O4rQ=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBChooser$1.class
+SHA1-Digest: jaTVD3ffUgvzzUi5YbeLdWbXjlY=
+
+Name: org/jhotdraw/draw/action/images/createTriangle.png
+SHA1-Digest: PY7Y6OXxXk0raDw5ObBqCpCjjFI=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarSeparatorUI.class
+SHA1-Digest: lhqS90AtRrSmHgksbtZvMLNqSY0=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/MultipleGradientPaint$C
+ olorSpaceEnum.class
+SHA1-Digest: vercQdSU4tjzG61OPYl218ng5lg=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit.class
+SHA1-Digest: f3aON6D3/2Zk78+jf/Yi4+swtRw=
+
+Name: ch/randelshofer/quaqua/Quaqua14ColorChooserUI$1.class
+SHA1-Digest: Jm9PF8mMr1HSDb2+xbVfJKz/cBQ=
+
+Name: org/jhotdraw/app/action/edit/AbstractFindAction.class
+SHA1-Digest: ertTW9F8stHujUFDouU4jcNHEM0=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.vBar.png
+SHA1-Digest: k0TRYY1WhBTKc/zmVGkldUHZOXk=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontUnderline_de
+ .png.mno
+SHA1-Digest: uX4p1W8yAlY/kh3JLS3Pw24vh88=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneDivider$QuaquaMouseHandler
+ .class
+SHA1-Digest: g1+e37Z+LmddCC+Ffv3TCCCUmE8=
+
+Name: ch/randelshofer/quaqua/QuaquaListUI.class
+SHA1-Digest: ppKUzxO1IIA56p6LtHtHRALX/iQ=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneLayout$UIResource.class
+SHA1-Digest: +gypYuIJtJW6oj83SF9jzocaQGE=
+
+Name: org/jhotdraw/draw/action/images/_notes/createTriangle.png.mno
+SHA1-Digest: ZF1QUnvXHgFuxoEi6c3RYyvJ/H0=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI.class
+SHA1-Digest: 9hHVct0T487cpTtrvBpG83s+3wU=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxButton.class
+SHA1-Digest: KyvJNwWR8AdL+YLEJnGFR4mrL4I=
+
+Name: org/jhotdraw/app/action/edit/RedoAction.class
+SHA1-Digest: P7IVM6cYtxConwuPegBxiK9M43A=
+
+Name: org/jhotdraw/draw/action/ButtonFactory.class
+SHA1-Digest: hXeYMBPeCeIxnhB/tyYqtgoKAas=
+
+Name: org/jhotdraw/draw/action/images/_notes/createScribble.png.mno
+SHA1-Digest: NUxRlzhUsRnBcItpzSBCngY4zSE=
+
+Name: org/jhotdraw/draw/action/MoveAction$West.class
+SHA1-Digest: 0lc6mU+NDUI2b8xVeUKmu04DkjY=
+
+Name: ch/randelshofer/quaqua/JSheet$7.class
+SHA1-Digest: rO+MJjRmFFDEndh3t6N5+GITVac=
+
+Name: ch/randelshofer/quaqua/util/Methods.class
+SHA1-Digest: IpZQTs/mSLbmGj1kzFjzCGNHhKA=
+
+Name: org/jhotdraw/app/action/file/ClearRecentFilesMenuAction.class
+SHA1-Digest: Zc/xh1J/FI5wF/GDh8P4vrkep3o=
+
+Name: org/jhotdraw/draw/AttributeKeys$Orientation.class
+SHA1-Digest: vxGXkVrIPPcJKAY4Dx+qggkL8dE=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/TranscodingHintKey.clas
+ s
+SHA1-Digest: /X359GZc0McnjLD571q9pjZKdUE=
+
+Name: ch/randelshofer/quaqua/colorchooser/RGBChooser$3.class
+SHA1-Digest: jfVVaFtsVHRUOVTtVh/VLGejXn8=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.focusRing.png
+SHA1-Digest: hINNGzUyMndiDALxZUguDbFcs3M=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$InCo
+ mpositeContext.class
+SHA1-Digest: N3PeXJ8jywqZE/64o6OB6jORrcA=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorChooserMainPanel$1.clas
+ s
+SHA1-Digest: gBRy9FqY0nfqfhQ3E8u8vqMH86g=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorPalettesChooser$1.class
+SHA1-Digest: zF1tr9fyLQ3BA6iw60Hfc69laCg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/MultipleGradientPaint.c
+ lass
+SHA1-Digest: +aYyaKx3/8SUtPwXGLMU4Xo4yW8=
+
+Name: org/jhotdraw/app/action/images/filePrint.png
+SHA1-Digest: 0B2cYqve87jftI0DaUX/60icMNM=
+
+Name: ch/randelshofer/quaqua/ext/nanoxml/XMLParseException.class
+SHA1-Digest: LUBHRzTa04G/LrdXiyTy2YJDkZ8=
+
+Name: org/jhotdraw/draw/Labels_de.properties
+SHA1-Digest: R8vdtCP+g+ysWbjyYJygTk29Mmk=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.vThumbTop.png
+SHA1-Digest: iLfb83sBL4TvRqp2xNnDJjHGb4c=
+
+Name: ch/randelshofer/quaqua/images/Frame.iconifyIcons.small.png
+SHA1-Digest: 9NTYBx7RuBqlcY6HEI0sTnRHtVs=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$File
+ Node.class
+SHA1-Digest: CrEt/Ze2tLeNqOHWUehqlCKk8zI=
+
+Name: org/jhotdraw/app/action/file/LoadFileAction.class
+SHA1-Digest: MsWkEpYJjGbUDNNySidyDy22Koo=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$Syst
+ emItemInfo.class
+SHA1-Digest: aTO6Ml03WmQ8YTwYb7Dlro1chvk=
+
+Name: ch/randelshofer/quaqua/images/FileView.floppyDriveIcon.png
+SHA1-Digest: pOxZTQLtHKuaGZUQ2oNf68VB2eQ=
+
+Name: org/jhotdraw/draw/GridConstrainer$1.class
+SHA1-Digest: hwuhHOz5vy6J8kugqn946my8twY=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$ErrorDialogBorder.class
+SHA1-Digest: 1Jub0ZYQzE1NklcoPUNSnfM/43k=
+
+Name: org/jhotdraw/draw/tool/AbstractTool.class
+SHA1-Digest: vVkI2Hq/8upqrLaO89h7cJZCWkM=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua13JaguarTabbedPaneUI$TabbedP
+ aneLayout.class
+SHA1-Digest: Xa6ZAPySSC1P05B6wpFCsq8U+EU=
+
+Name: org/jhotdraw/gui/JSheet$10.class
+SHA1-Digest: VKWwODUgOYYoKfXpheprsPeAjb0=
+
+Name: org/jhotdraw/draw/action/BringToFrontAction$1.class
+SHA1-Digest: zXWBmdQztF/ibJmOWdOjkNSLj6M=
+
+Name: org/jhotdraw/draw/ImageFigure.class
+SHA1-Digest: tdKIpwb8j7NXmhT7nWv7nMu+aqU=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$1.class
+SHA1-Digest: fLGT8MNM66ngaixWCubTGc8lNfU=
+
+Name: org/jhotdraw/draw/action/ZoomEditorAction.class
+SHA1-Digest: 034GzMIboE/JT5BN3QWiA5n7iV4=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneBorder$UIResource.class
+SHA1-Digest: tXfMrNFIVB+6O0pSlD4j1/CqySc=
+
+Name: org/jhotdraw/draw/handle/RoundRectangleRadiusHandle.class
+SHA1-Digest: E6zGXyOAbHfN87bSga/OQdei1vU=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeWidth.png.
+ mno
+SHA1-Digest: QBTkEFR5cK1YZG81MMdcYnHuLt4=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$5.class
+SHA1-Digest: 2gf94xLdYiEUDmmJ4WYnIrMUJIM=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.iconifyIcons.pn
+ g
+SHA1-Digest: br5CP84EWu525QZntpTY/rvqa6c=
+
+Name: org/jhotdraw/draw/action/images/moveWest.png
+SHA1-Digest: TxYSi08f8LdN4Q4IHp2f2I59akA=
+
+Name: ch/randelshofer/quaqua/images/Toggle.focusRing.png
+SHA1-Digest: EamMk6vAvkiVua7fUuVNg0bMGIs=
+
+Name: org/jhotdraw/draw/AttributeKeys.class
+SHA1-Digest: IGyupv7AvaFkp4ObOewOQxuxbVA=
+
+Name: org/jhotdraw/draw/action/images/_notes/selectionTool.png.mno
+SHA1-Digest: yyKn2Q4GKjXPgtrwHJmiwbvZNbE=
+
+Name: ch/randelshofer/quaqua/version.txt
+SHA1-Digest: Yu3xsknWokBTbwvZrNUlzevofXY=
+
+Name: org/jhotdraw/draw/action/images/alignSouth.png
+SHA1-Digest: Lic9HM8Mua1btnh65+vcF/kpfak=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$File
+ Node$1.class
+SHA1-Digest: rrjn5gkPk6lz0U6uXisXdh6T7aA=
+
+Name: ch/randelshofer/quaqua/images/Button.small.default.png
+SHA1-Digest: AqvFvKZkIGrc1va5ykm/XkI5txU=
+
+Name: org/jhotdraw/samples/draw/DrawApplet$1.class
+SHA1-Digest: az5HZTDm1MRRGGNgx2isLCs3da0=
+
+Name: org/jhotdraw/samples/draw/DrawView.class
+SHA1-Digest: EQRnGUJMpKUYpy+NSR8gcM6IGI4=
+
+Name: org/jhotdraw/gui/event/SheetEvent.class
+SHA1-Digest: dywe2xAX+NLLVkMDGG/BdFt1AF8=
+
+Name: org/jhotdraw/draw/LineConnectionFigure.class
+SHA1-Digest: nvLi3Q+jMoFoj+SyVian175tVtc=
+
+Name: ch/randelshofer/quaqua/BasicQuaquaLookAndFeel.class
+SHA1-Digest: AbqcfNrimfCfNB5QoX0294P9AJA=
+
+Name: org/jhotdraw/draw/connector/ChopRectangleConnector.class
+SHA1-Digest: oh+vhHNeKlNJ6+BQwAHbthtZVc0=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteLookAndFeel.class
+SHA1-Digest: 5LO66b3dRIdTbRueKQQq03kWKTk=
+
+Name: org/jhotdraw/gui/JFontChooser$2.class
+SHA1-Digest: RqGMW9fuwbRH7KQx83CXDEYucG8=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupMenuUI.class
+SHA1-Digest: kRXbR9Bs94EYioB+0eOjbvhdD3Q=
+
+Name: org/jhotdraw/gui/JSheet$3.class
+SHA1-Digest: o55e1HJovT5/IbgtpClcLO+dEnI=
+
+Name: org/jhotdraw/draw/event/BezierNodeEdit.class
+SHA1-Digest: MmI9W0qfY253GXBai6fxdnMbBsk=
+
+Name: org/jhotdraw/draw/action/images/moveSouth.png
+SHA1-Digest: w0L23YYwn7r24i3cbAEX4elbzs8=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$SaveText
+ DocumentListener$1.class
+SHA1-Digest: XzUz/sYoebdB1n3C7wWL+WZJbfM=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxUI.class
+SHA1-Digest: DCSvNwMBbT/VdlUpL+dEkgC439c=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.vThumbBottom.png
+SHA1-Digest: 9GifF6m2mD431dgFAVqPmPus2u8=
+
+Name: org/jhotdraw/draw/handle/BezierControlPointHandle.class
+SHA1-Digest: PTNxvN4axZhIcG3gz7HIWTdXamY=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorTrackImageProducer.clas
+ s
+SHA1-Digest: bpN+L/sFNhvUnb8l8Wbaq3NEH4Q=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua13JaguarTabbedPaneUI$QuaquaP
+ ropertyChangeHandler.class
+SHA1-Digest: v8itpKEwIBT/fIjh9TvW2i/u4s8=
+
+Name: net/n3/nanoxml/IXMLValidator.class
+SHA1-Digest: hdwM6CKhLbbfmvl3JgOwKBuRNX8=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeToggleAction.class
+SHA1-Digest: q2QDBPPzIk9lqEXINMihE3iugsM=
+
+Name: org/jhotdraw/draw/DrawingView.class
+SHA1-Digest: Aa7rxvMS+axrxYR2ZilbDtuVcSg=
+
+Name: org/jhotdraw/draw/action/DrawingColorChooserAction.class
+SHA1-Digest: gYfS8zW+DwCJCE1kFZVwYdzOLuQ=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuPainter.class
+SHA1-Digest: km8/GWdNS/CawBvEhCmroXdsUAc=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$File
+ Item$1.class
+SHA1-Digest: GKkSjvCxD6+V3Pq7fOwj3SQfRik=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBChooser$3.class
+SHA1-Digest: gyhwancrBl+8OJIVRybZNbIh/bc=
+
+Name: ch/randelshofer/quaqua/JBrowser$ColumnFocusListener.class
+SHA1-Digest: gdcanIE1BGqqhNPdJ6rTRxfJh5Q=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeDropTargetListener.class
+SHA1-Digest: Y6xDqweWCbdlaOwaZxW5yax2Cjo=
+
+Name: ch/randelshofer/quaqua/util/EventLoop$1.class
+SHA1-Digest: cMpxGa+LgJIp3bhnyJll86uU8nk=
+
+Name: org/jhotdraw/undo/Labels.properties
+SHA1-Digest: xT9FT7eL2h8FhlUC2/P/goZxZwQ=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheel.class
+SHA1-Digest: Umk1a32qoWglxYbYd94U8VedHwU=
+
+Name: org/jhotdraw/draw/handle/Handle.class
+SHA1-Digest: 9xjYKCF5zED1Xk6imRcfapBRrwU=
+
+Name: ch/randelshofer/quaqua/QuaquaTableUI$FocusHandler.class
+SHA1-Digest: cetn0MfrN6tF4I+qftS/aKi6VuI=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarBorder.class
+SHA1-Digest: 8gfNY3DBuXRRi+t51Zg0DEmHnws=
+
+Name: ch/randelshofer/quaqua/QuaquaCaret.class
+SHA1-Digest: HbkzJZEAdobH0A2fYKxt0mVAVes=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneDivider$2.class
+SHA1-Digest: zLP630E/dgvJBfXh2nA+9fsth60=
+
+Name: ch/randelshofer/quaqua/tiger/images/MenuBar.selectedBorder.png
+SHA1-Digest: mDN+dt49JxMJpK/ylOGmDQN6CDc=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker$4.class
+SHA1-Digest: 60hioWkNvNWKnyw0IHGpTyfeWmI=
+
+Name: net/n3/nanoxml/PIReader.class
+SHA1-Digest: IVRsuMkGDESbrRcXX9y13c+3rqQ=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.png
+SHA1-Digest: 68XssH5qDYls4gTqv4yYJLcWLNk=
+
+Name: org/jhotdraw/gui/plaf/palette/BackdropBorder.class
+SHA1-Digest: lS/L0UBP/1R4IEa72TOVWn3x4vI=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeDecoration
+ .png.mno
+SHA1-Digest: jqYxrXkQW6hvqOuZQJOIxMGxqsk=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.nextIcon.D.png
+SHA1-Digest: v9ft3DJyEbQxzol1aw3Otv25kic=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI$QuaquaRootLayout.class
+SHA1-Digest: 3TbUNbQTbmkY61SSmTzDInCCkW4=
+
+Name: org/jhotdraw/draw/action/images/editPaste.png
+SHA1-Digest: 8ha3U9N1/Q+Qf9cxxXTXzU+xz18=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.selectedCollapsedIcon
+ .sideBar.png
+SHA1-Digest: HfqsmIDpLV4Y+qiB4JreuHqltys=
+
+Name: ch/randelshofer/quaqua/QuaquaLazyActionMap.class
+SHA1-Digest: BLRG/cxOf8L1YRuEWnggFSTeHsk=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/MultipleGradientPaintCo
+ ntext.class
+SHA1-Digest: LHFr/MX2bkZX4JA06aLpZbbdB6I=
+
+Name: org/jhotdraw/draw/action/StrokeIcon.class
+SHA1-Digest: kcmWqM51KeKfpiIr+4dCEo4u0DI=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua15PantherLookAndFeel.class
+SHA1-Digest: pQZCw04x9f0TzPnfazLi5b5rH8M=
+
+Name: org/jhotdraw/draw/DecoratedFigure.class
+SHA1-Digest: EkmaXgFcZYQnV+XsVUZgFF8SuaM=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/LeopardFileRenderer.c
+ lass
+SHA1-Digest: OvuYEezPWaSrMihOhaGR3Z2Qqys=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/FilePreview$2.class
+SHA1-Digest: bOdxWhopKkxZBBor1rmPvMQ+YaQ=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeCap.png.mn
+ o
+SHA1-Digest: YTNAbLE3WICKuCnfuznm9oWxwtU=
+
+Name: org/jhotdraw/draw/liner/ElbowLiner.class
+SHA1-Digest: aMiZS2ewzInWLrRmqIoJ+UR2MnI=
+
+Name: org/jhotdraw/geom/BezierPathIterator.class
+SHA1-Digest: ga0YTogerdoVX0SF+RBg6IEpHuo=
+
+Name: org/jhotdraw/undo/UndoRedoManager$1.class
+SHA1-Digest: HyzP26WbYGEouWuiNWP/Y8fLQYQ=
+
+Name: org/jhotdraw/draw/handle/ConnectionStartHandle.class
+SHA1-Digest: PHwecp/pz+qyGQXCdI/ZHxkzwv4=
+
+Name: ch/randelshofer/quaqua/util/Images$GraphiteFilter.class
+SHA1-Digest: E2Q5Drn6FV9+2gBvyB496Ybf7T4=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneDivider.class
+SHA1-Digest: 14E+3RBb7h9fViIFi1WIUcbBXac=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.hBar.png
+SHA1-Digest: QkCSuLbHv6jBeJZCnD7q6t9WIrM=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$SaveTe
+ xtFocusListener.class
+SHA1-Digest: eypwVjw7EM2P5MdpciSAd12Phos=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabBottom.D.png
+SHA1-Digest: 3mWOHE+wt1hnMXXq2o4a0kMRcmU=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.smal
+ l.png
+SHA1-Digest: ylPks97qpm4nlk2B/aK1tsz/sD8=
+
+Name: org/jhotdraw/draw/handle/OrientationHandle$1.class
+SHA1-Digest: utg1uI6B73vvi89WLXOIu5n7ycM=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.png
+SHA1-Digest: lvLfIlCYG+jYX3Q8XIP9O5O8RL4=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderUI$ColumnHandler.class
+SHA1-Digest: z5nKoyrusuYPDz+tUL5iXpKUwEk=
+
+Name: org/jhotdraw/app/action/file/LoadRecentFileAction$1$1.class
+SHA1-Digest: tTaw1phMjthOkdgy5yu+47Ny50Y=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Browser.disclosureIco
+ ns.png
+SHA1-Digest: g5GKQMNsjRGgda4s330WlPfT7Js=
+
+Name: ch/randelshofer/quaqua/leopard/Quaqua16LeopardLookAndFeel.class
+SHA1-Digest: XnO6Lo2jShxyI2utS5g4cKGrEaM=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherSeparatorUI.class
+SHA1-Digest: AFyjkgGxT2BDHVb9C78g2wvf9uY=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.previousIcon.p
+ ng
+SHA1-Digest: FNiFkW3BWASPW9LGG9DZ196TGoU=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabLeft.I.png
+SHA1-Digest: WTSuW94BpAR5+At3FNaC60GE1ZI=
+
+Name: ch/randelshofer/quaqua/SheetEvent.class
+SHA1-Digest: z71E4rKmDr5/UXYeWWbo8PDFw1g=
+
+Name: ch/randelshofer/quaqua/border/ImageBevelBorder.class
+SHA1-Digest: j401G9gZuu9SflPeqjSOLHPGRxU=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$1.class
+SHA1-Digest: /mbdfqeIDUPl4lV3XShrlHPnKMw=
+
+Name: org/jhotdraw/draw/handle/BezierNodeHandle.class
+SHA1-Digest: oaNEot61D9n2oDdIGa9CUG5C9oA=
+
+Name: ch/randelshofer/quaqua/images/Spinner.small.north.png
+SHA1-Digest: TwMhOtFLmZVxPsmhR9/7zfFMdNI=
+
+Name: org/jhotdraw/draw/AttributeKeys$1.class
+SHA1-Digest: rXpLrqt8eyXtYT9xvVEmV0GOfYg=
+
+Name: ch/randelshofer/quaqua/QuaquaComboPopup$Handler.class
+SHA1-Digest: 5ozQVdd6YmSwQPDs0aDoAYhz+AA=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel.clas
+ s
+SHA1-Digest: 3ivcY9KlcyytU19Ily6R5pi629M=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.sma
+ ll.png
+SHA1-Digest: K5kOpxZ1Pn606VnuwYTWLW/fp7Q=
+
+Name: ch/randelshofer/quaqua/images/ScrollPane.borders.png
+SHA1-Digest: O4p1lgcFoKHHY8LlBUSHssjfw8Q=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarSeparatorUI.class
+SHA1-Digest: 1Isv7WCc7pRHVekBbqSHUK1CF3U=
+
+Name: ch/randelshofer/quaqua/ext/base64/Base64.class
+SHA1-Digest: Ue6rgygaJCuLhbQRZOGXTRTr4cM=
+
+Name: org/jhotdraw/app/action/app/ReOpenApplicationAction.class
+SHA1-Digest: YbualR4k4Xan9FXBaUnGgV6kBjw=
+
+Name: org/jhotdraw/draw/tool/SelectionTool$TrackerHandler.class
+SHA1-Digest: Uk7ge1ZSGAwQB7mgxMI8j6FKsI4=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderModel.class
+SHA1-Digest: tffoSGAmuTaDYZyinevqJYfrje4=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.small.popupIcons.png
+SHA1-Digest: /+oRGNFaBNO2cABY4ScK88vVMHo=
+
+Name: ch/randelshofer/quaqua/ext/batik/i18n/LocaleGroup.class
+SHA1-Digest: PlyW1kx39dCXXCqQtZjcCZsiNP4=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$WindowPropertyHandler.c
+ lass
+SHA1-Digest: NDCLfSdyBA4SFuubCZWCffh9OcI=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$4.class
+SHA1-Digest: OGWuvzAsyls3nzOBUfYQcm1XxZE=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabRight.D.png
+SHA1-Digest: A2npoVztjZgEAq1OAqcjaxxe7CQ=
+
+Name: org/jhotdraw/draw/handle/MoveHandle.class
+SHA1-Digest: zUEDeuBME4lpH9suXA2zeiVu9U0=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$SouthWestHandle.class
+SHA1-Digest: KVCiQfRNROmG+f0Guz2EDwqrPUw=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite.clas
+ s
+SHA1-Digest: 1rUTXC93WJnG1NEadCLoC7VPynE=
+
+Name: net/n3/nanoxml/XMLParserFactory.class
+SHA1-Digest: j8hGv6Zh9ro/I8FBtc1pJcXJkZY=
+
+Name: ch/randelshofer/quaqua/util/Worker$1.class
+SHA1-Digest: O8x+ygnwG5NUglAvu7e2/kuMDwM=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Atop
+ CompositeContext_INT_PACK.class
+SHA1-Digest: tmpM0HLw33uOjLHf5IOxKiBxW8c=
+
+Name: org/jhotdraw/draw/liner/Liner.class
+SHA1-Digest: nKiZDzdU6KNd1bTFuqbw8sOzl3U=
+
+Name: net/n3/nanoxml/StdXMLReader$StackedReader.class
+SHA1-Digest: UxsNHU212Hgd/G1969xtWImFY7s=
+
+Name: ch/randelshofer/quaqua/colorchooser/PaletteEntryCellRenderer$Col
+ orIcon.class
+SHA1-Digest: 8m+DLralSd6UhDP5qm/zsDsnaPI=
+
+Name: org/jhotdraw/gui/fontchooser/FontFamilyNode.class
+SHA1-Digest: jrbNmSraHb9VdDpEdCUENgv6GqE=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorPickerMagnifierP
+ C.png
+SHA1-Digest: Yu5yOoRgXcMVCbblB/a/YKEvktQ=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.browserIcon.pn
+ g
+SHA1-Digest: fSsJtR3pqXYiSPDqS213BoxwO1E=
+
+Name: ch/randelshofer/quaqua/images/Slider.horizontalTrack.png
+SHA1-Digest: hlh/Sh+ur56q0JI16w5xPXTQTbE=
+
+Name: org/jhotdraw/gui/JFileURIChooser.class
+SHA1-Digest: f+DsUi5sY5MbUx88169gWbBkhe0=
+
+Name: ch/randelshofer/quaqua/QuaquaBorderFactory.class
+SHA1-Digest: sDLzABrRMK/iCRDr9WFXVFIuyfw=
+
+Name: org/jhotdraw/draw/ImageHolderFigure.class
+SHA1-Digest: 6hlYMp/yPUWtTlYDNpHYnZ+NvV8=
+
+Name: org/jhotdraw/draw/tool/ImageTool.class
+SHA1-Digest: 5wXjsQF0LGqUryltR1tIXCkPLLg=
+
+Name: ch/randelshofer/quaqua/images/Browser.disclosureIcons.png
+SHA1-Digest: P+XbTH5Zt6yUhwKVcZ5UuLAnFOM=
+
+Name: ch/randelshofer/quaqua/images/GroupBox.empty.png
+SHA1-Digest: foQ3H2+bMHBeXNrNEoOCSwIU4DU=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$SaveTe
+ xtFocusListener.class
+SHA1-Digest: Qn1n5OMeauLdpiyMrDLmQHvb+0Q=
+
+Name: ch/randelshofer/quaqua/QuaquaTableUI$Handler.class
+SHA1-Digest: Hl9uZX2HCYrwZ77Z+twrhbSFNlw=
+
+Name: ch/randelshofer/quaqua/color/PaintableColor.class
+SHA1-Digest: mMPKFQBeWOes2XBQMXSsyFuZgxY=
+
+Name: org/jhotdraw/draw/AttributeKey.class
+SHA1-Digest: BS1RPOH5y8dELY6cWJwr8U/cy1w=
+
+Name: org/jhotdraw/app/action/AbstractSelectionAction.class
+SHA1-Digest: eIzjOt21XtnGe5gc3gTtBebnbz4=
+
+Name: ch/randelshofer/quaqua/colorchooser/DefaultPalettes.class
+SHA1-Digest: Tz9Cm7lS4YF4wWcTr1kpitUK/+4=
+
+Name: org/jhotdraw/app/action/AbstractSaveUnsavedChangesAction$3.class
+SHA1-Digest: D23BxLmhx/9kS5U7RmLU+YZDKcI=
+
+Name: ch/randelshofer/quaqua/JBrowser$BrowserScrollPaneLayout.class
+SHA1-Digest: 0cxb8VTon1PAOXdF+yzwLWWcJrU=
+
+Name: ch/randelshofer/quaqua/snow_leopard/QuaquaSnowLeopardSideBarSele
+ ctionBorder.class
+SHA1-Digest: 7jyemIexzw4KWX/qFMyRf9LfNPI=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeDecoration.png
+SHA1-Digest: wLZLCvIl0ar9XgiSPykg6OsBoac=
+
+Name: org/jhotdraw/gui/Worker.class
+SHA1-Digest: fEAORqP+cxCYnw1t7POJxyOdM9k=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.vTrack.png
+SHA1-Digest: OOPMNXoHOY0VxthOEGX5hn9XJAw=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.hTrack.png
+SHA1-Digest: QGW9f3fcrLKH0Uic35nXmZXC2uk=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.tog.vButtons.png
+SHA1-Digest: vho064HrjpyvWHinL+rigDk9MCE=
+
+Name: ch/randelshofer/quaqua/QuaquaPasswordFieldUI.class
+SHA1-Digest: hwIAbG9+Vr1EU1nK23lh/jKF15g=
+
+Name: org/jhotdraw/draw/RectangleFigure.class
+SHA1-Digest: eSlL3Xhuy4HzQOkNZehYA9gMYeM=
+
+Name: org/jhotdraw/draw/connector/ChopEllipseConnector$1.class
+SHA1-Digest: Dqf4i+XH0O7DJJg/7DoHjZ/piNQ=
+
+Name: ch/randelshofer/quaqua/QuaquaDefaultListCellRenderer.class
+SHA1-Digest: OlUjluXHpaYTk+8RGYl8tpuq0ao=
+
+Name: org/jhotdraw/draw/event/CompositeFigureEvent.class
+SHA1-Digest: eloOCZcXLj0O8sEA+h6Z/MzoTSA=
+
+Name: ch/randelshofer/quaqua/images/RadioButton.small.icons.png
+SHA1-Digest: XZpD9WDU6AaTgPlEI59Pt3AqVmQ=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker$5.class
+SHA1-Digest: ACSTvEHGkm5u95Gad2LL1G++VGs=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$South.class
+SHA1-Digest: XiAfhSTXfEvfidhwQotxgKMCsGM=
+
+Name: ch/randelshofer/quaqua/leopard/Quaqua15LeopardCrossPlatformLookA
+ ndFeel.class
+SHA1-Digest: kBXW4FoXwvxi6PQ5G8WC2p3cUhw=
+
+Name: org/jhotdraw/draw/action/images/editUndo.png
+SHA1-Digest: FPfzRZyikYwwnOC6J5+KYvshucg=
+
+Name: ch/randelshofer/quaqua/QuaquaListUI$FocusHandler.class
+SHA1-Digest: 8zAOqOQs8LWpDuQqLHVq5c1MIK0=
+
+Name: ch/randelshofer/quaqua/images/MenuItem.arrowIcons.png
+SHA1-Digest: NPtl7cy5ANXaMRFo00tMAZQ7g4s=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/ImageD
+ ecodeParam.class
+SHA1-Digest: Spm/mOMUxeRV9MazWbD6688zing=
+
+Name: org/jhotdraw/draw/tool/TextCreationTool$1.class
+SHA1-Digest: pdthmGj8WyotJgNukHQ5MupmT98=
+
+Name: org/jhotdraw/gui/datatransfer/AbstractTransferable.class
+SHA1-Digest: EZrR+s3eCm3tKR5zHi4z8MWy/Bg=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveNorth.png.mno
+SHA1-Digest: /zAFM2OPdyxAW/Ybg1KSl9FJYPY=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/OSXLeopardFileSystemV
+ iew.class
+SHA1-Digest: 07jz5If5khqaVqIuXpHe13WieQc=
+
+Name: ch/randelshofer/quaqua/leopard/Quaqua14LeopardLookAndFeel.class
+SHA1-Digest: hmSr8zVjywTow7GIlYKAVAUXgmU=
+
+Name: org/jhotdraw/app/action/ActionUtil$1.class
+SHA1-Digest: o9AGwEzRT5UYB9vJPnm2/HrpHJA=
+
+Name: ch/randelshofer/quaqua/JBrowser$SizeHandle.class
+SHA1-Digest: oypUFoG802TPSuQBBfhqyedPETI=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Alph
+ aPreCompositeContext.class
+SHA1-Digest: Pjw11YMi1rBqs26MF+Im/zlGbRM=
+
+Name: ch/randelshofer/quaqua/QuaquaRadioButtonUI.class
+SHA1-Digest: kzRqDPa8NNVKhvqHs4/LugmlWWA=
+
+Name: ch/randelshofer/quaqua/QuaquaListUI$MouseInputHandler.class
+SHA1-Digest: 2iwekrUQWwV+N/YqEOQdnGk/Q5I=
+
+Name: org/jhotdraw/app/osx/OSXPaletteHandler$2.class
+SHA1-Digest: uB4CZRM3PPAKp/E8do64b9qaNKo=
+
+Name: org/jhotdraw/gui/JSheet$4.class
+SHA1-Digest: 3OGwF9ccIRTHQgN2SNKLJ0ZZdi0=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.hThumbBody.png
+SHA1-Digest: xVVHZ482MM1YtO8ZQe9Jdy2E9LI=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$3.clas
+ s
+SHA1-Digest: h6HwAkNkop43t0jK80dMPKF2JFw=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$QuaquaTreeCellEditor$1.class
+SHA1-Digest: Bb+dIbuQndqHwdxO61+3fMec1mI=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser$1.class
+SHA1-Digest: 6NCtSzXG1UkvwuAreKv2Vd6yPuM=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.mini.png
+SHA1-Digest: gscvnPpqhk5GTW8cQCK98Ss3Ay4=
+
+Name: ch/randelshofer/quaqua/images/FileView.fileIcon.png
+SHA1-Digest: dyv7a+if/lLkaNpXGGgO0XjY0VI=
+
+Name: org/jhotdraw/draw/action/images/moveEast.png
+SHA1-Digest: LLXVnLaiy7PXcQQdBYU4dsqRhaE=
+
+Name: ch/randelshofer/quaqua/Quaqua16LayoutStyle$1.class
+SHA1-Digest: uvyAoqYQMsupcUzXh7z5+hgZmDo=
+
+Name: ch/randelshofer/quaqua/images/Frame.titlePane.small.png
+SHA1-Digest: AB/GD4ayCxWIi755J9wAEszzClw=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabBottom.DS.png
+SHA1-Digest: BUbSpgjNQAvhJUOsEhIbuNV4PTc=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Rendered
+ ImageCachableRed.class
+SHA1-Digest: P3DDECOnhnwbiArOr9JRjadoZO8=
+
+Name: org/jhotdraw/app/action/edit/SelectAllAction.class
+SHA1-Digest: K5LKoHp0bbzki2D1OrL+jv94YZI=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveToFront.png.mno
+SHA1-Digest: LNizR3aAx83AhZ/bIVNyS/u5PlY=
+
+Name: ch/randelshofer/quaqua/QuaquaManager.class
+SHA1-Digest: WoGOQrrEiUTOec6iUCJJG7EvNUU=
+
+Name: org/jhotdraw/app/action/AbstractApplicationAction.class
+SHA1-Digest: 9l3qGN7Sz8jhhy3heXUU1Ld9twk=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.ivThumb.png
+SHA1-Digest: 5QGhkLXo09Vig9xSQi3HMKCd8TM=
+
+Name: ch/randelshofer/quaqua/QuaquaTableUI$MouseHandler.class
+SHA1-Digest: iL26hjGkHa2qxFGajmUiSrnqrQs=
+
+Name: org/jhotdraw/geom/Insets2D$Double.class
+SHA1-Digest: 8RPZAQajTMLj7XLMfBPU/aZorMg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFFa
+ xDecoder.class
+SHA1-Digest: oiz22S9ZoMr+wEQ6FpTOrbILOEE=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Frame.titlePaneBorders.png
+SHA1-Digest: Cav5ynY1Qn1+d9t2npnMHzivynI=
+
+Name: org/jhotdraw/draw/handle/RotateHandle.class
+SHA1-Digest: h018PdOqzwn99vsA8qs4/JRZxaE=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabBottom.S.png
+SHA1-Digest: HXx0+9tsy+W7IpacQtPNd+LFfGo=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$1.class
+SHA1-Digest: L4O+wY48nwRD+nun241F3FQnuaQ=
+
+Name: org/jhotdraw/app/action/images/editRedo.png
+SHA1-Digest: ILEJDfTvkrYUtmRfh6rXGH48aio=
+
+Name: ch/randelshofer/quaqua/BasicQuaquaLookAndFeel$1.class
+SHA1-Digest: VMYtDg0Tj7Rr9GBzgdlPPuLx4ak=
+
+Name: org/jhotdraw/draw/handle/BoundsOutlineHandle.class
+SHA1-Digest: 58P0g4LUq/A94RWnWXBmEy7drN4=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneLayout.class
+SHA1-Digest: pI5kaCQUSOQI9mx7qu9KACx73+Q=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.crayons.png
+SHA1-Digest: 5L+jZ6TcvhSv4wKbtxBzzvA/FM0=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderTextFieldHandler.
+ class
+SHA1-Digest: k9DUe8FIKichMvZ7ljsLvotOI8A=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserSelectionPanel.c
+ lass
+SHA1-Digest: 3ZYu9p1zj8OiedLf54dbiotsOAM=
+
+Name: ch/randelshofer/quaqua/Quaqua14SpinnerUI$SpinnerLayout.class
+SHA1-Digest: 4tL6cNtTqnhZU9a6b+3FR7Ju4Lk=
+
+Name: org/jhotdraw/app/action/app/ExitAction.class
+SHA1-Digest: jZ5YnFL5czJukxd/e/mZj+tDXxw=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$SouthHandle.class
+SHA1-Digest: pqg0GsX8rzYqUPEbnW45KUGeTkE=
+
+Name: org/jhotdraw/util/prefs/ToolBarPrefsHandler.class
+SHA1-Digest: LOClY2sOixpYGPGYHeDQTNqLEKc=
+
+Name: ch/randelshofer/quaqua/images/Tree.leafIcon.png
+SHA1-Digest: dyv7a+if/lLkaNpXGGgO0XjY0VI=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$IconifyAction.class
+SHA1-Digest: UOe3lUgw62sO2dwsC8el1BLnRxA=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.wrapBarsBottom.p
+ ng
+SHA1-Digest: HJwaYKtl4lTccSVH0VfgvLw+kBM=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveDown.png.mno
+SHA1-Digest: O3WbD2tkXcJaKAqNd9wx3C54kMk=
+
+Name: ch/randelshofer/quaqua/filechooser/FileRenderer.class
+SHA1-Digest: OehhUAbfsPRZ0dtOqyafn1h8zGk=
+
+Name: org/jhotdraw/gui/Worker$2.class
+SHA1-Digest: sdOb0tavxB/iz/PmDaw12tOawEU=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollBarUI$QuaquaTrackListener.cla
+ ss
+SHA1-Digest: eGGj0DExOx8QorpPFy6bDpo9yZQ=
+
+Name: org/jhotdraw/app/OSXApplication$QuitHandler.class
+SHA1-Digest: SSzGyhSzm/d0ZZfqlsmIMbtnZWE=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.vTrack.png
+SHA1-Digest: ka+HKNW/G9eiOgTym/Dr4sih2t8=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorChooserMainPanel.class
+SHA1-Digest: trL1YP7a8iElErYV7eZieAY+v3Q=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontUnderline.pn
+ g.mno
+SHA1-Digest: cYf6474168GasvsCuB7XEp0ywKg=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignNorth.png.mno
+SHA1-Digest: F6pbi262KqStnBKMti9NWG8rBMw=
+
+Name: org/jhotdraw/draw/locator/AbstractLocator.class
+SHA1-Digest: tjk9rp7A2efBFmZL09+Bt+NeSOY=
+
+Name: ch/randelshofer/quaqua/border/BackgroundBorder.class
+SHA1-Digest: YZQSbiuz+SIE2OQC3P56Q5cnRJI=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignHorizontal.png.mno
+SHA1-Digest: BloyNd7LYTlOQP0kKje4eV4IOQk=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$NewFol
+ derAction.class
+SHA1-Digest: wQTdEsEYLgltk/zS8SF+i3qf1Ns=
+
+Name: ch/randelshofer/quaqua/images/FileChooser.upFolderIcon.png
+SHA1-Digest: XYmtLq8QyNHMjFkT3qt6bvJ4C9o=
+
+Name: org/jhotdraw/draw/tool/SelectionTool$1.class
+SHA1-Digest: xD2e1C024IV7svWjda4K6cNGRAo=
+
+Name: org/jhotdraw/samples/draw/DrawFigureFactory.class
+SHA1-Digest: 5SpIwGORvLQCp4ger/7AZOKv1nI=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/TileBloc
+ k.class
+SHA1-Digest: oK5cnhnbVQQ5ryeh5CRYPKuDk10=
+
+Name: org/jhotdraw/app/action/window/FocusWindowAction.class
+SHA1-Digest: TMYQB8QET8M66maiKsAtM++POfI=
+
+Name: ch/randelshofer/quaqua/util/Worker.class
+SHA1-Digest: s0YUpyfeWC5shdBwhcs7GSrhtvI=
+
+Name: org/jhotdraw/draw/connector/ChopEllipseConnector.class
+SHA1-Digest: MCegjisoAcUrC/Lv1YjQ3XOirN4=
+
+Name: ch/randelshofer/quaqua/datatransfer/MimeTypeParseException.class
+SHA1-Digest: GzW9JPq+yLLQ2KvJ2rBZ479CFiI=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $QuaquaTabSelectionHandler.class
+SHA1-Digest: 2SgGL4cgVga3FSjPJ5my5I1EPQw=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabRight.S.png
+SHA1-Digest: YGZfX4/0JAozOOHR0fAR/hkJnD8=
+
+Name: org/jhotdraw/draw/action/DrawingAttributeAction.class
+SHA1-Digest: J91N+kKfGJgtG1UJXEf2Y3pouyc=
+
+Name: org/jhotdraw/draw/action/images/_notes/fileSave.png.mno
+SHA1-Digest: Rz3ahgwRKDecuzFsbfI7EfIykko=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/PadMode.class
+SHA1-Digest: yscBVT+54dlR0m71h+/8zD0Yd0g=
+
+Name: org/jhotdraw/draw/event/FigureEvent.class
+SHA1-Digest: JisRsjI1hsKqhuUe2QTtsEJveW4=
+
+Name: org/jhotdraw/app/osx/OSXAdapter.class
+SHA1-Digest: 0zOQrfQdejaALKoHgA5D2qYp3dY=
+
+Name: org/jhotdraw/gui/VerticalGridLayout.class
+SHA1-Digest: bZ53Z/Vmg1iwpO0gWmNeIOmlnlY=
+
+Name: org/jhotdraw/draw/action/images/_notes/createElbowConnection.png
+ .mno
+SHA1-Digest: /0W2Gq51tVB4u7aZ0zCpXopVCy4=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$3.class
+SHA1-Digest: HiBCdHeFQkdOXQScTtliSgAhdVo=
+
+Name: ch/randelshofer/quaqua/JSheet$4.class
+SHA1-Digest: AjwJZXr7gEkbk5lChNJ1Zzy3MTw=
+
+Name: org/jhotdraw/draw/TextHolderFigure.class
+SHA1-Digest: Rdi+8wTRWLfD+tkIVZWBJ2/jylA=
+
+Name: org/jhotdraw/draw/AttributeKeys$Underfill.class
+SHA1-Digest: Qn67g8F69rXtA8iBMS4EGn9jQWM=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$Row.
+ class
+SHA1-Digest: dddh3HBSBZrzjS3fhoD/yfMasvg=
+
+Name: org/jhotdraw/gui/fontchooser/FontCollectionNode.class
+SHA1-Digest: 6FXNIt2dgnHXNU5eCoVup2HwXfk=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarButtonStateBorder.class
+SHA1-Digest: djvtTYJ7t27cRLdsTic252D9Yv4=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.closedIcon.png
+SHA1-Digest: rKl2po77Z7iIVPUYreA/Kwl5ElE=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.contentBorder.pn
+ g
+SHA1-Digest: jkmLwr00lQKQXJ2g5mR8S62gC1A=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherTabbedPaneUI.class
+SHA1-Digest: dsGjNOLi1pCi8HnKusiFk46rs7U=
+
+Name: org/jhotdraw/draw/handle/TextOverflowHandle.class
+SHA1-Digest: +9C0+JV4d4aV+uPw0+XYz8L8kLQ=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.min
+ i.png
+SHA1-Digest: vcrk32341ccjDlBvp2Xhm4N0Rfk=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuItemUI.class
+SHA1-Digest: djS1Bdn1M02wpxmSYOOFlerQX54=
+
+Name: org/jhotdraw/app/action/edit/ClearSelectionAction.class
+SHA1-Digest: z2NAMvTM+Xpvl2E4am38mlhmrQk=
+
+Name: org/jhotdraw/draw/tool/ConnectionTool.class
+SHA1-Digest: wQXJw0oKrHsoxp6xzQ63PtTba4k=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabLeft.S.png
+SHA1-Digest: oE5b5NJUpi/nPyLEIuaTaq9in+s=
+
+Name: ch/randelshofer/quaqua/util/ConcurrentDispatcher.class
+SHA1-Digest: seX0UXHRjbqtFlVtWHbkzg+n9NM=
+
+Name: ch/randelshofer/quaqua/util/InsetsUtil.class
+SHA1-Digest: MNFl1d2iabE4L0p0k7dcT737NeY=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$XorC
+ ompositeContext_INT_PACK.class
+SHA1-Digest: ba3KFWhcnU5Fe6RpoUAgJwf1/i0=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$East.class
+SHA1-Digest: dzWXF+XDZbf7oLKKAop5ijoJOu4=
+
+Name: ch/randelshofer/quaqua/QuaquaUtilities$1.class
+SHA1-Digest: ST3f6ZZamvrCuWyp4suGsYico9A=
+
+Name: ch/randelshofer/quaqua/QuaquaTextFieldUI.class
+SHA1-Digest: SlzfyKU+NgwwB+cnzdJixc/hzdI=
+
+Name: ch/randelshofer/quaqua/datatransfer/MimeTypeParameterList.class
+SHA1-Digest: m/NMjDV7nDUFGbqxSvKLZDCQcTg=
+
+Name: org/jhotdraw/app/AbstractApplication.class
+SHA1-Digest: 4d6RBU7xhzaaRfIJjtGnuLF7iYw=
+
+Name: org/jhotdraw/app/action/AbstractSaveUnsavedChangesAction.class
+SHA1-Digest: +t1/94lNxdVOCcZi+YD3rwuvGa8=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Over
+ CompositeContext_INT_PACK.class
+SHA1-Digest: /Vye68Ia+2UWO/moy64iQc6SbVo=
+
+Name: org/jhotdraw/app/action/app/ExitAction$4.class
+SHA1-Digest: qVjGnAJcc0FRVtWtRfxGBArmNd8=
+
+Name: org/jhotdraw/app/action/window/FocusWindowAction$1.class
+SHA1-Digest: TanOD9+lhO87t1ft53BhDISzzg0=
+
+Name: org/jhotdraw/draw/action/images/attributesApply.png
+SHA1-Digest: eUy+gKYR3SQ31qGRvg48JvCS2us=
+
+Name: ch/randelshofer/quaqua/snow_leopard/Quaqua16SnowLeopardLookAndFe
+ el.class
+SHA1-Digest: 5QbsyM6VjbFVa4kbSYniGWWrDzI=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuUI.class
+SHA1-Digest: aOyPRzazpXCOC0nZKNrWRObhr4k=
+
+Name: org/jhotdraw/app/ApplicationModel.class
+SHA1-Digest: cSGyb6e8fBsq/j0jZxbT8YYXI8U=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Direct
+ oryComboBoxRenderer.class
+SHA1-Digest: gxHHK2QdW5pRahCCpsBlJbaJHvM=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/RenderingHintsKeyExt.cl
+ ass
+SHA1-Digest: X99bi1CdcVOpW0EmWX/vqqn5s80=
+
+Name: org/jhotdraw/draw/action/images/createText.png
+SHA1-Digest: 4wOLzN5z9ZNsm8+ZJdGT5MLCFrU=
+
+Name: org/jhotdraw/gui/JFontChooser$1.class
+SHA1-Digest: VVS7HXOuHIF5S5awRJhoZWpkI4U=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLColorSliderModel.class
+SHA1-Digest: S//+X2OJmKWqp2mV1cgCpipSt4Y=
+
+Name: org/jhotdraw/draw/event/TransformRestoreEdit.class
+SHA1-Digest: UzmPrrsjhp0RtsACM3FClVFU8nw=
+
+Name: org/jhotdraw/draw/action/images/attributeTextColor.png
+SHA1-Digest: p5/puXBPOCp2RoT11IF2TfaJAYE=
+
+Name: org/jhotdraw/app/action/images/fileSave.png
+SHA1-Digest: RqemIcn08ToLiK2ci4f1NxJY0yk=
+
+Name: org/jhotdraw/gui/datatransfer/ClipboardUtil.class
+SHA1-Digest: Fx3PVGma910H0GmzleEXMGg2Ef8=
+
+Name: ch/randelshofer/quaqua/QuaquaIconFactory$LazyOptionPaneIcon$1.cl
+ ass
+SHA1-Digest: jdmPRPS5ETPIWLcdHjnIJCCero8=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabLeft.D.png
+SHA1-Digest: i7tSCedQmvwoiEi6S4ZQ2wSKkYQ=
+
+Name: ch/randelshofer/quaqua/colorchooser/CrayonsChooser.class
+SHA1-Digest: /7PzMw/gH574q8xVrpWN4Xb3R70=
+
+Name: org/jhotdraw/app/action/app/ExitAction$6.class
+SHA1-Digest: uQmNVFHvwZSMOMwe9kAeHXQvbFY=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneUI$1.class
+SHA1-Digest: cz3Bp/vz0JvoIwWGFAGjnjmpoVs=
+
+Name: ch/randelshofer/quaqua/QuaquaViewportUI$ChangeHandler.class
+SHA1-Digest: r40xx6nmeFfhrPkiO5zjbYKLGDY=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil$3.class
+SHA1-Digest: h6jWT7btPlbDDyWtF5xToz3E6RM=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI$RootPaneAncestorListen
+ er.class
+SHA1-Digest: FXBQ6IwYCF/Prjpq6TCUft2xfos=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$TransformHandle.clas
+ s
+SHA1-Digest: ZPvqC1HCoAc5wOkQth5+fuw7YZk=
+
+Name: org/jhotdraw/draw/DrawingEditorProxy$Forwarder.class
+SHA1-Digest: Ig35kYe5ocw/MAm5nqkDo+sB7Kg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Cachable
+ Red.class
+SHA1-Digest: KBU4op19L9MIMAlJzN0kyf8jMSc=
+
+Name: org/jhotdraw/app/OSXApplication$1.class
+SHA1-Digest: 3RUV8RDltIR4Eo55JvESvK8GEfs=
+
+Name: org/jhotdraw/draw/action/images/_notes/createRoundRectangle.png.
+ mno
+SHA1-Digest: qrJhNgUkfEWS+AZbAAYYXVDPteA=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$Director
+ yComboBoxModel.class
+SHA1-Digest: c+acQ86co5tnlg6pccbE5AP8Tnw=
+
+Name: org/jhotdraw/draw/io/OutputFormat.class
+SHA1-Digest: 38UUq5R1SgiP0An0Uv+4V1A+0hE=
+
+Name: org/jhotdraw/draw/TextAreaFigure.class
+SHA1-Digest: y9stlCz/os9gu+TfXK5mEfwUH7Y=
+
+Name: ch/randelshofer/quaqua/icon/OverlayIcon.class
+SHA1-Digest: V5Hx5EIer3cBIsnT8CefWAqK3kg=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingEditorAction$1.class
+SHA1-Digest: VPlpGjxuE5Qr18A4qkzEg9UHZgo=
+
+Name: org/jhotdraw/app/View.class
+SHA1-Digest: MQ12G/xXB9BVwdjy7ZrvckHn2DE=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorWheelIcons.png
+SHA1-Digest: cgHnaO3uaL4i1WzTu8504fPa2g4=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeIncrementAction.class
+SHA1-Digest: sXDXCGq5LmNZTrIdXa5kL0OiLsY=
+
+Name: org/jhotdraw/draw/FigureLayerComparator.class
+SHA1-Digest: pcO3q/l6Iin0Ql7DjxPYrqsv06Q=
+
+Name: ch/randelshofer/quaqua/images/FileView.directoryIcon.png
+SHA1-Digest: XYmtLq8QyNHMjFkT3qt6bvJ4C9o=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.titlePaneBorders.ver
+ tical.png
+SHA1-Digest: STLe8zYOkiVE9e4FpkfrfCZUJ9I=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.smallTog.vButtons.png
+SHA1-Digest: E1EojtAU/wYdemtn0c0QKViO5fI=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributesApply.png.mno
+SHA1-Digest: Hxf2dOBJohf6oKKU4RE8LnZjsZU=
+
+Name: ch/randelshofer/quaqua/images/Tree.openIcon.png
+SHA1-Digest: 9Ha61Fz3BAOBaG1dLVaV5wKnDCI=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$SaveTe
+ xtDocumentListener$1.class
+SHA1-Digest: i/I/XLTMPmUpj+rc0yKe4Xj9HKI=
+
+Name: org/jhotdraw/draw/DefaultDrawingEditor.class
+SHA1-Digest: 6uZx8/L+qW3wQWVMySWYZZgAisM=
+
+Name: ch/randelshofer/quaqua/colorchooser/NominalCMYKColorSliderModel.
+ class
+SHA1-Digest: OubFJcdJt8vgZLjE5WJwGCugRFE=
+
+Name: org/jhotdraw/draw/action/images/_notes/fileNew.png.mno
+SHA1-Digest: HuVcQOSXU96ZKzWlEPAJ24Yl7v4=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$FilterCo
+ mboBoxRenderer.class
+SHA1-Digest: qU544Hx9oKUjFWuK93yLLYS3l98=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Dark
+ enCompositeContext_INT_PACK.class
+SHA1-Digest: 2st+j53Rrczzzue44XPet4hmg3Q=
+
+Name: ch/randelshofer/quaqua/leopard/images/OptionPane.errorIcon.png
+SHA1-Digest: N1FjhEY4KGf5ozIjyX0THNMBVdc=
+
+Name: ch/randelshofer/quaqua/datatransfer/MimeType.class
+SHA1-Digest: 4BMk/f/dMIKA04S2y1UmP/k7vp4=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Sideba
+ rRenderer.class
+SHA1-Digest: iTBFCaYrUoSFU9yWxJXSiu04uto=
+
+Name: ch/randelshofer/quaqua/images/Button.focusRing.png
+SHA1-Digest: ObVJ5+fL6GAdimzU8T2vqyXyDGw=
+
+Name: org/jhotdraw/net/URIUtil.class
+SHA1-Digest: OTFrBVZwgB0ucexMkpUsRwB6JnQ=
+
+Name: ch/randelshofer/quaqua/filechooser/LinuxFileSystemView.class
+SHA1-Digest: LPLgE9166aaxXuGqqpB/xnWsn24=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$Director
+ yComboBoxRenderer.class
+SHA1-Digest: PlwtL4H9DPXuWKZntT4bYn03PtE=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Over
+ CompositeContext.class
+SHA1-Digest: dUQJdNvI7k9Ie2QFgvTKNhgNYWQ=
+
+Name: ch/randelshofer/quaqua/Quaqua16TextFieldFocusHandler.class
+SHA1-Digest: IGikKPRLrvSPb4WMR1UGb3GHPss=
+
+Name: org/jhotdraw/app/action/AbstractApplicationAction$1.class
+SHA1-Digest: qZi1bIgjRHDuqu8izWbKM2R6I8c=
+
+Name: ch/randelshofer/quaqua/colorchooser/SwatchesChooser.class
+SHA1-Digest: XTzyB+BchmnDtD38YST6sQyteZs=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$SaveTe
+ xtDocumentListener.class
+SHA1-Digest: BhhEPNcgCvCgMoHCR6PwuWXwr7Y=
+
+Name: org/jhotdraw/draw/action/MoveAction$East.class
+SHA1-Digest: fMeWfzG486Dh/0LosB3H/HH3N78=
+
+Name: ch/randelshofer/quaqua/images/CheckBox.icons.png
+SHA1-Digest: MWEoKNixGMMywkAfmBNAHaWI3iM=
+
+Name: ch/randelshofer/quaqua/JSheet.class
+SHA1-Digest: D7GXDOxiOi9uD2OfReXzBtzVOxg=
+
+Name: ch/randelshofer/quaqua/QuaquaDesktopPaneUI.class
+SHA1-Digest: yWKHlY42/EO3gYyIOhUWRshh6F4=
+
+Name: ch/randelshofer/quaqua/jaguar/filechooser/OSXJaguarFileSystemVie
+ w.class
+SHA1-Digest: 39QxiRw3k5xy0sBPPIQmiqQE/IM=
+
+Name: org/jhotdraw/draw/action/AbstractDrawingViewAction$EventHandler.
+ class
+SHA1-Digest: OOt+pDX9N6sBjzR3iLELCUGzd84=
+
+Name: org/jhotdraw/app/action/file/LoadRecentFileAction.class
+SHA1-Digest: 3XowwplOsn8tEHvLd8V9+I51svM=
+
+Name: org/jhotdraw/draw/action/EditorColorChooserAction.class
+SHA1-Digest: uNYub/8F/Ur0ZvWK6vzK/Bkh89Q=
+
+Name: org/jhotdraw/draw/handle/BezierNodeHandle$3.class
+SHA1-Digest: imNss21fjmrcitVLic0yHXu+qNg=
+
+Name: org/jhotdraw/draw/handle/BezierScaleHandle.class
+SHA1-Digest: mdWHF1yPb4M0jhUXTq+59uDjxOc=
+
+Name: ch/randelshofer/quaqua/subset/Quaqua14FileChooserLAF$1.class
+SHA1-Digest: Ob5WlDQbrlg0DmjCvmT52OhqylQ=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Node
+ $1.class
+SHA1-Digest: 8W88sUKZrIwLzH0BjVQvQ4mJhKg=
+
+Name: ch/randelshofer/quaqua/QuaquaIconFactory.class
+SHA1-Digest: KKIkUHo3qaqcanapwjPPa8zSjoE=
+
+Name: ch/randelshofer/quaqua/leopard/images/OptionPane.noteIcon.png
+SHA1-Digest: 7fVfOEgT36bEeKdzPHr7RG4PtCs=
+
+Name: org/jhotdraw/geom/Insets2D$Float.class
+SHA1-Digest: qCPLEdhDhtgbTQxAwEa91iF5T48=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.maximizeIcons.png
+SHA1-Digest: aYESnARJf3e5/F5D54eVzRAGYFg=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.icons.png
+SHA1-Digest: 0y/lt6PbsYDQ8ffUnhOT+e/VJ7k=
+
+Name: org/jhotdraw/draw/LineConnectionFigure$ConnectionHandler.class
+SHA1-Digest: oeQPwRdXdQroOnAQ0QaDY61v/nw=
+
+Name: ch/randelshofer/quaqua/jaguar/images/ToolBar.texture.png
+SHA1-Digest: zT0+EBOZx/D4L96rgLOF+MBrcEk=
+
+Name: org/jhotdraw/app/action/images/editCopy.png
+SHA1-Digest: Kb+nPPxmX0qD8RHalEwhJrQ/7lk=
+
+Name: org/jhotdraw/app/action/images/editCut.png
+SHA1-Digest: cLwScX7okBGUCB4V3PIVwkCBrOM=
+
+Name: ch/randelshofer/quaqua/Quaqua14SpinnerUI$1.class
+SHA1-Digest: OMmMu/t8RzEQ//ihz7+W2DK381E=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteLabelUI.class
+SHA1-Digest: Kw0D4CGzTTSUnOHLpIGYDtbnve4=
+
+Name: org/jhotdraw/draw/action/images/_notes/fileOpen.png.mno
+SHA1-Digest: 4R3cRa5g8WnFtisqWxf9Z5fXG7A=
+
+Name: ch/randelshofer/quaqua/border/FocusBorder.class
+SHA1-Digest: liODHEMbXaR+5R8hIeZqi1HcwIY=
+
+Name: org/jhotdraw/app/action/file/ExportFileAction$1.class
+SHA1-Digest: iFjYK93hTIioKf4hXUXaGC7clzM=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFFi
+ eld.class
+SHA1-Digest: zsiwVRy6JYsq5fk7OXPZ5Xkg3e8=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil$1.class
+SHA1-Digest: PFB8jQzamHJi7ZZnUYid1TspDLs=
+
+Name: org/jhotdraw/draw/text/FloatingTextField.class
+SHA1-Digest: BG+0HTdy0I/kJ2DOsQrp3Qd4z/M=
+
+Name: ch/randelshofer/quaqua/util/ScriptSystem.class
+SHA1-Digest: YsFCvCmP4+gt1Eqvdxk01xVfqjI=
+
+Name: org/jhotdraw/draw/tool/TextEditingTool.class
+SHA1-Digest: BeP+neuxXhPslp9J2Nec4EXCmz8=
+
+Name: ch/randelshofer/quaqua/JSheet$3.class
+SHA1-Digest: timnM4ZdxCbLA4DtNVgVHN/sPP8=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Filter
+ ComboBoxModel.class
+SHA1-Digest: Fi6vSKMIxmfOOs1Acnq886W7LaM=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBChooser$4.class
+SHA1-Digest: 3WYS8ZsZbkU0K/tH6yu5d1syY+w=
+
+Name: org/jhotdraw/gui/Labels.properties
+SHA1-Digest: xqbpy2ix/ybpbObXTtxn9bILxZA=
+
+Name: ch/randelshofer/quaqua/QuaquaViewportUI$QuaquaPropertyChangeHand
+ ler.class
+SHA1-Digest: R0gEUN4R1rQBNCptWzu2U2r2CgA=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/FileCa
+ cheSeekableStream.class
+SHA1-Digest: Vc8gCp9uSnuMDjBEb9QEe9gB9V4=
+
+Name: org/jhotdraw/gui/fontchooser/FontChooserModel.class
+SHA1-Digest: KZkVtVWbW2YrLlzten7xdDPQGL4=
+
+Name: ch/randelshofer/quaqua/QuaquaSplitPaneDivider$QuaquaDividerLayou
+ t.class
+SHA1-Digest: SeVu1Wx+a4ewVqpTR8gKWGTNXvA=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Node
+ NameComparator.class
+SHA1-Digest: KoEx0F/JOyVEusKuEBNjEl6waU4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/LinearGradientPaint.cla
+ ss
+SHA1-Digest: 07YU43JTQXX9w9oVf7bdWkI4Znw=
+
+Name: org/jhotdraw/draw/AttributeKeys$StrokeType.class
+SHA1-Digest: JihR+qinS7FdVhpEYjkOB7wj21g=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Sideba
+ rSelectionListener.class
+SHA1-Digest: F7cFlhFNFi4GR8XYHvFLDNv6U6k=
+
+Name: org/jhotdraw/draw/action/images/_notes/selectionGroup.png.mno
+SHA1-Digest: Es/Co5gPGWWwEWdTJ3hIt6lYHMQ=
+
+Name: ch/randelshofer/quaqua/QuaquaCheckBoxUI.class
+SHA1-Digest: SvAXFP39PBKl4xH/iSdFSqKPPTM=
+
+Name: ch/randelshofer/quaqua/colorchooser/SmallColorWellBorder.class
+SHA1-Digest: CIM7Os4atFzK8v32ctrsbCfXKEE=
+
+Name: org/jhotdraw/draw/GridConstrainer.class
+SHA1-Digest: KseVYxTJqOQhE+pVyYHQjhgpcFg=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxUI$QuaquaPropertyChangeList
+ ener.class
+SHA1-Digest: EdaVB9h0istgjHNs8OJwsAv8xBw=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.vThumbBody.png
+SHA1-Digest: tXCpDLVjhGbfYGJ9Qmfqj/URwhw=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Translat
+ eRed.class
+SHA1-Digest: n2bVv248aUdCDYwTXJ+2s7mSUVE=
+
+Name: ch/randelshofer/quaqua/BasicQuaquaLookAndFeel$2.class
+SHA1-Digest: SbQiUqJSryOko122YfUq9hYTP3Q=
+
+Name: ch/randelshofer/quaqua/images/GroupBox.png
+SHA1-Digest: Sol7YtPRYP3/f1BMWQbzMxcX3Js=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler.class
+SHA1-Digest: CrYQE7nNDymjzBYw1zyg9Wsvsog=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.dropDownIcons.png
+SHA1-Digest: qKMCxx1mcrJRdw0QsfImgdx+BpU=
+
+Name: ch/randelshofer/quaqua/BrowserPreviewRenderer.class
+SHA1-Digest: F0ujvlH9BRo4df8nXdL8t3PoLlY=
+
+Name: ch/randelshofer/quaqua/JSheet$2.class
+SHA1-Digest: A7nD9JZHohKXVux2On5+z65tLRo=
+
+Name: org/jhotdraw/app/osx/OSXAdapter$2.class
+SHA1-Digest: k8qlBl9ZVfgpDhADP0NpQU5b2EA=
+
+Name: org/jhotdraw/xml/NanoXMLDOMInput.class
+SHA1-Digest: LbnVyDhaQCwWMJfuytZIYklZfoQ=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontBold.png.mno
+SHA1-Digest: jtRpJKsA/+dW8NKKDhW+LD8Z8ns=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderHexTextFieldHandl
+ er.class
+SHA1-Digest: QWRKq965+fB0zM56w73dk/qEThY=
+
+Name: org/jhotdraw/draw/action/images/createRoundRectangle.png
+SHA1-Digest: ynqus7QO+diK52JZ0t0R2O2bXSI=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$4.class
+SHA1-Digest: TXpMbYmAh9QVxfehbTpqMnQT7Kk=
+
+Name: org/jhotdraw/gui/datatransfer/OSXClipboard.class
+SHA1-Digest: qomwSX9IMPApRDsttFTbM/JJUjQ=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barLeft.D.png
+SHA1-Digest: yizsJbmJD8p9BOFe+1Iugf72yx8=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$ButtonFactory.class
+SHA1-Digest: kE4WiQHWlorxOl3CtlyHqdKs/Zg=
+
+Name: org/jhotdraw/app/action/file/OpenRecentFileAction.class
+SHA1-Digest: rzoezVCrvJ5EKq86P0+uj6UGt3w=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$OutC
+ ompositeContext_INT_PACK.class
+SHA1-Digest: RzIvpuUXPU/zCcc191viW/Ei2gU=
+
+Name: org/jhotdraw/draw/action/images/_notes/createTextArea.png.mno
+SHA1-Digest: pDZssDo/QdmwPsbwQ/p+KBbTiTQ=
+
+Name: org/jhotdraw/gui/plaf/palette/BackdropBorder$UIResource.class
+SHA1-Digest: zD8weKugITfvrroNbR7Vrpfn+7w=
+
+Name: org/jhotdraw/app/SDIApplication$1.class
+SHA1-Digest: J+fv/E2CstE7jnoatYU5rMk8BqQ=
+
+Name: org/jhotdraw/draw/action/MoveConstrainedAction$West.class
+SHA1-Digest: SHcU28dZ8ol8h9zNyKqF1xx98lA=
+
+Name: org/jhotdraw/app/action/file/OpenFileAction.class
+SHA1-Digest: R8eRAu24yOHb0NF1eoRrO2+t6yc=
+
+Name: org/jhotdraw/draw/action/images/_notes/editCut.png.mno
+SHA1-Digest: CDl5vh5yvO5EiJ7t9Oj2RRGFBLI=
+
+Name: ch/randelshofer/quaqua/Quaqua14ColorChooserUI$ColorTransferHandl
+ er.class
+SHA1-Digest: JJ4mPrFhQ6SGMozLjiGt74K8twQ=
+
+Name: ch/randelshofer/quaqua/util/graphiteable.properties
+SHA1-Digest: t2cWCKj7/ZBDi7FrT1v71gkvbGo=
+
+Name: ch/randelshofer/quaqua/util/HalfbrightFilter.class
+SHA1-Digest: NnlmeHuu80EUhaYkxWryC9uXMJg=
+
+Name: org/jhotdraw/draw/handle/AbstractConnectionHandle.class
+SHA1-Digest: P5O2uPZCSZRAG+MfnkrrkfuWxf4=
+
+Name: ch/randelshofer/quaqua/QuaquaFormattedTextFieldUI.class
+SHA1-Digest: Vw0CK8qUjbInVnxemu8xVVlUHLs=
+
+Name: ch/randelshofer/quaqua/JBrowser$ColumnSelectionModel.class
+SHA1-Digest: yAuE2nok/OTaoT3z0EYMX7cuZhQ=
+
+Name: org/jhotdraw/app/action/edit/DeleteAction.class
+SHA1-Digest: 5XsQXBPems/H6h5AwqtAIUp5ijM=
+
+Name: org/jhotdraw/draw/action/images/editCopy.png
+SHA1-Digest: LHTo77qvasMAVbVw7OYcaNaTZ7c=
+
+Name: ch/randelshofer/quaqua/images/RadioButton.icons.png
+SHA1-Digest: 3o9T2Dap4/VbPCt9UM4+F3bsUyE=
+
+Name: org/jhotdraw/app/action/edit/CutAction.class
+SHA1-Digest: OS+xqHlB8FNuG43O2YWV5pjip1c=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.hThumbLeft.png
+SHA1-Digest: WNEUqmajhGmAPA0r1mgJsRsXQD4=
+
+Name: ch/randelshofer/quaqua/color/GradientColor.class
+SHA1-Digest: m23GHSp4hfUDcj/fqPzciWRiWBI=
+
+Name: ch/randelshofer/quaqua/colorchooser/QuaquaColorPreviewPanel.clas
+ s
+SHA1-Digest: A/lo0+WJCqs444UvSdDYBRJ4YQg=
+
+Name: net/n3/nanoxml/StdXMLBuilder.class
+SHA1-Digest: Mr1ljowAlb220ymVrM8oSkVoRRI=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLSliderTextFieldHandler.c
+ lass
+SHA1-Digest: 8KRGfHVfOGxcsKO7PNUN7Bh3t+I=
+
+Name: org/jhotdraw/app/action/window/ToggleVisibleAction.class
+SHA1-Digest: CLYFSXizgAOBdL08zlbZMJdwyxU=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.ivThumb.png
+SHA1-Digest: UXZmcazwznKLBk1WP7rQswdVoAQ=
+
+Name: ch/randelshofer/quaqua/jaguar/images/Panel.texture.png
+SHA1-Digest: BJk8s1iT6QLlK27IOmEBYBmbyPU=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeType.png
+SHA1-Digest: Z6Rn2k9CvECGyE4eeRzIT8L4RzQ=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$1.class
+SHA1-Digest: 7/biqa4I53BJLKhQxXjU/sQsqgA=
+
+Name: ch/randelshofer/quaqua/QuaquaFocusHandler.class
+SHA1-Digest: Dy0diM+9P3Eiv0tQMLgeiNXbe40=
+
+Name: ch/randelshofer/quaqua/Quaqua14SpinnerUI$PropertyChangeHandler.c
+ lass
+SHA1-Digest: L6OUD6mZ5y7woZOWWhKYIuekLfw=
+
+Name: ch/randelshofer/quaqua/datatransfer/DefaultTransferable.class
+SHA1-Digest: hHU1ygtKlkaFHT26v60kkNN9eys=
+
+Name: org/jhotdraw/app/osx/OSXPaletteHandler.class
+SHA1-Digest: vltdfD4NoVpJ2ng/5/LwpfXc67c=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Mult
+ iplyCompositeContext_INT_PACK.class
+SHA1-Digest: EoDmV6xSE2Jj20wkny5nxnpUyjM=
+
+Name: org/jhotdraw/xml/DOMInput.class
+SHA1-Digest: zGyBxgaf55xwVij0Sy8+iETNEis=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/OSXPantherFileSystemV
+ iew.class
+SHA1-Digest: XrFIm71by0DQ0ozMrY/z5HLGp3A=
+
+Name: ch/randelshofer/quaqua/JSheet$6.class
+SHA1-Digest: 8KOLKoFIRei0YyXeWxpaiY5ZNMY=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$NorthHandle.class
+SHA1-Digest: UJO5ZeZpWtcOBbwRszCsvFqQD/o=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheelImageProducer.clas
+ s
+SHA1-Digest: s7C8AHRJ0dvNU5Ee3bFEeY0nTlA=
+
+Name: ch/randelshofer/quaqua/util/SequentialDispatcher.class
+SHA1-Digest: Gb+cFy8krzp4eDQHToaeWKHxCAU=
+
+Name: ch/randelshofer/quaqua/images/Toggle.east.borders.png
+SHA1-Digest: usdTN5+1+1FgEMVEnqtL/rNVcVA=
+
+Name: org/jhotdraw/util/Images.class
+SHA1-Digest: sSFZ0tx6HKVQ71dZDc4uknm8mXM=
+
+Name: org/jhotdraw/gui/JPopupButton.class
+SHA1-Digest: 8GDo5HDJ+BQGvDQufdKscjkahrQ=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Sideba
+ rRenderer.class
+SHA1-Digest: lCKwDvCXRAp9J9Ctd5KGmI3+i2A=
+
+Name: org/jhotdraw/draw/handle/BezierOutlineHandle.class
+SHA1-Digest: SJsyVYgeQK1dTsEOQhfZMa9+l4E=
+
+Name: ch/randelshofer/quaqua/QuaquaListUI$PropertyChangeHandler.class
+SHA1-Digest: 8hGIQjkNQBq4PU0/O3GKji9qHNY=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.smallSep.hButtons.png
+SHA1-Digest: Nut39D2JUokQE7vMfYoKyegoEjI=
+
+Name: org/jhotdraw/draw/CompositeFigure.class
+SHA1-Digest: E+WaROnZrQF4FGErExwTkMpJbsY=
+
+Name: org/jhotdraw/draw/TextFigure.class
+SHA1-Digest: SojTQetzrcUwjDeglmgEQ0pXmes=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabLeft.DS.png
+SHA1-Digest: VOR/2qmEBZ21JKK813U2sdK/dpU=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/TileGene
+ rator.class
+SHA1-Digest: fXEMiATU4mCZnPlogCCqV07ibcI=
+
+Name: org/jhotdraw/app/action/file/ExportFileAction.class
+SHA1-Digest: 3sp50c50Pln5nMzhL+YwciGc48g=
+
+Name: org/jhotdraw/draw/action/images/attributeFillColor.png
+SHA1-Digest: v49yZLXZQsodyUB+raT3WaoliKs=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.small.dropDownIcons.png
+SHA1-Digest: YMbwx3JcgymHEz+a8hi/n02SRJw=
+
+Name: org/jhotdraw/app/action/file/SaveFileAsAction.class
+SHA1-Digest: tspM+CzzlldMQYM8zDtt8I9DJBg=
+
+Name: org/jhotdraw/draw/AbstractAttributedCompositeFigure.class
+SHA1-Digest: r9EEMY83z8tAv4K4QbkoteV9R6Q=
+
+Name: org/jhotdraw/draw/event/HandleEvent.class
+SHA1-Digest: d5K7xmOSv9m5DHn1UTc61tgR8bA=
+
+Name: ch/randelshofer/quaqua/QuaquaTextFieldBorder$1.class
+SHA1-Digest: JbgajUCFnXvHzKODNlH3NJ97qxw=
+
+Name: ch/randelshofer/quaqua/QuaquaIconFactory$LazyOptionPaneIcon.clas
+ s
+SHA1-Digest: OOkhgODQRXVaF+VPSVbOwdu3MC4=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarBorder$UIResource.class
+SHA1-Digest: nWpXdY2fhlYrsN+rRmHYc8D0+mw=
+
+Name: org/jhotdraw/geom/Dimension2DDouble.class
+SHA1-Digest: yG0qsdQr3KvrDaGlcrH6xYE/Txk=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$SelectionPane
+ lHandler.class
+SHA1-Digest: ASdk0UpCHI7WO3mm0PShgn3pLoY=
+
+Name: ch/randelshofer/quaqua/JBrowser$BrowserCellRendererWrapper$1.cla
+ ss
+SHA1-Digest: mGjjEs8LQ8K9ol0WykchlP00ETc=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneUI.class
+SHA1-Digest: 7GSWPGzx6PekUisoma82wvHAJF0=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.rightToLeftColla
+ psedIcon.png
+SHA1-Digest: YfFTZj1yOBlNm6LsUTzsMm2FtlY=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$NorthWestHandle.clas
+ s
+SHA1-Digest: NUbJ6Ib5P2G8EpODa6EhFjNhp40=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$WestHandle.class
+SHA1-Digest: o7LqnMCA0pYRjJW9H1TzVGU2dfs=
+
+Name: ch/randelshofer/quaqua/JBrowser$ColumnMouseListener.class
+SHA1-Digest: 2jAB/z8bGGOQ/3+B2jHOCrvR8L0=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Over
+ CompositeContext_INT_PACK_NA.class
+SHA1-Digest: 8raebn899ck3FfF3b/XZUZ4nRAo=
+
+Name: org/jhotdraw/draw/action/EditorColorIcon.class
+SHA1-Digest: VhYCvJYAmkdIEjzlNyXmEFNlP/4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Buffered
+ ImageCachableRed.class
+SHA1-Digest: 3UtAme3quh8b4WWGtLPMhh9NB/s=
+
+Name: ch/randelshofer/quaqua/images/Button.default.png
+SHA1-Digest: JtS0aBZq8REk2CwMIMtxrhFMthw=
+
+Name: org/jhotdraw/draw/tool/TextEditingTool$1.class
+SHA1-Digest: X5bKerT3wvZ12pCq56ruiovms2M=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/ColorSpaceHintKey.class
+SHA1-Digest: 42Fht+aW7jCZPbEA4PxSgOVBMpw=
+
+Name: org/jhotdraw/app/action/images/fileNew.png
+SHA1-Digest: YbGZ66NEsD4UoQ22IwDTb3B/0fU=
+
+Name: ch/randelshofer/quaqua/border/AnimatedBorder.class
+SHA1-Digest: 3X0Y5uhxzUaLNFeTFVAdNDP2m6Q=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherLookAndFeel.class
+SHA1-Digest: SQPQCYx+nkX+UyMq2MLoADpBeng=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFontBold_de.png.
+ mno
+SHA1-Digest: HOOVS6yPOP/VD/yEseYWU5MF+vw=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$DoubleCl
+ ickListener.class
+SHA1-Digest: zjsTb3KPZFZ5MG05/hECXrkoSnE=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$RestoreAction.class
+SHA1-Digest: 9OtPi66Rbsq5nrw6hUPNgPVURp8=
+
+Name: ch/randelshofer/quaqua/images/TextField.borders.png
+SHA1-Digest: iJiTUdRFG4aj6HnGknPniOn6zA4=
+
+Name: ch/randelshofer/quaqua/jaguar/QuaquaJaguarFileChooserUI$Director
+ yComboBoxAction.class
+SHA1-Digest: hNwYr3oEToVReKg+IFa+AmC16uc=
+
+Name: org/jhotdraw/draw/action/AlignAction$West.class
+SHA1-Digest: 6AVEAUZgXn07lORiIO469F9ELhI=
+
+Name: ch/randelshofer/quaqua/JBrowser$SelectionModeUpdater.class
+SHA1-Digest: 0v95z2fsRgR7Pmv04UcxyLk/7FI=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Alph
+ aPreCompositeContext_INT_PACK.class
+SHA1-Digest: va0WnlfjLHQALuIAtCTZ3DBSv5g=
+
+Name: ch/randelshofer/quaqua/QuaquaHighlighter$QuaquaHighlightPainter.
+ class
+SHA1-Digest: dfpUojOdqWKvtvLYq1f6oKXib58=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Atop
+ CompositeContext.class
+SHA1-Digest: fvmSpaK1/9gz2nG/Y9c5QfTKA+w=
+
+Name: ch/randelshofer/quaqua/subset/Quaqua14FileChooserLAF.class
+SHA1-Digest: f0hY4kg6FLvRn6JDLhPhWgz4DCw=
+
+Name: ch/randelshofer/quaqua/QuaquaUIAction.class
+SHA1-Digest: fPALgoqMFtodEpYiGC+hmrWuEvA=
+
+Name: ch/randelshofer/quaqua/Quaqua14SquareButtonBorder.class
+SHA1-Digest: cyL0lcRZOYN/Rj56zfQH5fOd9Mc=
+
+Name: org/jhotdraw/samples/draw/DrawApplet.class
+SHA1-Digest: 1PEpB4Ar/UR3Qk4lWR7uPCoXp10=
+
+Name: org/jhotdraw/draw/locator/Locator.class
+SHA1-Digest: rhA81BIzmogYCO+UFNpREkqLbco=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.sma
+ ll.png
+SHA1-Digest: xE54X5hfm2hMTjqG+K9RXb7ZLCI=
+
+Name: org/jhotdraw/app/osx/OSXAdapter$1.class
+SHA1-Digest: f5OVLpCI3L5wNTSxqb95CzQ0Mbc=
+
+Name: ch/randelshofer/quaqua/panther/images/FileChooser.nextIcon.png
+SHA1-Digest: i6Hydh0hHdd+zYD7myE3evC2h8c=
+
+Name: ch/randelshofer/quaqua/images/ComboBox.buttonBorders.png
+SHA1-Digest: qoZCQs/kUHPC9LLVq1sOqDdur44=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$NorthHandle.class
+SHA1-Digest: Pe5NNHcYsQEUp/xFzwCzaIJaWqo=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser.class
+SHA1-Digest: ic6cLulUXxezEYoGXVQujGkXuYw=
+
+Name: org/jhotdraw/samples/draw/DrawView$2.class
+SHA1-Digest: xKbJFFQTxxXGMxHaESWLEu9X66w=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Dire
+ ctoryNode.class
+SHA1-Digest: bj9gV8AdbnqXPQdDs8pb+wkPi7g=
+
+Name: ch/randelshofer/quaqua/images/CheckBox.small.focusRings.png
+SHA1-Digest: nmu4iYt5gVBZGtdVPKQ5gwX+aLk=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI.class
+SHA1-Digest: W8Ma2zfNP7nN1iXUyQ16YyKSOtk=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/ImageD
+ ecoderImpl.class
+SHA1-Digest: MxTsQ99azCHrcZl/fxM9VLgllg0=
+
+Name: org/jhotdraw/app/action/file/ExportFileAction$2.class
+SHA1-Digest: HLdTdjmK2LCfuX+n5k4aSHLybLs=
+
+Name: org/jhotdraw/app/action/edit/CopyAction.class
+SHA1-Digest: 4rZMAm8n/e5ryzY2CqtWvj435pE=
+
+Name: ch/randelshofer/quaqua/images/Square.focusRing.png
+SHA1-Digest: fey1JhCakqUkMAiFrfjPKWvyC7g=
+
+Name: org/jhotdraw/draw/action/images/createDiamond.png
+SHA1-Digest: GBNE74Vevl/OohlAj/oEUmJFdfc=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteTextComponentBorder.class
+SHA1-Digest: +oE2g7ImMAuAimEDQA7Dvz9g2I8=
+
+Name: org/jhotdraw/gui/Worker$1.class
+SHA1-Digest: dSGowxcpy+siCumhHPcpKV2Luag=
+
+Name: ch/randelshofer/quaqua/border/MatteBevelBorder.class
+SHA1-Digest: TsmCkUxWliuZdta9nJZCcvs7ojs=
+
+Name: ch/randelshofer/quaqua/JSheet$1.class
+SHA1-Digest: NGiiKi5BobX0EWXP19l4Q/XN2M8=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Abstract
+ Red.class
+SHA1-Digest: 9yVGI0to6Y4pt/amh/Cxku3Y1vc=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$PaletteBorder.class
+SHA1-Digest: kRrvGvpI5YoSS++F9pVW7OFfK10=
+
+Name: ch/randelshofer/quaqua/images/FileView.hardDriveIcon.png
+SHA1-Digest: ovrxqL9R1ee5wq1GdiRCBMfZcgQ=
+
+Name: ch/randelshofer/quaqua/images/RoundedBevel.borders.png
+SHA1-Digest: rrggmrUXjBaNXdJ1fokJqfttKVw=
+
+Name: org/jhotdraw/app/OSXApplication$WindowMenuHandler.class
+SHA1-Digest: 1bLvjMLZqE366FzxDDnwG2MJs04=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderUI$1.class
+SHA1-Digest: EGoWSufKutBV8CneITKRTSIxyBg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/Forwar
+ dSeekableStream.class
+SHA1-Digest: dGymiFuzekoGQDzdxnQh+NUqCHg=
+
+Name: org/jhotdraw/draw/action/SelectionColorChooserAction.class
+SHA1-Digest: 9V8a5L6keIrpsF0fYDMUPXiaqzc=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$QuaquaPropertyChangeHa
+ ndler.class
+SHA1-Digest: tQ0K0GVmChjcEi5JHz4i6XqFV8E=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $SetSelectedIndexAction.class
+SHA1-Digest: HZlb9Yeo111VHS8ZNBENkClYWcU=
+
+Name: org/jhotdraw/draw/action/images/createScribble.png
+SHA1-Digest: IWovE3O1C5eT9QcNJRtHv9/NZtA=
+
+Name: ch/randelshofer/quaqua/laf.txt
+SHA1-Digest: wdD1/zUP99uXnQqRlUxwVYutj8w=
+
+Name: ch/randelshofer/quaqua/images/Slider.eastThumbs.small.png
+SHA1-Digest: rOZQeMVRLf/DLyrsm9EfXwk1kOY=
+
+Name: org/jhotdraw/draw/action/UngroupAction.class
+SHA1-Digest: HoyajCMJhZtt+tvse+GMhcaNsBw=
+
+Name: org/jhotdraw/draw/action/images/createPolygon.png
+SHA1-Digest: a/vQtZZFkwSfDzQ0K7DWDN5FvsM=
+
+Name: ch/randelshofer/quaqua/images/Frame.iconifyIcons.mini.png
+SHA1-Digest: ifUnc506AEOsVWqZ+vJ+a4dCnfY=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheelChooser$1.class
+SHA1-Digest: QyK9Ov8OPwoJAa8yRTDMBL4Nshk=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$1.clas
+ s
+SHA1-Digest: ZVPcRaPRlhkwqzpIaqQ41GZvP3E=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.smallTog.hButtons.png
+SHA1-Digest: Don4MJLiCqYsp6Fw+JMWe90QdcM=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory$ContainerPopup.class
+SHA1-Digest: j2LUhXK6wIsL3VPX4DkMAC+YrYQ=
+
+Name: org/jhotdraw/draw/handle/FontSizeHandle$2.class
+SHA1-Digest: /8U5J2N34gJzVQO3wPYycbx3Wu8=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$1.class
+SHA1-Digest: EMZIBaifkPzYOb/VyfC/SnCdjNU=
+
+Name: net/n3/nanoxml/IXMLEntityResolver.class
+SHA1-Digest: KjMXjYGDt3kCDbSJTvFYI3rW/ck=
+
+Name: ch/randelshofer/quaqua/QuaquaButtonListener.class
+SHA1-Digest: /3mCzMhpMwBa4brrHhAhbe+oehs=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $1.class
+SHA1-Digest: r8wPEwT5rVDdgQI9XNNGf4cj8yY=
+
+Name: org/jhotdraw/draw/action/images/createEllipse.png
+SHA1-Digest: nVCeLpBGQiCUNpS0+KGVosL736c=
+
+Name: org/jhotdraw/draw/action/AttributeToggler.class
+SHA1-Digest: ix86OFKf3Hz09GjaUolB2exiIZM=
+
+Name: ch/randelshofer/quaqua/DefaultColumnCellRenderer.class
+SHA1-Digest: FavCdAKFsXu001Me0L3eujlbjoA=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$2.class
+SHA1-Digest: uZxV5vPl4XkguSPLwKTLTxsjaXQ=
+
+Name: ch/randelshofer/quaqua/Quaqua14ColorChooserUI.class
+SHA1-Digest: afnVWlMEQQV8m76Df1btOk3CTDg=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/util/ImageD
+ ecoder.class
+SHA1-Digest: Qisrj1UlAJ/e/SC15tWD1kYN2IY=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignEast.png.mno
+SHA1-Digest: JP6AA0mqeEtHimJ4jDuS/OfSEXI=
+
+Name: ch/randelshofer/quaqua/images/Tree.closedIcon.png
+SHA1-Digest: XYmtLq8QyNHMjFkT3qt6bvJ4C9o=
+
+Name: ch/randelshofer/quaqua/QuaquaHighlighter.class
+SHA1-Digest: ryVX0MyJd9Zl6iIo+qsa8zmmHaI=
+
+Name: org/jhotdraw/draw/action/AttributeToggler$1.class
+SHA1-Digest: rzMKInZRn0sHiz/IDJRzI1wngkU=
+
+Name: org/jhotdraw/draw/action/images/editCut.png
+SHA1-Digest: whgygDu7h5rmF/LhNN3JBsb8Zpc=
+
+Name: org/jhotdraw/draw/action/images/_notes/createArrow.png.mno
+SHA1-Digest: caMKin5AFJIkd8f16VuLUBLPxRQ=
+
+Name: ch/randelshofer/quaqua/JSheet$8.class
+SHA1-Digest: nB6yheXXfYThJ+bre4sGN3BsY4w=
+
+Name: org/jhotdraw/draw/action/images/fileOpen.png
+SHA1-Digest: uT5ATHPbj1EiEYB+JqSCG4xaf54=
+
+Name: org/jhotdraw/draw/action/images/attributeOpacity.png
+SHA1-Digest: j26qWsolOjJ70pKsgLY3dmZMu+Y=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.hThumbRight.png
+SHA1-Digest: 4xbxNG1xY6Cq35JD9JAtOJJoNNw=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/MenuBar.border.png
+SHA1-Digest: sPeg1jNte244qcEwmNjSFns/5i8=
+
+Name: org/jhotdraw/gui/datatransfer/CompositeTransferable.class
+SHA1-Digest: BwyTTHuXvOL0sgbzbZi3Q3bqWis=
+
+Name: ch/randelshofer/quaqua/QuaquaPopupFactory.class
+SHA1-Digest: uAe8sNptqHWdK9pMFL/H2cCnrA0=
+
+Name: org/jhotdraw/draw/action/images/editRedo.png
+SHA1-Digest: AgCLmwgMlh/sbVG1IRS66DtXhQM=
+
+Name: ch/randelshofer/quaqua/filechooser/WindowsFileSystemView.class
+SHA1-Digest: 7TdPkthmWGjDAd8WZTDsF8ANVyo=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/MenuBar.selectedBorde
+ r.png
+SHA1-Digest: 68cTw7kqzccqmzG5rkqpzFR7cwQ=
+
+Name: org/jhotdraw/draw/AbstractCompositeFigure$EventHandler.class
+SHA1-Digest: nwLiLkU5uGL9MdQbZtrxWeo+PnE=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Alia
+ sDirectoryNode.class
+SHA1-Digest: ISN0sZZ3JsUbmyCt8kzXv3TIWlk=
+
+Name: org/jhotdraw/gui/PlacardScrollPaneLayout.class
+SHA1-Digest: fLBRDQyrOsPl012b7z7NM4Hf7iw=
+
+Name: org/jhotdraw/app/SDIApplication$2.class
+SHA1-Digest: v7OehPLs37eeavLVRaFxUrNAb5s=
+
+Name: org/jhotdraw/draw/action/images/fileNew.png
+SHA1-Digest: DfRRbKO6YRup5uv7HsxPWEuVwxQ=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/BufferedImageHintKey.cl
+ ass
+SHA1-Digest: cBPAIOXgMr8h70AMfDMplPOkfEQ=
+
+Name: org/jhotdraw/draw/decoration/LineDecoration.class
+SHA1-Digest: BF3TcGIISNUlL1eBDjqOM0k3OfU=
+
+Name: ch/randelshofer/quaqua/QuaquaCheckBoxUI$PropertyChangeHandler.cl
+ ass
+SHA1-Digest: CaTO1GVzq+FzpjyCBcQb0qSdU5A=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$SouthEastHandle.class
+SHA1-Digest: zF72VE25DxFjTogFWzuhdOw43Jk=
+
+Name: ch/randelshofer/quaqua/images/ApplicationIcon.png
+SHA1-Digest: 7YC+ojpbwLsjKKN5PHfBKd3+Lto=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabTop.png
+SHA1-Digest: 8Vw1FPQObdNx8x/wlqRTJYIC7jE=
+
+Name: ch/randelshofer/quaqua/images/Frame.maximizeIcons.mini.png
+SHA1-Digest: fWRr93BilDn/WTsG2OYjG6WvjRI=
+
+Name: org/jhotdraw/draw/action/images/createLine.png
+SHA1-Digest: 2s8qyjAPPUuQSaG+8TFKfi4/108=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignSouth.png.mno
+SHA1-Digest: NwwYmMDjJKz/KxMfz8CX87asj0c=
+
+Name: org/jhotdraw/draw/connector/ChopBezierConnector.class
+SHA1-Digest: ZzZUTIUGyWIm9ArLA1emMcuCB24=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteMenuItemUI.class
+SHA1-Digest: 7Wc/qjMsTLhSr3dGLv67TgWmadI=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Node
+ TypeComparator.class
+SHA1-Digest: Xmk2hmkFJqyjxl2RerZRXMBOeHE=
+
+Name: ch/randelshofer/quaqua/colorchooser/Quaqua15ColorPicker$3.class
+SHA1-Digest: u6Y4BIPb/Psoc3/lRuGFq1s3wWY=
+
+Name: ch/randelshofer/quaqua/images/Toggle.center.borders.png
+SHA1-Digest: mekXDoIhAmIT8Vw64pATBVKmXgk=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.ver
+ tical.png
+SHA1-Digest: CnM5jtTdYTA7Qit3+7qpXPB9D4s=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Direct
+ oryComboBoxModel.class
+SHA1-Digest: ZJ872kFGK3zEa5POKFArnZug+Is=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.hThumbLeft.png
+SHA1-Digest: DPOfbtp1/W6f9LGZ4GHiONgF5Mo=
+
+Name: org/jhotdraw/draw/action/images/filePrint.png
+SHA1-Digest: 7v13t3IDhW+ptOam/shSKfox7nA=
+
+Name: org/jhotdraw/gui/JSheet$7.class
+SHA1-Digest: lVG1Y7ArBMFHgR/dZwZXomBfMQE=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$CloseAction.class
+SHA1-Digest: xpFk/h6pzIXPzvQ6Wq49wqQBrNA=
+
+Name: ch/randelshofer/quaqua/VisuallyLayoutableIcon.class
+SHA1-Digest: ubvf2JoEMeWQ78Pm6VxLEmBhTDQ=
+
+Name: org/jhotdraw/draw/action/images/moveNorth.png
+SHA1-Digest: Q346b9bT59dcQH17zWlyd+5sEVw=
+
+Name: org/jhotdraw/draw/handle/TransformHandleKit$SouthEastHandle.clas
+ s
+SHA1-Digest: dq0VelZiYmJ4LWH5FbDLgA+7Axw=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxUI$GlowFocusHandler.class
+SHA1-Digest: BNuLOykfC4pq7251UrS/qYru0yw=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuBarUI.class
+SHA1-Digest: KULOPDVMSyq0dKV4o7F8RJGNmuY=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderBorder$1.class
+SHA1-Digest: UfbDa8U9crY/RFmtOXq6MCmxDg0=
+
+Name: org/jhotdraw/app/action/edit/DuplicateAction.class
+SHA1-Digest: 7NWdjzmXsbcogqcWeaJxN/8DJA8=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabRight.DS.png
+SHA1-Digest: 7V+mn2/WU65dzzcTpOXTy6Kqfeo=
+
+Name: org/jhotdraw/draw/BezierFigure$1.class
+SHA1-Digest: zyyYzfw8rYKrphpf+kGgkI556rQ=
+
+Name: ch/randelshofer/quaqua/Labels_en.properties
+SHA1-Digest: 1nBLyt6ASpnpETEovIKxkt3v8UI=
+
+Name: ch/randelshofer/quaqua/colorchooser/ICC_CMYKColorSliderModel.cla
+ ss
+SHA1-Digest: B23Qu6xbxEZpTvLl2Uk1QgNOKE0=
+
+Name: ch/randelshofer/quaqua/util/ArrayUtil.class
+SHA1-Digest: HFqBCiSMgH1pveUYbwWq454Ocms=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.titlePaneBorders.ver
+ tical.mini.png
+SHA1-Digest: dcp+m01wqQmnJlVGAhwg88z9/mo=
+
+Name: org/jhotdraw/draw/decoration/AbstractLineDecoration.class
+SHA1-Digest: Qllv3IWvuLEd9tM1pTzV2HOt7kM=
+
+Name: org/jhotdraw/app/action/edit/DeleteAction$1.class
+SHA1-Digest: 3vmCGDQ1V9PmLPx0BESiTeNIDjQ=
+
+Name: ch/randelshofer/quaqua/filechooser/FileSystemViewFilter.class
+SHA1-Digest: yr6+oFC5EPluFJeuJEhoz7S6wwY=
+
+Name: org/jhotdraw/draw/action/AlignAction$South.class
+SHA1-Digest: QkLifBVODpezkc5J0lJo4be2Aso=
+
+Name: ch/randelshofer/quaqua/JBrowser$ColumnKeyListener.class
+SHA1-Digest: Gs6caImfgFmmXRuNcO9a3Kec438=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$OptionDialogBorder.class
+SHA1-Digest: Ci+slbMEo5Nh98zxaGJx418itCk=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$Actions.class
+SHA1-Digest: QsH+uJXg+MVrl8sYaY/bKGJAhnk=
+
+Name: ch/randelshofer/quaqua/QuaquaOptionPaneUI$4.class
+SHA1-Digest: LZp75L3SI7HX6p+jyg8xLm10AK4=
+
+Name: org/jhotdraw/gui/datatransfer/InputStreamTransferable.class
+SHA1-Digest: GKfYesKSiUbwznOEIA8qPXNEGPg=
+
+Name: ch/randelshofer/quaqua/images/Button.helpIcons.png
+SHA1-Digest: +CDYEClxDN31yGvOHQFNx+MwSxQ=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.crayonsIcons.png
+SHA1-Digest: HD4CQZzNQQO/KicVz3kbKlikRm8=
+
+Name: ch/randelshofer/quaqua/QuaquaTableUI.class
+SHA1-Digest: v41o9D6OzJB8fbTtqXvow32tgME=
+
+Name: ch/randelshofer/quaqua/util/SwingWorker$1.class
+SHA1-Digest: +dnGB/uKiNMOvUE0tDNyK1s6jTg=
+
+Name: ch/randelshofer/quaqua/QuaquaEditorKit$DeleteNextWordAction.clas
+ s
+SHA1-Digest: TKq1vVqJ5Z6XWzjJ/2JQMi9XtJU=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderModel$1.class
+SHA1-Digest: p/W8yfjV9V9TRcCbzySP1CT4JFw=
+
+Name: org/jhotdraw/draw/action/images/attributeFont.png
+SHA1-Digest: LA43cKX/ERkVmySWdvehlF7dviU=
+
+Name: ch/randelshofer/quaqua/QuaquaLabelUI.class
+SHA1-Digest: rGOJlBJgn6imZcWX5Qk3Kksc34M=
+
+Name: ch/randelshofer/quaqua/border/CachedImageBevelBorder$UIResource.
+ class
+SHA1-Digest: guq/GqdWaDtQUqMaBsoTrDqFX7g=
+
+Name: ch/randelshofer/quaqua/icon/ButtonStateIcon.class
+SHA1-Digest: 6ZdDIj8nGvUZJ9esrD/xNPU1GEY=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$SystemMenuBar.class
+SHA1-Digest: /zKGE5Gqz3S3qJMCLQhMCXd3BeQ=
+
+Name: ch/randelshofer/quaqua/util/BinaryPListParser$BPLDict.class
+SHA1-Digest: 64htBIlVQacQ8QcJ1VgN5gfR2qc=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Direct
+ oryComboBoxAction.class
+SHA1-Digest: eE8tJjK1RkNAaJYWETZGPYO3tQA=
+
+Name: org/jhotdraw/app/action/images/editPaste.png
+SHA1-Digest: 5q+Bg9oMO8tM6bbRfUVmV0HfH8s=
+
+Name: org/jhotdraw/gui/JSheet$9.class
+SHA1-Digest: g8SFCfz86ofDgFG1IwjLfJwxHs4=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderUI$CSUIPropertyCh
+ angeHandler.class
+SHA1-Digest: ZuRjS1MZia+qZmcvP7+MdBjd6NA=
+
+Name: ch/randelshofer/quaqua/images/TextField.border.png
+SHA1-Digest: Bl5UV5TT3mP59ApPpz3Y3MFMv94=
+
+Name: org/jhotdraw/gui/event/SheetListener.class
+SHA1-Digest: bUEJpEErVYW37DxbqTJ8nTeC1P8=
+
+Name: org/jhotdraw/app/action/file/LoadFileAction$1.class
+SHA1-Digest: 01qHSpDwYhTtnFVsazM74VjDVSc=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserPreviewPanel.cla
+ ss
+SHA1-Digest: SMco8qkcaMLID3oYf2f83eAjW2g=
+
+Name: ch/randelshofer/quaqua/osx/OSXImageIO.class
+SHA1-Digest: ZygQlgPUR19NW7cPgLLR4u5y9v0=
+
+Name: org/jhotdraw/draw/action/images/_notes/alignVertical.png.mno
+SHA1-Digest: 10quCIRfZdu4P20oOOVe+/gz57w=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$FrameListener.class
+SHA1-Digest: mpDVZB9JVKToVaThArbiI3ctlP4=
+
+Name: org/jhotdraw/draw/action/images/_notes/editPaste.png.mno
+SHA1-Digest: ZGjzcA1lF7ctYq6xZU2bMNgyITc=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/FilePreview.class
+SHA1-Digest: 5mweW6wyuqXttF+Xiqr0OPLpSkc=
+
+Name: org/jhotdraw/app/action/window/TogglePaletteAction$1.class
+SHA1-Digest: KbZ1fiUofhySZOFKb4WTv+mjpeU=
+
+Name: org/jhotdraw/draw/handle/BezierNodeHandle$1.class
+SHA1-Digest: y7c5ov7D+u8W2RGWvlVyqYxeXQQ=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Tree.closedIcon.png
+SHA1-Digest: BXVLNUFqR7J2nsmOPbME/FUbQ1c=
+
+Name: org/jhotdraw/app/action/app/ExitAction$1.class
+SHA1-Digest: 7hjt2qHxMrmBV8AlNyXW3TYulCg=
+
+Name: org/jhotdraw/draw/connector/ChopRoundRectangleConnector.class
+SHA1-Digest: hIKlXwh6wmYvcabq0eZa/P7/eJI=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreePageAction.class
+SHA1-Digest: 4P/INZqZKTsOlTuOhXAKTwPrRpc=
+
+Name: ch/randelshofer/quaqua/images/Toggle.borders.png
+SHA1-Digest: 0ZO06BdOTrzwzCJGB4PjHJexhJU=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Scre
+ enCompositeContext.class
+SHA1-Digest: nBAh5hJD4O2FXLLFvoiNinfzW6g=
+
+Name: org/jhotdraw/xml/DOMOutput.class
+SHA1-Digest: 4XcBR150mY56j8EMnRk6vW/p5BE=
+
+Name: ch/randelshofer/quaqua/util/SwingWorker.class
+SHA1-Digest: QSXDL15r0XFjZlDdejxJZT0WPpM=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarToggleButtonBorder.class
+SHA1-Digest: 7oJEh3atESL34jg21/9WfgZOTOw=
+
+Name: ch/randelshofer/quaqua/QuaquaEditorPaneUI.class
+SHA1-Digest: sg+QKlPXwHviRsLsDWU5zOQ9hvY=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabBottom.I.png
+SHA1-Digest: HbG3Kw8wX+2Fd6STLip+6SmpjjA=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.vThumbBody.png
+SHA1-Digest: 9QAb44wGStzLNG2mLIZiUmZeKdA=
+
+Name: ch/randelshofer/quaqua/JSheet$5.class
+SHA1-Digest: HpZbVigTpl7ONu+Sqgn+JYb1q7o=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.upArrow.png
+SHA1-Digest: EqAEFtNFnfiEp6UsskW6Iuir/0s=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxEditor.class
+SHA1-Digest: d4RTfABPNH2rLaji3FFrc5J/dUQ=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction$1.class
+SHA1-Digest: RX40sT3n8VKBICpjuGLYy6b4lrI=
+
+Name: ch/randelshofer/quaqua/BrowserCellRenderer.class
+SHA1-Digest: HGPOSeplgsLmik9sNqQf/omaey0=
+
+Name: org/jhotdraw/draw/handle/BezierNodeHandle$2.class
+SHA1-Digest: +mkLlI161IkeWb+xukzlUPhIaxw=
+
+Name: org/jhotdraw/undo/UndoRedoManager.class
+SHA1-Digest: 2UiQ0BG4jo1RNt+6d3z4ORG3SVY=
+
+Name: org/jhotdraw/app/action/file/OpenFileAction$2.class
+SHA1-Digest: V1+3EAhF0x1At+wN4Z0wF76YUn0=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$4.class
+SHA1-Digest: F6fTfCdIYEu4suTjkHxma2rJPYs=
+
+Name: org/jhotdraw/draw/action/images/moveToFront.png
+SHA1-Digest: 86pXEG8MPbNc8FSdoAGoXwqpbUA=
+
+Name: org/jhotdraw/draw/action/images/attributeFontUnderline.png
+SHA1-Digest: Rio7rs44AhIOchw7hirRJp3LhTk=
+
+Name: org/jhotdraw/gui/fontchooser/DefaultFontChooserModel$UIResource.
+ class
+SHA1-Digest: UCz7ZsPiTayRjaBXevllGe1n79E=
+
+Name: org/jhotdraw/geom/BezierPath.class
+SHA1-Digest: 64aVu85m9koL3KA6b38e3E3ERxo=
+
+Name: org/jhotdraw/draw/action/images/createCurvedConnection.png
+SHA1-Digest: IToh+MlOwZhS2lO62F2jfubvhbM=
+
+Name: ch/randelshofer/quaqua/images/Slider.verticalTracks.png
+SHA1-Digest: 9EPJUaI7X8b7t4CDpwZ7gU1d5Ag=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$6.class
+SHA1-Digest: vkEp/kRJdtdszgsEP1QiBB52nbQ=
+
+Name: ch/randelshofer/quaqua/QuaquaDefaultTableCellRenderer.class
+SHA1-Digest: ih6qhpFcdiv5f339S2vTE3IfEL0=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$FrameBorder.class
+SHA1-Digest: y+DlmuCgCUhULcq1u36cuWQS4E0=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.wrapBarsTop.png
+SHA1-Digest: TxFXxaY+k2idGUCVI3hd5fpKsJg=
+
+Name: ch/randelshofer/quaqua/Quaqua14PlacardButtonBorder.class
+SHA1-Digest: L05Jk4bslcroRQTBHBljjLqqzFM=
+
+Name: ch/randelshofer/quaqua/images/Frame.resize.png
+SHA1-Digest: +tEfHKZV2p3iN1lXauqepTG585I=
+
+Name: ch/randelshofer/quaqua/snow_leopard/filechooser/OSX16SnowLeopard
+ FileSystemView.class
+SHA1-Digest: NCoFDwopmawrk3bnZeeP1vVUIHY=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/Any2LsRG
+ BRed.class
+SHA1-Digest: Vyws2a1VqWAe59lwMBeYtxTseXg=
+
+Name: ch/randelshofer/quaqua/QuaquaComboPopup$1.class
+SHA1-Digest: 2V/NxKZYwMDVIstCB2eYYy0yyQc=
+
+Name: org/jhotdraw/beans/WeakPropertyChangeListener.class
+SHA1-Digest: UUbUlDg5e2QHH565aX4rtYfOQQQ=
+
+Name: ch/randelshofer/quaqua/images/Slider.southThumbs.png
+SHA1-Digest: 2urQIbGkoX673e9h4/EjVDMyCXE=
+
+Name: org/jhotdraw/draw/action/images/selectionUngroup.png
+SHA1-Digest: lF4qdyJRIl6g67KPVy8uhMCIVtU=
+
+Name: ch/randelshofer/quaqua/images/Slider.verticalTrack.png
+SHA1-Digest: CBE/XES44eCRc+u7oLI1j8a3+Ww=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/FileView.directoryIco
+ n.png
+SHA1-Digest: BXVLNUFqR7J2nsmOPbME/FUbQ1c=
+
+Name: ch/randelshofer/quaqua/QuaquaToggleButtonUI.class
+SHA1-Digest: rbXwXa0u0nJ2DX7MMiqAYGi88Qk=
+
+Name: ch/randelshofer/quaqua/util/CachedPainter.class
+SHA1-Digest: WgxhwDvdIfBTAPkL0+ENNxNB/7s=
+
+Name: org/jhotdraw/app/action/app/OpenApplicationFileAction$1$1.class
+SHA1-Digest: 3anyKMykuSeNNnnl0B5zC/bbjwY=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarTabButtonBorder.class
+SHA1-Digest: RhMUl6K/WndyI/Bo+PZxhpYeJ0w=
+
+Name: org/jhotdraw/draw/event/SetBoundsEdit.class
+SHA1-Digest: J+h95SYi1gBnlZSPH2eXcysuwD4=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Filter
+ ComboBoxModel.class
+SHA1-Digest: O5i0enBvC8xgYZg3vCYqjolecJs=
+
+Name: org/jhotdraw/draw/action/images/_notes/createCurvedConnection.pn
+ g.mno
+SHA1-Digest: abnQn5F0UgB7FXNtkN7xMhuZni0=
+
+Name: org/jhotdraw/app/action/file/LoadRecentFileAction$1.class
+SHA1-Digest: 9t8PXWniC4SZzaKad6JNHaVhJ6A=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/AreaOfInterestHintKey.c
+ lass
+SHA1-Digest: ivEgEetHcqPX1XapW2+Q1wSRXFc=
+
+Name: org/jhotdraw/app/action/file/OpenFileAction$1.class
+SHA1-Digest: bN2wWyUd+J7DeMffv6ILEPUtp3M=
+
+Name: org/jhotdraw/app/action/file/OpenRecentFileAction$1.class
+SHA1-Digest: rmJyTi8AHBLkKkWwVecsOuoDNrI=
+
+Name: org/jhotdraw/gui/event/SelectionComponentRepainter.class
+SHA1-Digest: WwdoDHxfQDERR9LAZ7L7E2eMBL8=
+
+Name: org/jhotdraw/draw/action/FontChooserHandler.class
+SHA1-Digest: 71h0NG/3HxQEjxmFyftNJouxfw4=
+
+Name: org/jhotdraw/draw/tool/SelectionTool.class
+SHA1-Digest: px+v7NHeYZMHGFKctQ6VndP5EFo=
+
+Name: org/jhotdraw/draw/Labels.properties
+SHA1-Digest: qVuitHlbWDi9fZcvYLK+UjQAlAo=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBChooser.class
+SHA1-Digest: +opob6KgLpcFyrk5rou+ZpnRVeM=
+
+Name: org/jhotdraw/draw/tool/DelegationSelectionTool$1.class
+SHA1-Digest: WQvZ6oe89kICW6kucM472yTS/6U=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$WarningDialogBorder.class
+SHA1-Digest: mAK0r/M8NuPk1fssTteXMYGnAn4=
+
+Name: org/jhotdraw/samples/draw/DrawingPanel.class
+SHA1-Digest: P8jRORauZzGEnRMfhjbiBLv3/P0=
+
+Name: org/jhotdraw/draw/Drawing.class
+SHA1-Digest: mDHp3uUGfFfWA1fcWvJ7DXlrd0g=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$WestHandle.class
+SHA1-Digest: hmR4Pos/pOQUV4yW1gq78LjL5Dk=
+
+Name: ch/randelshofer/quaqua/images/Spinner.north.png
+SHA1-Digest: p/gBerFH20ZzoyZDuN/Rb8T443c=
+
+Name: ch/randelshofer/quaqua/QuaquaTextComponentPopupHandler.class
+SHA1-Digest: YtNrUz4IhM4St7snNpFxcyT8VLY=
+
+Name: net/n3/nanoxml/IXMLReader.class
+SHA1-Digest: p3jN0vrq7pm+BM0/m7RSnfQz2+4=
+
+Name: org/jhotdraw/draw/AbstractCompositeFigure.class
+SHA1-Digest: pgy7xGEB8ky3HqchyAuTOHDRcbw=
+
+Name: org/jhotdraw/app/SDIApplication.class
+SHA1-Digest: plknUyAMHwhLYjYor3wgsqdM1Vc=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$Alia
+ sItem$1.class
+SHA1-Digest: pflFecMIqUOkqxXKa89IDki+3wc=
+
+Name: ch/randelshofer/quaqua/colorchooser/PaletteListModel.class
+SHA1-Digest: +AA+M0DtRtUKx91FHJ+UiG6tCl8=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet.class
+SHA1-Digest: IikC8yTRl2OphQ3VGTJCVLk9LhE=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuPainter$PlaceholderIcon.class
+SHA1-Digest: hsinXmjh9Pk6JnojUkjT+dr1mUk=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$1.cl
+ ass
+SHA1-Digest: odwpP1t8qtsFSbbLBarQMjM9hms=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Ligh
+ tenCompositeContext.class
+SHA1-Digest: p5/o6W3UqXG2GgHEuK8Gzo+Wbrw=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.small.hThumbRight.png
+SHA1-Digest: uRQ074qno4z3oqGZHh8KUNNqYns=
+
+Name: ch/randelshofer/quaqua/images/ScrollBar.sep.vButtons.png
+SHA1-Digest: N6yx0jY14o7nlYMYBaM5qcB5pug=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Dark
+ enCompositeContext.class
+SHA1-Digest: Xy7nydGWpvcuWF2Qd1rJsKv3roI=
+
+Name: ch/randelshofer/quaqua/datatransfer/CompositeTransferable.class
+SHA1-Digest: Cf08NVuFyHTmGe8E+JYMCsniLdk=
+
+Name: org/jhotdraw/app/action/file/NewFileAction$1.class
+SHA1-Digest: hmpxA4MG2AE3Se2EIAYG3NmcIqU=
+
+Name: org/jhotdraw/draw/event/CompositeFigureEdit.class
+SHA1-Digest: XtH3h9V0hylwqSdWvD1OeAL2Kk0=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxEditor$1.class
+SHA1-Digest: AH5YXU/SLKboqtCQDlANsbXIdN4=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheel$1.class
+SHA1-Digest: oJ3A1F/woYQkK4SWkWlSYuHfWsE=
+
+Name: ch/randelshofer/quaqua/images/OptionPane.errorIcon.png
+SHA1-Digest: wZWf5o9U3Oz0L+LG8nBCXQtWT2A=
+
+Name: ch/randelshofer/quaqua/util/CachedPainter$Cache.class
+SHA1-Digest: AY5pnzdm9Cp4kQwzm/vxEbi4fc4=
+
+Name: ch/randelshofer/quaqua/images/TextField.searchBorders.png
+SHA1-Digest: uoXErNXXkY8XiRIrFyBSDMmOC/E=
+
+Name: org/jhotdraw/draw/tool/TextAreaEditingTool.class
+SHA1-Digest: CAFanGqi26GUoD2KM/FGEsSso5g=
+
+Name: org/jhotdraw/gui/JSheet$2.class
+SHA1-Digest: GBHi0KPhBvp0hmmBv9BKbgqFjjA=
+
+Name: org/jhotdraw/xml/DOMStorable.class
+SHA1-Digest: WaF1y6Ohk3W7iboGIWTlH+8Sn7E=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardFileChooserUI$Direct
+ oryComboBoxAction.class
+SHA1-Digest: MQuXaP3WSlM9Mq5TuKZs2PQqTQA=
+
+Name: net/n3/nanoxml/ContentReader.class
+SHA1-Digest: 5YnZJbtZqxG7DFLm7Tjfi1jX1OU=
+
+Name: ch/randelshofer/quaqua/QuaquaEditorKit.class
+SHA1-Digest: Gap6Hi8f36zFaoucGm7No9LaD1s=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxEditor$UIResource.class
+SHA1-Digest: k8iNNeNxdqjtVDu1Fdnp1ztN+mI=
+
+Name: org/jhotdraw/undo/Labels_de.properties
+SHA1-Digest: 5XUHVlAZkN+/0HG9qzrNJNb7Pq8=
+
+Name: ch/randelshofer/quaqua/images/Frame.closeIcons.small.png
+SHA1-Digest: 5n9BPxv0FYUkL/XZaSMuqOMKcX8=
+
+Name: ch/randelshofer/quaqua/images/Frame.closeIcons.png
+SHA1-Digest: niWwR/xfR5vPxCJL7xCn26o2ekY=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $PreviousAction.class
+SHA1-Digest: o71QxzYt/xLhm0KUproIBuZX+o0=
+
+Name: org/jhotdraw/draw/tool/DragTracker.class
+SHA1-Digest: czMCvmgmaPeu1KuDUH2wwllf1vw=
+
+Name: ch/randelshofer/quaqua/images/Slider.northThumbs.png
+SHA1-Digest: RUUE+8UaUj793221TRd2pgGiYjI=
+
+Name: ch/randelshofer/quaqua/images/OptionPane.questionIcon.png
+SHA1-Digest: B+TWLrm9JfVvEh2P3/JfaFGNvow=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.imagePalettesIcons.pn
+ g
+SHA1-Digest: XHzQlwbOhr67u1KpbuuNlfyG7Fo=
+
+Name: org/jhotdraw/gui/JPopupButton$ActionPropertyHandler.class
+SHA1-Digest: zg/a7kZy46pQHW7etUKB1dR3Mbg=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Sideba
+ rSelectionListener.class
+SHA1-Digest: aYB5Tc2WLiqiqq2lqIK5Uj0GFUg=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.texturePalettesIcons.
+ png
+SHA1-Digest: zdBM9NHUZouxh/Wq/FI6gywogrg=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxButton$1.class
+SHA1-Digest: mZGAtytjNDDeDa/lou4Ilr3gyK4=
+
+Name: ch/randelshofer/quaqua/leopard/QuaquaLeopardMenuSelectionBorder.
+ class
+SHA1-Digest: 0GY8dZEuWl1uOqKQ1EwsvzcxrA4=
+
+Name: org/jhotdraw/draw/action/images/attribute.color.colorChooser.png
+SHA1-Digest: rDOvuk/86z/Rhqjr7QVdGdamLkE=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$1.cl
+ ass
+SHA1-Digest: fl/w52ORZN+Ca3U9vVDsdpf49Fw=
+
+Name: ch/randelshofer/quaqua/DefaultColumnCellRenderer$UIResource.clas
+ s
+SHA1-Digest: 7aWv6pl2jJFE+vCjlfl4eHF+1fA=
+
+Name: ch/randelshofer/quaqua/Quaqua13ColorChooserUI$PropertyHandler.cl
+ ass
+SHA1-Digest: n1AtV1fCAFejzViyznhyYl2J/zU=
+
+Name: ch/randelshofer/quaqua/filechooser/OSXCollator.class
+SHA1-Digest: QbJfO1eRsnQxhkR7K1KvF/DXjew=
+
+Name: org/jhotdraw/app/action/images/editUndo.png
+SHA1-Digest: U3KtHWEacNeJKwyvIuVdca0qmwY=
+
+Name: ch/randelshofer/quaqua/subset/QuaquaLeopardFileChooserLAF$1.clas
+ s
+SHA1-Digest: 4hgtztBumjq0Jl0jDzVGzEp0Ono=
+
+Name: org/jhotdraw/draw/AbstractDrawing.class
+SHA1-Digest: +Wvdiy8Y/7We0ioorDChIMiK3x4=
+
+Name: org/jhotdraw/draw/action/images/actions.png
+SHA1-Digest: iSANAg/7qXW3PPI1dJdif4itJik=
+
+Name: ch/randelshofer/quaqua/icon/ButtonFocusIcon.class
+SHA1-Digest: Lby88+Quz0UzuDbGcpU5b+oKews=
+
+Name: ch/randelshofer/quaqua/images/Tree.collapsedIcon.png
+SHA1-Digest: gG4UNborEDDGTyo5WSnIn7DDu1U=
+
+Name: ch/randelshofer/quaqua/images/Slider.southThumbs.small.png
+SHA1-Digest: /qc4jCybnSG1mAtivtV6JKB1ab4=
+
+Name: org/jhotdraw/app/action/window/MaximizeWindowAction.class
+SHA1-Digest: x7BMPw7UogmRji/FHzDY1ggkmf4=
+
+Name: org/jhotdraw/app/osx/OSXPaletteHandler$1.class
+SHA1-Digest: YETKV0CrTUVr0uWaxTPLT4mooy0=
+
+Name: org/jhotdraw/draw/connector/ChopDiamondConnector$1.class
+SHA1-Digest: oTrYDbHQbd/lSj6RvURtqR+/3iY=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$SwingDragGes
+ tureRecognizer.class
+SHA1-Digest: hsJUnN1mPKrTMWfGoUl1lUQCYNw=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/codec/tiff/TIFFLZ
+ WDecoder.class
+SHA1-Digest: FlgYparz8vgiUMRxNO2MUmZJGY8=
+
+Name: ch/randelshofer/quaqua/QuaquaKeyboardFocusManager.class
+SHA1-Digest: 7sMHWMNy+TWnSA37aqpEn9UBatQ=
+
+Name: ch/randelshofer/quaqua/Quaqua14SpinnerUI$ArrowButtonHandler.clas
+ s
+SHA1-Digest: aPhE+n85zDVJ7Xe+yn7WKQUsvoQ=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokePlacement.png
+SHA1-Digest: iQ4hzKjrR9YQ0BmmoLNxeYb5NXU=
+
+Name: org/jhotdraw/draw/TranslationDirection.class
+SHA1-Digest: EoVSno7T4ZcvhRqCAp1MrqXUuOo=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Alia
+ sDirectoryNode$1.class
+SHA1-Digest: hjKcdCKTctS+3nTj5huAjqHQczQ=
+
+Name: ch/randelshofer/quaqua/Quaqua14RootPaneUI$1$1.class
+SHA1-Digest: hsJeR5cx75c8dITo/CZL9AQOvkw=
+
+Name: org/jhotdraw/app/action/file/ClearFileAction.class
+SHA1-Digest: RTXWtqLJYLCrbLqIkQdXcgf99UU=
+
+Name: ch/randelshofer/quaqua/images/FileView.computerIcon.png
+SHA1-Digest: Uxn+Wp359oZqR2FjR47AUlYqOdc=
+
+Name: org/jhotdraw/app/AbstractApplication$2.class
+SHA1-Digest: lG9HCDPEW/Xq7sYi91Rdw6sHHag=
+
+Name: org/jhotdraw/draw/action/images/_notes/selectionUngroup.png.mno
+SHA1-Digest: xQ0BiHKmPK2ERU22f1HvxyNtw4k=
+
+Name: org/jhotdraw/draw/connector/AbstractConnector.class
+SHA1-Digest: itlkeTrdSIrx5u2O7C5AUKHTt6A=
+
+Name: ch/randelshofer/quaqua/QuaquaViewportUI$1.class
+SHA1-Digest: 4kNwSlNc6AM5VuHDDpRzYywRaXI=
+
+Name: org/jhotdraw/draw/AbstractConstrainer.class
+SHA1-Digest: kuoizONRMn3/Id2LcQfv9RAjFac=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser$5.class
+SHA1-Digest: 4fcpfPb9gw97gcU0wpNUxfVL/L8=
+
+Name: org/jhotdraw/draw/event/AttributeChangeEdit.class
+SHA1-Digest: G6AoaVieKZkjbB+1ym3j27MlOlg=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollBarUI$QuaquaScrollListener.cl
+ ass
+SHA1-Digest: JJfU+swB6x0B4VINsVgvZGLuxdQ=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$XorC
+ ompositeContext.class
+SHA1-Digest: 4Z2GU+/bM2SZ7o2lC1l/LJuLtOk=
+
+Name: ch/randelshofer/quaqua/filechooser/QuaquaFileView.class
+SHA1-Digest: StKEQKNsA4Vf1lS9exKbOm7+Oto=
+
+Name: ch/randelshofer/quaqua/images/Button.small.borders.png
+SHA1-Digest: KfbrsC9LvQUt8qTEB6P2gjTMCmc=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/FileView.fileIcon.png
+SHA1-Digest: V8W8ZbPYhlqvVJKIzp+mP4Pf1R0=
+
+Name: org/jhotdraw/gui/plaf/palette/PaletteFontChooserUI$FontChooserHa
+ ndler.class
+SHA1-Digest: oNvs4oCnxE8vZPoF7n8qCVVHwLQ=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.vertical.mini.png
+SHA1-Digest: q9P8gdJMryDE8928Bc3X2evyPXo=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$Handler.class
+SHA1-Digest: SyGgZjyorng349cn6I396zYEoKk=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$1.class
+SHA1-Digest: sntboPgQSicj1kFEUav4C899a6k=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$ToolButtonListener.class
+SHA1-Digest: ij97TbfJGOYUDDUMkDYsekWiADU=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeWidth.png
+SHA1-Digest: NDyv9o5PJWpk4lEaIPWAUUEAKNo=
+
+Name: ch/randelshofer/quaqua/QuaquaRootPaneBackground.class
+SHA1-Digest: CtgEfzn/CuEC6KaWBb522sXqYkQ=
+
+Name: org/jhotdraw/app/action/file/OpenRecentFileAction$1$1.class
+SHA1-Digest: SVeKvtbPeD49QKi9/2oLAF06eYc=
+
+Name: org/jhotdraw/draw/tool/CreationTool.class
+SHA1-Digest: UQfdP0NWYIuGnuVpTlPkqW71gjs=
+
+Name: org/jhotdraw/draw/action/SelectSameAction.class
+SHA1-Digest: eX7JbPK0lUbbGLNZ/vxyXO1pkZQ=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeDashes.png
+ .mno
+SHA1-Digest: LiH07t/wZ5QJL+fBKAFFCuuLE3Q=
+
+Name: org/jhotdraw/draw/AttributeKey$1.class
+SHA1-Digest: cCfACSV7EUx/hStOXvgy6hKGnK0=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$Handler.class
+SHA1-Digest: pdYrHa+/r49rlHLUCWMHWUwkbqA=
+
+Name: org/jhotdraw/draw/action/images/alignWest.png
+SHA1-Digest: KC3H3YGLWmDATfQWyT0ZH9uXANo=
+
+Name: org/jhotdraw/draw/event/FigureAdapter.class
+SHA1-Digest: YoXPm8vcQ4OUjcymVd+jz5l26hU=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Mult
+ iplyCompositeContext.class
+SHA1-Digest: ohNYT/r+Tgv+ZvvCFJRslHoIRVU=
+
+Name: org/jhotdraw/gui/JPopupButton$1.class
+SHA1-Digest: iFlCsOcds7vgHKU2TGKtvqoN9u0=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/MultipleGradientPaint$C
+ ycleMethodEnum.class
+SHA1-Digest: +SvFMXp2MwtMcbh6EthPRTCz2r4=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$2.class
+SHA1-Digest: u0PoL4Wvdc7MqDJDJpUUMDfu5fs=
+
+Name: ch/randelshofer/quaqua/leopard/Quaqua15LeopardLookAndFeel.class
+SHA1-Digest: qhfxMCu9eUOwx9zqL5MYciAZbOs=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI.class
+SHA1-Digest: 9LE4boCVGv84iuHWCmVwP+fVqsY=
+
+Name: org/jhotdraw/draw/action/AlignAction$North.class
+SHA1-Digest: FfXVxk38Klogbz5rNFhM9OrpPuA=
+
+Name: ch/randelshofer/quaqua/Quaqua14SpinnerUI.class
+SHA1-Digest: aTMi5/iIXwRrsN8MIiQ7nZQ7u2Q=
+
+Name: ch/randelshofer/quaqua/QuaquaEditorKit$DeletePrevWordAction.clas
+ s
+SHA1-Digest: yZz2Ija4sEJf5pR/qcocQh7gclY=
+
+Name: net/n3/nanoxml/XMLEntityResolver.class
+SHA1-Digest: MOHqGwkxlfjbmDgF8AuQfJTga+8=
+
+Name: org/jhotdraw/app/action/app/ExitAction$3.class
+SHA1-Digest: Bo07yxMu00O1yHaLSg+wv11RYEA=
+
+Name: org/jhotdraw/draw/event/TransformEdit.class
+SHA1-Digest: lROzu4uSlhF2laBt2y/lklZR6lI=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.wrapBarsLeft.png
+SHA1-Digest: O1UBVxb8VSlFKqDIvu+vQXcJsxc=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorSliderUI.class
+SHA1-Digest: 7jhRQ1jT5rYGs0d9iDIEyLLdzws=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser.class
+SHA1-Digest: VD3OQeew78w81yn0tvXyUsj64wE=
+
+Name: ch/randelshofer/quaqua/images/Frame.vTitlePane.small.png
+SHA1-Digest: rHeLu6TuuRTx+x8LHeBzqNyhN1Y=
+
+Name: ch/randelshofer/quaqua/images/FileChooser.newFolderIcon.png
+SHA1-Digest: XYmtLq8QyNHMjFkT3qt6bvJ4C9o=
+
+Name: ch/randelshofer/quaqua/QuaquaToolBarUI$1.class
+SHA1-Digest: i2wyxhu1YjjJlcqpTCeKDOeoBWM=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.sideBar.icons.png
+SHA1-Digest: v5bKb5zADdecqItMtBekgH+8Fws=
+
+Name: org/jhotdraw/draw/tool/TextAreaEditingTool$1.class
+SHA1-Digest: z00+V540kzbTzKseRUeWSLXtuf4=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$Node
+ .class
+SHA1-Digest: GsQMidmWQVtNORWwD0feiTdbrjo=
+
+Name: ch/randelshofer/quaqua/border/ButtonStateBorder.class
+SHA1-Digest: NS04qiDx5VAEnyAVMuEe5u2yalY=
+
+Name: org/jhotdraw/app/action/app/PrintApplicationFileAction$1.class
+SHA1-Digest: T4tE4kqKOws59QuGULBFpei4ZUc=
+
+Name: org/jhotdraw/draw/action/images/spacerIcon.png
+SHA1-Digest: Gx5aKO0eV9GPY1TGc6+RRakoznc=
+
+Name: ch/randelshofer/quaqua/images/TableHeader.border.png
+SHA1-Digest: YIQZjgU3ZFH0+E2Qjk1mdL0mFNY=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$Scre
+ enCompositeContext_INT_PACK.class
+SHA1-Digest: XQnDA5Spavn0iWowKsv54POpbDE=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$QuaquaTreeCellRenderer.class
+SHA1-Digest: VV87wpHIB7NDSBJ8tS2k5hEbymo=
+
+Name: ch/randelshofer/quaqua/panther/filechooser/SidebarListModel$Alia
+ sItem.class
+SHA1-Digest: mhTd0t6r1OH0nsyQMc/9A1Caitw=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $QuaquaMouseHandler.class
+SHA1-Digest: LTwzQ3bfwG7hOdppPpbgskU4L1k=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$6.class
+SHA1-Digest: lQOFhS0tOS41HP+FOvIrEZKWMc4=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$TitlePaneLayout.class
+SHA1-Digest: o2KEU4hsipMyOfqerkBsg06ZkBA=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeStrokeJoin.png.m
+ no
+SHA1-Digest: a2xVtmffF3VhLGg0iF0EnTbm1Xg=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeCap.png
+SHA1-Digest: a6youAIrxAlrXWsyGpKpFLqLEJI=
+
+Name: ch/randelshofer/quaqua/panther/images/ToolBar.texture.png
+SHA1-Digest: dz2VJmOsxpX22IaHvvQNwiMn9KY=
+
+Name: org/jhotdraw/util/Methods.class
+SHA1-Digest: 207ojGPTDrMR5DQHSWX46PHBUws=
+
+Name: ch/randelshofer/quaqua/images/Slider.roundThumbs.png
+SHA1-Digest: 5xLIiyV9V2QSWlSXrlTJo2EqqEE=
+
+Name: org/jhotdraw/app/action/file/NewWindowAction.class
+SHA1-Digest: LqKoLUg2PvtCrWqDIhRrffLokEo=
+
+Name: ch/randelshofer/quaqua/colorchooser/GrayChooser$7.class
+SHA1-Digest: Q1eCI39aDPyBdDOxBapbFSavgc0=
+
+Name: ch/randelshofer/quaqua/QuaquaTableUI$1.class
+SHA1-Digest: 8q/U92LThlPTuQr1qFTLQK1jxJ4=
+
+Name: org/jhotdraw/app/action/file/OpenDirectoryAction.class
+SHA1-Digest: RHkqP5PCTGK2HtpBDmhlSnSlc5c=
+
+Name: ch/randelshofer/quaqua/color/TextureColor$UIResource.class
+SHA1-Digest: WOIZDh8bjga/qdGpooCGcHPGOnQ=
+
+Name: org/jhotdraw/draw/text/FloatingTextArea.class
+SHA1-Digest: jlAFKOrYVCr17E3aKyUaU7BsI3k=
+
+Name: ch/randelshofer/quaqua/leopard/images/Frame.closeIcons.small.png
+SHA1-Digest: PS/8gUAvlQ2Sdl9+OBiORYw9Nr8=
+
+Name: ch/randelshofer/quaqua/util/Preferences.class
+SHA1-Digest: Va0AqDCqmwMYf66mbIhO5BU7njo=
+
+Name: org/jhotdraw/draw/tool/HandleTracker.class
+SHA1-Digest: mk2ER7Y6LDebgB/r73Lz014Zqx0=
+
+Name: org/jhotdraw/draw/action/PickAttributesAction.class
+SHA1-Digest: neokD7uzAbLnqci6kd04aeRsytk=
+
+Name: ch/randelshofer/quaqua/images/OptionPane.informationIcon.png
+SHA1-Digest: B+TWLrm9JfVvEh2P3/JfaFGNvow=
+
+Name: ch/randelshofer/quaqua/images/Spinner.small.south.png
+SHA1-Digest: /EVREfLPoBoI3P0oOaiDcIzw488=
+
+Name: ch/randelshofer/quaqua/QuaquaComboBoxVisualMargin.class
+SHA1-Digest: zsCSajPTNaMw/9y9q6AGcRdPoHI=
+
+Name: ch/randelshofer/quaqua/QuaquaTextFieldBorder$UIResource.class
+SHA1-Digest: T3gazBGjw5GEH9W+vJPk/vq8b7U=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/SidebarTreeModel$Syst
+ emItemInfo.class
+SHA1-Digest: m8noWPlvVVmdSqiSNcARJYEDlFg=
+
+Name: ch/randelshofer/quaqua/QuaquaButtonMarginBorder.class
+SHA1-Digest: PN0cgblisJDI+kyWUsHMarFv6C4=
+
+Name: ch/randelshofer/quaqua/QuaquaMenuPainter$1.class
+SHA1-Digest: n2AUD4YkzJir+5VAaEpF24cz+50=
+
+Name: org/jhotdraw/app/action/app/OpenApplicationAction.class
+SHA1-Digest: 77XngeHQfIKrV7OKrPgV/sSBfyA=
+
+Name: org/jhotdraw/app/action/file/SaveFileAction.class
+SHA1-Digest: FPV2MgMr6Da2iWrqCGgN99Tpn5Q=
+
+Name: org/jhotdraw/draw/connector/ChopTriangleConnector.class
+SHA1-Digest: URUID3ftqreEL6u6jQRL42XfCgM=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil.class
+SHA1-Digest: P7N1+zM8pEf7blr2PqHMT2TX5H8=
+
+Name: ch/randelshofer/quaqua/images/RadioButtonMenuItem.icons.png
+SHA1-Digest: mgLvJBSzZRMEYq8Xuk/9mCx8s3g=
+
+Name: org/jhotdraw/draw/LineFigure$1.class
+SHA1-Digest: uof08NqRzV3I/xZFceYRUSFBkYM=
+
+Name: ch/randelshofer/quaqua/filechooser/AliasFileSystemTreeModel$Alia
+ sNode.class
+SHA1-Digest: uzZsrykoH2ccqrRtVGZy52oYPeM=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$5.class
+SHA1-Digest: im/OEiezJNbHhuoIzpPo5k4NZss=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.spectrum.png
+SHA1-Digest: 3jrNm8I2GOv8a6uT/T235DvXb5c=
+
+Name: ch/randelshofer/quaqua/colorchooser/HTMLChooser$2.class
+SHA1-Digest: qoWpUf/rSmnwD3uioARltr+cIP0=
+
+Name: org/jhotdraw/draw/handle/LocatorHandle.class
+SHA1-Digest: MwC35FIVGghVPBrciX6LTDLFnb8=
+
+Name: org/jhotdraw/draw/action/SelectionColorIcon.class
+SHA1-Digest: m0zXt0gdcK280Z34ISPc0VSCfvI=
+
+Name: ch/randelshofer/quaqua/Labels.properties
+SHA1-Digest: 8VArzvSoWXR/G0rpm3Pjt97OKtc=
+
+Name: org/jhotdraw/draw/print/DrawingPageable$1.class
+SHA1-Digest: CgW+rlv8jau8GIIj4WhDrKTG3Y0=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$WindowHandler.class
+SHA1-Digest: PNBSMdjgi9CmjoL5Z+i0gAZN2KE=
+
+Name: ch/randelshofer/quaqua/colorchooser/Crayons$1.class
+SHA1-Digest: 83Y2vdHDkMQ2XulzGDcNKBiAD4E=
+
+Name: org/jhotdraw/draw/Constrainer.class
+SHA1-Digest: ij3STYSlig1Y24pwVrYl9UxU6pM=
+
+Name: org/jhotdraw/draw/action/GroupAction.class
+SHA1-Digest: 5DfhsNlZHfwFKVDvS90ehfmORU4=
+
+Name: org/jhotdraw/draw/action/AlignAction.class
+SHA1-Digest: NSufICOyi+OWjyfJ6PhF/wfVSzE=
+
+Name: ch/randelshofer/quaqua/QuaquaTreeUI$TreeCancelEditingAction.clas
+ s
+SHA1-Digest: Z9tFgRXuJJNTOu5nj3DKopdhnlo=
+
+Name: ch/randelshofer/quaqua/leopard/images/FileView.floppyDriveIcon.p
+ ng
+SHA1-Digest: x4cPzjuoZtq6o7Ns+o0HYyrVBFQ=
+
+Name: ch/randelshofer/quaqua/images/Slider.westThumbs.png
+SHA1-Digest: azT10vNtFsk326bi+2wegqnCqrQ=
+
+Name: org/jhotdraw/io/ExtensionFileFilter.class
+SHA1-Digest: oXjEygJ4Qopj1qWeY/zNUzKdYm4=
+
+Name: org/jhotdraw/util/ReversedList.class
+SHA1-Digest: +Z26YWkuDsfpU+KqZ8dP55QTXdA=
+
+Name: org/jhotdraw/draw/action/images/_notes/createDiamond.png.mno
+SHA1-Digest: iGsC8t9vc9wkTZWvi05ZOpgWzK0=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barRight.D.png
+SHA1-Digest: U3iuR5rG3oimU84xzDT2jb6k/FM=
+
+Name: ch/randelshofer/quaqua/panther/images/Frame.inactiveTitleBar.png
+SHA1-Digest: 6Hkn4EHc8YiZgtBWfjj8b9b6FZM=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.barLeft.I.png
+SHA1-Digest: S7nL5DbNeveYRRnbFLlh8wnCZkE=
+
+Name: org/jhotdraw/samples/draw/DrawView$1.class
+SHA1-Digest: 2vdMLFt04LT8o2R765KLvrVpQLE=
+
+Name: ch/randelshofer/quaqua/QuaquaTableHeaderBorder.class
+SHA1-Digest: DKRf0IcKU3pcaP6vu/oTrTTcYrs=
+
+Name: ch/randelshofer/quaqua/panther/Quaqua14PantherScrollTabbedPaneUI
+ $RightAction.class
+SHA1-Digest: 0k+DTB8GOhF3NuTRIqC3J9/+6NM=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.vertical.png
+SHA1-Digest: wJxgaz2WWl1ptO6uZ1GB3D7L7KU=
+
+Name: org/jhotdraw/samples/draw/DrawApplet$2.class
+SHA1-Digest: J4qyNLaSi8/2VJlKN8Q2srgDYKs=
+
+Name: ch/randelshofer/quaqua/QuaquaTextAreaUI.class
+SHA1-Digest: lfZbJQirsRCslKmKug+Jy/xIV4M=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders.class
+SHA1-Digest: OvYCp9mcMCj6oKDoVCDojgpwMKM=
+
+Name: ch/randelshofer/quaqua/border/AnimatedBorder$1.class
+SHA1-Digest: 7IrvrjfawidEQINHlPsktiv7GpI=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil$2.class
+SHA1-Digest: Wqi9G9Ka27WMmhvYEarAQSS9vRQ=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/TileStor
+ e.class
+SHA1-Digest: 5wy62AQEdFldujDQtQuRYx3gPbg=
+
+Name: ch/randelshofer/quaqua/QuaquaColorWellBorder.class
+SHA1-Digest: yuiDCET9NkJWHy3HHET+eeqdOSc=
+
+Name: ch/randelshofer/quaqua/Labels_de.properties
+SHA1-Digest: auc/XTYtKYLj7X71RTNusFmbi78=
+
+Name: org/jhotdraw/gui/plaf/FontChooserUI.class
+SHA1-Digest: EUzJYs010T5IjT3rU2VCNqkI6P0=
+
+Name: ch/randelshofer/quaqua/panther/QuaquaPantherFileChooserUI$Quaqua
+ ApproveSelectionAction.class
+SHA1-Digest: JPIAIs5ocjGzFpyanDMl1rGAaI8=
+
+Name: net/n3/nanoxml/IXMLBuilder.class
+SHA1-Digest: jCql3nHf2ZQQaH8rc1R/PRrJ1xg=
+
+Name: org/jhotdraw/app/action/app/PrintApplicationFileAction.class
+SHA1-Digest: /ZAHlLZ6Yh6ZNAvsYhE8xc2XI9Y=
+
+Name: ch/randelshofer/quaqua/jaguar/images/TabbedPane.tabLeft.png
+SHA1-Digest: 7X65eZXkbM+5e4hqojdEVqEnDxg=
+
+Name: org/jhotdraw/draw/connector/ChopRoundRectangleConnector$1.class
+SHA1-Digest: mQaXxvz87AyLg1SqZ+jwjJLYulI=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$1.class
+SHA1-Digest: fV2TFDCZKnbnPiND4CjYTG0lmzE=
+
+Name: ch/randelshofer/quaqua/QuaquaScrollPaneUI$PropertyChangeHandler.
+ class
+SHA1-Digest: H0lI1Bko2HtesOGYhDWDq2QmQ0o=
+
+Name: ch/randelshofer/quaqua/images/ColorChooser.colorSwatchesIcons.pn
+ g
+SHA1-Digest: CXSCCkXlnrycu0bHWio2I6FSc9o=
+
+Name: org/jhotdraw/util/LocaleUtil.class
+SHA1-Digest: SMEdw4gFipJ3xqOa7gMMExIW5Bs=
+
+Name: org/jhotdraw/draw/action/images/attributeStrokeColor.png
+SHA1-Digest: UcWnfVkXQAjXc+BBgXtZmPenKMc=
+
+Name: ch/randelshofer/quaqua/colorchooser/HSBColorSliderModel.class
+SHA1-Digest: lQgIaMIpxn4szebFhC20nxWdKog=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/FileView.floppyDriveI
+ con.png
+SHA1-Digest: lERmnMXcsGy1jf8QTB/1PoSDMr8=
+
+Name: org/jhotdraw/draw/DefaultDrawingViewTransferHandler$3.class
+SHA1-Digest: 6vYieAFg/qq0+W4BVs092r1AmCQ=
+
+Name: org/jhotdraw/samples/draw/DrawApplicationModel.class
+SHA1-Digest: wYPIMYktNJyGSkZFA6neJIUu2sE=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.closeIcons.smal
+ l.png
+SHA1-Digest: gw8LkZnb7Lp0+yUe6OY3b3yXkhg=
+
+Name: org/jhotdraw/draw/action/AbstractSelectedAction.class
+SHA1-Digest: 0B6yN4i8PUPQPxCy7o3NJ08bNmc=
+
+Name: org/jhotdraw/samples/draw/DrawLiveConnectApplet$1.class
+SHA1-Digest: nwXI3het5Mxqpsh6DGkzvrdRrys=
+
+Name: org/jhotdraw/draw/action/images/_notes/moveSouth.png.mno
+SHA1-Digest: 8SfyLhm5jxFQDTPfhwUjCHURPTo=
+
+Name: org/jhotdraw/draw/io/DOMStorableInputOutputFormat.class
+SHA1-Digest: AeeUeObwbw+rwBqwDZJ6XgeqB0A=
+
+Name: org/jhotdraw/draw/io/InputFormat.class
+SHA1-Digest: jSeLsIMbESZ+l0vbHu63cP6vWD4=
+
+Name: net/n3/nanoxml/StdXMLReader.class
+SHA1-Digest: ctlqNh0xD6q2qwV0GJMXiAAWDNc=
+
+Name: ch/randelshofer/quaqua/colorchooser/CMYKChooser$3.class
+SHA1-Digest: +gk5jPyX91UnY6e7Lp3jMGPh9bI=
+
+Name: ch/randelshofer/quaqua/leopard/images/Tree.collapsedIcon.png
+SHA1-Digest: Nj3iD0bsCsVwHDKbLvlUKCNYDgU=
+
+Name: org/jhotdraw/app/Labels.properties
+SHA1-Digest: 8WfrdBR/EvqMEO9DGZgnxhH8xew=
+
+Name: ch/randelshofer/quaqua/JBrowser$TreeRootHandler.class
+SHA1-Digest: Z/EoWz4RTyJCfh4Op7In5mlcpWo=
+
+Name: org/jhotdraw/draw/action/images/_notes/createImage.png.mno
+SHA1-Digest: F36t2nADGHy7Wfr27nQKus15c5E=
+
+Name: ch/randelshofer/quaqua/border/OverlayBorder.class
+SHA1-Digest: IZU98QWetVhyNErbgl9hhotLEO8=
+
+Name: ch/randelshofer/quaqua/util/IteratorEnumeration.class
+SHA1-Digest: l6GvWuyNDkrtTBWNf5y6Bn3moQI=
+
+Name: org/jhotdraw/util/prefs/PreferencesUtil$5.class
+SHA1-Digest: wfNLJ5SNBuSusPNr/EjeUk5Ee/U=
+
+Name: ch/randelshofer/quaqua/leopard/filechooser/DarwinLeopardFileSyst
+ emView.class
+SHA1-Digest: r3G129+XV7ZgSL0W7sm+rtDKqE0=
+
+Name: org/jhotdraw/app/action/AbstractSaveUnsavedChangesAction$1.class
+SHA1-Digest: HW7l7sttQ27x0l3q4YfsWNjisGo=
+
+Name: org/jhotdraw/draw/tool/CreationTool$1.class
+SHA1-Digest: 9oqNlUWeGe3v/0teTc9Xaeq+8Dw=
+
+Name: org/jhotdraw/util/ResourceBundleUtil.class
+SHA1-Digest: Vpx5wEvPSCNbK5AeoM0IZ+ZAnTQ=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua14JaguarLookAndFeel.class
+SHA1-Digest: uw0DP34aYjHiatJfRw8oNU6d/Kw=
+
+Name: org/jhotdraw/draw/action/AttributeAction.class
+SHA1-Digest: lfOc2RHLbIkrFzX6doG9SFT2rZg=
+
+Name: ch/randelshofer/quaqua/QuaquaBorders$QuestionDialogBorder.class
+SHA1-Digest: KKGx1N5OPMnXqi7tUoZi9To6yNQ=
+
+Name: ch/randelshofer/quaqua/images/Slider.horizontalTracks.png
+SHA1-Digest: Izl4JnIDXT0VGC3xKEx6uEnYWw0=
+
+Name: ch/randelshofer/quaqua/images/Button.borders.png
+SHA1-Digest: 1lqgS4Qy25bcADedCjDwYt51WGc=
+
+Name: org/jhotdraw/app/EditableComponent.class
+SHA1-Digest: PEbEcizgYZ/JbE77OKLsfg7kWhM=
+
+Name: ch/randelshofer/quaqua/colorchooser/ColorWheel$MouseHandler.clas
+ s
+SHA1-Digest: j33GmSfjBvFdOL5AWpdEcRNoDvE=
+
+Name: org/jhotdraw/app/action/edit/RedoAction$1.class
+SHA1-Digest: VyoUiDeBuHoO9nv/rsuBRfonOZs=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/rendered/FormatRe
+ d.class
+SHA1-Digest: Su0bmBxU+yqAJTiJU2gLLoGnGMA=
+
+Name: ch/randelshofer/quaqua/images/Toggle.west.focusRing.png
+SHA1-Digest: pUdSmaztqYxaYZe2v+ZZG8s9xhw=
+
+Name: ch/randelshofer/quaqua/leopard/images/FileView.directoryIcon.png
+SHA1-Digest: rKl2po77Z7iIVPUYreA/Kwl5ElE=
+
+Name: ch/randelshofer/quaqua/color/AlphaColorUIResource.class
+SHA1-Digest: pf3qCcNQGi0gaaO4Z8dv2Bl+jz0=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.titlePaneBorder
+ s.small.png
+SHA1-Digest: ycmQifWuzJCHMNJKeQTvorvrYns=
+
+Name: org/jhotdraw/app/action/AbstractSaveUnsavedChangesAction$2.class
+SHA1-Digest: Q2y7BcM29TaRUVfcCnwTiuZU8Js=
+
+Name: ch/randelshofer/quaqua/JBrowser$TreeSelectionUpdater.class
+SHA1-Digest: R+SYI+xpp56fyd3bpMQi2aLDoLI=
+
+Name: org/jhotdraw/draw/AttributeKeys$StrokePlacement.class
+SHA1-Digest: LlbKvoB9GOoKiZvIBU4JSeWuNtY=
+
+Name: org/jhotdraw/draw/action/images/alignVertical.png
+SHA1-Digest: QU7RHCM/KZnrgDhGDrNFDFdHx08=
+
+Name: org/jhotdraw/gui/JSheet$5.class
+SHA1-Digest: XS9n+llPNry6EuYkZOxVa5kROfo=
+
+Name: org/jhotdraw/draw/action/GroupAction$2.class
+SHA1-Digest: Q7i63jrDxb8qpRmoMZmhL6USwq0=
+
+Name: ch/randelshofer/quaqua/QuaquaLookAndFeel.class
+SHA1-Digest: R/DpCDYTJg6T+XSIrU2gWQdB3uI=
+
+Name: org/jhotdraw/draw/action/images/_notes/attributeFont.png.mno
+SHA1-Digest: oxQvTJ6Xu8FtIugGA/LXqGPxgkI=
+
+Name: org/jhotdraw/geom/GrowStroke.class
+SHA1-Digest: lW6P/O414cUs2OJ2XlXq4iiPM4w=
+
+Name: org/jhotdraw/draw/event/HandleMulticaster.class
+SHA1-Digest: kboFG3v2dEM7HbXe2LEBDaNZWgM=
+
+Name: ch/randelshofer/quaqua/QuaquaPanelUI.class
+SHA1-Digest: i60v4F5vNFQRWcAVAUEpk9AZNH4=
+
+Name: org/jhotdraw/app/action/window/ToggleVisibleAction$1.class
+SHA1-Digest: y3Egk46OWYcqBsRtf3wXOKyqfrA=
+
+Name: org/jhotdraw/draw/action/ButtonFactory$5.class
+SHA1-Digest: xQ4bQLndsdQx9TwGNFc7i4/HxC4=
+
+Name: ch/randelshofer/quaqua/ext/batik/ext/awt/image/SVGComposite$OutC
+ ompositeContext.class
+SHA1-Digest: o23wcJTxw9eWWdgBo6R7YqBEuiU=
+
+Name: ch/randelshofer/quaqua/leopard/images/OptionPane.warningIcon.png
+SHA1-Digest: 27AmGmWT7qqL/MA3nvzoYd7Vy/I=
+
+Name: org/jhotdraw/draw/TriangleFigure.class
+SHA1-Digest: bxn5UisSPUanHdVoEfkuJGiF6QM=
+
+Name: org/jhotdraw/app/action/file/LoadDirectoryAction.class
+SHA1-Digest: zcVYuMl/6d9poqQp3E2nZqTYNiA=
+
+Name: ch/randelshofer/quaqua/snow_leopard/images/Frame.closeIcons.png
+SHA1-Digest: PIxh25ywmlvLgx6S/JrY1HUBqXc=
+
+Name: ch/randelshofer/quaqua/Quaqua14TitlePane$MaximizeAction.class
+SHA1-Digest: b07Eun9/LTF8vq0wc+TFIjq2kys=
+
+Name: net/n3/nanoxml/IXMLParser.class
+SHA1-Digest: P64TJOJ4XPoFKVCVRwEtAXSqrXQ=
+
+Name: ch/randelshofer/quaqua/images/SplitPane.barDimple.png
+SHA1-Digest: Cqhmq5vDytdmPcu/rio2bL/76NM=
+
+Name: org/jhotdraw/draw/DrawingEditorProxy$1.class
+SHA1-Digest: W9HDfJo0Z/OlQnr8ysa3Fd6CqIk=
+
+Name: org/jhotdraw/draw/DefaultDrawingView$4.class
+SHA1-Digest: PXSN3DQbYp9WmcUncjAGrdt1xFE=
+
+Name: ch/randelshofer/quaqua/util/BinaryPListParser$1.class
+SHA1-Digest: YI9A7KtGlVjQUvuCyXYVLyujJbI=
+
+Name: ch/randelshofer/quaqua/jaguar/Quaqua13JaguarTabbedPaneUI.class
+SHA1-Digest: ktDVexVfgShQT9Nq+8PmdwtkXMg=
+
+Name: org/jhotdraw/draw/handle/ResizeHandleKit$SouthHandle.class
+SHA1-Digest: YPh5nLoE6oaKbrFl8jXd96IElsA=
+
+Name: ch/randelshofer/quaqua/util/GroupBox.class
+SHA1-Digest: 6CD9KoqRK1aoupcSQdHg4ioCHv8=
+
+Name: ch/randelshofer/quaqua/osx/OSXApplication.class
+SHA1-Digest: PY7P5UuyuZfKlocvfJtKcBvhZxY=
+
+Name: org/jhotdraw/app/action/app/ExitAction$5.class
+SHA1-Digest: JdINt7zlbccLWhvmCw0L0lEs6CU=
+
+Name: org/jhotdraw/draw/GroupFigure.class
+SHA1-Digest: IfrYYUrIPKO0iqjirZ9gv5kAFAc=
+
+Name: org/jhotdraw/draw/text/FloatingTextField$1.class
+SHA1-Digest: FLoOyidzbAW2/3BXJryvmX7+4rY=
+
+Name: ch/randelshofer/quaqua/images/Frame.maximizeIcons.small.png
+SHA1-Digest: MyeCX6OG4KhWO2jL4fBM6MVzEAc=
+
