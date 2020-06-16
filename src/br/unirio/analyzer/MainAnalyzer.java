@@ -39,7 +39,7 @@ public class MainAnalyzer {
 	
 	public static final void main(String[] args) throws Throwable
 	{
-		extractGraphData();
+//		extractGraphData();
 ////		
 ////		/**
 ////		 * Interpret and generate a list of log file containing the commits.
@@ -67,12 +67,12 @@ public class MainAnalyzer {
 //		/**
 //		 * generate a list of years by commit, including the developer, the number of classes and packages
 //		 */
-//		extractODEMProjectCharacteristics();
+		extractODEMProjectCharacteristics();
 //		
 //		/**
 //		 * generate a list of years by commit, including the developer, the number of classes and packages
 //		 */
-		extractJARProjectCharacteristics();
+//		extractJARProjectCharacteristics();
 ////			
 ////		/**
 ////		 * generate a list of years by commit, including the developer, the number of classes and packages
@@ -167,6 +167,7 @@ public class MainAnalyzer {
 		PrintStream ps = new PrintStream(out);
 		
 		ps.println("version\tpackageCount\tclassCount\telegance\tsingleClassPackages\tmaximumClassConcentration\tdependencyCount\tcbo\taff\teff\tmq\tevm\tlcom5");
+		
 		
 //		MainCharacteristics mc = new MainCharacteristics();
 		ProjectLoader loader = new ProjectLoader();

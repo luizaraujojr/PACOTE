@@ -1,10 +1,10 @@
 
+data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
 #data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
-data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByYear.data", header=TRUE);
+#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByYear.data", header=TRUE);
 
 years <- sort(unique(data$year));
-columns <- c("team", "inTeam", "outTeam", "num_commits", "NAR");
+columns <- c("team", "inTeam", "outTeam", "num_commits");
 result <- matrix(nrow=length(years), ncol=length(columns), dimnames=list(years, columns));
 
 oldTeam <- c();
@@ -27,7 +27,8 @@ for (year_ in years)
 	result[year_ - 2000 + 1, "inTeam"] <- length(inTeam);
 	result[year_ - 2000 + 1, "outTeam"] <- length(outTeam);
 	result[year_ - 2000 + 1, "num_commits"] <- nrow(vdata);
-	result[year_ - 2000 + 1, "NAR"] <- round(sd(commits),2);
 }
 
-result
+#result
+
+write.csv(result,file="D:/Backup/eclipse-workspace/PACOTE/results/JHotDraw_team_year.csv")

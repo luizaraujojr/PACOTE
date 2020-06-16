@@ -222,7 +222,7 @@ version	author	classes	packages
 7.0.6	mrfloppy	8	6
 7.0.6	mrfloppy	3	3
 7.0.6	mrfloppy	2	2
-7.0.6	mrfloppy	195	13
+7.0.7	mrfloppy	195	13
 7.0.7	mrfloppy	314	26
 7.0.7	mrfloppy	331	22
 7.0.8	rawcoder	4	2
@@ -293,7 +293,7 @@ version	author	classes	packages
 7.0.9	rawcoder	73	4
 7.0.9	rawcoder	2	2
 7.0.9	rawcoder	6	2
-7.0.9	rawcoder	9	4
+7.1.0	rawcoder	9	4
 7.1.0	rawcoder	12	2
 7.1.0	rawcoder	1	1
 7.1.0	rawcoder	45	2
