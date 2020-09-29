@@ -8,7 +8,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-7.0.9-21062007">
     <container name="E:/Downloads/Doutorado/Jhotdraw/jhotdraw 7.0.9.jar" classification="jar">
       <namespace name="net.n3.nanoxml">
         <type name="net.n3.nanoxml.CDATAReader" classification="class" visibility="default">

@@ -1,6 +1,6 @@
 package br.unirio.optimization;
 
-import br.unirio.calc.controller.ClusteringCalculator;
+import br.unirio.calculator.ClusteringCalculator;
 import br.unirio.model.Project;
 
 /**

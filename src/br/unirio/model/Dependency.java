@@ -1,7 +1,7 @@
 package br.unirio.model;
 
 /**
- * Classe que representa uma depend�ncia entre duas classes
+ * Classe que representa uma dependencia entre duas classes
  * 
  * @author Marcio Barros
  */
@@ -11,7 +11,7 @@ public class Dependency
 	private DependencyType type;
 
 	/**
-	 * Inicializa uma depend�ncia de uma classe para outra
+	 * Inicializa uma dependencia de uma classe para outra
 	 */
 	public Dependency(String name, DependencyType type)
 	{
@@ -28,7 +28,7 @@ public class Dependency
 	}
 	
 	/**
-	 * Retorna o tipo da depend�ncia
+	 * Retorna o tipo da dependencia
 	 */
 	public DependencyType getType()
 	{

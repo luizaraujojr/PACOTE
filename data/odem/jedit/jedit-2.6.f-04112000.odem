@@ -10,7 +10,7 @@
   </header>
   <context name="jedit">
     <container name="E:/Downloads/Doutorado/Jedit/jedit-2.6final.jar" classification="jar">
-      <namespace name="">
+      <namespace name="NONAME">
         <type name="Archive$EntryInputStream" classification="class" visibility="default">
           <dependencies count="1">
             <depends-on name="Archive" classification="uses" />

@@ -8,7 +8,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-5.4.2-01022004">
     <container name="E:/Downloads/Doutorado/Jhotdraw/jhotdraw 5.4 b2.jar" classification="jar">
       <namespace name="CH.ifa.draw.framework">
         <type name="CH.ifa.draw.framework.FigureChangeEvent" classification="class" visibility="public">

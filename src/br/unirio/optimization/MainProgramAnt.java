@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 
-import br.unirio.calc.controller.CDAReader;
-import br.unirio.calc.controller.ClusteringCalculator;
+import br.unirio.calculator.ClusteringCalculator;
+import br.unirio.controller.CDAReader;
 import br.unirio.model.Project;
 
 public class MainProgramAnt
@@ -65,7 +65,7 @@ public class MainProgramAnt
 		PrintWriter pw = new PrintWriter(new File("saida.txt"));
 
 		int classCount = project.getClassCount();
-		long maxEvaluations = 1000 * classCount * classCount;
+		long maxEvaluations = 1000 * (long)classCount * (long)classCount;
 		write(pw, project.getName());
 
 		HillClimbingClusteringMQ hccMQ = new HillClimbingClusteringMQ(project, maxEvaluations, project.getClassCount());

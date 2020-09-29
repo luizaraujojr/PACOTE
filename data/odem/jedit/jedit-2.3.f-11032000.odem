@@ -10,7 +10,7 @@
   </header>
   <context name="jedit">
     <container name="E:/Downloads/Doutorado/Jedit/jedit-2.3final.jar" classification="jar">
-      <namespace name="">
+      <namespace name="NONAME">
         <type name="install" classification="class" visibility="public">
           <dependencies count="2">
             <depends-on name="org.gjt.sp.sim.ConsoleInstall" classification="uses" />

@@ -2,10 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ProjetoTese</groupId>
-	<artifactId>ProjetoTese</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>ProjetoTese</name>
+	<groupId>PACOTE</groupId>
+	<artifactId>PACOTE</artifactId>
+	<version>1.0.2</version>
+	<name>PACOTE</name>
 
 	<dependencies>
 		<dependency>
@@ -29,12 +29,12 @@
   <version>6.4.1</version>
 </dependency>
 	</dependencies>
-	<properties>
-		<sonar.projectKey>luizaraujojr_projetotese</sonar.projectKey>
-		<sonar.organization>luizaraujojr</sonar.organization>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>8173c9783dace4aa731296a1a8839f0871ba9a2d</sonar.login>
-	</properties>
+<properties>
+  <sonar.projectKey>luizaraujojr_PACOTE</sonar.projectKey>
+  <sonar.organization>luizaraujojr</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>2896a982e4697d6cf2b4fdece917cdc8754104e7</sonar.login>
+</properties>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>

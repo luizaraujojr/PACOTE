@@ -6,7 +6,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-5.2.0-14022001">
     <container name="E:/Downloads/Doutorado/Jhotdraw/jhotdraw 5.2.jar" classification="jar">
       <namespace name="CH.ifa.draw.applet">
         <type name="CH.ifa.draw.applet.DrawApplet$1" classification="class" visibility="default" isFinal="yes">

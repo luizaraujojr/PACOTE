@@ -8,6 +8,7 @@
 
 package br.unirio.optimization;
 
+import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -58,11 +59,15 @@ public class PseudoRandom
 	 */
 	public static double randDouble()
 	{
-		if (random == null)
+		double result = 0;
+		if(Objects.isNull(random))
 		{
 			new PseudoRandom();
 		}
-		return random.rndreal(0.0, 1.0);
+		if(!Objects.isNull(random)) {
+			result=random.rndreal(0.0, 1.0);	
+		}
+		return result;
 	}
 
 	/**
@@ -75,11 +80,15 @@ public class PseudoRandom
 	 */
 	public static int randInt(int minBound, int maxBound)
 	{
-		if (random == null)
+		int result = 0;
+		if(Objects.isNull(random))
 		{
 			new PseudoRandom();
 		}
-		return random.rnd(minBound, maxBound);
+		if(!Objects.isNull(random)) {
+			result=random.rnd(minBound, maxBound);	
+		}
+		return result;	
 	}
 
 	/**
@@ -92,10 +101,15 @@ public class PseudoRandom
 	 */
 	public static double randDouble(double minBound, double maxBound)
 	{
-		if (random == null)
+		double result = 0;
+		if(Objects.isNull(random))
+		{
 			new PseudoRandom();
-
-		return random.rndreal(minBound, maxBound);
+		}
+		if(!Objects.isNull(random)) {
+			result=random.rndreal(minBound, maxBound);	
+		}
+		return result;
 	}
 }
 

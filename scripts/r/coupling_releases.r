@@ -1,6 +1,21 @@
 
 data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/ODEMPackageCharacteristics.data", header=TRUE);
 
+JHotDraw_Exclude <- c("5.4.2");
+JEdit_Exclude <- c("2.3.2", "2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7", "2.3.f", "2.4.2", "2.5.1", "3.0.1", "3.2.1", "4.0.0", "4.0.2", "4.3.0", "4.3.1", "4.3.2","5.4.0");
+
+
+`%notin%` <- Negate(`%in%`)
+	
+	
+if (project=="JHotDraw"	){
+	data <- subset(data, versions %notin% JHotDraw_Exclude)
+}
+
+if (project=="JEdit"	){
+	data <- subset(data, versions %notin% JEdit_Exclude)
+}
+
 versions <- sort(unique(data$version));
 
 colnames <- c("CBO", "AFF", "EFF", "LCOM", "MQ", "MF", "EVM", "CS");

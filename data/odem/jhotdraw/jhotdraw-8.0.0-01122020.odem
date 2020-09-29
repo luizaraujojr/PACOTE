@@ -6,7 +6,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-8.0.0-01122020">
     <container name="d:/Downloads/Doutorado/Jhotdraw/jhotdraw 7.6.jar" classification="jar">
       <namespace name="ch.randelshofer.quaqua">
         <type name="ch.randelshofer.quaqua.BasicBrowserUI$BrowserTransferHandler" classification="class" visibility="default">

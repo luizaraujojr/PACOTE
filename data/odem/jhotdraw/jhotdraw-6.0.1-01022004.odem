@@ -7,7 +7,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-6.0.1-01022004">
     <container name="E:/Downloads/Doutorado/Jhotdraw/jhotdraw 6.0b1.jar" classification="jar">
       <namespace name="org.jhotdraw.framework">
         <type name="org.jhotdraw.framework.Drawing" classification="interface" visibility="public" isAbstract="yes">

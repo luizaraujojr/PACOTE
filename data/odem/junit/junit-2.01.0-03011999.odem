@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ODEM version="1">
+  <header>
+    <created-by>
+      <exporter version="1.4.0">org.pfsw.tools.cda.ext.export.xml.XmlFileODEMExporter</exporter>
+      <provider>Manfred Duchrow Consulting &amp; Software</provider>
+    </created-by>
+  </header>
+  <context name="PACOTE JAR">
+    <container name="D:/Backup/eclipse-workspace/PACOTE/data/jar/junit/junit-2.1.0.jar" classification="jar">
+      <namespace name="junit.extensions">
+        <type name="junit.extensions.ActiveTest$1" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Thread" classification="extends" />
+            <depends-on name="junit.extensions.ActiveTest" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.extensions.TestDecorator" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.ActiveTest" classification="class" visibility="public">
+          <dependencies count="8">
+            <depends-on name="junit.extensions.TestDecorator" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.Thread" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.extensions.ActiveTest$1" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.RepeatedTest" classification="class" visibility="public">
+          <dependencies count="6">
+            <depends-on name="junit.extensions.TestDecorator" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.TestDecorator" classification="class" visibility="public">
+          <dependencies count="4">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.extensions.TestSetup" classification="class" visibility="public">
+          <dependencies count="3">
+            <depends-on name="junit.extensions.TestDecorator" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.framework">
+        <type name="junit.framework.AssertionFailedError" classification="class" visibility="public">
+          <dependencies count="2">
+            <depends-on name="java.lang.Error" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.Test" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestCase" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="16">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.reflect.InvocationTargetException" classification="uses" />
+            <depends-on name="java.lang.IllegalAccessException" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+            <depends-on name="java.lang.Double" classification="uses" />
+            <depends-on name="java.lang.Long" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.lang.NoSuchMethodException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestFailure" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestResult" classification="class" visibility="public">
+          <dependencies count="8">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.util.Vector" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="junit.framework.TestCase" classification="uses" />
+            <depends-on name="junit.framework.AssertionFailedError" classification="uses" />
+            <depends-on name="junit.framework.TestFailure" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestSuite$1" classification="class" visibility="default">
+          <dependencies count="2">
+            <depends-on name="junit.framework.TestCase" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.framework.TestSuite" classification="class" visibility="public">
+          <dependencies count="16">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="implements" />
+            <depends-on name="java.util.Vector" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.reflect.Constructor" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.lang.reflect.Modifier" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.lang.NoClassDefFoundError" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+            <depends-on name="java.lang.Void" classification="uses" />
+            <depends-on name="junit.framework.TestSuite$1" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.textui">
+        <type name="junit.textui.TestRunner" classification="class" visibility="public">
+          <dependencies count="13">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="junit.textui.TextTestResult" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.io.InputStream" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.textui.TextTestResult" classification="class" visibility="public">
+          <dependencies count="10">
+            <depends-on name="junit.framework.TestResult" classification="extends" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="junit.framework.TestFailure" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.io.PrintStream" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="junit.ui">
+        <type name="junit.ui.AboutDialog$1" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.AboutDialog" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="java.awt.Window" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.AboutDialog$2" classification="class" visibility="default">
+          <dependencies count="4">
+            <depends-on name="java.awt.event.WindowAdapter" classification="extends" />
+            <depends-on name="junit.ui.AboutDialog" classification="uses" />
+            <depends-on name="java.awt.event.WindowEvent" classification="uses" />
+            <depends-on name="java.awt.Window" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.AboutDialog" classification="class" visibility="default">
+          <dependencies count="19">
+            <depends-on name="java.awt.Dialog" classification="extends" />
+            <depends-on name="java.awt.Frame" classification="uses" />
+            <depends-on name="java.awt.Button" classification="uses" />
+            <depends-on name="java.awt.Label" classification="uses" />
+            <depends-on name="junit.ui.Logo" classification="uses" />
+            <depends-on name="java.awt.GridBagConstraints" classification="uses" />
+            <depends-on name="java.awt.GridBagLayout" classification="uses" />
+            <depends-on name="java.awt.Container" classification="uses" />
+            <depends-on name="java.awt.LayoutManager" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="junit.ui.AboutDialog$1" classification="uses" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="java.awt.Font" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.awt.Insets" classification="uses" />
+            <depends-on name="junit.ui.AboutDialog$2" classification="uses" />
+            <depends-on name="java.awt.Window" classification="uses" />
+            <depends-on name="java.awt.event.WindowListener" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.LoadingTestRunner" classification="class" visibility="public">
+          <dependencies count="5">
+            <depends-on name="junit.ui.TestRunner" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="junit.ui.TestCaseClassLoader" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.Logo" classification="class" visibility="default">
+          <dependencies count="16">
+            <depends-on name="java.awt.Canvas" classification="extends" />
+            <depends-on name="java.awt.Image" classification="uses" />
+            <depends-on name="java.awt.MediaTracker" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.awt.Toolkit" classification="uses" />
+            <depends-on name="java.net.URL" classification="uses" />
+            <depends-on name="java.awt.Graphics" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+            <depends-on name="java.awt.image.ImageObserver" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.awt.image.ImageProducer" classification="uses" />
+            <depends-on name="java.awt.SystemColor" classification="uses" />
+            <depends-on name="java.awt.Color" classification="uses" />
+            <depends-on name="java.awt.Rectangle" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.ProgressBar" classification="class" visibility="default">
+          <dependencies count="7">
+            <depends-on name="java.awt.Canvas" classification="extends" />
+            <depends-on name="java.awt.Color" classification="uses" />
+            <depends-on name="java.awt.Graphics" classification="uses" />
+            <depends-on name="java.awt.Rectangle" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+            <depends-on name="java.awt.SystemColor" classification="uses" />
+            <depends-on name="java.lang.Math" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestCaseClassLoader" classification="class" visibility="public">
+          <dependencies count="17">
+            <depends-on name="java.lang.ClassLoader" classification="extends" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.util.StringTokenizer" classification="uses" />
+            <depends-on name="java.net.URL" classification="uses" />
+            <depends-on name="java.io.InputStream" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.io.File" classification="uses" />
+            <depends-on name="java.io.FileInputStream" classification="uses" />
+            <depends-on name="java.util.Properties" classification="uses" />
+            <depends-on name="java.util.Vector" classification="uses" />
+            <depends-on name="java.util.Enumeration" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+            <depends-on name="java.io.IOException" classification="uses" />
+            <depends-on name="java.io.FileNotFoundException" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$1" classification="class" visibility="default">
+          <dependencies count="6">
+            <depends-on name="java.awt.event.WindowAdapter" classification="extends" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.WindowEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$3" classification="uses" />
+            <depends-on name="java.awt.Frame" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$10" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$1" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$11" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$12" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$12" classification="class" visibility="default">
+          <dependencies count="10">
+            <depends-on name="java.lang.Thread" classification="extends" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$2" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.ui.ProgressBar" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.awt.Button" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$2" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$4" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$3" classification="class" visibility="default">
+          <dependencies count="10">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.TextListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.TextEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$5" classification="uses" />
+            <depends-on name="java.awt.Button" classification="uses" />
+            <depends-on name="java.awt.TextField" classification="uses" />
+            <depends-on name="java.awt.TextComponent" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$4" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$6" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$5" classification="class" visibility="default">
+          <dependencies count="4">
+            <depends-on name="java.awt.event.MouseAdapter" classification="extends" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.MouseEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$7" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$6" classification="class" visibility="default">
+          <dependencies count="7">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ItemListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ItemEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$8" classification="uses" />
+            <depends-on name="java.awt.Button" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$7" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$9" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$8" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$10" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner$9" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$11" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TestRunner" classification="class" visibility="public">
+          <dependencies count="65">
+            <depends-on name="java.awt.Frame" classification="extends" />
+            <depends-on name="java.util.Vector" classification="uses" />
+            <depends-on name="java.lang.Thread" classification="uses" />
+            <depends-on name="junit.framework.TestResult" classification="uses" />
+            <depends-on name="junit.ui.TraceFrame" classification="uses" />
+            <depends-on name="java.awt.TextField" classification="uses" />
+            <depends-on name="java.awt.Button" classification="uses" />
+            <depends-on name="junit.ui.ProgressBar" classification="uses" />
+            <depends-on name="java.awt.List" classification="uses" />
+            <depends-on name="junit.ui.Logo" classification="uses" />
+            <depends-on name="java.awt.Label" classification="uses" />
+            <depends-on name="java.awt.Panel" classification="uses" />
+            <depends-on name="java.awt.Font" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.awt.Image" classification="uses" />
+            <depends-on name="java.awt.MenuBar" classification="uses" />
+            <depends-on name="junit.ui.AboutDialog" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+            <depends-on name="java.awt.GridBagConstraints" classification="uses" />
+            <depends-on name="java.awt.Menu" classification="uses" />
+            <depends-on name="java.awt.MenuItem" classification="uses" />
+            <depends-on name="java.lang.Class" classification="uses" />
+            <depends-on name="java.lang.reflect.Method" classification="uses" />
+            <depends-on name="java.awt.Toolkit" classification="uses" />
+            <depends-on name="java.net.URL" classification="uses" />
+            <depends-on name="java.awt.BorderLayout" classification="uses" />
+            <depends-on name="java.awt.Container" classification="uses" />
+            <depends-on name="java.awt.LayoutManager" classification="uses" />
+            <depends-on name="java.awt.SystemColor" classification="uses" />
+            <depends-on name="java.awt.Color" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$1" classification="uses" />
+            <depends-on name="java.awt.Window" classification="uses" />
+            <depends-on name="java.awt.event.WindowListener" classification="uses" />
+            <depends-on name="java.awt.TextComponent" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$2" classification="uses" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$3" classification="uses" />
+            <depends-on name="java.awt.event.TextListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$4" classification="uses" />
+            <depends-on name="java.awt.FlowLayout" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$5" classification="uses" />
+            <depends-on name="java.awt.event.MouseListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$6" classification="uses" />
+            <depends-on name="java.awt.event.ItemListener" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$7" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$8" classification="uses" />
+            <depends-on name="java.awt.GridLayout" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$9" classification="uses" />
+            <depends-on name="java.awt.GridBagLayout" classification="uses" />
+            <depends-on name="java.awt.Dialog" classification="uses" />
+            <depends-on name="java.lang.Integer" classification="uses" />
+            <depends-on name="java.awt.Insets" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.System" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$10" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$11" classification="uses" />
+            <depends-on name="junit.ui.UITestResult" classification="uses" />
+            <depends-on name="junit.framework.TestSuite" classification="uses" />
+            <depends-on name="java.lang.Exception" classification="uses" />
+            <depends-on name="java.awt.image.ImageProducer" classification="uses" />
+            <depends-on name="java.lang.ClassNotFoundException" classification="uses" />
+            <depends-on name="junit.ui.TestRunner$12" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TraceFrame$1" classification="class" visibility="default">
+          <dependencies count="5">
+            <depends-on name="java.lang.Object" classification="extends" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="junit.ui.TraceFrame" classification="uses" />
+            <depends-on name="java.awt.event.ActionEvent" classification="uses" />
+            <depends-on name="java.awt.Frame" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TraceFrame$2" classification="class" visibility="default">
+          <dependencies count="4">
+            <depends-on name="java.awt.event.WindowAdapter" classification="extends" />
+            <depends-on name="junit.ui.TraceFrame" classification="uses" />
+            <depends-on name="java.awt.event.WindowEvent" classification="uses" />
+            <depends-on name="java.awt.Frame" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.TraceFrame" classification="class" visibility="default">
+          <dependencies count="24">
+            <depends-on name="java.awt.Frame" classification="extends" />
+            <depends-on name="java.awt.Button" classification="uses" />
+            <depends-on name="java.awt.TextArea" classification="uses" />
+            <depends-on name="java.awt.GridBagConstraints" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+            <depends-on name="java.io.StringWriter" classification="uses" />
+            <depends-on name="java.io.PrintWriter" classification="uses" />
+            <depends-on name="java.lang.StringBuffer" classification="uses" />
+            <depends-on name="java.lang.String" classification="uses" />
+            <depends-on name="java.awt.GridBagLayout" classification="uses" />
+            <depends-on name="java.awt.Container" classification="uses" />
+            <depends-on name="java.awt.LayoutManager" classification="uses" />
+            <depends-on name="java.awt.SystemColor" classification="uses" />
+            <depends-on name="java.awt.Component" classification="uses" />
+            <depends-on name="java.awt.Color" classification="uses" />
+            <depends-on name="junit.ui.TraceFrame$1" classification="uses" />
+            <depends-on name="java.awt.event.ActionListener" classification="uses" />
+            <depends-on name="java.awt.Insets" classification="uses" />
+            <depends-on name="java.lang.Object" classification="uses" />
+            <depends-on name="junit.ui.TraceFrame$2" classification="uses" />
+            <depends-on name="java.awt.Window" classification="uses" />
+            <depends-on name="java.awt.event.WindowListener" classification="uses" />
+            <depends-on name="java.io.Writer" classification="uses" />
+            <depends-on name="java.awt.TextComponent" classification="uses" />
+          </dependencies>
+        </type>
+        <type name="junit.ui.UITestResult" classification="class" visibility="default">
+          <dependencies count="4">
+            <depends-on name="junit.framework.TestResult" classification="extends" />
+            <depends-on name="junit.ui.TestRunner" classification="uses" />
+            <depends-on name="junit.framework.Test" classification="uses" />
+            <depends-on name="java.lang.Throwable" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+    </container>
+  </context>
+</ODEM>

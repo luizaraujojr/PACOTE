@@ -16,7 +16,7 @@ public class Project
 	private Vector<ProjectClass> classes;
 
 	/**
-	 * Inicializa uma aplicaï¿½ï¿½o
+	 * Inicializa uma aplicacao
 	 */
 	public Project(String name)
 	{
@@ -26,7 +26,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna o nome da aplicaï¿½ï¿½o
+	 *Retorna o nome da aplicacao
 	 */
 	public String getName()
 	{
@@ -34,7 +34,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna o nï¿½mero de pacotes da aplicaï¿½ï¿½o
+	 * Retorna o numero de pacotes da aplicacao
 	 */
 	public int getPackageCount()
 	{
@@ -42,7 +42,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna um pacote da aplicaï¿½ï¿½o, dado seu ï¿½ndice
+	 * Retorna um pacote da aplicacao, dado seu indice
 	 */
 	public ProjectPackage getPackageIndex(int index)
 	{
@@ -50,7 +50,7 @@ public class Project
 	}
 
 	/**
-	 * Retorna o ï¿½ndice de um pacote no projeto
+	 * Retorna o inndice de um pacote no projeto
 	 */
 	public int getIndexForPackage(ProjectPackage _package)
 	{
@@ -58,7 +58,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna um pacote da aplicaï¿½ï¿½o, dado seu nome
+	 * Retorna um pacote da aplicacao, dado seu nome
 	 */
 	public ProjectPackage getPackageName(String name)
 	{
@@ -106,7 +106,7 @@ public class Project
 	}
 	
 	/**
-	 * Adiciona um pacote na aplicaï¿½ï¿½o
+	 * Adiciona um pacote na aplicacao
 	 */
 	public ProjectPackage addPackage(String name)
 	{
@@ -124,7 +124,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna uma enumeraï¿½ï¿½o dos pacotes da aplicaï¿½ï¿½o
+	 * Retorna uma enumeracao dos pacotes da aplicacao
 	 */
 	public Iterable<ProjectPackage> getPackages()
 	{
@@ -132,7 +132,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna o nï¿½mero de classes do projeto
+	 * Retorna o numero de classes do projeto
 	 */
 	public int getClassCount()
 	{
@@ -140,7 +140,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna o nï¿½mero de classes em um pacote do projeto
+	 * Retorna o numero de classes em um pacote do projeto
 	 */
 	public int getClassCount(String packageName)
 	{
@@ -154,7 +154,7 @@ public class Project
 	}
 
 	/**
-	 * Retorna uma classe, dado seu ï¿½ndice no projeto
+	 * Retorna uma classe, dado seu indice no projeto
 	 */
 	public ProjectClass getClassIndex(int index)
 	{
@@ -174,7 +174,7 @@ public class Project
 	}
 
 	/**
-	 * Retorna o ï¿½ndice de uma classe, dado seu nome
+	 * Retorna o indice de uma classe, dado seu nome
 	 */
 	public int getClassIndex(String name)
 	{
@@ -190,7 +190,7 @@ public class Project
 	}
 
 	/**
-	 * Retorna o ï¿½ndice de uma classe no projeto
+	 * Retorna o indice de uma classe no projeto
 	 */
 	public int getIndexForClass(ProjectClass _class)
 	{
@@ -206,7 +206,7 @@ public class Project
 	}
 	
 	/**
-	 * Remove uma classe do projeto, dado seu ï¿½ndice
+	 * Remove uma classe do projeto, dado seu indice
 	 */
 	public void removeClass(int index)
 	{
@@ -214,7 +214,7 @@ public class Project
 	}
 
 	/**
-	 * Adiciona uma dependï¿½ncia entre duas classes no projeto
+	 * Adiciona uma dependencia entre duas classes no projeto
 	 */
 	public void addDependency(String sourceClass, String targetClass)
 	{
@@ -225,7 +225,7 @@ public class Project
 	}
 	
 	/**
-	 * Retorna o nï¿½mero de dependï¿½ncias do projeto 
+	 * Retorna o numero de dependencias do projeto 
 	 */
 	public int getDependencyCount()
 	{
@@ -235,5 +235,29 @@ public class Project
 			count += c.getDependencyCount();
 		
 		return count;
+	}
+	
+	/**
+	 * Retorna uma enumeração das classes do projeto
+	 */
+	public Vector<ProjectClass> getClasses()
+	{
+		return classes;
+	}
+	
+	/**
+	 * Retorna uma enumeração das classes do projeto
+	 */
+	public Vector<ProjectClass> getClasses(ProjectPackage projectPackage)
+	{
+		Vector<ProjectClass> classesByPackage = new Vector<ProjectClass>();
+		for(ProjectClass c: classes) {
+			if(c.getPackage()==projectPackage) {
+				classesByPackage.add(c);
+			}
+			
+		}
+			
+		return classesByPackage;
 	}
 }

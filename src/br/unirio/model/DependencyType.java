@@ -1,7 +1,7 @@
 package br.unirio.model;
 
 /**
- * Tipo de depend�ncia entre duas classes
+ * Tipo de dependencia entre duas classes
  * 
  * @author Marcio Barros
  */
@@ -14,7 +14,7 @@ public enum DependencyType
 	private final String identifier;
 
 	/**
-	 * Inicializa um tipo de depend�ncia
+	 * Inicializa um tipo de dependencia
 	 */
 	DependencyType(String id)
 	{
@@ -22,7 +22,7 @@ public enum DependencyType
 	}
 
 	/**
-	 * Retorna o identificador do tipo de depend�ncia
+	 * Retorna o identificador do tipo de dependencia
 	 */
 	public String getIdentifier()
 	{
@@ -30,7 +30,7 @@ public enum DependencyType
 	}
 	
 	/**
-	 * Retorna um tipo de depend�ncia, dado um identificado
+	 * Retorna um tipo de dependencia, dado um identificado
 	 */
 	public static DependencyType fromIdentifier(String id)
 	{

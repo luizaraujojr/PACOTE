@@ -8,7 +8,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jhotdraw">
+  <context name="jhotdraw-7.1.0-25032008">
     <container name="E:/Downloads/Doutorado/Jhotdraw/jhotdraw 7.1.jar" classification="jar">
       <namespace name="ch.randelshofer.quaqua">
         <type name="ch.randelshofer.quaqua.AnimatedBorder$1" classification="class" visibility="default">

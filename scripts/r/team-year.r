@@ -1,7 +1,6 @@
+project<-"JEdit"
 
-data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByYear.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByYear.data", header=TRUE);
+data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/", project, "_RevisionsByYear.data", sep = ""), header=TRUE);
 
 years <- sort(unique(data$year));
 columns <- c("team", "inTeam", "outTeam", "num_commits");
@@ -29,6 +28,7 @@ for (year_ in years)
 	result[year_ - 2000 + 1, "num_commits"] <- nrow(vdata);
 }
 
-#result
+result
 
-write.csv(result,file="D:/Backup/eclipse-workspace/PACOTE/results/JHotDraw_team_year.csv")
+write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/results/", project, "_team_year.csv", sep = ""))
+

@@ -1,19 +1,18 @@
 
+project<-"JEdit"
 
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByVersion.data", header=TRUE);
-#data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/jhotdraw_RevisionsByVersion.data", header=TRUE);
-data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/junit_RevisionsByVersion.data", header=TRUE);
+data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/", project, "_RevisionsByVersion.data", sep = ""), header=TRUE);
 
-versions <- sort(unique(data$version));
+versions <- sort(unique(data$versions));
 
-columns <- c("team", "inTeam", "outTeam", "num_commits", "NAR");
+columns <- c("team", "inTeam", "outTeam", "num_commits");
 result <- matrix(nrow=length(versions), ncol=length(columns), dimnames=list(versions, columns));
 
 oldTeam <- c();
 
 for (version_ in versions)
 {
-	vdata <- subset(data, version == version_);
+	vdata <- subset(data, versions == version_);
 	developers <- split(vdata, vdata$author);
 
 	team <- unique(vdata$author);
@@ -30,7 +29,10 @@ for (version_ in versions)
 	result[version_, "inTeam"] <- length(inTeam);
 	result[version_, "outTeam"] <- length(outTeam);
 	result[version_, "num_commits"] <- nrow(vdata);
-	result[version_, "NAR"] <- round(sd(commits),2);
+	#result[version_, "NAR"] <- round(sd(commits),2);
 }
 
 result
+
+write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/results/", project, "_team_version.csv", sep = ""))
+
