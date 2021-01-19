@@ -1,4 +1,4 @@
-	project<-"JEdit"
+	project<-"JHotDraw"
 
 	data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/JARProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
 
@@ -28,7 +28,7 @@ result2 <- matrix(nrow=length(versions), ncol=length(colnames), dimnames=list(ve
 
 for (version_ in versions)
 {
-	vdata <- subset(data, version == version_);
+	vdata <- subset(data, versions == version_);
 	
 	result2[version_, "CBO"] <- round(mean(vdata$cbo),2);
 	result2[version_, "EFF"] <- round(mean(vdata$eff),2);
@@ -40,12 +40,13 @@ for (version_ in versions)
 
 result2
 
-result = data.frame(result1, "dep_class"=round(result2[,6]/result1[,2],2))
+#result = data.frame(result1, "dep_class"=round(result2[,6]/result1[,2],2))
+	result = data.frame(result1, "dependencyCount"=round(result2[,6],2))
 
 
-write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/results/size_complexity", project, ".csv", sep = ""))
+write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_size_complexity.csv", sep = ""))
 
-write.csv(round(cor(result,  method = "spearman"),2),   file=paste("D:/Backup/eclipse-workspace/PACOTE/results/size_complexity_spearman", project, ".csv", sep = ""))
+write.csv(round(cor(result,  method = "spearman"),2),   file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_size_complexity_spearman.csv", sep = ""))
 
 #classes por pacote
 round(mean(result[,2]/result[,1]),2)
@@ -85,78 +86,3 @@ round(sd(result[,6]),2)
 round(median(result[,6]),2)
 round(min(result[,6]),2)
 round(max(result[,6]),2)
-
-
-
-write.csv(result,   file=paste("D:/Backup/eclipse-workspace/PACOTE/results/size_complexity_spearman", project, ".csv", sep = ""))
-
-
-
-
-
-
-
-
-	data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJhotdraw.data", header=TRUE);
-	unique_versions <- unique(data$versions);
-	colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths", "NAC");
-	result1 <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
-
-	for (version_ in unique_versions)
-	{
-		vdata <- subset(data, versions == version_);
-		classes <- split(vdata, vdata$package);
-		
-		result1[version_, "Packages"] <- length(unique(vdata$packages));
-		result1[version_, "Classes"] <- length(vdata$classes);
-		result1[version_, "Attrs"] <- sum(vdata$attrs);
-		result1[version_, "Meths"] <- sum(vdata$meths);
-		result1[version_, "PMeths"] <- sum(vdata$pmeth);	
-		result1[version_, "NAC"] <- sd(unlist(lapply(classes, nrow)));
-	}
-	result1
-
-
-
-# Publishes results from the normality test (95%)
-publishNormal <- function(pvalue, name) {
-	if (pvalue < 0.05) {
-		cat("Existem evidências de que a distribuição de ", name, " não é normal (", pvalue, ").\n", sep="");
-	} else {
-		cat("Nao e possivel negar que a distribuição de ", name, " é normal (", pvalue, ").\n", sep="");
-	}
-}
-
-
-#Analisando a interseção entre os pacotes das versões
-		pdf("D:/Backup/eclipse-workspace/pacote/results/JHotDraw_version_intersect.pdf", width=8,height=5)
-		library(arsenal)
-		
-		#par(mfrow=c(4, 4), mar = c(0.2, 0.2, 0.2, 0.2), mai=c(0,0,0,0))
-		par(mfrow=c(3, 5), mai=c(0,0,0,0))
-		data <- read.table("D:/Backup/eclipse-workspace/pacote/results/JARProjectCharacteristicsJhotdraw.data", header=TRUE);
-		unique_versions <- unique(data$versions);
-		colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths", "NAC");
-		result1 <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
-		previous_version <- "";
-		for (version_ in unique_versions)
-		{
-			if (previous_version != "") {
-				first <- unique(subset(data, versions == previous_version)$packages);
-				second <- unique(subset(data, versions == version_)$packages);
-				
-				both <-  intersect(first, second)
-				onlyfirst <- setdiff(first, second)
-				onlysecond <- setdiff(second, first)
-				
-				require("gplots")
-				
-				list_ <- list(second, first)
-				names(list_) <- c(version_, previous_version)
-				venn(list_)
-			}
-			previous_version <- version_;
-		}
-		dev.off();
-	
-	

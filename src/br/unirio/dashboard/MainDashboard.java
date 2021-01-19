@@ -19,6 +19,8 @@ import br.unirio.analyzer.Dependencies;
 import br.unirio.analyzer.ProjectCharacteristics;
 import br.unirio.analyzer.VersionYearLog;
 import br.unirio.calculator.ClusteringCalculator;
+import br.unirio.calculator.MetricCalculator;
+
 import br.unirio.loader.ProjectLoader;
 import br.unirio.model.Project;
 
@@ -39,47 +41,47 @@ public class MainDashboard {
 	
 	public static final void main(String[] args) throws Throwable
 	{
-		extractGraphData();
+//		extractGraphData();
 ////		
 ////		/**
 ////		 * Interpret and generate a list of log file containing the commits.
 ////		 */
-		generateLogListFile("junit");
-		generateLogListFile("jedit");
-		generateLogListFile("jhotdraw");
+//		generateLogListFile("junit");
+//		generateLogListFile("jedit");
+//		generateLogListFile("jhotdraw");
 ////		
 ////		/**
 ////		 * generate a list of versions by commit, including the developer, the number of classes and packages
 ////		 */
-		extractRevisionsByVersion("junit");
-		extractRevisionsByVersion("jedit");
-		extractRevisionsByVersion("jhotdraw");
+//		extractRevisionsByVersion("junit");
+//		extractRevisionsByVersion("jedit");
+//		extractRevisionsByVersion("jhotdraw");
 ////		
 ////		
 ////		/**
 ////		 * generate a list of years by commit, including the developer, the number of classes and packages
 ////		 */
-		extractRevisionsByYear("junit");
-		extractRevisionsByYear("jedit");
-		extractRevisionsByYear("jhotdraw");
+//		extractRevisionsByYear("junit");
+//		extractRevisionsByYear("jedit");
+//		extractRevisionsByYear("jhotdraw");
 		
 //		
 //		/**
 //		 * generate a list of years by commit, including the developer, the number of classes and packages
 //		 */
-		extractODEMProjectCharacteristics();
+//		extractODEMProjectCharacteristics();
 //		
 //		/**
 //		 * generate a list of years by commit, including the developer, the number of classes and packages
 //		 */
-		extractJARProjectCharacteristics();
+//		extractJARProjectCharacteristics();
 ////			
 ////		/**
 ////		 * generate a list of years by commit, including the developer, the number of classes and packages
 ////		 */
 		extractODEMPackageCharacteristics();
 		
-		
+//		extractMetrics();
 		
 //		Vector<Project> projectInstances = new Vector<Project>();
 //		projectInstances = ProjectLoader.runProjectsReading();
@@ -93,6 +95,70 @@ public class MainDashboard {
 //		distra2.rsf
 		
 	}
+	
+	
+	
+	private static void extractMetrics() throws Exception {
+		PrintStream ps =null;
+//		FileOutputStream out = null;
+		try{
+//			out = new FileOutputStream("results\\ODEMPackageCharacteristics.data");
+//			ps = new PrintStream(new FileOutputStream("results\\ODEMPackageCharacteristics.data"));
+		
+//			ps.println("version\tpackage\tcbo\taff\teff\tlcom\tmf\tcs");
+			
+			ProjectLoader loader = new ProjectLoader(ODEM_DIRECTORY);
+			
+			List<File> files = new ArrayList<File>();
+			
+			File dir = new File(ODEM_DIRECTORY);
+			
+			listFilesOnly(dir,files);
+			
+			for (File file: files) {
+				if(file.isDirectory() == false && getFileExtension(file).equals("odem")) {
+					Project project = loader.loadODEMRealVersion(file.getAbsolutePath());
+					
+					MetricCalculator mc = new MetricCalculator(project);
+//					ClusteringCalculator cc = new ClusteringCalculator(project, project.getPackageCount()a);
+					System.out.println(file.getAbsolutePath() + 
+							"\t" + mc.getClassesNumber()+ 
+							"\t" + mc.getIntraPackageDependenciesNumber() +
+							"\t" + mc.getIntraPackageDependenciesClassNumber() +
+							"\t" + mc.getDiffertPackageDependenciesNumber() +
+							"\t" + mc.getAbstractClassesNumber()+ 
+							"\t" + mc.getConcreteClassesNumber()+
+					"\t" + mc.getSuperclassPackageNumber() +
+					"\t" + mc.getSubclassPackageNumber()
+					
+					);
+					
+			
+//					for (int i = 0; i < project.getPackageCou		nt(); i++)
+//						System.out.println(file.getName().substring(0, file.getName().length() -14) + "\t" + (project.getPackageIndex(i).getName().equals("") != true ? project.getPackageIndex(i).getName() : "NONAME") + 
+////									"\t" + cc.calculateCBO(i) + 
+////									"\t" + cc.calculateAfferentCoupling(i) + 
+////									"\t" + cc.calculateEfferentCoupling(i) + 
+////									"\t" + cc.calculateLCOM5(i) +
+////									"\t" + cc.calculateModularizationFactor(i) +
+//									"\t" + mc.getAbstractClassesNumber(i));	
+				}	
+			}
+		}
+		catch (Exception e) {
+			
+		}
+		
+		finally {
+			if(!Objects.isNull(ps)) {
+				ps.close();	
+			}	
+		}
+	}
+		
+//		System.out.println("extractODEMPackageCharacteristics Finished!");		
+
+	
 	
 	
 	private static void extractODEMPackageCharacteristics() throws Exception {
