@@ -1,27 +1,30 @@
-	project<-"JHotDraw"
+project<-"JHotDraw";
 
-	data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/JARProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
+#baseDirectory <- "D:/Backup/eclipse-workspace";
+baseDirectory <- "C:/Users/User/Desktop/Codigos";
 
-	unique_versions <- unique(data$versions);
-	colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths");
-	result1 <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
+data <- read.table(paste(baseDirectory, "/PACOTE/results/JARProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
 
-	for (version_ in unique_versions)
-	{
-		vdata <- subset(data, versions == version_);
-		classes <- split(vdata, vdata$package);
-		
-		result1[version_, "Packages"] <- length(unique(vdata$packages));
-		result1[version_, "Classes"] <- length(vdata$classes);
-		result1[version_, "Attrs"] <- sum(vdata$attrs);
-		result1[version_, "Meths"] <- sum(vdata$meths);
-		result1[version_, "PMeths"] <- sum(vdata$pmeth);
-	}
-	result1
+unique_versions <- unique(data$versions);
+colnames <- c("Packages", "Classes", "Attrs", "Meths", "PMeths");
+result1 <- matrix(nrow=length(unique_versions), ncol=length(colnames), dimnames=list(unique_versions, colnames));
+
+for (version_ in unique_versions)
+{
+	vdata <- subset(data, versions == version_);
+	classes <- split(vdata, vdata$package);
+	
+	result1[version_, "Packages"] <- length(unique(vdata$packages));
+	result1[version_, "Classes"] <- length(vdata$classes);
+	result1[version_, "Attrs"] <- sum(vdata$attrs);
+	result1[version_, "Meths"] <- sum(vdata$meths);
+	result1[version_, "PMeths"] <- sum(vdata$pmeth);
+}
+result1
 
 
-	data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/ODEMProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
-	versions <- sort(unique(data$version));
+data <- read.table(paste(baseDirectory, "/PACOTE/results/ODEMProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
+versions <- sort(unique(data$version));
 
 colnames <- c("CBO", "AFF", "EFF", "LCOM", "MQ", "dependencyCount" );
 result2 <- matrix(nrow=length(versions), ncol=length(colnames), dimnames=list(versions, colnames));
@@ -44,18 +47,23 @@ result2
 	result = data.frame(result1, "dependencyCount"=round(result2[,6],2))
 
 
-write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_size_complexity.csv", sep = ""))
+write.csv(result,file=paste(baseDirectory, "/PACOTE/data/table/", project, "_size_complexity.csv", sep = ""))
 
-write.csv(round(cor(result,  method = "spearman"),2),   file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_size_complexity_spearman.csv", sep = ""))
+write.csv(round(cor(result,  method = "spearman"),2),   file=paste(baseDirectory, "/PACOTE/data/table/", project, "_size_complexity_spearman.csv", sep = ""))
 
-#classes por pacote
+#
+# Classes por pacote
+#
 round(mean(result[,2]/result[,1]),2)
 round(sd(result[,2]/result[,1]),2)
 round(median(result[,2]/result[,1]),2)
 round(min(result[,2]/result[,1]),2)
 round(max(result[,2]/result[,1]),2)
 
-#atributos por classe
+
+#
+# Atributos por classe
+#
 round(mean(result[,3]/result[,2]),2)
 round(sd(result[,3]/result[,2]),2)
 round(median(result[,3]/result[,2]),2)
@@ -63,7 +71,9 @@ round(min(result[,3]/result[,2]),2)
 round(max(result[,3]/result[,2]),2)
 
 
-#metodos por classe
+#
+# metodos por classe
+#
 round(mean(result[,4]/result[,2]),2)
 round(sd(result[,4]/result[,2]),2)
 round(median(result[,4]/result[,2]),2)
@@ -71,14 +81,14 @@ round(min(result[,4]/result[,2]),2)
 round(max(result[,4]/result[,2]),2)
 
 
-
-#metodos públicos por classe
+#
+# metodos públicos por classe
+#
 round(mean(result[,5]/result[,2]),2)
 round(sd(result[,5]/result[,2]),2)
 round(median(result[,5]/result[,2]),2)
 round(min(result[,5]/result[,2]),2)
 round(max(result[,5]/result[,2]),2)
-
 
 #dependências
 round(mean(result[,6]),2)
