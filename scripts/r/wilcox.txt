@@ -1,0 +1,24 @@
+
+data <- read.table("D:/Backup/eclipse-workspace/PACOTE/results/ODEMPackageCharacteristics.data", header=TRUE);
+
+# Statistics
+statNames <- c("ic_pv_rs-ga", "ic_es_ga-rs", "hv_pv_rs-ga", "hv_es_ga-rs", "gd_pv_rs-ga", "gd_es_ga-rs", "spr_pv_rs-ga", "spr_es_ga-rs", "time_pv_rs-ga", "time_es_ga-rs");
+stats <- matrix(nrow=length(instances), ncol=length(statNames), dimnames=list(instances, statNames));
+
+# Inference tests on an instance basis
+for (instance_ in instances)
+{
+	rs <- subset(data, inst == instance_ & config == "rs150k");
+	ga <- subset(data, inst == instance_ & config == "nsga150k2x");
+
+	stats[instance_, "ic_pv_rs-ga"] <- wilcox.test(rs$best, ga$best)$p.value;
+	stats[instance_, "ic_es_ga-rs"] <- vargha.delaney(ga$best, rs$best);
+	stats[instance_, "hv_pv_rs-ga"] <- wilcox.test(rs$hv, ga$hv)$p.value;
+	stats[instance_, "hv_es_ga-rs"] <- vargha.delaney(ga$hv, rs$hv);
+	stats[instance_, "gd_pv_rs-ga"] <- wilcox.test(rs$gd, ga$gd)$p.value;
+	stats[instance_, "gd_es_ga-rs"] <- vargha.delaney(ga$gd, rs$gd);
+	stats[instance_, "spr_pv_rs-ga"] <- wilcox.test(rs$spr, ga$spr)$p.value;
+	stats[instance_, "spr_es_ga-rs"] <- vargha.delaney(ga$spr, rs$spr);
+	stats[instance_, "time_pv_rs-ga"] <- wilcox.test(rs$time, ga$time)$p.value;
+	stats[instance_, "time_es_ga-rs"] <- vargha.delaney(ga$time, rs$time);
+}

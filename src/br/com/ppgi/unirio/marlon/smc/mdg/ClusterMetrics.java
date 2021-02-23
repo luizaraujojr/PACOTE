@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 /**
- * Métricas utilizadas para cálulos e operações na clusterização
+ * MÃ©tricas utilizadas para cÃ¡lulos e operaÃ§Ãµes na clusterizaÃ§Ã£o
  * @author kiko
  */
 public class ClusterMetrics {
@@ -13,15 +16,16 @@ public class ClusterMetrics {
     private final ModuleDependencyGraph mdg;
     private int[] solution;
 
-    private int totalClusteres;
-    private int[] totalModulesOnCluster;//total de módulos em cada cluster
-    private List<List<Integer>> modulesOnCluster;//guarda os módulos que estão em cada cluster
+    private int totalClusters;
+    private int[] totalModulesOnCluster;//total de mÃ³dulos em cada cluster
+    private List<List<Integer>> modulesOnCluster;//guarda os mÃ³dulos que estÃ£o em cada cluster
 
     private int[] internalDependencyWeight;
     private int[] externalDependencyWeight;
     private double[] modularizationFactor;
     private Stack<Integer> availableClusters;
     private List<Integer> usedClusters;
+    private String objectiveEquation;
 
 
     //usado para clonar o objeto
@@ -29,11 +33,12 @@ public class ClusterMetrics {
         this.mdg = mdg;
     }
     
-    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution){
+    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
             this.mdg = mdg;
             this.solution = solution;
+            this.objectiveEquation = objectiveEquation;
 
-            totalClusteres = 0;
+            totalClusters = 0;
             totalModulesOnCluster = new int[mdg.getSize()+1];
             modulesOnCluster = new ArrayList<>();
 
@@ -47,7 +52,7 @@ public class ClusterMetrics {
     }
 
     /**
-     * Reseta todas as métricas e calcula o MF de todos os módulos novamente
+     * Reseta todas as mÃ©tricas e calcula o MF de todos os mÃ³dulos novamente
      */
     private void resetAllMetrics(){
             availableClusters = new Stack<>();
@@ -61,7 +66,7 @@ public class ClusterMetrics {
             }
 
 
-            for(int i=0;i<solution.length;i++){//para cada módulo
+            for(int i=0;i<solution.length;i++){//para cada mÃ³dulo
                     //controle do total de clusteres
                     int cluster = solution[i];
                     modulesOnCluster.get(cluster).add(i);
@@ -70,16 +75,16 @@ public class ClusterMetrics {
                         updateClusterCreatedInfo(cluster);
                     }
 
-                    for(int j=i;j< mdg.getSize();j++){//para cada outro módulo seguinte
+                    for(int j=i;j< mdg.getSize();j++){//para cada outro mÃ³dulo seguinte
                             updateDependencyMetrics(i,j);
                     }
             }
 
-            resetAllMF();//calcula o MF de todos os módulos
+            resetAllMF();//calcula o MF de todos os mÃ³dulos
     }
 
     /**
-     * Verifica se existe dependência entre os módulos i e j. Se houver, atualiza as metricas.
+     * Verifica se existe dependÃªncia entre os mÃ³dulos i e j. Se houver, atualiza as metricas.
      * @param i
      * @param j
      */
@@ -88,11 +93,11 @@ public class ClusterMetrics {
             return;
         }
         int depWeight = mdg.dependencyWeight(i, j);
-        if(depWeight > 0){//móduo i depende de j
+        if(depWeight > 0){//mÃ³duo i depende de j
             int clusteri = solution[i];
             int clusterj = solution[j];
 
-            if(clusteri == clusterj){//módulos estão no mesmo cluster
+            if(clusteri == clusterj){//mÃ³dulos estÃ£o no mesmo cluster
                 internalDependencyWeight[clusteri] += depWeight;
             }else{
                 externalDependencyWeight[clusteri] += depWeight;
@@ -102,7 +107,7 @@ public class ClusterMetrics {
     }
 
     /**
-     * Atualiza o array modularizationFactor com todos os MFs considerando as métricas existentes
+     * Atualiza o array modularizationFactor com todos os MFs considerando as mÃ©tricas existentes
      */
     private void resetAllMF(){
             for(int i=0;i<modularizationFactor.length;i++){
@@ -129,14 +134,28 @@ public class ClusterMetrics {
      * Calcula o MQ com base nos MFs existentes
      * @return 
      */
-    public double calculateMQ(){
-            double mq = 0;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
-                    int i= convertToClusterNumber(auxi);
-                    mq += modularizationFactor[i];
-            }
-            return mq;
-    }
+//    public double calculateMQ(){
+//            double mq = 0;
+//            for(int auxi=0;auxi<totalClusters;auxi++){
+//                    int i= convertToClusterNumber(auxi);
+//                    mq += modularizationFactor[i];
+//            }
+//            return mq;
+//    }
+    
+    
+//    /**
+//     * Define e calcula a função fitness
+//     * @return 
+//     */
+//    public double calculateFitness(){
+//            double mq = 0;
+//            for(int auxi=0;auxi<totalClusters;auxi++){
+//                    int i= convertToClusterNumber(auxi);
+//                    mq += modularizationFactor[i];
+//            }
+//            return mq;
+//    }
 
 
     /**
@@ -146,7 +165,7 @@ public class ClusterMetrics {
      */
     public void makeMoviment(int module, int toCluster){//TODO - validar a logica do movimento
             int fromCluster = solution[module];
-            if(fromCluster == toCluster) return; //mover para o próprio cluster
+            if(fromCluster == toCluster) return; //mover para o prÃ³prio cluster
             
             int[] metrics = calculateMovimentMetrics(module, toCluster);//TODO - estou aqui
 
@@ -192,7 +211,7 @@ public class ClusterMetrics {
     private void updateClusterCreatedInfo(Integer cluster){
         availableClusters.remove(cluster);//TODO - garantir que e o elemento para fazer com pop()
         usedClusters.add(cluster);//marca o cluster como utilizado na posicao corrente
-        totalClusteres++;
+        totalClusters++;
     }
     
     /**
@@ -200,20 +219,20 @@ public class ClusterMetrics {
      * @param cluster 
      */
     private void updateClusterRemovedInfo(Integer cluster){
-        availableClusters.push(cluster);//cluster poder� ser utilizado
+        availableClusters.push(cluster);//cluster poderï¿½ ser utilizado
         usedClusters.remove(cluster);//remove o cluster da lista dos utilizados
-        totalClusteres--;
+        totalClusters--;
     }
 
     /**
-     * Calcula a alteração que a função objetivo sofrerá com o movimento
+     * Calcula a alteraÃ§Ã£o que a funÃ§Ã£o objetivo sofrerÃ¡ com o movimento
      * @param module
      * @param toCluster
      * @return 
      */
     public double calculateMovimentDelta(int module, int toCluster){
             int fromCluster = solution[module];
-            if(fromCluster == toCluster) return 0d; //mover para o próprio cluster
+            if(fromCluster == toCluster) return 0d; //mover para o prÃ³prio cluster
             
             if(toCluster == -1){
                 toCluster = mdg.getSize();
@@ -232,7 +251,7 @@ public class ClusterMetrics {
     }
 
     /**
-     * Gera os dados com os valores que serão alterados com o movimento
+     * Gera os dados com os valores que serÃ£o alterados com o movimento
      * @param module
      * @param toCluster
      * @return 
@@ -246,40 +265,40 @@ public class ClusterMetrics {
                 fromCluster = mdg.getSize();
             }
 
-            //valores do cluster de onde o módulo vai sair
+            //valores do cluster de onde o mÃ³dulo vai sair
             int fromInternalDependencyWeight = internalDependencyWeight[fromCluster];
             int fromExternalDependencyWeight = externalDependencyWeight[fromCluster];
            
-            //valores do cluster para onde o módulo vai
+            //valores do cluster para onde o mÃ³dulo vai
             int toInternalDependencyWeight = internalDependencyWeight[toCluster];
             int toExternalDependencyWeight = externalDependencyWeight[toCluster];
             if(fromCluster != toCluster){
                 //for (int depModule=0;depModule< mdg.getSize();depModule++){
                 for(int i=0; i<mdg.moduleDependenciesCount(module);i++){
                     int depModule = mdg.moduleDependencies(module)[i];
-                    /*if(depModule==module){//não verifica o próprio módulo
+                    /*if(depModule==module){//nÃ£o verifica o prÃ³prio mÃ³dulo
                         continue;
                     }*/
                     int depWeight = mdg.dependencyWeight(module, depModule);
                    /* if(depWeight == 0){
-                        throw new RuntimeException("DEPENDENCIA ESTÁ NA LISTA MAS NÃO EXISTE!");//não existe dependencia entre o modulo module e j
+                        throw new RuntimeException("DEPENDENCIA ESTÃ� NA LISTA MAS NÃƒO EXISTE!");//nÃ£o existe dependencia entre o modulo module e j
                     }*/
                     int depCluster = solution[depModule];
 
                     if(depModule == module){//modulo dependente de si
                         fromInternalDependencyWeight -= depWeight;
                         toInternalDependencyWeight += depWeight;
-                    }else if(depCluster == fromCluster){//modulos estavam no mesmo cluster -> serão separados   
-                        fromInternalDependencyWeight -= depWeight; //dependencia deixará de ser interna na origem
-                        fromExternalDependencyWeight += depWeight;//passará a ser externa nos dois clusteres
-                        toExternalDependencyWeight += depWeight;//passará a ser externa nos dois clusteres
-                    }else if(depCluster == toCluster){//modulos estavam separados -> ficarão no mesmo cluster
-                        fromExternalDependencyWeight -= depWeight;//dependencia deixará de ser externa nos dois clusteres
-                        toExternalDependencyWeight -= depWeight;//dependencia deixará de ser externa nos dois clusteres
-                        toInternalDependencyWeight += depWeight;//passará a ser interna no cluster de destino
-                    }else /*if(depCluster != fromCluster && depCluster != toCluster)*/{//dependência com módulos que não pertencem nem a origem nem ao destino tem que ser transferidas de um módulo ao outro
-                        fromExternalDependencyWeight -= depWeight; //cluster de origem deixa de ter a dependência externa
-                        toExternalDependencyWeight += depWeight; //cluster de destino passa a ter a dependência externa
+                    }else if(depCluster == fromCluster){//modulos estavam no mesmo cluster -> serÃ£o separados   
+                        fromInternalDependencyWeight -= depWeight; //dependencia deixarÃ¡ de ser interna na origem
+                        fromExternalDependencyWeight += depWeight;//passarÃ¡ a ser externa nos dois clusteres
+                        toExternalDependencyWeight += depWeight;//passarÃ¡ a ser externa nos dois clusteres
+                    }else if(depCluster == toCluster){//modulos estavam separados -> ficarÃ£o no mesmo cluster
+                        fromExternalDependencyWeight -= depWeight;//dependencia deixarÃ¡ de ser externa nos dois clusteres
+                        toExternalDependencyWeight -= depWeight;//dependencia deixarÃ¡ de ser externa nos dois clusteres
+                        toInternalDependencyWeight += depWeight;//passarÃ¡ a ser interna no cluster de destino
+                    }else /*if(depCluster != fromCluster && depCluster != toCluster)*/{//dependÃªncia com mÃ³dulos que nÃ£o pertencem nem a origem nem ao destino tem que ser transferidas de um mÃ³dulo ao outro
+                        fromExternalDependencyWeight -= depWeight; //cluster de origem deixa de ter a dependÃªncia externa
+                        toExternalDependencyWeight += depWeight; //cluster de destino passa a ter a dependÃªncia externa
                     }
                 }
             }
@@ -288,13 +307,13 @@ public class ClusterMetrics {
     }
    
     /**
-     * Calcula a alteração que a função objetivo sofrerá com o movimento de junção de dois clusteres
+     * Calcula a alteraÃ§Ã£o que a funÃ§Ã£o objetivo sofrerÃ¡ com o movimento de junÃ§Ã£o de dois clusteres
      * @param cluster1
      * @param cluster2
      * @return 
      */
     public double calculateMergeClustersDelta(int cluster1, int cluster2){
-            double delta = 0 - modularizationFactor[cluster1];//esse módulo deixará de existir
+            double delta = 0 - modularizationFactor[cluster1];//esse mÃ³dulo deixarÃ¡ de existir
 
             int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
             int joinClusterExternalDependency = externalDependencyWeight[cluster1] +  externalDependencyWeight[cluster2];
@@ -324,12 +343,12 @@ public class ClusterMetrics {
      * @param cluster2 
      */
     public void makeMergeClusters(int cluster1, int cluster2){
-            //para cada módulo, verificar se ele está no cluster i, se estiver, move-lo para o cluster j
-            int clusterNBefore = totalClusteres;
+            //para cada mÃ³dulo, verificar se ele estÃ¡ no cluster i, se estiver, move-lo para o cluster j
+            int clusterNBefore = totalClusters;
             for (int module=0;module<solution.length;module++){
-                    if(solution[module] == cluster1){//modulo está no cluster i
+                    if(solution[module] == cluster1){//modulo estÃ¡ no cluster i
                             makeMoviment(module, cluster2);
-                            if(totalClusteres < clusterNBefore){//acabou de remover o cluster1
+                            if(totalClusters < clusterNBefore){//acabou de remover o cluster1
                                     break;
                             }
                     }
@@ -341,7 +360,7 @@ public class ClusterMetrics {
     
 
     /**
-     * Cria uma copia do atual array de soluão
+     * Cria uma copia do atual array de soluÃ£o
      * @return 
      */
     public int[] cloneSolution(){
@@ -355,7 +374,7 @@ public class ClusterMetrics {
     }
 
     /**
-     * Retorna a solução atual
+     * Retorna a soluÃ§Ã£o atual
      * @return 
      */
     public int[] getSolution(){
@@ -363,15 +382,15 @@ public class ClusterMetrics {
     }
 
     /**
-     * Retorna o número total de clusteres existentes na solução
+     * Retorna o nÃºmero total de clusteres existentes na soluÃ§Ã£o
      * @return 
      */
-    public int getTotalClusteres(){
-        return this.totalClusteres;
+    public int getTotalClusters(){
+        return this.totalClusters;
     }
 
     /**
-     * Retorna a quantidade de módulos existente no maior cluster
+     * Retorna a quantidade de mÃ³dulos existente no maior cluster
      * @return 
      */
     public int getBiggestClusterSize(){
@@ -385,7 +404,7 @@ public class ClusterMetrics {
     }
     
     /**
-     * Retorna a quantidade de módulos existente no menor cluster
+     * Retorna a quantidade de mÃ³dulos existente no menor cluster
      * @return 
      */
     public int getSmallestClusterSize(){
@@ -415,7 +434,7 @@ public class ClusterMetrics {
     }
     
     /**
-     * Retorna a quantidade de clusteres que possuem apenas um módulo
+     * Retorna a quantidade de clusteres que possuem apenas um mÃ³dulo
      * @return 
      */
     public int getIsolatedClusterCount(){
@@ -429,7 +448,7 @@ public class ClusterMetrics {
     }
     
     /**
-     * Verifica se um módulo está sozinho em um cluster
+     * Verifica se um mÃ³dulo estÃ¡ sozinho em um cluster
      * @param moduleN
      * @return 
      */
@@ -438,7 +457,7 @@ public class ClusterMetrics {
     }
     
     /**
-     * Transforma a solução corrente em uma String
+     * Transforma a soluÃ§Ã£o corrente em uma String
      * @return 
      */
     public String getSolutionAsString(){
@@ -454,7 +473,7 @@ public class ClusterMetrics {
     
     public String getClustersStatusAsString(){
         StringBuilder sb = new StringBuilder();
-        for(int i=0; i< totalClusteres;i++){
+        for(int i=0; i< totalClusters;i++){
             int clusterNumber = convertToClusterNumber(i);
             sb.append('\n');
             sb.append(clusterNumber);
@@ -467,7 +486,7 @@ public class ClusterMetrics {
     }
 
     /**
-     * Retorna o MDG da instância
+     * Retorna o MDG da instÃ¢ncia
      * @return 
      */
     public ModuleDependencyGraph getMdg() {
@@ -475,7 +494,7 @@ public class ClusterMetrics {
     }
     
     /**
-     * Retorna o cluster que está na posição do array
+     * Retorna o cluster que estÃ¡ na posiÃ§Ã£o do array
      * @param position
      * @return 
      */
@@ -483,20 +502,20 @@ public class ClusterMetrics {
         if(position >= mdg.getSize()){
             throw new RuntimeException("POSICAO LIDA TEM QUE SER MENOR QUE O TOTAL!");
         }
-        if(position < (totalClusteres)){
+        if(position < (totalClusters)){
             return usedClusters.get(position);
         }
         return availableClusters.peek();//retorna o elemento do topo - criar um novo cluster
     }
     
     /**
-     * Retorna o próximo cluster disponível para insersão
+     * Retorna o prÃ³ximo cluster disponÃ­vel para insersÃ£o
      * @return 
      */
     public int nextAvailableCluster(){
         if(availableClusters.size()>0){
             return availableClusters.peek();//retorna o elemento do topo - criar um novo cluster
-        }else return -1;//não há mais cluster disponível
+        }else return -1;//nÃ£o hÃ¡ mais cluster disponÃ­vel
     }
     /**
      * Retorna o maior MF entre todos os clusteres
@@ -504,7 +523,7 @@ public class ClusterMetrics {
      */
     public double biggestClusterMF(){
         double value = Integer.MIN_VALUE;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] > value){
                         value = modularizationFactor[i];
@@ -519,7 +538,7 @@ public class ClusterMetrics {
      */
     public double smallestClusterMF(){
         double value = Integer.MAX_VALUE;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] < value){
                         value = modularizationFactor[i];
@@ -535,14 +554,14 @@ public class ClusterMetrics {
     public int smallestClusterMFNumber(){
         double value = Integer.MAX_VALUE;
         int cluster = -1;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] < value){
                         value = modularizationFactor[i];
                         cluster = i;
                     }
             }
-            if(totalClusteres == 0)
+            if(totalClusters == 0)
                 return convertToClusterNumber(0);
             return cluster;
     }
@@ -551,7 +570,7 @@ public class ClusterMetrics {
     public ClusterMetrics clone(){
         ClusterMetrics cm = new ClusterMetrics(mdg);
         cm.solution = this.cloneSolution();
-        cm.totalClusteres = this.totalClusteres;
+        cm.totalClusters = this.totalClusters;
         cm.totalModulesOnCluster = new int[this.totalModulesOnCluster.length];
         System.arraycopy(this.totalModulesOnCluster, 0, cm.totalModulesOnCluster, 0, this.totalModulesOnCluster.length);
         
@@ -579,6 +598,8 @@ public class ClusterMetrics {
             cm.usedClusters.add(used);
         }
         
+        cm.objectiveEquation = this.objectiveEquation;
+        
         return cm;
     }
     
@@ -589,4 +610,29 @@ public class ClusterMetrics {
     public List<Integer> getModulesOnCluster(int cluster){
         return this.modulesOnCluster.get(cluster);
     }
+    
+    
+    
+    
+   public double calculateCost(){
+//      return cm1.calculateMQ();
+//  	String parsedEquation = objectiveEquation;
+//  	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
+  	
+  	
+      Expression expression = new ExpressionBuilder(objectiveEquation)
+      	      .variables("a")
+      	      .variables("b")
+      	      .build()
+      	      .setVariable("a", getTotalClusters())
+      		  .setVariable("b", getIsolatedClusterCount());
+      	 
+      	    double result = expression.evaluate();
+  	
+  	
+  	System.out.println(result);
+      return result;
+  }
+    
 }
+

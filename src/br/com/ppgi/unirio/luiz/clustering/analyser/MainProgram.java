@@ -499,148 +499,6 @@ public class MainProgram
 		reader.framework.add("sun.tools.javac.Main");
 		reader.framework.add("junit.ui.TestRunner$13");
 
-////		reader.framework.add("android");
-//		reader.framework.add("android.accessibilityservice");
-//		reader.framework.add("android.accounts");
-//		reader.framework.add("android.animation");
-//		reader.framework.add("android.annotation");
-//		reader.framework.add("android.app");
-//		reader.framework.add("android.appwidget");
-//		reader.framework.add("android.arch.core.executor.testing");
-//		reader.framework.add("android.arch.core.util");
-//		reader.framework.add("android.arch.lifecycle");
-//		reader.framework.add("android.arch.paging");
-//		reader.framework.add("android.arch.persistence.db");
-//		reader.framework.add("android.arch.persistence.room");
-//		reader.framework.add("android.bluetooth");
-//		reader.framework.add("android.bluetooth.le");
-//		reader.framework.add("android.companion");
-//		reader.framework.add("android.content");
-//		reader.framework.add("android.database");
-//		reader.framework.add("android.drm");
-//		reader.framework.add("android.gesture");
-//		reader.framework.add("android.graphics");
-//		reader.framework.add("android.hardware");
-//		reader.framework.add("android.icu.lang");
-//		reader.framework.add("android.icu.math");
-//		reader.framework.add("android.icu.text");
-//		reader.framework.add("android.icu.util");
-//		reader.framework.add("android.inputmethodservice");
-//		reader.framework.add("android.location");
-//		reader.framework.add("android.media");
-//		reader.framework.add("android.mtp");
-//		reader.framework.add("android.net");
-//		reader.framework.add("android.nfc");
-//		reader.framework.add("android.opengl");
-//		reader.framework.add("android.os");
-//		reader.framework.add("android.preference");
-//		reader.framework.add("android.print");
-//		reader.framework.add("android.print.pdf");
-//		reader.framework.add("android.printservice");
-//		reader.framework.add("android.provider");
-//		reader.framework.add("android.renderscript");
-//		reader.framework.add("android.sax");
-//		reader.framework.add("android.se.omapi");
-//		reader.framework.add("android.security");
-//		reader.framework.add("android.service.autofill");
-//		reader.framework.add("android.service.carrier");
-//		reader.framework.add("android.service.chooser");
-//		reader.framework.add("android.service.dreams");
-//		reader.framework.add("android.service.media");
-//		reader.framework.add("android.service.notification");
-//		reader.framework.add("android.service.quicksettings");
-//		reader.framework.add("android.service.restrictions");
-//		reader.framework.add("android.service.textservice");
-//		reader.framework.add("android.service.voice");
-//		reader.framework.add("android.service.vr");
-//		reader.framework.add("android.service.wallpaper");
-//		reader.framework.add("android.speech");
-//		reader.framework.add("android.support");
-//		reader.framework.add("android.system");
-//		reader.framework.add("android.taobao.windvane"); 
-//		reader.framework.add("android.telecom");
-//		reader.framework.add("android.telephony");
-//		reader.framework.add("android.test");
-//		reader.framework.add("android.text");
-//		reader.framework.add("android.transition");
-//		reader.framework.add("android.util");
-//		reader.framework.add("android.view");
-//		reader.framework.add("android.webkit");
-//		reader.framework.add("android.widget");
-//		reader.framework.add("androidx.browser.browseractions");
-//		reader.framework.add("androidx.heifwriter");
-//		reader.framework.add("androidx.recyclerview.selection");
-//		reader.framework.add("androidx.slice");
-//		reader.framework.add("androidx.textclassifier");
-//		reader.framework.add("com.android.billingclient.api");
-//		reader.framework.add("com.android.billingclient.util");
-//		reader.framework.add("com.android.email");
-//		reader.framework.add("com.android.ex");				
-//		reader.framework.add("com.android.exchange");
-//		reader.framework.add("com.android.inputmethod");
-//		reader.framework.add("com.android.internal.util");
-//		reader.framework.add("com.android.mail");
-//		reader.framework.add("com.baidu.simeji");
-//		reader.framework.add("com.bumptech");
-//		reader.framework.add("com.bumptech");
-//		reader.framework.add("com.chad.library");
-//		reader.framework.add("com.commerce");
-//		reader.framework.add("com.facebook");
-//		reader.framework.add("com.fasterxml");
-//		reader.framework.add("com.github");
-//		reader.framework.add("com.google.ads");
-//		reader.framework.add("com.google.ads");
-//		reader.framework.add("com.google.android");
-//		reader.framework.add("com.google.api");
-//		reader.framework.add("com.google.common");
-//		reader.framework.add("com.google.firebase");
-//		reader.framework.add("com.google.gson");
-//		reader.framework.add("com.google.zxing");
-//		reader.framework.add("com.inmobi");
-//		reader.framework.add("com.startapp.android");
-//		reader.framework.add("com.twitter");
-//		reader.framework.add("cz.msebera.android.httpclient");
-//		reader.framework.add("dalvik.annotation");
-//		reader.framework.add("dalvik.bytecode");
-//		reader.framework.add("dalvik.system");
-//		reader.framework.add("java.awt.font");
-//		reader.framework.add("java.beans");
-//		reader.framework.add("java.io");
-//		reader.framework.add("java.lang");
-//		reader.framework.add("java.math");
-//		reader.framework.add("java.net");
-//		reader.framework.add("java.nio");
-//		reader.framework.add("java.security");
-//		reader.framework.add("java.sql");
-//		reader.framework.add("java.text");
-//		reader.framework.add("java.time");
-//		reader.framework.add("java.util");
-//		reader.framework.add("javax");
-//		reader.framework.add("junit.framework");
-//		reader.framework.add("junit.runner");
-//		reader.framework.add("org.apache");
-//		reader.framework.add("org.checkerframework");
-//		reader.framework.add("org.codehaus.jackson");
-//		reader.framework.add("org.jasypt");
-//		reader.framework.add("org.json");
-//		reader.framework.add("org.jsoup");
-//		reader.framework.add("org.junit");
-//		reader.framework.add("org.mozilla");
-//		reader.framework.add("org.qiyi");
-//		reader.framework.add("org.simpleframework");
-//		reader.framework.add("org.w3c.dom");
-//		reader.framework.add("org.xml.sax");
-//		reader.framework.add("org.xmlpull.v1");
-//		reader.framework.add("retrofit");
-//		
-//		reader.framework.add("com.android.vending.billing");
-//		reader.framework.add("com.crashlytics");
-//		reader.framework.add("io.fabric");
-//		reader.framework.add("com.mopub");
-//		reader.framework.add("com.chartboost");
-//		reader.framework.add("com.duapps.ad");
-//		reader.framework.add("com.unity3d");
-//		reader.framework.add("com.appodeal");
 	
 		for (String filename : instanceFilenamesArray)
 			if (filename.length() > 0)
@@ -655,11 +513,11 @@ public class MainProgram
 //		projectInstances = runProjectsReading();
 //		runProjectClassCombinationExport(projectInstances, false);
 //	
-		runLNSPExperiment();
+		runLNSPExperiment("a");
 //		runMOJOComparison("data\\2-originalCombination\\joda-money-0.12-originalCombination-17042018183342", "data\\3-finalCombination\\joda-money", "-fm");
 //		runMOJOComparison("data\\2-originalCombination\\joda-money-0.12-originalCombination-17042018183342", "data\\2-originalCombination\\joda-money-0.12-originalCombination-17042018183342", "-fm");
 //		runMOJOComparison("data\\3-finalCombination\\joda-money", "data\\3-finalCombination\\joda-money", "-fm");
-		runMOJOComparison("data\\mojo\\distra1.rsf", "data\\mojo\\distra2.rsf");
+//		runMOJOComparison("data\\mojo\\distra1.rsf", "data\\mojo\\distra2.rsf");
 		
 //		runProjectOverallAnalisis(projectInstances);		
 //		runProjectDependencyExport(projectInstances);
@@ -727,9 +585,9 @@ public class MainProgram
 		return instances;
 	}
 	
-	private static void runLNSPExperiment() throws InstanceParseException, IOException {
+	private static void runLNSPExperiment(String objectiveEquation) throws InstanceParseException, IOException {
 		LNSParameterTest LNSP = new LNSParameterTest();
-		LNSP.runExperiment();
+		LNSP.runExperiment(objectiveEquation);
 	}
 	
 	private static void runProjectDependencyExport(Vector<Project> projectsInstances) throws InstanceParseException, IOException {		

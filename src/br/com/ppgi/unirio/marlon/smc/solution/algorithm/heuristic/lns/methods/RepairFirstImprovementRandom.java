@@ -28,7 +28,7 @@ public class RepairFirstImprovementRandom extends ARepairSolution{
     public void repair(ClusterMetrics cm) {
         int mdgSize = cm.getMdg().getSize();
         int[] checkOrder = RandomWrapper.createMixedArray(0,mdgSize-1);//verifica os módulos em uma ordem aleatória
-        int auxClusterLimit = cm.getTotalClusteres()!=mdgSize ? cm.getTotalClusteres(): cm.getTotalClusteres()-1;
+        int auxClusterLimit = cm.getTotalClusters()!=mdgSize ? cm.getTotalClusters(): cm.getTotalClusters()-1;
         int[] clustersOrder = RandomWrapper.createMixedArray(0,auxClusterLimit);
         
         NEXT_MODULE:
