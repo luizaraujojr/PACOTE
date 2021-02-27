@@ -274,7 +274,7 @@ public class LNSParameterTest extends ExperimentBase{
     }
     
     @Override
-    protected int[] runAlgorithm(ModuleDependencyGraph mdg) {
+    protected int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation) {
    
     	
     	LNSInterpreter lnsI = new LNSInterpreter(); //luiz antonio
@@ -292,14 +292,14 @@ public class LNSParameterTest extends ExperimentBase{
         }
         
         System.out.println(mdg.getName());
-        if(simplify){
-            MDGSimplifier mDGSimplifier = MDGSimplifier.simplify(mdg);
-            mdg = mDGSimplifier.getMdg();
-            
-            
-            lnsI.setmDGSimplifier(mDGSimplifier);//luiz antonio
-//            System.out.println(mDGSimplifier.getRemovedAsString());//luiz antonio
-        }
+//        if(simplify){
+//            MDGSimplifier mDGSimplifier = MDGSimplifier.simplify(mdg);
+//            mdg = mDGSimplifier.getMdg();
+//            
+//            
+//            lnsI.setmDGSimplifier(mDGSimplifier);//luiz antonio
+////            System.out.println(mDGSimplifier.getRemovedAsString());//luiz antonio
+//        }
         
         for (int configN=0;configN<RANDONS_CONFIGS_TO_TEST;configN++){
             LNSConfiguration config = configurationBuilder.buildRandomConfiguration(mdg, FIXED_VALUES);
@@ -311,7 +311,7 @@ public class LNSParameterTest extends ExperimentBase{
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
                     //System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
-                    lns.execute();//executa o algoritmo -> seraoo salvos os status
+                    lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
                     saveSearchStatus(out, mdg, lns, configN, execution, currentValue);
                     
                     lnsI.addLNS(lns, config);//luiz antonio
@@ -332,7 +332,7 @@ public class LNSParameterTest extends ExperimentBase{
     
     private void saveSearchStatus(ResultWriter out, ModuleDependencyGraph mdg, LargeNeighborhoodSearch lns, int configN, int executionN, Object currentValue){
         ClusterMetrics cm = lns.getBestSolutionFound();
-        out.writeLine(COMPARE_PARAM.toString(), currentValue.toString(), lns.getConfig().toString(), configN+"", executionN+"",lns.getInitialSolutionCost()+"", lns.getBestCost()+"", lns.getBestSolutionIteration()+"", lns.getBiggestNoImprovementGap()+"", lns.getTimeElapsed()+"", lns.getClusterMetrics().getTotalClusteres()+"",lns.getLastIteration()+""
+        out.writeLine(COMPARE_PARAM.toString(), currentValue.toString(), lns.getConfig().toString(), configN+"", executionN+"",lns.getInitialSolutionCost()+"", lns.getBestCost()+"", lns.getBestSolutionIteration()+"", lns.getBiggestNoImprovementGap()+"", lns.getTimeElapsed()+"", lns.getClusterMetrics().getTotalClusters()+"",lns.getLastIteration()+""
                 ,cm.getBiggestClusterSize()+"",cm.getSmallestClusterSize()+"",cm.getIsolatedClusterCount()+"",cm.smallestClusterMF()+"",cm.biggestClusterMF()+""
         ,cm.getSolutionAsString());
     }

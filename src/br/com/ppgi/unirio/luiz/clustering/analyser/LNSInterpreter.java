@@ -68,16 +68,58 @@ public class LNSInterpreter {
 		
 		Project project = new Project (lns.get(0).getClusterMetrics().getMdg().getName());
 		
-		for(int j=0; j<(cluster.size()); j++){
-			if (project.getPackageName("PKG" + cluster.get(j)) == null) {
-				project.addPackage("PKG" + cluster.get(j));
-			}
-			for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
-				ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i), project.getPackageName("PKG" + cluster.get(j)));
-				project.addClass(projectClass);	
-			}
-			
-		}
+//		for(int j=0; j<(cluster.size()); j++){
+//			if (project.getPackageName("PKG" + cluster.get(j)) == null) {
+//				project.addPackage("PKG" + cluster.get(j));
+//			}
+//			for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//				ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i), project.getPackageName("PKG" + cluster.get(j)));
+//				project.addClass(projectClass);
+//				
+//				for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//				
+//				
+//			}
+//			
+//			
+//		}
+		
+		
+		
+		
+		
+//		for (String i : lns.get(0).getClusterMetrics().getMdg().getModuleNames()){
+//			
+//		    String item = i.next();
+//		    System.out.println(item);
+//		}	
+//		
+//		
+//			for(int j=0; j<(cluster.size()); j++){
+//				if (project.getPackageName("PKG" + cluster.get(j)) == null) {
+//					project.addPackage("PKG" + cluster.get(j));
+//				}
+//				
+//				
+//				for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//					if (lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i)) == null) {
+//						project.addPackage(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i));
+//					}
+//					for(int h=0; h<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i).moduleDependenciesCount(i)); h++){
+//						
+//					}
+//				}
+//					ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i), project.getPackageName("PKG" + cluster.get(j)));
+//					project.addClass(projectClass);
+//					
+//					for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//					
+//					
+//				}
+//				
+//				
+//			}
+//			
 		        
 		StringBuilder sb = new StringBuilder();
 	    

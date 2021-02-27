@@ -37,8 +37,9 @@ public class BunchReader{
                     //ler o arquivo atÃ© o final para descobrir quantas classes diferentes tem o arquivo
                     List<String> fileLines = readAllLines(path);	
                     List<String> modules = separateModules(fileLines);
+                    List<String> classes = uniqueClasses(fileLines);
                     
-                    ModuleDependencyGraph mdg = new ModuleDependencyGraph(modules);
+                    ModuleDependencyGraph mdg = new ModuleDependencyGraph(modules, classes);
                         
                     for(String line : fileLines){
                         if(line.length() == 0){
@@ -109,10 +110,49 @@ public class BunchReader{
                 if(!hasT0){
                     modules.add(token[0]);
                 }
-                if(!hasT1 && !token[0].equals(token[1])){
-                    modules.add(token[1]);
-                }
+                
+//                LUIZ ANTONIO - retirei, pois não achei que faz sentido incluir as classes se aqui estão sendo incluídos os pacotes.
+//                if(!hasT1 && !token[0].equals(token[1])){
+//                    modules.add(token[1]);
+//                }
             }
             return modules;
+        }
+        
+        
+        /**
+         * Separa as linhas do arquivo em classes unicas
+         * @param lines
+         * @return
+         * @throws IOException
+         * @throws InstanceParseException 
+         */
+        private List<String> uniqueClasses(List<String> lines) throws IOException, InstanceParseException{
+            List<String> classes = new ArrayList<>();
+            
+            NEXT_LINE:
+            for(String line : lines){
+                if(line.length() == 0){
+                    continue;
+                }
+                String[] token = line.split(SPLITTER);
+                
+                if(token.length < 2){
+                    throw new InstanceParseException("LINHA SEM DEPENDÃŠNCIA ENCONTRADA.");
+                }
+                //verificar se valor existe na lista de modulos
+                boolean hasT0 = false;
+                boolean hasT1 = false;
+                for(String cls : classes){
+                    if(hasT0 && hasT1){continue NEXT_LINE;}
+                    if(!hasT0 && token[0].equals(cls)){hasT0 = true;}
+                    if(!hasT1 && token[1].equals(cls)){hasT1 = true;}
+                }
+                
+                if(!hasT0){
+                    classes.add(token[1]);
+                }
+            }
+            return classes;
         }
 }

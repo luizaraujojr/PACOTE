@@ -31,7 +31,7 @@ public class DestrutiveMFMax extends ADestroySolution{
             stopLoop = true;
             double highestMFValue = Integer.MIN_VALUE;
             int highestMFCluster = -1;
-            for (int i=0;i<cm.getTotalClusteres();i++){
+            for (int i=0;i<cm.getTotalClusters();i++){
                 int currentCluster = cm.convertToClusterNumber(i);
                 double currentMF = cm.readClusterMF(currentCluster);
 

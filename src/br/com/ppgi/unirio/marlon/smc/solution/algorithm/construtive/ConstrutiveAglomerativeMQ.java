@@ -13,31 +13,31 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
     }
     
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg){
-        return createSolution(mdg,1)[0];
+    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
+        return createSolution(mdg,1, objectiveEquation)[0];
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
     	
         //aglomerar os clusteres iterativamente
-        int[][] newSolutions = aglomerateClustering(mdg, solution,quantity);
+        int[][] newSolutions = aglomerateClustering(mdg, solution,quantity, objectiveEquation);
 
         return newSolutions;
     }
 	
-    private static int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity){
+    private static int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, String objectiveEquation){
         int [][] topSolutions = new int[solutionsQuantity][solution.length];
         Double[] topSolutionsMQ = new Double[solutionsQuantity];
         
         int n = mdg.getSize();
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
         //double lastMQ = cm.calculateMQ();
 		
         //solucao de entrada � a melhor. Unica conhecida
         topSolutions[0] = solution;
-        topSolutionsMQ[0] = cm.calculateMQ();
+        topSolutionsMQ[0] = cm.calculateCost();
         
             int k=1;
             while(n-k>1){
@@ -47,11 +47,11 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
                 Double currentMaxDelta=null;
 
 
-                for(int auxi=0;auxi<cm.getTotalClusteres();auxi++){
-                    for(int auxj=auxi+1;auxj<cm.getTotalClusteres();auxj++){
+                for(int auxi=0;auxi<cm.getTotalClusters();auxi++){
+                    for(int auxj=auxi+1;auxj<cm.getTotalClusters();auxj++){
                         int i=cm.convertToClusterNumber(auxi);
                         int j=cm.convertToClusterNumber(auxj);                    
-                        //verificar o delta da uniao desses dois clusteres
+                        //verificar o delta da uniao desses dois clusters
                         double currentDelta = cm.calculateMergeClustersDelta(i, j);
 
                         if(currentMaxDelta== null || currentDelta > currentMaxDelta){
@@ -67,7 +67,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
                 cm.makeMergeClusters(aglutinatei,aglutinatej);
 
                 //gravar solu��o atual na lista de melhores
-                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateMQ(),topSolutions, topSolutionsMQ);
+                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateCost(),topSolutions, topSolutionsMQ);
 
                 k += 1;
             }

@@ -31,7 +31,7 @@ public class DestrutiveClusterSmallest extends ADestroySolution{
             stopLoop = true;
             double smallestClusterValue = Integer.MAX_VALUE;
             int smallestCluster = -1;
-            for (int i=0;i<cm.getTotalClusteres();i++){
+            for (int i=0;i<cm.getTotalClusters();i++){
                 int currentCluster = cm.convertToClusterNumber(i);
                 double currentSize = cm.getModulesOnCluster(currentCluster).size();
 
