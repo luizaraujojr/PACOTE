@@ -15,12 +15,12 @@ public class ConstrutiveBasicAllModuleInSameClusterSolution extends AConstrutive
     * @return
     */
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation) {
-        return createAllModuleInSameClusterSolution(mdg, 0, objectiveEquation);
+    public int[] createSolution(ModuleDependencyGraph mdg) {
+        return createAllModuleInSameClusterSolution(mdg, 0);
     }
 
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -30,7 +30,7 @@ public class ConstrutiveBasicAllModuleInSameClusterSolution extends AConstrutive
     * @param mdg
     * @return
     */
-    private static int[] createAllModuleInSameClusterSolution(ModuleDependencyGraph mdg, int n, String objectiveEquation){
+    private static int[] createAllModuleInSameClusterSolution(ModuleDependencyGraph mdg, int n){
         int[] solution = new int[mdg.getSize()];
 
         for(int index=0;index<mdg.getSize();index++){

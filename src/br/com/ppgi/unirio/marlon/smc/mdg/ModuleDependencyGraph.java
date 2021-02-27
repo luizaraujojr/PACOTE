@@ -20,7 +20,6 @@ public class ModuleDependencyGraph {
 
 
     private List<String> moduleNames;
-    private List<String> classNames;
 
     private int totalDependencyCount;//conta todas as dependencias.
     private int totalDependencyEdgeCount;//conta as arestas existentes
@@ -30,22 +29,18 @@ public class ModuleDependencyGraph {
      * Cria um novo ModuleDependencyGraph - MDG
      * @param moduleNames 
      */
-    public ModuleDependencyGraph(List<String> moduleNames, List<String> classNames){
+    public ModuleDependencyGraph(List<String> moduleNames){
         this.moduleNames = moduleNames;
-        this.classNames = classNames;
         int totalModules = moduleNames.size();
-        int totalClasses = classNames.size();
-//        this.size=totalModules;
-        this.size=totalClasses;
-        dependencyWeight = new int[totalModules][totalClasses];
-        dependencyCount = new int[totalModules][totalClasses];
-        moduleDependencies = new int[totalModules][totalClasses];
+        this.size=totalModules;
+        dependencyWeight = new int[totalModules][totalModules];
+        dependencyCount = new int[totalModules][totalModules];
+        moduleDependencies = new int[totalModules][totalModules];
         moduleDependenciesCount = new int[totalModules];
 
         for(int i=0;i<totalModules;i++){
             moduleDependenciesCount[i] = 0;
-//            for(int j=0;j<totalModules;j++){ 
-            for(int j=0;j<totalClasses;j++){
+            for(int j=0;j<totalModules;j++){ 
                 dependencyWeight[i][j] = 0;
                 dependencyCount[i][j] = 0;
                 moduleDependencies[i][j] = -1;
@@ -63,7 +58,7 @@ public class ModuleDependencyGraph {
      */
     public int addModuleDependency(String module, String dependsOn, int weight){
         int modulePosition = findModulePosition(module);
-        int dependsOnPosition = findClassPosition(dependsOn);
+        int dependsOnPosition = findModulePosition(dependsOn);
         return addModuleDependency(modulePosition, dependsOnPosition, weight);
     }
 
@@ -93,13 +88,13 @@ public class ModuleDependencyGraph {
         if(dependencyCount[module][dependsOn] == 0 && module != dependsOn){//nÃ£o existe dependencia e nÃ£o Ã© o prÃ³prio mÃ³dulo
             moduleDependency[module][dependencyCount[module]++]=dependsOn;
         }*/
-//        if(dependencyCount[module][dependsOn] ==0 ){
-//            totalDependencyEdgeCount ++;//adicona mais uma dependencia nova
-//            moduleDependencies[module][moduleDependenciesCount[module]++] = dependsOn;
-//            if(module != dependsOn){
-//                moduleDependencies[dependsOn][moduleDependenciesCount[dependsOn]++] = module;
-//            }
-//        }
+        if(dependencyCount[module][dependsOn] ==0 ){
+            totalDependencyEdgeCount ++;//adicona mais uma dependencia nova
+            moduleDependencies[module][moduleDependenciesCount[module]++] = dependsOn;
+            if(module != dependsOn){
+                moduleDependencies[dependsOn][moduleDependenciesCount[dependsOn]++] = module;
+            }
+        }
         dependencyCount[module][dependsOn] ++;// adiciona uma dependencia entre os mÃ³dulos
         dependencyWeight[module][dependsOn] += weight;// adiciona o peso atual
         totalDependencyCount+= qty;//adiciona a dependencia no MDG
@@ -195,23 +190,6 @@ public class ModuleDependencyGraph {
         }
         throw new RuntimeException("MODULE NOT FOUND");
     }
-    
-    /**
-     * Encontra a posi��o a classe pelo seu nome
-     * @param moduleName
-     * @return 
-     */
-    private int findClassPosition (String className){
-        int i=0;
-        for(String currentClassName: classNames){
-            if(currentClassName.equals(className)){
-                return i;
-            }
-            i++;
-        }
-        throw new RuntimeException("CLASS NOT FOUND");
-    }
-
 
         
     /**
@@ -220,9 +198,9 @@ public class ModuleDependencyGraph {
      * @return 
      */
     public int getUniqueModuleDependency(int module){
-//        if(dependencyCount[module][module] > 0){
-//            return -1;//mÃ³dulo possui auto relacionamento. nÃ£o pode ser transformado em outro
-//        }
+        if(dependencyCount[module][module] > 0){
+            return -1;//mÃ³dulo possui auto relacionamento. nÃ£o pode ser transformado em outro
+        }
         int connectedModule = -1;
         for(int i=0;i<dependencyCount.length;i++){
             if((i<module && dependencyCount[i][module]>0) || (i>module && dependencyCount[module][i]>0)){
@@ -384,6 +362,9 @@ public class ModuleDependencyGraph {
         return moduleDependenciesCount[module];
     }
 
+   
+
+
     /**
      * Nome da instÃ¢ncia
      * @param name 
@@ -409,6 +390,9 @@ public class ModuleDependencyGraph {
         return totalDependencyEdgeCount;
     }
 	
+    
+        
+
     public boolean isWeighted() {
         return weighted;
     }
@@ -421,6 +405,9 @@ public class ModuleDependencyGraph {
         return moduleNames;
     }
 	
+    
+
+
 	public int[][] getDependencies() {
 		// TODO Auto-generated method stub
 		return moduleDependencies;

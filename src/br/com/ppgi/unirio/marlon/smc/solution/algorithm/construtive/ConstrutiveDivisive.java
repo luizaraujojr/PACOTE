@@ -16,28 +16,28 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
     }
 
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
-        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg, objectiveEquation);
+    public int[] createSolution(ModuleDependencyGraph mdg){
+        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg);
 
         //dividir os clusters iterativamente
-        int[] newSolution = divisiveClustering(mdg, solution, objectiveEquation);
+        int[] newSolution = divisiveClustering(mdg, solution);
 
         return newSolution;
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }	
 	
 	
 	
-	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
+	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution){
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution);
 		
-		int[] maxSolution = cm.cloneSolution();
-		double maxValue = cm.calculateCost();
+		int[] maxMQSolution = cm.cloneSolution();
+		double maxMQValue = cm.calculateMQ();
 		
 		int k=1;
 		while(n-k>1){
@@ -47,7 +47,7 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 			int minExternalDependency = Integer.MAX_VALUE;
 			
 			CLUSTER:
-			for(int i=0;i<cm.getTotalClusters();i++){//pegar o cluster			
+			for(int i=0;i<cm.getTotalClusteres();i++){//pegar o cluster			
 				List<Integer> cluster = makeClusterList(cm,i);//montar uma lista com todos os módulos do cluster
 				
 				for(int modulePosition=1;modulePosition<cluster.size();modulePosition++){
@@ -97,29 +97,29 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 				divideClusters(cm,divideCluster,divideModule);
 
 				//verificar se o MQ vai aumentar
-				double solution1 = cm.calculateCost();
+				double solutionMQ = cm.calculateMQ();
 				
-				if(solution1 > maxValue){//manter a melhor solução em memória
-					maxValue = solution1;
-					maxSolution = cm.cloneSolution();
+				if(solutionMQ > maxMQValue){//manter a melhor solução em memória
+					maxMQValue = solutionMQ;
+					maxMQSolution = cm.cloneSolution();
 				}
 				
 //				System.out.println("DIVIDIDO CLUSTER: "+divideCluster+" - POSICAO: "+divideModule+" - Dep: "+minExternalDependency+" - TOT: "+clusters.size());
 //				System.out.println("CURRENT MQ: "+sm.calculateMQ());
 			}else{
-				return maxSolution;
+				return maxMQSolution;
 			}
 			
 			k += 1;
 		}
-		return maxSolution;
+		return maxMQSolution;
 	}
 		
 	
 	private static void divideClusters(ClusterMetrics cm, int divideCluster, int divideModule){
 		List<Integer> cluster = makeClusterList(cm,divideCluster);//montar uma lista com todos os módulos do cluster
 		
-		int newClusterNumber = cm.getTotalClusters();
+		int newClusterNumber = cm.getTotalClusteres();
 		
 		//mover todos os modulos que estão além do ponto de quebra para o outro cluster
 		for(int index=divideModule; index <cluster.size();){
@@ -141,12 +141,6 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 		}
 		return clusterList;
 	}
-
-//	@Override
-//	public int[] createSolution(ModuleDependencyGraph mdg) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
     
 		

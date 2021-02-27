@@ -40,42 +40,21 @@ public abstract class ExperimentBase {
 
     protected long beginTestTimestamp;
 //    @Test
-//    public void runExperiment() throws InstanceParseException, IOException{
-//        beginTestTimestamp = System.currentTimeMillis();
-//        File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
-//        
-//        System.out.println("INSTANCE;MQ;TEMPO");
-//        for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
-//            ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
-//            runAlgorithm(mdg);
-//            
-//            afterEachInstance();
-//        }
-//        
-//        afterAll();
-//    }
-
-    
-    /**
-     * Métoo para executar o algoritmo do experimento 
-     * Criado por Luiz Antoino
-     */	
-    public void runExperiment(String objectiveEquation) throws InstanceParseException, IOException{
+    public void runExperiment() throws InstanceParseException, IOException{
         beginTestTimestamp = System.currentTimeMillis();
         File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
         
         System.out.println("INSTANCE;MQ;TEMPO");
         for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
             ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
-            runAlgorithm(mdg, objectiveEquation);
+            runAlgorithm(mdg);
             
             afterEachInstance();
         }
         
         afterAll();
     }
-    
-    
+
     /**
      * Executado apÃ³s o final de cada instÃ¢ncia
      */
@@ -96,18 +75,7 @@ public abstract class ExperimentBase {
         
     }
     
-//    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg);
-    
-    
-    /**
-     * Metodo para executar o algoritmo
-     * Criado por Luiz Antonio
-     * @param mdg - objeto que armazena as dependências dos módulos
-     * @param objectiveEquation - equação que será utilizada como função objetivo
-     */
-    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation);
-    
-    
+    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg);
     protected abstract String testName();
     
     /**
@@ -121,8 +89,5 @@ public abstract class ExperimentBase {
         }catch(Exception e){
             
         }
-    }
-
-    
-       
+    }   
 }

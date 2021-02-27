@@ -3,8 +3,6 @@ package br.com.ppgi.unirio.marlon.smc.solution.algorithm.heuristic.lns;
 import br.com.ppgi.unirio.marlon.smc.mdg.ClusterMetrics;
 import br.com.ppgi.unirio.marlon.smc.mdg.ModuleDependencyGraph;
 import br.com.ppgi.unirio.marlon.smc.solution.algorithm.heuristic.sa.SimulatedAnnealingMath;
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
 import random.number.generator.RandomWrapper;
 
 public class LargeNeighborhoodSearch {
@@ -39,17 +37,17 @@ public class LargeNeighborhoodSearch {
      * @param solution
      * @return 
      */
-    public int[] execute(int[] solution, String objectiveEquation){
-        return execute(config.getMdg(), solution, objectiveEquation);
+    public int[] execute(int[] solution){
+        return execute(config.getMdg(), solution);
     }
     
     /**
      * Gera uma solucao utilizando o algoritmo definido no config
      * @return 
      */
-    public int[] execute(String objectiveEquation){
-        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg(), objectiveEquation);
-        return execute(config.getMdg(), solution, objectiveEquation);
+    public int[] execute(){
+        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg());
+        return execute(config.getMdg(), solution);
     }
     
    
@@ -63,14 +61,13 @@ public class LargeNeighborhoodSearch {
      * @param solution
      * @return 
      */
-    protected int[] execute(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
+    protected int[] execute(ModuleDependencyGraph mdg, int[] solution){
         final long startTime = System.currentTimeMillis();//tempo inicial da execucao
         
 //        final int n = solution.length;
         
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solucao - passa a solucao inicial
-        double currentCost = cm.calculateCost(); //custo da solucao atual
-//        double currentCost = cm.calculateMQ(); //custo da solucao atual
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution);// Controlador da solucao - passa a solucao inicial
+        double currentCost = cm.calculateMQ(); //custo da solucao atual
         this.initialSolutionCost = currentCost;//guarda o valor da soluo inicial
         //estado da melhor solucao
         int[] bestSolution = cm.cloneSolution();//best solution found
@@ -100,7 +97,8 @@ public class LargeNeighborhoodSearch {
             ClusterMetrics cmTemp = destroyAndRepairSolution(cm);
             if(accept(bestCost, cmTemp,temperarure)){
                 cm = cmTemp;
-                currentCost = cm.calculateCost();
+                double readMQ = cm.calculateMQ();
+                currentCost = readMQ;
             }
             
             
@@ -132,7 +130,7 @@ public class LargeNeighborhoodSearch {
                 }
                 currentAlgorithm=auxAlgorithm;
                 if(currentAlgorithm==lastAlgorithmImprovement){//rodou por todos os algoritmos sem nenhuma melhora
-                	break;
+                    break;
                 }
                 
                 //verificar se pode voltar ao primeiro
@@ -148,29 +146,6 @@ public class LargeNeighborhoodSearch {
         config.restart();
         return bestSolution;
     }
-
-    
-//    private double calculateCost(ClusterMetrics cm1, String objectiveEquation){
-////        return cm1.calculateMQ();
-////    	String parsedEquation = objectiveEquation;
-////    	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
-//    	
-//    	
-//        Expression expression = new ExpressionBuilder(objectiveEquation)
-//        	      .variables("a")
-//        	      .variables("b")
-//        	      .build()
-//        	      .setVariable("a", cm1.getTotalClusters())
-//        		  .setVariable("b", cm1.getIsolatedClusterCount());
-//        	 
-//        	    double result = expression.evaluate();
-//    	
-//    	
-//    	System.out.println(result);
-//        return result;
-//    }
-    
-    
     
     private int calculateMaxNoImprovimentAlgorithmGap(){
         double currentGap = algorthmRestarts==0 ? config.algorithNoImprovementLimit : algorthmRestarts * config.reductionFactor * config.algorithNoImprovementLimit;
@@ -187,16 +162,16 @@ public class LargeNeighborhoodSearch {
         this.bestSolutionFound = bestSolutionFound;
     }
     
-    protected boolean accept(double bestCost, ClusterMetrics temp, double temperature){
+    protected boolean accept(double bestMQ, ClusterMetrics temp, double temperature){
        return
                (
-               temp.calculateCost() >= bestCost//se for melhor
+               temp.calculateMQ() >= bestMQ//se for melhor
                
                ||//ou 
                (config.useSA &&
                SimulatedAnnealingMath.checkProbability(
-            		   bestCost
-                       , temp.calculateCost()
+                       bestMQ
+                       , temp.calculateMQ()
                        , temperature) 
                > RandomWrapper.rando())
                );//se passar no simulated annealing;
