@@ -1,9 +1,9 @@
 	library(igraph)
 	library("lubridate")
 	
-	project <-"JHotDraw"
+	project <-"JEdit"
 	pdf(paste("D:/Backup/eclipse-workspace/PACOTE/results/", project, "_graph.pdf", sep = ""), width=8,height=6)
-	par(mfrow = c(3,5), cex=0.2)
+	par(mfrow = c(5,5), cex=0.2)
 	
 	#Diretório da base de dados observados a ser lida
 	dataDir <- paste("D:\\Backup\\eclipse-workspace\\PACOTE\\results\\graph\\", project, sep = "")

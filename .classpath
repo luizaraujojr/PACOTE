@@ -1,61 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="src">
+	<classpathentry kind="src" output="target/classes"
+		path="src">
 		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true" />
+			<attribute name="maven.pomderived" value="true" />
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="src" path="resources" />
+	<classpathentry kind="con"
+		path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+<<<<<<< HEAD
 			<attribute name="maven.pomderived" value="true"/>
+=======
+			<attribute name="maven.pomderived" value="true" />
+>>>>>>> parent of b93b78e (review)
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry kind="con"
+		path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4" />
+	<classpathentry kind="con"
+		path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.pomderived" value="true" />
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Downloads/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/commons-compress-1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-base-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-odem-1.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-core-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-utilities-6.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/bcel-6.4.1.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/jgoodies-common-1.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/jgoodies-forms-1.7.1.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/jgoodies-looks-2.5.3.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-application-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-bif-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-base-xpi-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-decompiler-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-decompiler-adapter-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-extensions-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-swing-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-swing-xpi-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-cda-ui-extensions-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-darc-base-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-darc-server-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-file-6.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-gui-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-joi-4.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-keyboard-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-logging-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-model-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-mvc-5.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-nls-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-pax-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-plugin-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-reflect-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-security-3.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-settings-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-six-5.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-swing-3.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-text-8.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/pf-textx-4.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads/pf-cda-2.6.0 (1)/lib/yFiles-2.7.0.1.jar"/>
-	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="output" path="target/classes" />
 </classpath>

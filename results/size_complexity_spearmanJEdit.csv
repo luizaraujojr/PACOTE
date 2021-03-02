@@ -1,7 +1,7 @@
-"","Packages","Classes","Attrs","Meths","PMeths","dependencyCount"
-"Packages",1,0.99,0.98,0.98,0.99,0.99
-"Classes",0.99,1,0.99,0.99,1,1
-"Attrs",0.98,0.99,1,0.98,0.99,0.99
-"Meths",0.98,0.99,0.98,1,0.99,0.99
-"PMeths",0.99,1,0.99,0.99,1,1
-"dependencyCount",0.99,1,0.99,0.99,1,1
+;Packages;Classes;Attrs;Meths;PMeths;dep_class
+Packages;1;0.99;0.97;0.99;0.99;0.86
+Classes;0.99;1;0.98;1;1;0.86
+Attrs;0.97;0.98;1;0.98;0.98;0.84
+Meths;0.99;1;0.98;1;1;0.86
+PMeths;0.99;1;0.98;1;1;0.86
+dep_class;0.86;0.86;0.84;0.86;0.86;1

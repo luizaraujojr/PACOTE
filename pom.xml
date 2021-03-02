@@ -7,17 +7,7 @@
 	<version>1.0.2</version>
 	<name>PACOTE</name>
 
-
-
 	<dependencies>
-	
-	<!-- https://mvnrepository.com/artifact/io.jenetics/jenetics -->
-		<dependency>
-		    <groupId>io.jenetics</groupId>
-		    <artifactId>jenetics</artifactId>
-		    <version>6.1.0</version>
-		</dependency>
-			
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -31,11 +21,6 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-    		<groupId>commons-io</groupId>
-    		<artifactId>commons-io</artifactId>
-    		<version>2.4</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/bcel/bcel -->
 <dependency>
@@ -43,6 +28,7 @@
   <artifactId>bcel</artifactId>
   <version>6.4.1</version>
 </dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>xmlgraphics-commons</artifactId>
@@ -61,6 +47,8 @@
 			<artifactId>exp4j</artifactId>
 			<version>0.4.8</version>
 		</dependency>
+=======
+>>>>>>> parent of b93b78e (review)
 	</dependencies>
 <properties>
   <sonar.projectKey>luizaraujojr_PACOTE</sonar.projectKey>

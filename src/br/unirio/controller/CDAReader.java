@@ -172,8 +172,7 @@ public class CDAReader
 			if (visibility == null)
 				throw new XMLParseException("invalid visibility '" + sVisibility + "' for type '" + name + "'");
 			
-		
-			ProjectClass aClass = new ProjectClass(name, classification, visibility, (sAbstract.equals("yes")?true:false));
+			ProjectClass aClass = new ProjectClass(name, classification, visibility, Boolean.parseBoolean(sAbstract));
 			aClass.setPackage(apackage);
 			project.addClass(aClass);
 			loadDependencies(aClass, child);

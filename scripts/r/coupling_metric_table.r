@@ -1,17 +1,17 @@
 
-	project <-"JHotDraw"
+	project <-"JUnit"
 		
 	data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/ODEMPackageCharacteristics", project, ".data", sep = ""), header=TRUE);
 
 
-	JHotDraw_Exclude <- c("5.4.2", "7.2.0");
-	JEdit_Exclude <- c("2.3.2", "2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7", "2.3.f", "2.4.2", "2.5.1", "3.0.1", "3.2.1", "4.0.0", "4.0.2", "4.3.0", "4.3.1", "4.3.2");
+	JHotDraw_Exclude <- c("5.4.2");
+	JEdit_Exclude <- c("2.3.2", "2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7", "2.3.f", "2.4.2", "2.5.1", "3.0.1", "3.2.1", "4.0.0", "4.0.2", "4.3.0", "4.3.1", "4.3.2","5.4.0");
 	JUnit_Exclude <- c("4.08.0");
 
 
 	`%notin%` <- Negate(`%in%`)
 		
-	data$versions <- as.character(data$versions)	
+	#data$versions <- as.character(data$versions)	
 	if (project=="JHotDraw"	){
 		data <- subset(data, versions %notin% JHotDraw_Exclude)
 	}
@@ -24,7 +24,7 @@
 		data <- subset(data, versions %notin% JUnit_Exclude)
 	}
 
-	data$versions <- as.factor(data$versions)
+	#data$versions <- as.factor(data$versions)
 
 	versions <- sort(unique(data$versions));
 
@@ -47,10 +47,10 @@
 
 
 
-	write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_coupling_metric_table.csv", sep = ""))
+	write.csv(result,file=paste("D:/Backup/eclipse-workspace/PACOTE/results/coupling_metric_table_", project, ".csv", sep = ""))
 
 
 	#cheking the correlation
 
-	write.csv(round(cor(result,  method = "spearman"),2),file=paste("D:/Backup/eclipse-workspace/PACOTE/data/table/", project, "_coupling_metric_table_spearman.csv", sep = ""))
+	write.csv(round(cor(result,  method = "spearman"),2),file=paste("D:/Backup/eclipse-workspace/PACOTE/results/coupling_metric_table_spearman_", project, ".csv", sep = ""))
 
