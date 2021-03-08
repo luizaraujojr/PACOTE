@@ -34,7 +34,7 @@ public class RepairRandom extends ARepairSolution{
             if(testCluster != -1){
                 continue;//não precisa avaliar
             }
-            cm.makeMoviment(currentModule, (int)RandomWrapper.unif(0, cm.getTotalClusteres()));//faz um movimento aleatório
+            cm.makeMoviment(currentModule, (int)RandomWrapper.unif(0, cm.getTotalClusters()));//faz um movimento aleatório
         }
     }
     

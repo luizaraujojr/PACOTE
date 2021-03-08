@@ -24,7 +24,7 @@ public class DestrutiveClusterRandom extends ADestroySolution{
     @Override
     public void destroy(ClusterMetrics cm) {
         int mdgSize = cm.getMdg().getSize();
-        int[] destroyOrder = RandomWrapper.createMixedArray(0,cm.getTotalClusteres()-1);
+        int[] destroyOrder = RandomWrapper.createMixedArray(0,cm.getTotalClusters()-1);
         int limit = (int) (mdgSize * config.getDestructionFactor());
         int modulesLeft = limit;
         

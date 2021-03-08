@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class LNSParameterTest extends ExperimentBase{
 
-    private static final boolean simplify = true;
+    private static final boolean simplify = false;
     
     private static final int RANDONS_CONFIGS_TO_TEST = 1;//2000//1000;//10000
     private final String PREFIX_NAME;
@@ -49,7 +49,7 @@ public class LNSParameterTest extends ExperimentBase{
 /**/
         
         
-        //valores que ser√£o comaprados
+        //valores que ser„o comaprados
         /*
         PREFIX_NAME = "PARAM_01";
         COMPARE_PARAM = LNSConfigurationBuilderRandom.FILTER_NAMES.INITIAL_SOLUTION_METHOD;
@@ -142,7 +142,7 @@ public class LNSParameterTest extends ExperimentBase{
         
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{100});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -153,7 +153,7 @@ public class LNSParameterTest extends ExperimentBase{
         
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{150});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -164,7 +164,7 @@ public class LNSParameterTest extends ExperimentBase{
         
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{200});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -174,7 +174,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{300});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -184,7 +184,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{400});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -194,7 +194,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{500});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -204,7 +204,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -242,7 +242,7 @@ public class LNSParameterTest extends ExperimentBase{
         
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -253,7 +253,7 @@ public class LNSParameterTest extends ExperimentBase{
         /**/
         /*
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de itera√ß√£o
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteraÁ„o
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -264,7 +264,7 @@ public class LNSParameterTest extends ExperimentBase{
         /**/
         
         
-        //config 18 est√° junto com a 13
+        //config 18 est· junto com a 13
         
     }
     public LNSParameterTest(){
@@ -274,7 +274,7 @@ public class LNSParameterTest extends ExperimentBase{
     }
     
     @Override
-    protected int[] runAlgorithm(ModuleDependencyGraph mdg) {
+    protected int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation) {
    
     	
     	LNSInterpreter lnsI = new LNSInterpreter(); //luiz antonio
@@ -298,20 +298,20 @@ public class LNSParameterTest extends ExperimentBase{
             
             
             lnsI.setmDGSimplifier(mDGSimplifier);//luiz antonio
-//            System.out.println(mDGSimplifier.getRemovedAsString());//luiz antonio
+            System.out.println(mDGSimplifier.getRemovedModules());//luiz antonio
         }
         
         for (int configN=0;configN<RANDONS_CONFIGS_TO_TEST;configN++){
             LNSConfiguration config = configurationBuilder.buildRandomConfiguration(mdg, FIXED_VALUES);
             System.out.print("CONFIG: "+configN);
             
-            for (Object currentValue : COMPARE_PARAM_VALUES) {//executar para cada configura√ß√£o especifica
+            for (Object currentValue : COMPARE_PARAM_VALUES) {//executar para cada configuraÁ„o especifica
                 configurationBuilder.changeParameterValue(config, COMPARE_PARAM, currentValue);//acertar a config com o parametro atual    
                 System.out.print(" PARAM: "+currentValue.toString());
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
                     //System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
-                    lns.execute();//executa o algoritmo -> seraoo salvos os status
+                    lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
                     saveSearchStatus(out, mdg, lns, configN, execution, currentValue);
                     
                     lnsI.addLNS(lns, config);//luiz antonio
@@ -332,7 +332,7 @@ public class LNSParameterTest extends ExperimentBase{
     
     private void saveSearchStatus(ResultWriter out, ModuleDependencyGraph mdg, LargeNeighborhoodSearch lns, int configN, int executionN, Object currentValue){
         ClusterMetrics cm = lns.getBestSolutionFound();
-        out.writeLine(COMPARE_PARAM.toString(), currentValue.toString(), lns.getConfig().toString(), configN+"", executionN+"",lns.getInitialSolutionCost()+"", lns.getBestCost()+"", lns.getBestSolutionIteration()+"", lns.getBiggestNoImprovementGap()+"", lns.getTimeElapsed()+"", lns.getClusterMetrics().getTotalClusteres()+"",lns.getLastIteration()+""
+        out.writeLine(COMPARE_PARAM.toString(), currentValue.toString(), lns.getConfig().toString(), configN+"", executionN+"",lns.getInitialSolutionCost()+"", lns.getBestCost()+"", lns.getBestSolutionIteration()+"", lns.getBiggestNoImprovementGap()+"", lns.getTimeElapsed()+"", lns.getClusterMetrics().getTotalClusters()+"",lns.getLastIteration()+""
                 ,cm.getBiggestClusterSize()+"",cm.getSmallestClusterSize()+"",cm.getIsolatedClusterCount()+"",cm.smallestClusterMF()+"",cm.biggestClusterMF()+""
         ,cm.getSolutionAsString());
     }

@@ -1,10 +1,7 @@
 #boxplot for metrics
 project<-"JHotDraw"
 
-#baseDirectory <- "D:/Backup/eclipse-workspace";
-baseDirectory <- "C:/Users/User/Desktop/Codigos";
-
-data <- read.table(paste(baseDirectory, "/PACOTE/results/ODEMPackageCharacteristics", project, ".data", sep = ""), header=TRUE);
+data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/ODEMPackageCharacteristics", project, ".data", sep = ""), header=TRUE);
 
 JHotDraw_Exclude <- c("5.4.2", "7.2.0");
 JEdit_Exclude <- as.factor(c("2.3.2", "2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7", "2.3.f", "2.4.2", "2.5.1", "3.0.1", "3.2.1", "4.0.0", "4.0.2", "4.3.0", "4.3.1", "4.3.2"));

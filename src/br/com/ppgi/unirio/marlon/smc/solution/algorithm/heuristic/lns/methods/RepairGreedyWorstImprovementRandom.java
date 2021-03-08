@@ -39,7 +39,7 @@ public class RepairGreedyWorstImprovementRandom extends ARepairSolution{
             double selectedDelta = Integer.MIN_VALUE;
             
             
-            for(int j=0;j<=cm.getTotalClusteres()&&cm.getTotalClusteres()<cm.getMdg().getSize();j++){//testa um cluster novo se puder criar
+            for(int j=0;j<=cm.getTotalClusters()&&cm.getTotalClusters()<cm.getMdg().getSize();j++){//testa um cluster novo se puder criar
                 int currentCluster = cm.convertToClusterNumber(j);
                 double currentDelta = cm.calculateMovimentDelta(currentModule, currentCluster);
 

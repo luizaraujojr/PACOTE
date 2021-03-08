@@ -9,7 +9,7 @@ public class LargeNeighborhoodSearch {
     
     private LNSConfiguration config;
     
-    //as variaveis abaixo sero gravadas aps a execuo do algooritmo
+    //as variaveis abaixo serão gravadas após a execução do algooritmo
     private ClusterMetrics clusterMetrics;
     
     private double bestCost;
@@ -17,7 +17,7 @@ public class LargeNeighborhoodSearch {
     private long lastIteration;
     private long timeElapsed;
     private double initialSolutionCost;
-    private long biggestNoImprovementGap;//maior quantidade de iteraes sem melhoria
+    private long biggestNoImprovementGap;//maior quantidade de iterações sem melhoria
     
     private int algorthmRestarts = 0;
     private ClusterMetrics bestSolutionFound;
@@ -30,24 +30,26 @@ public class LargeNeighborhoodSearch {
         return "LNS";
     }
     
+    
+    
   
     
     /**
-     * Utiliza a solucao informada como solucao inicial e executa a busca com as configuracoes definidas
+     * Utiliza a solução informada como solução inicial e executa a busca com as configurações definidas
      * @param solution
      * @return 
      */
-    public int[] execute(int[] solution){
-        return execute(config.getMdg(), solution);
+    public int[] execute(int[] solution, String objectiveEquation){
+        return execute(config.getMdg(), solution, objectiveEquation);
     }
     
     /**
-     * Gera uma solucao utilizando o algoritmo definido no config
+     * Gera uma solução utilizando o algoritmo definido no config
      * @return 
      */
-    public int[] execute(){
-        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg());
-        return execute(config.getMdg(), solution);
+    public int[] execute(String objectiveEquation){
+        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg(), objectiveEquation);
+        return execute(config.getMdg(), solution, objectiveEquation);
     }
     
    
@@ -56,28 +58,28 @@ public class LargeNeighborhoodSearch {
    
     
     /**
-     * Executa a busca e retorna a melhor solucao encontrada
+     * Executa a busca e retorna a melhor solução encontrada
      * @param mdg
      * @param solution
      * @return 
      */
-    protected int[] execute(ModuleDependencyGraph mdg, int[] solution){
-        final long startTime = System.currentTimeMillis();//tempo inicial da execucao
+    protected int[] execute(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
+        final long startTime = System.currentTimeMillis();//tempo inicial da execução
         
-//        final int n = solution.length;
+        final int n = solution.length;
         
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);// Controlador da solucao - passa a solucao inicial
-        double currentCost = cm.calculateMQ(); //custo da solucao atual
-        this.initialSolutionCost = currentCost;//guarda o valor da soluo inicial
-        //estado da melhor solucao
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
+        double currentCost = cm.calculateSolutionCost(); //custo da solução atual
+        this.initialSolutionCost = currentCost;//guarda o valor da solução inicial
+        //estado da melhor solução
         int[] bestSolution = cm.cloneSolution();//best solution found
         config.setBestSolution(cm);
         double bestCost = currentCost;//best solution metric
-        long bestSolutionIteration = 0; //iterao onde ocorreu a melhor soluo
+        long bestSolutionIteration = 0; //iteração onde ocorreu a melhor solução
         
         //Controles internos da busca
         long currentIteration = 0;// current iteration
-        //long iterationsWithoutImprovement = 0; //itra�es sem melhoria       
+        //long iterationsWithoutImprovement = 0; //itrações sem melhoria       
         long biggestNoImprovementGap=0;
         long timeElapsed;
         
@@ -97,7 +99,7 @@ public class LargeNeighborhoodSearch {
             ClusterMetrics cmTemp = destroyAndRepairSolution(cm);
             if(accept(bestCost, cmTemp,temperarure)){
                 cm = cmTemp;
-                double readMQ = cm.calculateMQ();
+                double readMQ = cm.calculateSolutionCost();
                 currentCost = readMQ;
             }
             
@@ -122,7 +124,7 @@ public class LargeNeighborhoodSearch {
             }
             if(config.algorithNoImprovementLimit>0 && algorithmNoImprovementGap>=(calculateMaxNoImprovimentAlgorithmGap())){
                 int auxAlgorithm = config.changeRepairMethod();
-                if(auxAlgorithm < currentAlgorithm){//se nao puder reiniar, aborta.
+                if(auxAlgorithm < currentAlgorithm){//se não puder reiniar, aborta.
                     if(config.mixedRestart == false){
                         break;
                     }
@@ -139,7 +141,7 @@ public class LargeNeighborhoodSearch {
             }
             temperarure *= config.getCoolingRate();//diminui a temperatura
             
-            timeElapsed = System.currentTimeMillis() - startTime;//tempo que a busca esta rodando
+            timeElapsed = System.currentTimeMillis() - startTime;//tempo que a busca está rodando
         }while(canIterate(currentIteration, timeElapsed,biggestNoImprovementGap));
         config.writeIterationReport(cm, bestCost, bestSolutionIteration, currentIteration, System.currentTimeMillis() - startTime, name());
         saveLastStatus(cm, bestCost, bestSolutionIteration, currentIteration, System.currentTimeMillis() - startTime, biggestNoImprovementGap, config.getBestSolution());
@@ -165,33 +167,33 @@ public class LargeNeighborhoodSearch {
     protected boolean accept(double bestMQ, ClusterMetrics temp, double temperature){
        return
                (
-               temp.calculateMQ() >= bestMQ//se for melhor
+               temp.calculateSolutionCost() >= bestMQ//se for melhor
                
                ||//ou 
                (config.useSA &&
                SimulatedAnnealingMath.checkProbability(
                        bestMQ
-                       , temp.calculateMQ()
+                       , temp.calculateSolutionCost()
                        , temperature) 
                > RandomWrapper.rando())
                );//se passar no simulated annealing;
     }
     
     /**
-     * Destroi e repara a solucao utilizando o metodo configurado
+     * Destroi e repara a solução utilizando o método configurado
      * @param cm
      * @return 
      */
     protected ClusterMetrics destroyAndRepairSolution(ClusterMetrics cm){
         ClusterMetrics cm2 = cm.clone();
         config.changeDestructionFactor();//altera o destructionfactor se estiver configurado para isso
-        config.getDestroyAlgorithm().destroy(cm2);//executa o medoto
-        config.getRepairAlgorithm().repair(cm2);//executa o medoto
+        config.getDestroyAlgorithm().destroy(cm2);//executa o médoto
+        config.getRepairAlgorithm().repair(cm2);//executa o médoto
         return cm2;
     }
     
     /**
-     * Verifica se a condicao de parada foi alcancada
+     * Verifica se a condição de parada foi alcançada
      * @param currentIteration
      * @param timeElapsed
      * @param noImprovementIterations
@@ -242,5 +244,10 @@ public class LargeNeighborhoodSearch {
     public ClusterMetrics getBestSolutionFound() {
         return bestSolutionFound;
     }
+    
+    
+    
+    
+    
 }
 

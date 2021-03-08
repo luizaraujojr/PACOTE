@@ -15,7 +15,7 @@ public class ConstrutiveBasicOneModulePerCluster extends AConstrutiveSolutionBui
      * @return
      */
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg) {
+    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation) {
         int[] solution = new int[mdg.getSize()];
 
         for(int index=0;index<mdg.getSize();index++){
@@ -25,7 +25,7 @@ public class ConstrutiveBasicOneModulePerCluster extends AConstrutiveSolutionBui
     }
 
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

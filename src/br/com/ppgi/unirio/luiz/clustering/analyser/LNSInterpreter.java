@@ -20,7 +20,7 @@ public class LNSInterpreter {
 	private MDGSimplifier mDGSimplifier;
 	private Vector<LargeNeighborhoodSearch> lns;
 	private Vector<Integer> cluster;
-	protected String OUTPUT_FOLDER  = "data\\LNS-Interpretation\\";// Change by Luiz
+	protected String OUTPUT_FOLDER  = "data\\Experiment\\LNSInterpretation\\";// Change by Luiz
 
 	
 	public LNSInterpreter()
@@ -51,10 +51,17 @@ public class LNSInterpreter {
 	
 	public void generate() throws IOException
 	{
-		cluster.setSize(mDGSimplifier.getRemovedModules().size() + lns.get(0).getBestSolutionFound().getSolution().length);
-		for(int i=0; i<(mDGSimplifier.getRemovedModules().size()); i++){
-			cluster.set(mDGSimplifier.getRemovedModules().get(i), -1);
+		if(mDGSimplifier!=null){
+			cluster.setSize(mDGSimplifier.getRemovedModules().size() + lns.get(0).getBestSolutionFound().getSolution().length);
+			for(int i=0; i<(mDGSimplifier.getRemovedModules().size()); i++){
+				cluster.set(mDGSimplifier.getRemovedModules().get(i), -1);
+			}
 		}
+		else {
+			cluster.setSize(lns.get(0).getBestSolutionFound().getSolution().length);
+		}
+		
+		
 		int solution = 0;
 		
 		for(int i=0; i<(cluster.size()); i++){
@@ -72,12 +79,57 @@ public class LNSInterpreter {
 			if (project.getPackageName("PKG" + cluster.get(j)) == null) {
 				project.addPackage("PKG" + cluster.get(j));
 			}
-			for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
-				ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i), project.getPackageName("PKG" + cluster.get(j)));
-				project.addClass(projectClass);	
-			}
+			
+			ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(j), project.getPackageName("PKG" + cluster.get(j)));
+			project.addClass(projectClass);
+			
+//			for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+				
+				
+//				for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+				
+	
+//			}
+			
 			
 		}
+		
+		
+		
+		
+		
+//		for (String i : lns.get(0).getClusterMetrics().getMdg().getModuleNames()){
+//			
+//		    String item = i.next();
+//		    System.out.println(item);
+//		}	
+//		
+//		
+//			for(int j=0; j<(cluster.size()); j++){
+//				if (project.getPackageName("PKG" + cluster.get(j)) == null) {
+//					project.addPackage("PKG" + cluster.get(j));
+//				}
+//				
+//				
+//				for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//					if (lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i)) == null) {
+//						project.addPackage(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i));
+//					}
+//					for(int h=0; h<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i).moduleDependenciesCount(i)); h++){
+//						
+//					}
+//				}
+//					ProjectClass projectClass = new ProjectClass(lns.get(0).getClusterMetrics().getMdg().getModuleNames().get(i), project.getPackageName("PKG" + cluster.get(j)));
+//					project.addClass(projectClass);
+//					
+//					for(int i=0; i<(lns.get(0).getClusterMetrics().getMdg().getModuleNames().size()); i++){
+//					
+//					
+//				}
+//				
+//				
+//			}
+//			
 		        
 		StringBuilder sb = new StringBuilder();
 	    
@@ -96,7 +148,7 @@ public class LNSInterpreter {
 	    
 	    for(ProjectPackage projectPackage: project.getPackages()) {
 	    	for(ProjectClass projectClass1: project.getClasses(projectPackage)) {
-    			sb.append(projectPackage.getName() + " " + projectClass1.getName());
+    			sb.append("contain " + projectPackage.getName() + " " + projectClass1.getName());
     			sb.append(System.lineSeparator());	    		
 	    	}
 	    }

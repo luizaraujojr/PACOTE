@@ -17,9 +17,9 @@ public abstract class AConstrutiveSolutionBuilder {
     
     public abstract String getName();
     
-    public abstract int[] createSolution(ModuleDependencyGraph mdg);
+    public abstract int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation);
     
-    public abstract int[][] createSolution(ModuleDependencyGraph mdg, int quantity);
+    public abstract int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation);
     
     
 }

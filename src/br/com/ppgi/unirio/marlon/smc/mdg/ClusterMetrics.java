@@ -1,8 +1,13 @@
 package br.com.ppgi.unirio.marlon.smc.mdg;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Stack;
+
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 
 /**
  * Métricas utilizadas para cálulos e operações na clusterização
@@ -13,7 +18,7 @@ public class ClusterMetrics {
     private final ModuleDependencyGraph mdg;
     private int[] solution;
 
-    private int totalClusteres;
+    private int totalClusters;
     private int[] totalModulesOnCluster;//total de módulos em cada cluster
     private List<List<Integer>> modulesOnCluster;//guarda os módulos que estão em cada cluster
 
@@ -22,6 +27,7 @@ public class ClusterMetrics {
     private double[] modularizationFactor;
     private Stack<Integer> availableClusters;
     private List<Integer> usedClusters;
+    private String objectiveEquation;
 
 
     //usado para clonar o objeto
@@ -29,11 +35,11 @@ public class ClusterMetrics {
         this.mdg = mdg;
     }
     
-    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution){
+    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
             this.mdg = mdg;
             this.solution = solution;
 
-            totalClusteres = 0;
+            totalClusters = 0;
             totalModulesOnCluster = new int[mdg.getSize()+1];
             modulesOnCluster = new ArrayList<>();
 
@@ -131,7 +137,7 @@ public class ClusterMetrics {
      */
     public double calculateMQ(){
             double mq = 0;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     mq += modularizationFactor[i];
             }
@@ -192,7 +198,7 @@ public class ClusterMetrics {
     private void updateClusterCreatedInfo(Integer cluster){
         availableClusters.remove(cluster);//TODO - garantir que e o elemento para fazer com pop()
         usedClusters.add(cluster);//marca o cluster como utilizado na posicao corrente
-        totalClusteres++;
+        totalClusters++;
     }
     
     /**
@@ -202,7 +208,7 @@ public class ClusterMetrics {
     private void updateClusterRemovedInfo(Integer cluster){
         availableClusters.push(cluster);//cluster poder� ser utilizado
         usedClusters.remove(cluster);//remove o cluster da lista dos utilizados
-        totalClusteres--;
+        totalClusters--;
     }
 
     /**
@@ -325,11 +331,11 @@ public class ClusterMetrics {
      */
     public void makeMergeClusters(int cluster1, int cluster2){
             //para cada módulo, verificar se ele está no cluster i, se estiver, move-lo para o cluster j
-            int clusterNBefore = totalClusteres;
+            int clusterNBefore = totalClusters;
             for (int module=0;module<solution.length;module++){
                     if(solution[module] == cluster1){//modulo está no cluster i
                             makeMoviment(module, cluster2);
-                            if(totalClusteres < clusterNBefore){//acabou de remover o cluster1
+                            if(totalClusters < clusterNBefore){//acabou de remover o cluster1
                                     break;
                             }
                     }
@@ -366,8 +372,8 @@ public class ClusterMetrics {
      * Retorna o número total de clusteres existentes na solução
      * @return 
      */
-    public int getTotalClusteres(){
-        return this.totalClusteres;
+    public int getTotalClusters(){
+        return this.totalClusters;
     }
 
     /**
@@ -454,7 +460,7 @@ public class ClusterMetrics {
     
     public String getClustersStatusAsString(){
         StringBuilder sb = new StringBuilder();
-        for(int i=0; i< totalClusteres;i++){
+        for(int i=0; i< totalClusters;i++){
             int clusterNumber = convertToClusterNumber(i);
             sb.append('\n');
             sb.append(clusterNumber);
@@ -483,7 +489,7 @@ public class ClusterMetrics {
         if(position >= mdg.getSize()){
             throw new RuntimeException("POSICAO LIDA TEM QUE SER MENOR QUE O TOTAL!");
         }
-        if(position < (totalClusteres)){
+        if(position < (totalClusters)){
             return usedClusters.get(position);
         }
         return availableClusters.peek();//retorna o elemento do topo - criar um novo cluster
@@ -504,7 +510,7 @@ public class ClusterMetrics {
      */
     public double biggestClusterMF(){
         double value = Integer.MIN_VALUE;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] > value){
                         value = modularizationFactor[i];
@@ -519,7 +525,7 @@ public class ClusterMetrics {
      */
     public double smallestClusterMF(){
         double value = Integer.MAX_VALUE;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] < value){
                         value = modularizationFactor[i];
@@ -535,14 +541,14 @@ public class ClusterMetrics {
     public int smallestClusterMFNumber(){
         double value = Integer.MAX_VALUE;
         int cluster = -1;
-            for(int auxi=0;auxi<totalClusteres;auxi++){
+            for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     if(modularizationFactor[i] < value){
                         value = modularizationFactor[i];
                         cluster = i;
                     }
             }
-            if(totalClusteres == 0)
+            if(totalClusters == 0)
                 return convertToClusterNumber(0);
             return cluster;
     }
@@ -551,7 +557,7 @@ public class ClusterMetrics {
     public ClusterMetrics clone(){
         ClusterMetrics cm = new ClusterMetrics(mdg);
         cm.solution = this.cloneSolution();
-        cm.totalClusteres = this.totalClusteres;
+        cm.totalClusters = this.totalClusters;
         cm.totalModulesOnCluster = new int[this.totalModulesOnCluster.length];
         System.arraycopy(this.totalModulesOnCluster, 0, cm.totalModulesOnCluster, 0, this.totalModulesOnCluster.length);
         
@@ -589,4 +595,27 @@ public class ClusterMetrics {
     public List<Integer> getModulesOnCluster(int cluster){
         return this.modulesOnCluster.get(cluster);
     }
+    
+    
+    public double calculateSolutionCost(){
+//      return cm1.calculateMQ();
+//  	String parsedEquation = objectiveEquation;
+//  	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
+  	
+  	
+//      Expression expression = new ExpressionBuilder(objectiveEquation)
+//      	      .variables("a")
+//      	      .variables("b")
+//      	      .build()
+//      	      .setVariable("a", getTotalClusters())
+//      		  .setVariable("b", getIsolatedClusterCount());
+//      	 
+//      	    double result = expression.evaluate();
+//  	
+//  	
+//  	System.out.println(result);
+//      return getTotalClusters();
+      return calculateMQ();
+  }
+    
 }
