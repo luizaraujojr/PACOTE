@@ -44,30 +44,10 @@ public class MDGSimplifier {
         }
         
         returnData.mdg.refreshRemovedModules(returnData.removedModules);
-
         return returnData;
     }
     
-    /**
-     * Transforma a os removidos em uma String //luiz antonio
-     * @return 
-     */
-    public String getRemovedAsString(){
-        StringBuilder sb = new StringBuilder();
-        for(int i=0;i<this.removedModules.size();i++){
-            if(i>0){
-                sb.append("-");
-            }
-            sb.append(this.removedModules.get(i));
-        }
-        return sb.toString();
-    }
-    
-    
-	public List<Integer> getRemovedModules() {
-		return removedModules;
-	}
-    
+
     public int getSizeBefore() {
         return sizeBefore;
     }
@@ -92,6 +72,8 @@ public class MDGSimplifier {
         this.mdg = mdg;
     }
     
-    
+	public List<Integer> getRemovedModules() {
+		return removedModules;
+	}
     
 }

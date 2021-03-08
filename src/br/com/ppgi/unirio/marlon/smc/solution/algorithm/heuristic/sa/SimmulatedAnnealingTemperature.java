@@ -18,11 +18,11 @@ public class SimmulatedAnnealingTemperature {
     }
     
    
-    public int[] execute(ModuleDependencyGraph mdg, AConstrutiveSolutionBuilder solutionBuilder, float coolingRate, float initialTemperatureRatio, int iterations, String objectiveEquation){
+    public int[] execute(ModuleDependencyGraph mdg, AConstrutiveSolutionBuilder solutionBuilder, float coolingRate, float initialTemperatureRatio, int iterations){
         int currentIteration = 0;
-        int[] solution = solutionBuilder.createSolution(mdg, objectiveEquation);
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
-        double currentCost = cm.calculateCost(); //custo da solução atual
+        int[] solution = solutionBuilder.createSolution(mdg);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution);// Controlador da solução - passa a solução inicial
+        double currentCost = cm.calculateSolutionCost(); //custo da solução atual
         double temperature=  SimulatedAnnealingMath.calculateInitialTemperature(currentCost, initialTemperatureRatio, 0.5d);
         writeIterationReport(solutionBuilder, coolingRate, initialTemperatureRatio, currentIteration, temperature);
         

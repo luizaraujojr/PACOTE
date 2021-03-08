@@ -7,7 +7,7 @@ import sobol.problems.clustering.generic.model.Project;
 
 public abstract class InstanceFileWorker<T extends Object> {
     
-        public static final String INSTANCES_BASE_FOLDER="instances/";
+        public static final String INSTANCES_BASE_FOLDER="data/";
 	
 	/**
          * Retorna todos os arquivos de um ditretorio
@@ -21,7 +21,7 @@ public abstract class InstanceFileWorker<T extends Object> {
 	}
 	
 	/**
-         * Efetua a leitura de um arquivo de instancia
+         * Efetua a leitura de um arquivo de inst�ncia
          * @param currentInstance
          * @return
          * @throws InstanceParseException 

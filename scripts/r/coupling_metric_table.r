@@ -1,5 +1,5 @@
+	project <-"JUnit"
 
-	project <-"JHotDraw"
 		
 	data <- read.table(paste("D:/Backup/eclipse-workspace/PACOTE/results/ODEMPackageCharacteristics", project, ".data", sep = ""), header=TRUE);
 

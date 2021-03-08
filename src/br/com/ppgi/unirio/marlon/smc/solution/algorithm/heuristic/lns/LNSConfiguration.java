@@ -297,6 +297,16 @@ public class LNSConfiguration{
         this.bestSolution = bestSolution;
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     public ResultWriter getOut() {
         return iterationOut;
     }
@@ -357,5 +367,10 @@ public class LNSConfiguration{
 
     public void setUseSA(boolean useSA) {
         this.useSA = useSA;
-    }   
+    }
+    
+    
+    
+    
+    
 }

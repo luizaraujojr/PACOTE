@@ -22,8 +22,7 @@ public class BunchInstanceFileWorker extends InstanceFileWorker<ModuleDependency
     
     @Override
     protected String getInstanceFolder(){
-//        return INSTANCES_BASE_FOLDER+folder;
-        return folder;
+        return INSTANCES_BASE_FOLDER+folder;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class ConstrutiveBasicRandomSolution extends AConstrutiveSolutionBuilder{
      * @return
      */
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation) {
+    public int[] createSolution(ModuleDependencyGraph mdg) {
         int[] solution = new int[mdg.getSize()];
 
         for(int index=0;index<mdg.getSize();index++){
@@ -26,7 +26,7 @@ public class ConstrutiveBasicRandomSolution extends AConstrutiveSolutionBuilder{
     }
 
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

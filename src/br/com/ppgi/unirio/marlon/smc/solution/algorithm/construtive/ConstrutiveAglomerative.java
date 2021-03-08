@@ -13,27 +13,27 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
     }
     
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
+    public int[] createSolution(ModuleDependencyGraph mdg){
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
 		
         //aglomerar os clusteres iterativamente
-        int[] newSolution = aglomerateClustering(mdg, solution, objectiveEquation);
+        int[] newSolution = aglomerateClustering(mdg, solution);
 
         return newSolution;
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 	
 	
-    private static int[] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
+    private static int[] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution){
         int n = mdg.getSize();
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution);
 
-        int[] maxSolution = cm.cloneSolution();
-        double maxValue = cm.calculateCost();
+        int[] maxMQSolution = cm.cloneSolution();
+        double maxMQValue = cm.calculateSolutionCost();
         int[][] algutinateDependency = new int[cm.getTotalClusters()][cm.getTotalClusters()];
         int k=1;
         while(n-k>1){
@@ -67,20 +67,20 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
                         cm.makeMergeClusters(aglutinatei,aglutinatej);//efetua a aglutinação dos clusteres
 
                         //verificar se o MQ vai aumentar
-                        double solution1 = cm.calculateCost();
+                        double solutionMQ = cm.calculateSolutionCost();
 
-                        if(solution1 > maxValue){//manter a melhor solução em memória
-                                maxValue = solution1;
-                                maxSolution = cm.cloneSolution();
+                        if(solutionMQ > maxMQValue){//manter a melhor solução em memória
+                                maxMQValue = solutionMQ;
+                                maxMQSolution = cm.cloneSolution();
                         }
 
     //				System.out.println("AGLUTINANDO: "+aglutinatei+" - "+aglutinatej+" - Dep: "+maxInternalDependency+" - TOT: "+cm.getTotalClusteres());
     //				System.out.println("CURRENT MQ: "+cm.calculateMQ());
                 }else{
-                        return maxSolution;
+                        return maxMQSolution;
                 }
                 k += 1;
         }
-        return maxSolution;
+        return maxMQSolution;
     }
 }

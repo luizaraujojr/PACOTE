@@ -16,28 +16,28 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
     }
 
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
-        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg, objectiveEquation);
+    public int[] createSolution(ModuleDependencyGraph mdg){
+        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg);
 
         //dividir os clusters iterativamente
-        int[] newSolution = divisiveClustering(mdg, solution, objectiveEquation);
+        int[] newSolution = divisiveClustering(mdg, solution);
 
         return newSolution;
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }	
 	
 	
 	
-	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
+	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution){
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution);
 		
-		int[] maxSolution = cm.cloneSolution();
-		double maxValue = cm.calculateCost();
+		int[] maxMQSolution = cm.cloneSolution();
+		double maxMQValue = cm.calculateSolutionCost();
 		
 		int k=1;
 		while(n-k>1){
@@ -97,22 +97,22 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 				divideClusters(cm,divideCluster,divideModule);
 
 				//verificar se o MQ vai aumentar
-				double solution1 = cm.calculateCost();
+				double solutionMQ = cm.calculateSolutionCost();
 				
-				if(solution1 > maxValue){//manter a melhor solução em memória
-					maxValue = solution1;
-					maxSolution = cm.cloneSolution();
+				if(solutionMQ > maxMQValue){//manter a melhor solução em memória
+					maxMQValue = solutionMQ;
+					maxMQSolution = cm.cloneSolution();
 				}
 				
 //				System.out.println("DIVIDIDO CLUSTER: "+divideCluster+" - POSICAO: "+divideModule+" - Dep: "+minExternalDependency+" - TOT: "+clusters.size());
 //				System.out.println("CURRENT MQ: "+sm.calculateMQ());
 			}else{
-				return maxSolution;
+				return maxMQSolution;
 			}
 			
 			k += 1;
 		}
-		return maxSolution;
+		return maxMQSolution;
 	}
 		
 	
@@ -141,12 +141,6 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 		}
 		return clusterList;
 	}
-
-//	@Override
-//	public int[] createSolution(ModuleDependencyGraph mdg) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
     
 		

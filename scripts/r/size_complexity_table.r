@@ -1,7 +1,7 @@
-project<-"JHotDraw";
+project<-"JUnit";
 
-#baseDirectory <- "D:/Backup/eclipse-workspace";
-baseDirectory <- "C:/Users/User/Desktop/Codigos";
+baseDirectory <- "D:/Backup/eclipse-workspace";
+#baseDirectory <- "C:/Users/User/Desktop/Codigos";
 
 data <- read.table(paste(baseDirectory, "/PACOTE/results/JARProjectCharacteristics", project, ".data", sep = ""), header=TRUE);
 
