@@ -4,7 +4,7 @@ library(tidyverse)
 #
 # Configuracao
 #
-project<-"JHotDraw";
+project<-"JEdit";
 
 #baseDirectory <- "D:/Backup/eclipse-workspace";
 baseDirectory <- "C:/Users/User/Desktop/Codigos";

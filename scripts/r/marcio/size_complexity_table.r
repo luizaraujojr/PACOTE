@@ -4,7 +4,7 @@ library(tidyverse)
 #
 # Configuracao
 #
-project<-"JHotDraw";
+project<-"JUnit";
 
 #baseDirectory <- "D:/Backup/eclipse-workspace";
 baseDirectory <- "C:/Users/User/Desktop/Codigos";
@@ -31,8 +31,16 @@ result1 <- data %>%
 #
 data2 <- read_tsv(paste0(baseDirectory, "/PACOTE/results/ODEMProjectCharacteristics", project, ".data"));
 
+# Apenas para o JHotdraw
+if (project == "JHotDraw") {
+  data2 <- data2 %>% mutate(versions = substr(version, 10, 14));
+}
+  
+if (project == "JUnit") {
+  data2 <- data2 %>% mutate(versions = version);
+}
+
 result2 <- data2 %>%
-  mutate(versions = substr(version, 10, 14)) %>% 
   mutate(cbo = round(cbo, 2)) %>%
   mutate(eff = round(eff, 2)) %>% 
   mutate(aff = round(aff, 2)) %>% 

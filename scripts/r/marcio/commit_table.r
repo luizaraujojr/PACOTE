@@ -4,7 +4,7 @@ library(tidyverse)
 #
 # Configuracao
 #
-project<-"JHotDraw";
+project<-"JUnit";
 
 #baseDirectory <- "D:/Backup/eclipse-workspace";
 baseDirectory <- "C:/Users/User/Desktop/Codigos";
@@ -89,13 +89,35 @@ mean(result$single_class_percent);
 #
 # Média de classes por commit entre todas as versões
 #
-mean(data %>% filter(versions != "7.0.7") %>% pull(classes));
+if (project == "JHowDraw") {
+  mean(data %>% filter(versions != "7.0.7") %>% pull(classes));
+}
+
+if (project == "JEdit") {
+  mean(data %>% filter(versions != "3.2.2") %>% pull(classes));
+}
+
+if (project == "JUnit") {
+  mean(data %>% pull(classes));
+}
 
 
 #
 # Percentual médio de commits de um pacote entre as versões
 #
 mean(result$single_package_percent);
+
+
+#
+# Média de classes por commit entre todas as versões
+#
+if (project == "JHowDraw") {
+  mean(data %>% filter(versions != "7.0.7") %>% pull(packages));
+}
+
+if (project == "JEdit") {
+  mean(data %>% filter(versions != "3.2.2") %>% pull(packages));
+}
 
 
 #
@@ -106,8 +128,11 @@ p <- ggplot(data, aes(x=versions, y=classes)) +
   labs(x = NULL, y = "Classes por Commit") + 
   theme_bw()
 
+if (project == "JHotDraw") {
+  p <- p + coord_cartesian(ylim = c(0, 320))
+}
+
 p
-p + coord_cartesian(ylim = c(0, 320))
 
 
 #
@@ -118,6 +143,9 @@ p <- ggplot(data, aes(x=versions, y=packages)) +
   labs(x = NULL, y = "Packages por Commit") + 
   theme_bw()
 
+if (project == "JHotDraw") {
+  p + coord_cartesian(ylim = c(0, 27))
+}
+
 p
-p + coord_cartesian(ylim = c(0, 27))
 
