@@ -13,24 +13,24 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
     }
     
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg){
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
+    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
 		
         //aglomerar os clusteres iterativamente
-        int[] newSolution = aglomerateClustering(mdg, solution);
+        int[] newSolution = aglomerateClustering(mdg, solution, objectiveEquation);
 
         return newSolution;
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 	
 	
-    private static int[] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution){
+    private static int[] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
         int n = mdg.getSize();
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
 
         int[] maxMQSolution = cm.cloneSolution();
         double maxMQValue = cm.calculateSolutionCost();

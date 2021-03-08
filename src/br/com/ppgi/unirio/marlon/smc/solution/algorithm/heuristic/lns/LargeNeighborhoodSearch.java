@@ -39,17 +39,17 @@ public class LargeNeighborhoodSearch {
      * @param solution
      * @return 
      */
-    public int[] execute(int[] solution){
-        return execute(config.getMdg(), solution);
+    public int[] execute(int[] solution, String objectiveEquation){
+        return execute(config.getMdg(), solution, objectiveEquation);
     }
     
     /**
      * Gera uma solução utilizando o algoritmo definido no config
      * @return 
      */
-    public int[] execute(){
-        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg());
-        return execute(config.getMdg(), solution);
+    public int[] execute(String objectiveEquation){
+        int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg(), objectiveEquation);
+        return execute(config.getMdg(), solution, objectiveEquation);
     }
     
    
@@ -63,12 +63,12 @@ public class LargeNeighborhoodSearch {
      * @param solution
      * @return 
      */
-    protected int[] execute(ModuleDependencyGraph mdg, int[] solution){
+    protected int[] execute(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
         final long startTime = System.currentTimeMillis();//tempo inicial da execução
         
         final int n = solution.length;
         
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);// Controlador da solução - passa a solução inicial
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
         double currentCost = cm.calculateSolutionCost(); //custo da solução atual
         this.initialSolutionCost = currentCost;//guarda o valor da solução inicial
         //estado da melhor solução

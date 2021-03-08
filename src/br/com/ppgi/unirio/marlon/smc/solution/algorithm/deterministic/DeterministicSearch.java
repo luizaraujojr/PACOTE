@@ -17,10 +17,10 @@ public class DeterministicSearch {
 		this.suffix = suffix;
 	}
 
-	public int[] execute (ModuleDependencyGraph mdg){
-        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg);//0-0-0-0-0-......
+	public int[] execute (ModuleDependencyGraph mdg, String objectiveEquation){
+        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg, objectiveEquation);//0-0-0-0-0-......
         long startTime = System.currentTimeMillis();
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
         int n = solution.length;
 
         long currentIteration = 0;

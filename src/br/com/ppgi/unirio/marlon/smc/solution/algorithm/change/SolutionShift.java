@@ -18,7 +18,7 @@ public class SolutionShift {
      * @param base
      * @return 
      */
-    public static ClusterMetrics ShiftSolution(ClusterMetrics solution, int offset){
+    public static ClusterMetrics ShiftSolution(ClusterMetrics solution, int offset, String objectiveEquation){
         int solutionLengh = solution.getSolution().length;
         offset = offset % solutionLengh;//evitar desperdicio
         
@@ -34,7 +34,7 @@ public class SolutionShift {
             shiftedSolution[solutionLengh-1] = aux;
         }
         
-        return new ClusterMetrics(solution.getMdg(),shiftedSolution);
+        return new ClusterMetrics(solution.getMdg(),shiftedSolution, objectiveEquation);
         
     }
 }

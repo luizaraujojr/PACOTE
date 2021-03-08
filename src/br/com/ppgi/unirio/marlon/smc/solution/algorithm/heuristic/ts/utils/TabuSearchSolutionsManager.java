@@ -98,9 +98,9 @@ public class TabuSearchSolutionsManager{
     }
     
   
-    public int[] generateNewSolution(ModuleDependencyGraph mdg){
+    public int[] generateNewSolution(ModuleDependencyGraph mdg, String objectiveEquation){
         if(savedSolutions.size()==0){
-            return new ConstrutiveBasicRandomSolution().createSolution(mdg);
+            return new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation);
         }
         int[] aux = generateBuildingBlockSolutions();
         savedSolutions = new ArrayList<>();

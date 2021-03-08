@@ -274,7 +274,7 @@ public class LNSParameterTest extends ExperimentBase{
     }
     
     @Override
-    protected int[] runAlgorithm(ModuleDependencyGraph mdg) {
+    protected int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation) {
    
     	
     	LNSInterpreter lnsI = new LNSInterpreter(); //luiz antonio
@@ -311,7 +311,7 @@ public class LNSParameterTest extends ExperimentBase{
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
                     //System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
-                    lns.execute();//executa o algoritmo -> seraoo salvos os status
+                    lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
                     saveSearchStatus(out, mdg, lns, configN, execution, currentValue);
                     
                     lnsI.addLNS(lns, config);//luiz antonio

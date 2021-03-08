@@ -18,8 +18,8 @@ public class PathRelink {
      * @param base
      * @return 
      */
-    public static ClusterMetrics relinkSolution(int[] targetSolution, double targetMQ, ClusterMetrics baseAux){
-        ClusterMetrics base = new ClusterMetrics(baseAux.getMdg(), baseAux.cloneSolution());//cria uma c�pia para ser alterada sem interferir em nada externo
+    public static ClusterMetrics relinkSolution(int[] targetSolution, double targetMQ, ClusterMetrics baseAux, String objectiveEquation){
+        ClusterMetrics base = new ClusterMetrics(baseAux.getMdg(), baseAux.cloneSolution(), objectiveEquation);//cria uma c�pia para ser alterada sem interferir em nada externo
         int[] bestSolution = null;
         double bestSolutionMQ = targetMQ;//considera o target como melhor mq inicialmente
         boolean targerHasClusterN;
@@ -46,7 +46,7 @@ public class PathRelink {
         }while(targerHasClusterN);
         
         if(bestSolution != null){//Path relink melhorou a solução!
-            return new ClusterMetrics(base.getMdg(), bestSolution);
+            return new ClusterMetrics(base.getMdg(), bestSolution, objectiveEquation);
         }
         return null;//path relink não melhorou a solução
     }

@@ -27,6 +27,7 @@ public class ClusterMetrics {
     private double[] modularizationFactor;
     private Stack<Integer> availableClusters;
     private List<Integer> usedClusters;
+    private String objectiveEquation;
 
 
     //usado para clonar o objeto
@@ -34,7 +35,7 @@ public class ClusterMetrics {
         this.mdg = mdg;
     }
     
-    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution){
+    public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
             this.mdg = mdg;
             this.solution = solution;
 

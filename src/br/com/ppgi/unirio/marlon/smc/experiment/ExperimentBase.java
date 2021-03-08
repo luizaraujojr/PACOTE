@@ -60,14 +60,14 @@ public abstract class ExperimentBase {
      * Método para executar o algoritmo do experimento 
      * Criado por Luiz Antoino
      */	
-    public void runExperiment() throws InstanceParseException, IOException{
+    public void runExperiment(String objectiveEquation) throws InstanceParseException, IOException{
         beginTestTimestamp = System.currentTimeMillis();
         File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
         
         System.out.println("INSTANCE;MQ;TEMPO");
         for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
             ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
-            runAlgorithm(mdg);
+            runAlgorithm(mdg, objectiveEquation);
             
             afterEachInstance();
         }
@@ -105,7 +105,7 @@ public abstract class ExperimentBase {
      * @param mdg - objeto que armazena as dependências dos módulos
      * @param objectiveEquation - equação que será utilizada como função objetivo
      */
-    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg);
+    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation);
     
     
     protected abstract String testName();

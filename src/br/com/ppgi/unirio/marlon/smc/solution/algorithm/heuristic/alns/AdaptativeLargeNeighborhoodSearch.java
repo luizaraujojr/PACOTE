@@ -40,12 +40,12 @@ public class AdaptativeLargeNeighborhoodSearch extends LargeNeighborhoodSearch{
      * @return 
      */
     @Override
-    protected int[] execute(ModuleDependencyGraph mdg, int[] solution){
+    protected int[] execute(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation ){
         final long startTime = System.currentTimeMillis();//tempo inicial da execução
         
         final int n = solution.length;
         
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);// Controlador da solução - passa a solução inicial
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
         double currentCost = cm.calculateSolutionCost(); //custo da solução atual
         
         //estado da melhor solução

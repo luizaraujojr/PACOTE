@@ -61,9 +61,9 @@ public abstract class TabuSearch {
      * @param configuration
      * @return 
      */
-    public int[] execute(ModuleDependencyGraph mdg, int[] solution, TabuConfiguration configuration){
+    public int[] execute(ModuleDependencyGraph mdg, int[] solution, TabuConfiguration configuration, String objectiveEquation){
         config.configure(configuration);
-        return execute(mdg, solution);
+        return execute(mdg, solution, objectiveEquation);
     }
     
     /**
@@ -72,11 +72,11 @@ public abstract class TabuSearch {
      * @param configuration
      * @return 
      */
-    public int[] execute(ModuleDependencyGraph mdg, TabuConfiguration configuration){
+    public int[] execute(ModuleDependencyGraph mdg, TabuConfiguration configuration, String objectiveEquation){
         config.configure(configuration);
         
-        int[] solution = new ConstrutiveBasicRandomSolution().createSolution(mdg);
-        return execute(mdg, solution);
+        int[] solution = new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation);
+        return execute(mdg, solution, objectiveEquation);
     }
     
    
@@ -87,7 +87,7 @@ public abstract class TabuSearch {
     
     
     
-    private int[] execute(ModuleDependencyGraph mdg, int[] solution){
+    private int[] execute(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
         //configuração da execução
         final long startTime = System.currentTimeMillis();
         final int n = solution.length;
@@ -122,10 +122,10 @@ public abstract class TabuSearch {
                 iterationsWithoutImprovement = 0;
                 iterationsToPathRelink = 0;
                 if (currentIteration != 0){//gerar outra solução
-                    solution = solutionManager.generateNewSolution(mdg);
+                    solution = solutionManager.generateNewSolution(mdg, objectiveEquation);
                 }
                 
-                cm = new ClusterMetrics(mdg, solution);
+                cm = new ClusterMetrics(mdg, solution, objectiveEquation);
                 currentCost = cm.calculateSolutionCost(); // current sol. value
                 
                 if(currentCost > bestCost){
@@ -222,7 +222,7 @@ public abstract class TabuSearch {
 
                 //pathRelink?
                 if(pathRelinkInterval > 0 && iterationsToPathRelink >= pathRelinkInterval){
-                    ClusterMetrics pathRelinkCM = PathRelink.relinkSolution(bestSolution, bestCost, cm);
+                    ClusterMetrics pathRelinkCM = PathRelink.relinkSolution(bestSolution, bestCost, cm, objectiveEquation);
                     if(pathRelinkCM != null){//houve melhora na bestSolution!
                         bestCost = pathRelinkCM.calculateSolutionCost();
                         bestSolution = pathRelinkCM.cloneSolution();

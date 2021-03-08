@@ -16,25 +16,25 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
     }
 
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg){
-        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg);
+    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
+        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg, objectiveEquation);
 
         //dividir os clusters iterativamente
-        int[] newSolution = divisiveClustering(mdg, solution);
+        int[] newSolution = divisiveClustering(mdg, solution, objectiveEquation);
 
         return newSolution;
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }	
 	
 	
 	
-	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution){
+	private static int[] divisiveClustering(ModuleDependencyGraph mdg, int[] solution, String objectiveEquation){
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
 		
 		int[] maxMQSolution = cm.cloneSolution();
 		double maxMQValue = cm.calculateSolutionCost();

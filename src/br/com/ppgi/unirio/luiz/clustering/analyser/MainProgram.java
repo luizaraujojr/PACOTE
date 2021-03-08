@@ -515,7 +515,7 @@ public class MainProgram
 //		runClassDependencyCombinationExport(projectInstances);
 //	
 //		runLNSPExperiment("a");
-		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
+//		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
 		runMOJOComparison("data\\Experiment\\PkgClsComb\\junit-4.13.006022021213134.comb ", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "-fm");
 	
 //		runProjectOverallAnalisis(projectInstances);		
@@ -586,7 +586,7 @@ public class MainProgram
 	
 	private static void runLNSPExperiment(String objectiveEquation) throws InstanceParseException, IOException {
 		LNSParameterTest LNSP = new LNSParameterTest();
-		LNSP.runExperiment();
+		LNSP.runExperiment(objectiveEquation);
 	}
 	
 	

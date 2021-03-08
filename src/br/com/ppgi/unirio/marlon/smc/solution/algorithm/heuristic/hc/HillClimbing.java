@@ -35,8 +35,8 @@ public class HillClimbing{
          * @param threshold - Limite de vizinhos testados [0-100]
          * @return 
          */
-        public int[] execute (ModuleDependencyGraph mdg, int[] solution, int threshold){
-            ClusterMetrics cm = climbSolution(mdg, solution, threshold);
+        public int[] execute (ModuleDependencyGraph mdg, int[] solution, int threshold, String objectiveEquation){
+            ClusterMetrics cm = climbSolution(mdg, solution, threshold, objectiveEquation);
             return cm.getSolution();
         }
         
@@ -47,12 +47,12 @@ public class HillClimbing{
          * @param threshold - Limite de vizinhos testados [0-100]
          * @return 
          */
-        public int[] execute (ModuleDependencyGraph mdg, int popSz, int threshold){
+        public int[] execute (ModuleDependencyGraph mdg, int popSz, int threshold, String objectiveEquation){
             int[] best = null;
             double maxMQ = Integer.MIN_VALUE;
             
             for(int i=0;i< popSz; i++){
-                ClusterMetrics cm = climbSolution(mdg, new ConstrutiveBasicRandomSolution().createSolution(mdg), threshold);
+                ClusterMetrics cm = climbSolution(mdg, new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation), threshold, objectiveEquation);
                 
                 double currentPartitionMQ = cm.calculateSolutionCost();
                 if(currentPartitionMQ > maxMQ){//atualiza o melhor encontrado
@@ -71,9 +71,9 @@ public class HillClimbing{
          * @param threshold - Limite de vizinhos testados [0-100]
          * @return 
          */
-        private ClusterMetrics climbSolution (ModuleDependencyGraph mdg, int[] solution, int threshold){
+        private ClusterMetrics climbSolution (ModuleDependencyGraph mdg, int[] solution, int threshold, String objectiveEquation){
             long time = System.currentTimeMillis();
-            ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+            ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
             out.writeLine(cm, cm.calculateSolutionCost(), 0, 0, 0, NAME+suffix, params);
             int[] currentPartition = cm.cloneSolution();
             double currentPartitionMQ = cm.calculateSolutionCost();

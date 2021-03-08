@@ -13,26 +13,26 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
     }
     
     @Override
-    public int[] createSolution(ModuleDependencyGraph mdg){
-        return createSolution(mdg,1)[0];
+    public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
+        return createSolution(mdg,1, objectiveEquation)[0];
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
     	
         //aglomerar os clusteres iterativamente
-        int[][] newSolutions = aglomerateClustering(mdg, solution,quantity);
+        int[][] newSolutions = aglomerateClustering(mdg, solution,quantity, objectiveEquation);
 
         return newSolutions;
     }
 	
-    private static int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity){
+    private static int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, String objectiveEquation){
         int [][] topSolutions = new int[solutionsQuantity][solution.length];
         Double[] topSolutionsMQ = new Double[solutionsQuantity];
         
         int n = mdg.getSize();
-        ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+        ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
         //double lastMQ = cm.calculateMQ();
 		
         //solucao de entrada � a melhor. Unica conhecida
