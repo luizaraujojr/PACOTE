@@ -7,6 +7,8 @@ import br.com.ppgi.unirio.marlon.smc.instance.file.bunch.BunchInstanceFileWorker
 import br.com.ppgi.unirio.marlon.smc.mdg.ModuleDependencyGraph;
 import java.io.File;
 import java.io.IOException;
+import java.util.Vector;
+
 //import org.junit.Test;
 import random.number.generator.RandomWrapper;
 
@@ -60,20 +62,40 @@ public abstract class ExperimentBase {
      * Método para executar o algoritmo do experimento 
      * Criado por Luiz Antoino
      */	
-    public void runExperiment(String objectiveEquation) throws InstanceParseException, IOException{
+//    public void runExperiment(String objectiveEquation, String projectName) throws InstanceParseException, IOException{
+//        beginTestTimestamp = System.currentTimeMillis();
+//        File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
+//        
+//        System.out.println("INSTANCE;MQ;TEMPO");
+//        for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
+//            ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
+//            runAlgorithm(mdg, objectiveEquation);
+//            
+//            afterEachInstance();
+//        }
+//        
+//        afterAll();
+//    }
+    
+    
+    public Vector<String> runExperiment(String objectiveEquation, File[] instances) throws InstanceParseException, IOException{
+    	Vector<String> files = new Vector<String>();
         beginTestTimestamp = System.currentTimeMillis();
-        File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
+//        File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
         
         System.out.println("INSTANCE;MQ;TEMPO");
         for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
             ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
-            runAlgorithm(mdg, objectiveEquation);
+            files.add(runAlgorithm(mdg, objectiveEquation));
             
             afterEachInstance();
         }
         
         afterAll();
+		return files;
     }
+    
+    
     
     
     /**
@@ -105,7 +127,9 @@ public abstract class ExperimentBase {
      * @param mdg - objeto que armazena as dependências dos módulos
      * @param objectiveEquation - equação que será utilizada como função objetivo
      */
-    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation);
+//    protected abstract int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation);
+    
+    protected abstract String runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation);
     
     
     protected abstract String testName();

@@ -47,6 +47,8 @@ public class ClusterMetrics {
             internalDependencyWeight = new int[mdg.getSize()+1];
             externalDependencyWeight = new int[mdg.getSize()+1];
             modularizationFactor = new double[mdg.getSize()+1];
+            
+            this.objectiveEquation = objectiveEquation;
 
 
             resetAllMetrics();
@@ -585,6 +587,8 @@ public class ClusterMetrics {
             cm.usedClusters.add(used);
         }
         
+        cm.objectiveEquation = this.objectiveEquation;
+        
         return cm;
     }
     
@@ -603,19 +607,19 @@ public class ClusterMetrics {
 //  	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
   	
   	
-//      Expression expression = new ExpressionBuilder(objectiveEquation)
-//      	      .variables("a")
+      Expression expression = new ExpressionBuilder(objectiveEquation)
+      	      .variables("x")
 //      	      .variables("b")
-//      	      .build()
-//      	      .setVariable("a", getTotalClusters())
+      	      .build()
+      	      .setVariable("x", getTotalClusters());
 //      		  .setVariable("b", getIsolatedClusterCount());
-//      	 
-//      	    double result = expression.evaluate();
-//  	
+      	 
+      	    double result = expression.evaluate();
+  	
 //  	
 //  	System.out.println(result);
 //      return getTotalClusters();
-      return calculateMQ();
+      return result;
   }
     
 }

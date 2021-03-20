@@ -49,7 +49,7 @@ public class LNSInterpreter {
 	}
 
 	
-	public void generate() throws IOException
+	public String generate() throws IOException
 	{
 		if(mDGSimplifier!=null){
 			cluster.setSize(mDGSimplifier.getRemovedModules().size() + lns.get(0).getBestSolutionFound().getSolution().length);
@@ -165,6 +165,7 @@ public class LNSInterpreter {
 		} finally {
 			writer.close();
 		}
+		return file.getPath();
 		
 		
 		

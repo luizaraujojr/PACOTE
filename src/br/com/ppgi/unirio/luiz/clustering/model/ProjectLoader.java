@@ -1,35 +1,19 @@
-package br.com.ppgi.unirio.luiz.clustering.analyser;
+package br.com.ppgi.unirio.luiz.clustering.model;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Vector;
 
-import br.com.ppgi.unirio.luiz.clustering.calculator.MQCalculator;
-import br.com.ppgi.unirio.luiz.clustering.model.Dependency;
-import br.com.ppgi.unirio.luiz.clustering.model.Project;
-import br.com.ppgi.unirio.luiz.clustering.model.ProjectClass;
-import br.com.ppgi.unirio.luiz.clustering.model.ProjectPackage;
-import br.com.ppgi.unirio.luiz.clustering.mojo.MoJo;
-import br.com.ppgi.unirio.marlon.smc.experiment.algorithm.LNSParameterTest;
+import br.com.ppgi.unirio.luiz.clustering.analyser.CDAJarReader;
 import br.com.ppgi.unirio.marlon.smc.instance.file.InstanceParseException;
 
-@SuppressWarnings("unused")
-public class MainProgram
-{
-	private static final int CYCLES = 10;	
-	
-	private static List<String> instanceFilenames = new ArrayList<String>();
-			
-	
+public class ProjectLoader {
+
 	public static Vector<Project> readJarInstances(List<String> instanceFilenamesArray) throws Exception
 	{
 		Vector<Project> instances = new Vector<Project>();
@@ -505,93 +489,50 @@ public class MainProgram
 				instances.add (reader.execute(filename));
 		
 		return instances;
-	}	
-	
-	public static final void main(String[] args) throws Exception
-	{				
-		Vector<Project> projectInstances = new Vector<Project>();
-		projectInstances = runProjectsReading();
-		runPackageClassCombinationExport(projectInstances,false);
-		runClassDependencyCombinationExport(projectInstances);
-//	
-		runLNSPExperiment("a");
-//		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
-		runMOJOComparison("data\\Experiment\\PkgClsComb\\junit-4.13.006022021213134.comb ", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "-fm");
-	
-//		runProjectOverallAnalisis(projectInstances);		
-//		runProjectDependencyExport(projectInstances);
 	}
-
-	private static void runProjectOverallAnalisis(Vector<Project> projectsInstances) throws Exception {
-		FileOutputStream fos = new FileOutputStream("data\\output" + getStringTime() + ".txt" );
-		OutputStreamWriter bw = new OutputStreamWriter(fos);
+	
+	
+	public static Vector<String> runPackageClassCombinationExport(Vector<Project> projectsInstances, boolean projectPackageName) throws InstanceParseException, IOException {
+		Vector<String> files = new Vector<String>();
 		
-		for (int i = 0; i < projectsInstances.size(); i++)
-		{	
-			bw.write(System.getProperty("line.separator"));
-			bw.write(System.getProperty("line.separator"));
-			String s1 = projectsInstances.get(i).getName() + "\t" + "ClassCount: " + "\t" +  projectsInstances.get(i).getClassCount() + "\t" +"MQ:" +"\t" +new MQCalculator(projectsInstances.get(i)).calculateModularizationQuality();
-			bw.write("+" + s1 + System.getProperty("line.separator"));
-			bw.flush();
-			System.out.println(s1);
-			for (ProjectPackage projectPackage : projectsInstances.get(i).getPackages()) {
-				String s2 = projectPackage.getName();
-				bw.write(s2 + System.getProperty("line.separator"));
-				bw.flush();
-				System.out.println(projectPackage.getName());	
-			}
-		}
-		bw.close();
-	}
-	
-	private static Vector<Project> runProjectsReading() throws Exception {
-		//
-		/*setting the folder for app.jar file after the convertion from .apk to .jar */
-		File jarFilesFolder = new File("data\\Experiment\\JAR-Input\\"); // current directory
+		for (int i = 0; i < projectsInstances.size(); i++){
+			StringBuilder sb = new StringBuilder();
+		   int j = 1;
+		    for(ProjectPackage projectPackage: projectsInstances.get(i).getPackages()) {
+		    	for(ProjectClass projectClass1: projectsInstances.get(i).getClasses(projectPackage)) {
+//		    		if (projectClass1.getDependencyCount()>0) {
+		    			if (projectPackageName) {
+			    			sb.append("contain " + projectPackage.getName() + " " + projectClass1.getName());		
+			    		}
+			    		else {
+			    			sb.append("contain " + "PKG" + j + " " + projectClass1.getName());
+			    		}		
+						sb.append(System.lineSeparator());
+			    						    			
+//		    		}		    						
+		    	}
+		    	j++;
+		    }
 			
-		/*starting the extraction of dependency relationship */
-		try {
-			/*loading the files from the specified folder for the jar files folder*/
-			File[] files = jarFilesFolder.listFiles(new FilenameFilter(){
-				
-				/*filtering the files to guarantee that only .jar files will be listed */
-				@Override
-				public boolean accept(File dir, String name) {
-					boolean result;
-					if(name.endsWith(".jar")){
-						result=true;
-					}
-					else{
-						result=false;
-					}
-					return result;
-				}
-			});
-			/*looping throw the files to add the .jar files*/
-			for (File file : files) {
-				if (!file.isDirectory()) {
-					instanceFilenames.add(file.getCanonicalPath());
-				}
+		    File file = new File("data//Experiment//PkgClsComb//"+ projectsInstances.get(i).getName() + getStringTime()+ ".comb");
+		    files.add(file.getPath());
+		    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+		    try {
+		        writer.write(sb.toString());	    
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			   
+			} finally {
+				writer.close();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
-		
-		/*creating a vector of project to load the instance jar file data*/
-		Vector<Project> instances = new Vector<Project>();
-		instances.addAll(readJarInstances(instanceFilenames));
-		
-		return instances;
-	}
-	
-	private static void runLNSPExperiment(String objectiveEquation) throws InstanceParseException, IOException {
-//		LNSParameterTest LNSP = new LNSParameterTest();
-//		LNSP.runExperiment(objectiveEquation, "");
+		return files;
 	}
 	
 	
-	
-	private static Vector<String> runClassDependencyCombinationExport(Vector<Project> projectsInstances) throws InstanceParseException, IOException {
+
+	public static Vector<String> runClassDependencyCombinationExport(Vector<Project> projectsInstances) throws InstanceParseException, IOException {
 		Vector<String> files = new Vector<String>();
 		
 		for (int i = 0; i < projectsInstances.size(); i++){
@@ -608,7 +549,7 @@ public class MainProgram
 			}
 		   			
 		    File file = new File("data\\Experiment\\ClsDepComb\\" + projectsInstances.get(i).getName() + getStringTime()+ ".comb");
-		    files.add(file.getName());
+		    files.add(file.getPath());
 		    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 		    try {
 		        writer.write(sb.toString());	    
@@ -624,62 +565,6 @@ public class MainProgram
 		return files;
 	}
 	
-	private static Vector<String> runPackageClassCombinationExport(Vector<Project> projectsInstances, boolean projectPackageName) throws InstanceParseException, IOException {
-		Vector<String> files = new Vector<String>();
-		
-		for (int i = 0; i < projectsInstances.size(); i++){
-			StringBuilder sb = new StringBuilder();
-		   int j = 1;
-		    for(ProjectPackage projectPackage: projectsInstances.get(i).getPackages()) {
-		    	for(ProjectClass projectClass1: projectsInstances.get(i).getClasses(projectPackage)) {
-//		    		if (projectClass1.getDependencyCount()>0) {
-		    			if (projectPackageName) {
-			    			sb.append("contain " + projectPackage.getName() + " " + projectClass1.getName());		
-			    		}
-			    		else {
-			    			sb.append("contain " + "PKG" + j + " " + projectClass1.getName());
-			    		}		
-						sb.append(System.lineSeparator());
-			    		j++;				    			
-//		    		}		    							
-		    	}
-		    }
-			
-		    File file = new File("data//Experiment//PkgClsComb//"+ projectsInstances.get(i).getName() + getStringTime()+ ".comb");
-		    files.add(file.getName());
-		    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-		    try {
-		        writer.write(sb.toString());	    
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			   
-			} finally {
-				writer.close();
-			}
-		}
-		return files;
-	}
-
-	
-	private static void runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
-		System.out.println("runMOJOComparison");
-		String[] args1 = new String[3];
-		args1[0] = file1;
-		args1[1] = file2;
-		args1[2] = param; 
-		MoJo.main(args1);
-	}
-	
-	private static void runMOJOComparison(String file1, String file2) throws InstanceParseException, IOException {
-		System.out.println("runMOJOComparison");
-		String[] args1 = new String[2];
-		args1[0] = file1;
-		args1[1] = file2; 
-		MoJo.main(args1);
-	}
-	
-	
 	private static String getStringTime() {
 		Calendar data;
 		data = Calendar.getInstance();
@@ -691,4 +576,5 @@ public class MainProgram
         int ano = data.get(Calendar.YEAR);;		
 		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
+	
 }

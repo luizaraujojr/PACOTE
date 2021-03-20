@@ -274,8 +274,8 @@ public class LNSParameterTest extends ExperimentBase{
     }
     
     @Override
-    protected int[] runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation) {
-   
+    protected String runAlgorithm(ModuleDependencyGraph mdg, String objectiveEquation) {
+    	String interpreterFileName = "";
     	
     	LNSInterpreter lnsI = new LNSInterpreter(); //luiz antonio
     	
@@ -321,13 +321,13 @@ public class LNSParameterTest extends ExperimentBase{
             System.out.println("");
         }
         try {
-			lnsI.generate();
+			interpreterFileName = lnsI.generate();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         out.close();
-        return null;
+        return interpreterFileName;
     }
     
     private void saveSearchStatus(ResultWriter out, ModuleDependencyGraph mdg, LargeNeighborhoodSearch lns, int configN, int executionN, Object currentValue){
