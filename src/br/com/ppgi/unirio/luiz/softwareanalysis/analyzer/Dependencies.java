@@ -10,7 +10,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-import br.com.ppgi.unirio.luiz.softwareanalysis.loader.ProjectLoader;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectPackage;
 

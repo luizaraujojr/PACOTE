@@ -14,7 +14,7 @@ import java.util.Locale;
 
 import javax.management.modelmbean.XMLParseException;
 
-import br.com.ppgi.unirio.luiz.softwareanalysis.loader.ProjectLoader;
+import br.com.ppgi.unirio.luiz.softwareanalysis.controller.ProjectLoader;
 
 public class VersionYearLog
 {

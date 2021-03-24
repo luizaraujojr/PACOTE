@@ -1,16 +1,10 @@
 package br.com.ppgi.unirio.luiz.softwareanalysis.analyzer;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 
 import org.apache.bcel.Const;
 //import org.apache.bcel.Constants;
@@ -18,8 +12,7 @@ import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
 
-import br.com.ppgi.unirio.luiz.softwareanalysis.calculator.ClusteringCalculator;
-import br.com.ppgi.unirio.luiz.softwareanalysis.loader.ProjectLoader;
+import br.com.ppgi.unirio.luiz.softwareanalysis.controller.ClusteringCalculator;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 
 /**
