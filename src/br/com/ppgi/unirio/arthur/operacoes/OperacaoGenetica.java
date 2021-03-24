@@ -48,6 +48,7 @@ public class OperacaoGenetica {
 		//faz o calculo do fitness de toda a população, atribuindo a cada árvore seu valor de mmre	
 		for (int i = 0; i < populacao.getIndividuos().size(); i++)
 		{
+//			System.out.println ("População: " + i);
 //			double aptidao = calculador.calcula(populacao.getIndividuos().get(i), dataset);
 			double aptidao = calculador.calculaMOJO(populacao.getIndividuos().get(i), dataset);//luiz
 			

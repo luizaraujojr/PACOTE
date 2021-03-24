@@ -268,7 +268,7 @@ public class LNSParameterTest extends ExperimentBase{
         
     }
     public LNSParameterTest(){
-        RUN_TIMES = 100;//100;//30
+        RUN_TIMES = 10;//100;//30
         //BEGIN_INSTANCE = 18;
         //TOTAL_INSTANCE = 1;
     }
@@ -291,7 +291,7 @@ public class LNSParameterTest extends ExperimentBase{
         } catch (IOException ex) {
         }
         
-        System.out.println(mdg.getName());
+//        System.out.println(mdg.getName());
         if(simplify){
             MDGSimplifier mDGSimplifier = MDGSimplifier.simplify(mdg);
             mdg = mDGSimplifier.getMdg();
@@ -303,13 +303,13 @@ public class LNSParameterTest extends ExperimentBase{
         
         for (int configN=0;configN<RANDONS_CONFIGS_TO_TEST;configN++){
             LNSConfiguration config = configurationBuilder.buildRandomConfiguration(mdg, FIXED_VALUES);
-            System.out.print("CONFIG: "+configN);
+//            System.out.print("CONFIG: "+configN);
             
             for (Object currentValue : COMPARE_PARAM_VALUES) {//executar para cada configuração especifica
                 configurationBuilder.changeParameterValue(config, COMPARE_PARAM, currentValue);//acertar a config com o parametro atual    
-                System.out.print(" PARAM: "+currentValue.toString());
+//                System.out.print(" PARAM: "+currentValue.toString());
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
-                    //System.out.println(execution);
+//                    System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
                     lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
                     saveSearchStatus(out, mdg, lns, configN, execution, currentValue);
@@ -318,7 +318,7 @@ public class LNSParameterTest extends ExperimentBase{
 //                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
                 }
             }
-            System.out.println("");
+//            System.out.println("");
         }
         try {
 			interpreterFileName = lnsI.generate();

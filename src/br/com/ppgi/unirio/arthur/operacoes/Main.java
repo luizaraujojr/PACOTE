@@ -32,7 +32,7 @@ public class Main {
 	{
 		GeradorPopulacaoInicial geradorPop =  new GeradorPopulacaoInicial();
 		OperacaoGenetica operacaoGenetica = new OperacaoGenetica();
-		int numeroResultados = 30;
+		int numeroResultados = 5;//30; alterei para fazer um texte
 		Random random;
 		int tamanhoPopulacao = 70;
 		int profundidadeLimiteArvores = 4;
@@ -118,9 +118,9 @@ public class Main {
 	{
 		GeradorPopulacaoInicial geradorPop =  new GeradorPopulacaoInicial();
 		OperacaoGenetica operacaoGenetica = new OperacaoGenetica();
-		int numeroResultados = 30;
+		int numeroResultados = 5;//30; alterei para fazer um experimento menor
 		Random random;
-		int tamanhoPopulacao = 70;
+		int tamanhoPopulacao = 20;//70; alterei para fazer um experimento menor
 		int profundidadeLimiteArvores = 4;
 		
 		// melhor expressão de cada geração gerada para o dataset escolhido será escrita no csv
@@ -158,14 +158,17 @@ public class Main {
 		{	
 			for (int j = 1; j <= numeroResultados; j++)
 			{
+//				System.out.println ("RODADA GP: " + j);
 				long inicio = System.nanoTime();
 				random = new Random();
 				Populacao primeiraGeracao = geradorPop.inicializacaoRampedHalfAndHalf(tamanhoPopulacao, profundidadeLimiteArvores, random);
 				Populacao proximaGeracao = new Populacao();
 				proximaGeracao.setIndividuos(primeiraGeracao.getIndividuos());
 				
-				for (int k = 0; k < 50; k++)
+//				for (int k = 0; k < 50; k++) alterei para fazer o experimento menor
+				for (int k = 0; k < 10; k++)
 				{
+					System.out.println ("RODADA GP: " + j + "/" + numeroResultados + " " + k + "/10");
 					proximaGeracao.setIndividuos(operacaoGenetica.selecao(proximaGeracao, dataset, random).getIndividuos());
 					proximaGeracao.setNumeroGeracao(proximaGeracao.getNumeroGeracao() + 1);
 				}

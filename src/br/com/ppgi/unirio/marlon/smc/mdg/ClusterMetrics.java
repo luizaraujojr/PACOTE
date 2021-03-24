@@ -1,5 +1,6 @@
 package br.com.ppgi.unirio.marlon.smc.mdg;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -605,17 +606,26 @@ public class ClusterMetrics {
 //      return cm1.calculateMQ();
 //  	String parsedEquation = objectiveEquation;
 //  	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
-  	
-  	
-      Expression expression = new ExpressionBuilder(objectiveEquation)
-      	      .variables("x")
-//      	      .variables("b")
-      	      .build()
-      	      .setVariable("x", getTotalClusters());
-//      		  .setVariable("b", getIsolatedClusterCount());
-      	 
-      	    double result = expression.evaluate();
-  	
+    	double result = 0;
+    	Expression expression = new ExpressionBuilder(objectiveEquation)
+        	      .variables("x")
+        	      .variables("y")
+        	      .variables("z")
+//        	      .variables("b")
+        	      .build()
+        	      .setVariable("x", getTotalClusters())
+				  .setVariable("y", getBiggestClusterSize())
+				  .setVariable("z", getSmallestClusterSize());
+//        		  .setVariable("b", getIsolatedClusterCount());
+    	
+    	try {
+    		result = expression.evaluate();	    
+		} catch (ArithmeticException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			result = -1;
+		}
+    	
 //  	
 //  	System.out.println(result);
 //      return getTotalClusters();

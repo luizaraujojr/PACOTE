@@ -83,7 +83,7 @@ public abstract class ExperimentBase {
         beginTestTimestamp = System.currentTimeMillis();
 //        File[] instances = INSTANCE_WORKER.retrieveAllInstanceFiles();//leitura das instancias
         
-        System.out.println("INSTANCE;MQ;TEMPO");
+//        System.out.println("INSTANCE;MQ;TEMPO");
         for(int index=BEGIN_INSTANCE;index<instances.length && index-BEGIN_INSTANCE < TOTAL_INSTANCE;index++){//para cada instancia
             ModuleDependencyGraph mdg = INSTANCE_WORKER.readInstanceFile(instances[index]);
             files.add(runAlgorithm(mdg, objectiveEquation));
@@ -102,7 +102,7 @@ public abstract class ExperimentBase {
      * Executado após o final de cada instância
      */
     protected void afterEachInstance(){
-        System.out.println("REINICIANDO RANDOM");
+//        System.out.println("REINICIANDO RANDOM");
         RandomWrapper.restart();
         //coolDown(2);
     }

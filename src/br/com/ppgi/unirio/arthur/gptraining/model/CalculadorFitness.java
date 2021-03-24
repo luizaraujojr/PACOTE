@@ -75,7 +75,7 @@ public class CalculadorFitness
 	}
 	
 	private double runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
-		System.out.println("runMOJOComparison");
+//		System.out.println("runMOJOComparison");
 		String[] args1 = new String[3];
 		args1[0] = file1;
 		args1[1] = file2;
@@ -85,17 +85,21 @@ public class CalculadorFitness
 	
 	public double calculaMOJO (ArvoreExpressao arvore, Dataset dataset) throws Exception
 	{
-		List<String> instanceFilenames = new ArrayList<String>();
-		instanceFilenames.add(dataset.getNome());
-		
-		Vector<Project> instances = new Vector<Project>();
-		instances.addAll(ProjectLoader.readJarInstances(instanceFilenames));
+//		List<String> instanceFilenames = new ArrayList<String>();
+//		instanceFilenames.add(dataset.getNome());
+//		
+//		Vector<Project> instances = new Vector<Project>();
+//		instances.addAll(ProjectLoader.readJarInstances(instanceFilenames));
 		
 		List<String> packageClassCombinationFilenames = new ArrayList<String>();
-		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
+//		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
+		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+		
 		
 		List<String> classDependencyCombinationFilenames = new ArrayList<String>();
-		classDependencyCombinationFilenames = ProjectLoader.runClassDependencyCombinationExport(instances);
+//		classDependencyCombinationFilenames = ProjectLoader.runClassDependencyCombinationExport(instances);
+		classDependencyCombinationFilenames.add("data//Experiment//ClsDepComb//jodamoney-1.0.121022021133212.comb");
+		
 		
 		LNSParameterTest LNSP = new LNSParameterTest();
 		
@@ -104,9 +108,10 @@ public class CalculadorFitness
 		instanceFiles[0]= f1;
 		
 		
+//		System.out.println (arvore.getExpressao());
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		lnsExperimentFilenames = LNSP.runExperiment(arvore.getExpressao(),instanceFiles);
-		System.out.println (arvore.getExpressao());
+		
 		
 		return  runMOJOComparison(packageClassCombinationFilenames.get(0), lnsExperimentFilenames.get(0),"-fm");		
 	}

@@ -133,7 +133,7 @@ public class MoJo {
                     mjc = new MoJoCalculator(sourceFile, targetFile, relFile);
                     
                     resultMojo = mjc.mojofm();
-                    System.out.println(resultMojo);
+//                    System.out.println(resultMojo);
                 }
                 else
                 // -e indicates EdgeMoJo (requires extra argument)
