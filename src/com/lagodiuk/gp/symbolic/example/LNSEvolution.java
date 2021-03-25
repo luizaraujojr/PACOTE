@@ -25,7 +25,7 @@ public class LNSEvolution {
 
 		addListener(engine);
 
-		engine.evolve(200);
+		engine.evolve(100); //coloquei 100, o original era  200.
 		System.out.println(engine.getBestSyntaxTree().print());
 	}
 

@@ -312,7 +312,7 @@ public class LNSParameterTest extends ExperimentBase{
 //                    System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
                     lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
-                    saveSearchStatus(out, mdg, lns, configN, execution, currentValue);
+//                    saveSearchStatus(out, mdg, lns, configN, execution, currentValue); //LUIZ: comentei para poder não ficar gerando muitos arquivos.
                     
                     lnsI.addLNS(lns, config);//luiz antonio
 //                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio

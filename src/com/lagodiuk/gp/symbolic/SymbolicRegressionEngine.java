@@ -57,7 +57,7 @@ public class SymbolicRegressionEngine {
 					new GpChromosome(context, fitnessFunction, SyntaxTreeUtils.createTree(MAX_INITIAL_TREE_DEPTH, context));
 			population.addChromosome(chromosome);
 		}
-		return population;
+ 		return population;
 	}
 
 	public void addIterationListener(final SymbolicRegressionIterationListener listener) {

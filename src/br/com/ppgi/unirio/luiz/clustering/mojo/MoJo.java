@@ -160,7 +160,7 @@ public class MoJo {
             else
             {
                 mjc = new MoJoCalculator(sourceFile, targetFile, relFile);
-                System.out.println(mjc.mojo());
+//                System.out.println(mjc.mojo());
                 resultMojo = mjc.mojo();
             }
         }

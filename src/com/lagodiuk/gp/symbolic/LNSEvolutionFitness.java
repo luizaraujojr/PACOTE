@@ -69,7 +69,7 @@ public class LNSEvolutionFitness implements ExpressionFitness {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return diff;
+		return 100-diff; //coloquei o 100, pois o algoritmo somente está minimizando.
 	}
 	
 	private double runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
