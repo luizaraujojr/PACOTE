@@ -27,11 +27,11 @@ public class MainDashboard {
 
 	private static String JAR_DIRECTORY = new File("").getAbsolutePath() + "\\data\\JARFile";
 
-	private static String ODEMProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMProjectCharacteristics";
+	private static String ODEMProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\SoftwareAnalysis\\ODEMProjectCharacteristics";
 	
-	private static String ODEMPackageCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMPackageCharacteristics";
+	private static String ODEMPackageCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\SoftwareAnalysis\\ODEMPackageCharacteristics";
 	
-	private static String JARProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\JARProjectCharacteristics";
+	private static String JARProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\SoftwareAnalysis\\JARProjectCharacteristics";
 	
 	
 	
@@ -46,12 +46,12 @@ public class MainDashboard {
 	
 	public static final void main(String[] args) throws Throwable
 	{
-//		extractGraphData();
+		extractGraphData();
 ////		
 ////		/**
 ////		 * Interpret and generate a list of log file containing the commits.
 ////		 */
-//		generateLogListFile("junit");
+		generateLogListFile("junit");
 //		generateLogListFile("jedit");
 //		generateLogListFile("jhotdraw");
 ////		
