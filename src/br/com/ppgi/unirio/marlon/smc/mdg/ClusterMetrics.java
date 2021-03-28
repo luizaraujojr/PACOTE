@@ -614,8 +614,8 @@ public class ClusterMetrics {
 //        	      .variables("b")
         	      .build()
         	      .setVariable("x", getTotalClusters())
-				  .setVariable("y", getBiggestClusterSize())
-				  .setVariable("z", getSmallestClusterSize());
+				  .setVariable("y", getInternalDependencySum())
+				  .setVariable("z", getExternalDependencySum());
 //        		  .setVariable("b", getIsolatedClusterCount());
     	
     	try {
@@ -632,4 +632,45 @@ public class ClusterMetrics {
       return result;
   }
     
+    /**
+     * Retorna o número de dependências internas (mesmo pacote) entre as classes
+     * @return 
+     */
+    public int getInternalDependencySum(){
+    	int value = 0;
+    	
+    	for(int i=0;i<mdg.getSize();i++){
+	    	for(int j=0;j< mdg.moduleDependencies(i).length;j++){
+	    		if (mdg.moduleDependencies(i)[j] != -1) {
+		    		int ModulePackageSolution = solution[i];
+		    		int DependonPackageSolution = solution[mdg.moduleDependencies(i)[j]];
+		    		if (ModulePackageSolution == DependonPackageSolution){
+		    			value++;
+		    		}   			
+	    		}
+	    	}
+    	}
+    	return value;
+    }
+    
+    /**
+     * Retorna o número de dependências externas (pacote diferentes) entre as classes
+     * @return 
+     */
+    public int getExternalDependencySum(){
+    	int value = 0;
+    	
+    	for(int i=0;i<mdg.getSize();i++){
+	    	for(int j=0;j< mdg.moduleDependencies(i).length;j++){
+	    		if (mdg.moduleDependencies(i)[j] != -1) {
+		    		int ModulePackageSolution = solution[i];
+		    		int DependonPackageSolution = solution[mdg.moduleDependencies(i)[j]];
+		    		if (ModulePackageSolution == DependonPackageSolution){
+		    			value++;
+		    		}   			
+	    		}
+	    	}
+    	}
+    	return value;
+    }
 }

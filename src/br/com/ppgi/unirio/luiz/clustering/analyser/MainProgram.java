@@ -507,19 +507,64 @@ public class MainProgram
 		return instances;
 	}	
 	
-	public static final void main(String[] args) throws Exception
-	{				
-		Vector<Project> projectInstances = new Vector<Project>();
-		projectInstances = runProjectsReading();
-		runPackageClassCombinationExport(projectInstances,false);
-		runClassDependencyCombinationExport(projectInstances);
+//	public static final void main(String[] args) throws Exception
+//	{				
+//		Vector<Project> projectInstances = new Vector<Project>();
+//		projectInstances = runProjectsReading();
+//		runPackageClassCombinationExport(projectInstances,false);
+//		runClassDependencyCombinationExport(projectInstances);
+////	
+//		runLNSPExperiment("(((x * z) - (28.872247471852205 + y)) - (-20.769863672186244))");
+////		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
+////		runMOJOComparison("data\\Experiment\\PkgClsComb\\junit-4.13.006022021213134.comb ", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "-fm");
 //	
-		runLNSPExperiment("a");
-//		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
-		runMOJOComparison("data\\Experiment\\PkgClsComb\\junit-4.13.006022021213134.comb ", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "-fm");
-	
-//		runProjectOverallAnalisis(projectInstances);		
-//		runProjectDependencyExport(projectInstances);
+////		runProjectOverallAnalisis(projectInstances);		
+////		runProjectDependencyExport(projectInstances);
+//		
+//		
+//		}	
+		
+		
+		
+public static final void main(String[] args) throws Exception
+	{				
+				
+//		List<String> instanceFilenames = new ArrayList<String>();
+//		instanceFilenames.add(dataset.getNome());
+//		
+//		Vector<Project> instances = new Vector<Project>();
+//		instances.addAll(ProjectLoader.readJarInstances(instanceFilenames));
+		
+		List<String> packageClassCombinationFilenames = new ArrayList<String>();
+//		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
+		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+		
+		
+		List<String> classDependencyCombinationFilenames = new ArrayList<String>();
+//		classDependencyCombinationFilenames = ProjectLoader.runClassDependencyCombinationExport(instances);
+		classDependencyCombinationFilenames.add("data//Experiment//ClsDepComb//jodamoney-1.0.121022021133212.comb");
+		
+		
+		LNSParameterTest LNSP = new LNSParameterTest();
+		
+		File f1 = new File(classDependencyCombinationFilenames.get(0));
+		File[] instanceFiles = new File[1];
+		instanceFiles[0]= f1;
+		
+		
+//		System.out.println (arvore.getExpressao());
+		List<String> lnsExperimentFilenames = new ArrayList<String>();
+		try {
+			lnsExperimentFilenames = LNSP.runExperiment("(((x * z) - (28.872247471852205 + y)) - (-20.769863672186244))",instanceFiles);
+		} catch (InstanceParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		System.out.println(runMOJOComparison(packageClassCombinationFilenames.get(0), lnsExperimentFilenames.get(0),"-fm"));			
 	}
 
 	private static void runProjectOverallAnalisis(Vector<Project> projectsInstances) throws Exception {
@@ -585,8 +630,8 @@ public class MainProgram
 	}
 	
 	private static void runLNSPExperiment(String objectiveEquation) throws InstanceParseException, IOException {
-//		LNSParameterTest LNSP = new LNSParameterTest();
-//		LNSP.runExperiment(objectiveEquation, "");
+		LNSParameterTest LNSP = new LNSParameterTest();
+		LNSP.runExperiment(objectiveEquation);
 	}
 	
 	
@@ -660,16 +705,25 @@ public class MainProgram
 		}
 		return files;
 	}
-
 	
-	private static void runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
-		System.out.println("runMOJOComparison");
+	private static double runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
+//		System.out.println("runMOJOComparison");
 		String[] args1 = new String[3];
 		args1[0] = file1;
 		args1[1] = file2;
 		args1[2] = param; 
-		MoJo.main(args1);
+		return MoJo.MojoFM(args1);
 	}
+
+	
+//	private static void runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
+//		System.out.println("runMOJOComparison");
+//		String[] args1 = new String[3];
+//		args1[0] = file1;
+//		args1[1] = file2;
+//		args1[2] = param; 
+//		MoJo.main(args1);
+//	}
 	
 	private static void runMOJOComparison(String file1, String file2) throws InstanceParseException, IOException {
 		System.out.println("runMOJOComparison");
