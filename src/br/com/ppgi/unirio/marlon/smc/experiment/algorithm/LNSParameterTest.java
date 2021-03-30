@@ -281,15 +281,15 @@ public class LNSParameterTest extends ExperimentBase{
     	
         LNSConfigurationBuilderRandom configurationBuilder = new LNSConfigurationBuilderFixedRandom();
         String fixedParam = COMPARE_PARAM.toString();
-        try {
+//        try {
             String simplifiedS = "";
             if(simplify){
                 simplifiedS = "_SIMPLIFIED";
             }
             String outPath = PREFIX_NAME+"_"+fixedParam+simplifiedS+"/"+"data";
-            out = ResultWriter.configureResultWriter(OUTPUT_TO,outPath, mdg.getName());
-        } catch (IOException ex) {
-        }
+//            out = ResultWriter.configureResultWriter(OUTPUT_TO,outPath, mdg.getName());
+//        } catch (IOException ex) {
+//        }
         
 //        System.out.println(mdg.getName());
         if(simplify){
@@ -326,7 +326,7 @@ public class LNSParameterTest extends ExperimentBase{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        out.close();
+//        out.close();
         return interpreterFileName;
     }
     
