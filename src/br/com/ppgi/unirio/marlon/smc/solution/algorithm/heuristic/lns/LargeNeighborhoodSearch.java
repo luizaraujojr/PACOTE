@@ -29,11 +29,7 @@ public class LargeNeighborhoodSearch {
     public String name(){
         return "LNS";
     }
-    
-    
-    
-  
-    
+   
     /**
      * Utiliza a solução informada como solução inicial e executa a busca com as configurações definidas
      * @param solution
@@ -51,11 +47,6 @@ public class LargeNeighborhoodSearch {
         int[] solution = config.getInitialSolutionBuilder().createSolution(config.getMdg(), objectiveEquation);
         return execute(config.getMdg(), solution, objectiveEquation);
     }
-    
-   
-   
-	
-   
     
     /**
      * Executa a busca e retorna a melhor solução encontrada
@@ -243,11 +234,6 @@ public class LargeNeighborhoodSearch {
 
     public ClusterMetrics getBestSolutionFound() {
         return bestSolutionFound;
-    }
-    
-    
-    
-    
-    
+    }    
 }
 

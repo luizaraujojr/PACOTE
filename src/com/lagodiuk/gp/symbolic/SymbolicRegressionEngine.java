@@ -29,11 +29,11 @@ import com.lagodiuk.gp.symbolic.interpreter.SyntaxTreeUtils;
 
 public class SymbolicRegressionEngine {
 
-	private static final int INITIAL_PARENT_CHROMOSOMES_SURVIVE_COUNT = 1;
+	private static final int INITIAL_PARENT_CHROMOSOMES_SURVIVE_COUNT = 10;
 
-	private static final int DEFAULT_POPULATION_SIZE = 5;
+	private static final int DEFAULT_POPULATION_SIZE = 50;
 
-	private static final int MAX_INITIAL_TREE_DEPTH = 1;
+	private static final int MAX_INITIAL_TREE_DEPTH = 10;
 
 	private GeneticAlgorithm<GpChromosome, Double> environment;
 

@@ -281,15 +281,15 @@ public class LNSParameterTest extends ExperimentBase{
     	
         LNSConfigurationBuilderRandom configurationBuilder = new LNSConfigurationBuilderFixedRandom();
         String fixedParam = COMPARE_PARAM.toString();
-//        try {
+        try {
             String simplifiedS = "";
             if(simplify){
                 simplifiedS = "_SIMPLIFIED";
             }
             String outPath = PREFIX_NAME+"_"+fixedParam+simplifiedS+"/"+"data";
-//            out = ResultWriter.configureResultWriter(OUTPUT_TO,outPath, mdg.getName());
-//        } catch (IOException ex) {
-//        }
+            out = ResultWriter.configureResultWriter(OUTPUT_TO,outPath, mdg.getName());
+        } catch (IOException ex) {
+        }
         
 //        System.out.println(mdg.getName());
         if(simplify){
@@ -303,22 +303,22 @@ public class LNSParameterTest extends ExperimentBase{
         
         for (int configN=0;configN<RANDONS_CONFIGS_TO_TEST;configN++){
             LNSConfiguration config = configurationBuilder.buildRandomConfiguration(mdg, FIXED_VALUES);
-//            System.out.print("CONFIG: "+configN);
+            System.out.print("CONFIG: "+configN);
             
             for (Object currentValue : COMPARE_PARAM_VALUES) {//executar para cada configuração especifica
                 configurationBuilder.changeParameterValue(config, COMPARE_PARAM, currentValue);//acertar a config com o parametro atual    
-//                System.out.print(" PARAM: "+currentValue.toString());
+                System.out.print(" PARAM: "+currentValue.toString());
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
-//                    System.out.println(execution);
+                    System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
                     lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
-//                    saveSearchStatus(out, mdg, lns, configN, execution, currentValue); //LUIZ: comentei para poder não ficar gerando muitos arquivos.
+                    saveSearchStatus(out, mdg, lns, configN, execution, currentValue); //LUIZ: comentei para poder não ficar gerando muitos arquivos.
                     
                     lnsI.addLNS(lns, config);//luiz antonio
-//                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
+                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
                 }
             }
-//            System.out.println("");
+            System.out.println("");
         }
         try {
 			interpreterFileName = lnsI.generate();
@@ -326,7 +326,7 @@ public class LNSParameterTest extends ExperimentBase{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//        out.close();
+        out.close();
         return interpreterFileName;
     }
     
@@ -337,11 +337,8 @@ public class LNSParameterTest extends ExperimentBase{
         ,cm.getSolutionAsString());
     }
     
-    
-  
     @Override
     protected String testName() {
         return "LNS_PARAMETER_TEST";
     }
-
 }
