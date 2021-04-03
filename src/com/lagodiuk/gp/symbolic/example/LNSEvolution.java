@@ -1,6 +1,7 @@
 package com.lagodiuk.gp.symbolic.example;
 
 
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import com.lagodiuk.gp.symbolic.interpreter.Functions;
 public class LNSEvolution {
 
 	public static void main(String[] args) {
+		System.out.println (getStringTime());
 		
 		LNSEvolutionFitness fitnessFunction = new LNSEvolutionFitness (); 
 		
@@ -27,6 +29,7 @@ public class LNSEvolution {
 
 		engine.evolve(100); //coloquei 100, o original era  200.
 		System.out.println(engine.getBestSyntaxTree().print());
+		System.out.println (getStringTime());
 	}
 
 	private static void addListener(SymbolicRegressionEngine engine) {
@@ -55,6 +58,18 @@ public class LNSEvolution {
 			list.add(item);
 		}
 		return list;
+	}
+	
+	private static String getStringTime() {
+		Calendar data;
+		data = Calendar.getInstance();
+		int segundo = data.get(Calendar.SECOND);
+        int minuto = data.get(Calendar.MINUTE);
+        int hora = data.get(Calendar.HOUR_OF_DAY);
+        int dia = data.get(Calendar.DAY_OF_MONTH);	
+        int mes = data.get(Calendar.MONTH);;	
+        int ano = data.get(Calendar.YEAR);;		
+		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
 
 }

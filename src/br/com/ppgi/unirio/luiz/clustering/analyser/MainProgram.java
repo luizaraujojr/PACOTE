@@ -25,7 +25,7 @@ import br.com.ppgi.unirio.marlon.smc.instance.file.InstanceParseException;
 @SuppressWarnings("unused")
 public class MainProgram
 {
-	private static final int CYCLES = 10;	
+//	private static final int CYCLES = 10;	
 	
 	private static List<String> instanceFilenames = new ArrayList<String>();
 			
