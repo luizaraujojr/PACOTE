@@ -119,7 +119,7 @@ public abstract class ExperimentBase {
      * Executado após o final de cada instância
      */
     protected void afterEachInstance(){
-        System.out.println("REINICIANDO RANDOM");
+//        System.out.println("REINICIANDO RANDOM");
         RandomWrapper.restart();
         //coolDown(2);
     }

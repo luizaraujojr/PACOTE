@@ -60,7 +60,7 @@ public class LargeNeighborhoodSearch {
         final int n = solution.length;
         
         ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
-        double currentCost = cm.calculateSolutionCost(); //custo da solução atual
+        double currentCost = cm.calculateSolutionCost(cm); //custo da solução atual
         this.initialSolutionCost = currentCost;//guarda o valor da solução inicial
         //estado da melhor solução
         int[] bestSolution = cm.cloneSolution();//best solution found
@@ -90,7 +90,7 @@ public class LargeNeighborhoodSearch {
             ClusterMetrics cmTemp = destroyAndRepairSolution(cm);
             if(accept(bestCost, cmTemp,temperarure)){
                 cm = cmTemp;
-                double readMQ = cm.calculateSolutionCost();
+                double readMQ = cm.calculateSolutionCost(cm);
                 currentCost = readMQ;
             }
             
@@ -158,13 +158,13 @@ public class LargeNeighborhoodSearch {
     protected boolean accept(double bestMQ, ClusterMetrics temp, double temperature){
        return
                (
-               temp.calculateSolutionCost() >= bestMQ//se for melhor
+               temp.calculateSolutionCost(temp) >= bestMQ//se for melhor
                
                ||//ou 
                (config.useSA &&
                SimulatedAnnealingMath.checkProbability(
                        bestMQ
-                       , temp.calculateSolutionCost()
+                       , temp.calculateSolutionCost(temp)
                        , temperature) 
                > RandomWrapper.rando())
                );//se passar no simulated annealing;

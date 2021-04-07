@@ -32,12 +32,14 @@ public class LNSEvolutionFitness implements ExpressionFitness {
 		
 		List<String> packageClassCombinationFilenames = new ArrayList<String>();
 //		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
-		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+//		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb"); //jodamoney original
+		packageClassCombinationFilenames.add ("data//Experiment//LNSInterpretation//jodamoney-1.0.121022021133212.comb"); //jodamoney otimizado
+		
 		
 		
 		List<String> classDependencyCombinationFilenames = new ArrayList<String>();
 //		classDependencyCombinationFilenames = ProjectLoader.runClassDependencyCombinationExport(instances);
-		classDependencyCombinationFilenames.add("data//Experiment//ClsDepComb//jodamoney-1.0.121022021133212.comb");
+		classDependencyCombinationFilenames.add("data//Experiment//ClsDepComb//jodamoney-1.0.121022021133212.comb"); // jodamoney dependencias entre classes, não alterado pelas otimizações
 		
 		
 		LNSParameterTest LNSP = new LNSParameterTest();

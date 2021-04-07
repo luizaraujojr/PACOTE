@@ -55,7 +55,7 @@ public abstract class ResultWriter {
 	}*/
 	
 	public void writeLine(ClusterMetrics cm,double maxMQ, long bestSolutionIteration, long iterationN, long time, String algorithmName, String params){
-		out.println(cm.getMdg().getName()+C_S+cm.getMdg().getSize()+C_S+algorithmName+C_S+params+C_S+iterationN+C_S+cm.calculateSolutionCost()+C_S+maxMQ+C_S+bestSolutionIteration+C_S+time+C_S+cm.getTotalClusters()+C_S+cm.getBiggestClusterSize()+C_S+cm.getSmallestClusterSize()+C_S+cm.getIsolatedClusterCount()+C_S+cm.smallestClusterMF()+C_S+cm.biggestClusterMF());
+		out.println(cm.getMdg().getName()+C_S+cm.getMdg().getSize()+C_S+algorithmName+C_S+params+C_S+iterationN+C_S+cm.calculateSolutionCost(cm)+C_S+maxMQ+C_S+bestSolutionIteration+C_S+time+C_S+cm.getTotalClusters()+C_S+cm.getBiggestClusterSize()+C_S+cm.getSmallestClusterSize()+C_S+cm.getIsolatedClusterCount()+C_S+cm.smallestClusterMF()+C_S+cm.biggestClusterMF());
 	}
         
         public void writeGraph(StringBuilder graph){

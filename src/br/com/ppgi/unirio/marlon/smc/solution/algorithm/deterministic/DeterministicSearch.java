@@ -26,7 +26,7 @@ public class DeterministicSearch {
         long currentIteration = 0;
         
         int[] bestSolution = cm.cloneSolution();
-        double bestCost = cm.calculateSolutionCost();
+        double bestCost = cm.calculateSolutionCost(cm);
         long bestSolutionIteration = 0;
         
         boolean hasNextMoviment;
@@ -34,9 +34,9 @@ public class DeterministicSearch {
             hasNextMoviment = incrementSolution(cm, 0);
             currentIteration++;
             
-            if(cm.calculateSolutionCost() > bestCost){
+            if(cm.calculateSolutionCost(cm) > bestCost){
                 bestSolutionIteration = currentIteration;
-                bestCost = cm.calculateSolutionCost();
+                bestCost = cm.calculateSolutionCost(cm);
                 bestSolution = cm.cloneSolution();
             }
         }while(hasNextMoviment);

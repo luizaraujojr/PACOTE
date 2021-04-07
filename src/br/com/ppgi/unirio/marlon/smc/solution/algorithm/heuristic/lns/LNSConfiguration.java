@@ -59,8 +59,8 @@ public class LNSConfiguration{
                     return destructionFactors[i];
                 }
             }
-            return (float) 0.1;
-//            throw new RuntimeException("VALOR DE DESTRUICTION FACTOR NÃO PODE SER SORTEADO!");
+//            return (float) 0.1;
+            throw new RuntimeException("VALOR DE DESTRUICTION FACTOR NÃO PODE SER SORTEADO!");
         }
         
         @Override 

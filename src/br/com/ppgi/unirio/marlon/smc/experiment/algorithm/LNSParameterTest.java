@@ -204,7 +204,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{-1});//sem limite de iteração
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{1000000});//- 1 = sem limite de iteração
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -268,7 +268,7 @@ public class LNSParameterTest extends ExperimentBase{
         
     }
     public LNSParameterTest(){
-        RUN_TIMES = 10;//100;//30
+        RUN_TIMES = 100;//100;//30
         //BEGIN_INSTANCE = 18;
         //TOTAL_INSTANCE = 1;
     }
@@ -303,19 +303,19 @@ public class LNSParameterTest extends ExperimentBase{
         
         for (int configN=0;configN<RANDONS_CONFIGS_TO_TEST;configN++){
             LNSConfiguration config = configurationBuilder.buildRandomConfiguration(mdg, FIXED_VALUES);
-            System.out.print("CONFIG: "+configN);
+//            System.out.print("CONFIG: "+configN);
             
             for (Object currentValue : COMPARE_PARAM_VALUES) {//executar para cada configuração especifica
                 configurationBuilder.changeParameterValue(config, COMPARE_PARAM, currentValue);//acertar a config com o parametro atual    
-                System.out.print(" PARAM: "+currentValue.toString());
+//                System.out.print(" PARAM: "+currentValue.toString());
                 for(int execution=0;execution<RUN_TIMES;execution++){                    
-                    System.out.println(execution);
+//                    System.out.println(execution);
                     LargeNeighborhoodSearch lns = new LargeNeighborhoodSearch(config);
                     lns.execute(objectiveEquation);//executa o algoritmo -> seraoo salvos os status
                     saveSearchStatus(out, mdg, lns, configN, execution, currentValue); //LUIZ: comentei para poder não ficar gerando muitos arquivos.
                     
                     lnsI.addLNS(lns, config);//luiz antonio
-                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
+//                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
                 }
             }
             System.out.println("");

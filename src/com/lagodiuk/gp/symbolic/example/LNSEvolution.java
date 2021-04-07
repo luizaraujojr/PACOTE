@@ -22,7 +22,7 @@ public class LNSEvolution {
 		SymbolicRegressionEngine engine =
 				new SymbolicRegressionEngine(
 						fitnessFunction,
-						list("x", "y", "z"),
+						list("x", "y"),
 						list(Functions.ADD, Functions.SUB, Functions.MUL, Functions.VARIABLE, Functions.CONSTANT, Functions.SQRT, Functions.POW, Functions.DIV ));
 
 		addListener(engine);
@@ -67,8 +67,8 @@ public class LNSEvolution {
         int minuto = data.get(Calendar.MINUTE);
         int hora = data.get(Calendar.HOUR_OF_DAY);
         int dia = data.get(Calendar.DAY_OF_MONTH);	
-        int mes = data.get(Calendar.MONTH);;	
-        int ano = data.get(Calendar.YEAR);;		
+        int mes = data.get(Calendar.MONTH)+1;	
+        int ano = data.get(Calendar.YEAR);	
 		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
 

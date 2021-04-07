@@ -37,7 +37,7 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 		ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
 		
 		int[] maxMQSolution = cm.cloneSolution();
-		double maxMQValue = cm.calculateSolutionCost();
+		double maxMQValue = cm.calculateSolutionCost(cm);
 		
 		int k=1;
 		while(n-k>1){
@@ -97,7 +97,7 @@ public class ConstrutiveDivisive  extends AConstrutiveSolutionBuilder{
 				divideClusters(cm,divideCluster,divideModule);
 
 				//verificar se o MQ vai aumentar
-				double solutionMQ = cm.calculateSolutionCost();
+				double solutionMQ = cm.calculateSolutionCost(cm);
 				
 				if(solutionMQ > maxMQValue){//manter a melhor solução em memória
 					maxMQValue = solutionMQ;

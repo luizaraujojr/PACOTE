@@ -126,7 +126,7 @@ public abstract class TabuSearch {
                 }
                 
                 cm = new ClusterMetrics(mdg, solution, objectiveEquation);
-                currentCost = cm.calculateSolutionCost(); // current sol. value
+                currentCost = cm.calculateSolutionCost(cm); // current sol. value
                 
                 if(currentCost > bestCost){
                     solutionManager.addSolution(cm.cloneSolution());
@@ -201,7 +201,7 @@ public abstract class TabuSearch {
                 }
                 cm.makeMoviment(i_retained, j_retained); //efetua o movimento
 
-                currentCost = cm.calculateSolutionCost(); //novo custo
+                currentCost = cm.calculateSolutionCost(cm); //novo custo
 
                 //proibir o movimento reverso e o mesmo movimento por um número aleatório de iterações
                 long randomN = RandomWrapper.unif(minTabuTime, maxTabuTime);
@@ -224,7 +224,7 @@ public abstract class TabuSearch {
                 if(pathRelinkInterval > 0 && iterationsToPathRelink >= pathRelinkInterval){
                     ClusterMetrics pathRelinkCM = PathRelink.relinkSolution(bestSolution, bestCost, cm, objectiveEquation);
                     if(pathRelinkCM != null){//houve melhora na bestSolution!
-                        bestCost = pathRelinkCM.calculateSolutionCost();
+                        bestCost = pathRelinkCM.calculateSolutionCost(cm);
                         bestSolution = pathRelinkCM.cloneSolution();
                         bestSolutionIteration = currentIteration;
                         cm = pathRelinkCM;

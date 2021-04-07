@@ -37,7 +37,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
 		
         //solucao de entrada � a melhor. Unica conhecida
         topSolutions[0] = solution;
-        topSolutionsMQ[0] = cm.calculateSolutionCost();
+        topSolutionsMQ[0] = cm.calculateSolutionCost(cm);
         
             int k=1;
             while(n-k>1){
@@ -67,7 +67,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
                 cm.makeMergeClusters(aglutinatei,aglutinatej);
 
                 //gravar solu��o atual na lista de melhores
-                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateSolutionCost(),topSolutions, topSolutionsMQ);
+                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateSolutionCost(cm),topSolutions, topSolutionsMQ);
 
                 k += 1;
             }

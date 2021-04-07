@@ -54,7 +54,7 @@ public class HillClimbing{
             for(int i=0;i< popSz; i++){
                 ClusterMetrics cm = climbSolution(mdg, new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation), threshold, objectiveEquation);
                 
-                double currentPartitionMQ = cm.calculateSolutionCost();
+                double currentPartitionMQ = cm.calculateSolutionCost(cm);
                 if(currentPartitionMQ > maxMQ){//atualiza o melhor encontrado
                     best = cm.cloneSolution();
                     maxMQ = currentPartitionMQ;
@@ -74,14 +74,14 @@ public class HillClimbing{
         private ClusterMetrics climbSolution (ModuleDependencyGraph mdg, int[] solution, int threshold, String objectiveEquation){
             long time = System.currentTimeMillis();
             ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
-            out.writeLine(cm, cm.calculateSolutionCost(), 0, 0, 0, NAME+suffix, params);
+            out.writeLine(cm, cm.calculateSolutionCost(cm), 0, 0, 0, NAME+suffix, params);
             int[] currentPartition = cm.cloneSolution();
-            double currentPartitionMQ = cm.calculateSolutionCost();
+            double currentPartitionMQ = cm.calculateSolutionCost(cm);
 
 
             climbHill(cm, threshold);//faz a escalada para um dos vizinhos
             int[] nextPartition = cm.cloneSolution();
-            double nextPartitionMQ = cm.calculateSolutionCost();
+            double nextPartitionMQ = cm.calculateSolutionCost(cm);
 
             while(nextPartitionMQ > currentPartitionMQ){//hill climbing funcionou
                 currentPartition = nextPartition;
@@ -89,9 +89,9 @@ public class HillClimbing{
 
                 climbHill(cm, threshold);//faz a escalada para um dos vizinhos
                 nextPartition = cm.cloneSolution();
-                nextPartitionMQ = cm.calculateSolutionCost();
+                nextPartitionMQ = cm.calculateSolutionCost(cm);
             }
-            out.writeLine(cm, cm.calculateSolutionCost(), 1, 1, System.currentTimeMillis()-time, NAME+suffix, params);
+            out.writeLine(cm, cm.calculateSolutionCost(cm), 1, 1, System.currentTimeMillis()-time, NAME+suffix, params);
             return cm;           
         }
         

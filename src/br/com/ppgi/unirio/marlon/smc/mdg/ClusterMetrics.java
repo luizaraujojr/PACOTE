@@ -143,6 +143,7 @@ public class ClusterMetrics {
             for(int auxi=0;auxi<totalClusters;auxi++){
                     int i= convertToClusterNumber(auxi);
                     mq += modularizationFactor[i];
+//                    System.out.println(modularizationFactor[i]);
             }
             return mq;
     }
@@ -594,36 +595,30 @@ public class ClusterMetrics {
     }
     
     
-    public double calculateSolutionCost(){
+    public double calculateSolutionCost(ClusterMetrics cm1){
     	
-    	return calculateMQ();
+//    	return cm1.calculateMQ();
 //      return cm1.calculateMQ();
-//  	String parsedEquation = objectiveEquation;
-//  	parsedEquation.replaceAll("a1", String.valueOf(cm1.getTotalClusters()));
-//    	double result = 0;
-//    	Expression expression = new ExpressionBuilder(objectiveEquation)
-//        	      .variables("x")
-//        	      .variables("y")
-//        	      .variables("z")
-////        	      .variables("b")
-//        	      .build()
-//        	      .setVariable("x", getTotalClusters())
-//				  .setVariable("y", getInternalDependencySum())
-//				  .setVariable("z", getExternalDependencySum());
-////        		  .setVariable("b", getIsolatedClusterCount());
-//    	
-//    	try {
-//    		result = expression.evaluate();	    
-//		} catch (ArithmeticException e) {
-			// TODO Auto-generated catch block
+    	double result = 0;
+    	Expression expression = new ExpressionBuilder(objectiveEquation)
+        	      .variables("x")
+        	      .variables("y")
+        	      .build()
+				  .setVariable("y", getInternalDependencySum())
+				  .setVariable("x", getExternalDependencySum());
+    	
+    	try {
+    		result = expression.evaluate();	    
+		} catch (ArithmeticException e) {
+//			 TODO Auto-generated catch block
 //			e.printStackTrace();
-//			result = -1;
-//		}
-//    	
-////  	
-////  	System.out.println(result);
-////      return getTotalClusters();
-//      return result;
+			result = -1;
+		}
+    	
+//  	
+//  	System.out.println(result);
+//      return getTotalClusters();
+      return result;
   }
     
     /**

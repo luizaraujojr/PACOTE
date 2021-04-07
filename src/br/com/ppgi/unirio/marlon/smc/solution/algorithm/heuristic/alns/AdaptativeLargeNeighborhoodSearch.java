@@ -46,7 +46,7 @@ public class AdaptativeLargeNeighborhoodSearch extends LargeNeighborhoodSearch{
         final int n = solution.length;
         
         ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);// Controlador da solução - passa a solução inicial
-        double currentCost = cm.calculateSolutionCost(); //custo da solução atual
+        double currentCost = cm.calculateSolutionCost(cm); //custo da solução atual
         
         //estado da melhor solução
         int[] bestSolution = cm.cloneSolution();//best solution found
@@ -72,7 +72,7 @@ public class AdaptativeLargeNeighborhoodSearch extends LargeNeighborhoodSearch{
             double weight = config.getWeightWTCNA();//solução pior e não aceita
             if(accept(bestCost, cmTemp,temperarure)){
                 cm = cmTemp;
-                double readMQ = cm.calculateSolutionCost();
+                double readMQ = cm.calculateSolutionCost(cm);
                 if(readMQ < currentCost){
                     weight = config.getWeightWTCA();//solução pior que a atual e aceita
                 }else{

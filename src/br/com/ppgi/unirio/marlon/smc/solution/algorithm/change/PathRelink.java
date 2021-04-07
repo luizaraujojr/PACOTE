@@ -37,10 +37,10 @@ public class PathRelink {
             }
             
             //todos os módulos do clusterN estão novamente no cluster
-            if(base.calculateSolutionCost() > bestSolutionMQ){//solução de melhor MQ encontrada atravez do path relink
+            if(base.calculateSolutionCost(base) > bestSolutionMQ){//solução de melhor MQ encontrada atravez do path relink
                 //System.out.println("PATH RELINK IMPROVED SOLUTION");
                 bestSolution = base.cloneSolution();
-                bestSolutionMQ = base.calculateSolutionCost();
+                bestSolutionMQ = base.calculateSolutionCost(base);
             }
             clusterN++;//proximo cluster
         }while(targerHasClusterN);
