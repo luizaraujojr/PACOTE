@@ -554,7 +554,7 @@ public static final void main(String[] args) throws Exception
 //		System.out.println (arvore.getExpressao());
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		try {
-			lnsExperimentFilenames = LNSP.runExperiment("(((x * z) - (28.872247471852205 + y)) - (-20.769863672186244))",instanceFiles);
+			lnsExperimentFilenames = LNSP.runExperiment("(((x) - (28.872247471852205 + y)) - (-20.769863672186244))",instanceFiles);
 		} catch (InstanceParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

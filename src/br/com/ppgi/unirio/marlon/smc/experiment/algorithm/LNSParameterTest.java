@@ -204,7 +204,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{1000000});//- 1 = sem limite de iteração
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{10000});//- 1 = sem limite de iteração
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
@@ -268,7 +268,7 @@ public class LNSParameterTest extends ExperimentBase{
         
     }
     public LNSParameterTest(){
-        RUN_TIMES = 100;//100;//30
+        RUN_TIMES = 50;//100;//30
         //BEGIN_INSTANCE = 18;
         //TOTAL_INSTANCE = 1;
     }
@@ -318,7 +318,7 @@ public class LNSParameterTest extends ExperimentBase{
 //                    System.out.println(lns.getBestSolutionFound().getSolutionAsString());//luiz antonio
                 }
             }
-            System.out.println("");
+//            System.out.println("");
         }
         try {
 			interpreterFileName = lnsI.generate();
