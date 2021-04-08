@@ -597,7 +597,6 @@ public class ClusterMetrics {
     
     public double calculateSolutionCost(ClusterMetrics cm1){
     	
-//    	return cm1.calculateMQ();
 //      return cm1.calculateMQ();
     	double result = 0;
     	Expression expression = new ExpressionBuilder(objectiveEquation)

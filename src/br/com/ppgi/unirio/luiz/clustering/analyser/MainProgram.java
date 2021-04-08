@@ -536,7 +536,8 @@ public static final void main(String[] args) throws Exception
 		
 		List<String> packageClassCombinationFilenames = new ArrayList<String>();
 //		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
-		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+//		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133212_LNS OPTIMIZATION.comb"); //jodamoney otimizado
 		
 		
 		List<String> classDependencyCombinationFilenames = new ArrayList<String>();
@@ -554,7 +555,7 @@ public static final void main(String[] args) throws Exception
 //		System.out.println (arvore.getExpressao());
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		try {
-			lnsExperimentFilenames = LNSP.runExperiment("(((x) - (28.872247471852205 + y)) - (-20.769863672186244))",instanceFiles);
+			lnsExperimentFilenames = LNSP.runExperiment("x+y*y+34576",instanceFiles);
 		} catch (InstanceParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

@@ -23,7 +23,7 @@ public class LNSEvolution {
 				new SymbolicRegressionEngine(
 						fitnessFunction,
 						list("x", "y"),
-						list(Functions.ADD, Functions.SUB, Functions.MUL, Functions.VARIABLE, Functions.CONSTANT, Functions.SQRT, Functions.POW, Functions.DIV ));
+						list(Functions.ADD, Functions.SUB, Functions.MUL, Functions.VARIABLE, Functions.SQRT, Functions.POW, Functions.DIV ));
 
 		addListener(engine);
 
