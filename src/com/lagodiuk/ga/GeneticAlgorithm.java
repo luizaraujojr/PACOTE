@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.lagodiuk.ga;
 
+import java.util.Calendar;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -106,6 +107,7 @@ public class GeneticAlgorithm<C extends Chromosome<C>, T extends Comparable<T>> 
 		this.terminate = false;
 
 		for (int i = 0; i < count; i++) {
+			System.out.println ("EvolveInitTime: " + getStringTime());
 			if (this.terminate) {
 				break;
 			}
@@ -160,4 +162,17 @@ public class GeneticAlgorithm<C extends Chromosome<C>, T extends Comparable<T>> 
 	public void clearCache() {
 		this.chromosomesComparator.clearCache();
 	}
+	
+	private static String getStringTime() {
+		Calendar data;
+		data = Calendar.getInstance();
+		int segundo = data.get(Calendar.SECOND);
+        int minuto = data.get(Calendar.MINUTE);
+        int hora = data.get(Calendar.HOUR_OF_DAY);
+        int dia = data.get(Calendar.DAY_OF_MONTH);	
+        int mes = data.get(Calendar.MONTH)+1;	
+        int ano = data.get(Calendar.YEAR);	
+		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
+	}
 }
+

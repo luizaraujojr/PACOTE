@@ -28,8 +28,8 @@ public class LNSEvolution {
 		addListener(engine);
 
 		engine.evolve(50); //coloquei 100, o original era  200.
-		System.out.println(engine.getBestSyntaxTree().print());
-		System.out.println (getStringTime());
+//		System.out.println(engine.getBestSyntaxTree().print());
+		System.out.println ("FinishTime: " + getStringTime());
 	}
 
 	private static void addListener(SymbolicRegressionEngine engine) {

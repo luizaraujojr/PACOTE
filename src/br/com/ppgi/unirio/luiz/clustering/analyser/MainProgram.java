@@ -551,11 +551,9 @@ public static final void main(String[] args) throws Exception
 		File[] instanceFiles = new File[1];
 		instanceFiles[0]= f1;
 		
-		
-//		System.out.println (arvore.getExpressao());
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		try {
-			lnsExperimentFilenames = LNSP.runExperiment("x+y*y+34576",instanceFiles);
+			lnsExperimentFilenames = LNSP.runExperiment("(x)",instanceFiles);
 		} catch (InstanceParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -715,6 +713,14 @@ public static final void main(String[] args) throws Exception
 		return MoJo.MojoFM(args1);
 	}
 
+	private static double runMOJOComparison1(String file1, String file2) throws InstanceParseException, IOException {
+//		System.out.println("runMOJOComparison");
+		String[] args1 = new String[3];
+		args1[0] = file1;
+		args1[1] = file2; 
+		return MoJo.MojoFM(args1);
+	}
+
 	
 //	private static void runMOJOComparison(String file1, String file2, String param) throws InstanceParseException, IOException {
 //		System.out.println("runMOJOComparison");
@@ -741,8 +747,8 @@ public static final void main(String[] args) throws Exception
         int minuto = data.get(Calendar.MINUTE);
         int hora = data.get(Calendar.HOUR_OF_DAY);
         int dia = data.get(Calendar.DAY_OF_MONTH);	
-        int mes = data.get(Calendar.MONTH);;	
-        int ano = data.get(Calendar.YEAR);;		
+        int mes = data.get(Calendar.MONTH)+1;	
+        int ano = data.get(Calendar.YEAR);		
 		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
 }

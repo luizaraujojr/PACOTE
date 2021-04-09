@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Vector;
 
@@ -92,7 +93,7 @@ public class LNSInterpreter {
 	    	}
 	    }
 	    	    		    
-	    File file = new File(OUTPUT_FOLDER+ lns.get(0).getClusterMetrics().getMdg().getName());
+	    File file = new File(OUTPUT_FOLDER + getStringTime() +lns.get(0).getClusterMetrics().getMdg().getName());
 	    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 	    try {
 	        writer.write(sb.toString());	    
@@ -121,5 +122,17 @@ public class LNSInterpreter {
 
 	public void setCluster(Vector<Integer> cluster) {
 		this.cluster = cluster;
+	}
+	
+	private static String getStringTime() {
+		Calendar data;
+		data = Calendar.getInstance();
+		int segundo = data.get(Calendar.SECOND);
+        int minuto = data.get(Calendar.MINUTE);
+        int hora = data.get(Calendar.HOUR_OF_DAY);
+        int dia = data.get(Calendar.DAY_OF_MONTH);	
+        int mes = data.get(Calendar.MONTH)+1;	
+        int ano = data.get(Calendar.YEAR);		
+		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
 }

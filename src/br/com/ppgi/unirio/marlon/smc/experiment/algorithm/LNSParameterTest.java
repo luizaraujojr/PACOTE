@@ -204,7 +204,7 @@ public class LNSParameterTest extends ExperimentBase{
                 /**/
         
         FIXED_VALUES.remove(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT);
-        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{1000000});//- 1 = sem limite de iteração
+        FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ITERATION_LIMIT,new Object[]{100000});//- 1 = sem limite de iteração
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.ALGORITHM_NO_IMPROVEMENT_LIMIT,new Object[]{1000});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR,new Object[]{LNSConfigurationBuilderFixedRandom.DESTRUCTION_FACTOR_VALUES[1]});
         FIXED_VALUES.put(LNSConfigurationBuilderRandom.FILTER_NAMES.DESTRUCTION_FACTOR_PROBABILITY, new Object[]{1});
