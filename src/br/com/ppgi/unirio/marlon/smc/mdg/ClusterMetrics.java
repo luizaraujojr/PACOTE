@@ -594,31 +594,171 @@ public class ClusterMetrics {
         return this.modulesOnCluster.get(cluster);
     }
     
-    
     public double calculateSolutionCost(ClusterMetrics cm1){
+    	    
     	
-//      return cm1.calculateMQ();
-    	double result = 0;
-    	Expression expression = new ExpressionBuilder(objectiveEquation)
-        	      .variables("x")
-        	      .variables("y")
-        	      .build()
-				  .setVariable("y", getInternalDependencySum())
-				  .setVariable("x", getExternalDependencySum());
-    	
-    	try {
-    		result = expression.evaluate();	    
-		} catch (ArithmeticException e) {
-//			 TODO Auto-generated catch block
-//			e.printStackTrace();
-			result = -1;
+ 
+	int[] intravalue  = new int[mdg.getSize()]; 
+	int[] intervalue = new int[mdg.getSize()];
+	// COLOQUEI O NÚMERO DE CLASSES, POIS O NÚMERO DE PACOTES MÁXIMO SERIA O NÚMERO DE CLASSES E ASSOCIAÇÃO DE CLASSES EM PACOTES, LEVA EM CONSIDERAÇÃO O PRIMEIRO CLUSTER QUE FOI FEITO COM UMA CLASSE EM CADA PACOTE.
+//	return getMQ();
+	
+	for (int i = 0; i < mdg.getSize()-1; i++){
+		int sourcePackage = solution[i];
+		
+		for (int j = 0; j < mdg.getSize()-1; j++){
+			if (mdg.moduleDependencies(i)[j] != -1) {
+				int targetPackage = solution[mdg.moduleDependencies(i)[j]];;
+				if (targetPackage != sourcePackage)
+				{
+					intervalue[sourcePackage]++;
+				}
+				else
+					intravalue[sourcePackage]++;
+			}
 		}
+	}
+
+	
+	double mq = 0.0;
+
+	for (int i = 0; i < totalClusters-1; i++)
+	{
+		int inter = intervalue[i];
+		int intra = intravalue[i];
+		
+		if (intra != 0)
+		{
+	    	double mf = 0;
+	    	Expression expression = new ExpressionBuilder(objectiveEquation)
+	        	      .variables("x")
+	        	      .variables("y")
+	        	      .build()
+					  .setVariable("x", intra)
+					  .setVariable("y", inter);
+	    	
+	    	try {
+	    		mf =  expression.evaluate();	    
+			} catch (ArithmeticException e) {
+//				 TODO Auto-generated catch block
+//				e.printStackTrace();
+				mf = 0;
+			}
+
+//			double mf = intra / (intra + 0.5 * inter);
+			mq += mf;
+		}
+	}
+	
+  return mq;
+}
+    
+//    public double calculateSolutionCost(ClusterMetrics cm1){
+//    	
+//    	return getMQ();
+//    	
+////      return cm1.calculateMQ();
+////    	double result = 0;
+////    	Expression expression = new ExpressionBuilder(objectiveEquation)
+////        	      .variables("x")
+////        	      .variables("y")
+////        	      .build()
+////				  .setVariable("y", getInternalDependencySum())
+////				  .setVariable("x", getExternalDependencySum());
+////    	
+////    	try {
+////    		result = expression.evaluate();	    
+////		} catch (ArithmeticException e) {
+//////			 TODO Auto-generated catch block
+//////			e.printStackTrace();
+////			result = -1;
+////		}
+////    	
+//////  	
+//////  	System.out.println(result);
+//////      return getTotalClusters();
+////      return result;
+//  }
+    
+    public double getMQ(){
+    	int[] intravalue  = new int[mdg.getSize()]; 
+    	int[] intervalue = new int[mdg.getSize()];
+    	// COLOQUEI O NÚMERO DE CLASSES, POIS O NÚMERO DE PACOTES MÁXIMO SERIA O NÚMERO DE CLASSES E ASSOCIAÇÃO DE CLASSES EM PACOTES, LEVA EM CONSIDERAÇÃO O PRIMEIRO CLUSTER QUE FOI FEITO COM UMA CLASSE EM CADA PACOTE.
     	
-//  	
-//  	System.out.println(result);
-//      return getTotalClusters();
-      return result;
-  }
+    	
+    	for (int i = 0; i < mdg.getSize()-1; i++){
+			int sourcePackage = solution[i];
+			
+			for (int j = 0; j < mdg.getSize()-1; j++){
+				if (mdg.moduleDependencies(i)[j] != -1) {
+					int targetPackage = solution[mdg.moduleDependencies(i)[j]];;
+					if (targetPackage != sourcePackage)
+					{
+						intervalue[sourcePackage]++;
+					}
+					else
+						intravalue[sourcePackage]++;
+				}
+			}
+		}
+		
+		double mq = 0.0;
+
+		for (int i = 0; i < totalClusters-1; i++)
+		{
+			int inter = intervalue[i];
+			int intra = intravalue[i];
+			
+			if (intra != 0)
+			{
+				double mf = intra / (intra + 0.5 * inter);
+				mq += mf;
+			}
+		}
+
+		return mq;
+    }
+
+    
+    public double getMQTest(double a1, double a2, double b1, double b2){
+    	int[] intravalue  = new int[mdg.getSize()]; 
+    	int[] intervalue = new int[mdg.getSize()];
+    	// COLOQUEI O NÚMERO DE CLASSES, POIS O NÚMERO DE PACOTES MÁXIMO SERIA O NÚMERO DE CLASSES E ASSOCIAÇÃO DE CLASSES EM PACOTES, LEVA EM CONSIDERAÇÃO O PRIMEIRO CLUSTER QUE FOI FEITO COM UMA CLASSE EM CADA PACOTE.
+    	
+    	
+    	for (int i = 0; i < mdg.getSize()-1; i++){
+			int sourcePackage = solution[i];
+			
+			for (int j = 0; j < mdg.getSize()-1; j++){
+				if (mdg.moduleDependencies(i)[j] != -1) {
+					int targetPackage = solution[mdg.moduleDependencies(i)[j]];;
+					if (targetPackage != sourcePackage)
+					{
+						intervalue[sourcePackage]++;
+					}
+					else
+						intravalue[sourcePackage]++;
+				}
+			}
+		}
+		
+		double mq = 0.0;
+
+		for (int i = 0; i < totalClusters-1; i++)
+		{
+			int inter = intervalue[i];
+			int intra = intravalue[i];
+			
+			if (intra != 0)
+			{
+				double mf = (a1 * intra + a2 * inter ) / (b1 * intra + b2 * inter);
+				mq += mf;
+			}
+		}
+
+		return mq;
+    }
+
     
     /**
      * Retorna o número de dependências internas (mesmo pacote) entre as classes
@@ -653,7 +793,7 @@ public class ClusterMetrics {
 	    		if (mdg.moduleDependencies(i)[j] != -1) {
 		    		int ModulePackageSolution = solution[i];
 		    		int DependonPackageSolution = solution[mdg.moduleDependencies(i)[j]];
-		    		if (ModulePackageSolution == DependonPackageSolution){
+		    		if (ModulePackageSolution != DependonPackageSolution){
 		    			value++;
 		    		}   			
 	    		}

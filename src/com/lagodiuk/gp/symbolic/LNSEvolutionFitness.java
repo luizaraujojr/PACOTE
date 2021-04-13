@@ -49,7 +49,7 @@ public class LNSEvolutionFitness implements ExpressionFitness {
 		instanceFiles[0]= f1;
 		
 		
-//		System.out.println (arvore.getExpressao());
+		System.out.println (expression.print());
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		try {
 			lnsExperimentFilenames = LNSP.runExperiment(expression.print(),instanceFiles);
@@ -83,3 +83,4 @@ public class LNSEvolutionFitness implements ExpressionFitness {
 		return MoJo.MojoFM(args1);
 	}
 }
+		

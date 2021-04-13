@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -21,6 +22,7 @@ import br.com.ppgi.unirio.luiz.clustering.model.ProjectPackage;
 import br.com.ppgi.unirio.luiz.clustering.mojo.MoJo;
 import br.com.ppgi.unirio.marlon.smc.experiment.algorithm.LNSParameterTest;
 import br.com.ppgi.unirio.marlon.smc.instance.file.InstanceParseException;
+import br.com.ppgi.unirio.marlon.smc.mdg.ModuleDependencyGraph;
 
 @SuppressWarnings("unused")
 public class MainProgram
@@ -506,39 +508,50 @@ public class MainProgram
 		return instances;
 	}	
 	
-//	public static final void main(String[] args) throws Exception
-//	{				
-//		Vector<Project> projectInstances = new Vector<Project>();
-//		projectInstances = runProjectsReading();
-//		runPackageClassCombinationExport(projectInstances,false);
-//		runClassDependencyCombinationExport(projectInstances);
-////	
-//		runLNSPExperiment("(((x * z) - (28.872247471852205 + y)) - (-20.769863672186244))");
-////		runMOJOComparison("data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb","-fm");	
-////		runMOJOComparison("data\\Experiment\\PkgClsComb\\junit-4.13.006022021213134.comb ", "data\\Experiment\\LNSInterpretation\\junit-4.13.006022021213134.comb", "-fm");
-//	
-////		runProjectOverallAnalisis(projectInstances);		
-////		runProjectDependencyExport(projectInstances);
-//		
-//		
-//		}	
-		
-		
-		
+
 public static final void main(String[] args) throws Exception
-	{				
-				
+	{	
+	PrintStream ps =null;
+	FileOutputStream out = new FileOutputStream("data//Experiment//PkgClsComb//MQValidation_" + getStringTime() + ".data"); 
+	ps = new PrintStream(out);
+	
+
+	String equation = "";
+	
+	double a1 = -5;
+	double a2 = -5;
+	double b1 = -5;
+	double b2 = -5;
+	
+	while (a1<=5) {
+		a2 = -5;
+		while (a2<=5) {
+			b1 = -5;
+			while (b1<=5) {
+				b2 = -5;
+				while (b2<=5) {			
+					equation = "(" + a1 + "*x + " + a2 + "* y) / ( " + b1 + "*x + " + b2 + "* y)";
+					
+//					equation = "(1 * x + 0 * y) / (1 * x + 0.5 * y)";
+					
+	
+	
 //		List<String> instanceFilenames = new ArrayList<String>();
 //		instanceFilenames.add(dataset.getNome());
 //		
-//		Vector<Project> instances = new Vector<Project>();
+//		Vector<Project> instances = new Vector<	Project>();
 //		instances.addAll(ProjectLoader.readJarInstances(instanceFilenames));
 		
+							
+							
+		List<String> packageClassCombinationFilenamesLNS = new ArrayList<String>();
+//		packageClassCombinationFilenamesLNS = ProjectLoader.runPackageClassCombinationExport(instances,false);
+		packageClassCombinationFilenamesLNS.add ("data//Experiment//PkgClsComb//jodamoney-1.0.LNS-OPTIMIZATION.comb"); //jodamoney otimizado
+							
 		List<String> packageClassCombinationFilenames = new ArrayList<String>();
 //		packageClassCombinationFilenames = ProjectLoader.runPackageClassCombinationExport(instances,false);
-//		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
-		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133212_LNS OPTIMIZATION.comb"); //jodamoney otimizado
-		
+		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133253.comb");
+//		packageClassCombinationFilenames.add ("data//Experiment//PkgClsComb//jodamoney-1.0.121022021133212_LNS OPTIMIZATION.comb"); //jodamoney otimizado
 		
 		List<String> classDependencyCombinationFilenames = new ArrayList<String>();
 //		classDependencyCombinationFilenames = ProjectLoader.runClassDependencyCombinationExport(instances);
@@ -553,7 +566,7 @@ public static final void main(String[] args) throws Exception
 		
 		List<String> lnsExperimentFilenames = new ArrayList<String>();
 		try {
-			lnsExperimentFilenames = LNSP.runExperiment("(x)",instanceFiles);
+			lnsExperimentFilenames = LNSP.runExperiment(equation,instanceFiles);
 		} catch (InstanceParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -562,7 +575,24 @@ public static final void main(String[] args) throws Exception
 			e1.printStackTrace();
 		}
 		
-		System.out.println(runMOJOComparison(packageClassCombinationFilenames.get(0), lnsExperimentFilenames.get(0),"-fm"));			
+		ps.println("Equation: " + equation + " ; MojoFM: " + runMOJOComparison(packageClassCombinationFilenamesLNS.get(0),lnsExperimentFilenames.get(0), "-fm"));
+		
+		System.out.println ("Equation: " + equation + " ; MojoFM: " + runMOJOComparison(packageClassCombinationFilenamesLNS.get(0),lnsExperimentFilenames.get(0), "-fm"));
+//		System.out.println(" - MojoFM: " + runMOJOComparison(packageClassCombinationFilenamesLNS.get(0),lnsExperimentFilenames.get(0), "-fm"));
+			
+		
+				b2 =b2+0.5;
+				}	
+				b1 =b1+0.5;
+			}
+			a2 =a2+0.5;
+		}
+		a1 =a1+0.5;
+    }
+
+	
+	ps.close();	
+			
 	}
 
 	private static void runProjectOverallAnalisis(Vector<Project> projectsInstances) throws Exception {

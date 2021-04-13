@@ -15,7 +15,7 @@ import com.lagodiuk.gp.symbolic.interpreter.Functions;
 public class LNSEvolution {
 
 	public static void main(String[] args) {
-		System.out.println (getStringTime());
+		System.out.println ("GP START: " + getStringTime());
 		
 		LNSEvolutionFitness fitnessFunction = new LNSEvolutionFitness (); 
 		
@@ -23,11 +23,11 @@ public class LNSEvolution {
 				new SymbolicRegressionEngine(
 						fitnessFunction,
 						list("x", "y"),
-						list(Functions.ADD, Functions.SUB, Functions.MUL, Functions.VARIABLE, Functions.SQRT, Functions.POW, Functions.DIV ));
+						list(Functions.ADD, Functions.SUB, Functions.MUL, Functions.CONSTANT, Functions.VARIABLE, Functions.SQRT, Functions.DIV ));
 
 		addListener(engine);
 
-		engine.evolve(50); //coloquei 100, o original era  200.
+		engine.evolve(200); //coloquei 100, o original era  200.
 //		System.out.println(engine.getBestSyntaxTree().print());
 		System.out.println ("FinishTime: " + getStringTime());
 	}
