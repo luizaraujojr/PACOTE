@@ -116,10 +116,10 @@ public class IteratedLocalSearch
 		ClusteringCalculator calculator = new ClusteringCalculator(project, project.getPackageCount() * 2);
 		
 		int[] bestSolution = createRandomSolution(calculator);
-		double bestFitness = evaluate(bestSolution, calculator, 0.0, a1, a2, b1, b2);
+		double bestFitness = evaluate(bestSolution, calculator, 0.0);
 
 		int[] solution = localSearch(bestSolution, calculator, bestFitness);
-		double fitness = evaluate(solution, calculator, bestFitness, a1, a2, b1, b2);
+		double fitness = evaluate(solution, calculator, bestFitness);
 		
 		if (fitness > bestFitness)
 		{
@@ -131,7 +131,7 @@ public class IteratedLocalSearch
 		{
 			int[] startSolution = applyPerturbation(bestSolution, calculator, PERTURBATION_SIZE);
 			solution = localSearch(startSolution, calculator, bestFitness);
-			fitness = evaluate(solution, calculator, bestFitness, a1, a2, b1, b2);
+			fitness = evaluate(solution, calculator, bestFitness);
 //			System.out.println(Arrays.toString(bestSolution) + "; " + bestFitness);
 			
 			if (fitness > bestFitness)
@@ -214,7 +214,7 @@ public class IteratedLocalSearch
 		NeighborhoodVisitorResult result;
 
 		int[] bestLocalSolution = Arrays.copyOf(solution, solution.length);
-		double bestLocalFitness = evaluate(bestLocalSolution, calculator, bestFitness, a1, a2, b1, b2);
+		double bestLocalFitness = evaluate(bestLocalSolution, calculator, bestFitness);
 
 		do
 		{
@@ -236,7 +236,7 @@ public class IteratedLocalSearch
 	 */
 	private NeighborhoodVisitorResult visitNeighbors(int[] solution, ClusteringCalculator calculator, double bestFitness)
 	{
-		double startingFitness = evaluate(solution, calculator, bestFitness, a1, a2, b1, b2);
+		double startingFitness = evaluate(solution, calculator, bestFitness);
 
 		if (evaluationsConsumed > maxEvaluations)
 			return new NeighborhoodVisitorResult(NeighborhoodVisitorStatus.SEARCH_EXHAUSTED);
@@ -249,7 +249,7 @@ public class IteratedLocalSearch
 			int originalPackage = solution[i];
 			solution[i] = PseudoRandom.randInt(0, packageCount-1);
 
-			double neighborFitness = evaluate(solution, calculator, bestFitness, a1, a2, b1, b2);
+			double neighborFitness = evaluate(solution, calculator, bestFitness);
 
 			if (evaluationsConsumed > maxEvaluations)
 				return new NeighborhoodVisitorResult(NeighborhoodVisitorStatus.SEARCH_EXHAUSTED);
@@ -266,7 +266,7 @@ public class IteratedLocalSearch
 	/**
 	 * Evaluates the fitness of a solution, saving detail information
 	 */
-	private double evaluate(int[] solution, ClusteringCalculator calculator, double bestFitness, double a1, double a2, double b1, double b2)
+	private double evaluate(int[] solution, ClusteringCalculator calculator, double bestFitness)
 	{
 		if (++evaluationsConsumed % 10000 == 0)
 		{
