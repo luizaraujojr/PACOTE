@@ -51,8 +51,8 @@ public class RepairGreedyImproveWorstMF extends ARepairSolution{
                 }
             }
             if(selectedModule != -1){
-                if(selectedDelta < 0 && cm.getTotalClusters()<cm.getMdg().getSize()){//posso cirar um cluster novo?
-                    int newCluster = cm.convertToClusterNumber(cm.getTotalClusters());
+                if(selectedDelta < 0 && cm.getTotalClusteres()<cm.getMdg().getSize()){//posso cirar um cluster novo?
+                    int newCluster = cm.convertToClusterNumber(cm.getTotalClusteres());
                     cm.makeMoviment(selectedModule, newCluster);//coloca em um novo cluster
                 }else{
                     cm.makeMoviment(selectedModule, fixedCluster);//faz o movimento

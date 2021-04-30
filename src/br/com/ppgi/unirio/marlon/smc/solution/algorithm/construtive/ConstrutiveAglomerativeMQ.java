@@ -19,7 +19,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
     
     @Override
     public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
     	
         //aglomerar os clusteres iterativamente
         int[][] newSolutions = aglomerateClustering(mdg, solution,quantity, objectiveEquation);
@@ -37,7 +37,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
 		
         //solucao de entrada � a melhor. Unica conhecida
         topSolutions[0] = solution;
-        topSolutionsMQ[0] = cm.calculateSolutionCost(cm);
+        topSolutionsMQ[0] = cm.calculateSolutionCost();
         
             int k=1;
             while(n-k>1){
@@ -47,8 +47,8 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
                 Double currentMaxDelta=null;
 
 
-                for(int auxi=0;auxi<cm.getTotalClusters();auxi++){
-                    for(int auxj=auxi+1;auxj<cm.getTotalClusters();auxj++){
+                for(int auxi=0;auxi<cm.getTotalClusteres();auxi++){
+                    for(int auxj=auxi+1;auxj<cm.getTotalClusteres();auxj++){
                         int i=cm.convertToClusterNumber(auxi);
                         int j=cm.convertToClusterNumber(auxj);                    
                         //verificar o delta da uniao desses dois clusteres
@@ -67,7 +67,7 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
                 cm.makeMergeClusters(aglutinatei,aglutinatej);
 
                 //gravar solu��o atual na lista de melhores
-                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateSolutionCost(cm),topSolutions, topSolutionsMQ);
+                addSolutionOnTopSolutions(cm.cloneSolution(),cm.calculateSolutionCost(),topSolutions, topSolutionsMQ);
 
                 k += 1;
             }
@@ -92,4 +92,16 @@ public class ConstrutiveAglomerativeMQ extends AConstrutiveSolutionBuilder{
             }
         }
     }
+
+	@Override
+	public int[] createSolution(ModuleDependencyGraph mdg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

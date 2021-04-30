@@ -18,7 +18,7 @@ public class DeterministicSearch {
 	}
 
 	public int[] execute (ModuleDependencyGraph mdg, String objectiveEquation){
-        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg, objectiveEquation);//0-0-0-0-0-......
+        int[] solution = new ConstrutiveBasicAllModuleInSameClusterSolution().createSolution(mdg);//0-0-0-0-0-......
         long startTime = System.currentTimeMillis();
         ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
         int n = solution.length;
@@ -26,7 +26,7 @@ public class DeterministicSearch {
         long currentIteration = 0;
         
         int[] bestSolution = cm.cloneSolution();
-        double bestCost = cm.calculateSolutionCost(cm);
+        double bestCost = cm.calculateSolutionCost();
         long bestSolutionIteration = 0;
         
         boolean hasNextMoviment;
@@ -34,9 +34,9 @@ public class DeterministicSearch {
             hasNextMoviment = incrementSolution(cm, 0);
             currentIteration++;
             
-            if(cm.calculateSolutionCost(cm) > bestCost){
+            if(cm.calculateSolutionCost() > bestCost){
                 bestSolutionIteration = currentIteration;
-                bestCost = cm.calculateSolutionCost(cm);
+                bestCost = cm.calculateSolutionCost();
                 bestSolution = cm.cloneSolution();
             }
         }while(hasNextMoviment);

@@ -9,7 +9,7 @@ import java.io.PrintStream;
  * @author kiko
  */
 public class FileResultWriter extends ResultWriter{
-	private static final String FOLDER = "data/Experiment/LNSOutput";
+	private static final String FOLDER = "../experiment_dissertacao";
 	
         /**
          * Cria um arquivo de saida novo, pronto para ser utilizado

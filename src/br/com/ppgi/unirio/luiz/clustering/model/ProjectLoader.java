@@ -20,6 +20,23 @@ public class ProjectLoader {
 		
 		CDAJarReader reader = new CDAJarReader();
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		reader.framework.add("apple.laf.AquaFileChooserUI");
 		reader.framework.add("bsh.classpath.ClassManagerImpl");
 		reader.framework.add("CH.ifa.draw.standard.AlignCommand$1");

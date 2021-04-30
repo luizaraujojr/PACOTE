@@ -72,8 +72,9 @@ public class MDGSimplifier {
         this.mdg = mdg;
     }
     
-	public List<Integer> getRemovedModules() {
+    public List<Integer> getRemovedModules() {
 		return removedModules;
 	}
+    
     
 }

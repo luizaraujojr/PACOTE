@@ -53,7 +53,7 @@ public class BunchReader{
                             }else{
                                 dependencies.add(depName);
                             }
-                        }else if (token.length  == 3){
+                        }else{
                             mdg.addModuleDependency(token[0], token[1], Integer.parseInt(token[2]));
                             mdg.setWeighted(true);
                         }
@@ -94,31 +94,23 @@ public class BunchReader{
                 }
                 String[] token = line.split(SPLITTER);
                 
-//                Luiz Antonio: retirei para incluir as classes que não possuem dependências
-//                if(token.length < 2){
-//                    throw new InstanceParseException("LINHA SEM DEPENDÃŠNCIA ENCONTRADA.");
-//                }
-                
-                
+                if(token.length < 2){
+                    throw new InstanceParseException("LINHA SEM DEPENDÃŠNCIA ENCONTRADA.");
+                }
                 //verificar se valor existe na lista de modulos
                 boolean hasT0 = false;
                 boolean hasT1 = false;
                 for(String module : modules){
                     if(hasT0 && hasT1){continue NEXT_LINE;}
                     if(!hasT0 && token[0].equals(module)){hasT0 = true;}
-                    
-                    if(token.length == 2){
-                    	if(!hasT1 && token[1].equals(module)){hasT1 = true;}	
-                    }   
+                    if(!hasT1 && token[1].equals(module)){hasT1 = true;}
                 }
                 
                 if(!hasT0){
                     modules.add(token[0]);
                 }
-                if(token.length == 2){
-                	if(!hasT1 && !token[0].equals(token[1])){
-                        modules.add(token[1]);
-                    }
+                if(!hasT1 && !token[0].equals(token[1])){
+                    modules.add(token[1]);
                 }
             }
             return modules;

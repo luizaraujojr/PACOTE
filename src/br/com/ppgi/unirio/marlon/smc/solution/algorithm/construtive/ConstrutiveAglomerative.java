@@ -14,7 +14,7 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
     
     @Override
     public int[] createSolution(ModuleDependencyGraph mdg, String objectiveEquation){
-        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg, objectiveEquation);
+        int[] solution = new ConstrutiveBasicOneModulePerCluster().createSolution(mdg);
 		
         //aglomerar os clusteres iterativamente
         int[] newSolution = aglomerateClustering(mdg, solution, objectiveEquation);
@@ -23,7 +23,7 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
     }
     
     @Override
-    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+    public int[][] createSolution(ModuleDependencyGraph mdg, int quantity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 	
@@ -33,8 +33,8 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
         ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
 
         int[] maxMQSolution = cm.cloneSolution();
-        double maxMQValue = cm.calculateSolutionCost(cm);
-        int[][] algutinateDependency = new int[cm.getTotalClusters()][cm.getTotalClusters()];
+        double maxMQValue = cm.calculateSolutionCost();
+        int[][] algutinateDependency = new int[cm.getTotalClusteres()][cm.getTotalClusteres()];
         int k=1;
         while(n-k>1){
                 //selecionar elementos para a aglutinação
@@ -43,7 +43,7 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
                 int aglutinatei = -1;
                 int aglutinatej = -1;
                 int maxInternalDependency=-1;
-                for(int i=0;i<cm.getTotalClusters();i++){for(int j=0;j<cm.getTotalClusters();j++){algutinateDependency[i][j] = 0;}}//inicializa os contadores de dependencia
+                for(int i=0;i<cm.getTotalClusteres();i++){for(int j=0;j<cm.getTotalClusteres();j++){algutinateDependency[i][j] = 0;}}//inicializa os contadores de dependencia
 
                 //itera todos os módulos para descobrir a uniao dos clusteres com a maior dependencia interna
                 for(int modulei=0; modulei< mdg.getSize();modulei++){
@@ -67,7 +67,7 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
                         cm.makeMergeClusters(aglutinatei,aglutinatej);//efetua a aglutinação dos clusteres
 
                         //verificar se o MQ vai aumentar
-                        double solutionMQ = cm.calculateSolutionCost(cm);
+                        double solutionMQ = cm.calculateSolutionCost();
 
                         if(solutionMQ > maxMQValue){//manter a melhor solução em memória
                                 maxMQValue = solutionMQ;
@@ -83,4 +83,16 @@ public class ConstrutiveAglomerative  extends AConstrutiveSolutionBuilder{
         }
         return maxMQSolution;
     }
+
+	@Override
+	public int[] createSolution(ModuleDependencyGraph mdg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int[][] createSolution(ModuleDependencyGraph mdg, int quantity, String objectiveEquation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

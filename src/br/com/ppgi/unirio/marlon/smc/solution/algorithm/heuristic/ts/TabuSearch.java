@@ -75,7 +75,7 @@ public abstract class TabuSearch {
     public int[] execute(ModuleDependencyGraph mdg, TabuConfiguration configuration, String objectiveEquation){
         config.configure(configuration);
         
-        int[] solution = new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation);
+        int[] solution = new ConstrutiveBasicRandomSolution().createSolution(mdg);
         return execute(mdg, solution, objectiveEquation);
     }
     
@@ -122,11 +122,11 @@ public abstract class TabuSearch {
                 iterationsWithoutImprovement = 0;
                 iterationsToPathRelink = 0;
                 if (currentIteration != 0){//gerar outra solução
-                    solution = solutionManager.generateNewSolution(mdg, objectiveEquation);
+                    solution = solutionManager.generateNewSolution(mdg);
                 }
                 
                 cm = new ClusterMetrics(mdg, solution, objectiveEquation);
-                currentCost = cm.calculateSolutionCost(cm); // current sol. value
+                currentCost = cm.calculateSolutionCost(); // current sol. value
                 
                 if(currentCost > bestCost){
                     solutionManager.addSolution(cm.cloneSolution());
@@ -158,14 +158,14 @@ public abstract class TabuSearch {
             //recupera o melhor movimento disponível...
             for (int auxi = 0; auxi < n; auxi++)//modulo
             {
-                for (int auxj = 0; auxj < cm.getTotalClusters(); auxj = auxj+1)//cluster
+                for (int auxj = 0; auxj < cm.getTotalClusteres(); auxj = auxj+1)//cluster
                 {
                     int i=cm.convertToClusterNumber(auxi);
                     int j=cm.convertToClusterNumber(auxj);
 
                     if(solution[i] == j) {continue;}//modulo esta no cluster de destino
-                    if(j == cm.getTotalClusters() && cm.isModuleAlone(i)) {continue;} //modulo isolado sendo trocado de cluster, n�o altera a solu��o
-                    if(clusterCreatedOnLastMove && i==lastMovedCluster && j==cm.getTotalClusters()) {continue;}//modulo movido para um cluster novo na itera��o anterior
+                    if(j == cm.getTotalClusteres() && cm.isModuleAlone(i)) {continue;} //modulo isolado sendo trocado de cluster, n�o altera a solu��o
+                    if(clusterCreatedOnLastMove && i==lastMovedCluster && j==cm.getTotalClusteres()) {continue;}//modulo movido para um cluster novo na itera��o anterior
 
                     delta[i][j] = cm.calculateMovimentDelta(i, j);
                     autorized = (checkTabuValue(i, j) < currentIteration);
@@ -193,7 +193,7 @@ public abstract class TabuSearch {
             else 
             {
                 int modulePositionBefore = solution[i_retained]; //cluster onde o módulo está antes do movimento
-                clusterCreatedOnLastMove = j_retained == cm.getTotalClusters();
+                clusterCreatedOnLastMove = j_retained == cm.getTotalClusteres();
                 lastMovedCluster = i_retained;
 //                            System.out.println("ITERATION: "+currentIteration+" MOVIMENT: "+i_retained+" - "+ j_retained + " DELTA: "+delta[i_retained][j_retained]);
                 if(delta[i_retained][j_retained] == 0){
@@ -201,7 +201,7 @@ public abstract class TabuSearch {
                 }
                 cm.makeMoviment(i_retained, j_retained); //efetua o movimento
 
-                currentCost = cm.calculateSolutionCost(cm); //novo custo
+                currentCost = cm.calculateSolutionCost(); //novo custo
 
                 //proibir o movimento reverso e o mesmo movimento por um número aleatório de iterações
                 long randomN = RandomWrapper.unif(minTabuTime, maxTabuTime);
@@ -224,7 +224,7 @@ public abstract class TabuSearch {
                 if(pathRelinkInterval > 0 && iterationsToPathRelink >= pathRelinkInterval){
                     ClusterMetrics pathRelinkCM = PathRelink.relinkSolution(bestSolution, bestCost, cm, objectiveEquation);
                     if(pathRelinkCM != null){//houve melhora na bestSolution!
-                        bestCost = pathRelinkCM.calculateSolutionCost(cm);
+                        bestCost = pathRelinkCM.calculateSolutionCost();
                         bestSolution = pathRelinkCM.cloneSolution();
                         bestSolutionIteration = currentIteration;
                         cm = pathRelinkCM;

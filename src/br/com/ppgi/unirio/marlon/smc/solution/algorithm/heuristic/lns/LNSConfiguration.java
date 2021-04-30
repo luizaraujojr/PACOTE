@@ -59,7 +59,6 @@ public class LNSConfiguration{
                     return destructionFactors[i];
                 }
             }
-//            return (float) 0.1;
             throw new RuntimeException("VALOR DE DESTRUICTION FACTOR NÃO PODE SER SORTEADO!");
         }
         
@@ -298,6 +297,16 @@ public class LNSConfiguration{
         this.bestSolution = bestSolution;
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     public ResultWriter getOut() {
         return iterationOut;
     }
@@ -334,6 +343,8 @@ public class LNSConfiguration{
         return inicialTemperatureRatio;
     }
 
+   
+
     public ADestroySolution getDestroyAlgorithm() {
         return destroyAlgorithm;
     }
@@ -357,4 +368,9 @@ public class LNSConfiguration{
     public void setUseSA(boolean useSA) {
         this.useSA = useSA;
     }
+    
+    
+    
+    
+    
 }

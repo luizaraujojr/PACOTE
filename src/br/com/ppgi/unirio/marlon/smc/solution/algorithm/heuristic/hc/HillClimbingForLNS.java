@@ -26,16 +26,16 @@ public class HillClimbingForLNS{
          * @return 
          */
         private static boolean climbHill(ClusterMetrics cm, float threshold){
-            int neighborEvalLimit =(int) (cm.getMdg().getSize() * cm.getTotalClusters() * (threshold));
+            int neighborEvalLimit =(int) (cm.getMdg().getSize() * cm.getTotalClusteres() * (threshold));
             double maxDelta = 0;
             int best_i = -1;
             int best_j = -1;
             
             int[] modulesMixed = RandomWrapper.createMixedArray(0,cm.getMdg().getSize()-1);
-            int[] clusteresMixed = RandomWrapper.createMixedArray(0,cm.getTotalClusters()-1);
+            int[] clusteresMixed = RandomWrapper.createMixedArray(0,cm.getTotalClusteres()-1);
             STOP_CLIMB:
             for(int i=0;i<cm.getMdg().getSize();i++){
-                for(int j=0;j<cm.getTotalClusters();j++){
+                for(int j=0;j<cm.getTotalClusteres();j++){
                     //TODO - embaralhar a ordem
                     int moviment_i = modulesMixed[i];
                     int moviment_j = clusteresMixed[j];
@@ -49,7 +49,7 @@ public class HillClimbingForLNS{
                         best_j = moviment_j;
                     }
                     
-                    int visitedCount = (i*cm.getTotalClusters()) + (j+1);
+                    int visitedCount = (i*cm.getTotalClusteres()) + (j+1);
                     
                     if ( visitedCount >= neighborEvalLimit && maxDelta > 0 ){
                         break STOP_CLIMB;

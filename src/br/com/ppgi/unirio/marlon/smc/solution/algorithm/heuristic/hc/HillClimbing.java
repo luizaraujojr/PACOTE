@@ -52,9 +52,9 @@ public class HillClimbing{
             double maxMQ = Integer.MIN_VALUE;
             
             for(int i=0;i< popSz; i++){
-                ClusterMetrics cm = climbSolution(mdg, new ConstrutiveBasicRandomSolution().createSolution(mdg, objectiveEquation), threshold, objectiveEquation);
+                ClusterMetrics cm = climbSolution(mdg, new ConstrutiveBasicRandomSolution().createSolution(mdg), threshold, objectiveEquation);
                 
-                double currentPartitionMQ = cm.calculateSolutionCost(cm);
+                double currentPartitionMQ = cm.calculateSolutionCost();
                 if(currentPartitionMQ > maxMQ){//atualiza o melhor encontrado
                     best = cm.cloneSolution();
                     maxMQ = currentPartitionMQ;
@@ -74,14 +74,14 @@ public class HillClimbing{
         private ClusterMetrics climbSolution (ModuleDependencyGraph mdg, int[] solution, int threshold, String objectiveEquation){
             long time = System.currentTimeMillis();
             ClusterMetrics cm = new ClusterMetrics(mdg, solution, objectiveEquation);
-            out.writeLine(cm, cm.calculateSolutionCost(cm), 0, 0, 0, NAME+suffix, params);
+            out.writeLine(cm, cm.calculateSolutionCost(), 0, 0, 0, NAME+suffix, params);
             int[] currentPartition = cm.cloneSolution();
-            double currentPartitionMQ = cm.calculateSolutionCost(cm);
+            double currentPartitionMQ = cm.calculateSolutionCost();
 
 
             climbHill(cm, threshold);//faz a escalada para um dos vizinhos
             int[] nextPartition = cm.cloneSolution();
-            double nextPartitionMQ = cm.calculateSolutionCost(cm);
+            double nextPartitionMQ = cm.calculateSolutionCost();
 
             while(nextPartitionMQ > currentPartitionMQ){//hill climbing funcionou
                 currentPartition = nextPartition;
@@ -89,23 +89,23 @@ public class HillClimbing{
 
                 climbHill(cm, threshold);//faz a escalada para um dos vizinhos
                 nextPartition = cm.cloneSolution();
-                nextPartitionMQ = cm.calculateSolutionCost(cm);
+                nextPartitionMQ = cm.calculateSolutionCost();
             }
-            out.writeLine(cm, cm.calculateSolutionCost(cm), 1, 1, System.currentTimeMillis()-time, NAME+suffix, params);
+            out.writeLine(cm, cm.calculateSolutionCost(), 1, 1, System.currentTimeMillis()-time, NAME+suffix, params);
             return cm;           
         }
         
         private void climbHill(ClusterMetrics cm, int threshold){
-            int neighborEvalLimit =(int) (cm.getMdg().getSize() * cm.getTotalClusters() * (threshold/100.0d));
+            int neighborEvalLimit =(int) (cm.getMdg().getSize() * cm.getTotalClusteres() * (threshold/100.0d));
             double maxDelta = 0;
             int best_i = -1;
             int best_j = -1;
             
             int[] modulesMixed = RandomWrapper.createMixedArray(0,cm.getMdg().getSize()-1);
-            int[] clusteresMixed = RandomWrapper.createMixedArray(0,cm.getTotalClusters()-1);
+            int[] clusteresMixed = RandomWrapper.createMixedArray(0,cm.getTotalClusteres()-1);
             STOP_CLIMB:
             for(int i=0;i<cm.getMdg().getSize();i++){
-                for(int j=0;j<cm.getTotalClusters();j++){
+                for(int j=0;j<cm.getTotalClusteres();j++){
                     //TODO - embaralhar a ordem
                     int moviment_i = modulesMixed[i];
                     int moviment_j = clusteresMixed[j];
@@ -119,7 +119,7 @@ public class HillClimbing{
                         best_j = moviment_j;
                     }
                     
-                    int visitedCount = (i*cm.getTotalClusters()) + (j+1);
+                    int visitedCount = (i*cm.getTotalClusteres()) + (j+1);
                     
                     if ( visitedCount >= neighborEvalLimit && maxDelta > 0 ){
                         break STOP_CLIMB;

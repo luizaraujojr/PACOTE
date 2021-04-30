@@ -7,7 +7,7 @@ import sobol.problems.clustering.generic.model.Project;
 
 public abstract class InstanceFileWorker<T extends Object> {
     
-        public static final String INSTANCES_BASE_FOLDER="data/";
+        public static final String INSTANCES_BASE_FOLDER="instances/";
 	
 	/**
          * Retorna todos os arquivos de um ditretorio
