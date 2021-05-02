@@ -150,7 +150,7 @@ public class IteratedLocalSearch
 			}
 		}
 
-		File file = new File("data//Experiment//LNSInterpretation//"+ project.getName() + getStringTime()+ ".comb");
+		File file = new File("data//Experiment//ILSInterpretation//"+ project.getName() + getStringTime()+ ".comb");
 	    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 	    try {
 	        writer.write(sb.toString());	    
@@ -171,6 +171,62 @@ public class IteratedLocalSearch
 	    
 		return bestSolution;
 	}
+	
+	
+	
+	
+	
+	public int[] execute(int runTime, StringBuilder sb) throws Exception
+	{
+		ClusteringCalculator calculator = new ClusteringCalculator(project, project.getPackageCount() * 2);
+		
+		int[] bestSolution = createRandomSolution(calculator);
+		double bestFitness = evaluate(bestSolution, calculator, 0.0);
+
+		int[] solution = localSearch(bestSolution, calculator, bestFitness);
+		double fitness = evaluate(solution, calculator, bestFitness);
+		
+		if (fitness > bestFitness)
+		{
+			bestSolution = solution;
+			bestFitness = fitness;
+		}
+		
+		while (getEvaluationsConsumed() < getMaximumEvaluations())
+		{
+			int[] startSolution = applyPerturbation(bestSolution, calculator, PERTURBATION_SIZE);
+			solution = localSearch(startSolution, calculator, bestFitness);
+			fitness = evaluate(solution, calculator, bestFitness);		
+			
+			if (fitness > bestFitness)
+			{
+				bestSolution = solution;
+				bestFitness = fitness;
+			}
+		}
+		
+//		for(int i=0; i<(bestSolution.length); i++){
+//			if( bestSolution[i]>=0) {
+////				System.out.println("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
+//				sb.append("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
+//				sb.append(System.lineSeparator());			
+//			}
+//		}
+
+		    
+//	    List<String> packageClassCombinationFilenamesILS = new ArrayList<String>();
+//	    packageClassCombinationFilenamesILS.add ("data//Experiment//LNSInterpretation//jodamoneyILS.comb"); //jodamoney otimizado
+//		double mojoValue =	runMOJOComparison(file.getAbsolutePath(),packageClassCombinationFilenamesILS.get(0), "-fm");
+//		if (mojoValue>90) {
+//			System.out.println ("a1:" + a1 + " a2:" + a2 + " b1:" + b1+  " b2:" + b2+ " ; MojoFM: " + mojoValue);
+//		}
+	    
+		sb.append (project.getName() + ";" + runTime + ";" + Arrays.toString(bestSolution) + ";" + bestFitness);
+		sb.append(System.lineSeparator());	    
+		return bestSolution;
+	}
+
+	
 
 	/**
 	 * Creates a random solution
