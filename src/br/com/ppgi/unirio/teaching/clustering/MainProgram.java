@@ -16,7 +16,8 @@ import br.com.ppgi.unirio.teaching.clustering.search.IteratedLocalSearch;
 public class MainProgram
 {
 //	private static String BASE_DIRECTORY = "C:\\Users\\User\\Desktop\\Codigos\\HillClimbing\\data\\clustering\\";
-	private static String BASE_DIRECTORY = "data//ODEMFile//";
+	private static String ODEM_BASE_DIRECTORY = "data//ODEMFile//";
+	private static String DEP_BASE_DIRECTORY = "data//Experiment//ClsDepComb//";
 	
 	
 	private static String[] instanceFilenamesReals =
@@ -74,6 +75,135 @@ public class MainProgram
 			"y_base558C.odem"
 	};
 	
+	private static String[] instanceFilenamesRealsDep =
+	{
+		"acqCIGNA",
+		"apache_ant",
+		"apache_ant_taskdef",
+		"apache_lucene_core",
+		"apache_zip",
+		"bash",
+		"bison",
+		"bitchx",
+		"bootp",
+		"boxer",
+		"bunch",
+		"bunch2",
+		"bunchall",
+		"bunch_2",
+		"cia",
+		"cia++",
+		"ciald",
+		"compiler",
+		"crond",
+		"cyrus-sasl",
+		"dhcpd-1",
+		"dhcpd-2",
+		"dom4j",
+		"dot",
+		"eclipse_jgit",
+		"elm-1",
+		"elm-2",
+		"exim",
+		"forms",
+		"gae_plugin_core",
+		"gnupg",
+		"graph10up193",
+		"graph10up49",
+		"grappa",
+		"hw",
+		"icecast",
+		"imapd-1",
+		"incl",
+		"inn",
+		"ispell",
+		"itextpdf",
+		"JACE",
+		"javacc",
+		"JavaGeom",
+		"javaocr",
+		"javaws",
+		"jconsole",
+		"jdendogram",
+		"jfluid",
+		"jkaryoscope",
+		"jmetal",
+		"jml-1.0b4",
+		"jodamoney",
+		"joe",
+		"jpassword",
+		"jpassword2",
+		"jscatterplot",
+		"jstl",
+		"jtreeview",
+		"Jung_graph_model",
+		"jung_visualization",
+		"junit",
+		"jxlscore",
+		"jxlsreader",
+		"krb5",
+		"lab4",
+		"linux",
+		"log4j",
+		"lslayout",
+		"lucent",
+		"lwjgl-2.8.4",
+		"lynx",
+		"mailx",
+		"micq",
+		"minicom",
+		"Modulizer",
+		"mod_ssl",
+		"mtunis",
+		"nanoxml",
+		"ncurses",
+		"net-tools",
+		"netkit-ftp",
+		"netkit-inetd",
+		"netkit-ping",
+		"netkit-tftpd",
+		"nmh",
+		"nos",
+		"notelab-full",
+		"nss_ldap",
+		"pdf_renderer",
+		"pfcda_base",
+		"pfcda_swing",
+		"php",
+		"ping_libc",
+		"Poormans CMS",
+		"random",
+		"rcs",
+		"regexp",
+		"res_cobol",
+		"screen",
+		"seemp",
+		"servletapi",
+		"sharutils",
+		"slang",
+		"slrn",
+		"small",
+		"spdb",
+		"squid",
+		"star",
+		"stunnel",
+		"swing",
+		"sysklogd-1",
+		"tcsh",
+		"telnetd",
+		"tinytim",
+		"udt-java",
+		"wu-ftpd-1",
+		"wu-ftpd-3",
+		"xmlapi",
+		"xmldom",
+		"xntp",
+		"xtell",
+		"ylayout",
+		"y_base"
+	};
+
+	
 	public static final void main(String[] args) throws Exception
 	{
 		runILS();
@@ -82,6 +212,8 @@ public class MainProgram
 		public static void runILS() throws Exception {
 			
 			int runTimes = 30;
+			boolean READ_ODEM_FILE = false;
+			
 			
 			List<Project> instances = new ArrayList<Project>();
 			CDAReader reader = new CDAReader();
@@ -90,9 +222,16 @@ public class MainProgram
 			double a2=0;
 			double b1=1;
 			double b2=0.5;
-
-			for (String filename : instanceFilenamesReals)
-				instances.add(reader.execute(BASE_DIRECTORY + filename));
+			
+			
+			if (READ_ODEM_FILE) {
+				for (String filename : instanceFilenamesReals)
+					instances.add(reader.execute(ODEM_BASE_DIRECTORY + filename));
+			}
+			else {
+				for (String filename : instanceFilenamesRealsDep)
+					instances.add(reader.executeDependencyFile(DEP_BASE_DIRECTORY + filename));
+			}
 
 			for (Project instance : instances) {
 				StringBuilder sb = new StringBuilder();
@@ -131,7 +270,7 @@ public class MainProgram
 			CDAReader reader = new CDAReader();
 
 			for (String filename : instanceFilenamesReals)
-				instances.add(reader.execute(BASE_DIRECTORY + filename));
+				instances.add(reader.execute(ODEM_BASE_DIRECTORY + filename));
 
 			double a1 = -5;
 			double a2 = -5;

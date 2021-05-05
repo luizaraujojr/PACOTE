@@ -2,6 +2,11 @@ package br.com.ppgi.unirio.teaching.clustering.reader;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.management.modelmbean.XMLParseException;
 import javax.xml.parsers.DocumentBuilder;
@@ -13,6 +18,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import br.com.ppgi.unirio.marlon.smc.instance.file.InstanceParseException;
+import br.com.ppgi.unirio.marlon.smc.mdg.ModuleDependencyGraph;
 import br.com.ppgi.unirio.teaching.clustering.model.DependencyType;
 import br.com.ppgi.unirio.teaching.clustering.model.ElementType;
 import br.com.ppgi.unirio.teaching.clustering.model.ElementVisibility;
@@ -21,7 +28,9 @@ import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
 import br.com.ppgi.unirio.teaching.clustering.model.ProjectPackage;
 
 public class CDAReader
+
 {
+	private static final String SPLITTER = "\\s+";//split por qualquer espacamento
 	/**
 	 * Carrega um arquivo XML para a memória
 	 */
@@ -199,4 +208,76 @@ public class CDAReader
 
 		return loadApplication(doc.getDocumentElement());
 	}
+	
+	
+	public Project executeDependencyFile(String filename) throws XMLParseException, IOException, InstanceParseException
+	{	
+		String[] flname = filename.split("//");
+		Project project = new Project(flname[flname.length-1]);		
+		
+		List<String> fileLines = readAllLines(filename);	
+        List<String> classes = uniqueClasses(fileLines);
+        
+    	for(String cls : classes){
+    		ProjectPackage apackage = project.addPackage(cls);
+
+    		ElementType classification = ElementType.fromIdentifier("class");
+			ElementVisibility visibility = ElementVisibility.fromIdentifier("public");
+			
+    		ProjectClass aClass = new ProjectClass(cls, classification, visibility, false);
+    		aClass.setPackage(apackage);
+			project.addClass(aClass);
+			
+	        for(String line : fileLines){
+	        	if(line.length() == 0){
+                    continue;
+                }
+	        	String[] token = line.split(SPLITTER);
+	        	if (token[0].equals(cls)) {
+	        		DependencyType dependencyClassification = DependencyType.fromIdentifier("uses");
+	        		aClass.addDependency(token[1], dependencyClassification);
+	        	}
+	        	
+	        }
+		}
+		return project;	
+    }
+
+		private List<String> readAllLines(String path) throws IOException, InstanceParseException{
+            return Files.readAllLines(FileSystems.getDefault().getPath(path),StandardCharsets.UTF_8);
+        }
+		
+		
+        private List<String> uniqueClasses(List<String> lines) throws IOException, InstanceParseException{
+            List<String> classes = new ArrayList<>();
+            
+            NEXT_LINE:
+            for(String line : lines){
+                if(line.length() == 0){
+                    continue;
+                }
+                String[] token = line.split(SPLITTER);
+                
+                if(token.length < 2){
+                    throw new InstanceParseException("LINHA SEM DEPENDÃŠNCIA ENCONTRADA.");
+                }
+                //verificar se valor existe na lista de modulos
+                boolean hasT0 = false;
+                boolean hasT1 = false;
+                for(String cls : classes){
+                    if(hasT0 && hasT1){continue NEXT_LINE;}
+                    if(!hasT0 && token[0].equals(cls)){hasT0 = true;}
+                    if(!hasT1 && token[1].equals(cls)){hasT1 = true;}
+                }
+                
+                if(!hasT0){
+                    classes.add(token[0]);
+                }
+                if(!hasT1 && !token[0].equals(token[1])){
+                	classes.add(token[1]);
+                }
+            }
+            return classes;
+        }
+
 }
