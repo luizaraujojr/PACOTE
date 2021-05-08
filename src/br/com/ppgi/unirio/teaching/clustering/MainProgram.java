@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import br.com.ppgi.unirio.teaching.clustering.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.reader.CDAReader;
@@ -18,6 +20,15 @@ public class MainProgram
 //	private static String BASE_DIRECTORY = "C:\\Users\\User\\Desktop\\Codigos\\HillClimbing\\data\\clustering\\";
 	private static String ODEM_BASE_DIRECTORY = "data//ODEMFile//";
 	private static String DEP_BASE_DIRECTORY = "data//Experiment//ClsDepComb//";
+	
+	private static List<Project> instances = new ArrayList<Project>();
+	private static List<int[]> bestSolutions= new ArrayList<int[]>();
+	
+	
+	static double fa1 = 0;
+	static double fa2 = 0;
+	static double fb1 = 0;
+	static double fb2 = 0;
 	
 	
 	private static String[] instanceFilenamesReals =
@@ -77,161 +88,163 @@ public class MainProgram
 	
 	private static String[] instanceFilenamesRealsDep =
 	{
-		"acqCIGNA",
-		"apache_ant",
-		"apache_ant_taskdef",
-		"apache_lucene_core",
-		"apache_zip",
-		"bash",
-		"bison",
-		"bitchx",
-		"bootp",
-		"boxer",
-		"bunch",
-		"bunch2",
-		"bunchall",
-		"bunch_2",
-		"cia",
-		"cia++",
-		"ciald",
-		"compiler",
-		"crond",
-		"cyrus-sasl",
-		"dhcpd-1",
-		"dhcpd-2",
-		"dom4j",
-		"dot",
-		"eclipse_jgit",
-		"elm-1",
-		"elm-2",
-		"exim",
-		"forms",
-		"gae_plugin_core",
-		"gnupg",
-		"graph10up193",
-		"graph10up49",
-		"grappa",
-		"hw",
-		"icecast",
-		"imapd-1",
-		"incl",
-		"inn",
-		"ispell",
-		"itextpdf",
-		"JACE",
-		"javacc",
-		"JavaGeom",
-		"javaocr",
-		"javaws",
-		"jconsole",
-		"jdendogram",
-		"jfluid",
-		"jkaryoscope",
-		"jmetal",
-		"jml-1.0b4",
-		"jodamoney",
-		"joe",
-		"jpassword",
-		"jpassword2",
-		"jscatterplot",
-		"jstl",
-		"jtreeview",
-		"Jung_graph_model",
-		"jung_visualization",
-		"junit",
-		"jxlscore",
-		"jxlsreader",
-		"krb5",
-		"lab4",
-		"linux",
-		"log4j",
-		"lslayout",
-		"lucent",
-		"lwjgl-2.8.4",
-		"lynx",
-		"mailx",
-		"micq",
-		"minicom",
-		"Modulizer",
-		"mod_ssl",
-		"mtunis",
-		"nanoxml",
-		"ncurses",
-		"net-tools",
-		"netkit-ftp",
-		"netkit-inetd",
-		"netkit-ping",
-		"netkit-tftpd",
-		"nmh",
-		"nos",
-		"notelab-full",
-		"nss_ldap",
-		"pdf_renderer",
-		"pfcda_base",
-		"pfcda_swing",
-		"php",
-		"ping_libc",
-		"Poormans CMS",
-		"random",
-		"rcs",
-		"regexp",
-		"res_cobol",
-		"screen",
-		"seemp",
-		"servletapi",
-		"sharutils",
-		"slang",
-		"slrn",
-		"small",
-		"spdb",
-		"squid",
-		"star",
-		"stunnel",
-		"swing",
-		"sysklogd-1",
-		"tcsh",
-		"telnetd",
-		"tinytim",
-		"udt-java",
-		"wu-ftpd-1",
-		"wu-ftpd-3",
-		"xmlapi",
-		"xmldom",
-		"xntp",
-		"xtell",
-		"ylayout",
-		"y_base"
+//		"aaa-fake-06",
+//		"acqCIGNA",
+//		"apache_ant",
+//		"apache_ant_taskdef",
+//		"apache_lucene_core",
+//		"apache_zip",
+//		"bash",
+//		"bison",
+//		"bitchx",
+//		"bootp",
+//		"boxer",
+//		"bunch",
+//		"bunch2",
+//		"bunchall",
+//		"bunch_2",
+//		"cia",
+//		"cia++",
+//		"ciald",
+//		"compiler",
+//		"crond",
+//		"cyrus-sasl",
+//		"dhcpd-1",
+//		"dhcpd-2",
+//		"dom4j",
+//		"dot",
+//		"eclipse_jgit",
+//		"elm-1",
+//		"elm-2",
+//		"exim",
+//		"forms",
+//		"gae_plugin_core",
+//		"gnupg",
+//		"graph10up193",
+//		"graph10up49",
+//		"grappa",
+//		"hw",
+//		"icecast",
+//		"imapd-1",
+//		"incl",
+//		"inn",
+//		"ispell",
+//		"itextpdf",
+//		"JACE",
+//		"javacc",
+//		"JavaGeom",
+//		"javaocr",
+//		"javaws",
+//		"jconsole",
+//		"jdendogram",
+//		"jfluid",
+//		"jkaryoscope",
+		"jmetal"
+//		"jml-1.0b4",
+//		"jodamoney",
+//		"joe",
+//		"jpassword",
+//		"jpassword2",
+//		"jscatterplot",
+//		"jstl",
+//		"jtreeview",
+//		"Jung_graph_model",
+//		"jung_visualization",
+//		"junit",
+//		"jxlscore",
+//		"jxlsreader",
+//		"krb5",
+//		"lab4",
+//		"linux",
+//		"log4j",
+//		"lslayout",
+//		"lucent",
+//		"lwjgl-2.8.4",
+//		"lynx",
+//		"mailx",
+//		"micq",
+//		"minicom",
+//		"Modulizer",
+//		"mod_ssl",
+//		"mtunis",
+//		"nanoxml",
+//		"ncurses",
+//		"net-tools",
+//		"netkit-ftp",
+//		"netkit-inetd",
+//		"netkit-ping",
+//		"netkit-tftpd",
+//		"nmh",
+//		"nos",
+//		"notelab-full",
+//		"nss_ldap",
+//		"pdf_renderer",
+//		"pfcda_base",
+//		"pfcda_swing",
+//		"php",
+//		"ping_libc",
+//		"Poormans CMS",
+//		"random",
+//		"rcs",
+//		"regexp",
+//		"res_cobol",
+//		"screen",
+//		"seemp",
+//		"servletapi",
+//		"sharutils",
+//		"slang",
+//		"slrn",
+//		"small",
+//		"spdb",
+//		"squid",
+//		"star",
+//		"stunnel",
+//		"swing",
+//		"sysklogd-1",
+//		"tcsh",
+//		"telnetd",
+//		"tinytim",
+//		"udt-java",
+//		"wu-ftpd-1",
+//		"wu-ftpd-3",
+//		"xmlapi",
+//		"xmldom",
+//		"xntp",
+//		"xtell",
+//		"ylayout",
+//		"y_base"
 	};
 
 	
 	public static final void main(String[] args) throws Exception
 	{
-		runILS();
+		boolean READ_ODEM_FILE = false;
+		CDAReader reader = new CDAReader();
+		
+		if (READ_ODEM_FILE) {
+			for (String filename : instanceFilenamesReals)
+				instances.add(reader.execute(ODEM_BASE_DIRECTORY + filename));
+		}
+		else {
+			for (String filename : instanceFilenamesRealsDep)
+				instances.add(reader.executeDependencyFile(DEP_BASE_DIRECTORY + filename));
+		}
+		
+//		generateSolution ();
+		
+		runILSMQValidation();
+		
+//		runILS();
 	}
 	
 		public static void runILS() throws Exception {
 			
-			int runTimes = 30;
-			boolean READ_ODEM_FILE = false;
-			
-			
-			List<Project> instances = new ArrayList<Project>();
-			CDAReader reader = new CDAReader();
+			int runTimes = 1;
 			
 			double a1=1;
 			double a2=0;
 			double b1=1;
-			double b2=0.5;
-			
-			
-			if (READ_ODEM_FILE) {
-				for (String filename : instanceFilenamesReals)
-					instances.add(reader.execute(ODEM_BASE_DIRECTORY + filename));
-			}
-			else {
-				for (String filename : instanceFilenamesRealsDep)
-					instances.add(reader.executeDependencyFile(DEP_BASE_DIRECTORY + filename));
-			}
+			double b2=0.5;		
 
 			for (Project instance : instances) {
 				StringBuilder sb = new StringBuilder();
@@ -242,7 +255,7 @@ public class MainProgram
 				
 						for(int n=1; n<=runTimes; n++){	
 							try {
-								new IteratedLocalSearch(instance, 10000, a1, a2, b1, b2).execute(n, sb);
+								new IteratedLocalSearch(instance, 100000, a1, a2, b1, b2).execute(n, sb);
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
@@ -265,54 +278,104 @@ public class MainProgram
 		}
 		
 		
-		public void runILSMQValidation() throws Exception{
-			List<Project> instances = new ArrayList<Project>();
-			CDAReader reader = new CDAReader();
+		public static void runILSMQValidation() throws Exception{
+			double range = 3;
+		
+			double a1 = -range;
+			double a2 = -range;
+			double b1 = -range;
+			double b2 = -range;
+			
+//			ExecutorService pool = Executors.newFixedThreadPool(8);
 
-			for (String filename : instanceFilenamesReals)
-				instances.add(reader.execute(ODEM_BASE_DIRECTORY + filename));
-
-			double a1 = -5;
-			double a2 = -5;
-			double b1 = -5;
-			double b2 = -5;
-
-			while (a1 <= 5)
-			{
-				a2 = -5;
-
-				while (a2 <= 5)
-				{
-					b1 = -5;
-
-					while (b1 <= 5)
-					{
-						b2 = -5;
-
-						while (b2 <= 5)
-						{
-//							a1=1;
-//							a2=0;
-//							b1=1;
-//							b2=0.5;
-
-							for (Project instance : instances)
-								new IteratedLocalSearch(instance, 10000, a1, a2, b1, b2).execute();
-
-							b2 = b2 + 0.5;
+			for (Project instance : instances) {
+				StringBuilder sb = new StringBuilder();
+				while (a1 <= range)	{
+					a2 = -range;
+					while (a2 <= range)	{
+						b1 = -range;
+						while (b1 <= range)	{
+							b2 = -range;
+							while (b2 <= range)	{
+								fa1 = a1;
+								fa2 = a2;
+								fb1 = b1;
+								fb2 = b2;
+//								pool.execute(new Runnable() {
+////								new Thread(new Runnable() {
+//						            @Override
+//						            public void run() {		            	
+//										try {						
+											new IteratedLocalSearch(instance, 100000, fa1, fa2, fb1, fb2).execute(sb);
+//										} catch (Exception e) {
+//											// TODO Auto-generated catch block
+//											e.printStackTrace();
+//										}			
+//									}
+//								});
+//						        }).start();
+								
+								b2 = b2 + 0.5;
+							}
+							b1 = b1 + 0.5;
 						}
-
-						b1 = b1 + 0.5;
+						a2 = a2 + 0.5;
 					}
-
-					a2 = a2 + 0.5;
-
+					a1 = a1 + 0.5;
+				}
+			
+				File file = new File("data//Experiment//ILSoutput//"+ instance.getName() + getStringTime()+ ".comb");
+			    BufferedWriter writer;
+				try {
+					writer = new BufferedWriter(new FileWriter(file));
+					writer.write(sb.toString());
+					writer.close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}		
+		
+		
+//		preparar o interpretador primeiro
+		
+		private static void generateSolution() throws IOException{
+			
+			int[] fakeSolution= {2, 2, 9, 9, 1, 1};
+			
+			int[] solution = {156, 191, 324, 173, 355, 41, 326, 212, 344, 82, 54, 231, 205, 104, 38, 38, 234, 326, 1, 1, 326, 291, 43, 377, 377, 326, 234, 234, 326, 187, 74, 229, 212, 351, 54, 281, 108, 49, 229, 108, 41, 369, 54, 330, 82, 351, 351, 41, 228, 41, 82, 46, 46, 54, 45, 238, 238, 49, 229, 228, 225, 228, 225, 358, 358, 205, 358, 10, 358, 101, 95, 95, 101, 12, 12, 101, 177, 238, 237, 355, 143, 143, 143, 211, 203, 302, 304, 187, 367, 203, 353, 302, 208, 3, 302, 156, 263, 290, 173, 367, 156, 290, 59, 234, 282, 282, 59, 11, 12, 326, 49, 34, 35, 355, 367, 353, 225, 191, 191, 367, 324, 291, 133, 74, 67, 291, 234, 12, 324, 324, 355, 350, 355, 12, 156, 326, 12, 344, 34, 156, 156, 104, 173, 43, 324, 326, 58, 265, 90, 191, 177, 299, 347, 191, 347, 374, 374, 374, 347, 329, 374, 139, 31, 13, 24, 369, 95, 265, 90, 323, 65, 323, 113, 65, 101, 237, 169, 169, 169, 185, 8, 185, 245, 41, 245, 228, 364, 121, 98, 98};
+			
+			bestSolutions.add(fakeSolution);
+			bestSolutions.add(solution);
+			
+			int n = 0;
+			for (Project instance : instances) {
+				StringBuilder sb1 = new StringBuilder();
+				int [] bestSolution = bestSolutions.get(n);
+				for(int i=0; i<(bestSolution.length); i++){
+					if( bestSolution[i]>=0) {
+//						System.out.println("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
+						sb1.append("contain PKG" + bestSolution[i] + " " + instance.getClassIndex(i).getName());
+						sb1.append(System.lineSeparator());			
+					}
 				}
 
-				a1 = a1 + 0.5;
+				File file = new File("data//Experiment//ILSInterpretation//"+ instance.getName() + getStringTime()+ ".comb");
+			    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+			    try {
+			        writer.write(sb1.toString());	    
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				   
+				} finally {
+					writer.close();
+				}
+			    n++;
 			}
-
-		}		
+		}
+		
 
 		private static String getStringTime() {
 			Calendar data;

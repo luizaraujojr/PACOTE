@@ -111,8 +111,9 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] execute() throws Exception
+	public int[] execute(StringBuilder sb) throws Exception
 	{
+		double startTime = System.currentTimeMillis();
 		ClusteringCalculator calculator = new ClusteringCalculator(project, project.getPackageCount() * 2);
 		
 		int[] bestSolution = createRandomSolution(calculator);
@@ -141,19 +142,23 @@ public class IteratedLocalSearch
 			}
 		}
 		
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb1 = new StringBuilder();
 		for(int i=0; i<(bestSolution.length); i++){
 			if( bestSolution[i]>=0) {
 //				System.out.println("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
-				sb.append("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
-				sb.append(System.lineSeparator());			
+				sb1.append("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
+				if (i<(bestSolution.length-1)){
+					sb1.append(System.lineSeparator());	
+				}
 			}
 		}
+		
+		sb1.delete(sb1.length()-1, sb1.length()-1); 
 
 		File file = new File("data//Experiment//ILSInterpretation//"+ project.getName() + getStringTime()+ ".comb");
 	    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 	    try {
-	        writer.write(sb.toString());	    
+	        writer.write(sb1.toString());	    
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -163,12 +168,11 @@ public class IteratedLocalSearch
 		}
 	   	    
 	    List<String> packageClassCombinationFilenamesILS = new ArrayList<String>();
-	    packageClassCombinationFilenamesILS.add ("data//Experiment//LNSInterpretation//jodamoneyILS.comb"); //jodamoney otimizado
+	    packageClassCombinationFilenamesILS.add ("data//Experiment//ILSInterpretation//jmetal08042021031320.comb"); //jodamoney otimizado
 		double mojoValue =	runMOJOComparison(file.getAbsolutePath(),packageClassCombinationFilenamesILS.get(0), "-fm");
-		if (mojoValue>90) {
-			System.out.println ("a1:" + a1 + " a2:" + a2 + " b1:" + b1+  " b2:" + b2+ " ; MojoFM: " + mojoValue);
-		}
-	    
+		
+		sb.append (project.getName() + ";" + Arrays.toString(bestSolution) + ";" + bestFitness + "a1:" + a1 + " a2:" + a2 + " b1:" + b1+  " b2:" + b2+ " ; MojoFM: " + mojoValue +  ";" + (System.currentTimeMillis() - startTime));
+		sb.append(System.lineSeparator());   
 		return bestSolution;
 	}
 	
@@ -178,6 +182,7 @@ public class IteratedLocalSearch
 	
 	public int[] execute(int runTime, StringBuilder sb) throws Exception
 	{
+		double startTime = System.currentTimeMillis();
 		ClusteringCalculator calculator = new ClusteringCalculator(project, project.getPackageCount() * 2);
 		
 		int[] bestSolution = createRandomSolution(calculator);
@@ -204,24 +209,8 @@ public class IteratedLocalSearch
 				bestFitness = fitness;
 			}
 		}
-		
-//		for(int i=0; i<(bestSolution.length); i++){
-//			if( bestSolution[i]>=0) {
-////				System.out.println("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
-//				sb.append("contain PKG" + bestSolution[i] + " " + project.getClassIndex(i).getName());
-//				sb.append(System.lineSeparator());			
-//			}
-//		}
-
-		    
-//	    List<String> packageClassCombinationFilenamesILS = new ArrayList<String>();
-//	    packageClassCombinationFilenamesILS.add ("data//Experiment//LNSInterpretation//jodamoneyILS.comb"); //jodamoney otimizado
-//		double mojoValue =	runMOJOComparison(file.getAbsolutePath(),packageClassCombinationFilenamesILS.get(0), "-fm");
-//		if (mojoValue>90) {
-//			System.out.println ("a1:" + a1 + " a2:" + a2 + " b1:" + b1+  " b2:" + b2+ " ; MojoFM: " + mojoValue);
-//		}
 	    
-		sb.append (project.getName() + ";" + runTime + ";" + Arrays.toString(bestSolution) + ";" + bestFitness);
+		sb.append (project.getName() + ";" + runTime + ";" + Arrays.toString(bestSolution) + ";" + bestFitness +  ";" + (System.currentTimeMillis() - startTime) );
 		sb.append(System.lineSeparator());	    
 		return bestSolution;
 	}
