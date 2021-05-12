@@ -420,13 +420,14 @@ public class MoJoCalculator {
             for (String line = br_s.readLine(); line != null; line = br_s.readLine())
             {
                 StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
+//                if (st.countTokens() != 3)
+                if (st.countTokens() != 2)
                 {
                     String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);
                 }
                 // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
 
                 int index = -1;
                 String clusterName = st.nextToken();
@@ -582,13 +583,14 @@ public class MoJoCalculator {
             for (String line = br_t.readLine(); line != null; line = br_t.readLine())
             {
                 StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
+//                if (st.countTokens() != 3)
+                if (st.countTokens() != 2)
                 {
                     String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);
                 }
                 // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
 
                 String clusterName = st.nextToken();
                 /* Remove quotes from the token */

@@ -1,5 +1,5 @@
 #create a list of the files from your target directory
-file_list <- list.files(path="D:/Backup/eclipse-workspace/PACOTE/data/Experiment/ILSOutput")
+file_list <- list.files(path="D:/Backup/eclipse-workspace/PACOTE/data/Experiment/ILSOutput/ils1000", full.names=TRUE)
 
 #initiate a blank data frame, each iteration of the loop will append the data from the given file to this variable
 dataset <- data.frame()

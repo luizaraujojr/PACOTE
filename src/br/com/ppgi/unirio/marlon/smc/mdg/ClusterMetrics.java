@@ -616,6 +616,10 @@ public class ClusterMetrics {
     					
     					if (targetPackage != sourcePackage)
     					{
+//    						if (sourcePackage> targetPackage) {
+//    							outboundEdges[targetPackage]++;
+//    						}
+//    						else 
     						outboundEdges[sourcePackage]++;
     						inboundEdges[targetPackage]++;
     					}
@@ -626,6 +630,9 @@ public class ClusterMetrics {
     		}
     		
     		double mq = 0.0;
+    		
+    		System.out.println (internalDependencyWeight);
+    		System.out.println (externalDependencyWeight);
 
     		for (int i = 0; i < mdg.getSize()-1; i++)
     		{

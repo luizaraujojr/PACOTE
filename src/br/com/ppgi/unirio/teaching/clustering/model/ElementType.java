@@ -9,7 +9,6 @@ public enum ElementType
 {
 	CLASS ("class"),
 	ENUM ("enum"),
-	ANNOTATION ("annotation"),
 	INTERFACE ("interface");
 
 	private final String identifier;
