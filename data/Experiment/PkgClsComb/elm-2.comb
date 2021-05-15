@@ -1,0 +1,404 @@
+PKG361 showmsg
+PKG379 unistd 8
+PKG309 lock
+PKG302 errno 3
+PKG199 options
+PKG290 curses 37
+PKG235 addr_util
+PKG235 reply 4
+PKG69 wordwrap
+PKG194 curses 7
+PKG356 init
+PKG113 headers 57
+PKG144 quit
+PKG235 newmbox 2
+PKG1 hdrconfg
+PKG300 headers 20
+PKG229 utils
+PKG73 softkeys 5
+PKG369 mailmsg2
+PKG369 fileio 3
+PKG8 headers
+PKG205 file 5
+PKG267 curses
+PKG288 out_utils 4
+PKG220 strings 3
+PKG311 file_util
+PKG278 errno 2
+PKG336 editmsg 19
+PKG46 elm
+PKG340 nl_types 8
+PKG352 mailmsg1
+PKG281 alias 1
+PKG46 calendar 1
+PKG129 alias
+PKG184 unistd 2
+PKG109 newmbox 9
+PKG384 strings
+PKG218 elm 3
+PKG14 editmsg
+PKG226 errno 6
+PKG219 in_utils
+PKG341 savecopy 3
+PKG331 newmbox
+PKG331 stdio 14
+PKG58 editmsg 32
+PKG147 signals
+PKG259 showmsg 1
+PKG212 string 1
+PKG162 returnadd
+PKG8 showmsg_c 1
+PKG70 savecopy
+PKG47 stdio 7
+PKG275 limit
+PKG297 in_utils 1
+PKG344 fileio 2
+PKG17 pmalloc
+PKG17 curses 2
+PKG176 stdio 2
+PKG113 sort 1
+PKG66 stdio 15
+PKG285 mkhdrs
+PKG339 date 1
+PKG232 showmsg_c
+PKG171 showmsg 2
+PKG15 out_utils
+PKG300 remail 1
+PKG179 hdrconfg 4
+PKG90 save_opts
+PKG106 defs 1
+PKG33 reply
+PKG33 nl_types 7
+PKG353 options 5
+PKG257 read_rc
+PKG346 defs 2
+PKG229 lock 3
+PKG207 string 4
+PKG282 wildcards
+PKG309 stdlib 2
+PKG394 softkeys
+PKG285 stdio 13
+PKG179 editmsg 1
+PKG403 leavembox
+PKG101 headers 38
+PKG274 utils 1
+PKG316 stat
+PKG345 alias 3
+PKG130 calendar
+PKG130 headers 10
+PKG168 string 17
+PKG327 file
+PKG44 string 11
+PKG175 builtin
+PKG282 string 5
+PKG311 curses 5
+PKG219 string 8
+PKG392 mailmsg1 6
+PKG339 screen
+PKG252 delete 2
+PKG68 help
+PKG207 headers 11
+PKG219 syscall 3
+PKG335 syscall
+PKG170 strings 1
+PKG267 headers 50
+PKG275 stdio 1
+PKG184 out_utils 3
+PKG300 fileio
+PKG147 stdio 6
+PKG29 pattern
+PKG29 curses 6
+PKG154 nl_types 6
+PKG99 aliaslib
+PKG348 defs 3
+PKG197 a_quit
+PKG197 stdlib 3
+PKG207 sort
+PKG374 ctype 1
+PKG350 ctype 4
+PKG26 remail
+PKG112 fileio 1
+PKG131 edit
+PKG22 headers 69
+PKG324 string
+PKG231 nl_types 1
+PKG384 addr_util 1
+PKG126 elm 2
+PKG286 stdio 54
+PKG306 exitprog 1
+PKG171 date
+PKG209 time 8
+PKG169 utime 1
+PKG392 unistd 4
+PKG369 forms 2
+PKG183 nl_types 2
+PKG307 reply 1
+PKG311 headers 12
+PKG359 reply 8
+PKG168 leavembox 1
+PKG296 expires
+PKG298 time 4
+PKG51 elm 1
+PKG232 stdio 3
+PKG142 stat 2
+PKG235 mailmsg1 4
+PKG403 stat 1
+PKG152 a_quit 2
+PKG291 delete
+PKG199 a_sort 2
+PKG109 unistd 1
+PKG352 nl_types 5
+PKG191 ctype 8
+PKG216 a_sort
+PKG262 a_screen 3
+PKG257 headers 89
+PKG324 screen 4
+PKG335 in_utils 2
+PKG35 utils 3
+PKG205 a_screen
+PKG392 nl_types 3
+PKG310 a_screen 1
+PKG42 string 3
+PKG356 string 6
+PKG209 hdrconfg 2
+PKG153 libio 1
+PKG68 stdio 5
+PKG267 encode 3
+PKG347 forms
+PKG331 errno 4
+PKG45 find_alias
+PKG243 headers 4
+PKG188 bouncebk
+PKG8 string 2
+PKG390 headers 22
+PKG324 returnadd 1
+PKG72 args
+PKG192 in_utils 24
+PKG202 pattern 6
+PKG137 strings 2
+PKG264 file_util 4
+PKG316 file_util 6
+PKG94 strings 6
+PKG318 ioctl 2
+PKG302 alias 18
+PKG65 savecopy 1
+PKG309 fcntl 2
+PKG144 headers 9
+PKG216 stdlib 1
+PKG334 stdio 9
+PKG90 options 4
+PKG71 delete 1
+PKG191 headers 2
+PKG382 headers 24
+PKG140 screen 1
+PKG163 signal 6
+PKG103 curses 13
+PKG252 addr_util 4
+PKG155 savecopy 4
+PKG244 expires 3
+PKG184 sort 2
+PKG129 curses 18
+PKG72 stdlib 4
+PKG144 exitprog
+PKG275 screen 2
+PKG403 unistd 7
+PKG97 pwd 2
+PKG317 stdio 11
+PKG99 ctype 2
+PKG34 headers 39
+PKG232 help 1
+PKG384 curses 1
+PKG162 defs 4
+PKG186 ioctl 1
+PKG311 stdio 25
+PKG155 hdrconfg 7
+PKG70 string 10
+PKG95 elm 22
+PKG56 encode
+PKG394 headers 6
+PKG300 encode 2
+PKG14 stdio 32
+PKG51 out_utils 2
+PKG385 stdlib 12
+PKG56 curses 3
+PKG230 save_opts 2
+PKG177 remail 3
+PKG281 a_edit
+PKG262 headers 3
+PKG226 strings 5
+PKG305 nl_types 4
+PKG257 save_opts 13
+PKG352 in_utils 7
+PKG146 stdio 16
+PKG392 headers 15
+PKG257 pmalloc 3
+PKG196 string 19
+PKG332 file_util 1
+PKG63 mailmsg1 1
+PKG291 file 1
+PKG327 headers 47
+PKG33 string 24
+PKG8 a_sort 1
+PKG335 out_utils 5
+PKG354 screen 7
+PKG20 newmbox 3
+PKG33 savecopy 2
+PKG393 limit 4
+PKG84 mkhdrs 2
+PKG93 headers 27
+PKG327 init 1
+PKG289 mailmsg2 1
+PKG91 defs 10
+PKG129 aliaslib 3
+PKG283 nl_types 13
+PKG102 headers 35
+PKG131 headers 7
+PKG23 mailmsg1 10
+PKG395 addr_util 2
+PKG201 mailmsg2 5
+PKG190 headers 36
+PKG15 pattern 9
+PKG97 signals 14
+PKG14 mailmsg2 2
+PKG46 locale 1
+PKG90 string 12
+PKG401 headers 14
+PKG254 getopt 5
+PKG35 unistd 3
+PKG32 string 9
+PKG205 headers 28
+PKG267 delete 11
+PKG15 headers 19
+PKG174 leavembox 3
+PKG46 curses 23
+PKG49 hdrconfg 18
+PKG158 curses 9
+PKG317 save_opts 7
+PKG175 curses 8
+PKG14 curses 24
+PKG1 ctype 5
+PKG259 alias 4
+PKG228 ctype 6
+PKG36 signal 2
+PKG320 bouncebk 2
+PKG307 stdio 29
+PKG254 stdlib 7
+PKG297 sysdefs 2
+PKG369 ctype 3
+PKG15 showmsg 3
+PKG333 unistd 11
+PKG296 date 2
+PKG248 in_utils 3
+PKG339 limit 9
+PKG124 mailmsg2 3
+PKG14 signal 4
+PKG210 ctype 7
+PKG188 editmsg 2
+PKG304 string 31
+PKG8 getopt 1
+PKG244 utils 2
+PKG403 quit 1
+PKG26 mailmsg1 2
+PKG347 unistd 6
+PKG232 out_utils 1
+PKG146 a_quit 1
+PKG67 syscall 1
+PKG32 headers 13
+PKG356 errno 1
+PKG285 hdrconfg 1
+PKG149 reply 2
+PKG54 pattern 5
+PKG54 curses 11
+PKG342 nl_types 35
+PKG381 nl_types 16
+PKG92 file_util 2
+PKG267 screen 9
+PKG219 limit 2
+PKG199 string 7
+PKG332 quit 2
+PKG90 read_rc 7
+PKG144 file 2
+PKG135 stat 3
+PKG259 signal 1
+PKG15 syscall 4
+PKG11 delete 4
+PKG381 ndbz 6
+PKG170 editmsg 6
+PKG375 options 1
+PKG219 leavembox 2
+PKG75 a_screen 4
+PKG339 curses 15
+PKG369 stdio 38
+PKG219 mailmsg1 9
+PKG209 headers 1
+PKG205 mailmsg2 4
+PKG290 savecopy 5
+PKG306 curses 32
+PKG29 headers 55
+PKG361 builtin 4
+PKG114 stat 5
+PKG97 time 6
+PKG8 read_rc 5
+PKG148 setjmp 2
+PKG237 curses 19
+PKG161 stdlib 5
+PKG140 help 6
+PKG267 options 27
+PKG222 showmsg_c 3
+PKG208 elm 11
+PKG283 in_utils 4
+PKG129 headers 122
+PKG199 headers 56
+PKG328 signal 5
+PKG45 syscall 2
+PKG37 args 2
+PKG231 stdio 19
+PKG381 defs 23
+PKG335 headers 33
+PKG345 headers 5
+PKG181 leavembox 4
+PKG274 defs
+PKG139 unistd 17
+PKG30 headers 74
+PKG73 limit 7
+PKG31 read_rc 1
+PKG46 delete 3
+PKG193 unistd 18
+PKG215 unistd 10
+PKG184 options 2
+PKG159 returnadd 6
+PKG116 pattern 7
+PKG381 showmsg_c 2
+PKG163 curses 12
+PKG1 string 16
+PKG101 headers 8
+PKG137 hdrconfg 16
+PKG143 expires 1
+PKG391 curses 16
+PKG377 sysdefs 4
+PKG382 curses 20
+PKG193 headers 44
+PKG223 fcntl 1
+PKG365 editmsg 22
+PKG342 defs 7
+PKG258 string 33
+PKG68 curses 10
+PKG357 headers 26
+PKG396 builtin 3
+PKG1 mkhdrs 3
+PKG324 aliaslib 1
+PKG162 stdio 4
+PKG297 reply 3
+PKG95 wordwrap 8
+PKG291 pattern 1
+PKG159 string2
+PKG288 stdio 28
+PKG46 headers 85
+PKG229 headers 59
+PKG73 headers 54
+PKG361 signal 3
+PKG129 defs 5
+PKG8 init 4
+PKG95 lock 2
+PKG373 showmsg 7
+PKG397 softkeys 4

@@ -1,0 +1,77 @@
+PKG35 bootpd
+PKG68 tzone 1
+PKG50 dovend
+PKG50 bootpd 8
+PKG19 lookup
+PKG52 string 1
+PKG16 readfile 6
+PKG5 report
+PKG5 bootpd 4
+PKG20 errno 1
+PKG19 netdb 2
+PKG30 readfile
+PKG30 string 14
+PKG52 dumptab
+PKG52 stdio 8
+PKG68 hwaddr 3
+PKG21 hwaddr
+PKG56 report 2
+PKG24 dumptab 1
+PKG31 tzone
+PKG22 stat 1
+PKG35 dovend 4
+PKG52 stdlib 1
+PKG30 ctype 12
+PKG42 dovend 1
+PKG14 hwaddr 6
+PKG30 bootpd 13
+PKG51 getif
+PKG3 report 1
+PKG35 utsname 1
+PKG16 in 11
+PKG64 string 2
+PKG35 inet 3
+PKG76 hash
+PKG30 tzone 2
+PKG35 hash 7
+PKG60 stdlib 4
+PKG35 getif 2
+PKG69 stat
+PKG69 bootpd 3
+PKG35 socket 7
+PKG44 hwaddr 9
+PKG17 bootpd 14
+PKG19 readfile 8
+PKG76 bootpd 16
+PKG75 dumptab 2
+PKG67 stdio 6
+PKG19 in 4
+PKG9 signal 2
+PKG21 stdio 1
+PKG22 bootpd 2
+PKG59 stdlib 8
+PKG66 ioctl 2
+PKG30 stat 2
+PKG31 time 1
+PKG56 ioctl 1
+PKG5 stdio 3
+PKG45 select 2
+PKG30 lookup 6
+PKG76 hwaddr 1
+PKG13 readfile 3
+PKG41 report 8
+PKG73 unistd 3
+PKG56 readfile 1
+PKG0 hash 9
+PKG70 netdb 4
+PKG41 assert 3
+PKG52 time 3
+PKG30 stdio 10
+PKG76 stdlib 5
+PKG52 inet 2
+PKG50 string 4
+PKG35 string 21
+PKG41 in 2
+PKG52 hash 4
+PKG52 bootpd 6
+PKG22 readfile 15

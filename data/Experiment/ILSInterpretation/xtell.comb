@@ -1,0 +1,53 @@
+PKG20 daemon
+PKG23 xtelld 4
+PKG22 child
+PKG15 errno 1
+PKG38 string 3
+PKG51 stat
+PKG33 tty 2
+PKG14 inet 1
+PKG42 common
+PKG29 child 4
+PKG19 tty
+PKG10 time 4
+PKG18 stdlib 1
+PKG15 unistd 5
+PKG15 common 2
+PKG26 string 5
+PKG13 stdlib 3
+PKG29 tty 1
+PKG10 socket 2
+PKG51 xtelld
+PKG39 common 1
+PKG41 daemon 1
+PKG0 syslog 3
+PKG49 stat 1
+PKG3 socket 1
+PKG45 string 2
+PKG51 utmp 4
+PKG30 stdlib 2
+PKG34 stdio 6
+PKG48 unistd 2
+PKG38 ident 2
+PKG49 in 2
+PKG42 stdio 4
+PKG6 netdb 2
+PKG39 string 18
+PKG37 socket 7
+PKG15 child 3
+PKG10 errno 2
+PKG14 child 5
+PKG49 child 2
+PKG10 pwd 2
+PKG27 string 4
+PKG47 daemon 2
+PKG47 stdlib 8
+PKG40 signal 2
+PKG4 common 3
+PKG23 syslog 1
+PKG1 wait 1
+PKG25 xtelld 3
+PKG28 unistd 1
+PKG26 stdio 2
+PKG18 syslog 4
+PKG14 signal 1

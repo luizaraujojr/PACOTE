@@ -1,0 +1,1596 @@
+PKG1549 bcopy
+PKG502 linkaddr 3
+PKG1105 xdr_rec
+PKG172 fprintf 1
+PKG844 clnt_generic
+PKG802 clnt_udp 2
+PKG236 atexit
+PKG1185 malloc 2
+PKG57 login_cap
+PKG405 strlen 4
+PKG213 rpc_prot
+PKG1360 pmap_rmt 2
+PKG1505 ftell
+PKG1202 errno 1
+PKG1584 snprintf
+PKG1066 getaddrinfo 1
+PKG229 findfp
+PKG978 abort 1
+PKG1003 hash_page
+PKG471 hash 19
+PKG1125 res_debug
+PKG344 stdio 2
+PKG114 rec_open
+PKG163 errno 3
+PKG11 svc_tcp 2
+PKG1359 vwarn
+PKG55 errno 2
+PKG1280 catopen
+PKG1045 stat 1
+PKG470 strtol
+PKG1077 getbsize 2
+PKG1509 fprintf
+PKG1082 stdio 1
+PKG215 localtime
+PKG1019 unistd 5
+PKG200 mpool
+PKG706 unistd 1
+PKG1210 getnameinfo
+PKG331 netdb 2
+PKG821 vfprintf 6
+PKG313 fts
+PKG96 qsort 1
+PKG223 __strerror
+PKG378 __strsignal 2
+PKG757 strcasecmp
+PKG204 localedef 1
+PKG59 clnt_tcp
+PKG57 auth 2
+PKG1055 getcwd
+PKG460 bcopy 1
+PKG982 rcmd
+PKG340 socket 4
+PKG48 clnt_udp
+PKG616 pmap_clnt 6
+PKG39 readdir
+PKG1015 string 1
+PKG889 gethostnamadr
+PKG748 getaddrinfo 48
+PKG1525 getprotoent 2
+PKG95 vsprintf
+PKG621 vfprintf 3
+PKG853 strspn 2
+PKG831 assert
+PKG176 strcmp
+PKG117 readdir 2
+PKG1136 nice
+PKG598 closedir
+PKG824 glob 1
+PKG1297 xdr
+PKG1394 pmap_prot 2
+PKG169 bt_get
+PKG921 mpool 1
+PKG1543 getnetnamadr 2
+PKG11 warnx
+PKG143 vwarnx 1
+PKG4 ndbm
+PKG434 strcpy 1
+PKG1519 fwalk 1
+PKG1567 nl_langinfo
+PKG343 localedef 6
+PKG762 strlen
+PKG531 getaddrinfo 5
+PKG1116 inet_addr
+PKG374 bt_open
+PKG455 realpath
+PKG656 strlcpy 1
+PKG251 realpath 1
+PKG38 setenv
+PKG902 putenv 2
+PKG659 getaddrinfo
+PKG1109 fopen 1
+PKG386 hash
+PKG630 malloc 8
+PKG1023 fgets
+PKG59 getaddrinfo 2
+PKG771 xdr_reference
+PKG275 bt_put 2
+PKG235 md5c
+PKG282 memset 2
+PKG1365 puts
+PKG135 socket 5
+PKG85 getnetent
+PKG711 rewind 1
+PKG1293 getifaddrs
+PKG450 errno 6
+PKG820 memset 1
+PKG901 strdup 2
+PKG161 getusershell
+PKG979 fclose 1
+PKG764 mktemp
+PKG851 tmpfile 2
+PKG1442 clnt_simple 1
+PKG865 hash 1
+PKG582 getproto
+PKG235 getprotoent 5
+PKG222 syslog 9
+PKG1404 auth_unix
+PKG117 res_mkquery 3
+PKG942 fflush
+PKG861 fvwrite 2
+PKG893 getbsize
+PKG589 strtol 2
+PKG1014 strlcpy
+PKG28 getrrsetbyname 3
+PKG34 getcap
+PKG835 fgetln 2
+PKG831 inet_pton
+PKG313 string 6
+PKG1288 snprintf 3
+PKG779 ttyname 1
+PKG1129 ping 2
+PKG1358 res_debug 3
+PKG588 ypmatch_cache
+PKG1175 strlen 2
+PKG1506 sha1hl
+PKG685 sha1 5
+PKG250 rec_get
+PKG1387 vfprintf
+PKG219 fflush 1
+PKG433 pmap_rmt
+PKG442 socket 6
+PKG1516 getnetnamadr
+PKG1556 getnetbyaddr 2
+PKG1394 xdr_domainname
+PKG216 xdr_ypreq_key 2
+PKG1393 md4c
+PKG1245 rmd160 2
+PKG994 getenv 2
+PKG25 getnetbyaddr
+PKG1531 svc_simple
+PKG1039 exit 1
+PKG542 fputs 3
+PKG1098 mktemp 2
+PKG235 xdr_ypstat
+PKG373 xdr_ypresp_order 2
+PKG1093 resource 3
+PKG1132 fseek
+PKG1383 xdr_stdio 2
+PKG1361 exec
+PKG570 uio 1
+PKG1109 pmap_getport
+PKG1537 clnt_udp 5
+PKG545 xdr_ypreq_nokey 2
+PKG321 getgrent
+PKG931 pwcache 1
+PKG1482 rec_close
+PKG1067 bt_close 2
+PKG366 ping
+PKG437 strtoul 2
+PKG607 scandir
+PKG409 fclose
+PKG92 getgrent 1
+PKG1006 errno
+PKG1417 fts 4
+PKG906 malloc
+PKG46 mman 4
+PKG878 rec_utils
+PKG1388 mmap 4
+PKG1256 asprintf 6
+PKG1338 tsearch 1
+PKG1295 clnt_simple 5
+PKG1220 closedir 1
+PKG1522 putc
+PKG209 valloc 2
+PKG19 res_debug 7
+PKG1416 yp_first
+PKG43 ypinternal 2
+PKG854 tcgetattr
+PKG575 ttyname 2
+PKG799 lockf
+PKG778 getrpcent
+PKG42 strpbrk 2
+PKG422 bt_put
+PKG1422 bt_utils 2
+PKG32 svc
+PKG1423 ffs 2
+PKG549 if_indextoname
+PKG1090 bindresvport
+PKG905 ipx_addr 2
+PKG1347 strtofflags
+PKG1295 strcat
+PKG1201 usleep
+PKG364 time 1
+PKG293 lseek
+PKG1339 getcap 1
+PKG616 fnmatch
+PKG889 ctype 5
+PKG901 yp_master
+PKG552 strlen 1
+PKG1049 inet_ntop
+PKG278 psignal
+PKG285 strlen 3
+PKG562 dirname
+PKG1388 getpwent
+PKG88 auth_subr 2
+PKG159 svc_tcp
+PKG718 clnt_tcp 18
+PKG289 res_send
+PKG1103 realpath 2
+PKG932 fstab 1
+PKG1091 auth_subr
+PKG1057 yp_order
+PKG686 clnt_perror 1
+PKG907 bcopy 4
+PKG804 basename 1
+PKG1324 getservent
+PKG813 getnetent 2
+PKG77 syslog
+PKG1447 unistd 7
+PKG1026 exit 3
+PKG622 memset
+PKG1172 resolv
+PKG704 res_init 3
+PKG288 strcpy
+PKG1017 realpath 3
+PKG1314 fvwrite
+PKG960 auth_subr 3
+PKG417 calloc
+PKG1527 err
+PKG1257 getnetgrent 1
+PKG920 setpgrp
+PKG564 rec_put 4
+PKG1067 yp_all
+PKG1462 xdr 1
+PKG1282 strdup 1
+PKG1560 getwd
+PKG691 getpwent 2
+PKG514 xdr_ypresp_all
+PKG824 yp_all 2
+PKG99 putchar
+PKG1332 stdio 4
+PKG1494 get_myaddress 2
+PKG1053 wsetup
+PKG321 malloc 1
+PKG672 svc_udp 9
+PKG28 xdr_stdio 1
+PKG1255 bt_utils 1
+PKG1500 hash_page 1
+PKG322 yp_bind
+PKG1251 unistd 3
+PKG471 __setreuid
+PKG31 disklabel
+PKG891 strcasecmp 1
+PKG129 putenv
+PKG1309 setenv 2
+PKG1336 strcasecmp 3
+PKG695 res_comp
+PKG105 res_mkquery 13
+PKG124 getmntinfo
+PKG1064 mount 2
+PKG204 seekdir
+PKG1060 closedir 2
+PKG1004 setproctitle
+PKG1196 malloc 3
+PKG1192 extattr_name 1
+PKG3 popen
+PKG365 waitpid 2
+PKG235 bt_page
+PKG775 mpool 4
+PKG68 telldir 1
+PKG909 stat 3
+PKG1351 strtod
+PKG110 clnt_simple
+PKG1370 clnt 1
+PKG150 setlocale 6
+PKG888 verr 1
+PKG1409 xdr_stdio
+PKG159 fseek 1
+PKG1304 glob
+PKG1573 refill
+PKG264 ypinternal
+PKG1442 ypmatch_cache 1
+PKG1403 xdr_ypmaplist 3
+PKG192 strcmp 2
+PKG716 malloc 17
+PKG1100 gmon
+PKG63 tcsetattr
+PKG266 ioctl 1
+PKG89 ypprot_err
+PKG1556 yp_order 1
+PKG288 ialloc 3
+PKG279 time 2
+PKG48 tcgetpgrp
+PKG30 strsep 3
+PKG422 bt_delete 1
+PKG143 xdr_ypresp_all 3
+PKG943 setlocale
+PKG547 bindresvport 1
+PKG29 getrpcent 2
+PKG736 ialloc
+PKG1442 strdup
+PKG1340 syslog 1
+PKG613 freopen 2
+PKG987 pmap_clnt 2
+PKG160 remove
+PKG477 unistd 2
+PKG698 getnetgrent 3
+PKG1008 strlen 7
+PKG843 hash_bigkey
+PKG1273 memcmp 1
+PKG429 memcmp
+PKG15 hash 4
+PKG163 tempnam
+PKG738 mktemp 3
+PKG1520 ohash_create_entry
+PKG1011 svc_udp 3
+PKG974 verrx
+PKG773 vfprintf 1
+PKG1352 authenticate
+PKG655 getservbyport 2
+PKG1414 rec_get 4
+PKG1309 res_init
+PKG39 string 3
+PKG222 getpwent 3
+PKG1164 svc_udp
+PKG737 pread
+PKG346 getnetgrent
+PKG382 warn 1
+PKG1586 utime
+PKG411 abort
+PKG710 signal 1
+PKG746 __strerror 1
+PKG1095 xdr_ypresp_order
+PKG300 rpc_callmsg 2
+PKG1021 fputs
+PKG296 strlen 5
+PKG248 sysctl
+PKG1050 sethostname 3
+PKG791 strerror 1
+PKG88 stdio
+PKG684 wbuf 1
+PKG1088 tcflush
+PKG636 svc 3
+PKG900 clnt_tcp 6
+PKG507 getdomainname 1
+PKG565 pmap_prot2
+PKG9 xdr_reference 1
+PKG1404 memchr
+PKG854 fvwrite 4
+PKG1001 vfscanf
+PKG596 strtouq 3
+PKG164 xdr_mem
+PKG530 clnt_udp 6
+PKG324 xdr_ypresp_val 1
+PKG731 __setregid
+PKG593 mpool 6
+PKG1114 _rand48
+PKG1152 nrand48 1
+PKG1459 tempnam 2
+PKG833 strncpy
+PKG1243 resolv 1
+PKG217 getrrsetbyname 1
+PKG120 xdr_peername
+PKG588 xdr_ypresp_master 2
+PKG936 string 2
+PKG975 getc
+PKG858 getttyent 1
+PKG230 base64
+PKG955 res_debug 5
+PKG1001 res_debug 2
+PKG459 gethostnamadr 2
+PKG1515 getcwd 1
+PKG47 res_init 2
+PKG59 pmap_clnt
+PKG1249 getservbyport
+PKG778 getnameinfo 2
+PKG1310 gethostnamadr 4
+PKG1086 bzero 1
+PKG570 inet_net_pton
+PKG1218 nsap_addr 1
+PKG883 timezone
+PKG826 snprintf 1
+PKG126 freopen
+PKG1173 res_query
+PKG1063 getopt
+PKG529 nsap_addr
+PKG974 ctype 3
+PKG1307 wbuf
+PKG494 ohash_qlookup
+PKG917 ohash_qlookupi 1
+PKG380 rewind
+PKG820 gmon 3
+PKG1432 xdr_reference 2
+PKG682 yp_maplist 3
+PKG1114 getservbyname 5
+PKG1169 clnt_generic 1
+PKG588 system 3
+PKG841 perror 1
+PKG854 hash_buf
+PKG1383 hash_page 17
+PKG295 fgetln
+PKG317 getrrsetbyname
+PKG283 strtoul
+PKG1379 fputs 2
+PKG1308 sysconf 3
+PKG934 if_nametoindex 2
+PKG403 rec_search
+PKG747 rec_seq 2
+PKG1264 if_nameindex 2
+PKG63 login_cap 2
+PKG139 auth_none
+PKG658 calloc 2
+PKG542 getttyent
+PKG778 fgets 1
+PKG422 ypprot_err 2
+PKG380 setmode
+PKG1034 Lint_sigprocmask 1
+PKG1070 printf 4
+PKG1362 ypinternal 11
+PKG386 send
+PKG16 ping 1
+PKG972 clnt_raw
+PKG1168 xdr_mem 1
+PKG706 getnetnamadr 1
+PKG848 rpc_prot 1
+PKG1231 scandir 2
+PKG264 malloc 5
+PKG346 if_indextoname 2
+PKG315 vsnprintf 1
+PKG374 yp_maplist 1
+PKG562 getcap 2
+PKG1417 sscanf
+PKG507 svc_simple 2
+PKG1078 inet_ntoa
+PKG1132 ping 5
+PKG168 tmpfile
+PKG1180 fdopen 3
+PKG720 sysconf
+PKG640 resource 1
+PKG149 opendir
+PKG1536 strcasecmp 5
+PKG237 fopen 2
+PKG727 res_send 1
+PKG530 getrrsetbyname 13
+PKG364 flags 3
+PKG1444 ypmatch_cache 2
+PKG264 fstab
+PKG1572 printf 1
+PKG265 malloc 11
+PKG1534 strerror
+PKG324 readpassphrase
+PKG495 bt_open 2
+PKG538 assert 1
+PKG575 ttyslot
+PKG1328 strcmp 1
+PKG496 rcmd 1
+PKG1372 fcntl 3
+PKG300 telldir 2
+PKG176 ftruncate
+PKG765 thread_private 2
+PKG819 res_query 1
+PKG26 rec_close 4
+PKG624 getnetgrent 7
+PKG1510 rec_delete
+PKG199 mpool 2
+PKG1526 ohash_lookup_memory 4
+PKG11 strcpy 3
+PKG88 gethostid
+PKG574 sysctl 1
+PKG116 bt_overflow
+PKG1057 clnt
+PKG804 asctime
+PKG1424 localtime 6
+PKG61 strcat 1
+PKG1055 malloc 7
+PKG433 strcpy 2
+PKG159 rewind 2
+PKG973 bt_delete
+PKG351 bt_page 1
+PKG1455 refill 1
+PKG1560 flags
+PKG170 freopen 4
+PKG936 rec_put
+PKG1151 rec_search 2
+PKG536 strncmp
+PKG792 perror
+PKG526 gmon 1
+PKG879 lseek 4
+PKG22 authenticate 7
+PKG237 rresvport
+PKG1168 fopen
+PKG632 pwcache
+PKG65 snprintf 2
+PKG1086 res_mkquery
+PKG478 bt_utils
+PKG1029 res_debug 1
+PKG898 setlocale 2
+PKG469 res_init 1
+PKG843 malloc 6
+PKG1010 bt_close
+PKG104 mpool 8
+PKG598 thread_private 3
+PKG1509 ungetc
+PKG78 sprintf
+PKG360 xdr_keydat
+PKG325 xdr_ypresp_key_val 2
+PKG988 vsscanf 3
+PKG1452 if_nameindex
+PKG792 getifaddrs 2
+PKG1300 malloc 10
+PKG780 strftime
+PKG1016 localtime 4
+PKG153 dirname 4
+PKG528 getnetgrent 20
+PKG1247 xdr_ypresp_key_val 1
+PKG990 initgroups
+PKG559 login_cap 21
+PKG1477 bt_close 9
+PKG1316 getc 4
+PKG627 xdr_ypbind_setdom
+PKG1138 xdr_ypbind_binding 1
+PKG841 setbuffer
+PKG1159 setvbuf 2
+PKG11 fgets 2
+PKG459 strpbrk
+PKG890 auth_subr 1
+PKG1346 asctime 2
+PKG1297 xdr_ypbind_binding 2
+PKG791 strsep
+PKG3 exec 1
+PKG302 moddi3
+PKG181 quad 1
+PKG647 fopen 4
+PKG675 ohash_create_entry 1
+PKG543 strcspn 2
+PKG16 bt_split
+PKG617 mpool 11
+PKG1500 bt_overflow 1
+PKG1142 svc_run
+PKG233 fputc
+PKG710 wsetup 1
+PKG1158 fclose 2
+PKG1537 freeaddrinfo
+PKG1205 fflush 2
+PKG29 sethostid 2
+PKG1386 clnt_perror 4
+PKG502 strstr 1
+PKG21 res_comp 5
+PKG19 inet_neta
+PKG138 getlogin
+PKG1148 findfp 1
+PKG767 res_comp 10
+PKG51 vasprintf
+PKG1565 fdopen
+PKG1397 inet_net_ntop 1
+PKG417 setproctitle 3
+PKG862 clnt_udp 1
+PKG998 basename
+PKG1412 hsearch 1
+PKG308 warn 2
+PKG370 pmap_getport 2
+PKG1548 crypt
+PKG1246 morecrypt 139
+PKG1067 strdup 4
+PKG69 pmap_getmaps 2
+PKG1453 pmap_prot2 2
+PKG211 hash_buf 25
+PKG918 xdr_keydat 3
+PKG1217 getpwent 8
+PKG1199 funopen
+PKG57 findfp 3
+PKG1456 memset 6
+PKG1297 rec_get 12
+PKG1075 bcrypt 3
+PKG370 bm
+PKG790 getgrouplist 3
+PKG1190 strpbrk 4
+PKG209 rpc_callmsg 1
+PKG41 auth_subr 44
+PKG28 strtod 1
+PKG347 resolv 2
+PKG1480 strftime 2
+PKG482 signal
+PKG670 system 2
+PKG349 localeconv 2
+PKG530 ftell 1
+PKG1176 rmd160
+PKG605 ctype 1
+PKG685 memset 5
+PKG1400 disklabel 1
+PKG1294 strstr 3
+PKG282 yp_master 1
+PKG1538 vscanf
+PKG175 login_cap 3
+PKG849 unistd
+PKG1457 getsubopt 1
+PKG0 strcspn
+PKG130 verr 2
+PKG1255 bt_put 4
+PKG596 pwrite
+PKG907 ypprot_err 4
+PKG1407 scheck 2
+PKG1573 memcmp 2
+PKG110 nlist 6
+PKG801 strncmp 2
+PKG882 rcmdsh
+PKG1164 login_cap 14
+PKG894 strpbrk 1
+PKG1047 wait 1
+PKG1482 verr
+PKG1281 xdr_peername 2
+PKG392 __strsignal
+PKG726 __strerror 3
+PKG504 xdr_rec 4
+PKG671 hash_log2 7
+PKG1266 ping 3
+PKG1303 socket 2
+PKG891 bt_put 3
+PKG815 res_query 6
+PKG1592 gethostnamadr 6
+PKG211 strncat
+PKG787 md5crypt 3
+PKG1558 waitpid 1
+PKG602 getaddrinfo 4
+PKG745 getnetent 1
+PKG48 auth_none 2
+PKG1319 getdomainname 3
+PKG273 strlcpy 2
+PKG1084 memchr 3
+PKG1572 svc_auth_unix
+PKG295 vscanf 4
+PKG757 getnetbyname 3
+PKG155 makebuf 1
+PKG342 resolv 5
+PKG1550 sleep 1
+PKG754 ffs
+PKG754 svc 1
+PKG1594 bzero
+PKG679 rcmd 2
+PKG823 puts 2
+PKG285 bcrypt
+PKG1386 atoi 3
+PKG689 ipx_addr
+PKG1189 ns_addr 9
+PKG506 svc 5
+PKG320 getrpcent 3
+PKG935 strncat 1
+PKG1026 sleep
+PKG801 db
+PKG138 getpwent 1
+PKG169 strftime 1
+PKG171 xdr_ypbind_binding
+PKG171 xdr_ypbind_setdom 2
+PKG970 sprintf 3
+PKG611 svc_auth 2
+PKG650 getnetnamadr 8
+PKG1418 Lint_Ovfork 2
+PKG1364 fcntl 2
+PKG846 signal 3
+PKG128 putw 4
+PKG1185 ipx_ntoa 1
+PKG895 xdr_ypbind_resptype 2
+PKG85 getnetbyaddr 3
+PKG659 yp_all 3
+PKG995 ttyname
+PKG602 stat 2
+PKG36 malloc 4
+PKG910 Lint_sigprocmask
+PKG164 tmpfile 6
+PKG945 times
+PKG367 clnt_generic 4
+PKG1460 getmntinfo 2
+PKG14 stat 5
+PKG1453 rcmdsh 1
+PKG42 bt_overflow 2
+PKG931 inet_net_ntop
+PKG1386 ns_addr
+PKG1227 string 4
+PKG133 memset 3
+PKG994 linkaddr 2
+PKG1496 bt_open 1
+PKG978 exit
+PKG955 clnt_perror
+PKG35 strerror 4
+PKG996 rpc_callmsg
+PKG389 syslog 3
+PKG1091 login_cap 1
+PKG942 hash 3
+PKG947 strlen 12
+PKG717 fvwrite 1
+PKG664 ethers
+PKG1429 rec_put 3
+PKG1330 opendir 2
+PKG455 setbuf 1
+PKG420 getnetbyname
+PKG1371 getnetent 4
+PKG832 strerror 2
+PKG1146 mpool 17
+PKG1171 getrpcent 1
+PKG529 verrx 2
+PKG1304 ctype 2
+PKG892 yp_order 2
+PKG1403 getdtablesize 2
+PKG237 radixsort 2
+PKG106 fwrite
+PKG429 xdr_stdio 5
+PKG240 vwarn 1
+PKG935 getbsize 1
+PKG1211 qsort
+PKG260 scandir 3
+PKG326 freeaddrinfo 1
+PKG1295 md5crypt 1
+PKG1495 setdomainname
+PKG1007 confstr 3
+PKG521 waitpid
+PKG1061 local 1
+PKG633 svc 2
+PKG203 xdr_mem 2
+PKG575 malloc 12
+PKG827 fpurge
+PKG800 svc_tcp 4
+PKG1359 res_mkquery 1
+PKG589 strcmp 4
+PKG415 authunix_prot 1
+PKG659 md5crypt 2
+PKG567 gethostnamadr 1
+PKG207 makebuf
+PKG1216 wsetup 2
+PKG1532 clnt_raw 2
+PKG501 xdr_ypreq_key
+PKG575 xdr_keydat 1
+PKG292 isctype
+PKG518 auth_subr 5
+PKG733 getpwent 10
+PKG1170 xdr_array
+PKG1124 authunix_prot 3
+PKG1544 strlcat
+PKG1110 clock
+PKG1530 ohash_lookup_interval
+PKG1352 strncmp 1
+PKG888 isatty 2
+PKG367 strncpy 1
+PKG120 ypmatch_cache 6
+PKG1512 atoi
+PKG900 strtol 1
+PKG840 linkaddr
+PKG915 setreuid
+PKG1391 __setreuid 1
+PKG1448 getprotoname
+PKG1164 getprotoent 4
+PKG14 putc 5
+PKG1210 netdb 5
+PKG669 yperr_string
+PKG1550 bt_delete 30
+PKG1011 getpagesize
+PKG374 catclose 1
+PKG669 getservbyname
+PKG663 valloc
+PKG465 getpagesize 2
+PKG901 hsearch
+PKG863 xdr_mem 4
+PKG1364 daemon
+PKG1277 unistd 11
+PKG504 getgrent 3
+PKG1034 sethostname
+PKG54 stdlib 2
+PKG1133 fopen 3
+PKG1090 merge 1
+PKG1217 vsnprintf 2
+PKG221 rec_search 5
+PKG1313 rthdr 1
+PKG407 nlist
+PKG722 pmap_rmt 4
+PKG1258 getpagesize 3
+PKG1184 strtoq 4
+PKG149 readpassphrase 2
+PKG1515 md5crypt 15
+PKG460 stdlib 3
+PKG1244 getgrent 2
+PKG193 bt_close 4
+PKG1133 getaddrinfo 3
+PKG552 mman 2
+PKG1066 mmap 5
+PKG1196 system
+PKG1307 authenticate 3
+PKG468 perror 2
+PKG836 socket 8
+PKG229 strtouq 2
+PKG135 opendir 1
+PKG1345 rmd160hl
+PKG453 fts 3
+PKG1488 getnetnamadr 9
+PKG1309 svc_udp 2
+PKG38 clnt_tcp 2
+PKG480 drand48
+PKG1241 lcong48 1
+PKG1211 glob 5
+PKG327 rewinddir
+PKG751 telldir 3
+PKG921 send 1
+PKG455 strlcat 1
+PKG521 popen 2
+PKG1255 base64 2
+PKG30 inet_neta 1
+PKG659 seed48 1
+PKG144 yp_bind 2
+PKG1069 setvbuf
+PKG243 tcflow 2
+PKG543 clnt_simple 2
+PKG1133 getprotoent
+PKG440 Lint_setlogin 1
+PKG528 ndbm 2
+PKG878 rec_get 3
+PKG1151 xdr_ypbind_resp
+PKG410 xdr_ypbind_resptype 1
+PKG1527 gets
+PKG1563 stdio 3
+PKG465 md4c 2
+PKG554 getdtablesize
+PKG409 sysconf 1
+PKG916 ctermid 2
+PKG763 nlist 5
+PKG466 auth 3
+PKG895 fseek 2
+PKG858 ohash_interval
+PKG260 ohash_qlookupi 2
+PKG1062 rcmd 4
+PKG1227 fscanf 6
+PKG525 confstr
+PKG4 malloc 16
+PKG1424 time
+PKG217 xdr 12
+PKG701 rcmd 5
+PKG655 bt_split 2
+PKG692 xdr_ypstat 2
+PKG24 stdio 5
+PKG187 lcong48
+PKG44 drand48 1
+PKG897 gethostnamadr 8
+PKG536 md5c 2
+PKG869 getrrsetbyname 2
+PKG1359 vsscanf
+PKG1176 sscanf 6
+PKG428 err 3
+PKG1286 rec_delete 2
+PKG1022 rcmd 22
+PKG413 xdr_ypresp_maplist
+PKG775 math 2
+PKG219 xdr_ypreq_nokey
+PKG627 xdr_domainname 1
+PKG825 strcoll
+PKG1398 getpwent 4
+PKG746 mmap
+PKG475 catopen 2
+PKG237 pw_dup 1
+PKG1042 xdr_mapname 2
+PKG600 pwrite 1
+PKG934 exec 9
+PKG634 fscanf
+PKG1552 vfscanf 3
+PKG1024 unistd 4
+PKG941 inet_network
+PKG6 vfscanf 2
+PKG264 alarm
+PKG677 localtime 2
+PKG947 getenv 3
+PKG105 semctl
+PKG723 sem 1
+PKG720 timer_create
+PKG505 rec_get 6
+PKG1150 herror 1
+PKG1285 ohash_lookup_memory
+PKG335 fprintf 2
+PKG231 res_send 2
+PKG91 printf 8
+PKG960 pause
+PKG1315 radixsort
+PKG339 fread
+PKG620 vfscanf 6
+PKG814 md5crypt
+PKG462 md5c 3
+PKG293 rec_open 1
+PKG1486 atoi 2
+PKG48 stdlib 9
+PKG1017 xdr_rec 1
+PKG871 yp_maplist
+PKG694 netdb
+PKG390 strtofflags 1
+PKG15 pread 2
+PKG672 vfscanf 1
+PKG81 bt_get 3
+PKG917 calloc 1
+PKG177 ungetc 4
+PKG30 net_addrcmp
+PKG1314 xdr 4
+PKG73 ualarm
+PKG841 tcgetattr 1
+PKG337 socket 1
+PKG325 bcopy 2
+PKG1302 getnetgrent 4
+PKG1589 getgrouplist 1
+PKG155 yp_bind 1
+PKG1001 tcsetattr 1
+PKG1311 res_query 4
+PKG532 pmap_rmt 3
+PKG1507 pmap_clnt 1
+PKG698 vwarnx
+PKG1054 hash 2
+PKG962 errx
+PKG347 verrx 1
+PKG209 bt_split 5
+PKG918 thread_private 19
+PKG1557 fgetln 4
+PKG1470 localeconv
+PKG106 localedef 4
+PKG764 rcmdsh 3
+PKG1571 inet_pton 1
+PKG546 xdr_ypbind_resptype
+PKG546 xdr_ypbind_resp 2
+PKG216 xdr_mapname
+PKG1159 sscanf 2
+PKG385 memset 4
+PKG394 bt_overflow 11
+PKG798 strtoq 3
+PKG1157 getservent 5
+PKG1130 telldir
+PKG930 putw
+PKG515 netdb 4
+PKG1154 bt_open 3
+PKG1049 Lint_setlogin
+PKG617 authenticate 2
+PKG962 inet_ntop 3
+PKG1253 rcmd 3
+PKG466 res_query 3
+PKG253 getdomainname
+PKG970 _yp_check
+PKG1524 exec 3
+PKG173 sha1hl 1
+PKG910 xdr_ypresp_master 1
+PKG106 ialloc 2
+PKG718 clnt_udp 8
+PKG1440 hash_page 5
+PKG1007 putenv 1
+PKG566 auth_unix 10
+PKG518 svc_run 2
+PKG532 bt_search
+PKG1378 hash_bigkey 4
+PKG828 erand48
+PKG157 getcap 21
+PKG538 getnetnamadr 4
+PKG1507 socket 3
+PKG778 yp_first 1
+PKG871 seed48
+PKG685 lcong48 2
+PKG626 getservent 1
+PKG497 strptime
+PKG534 isatty 1
+PKG1058 getrpcport 1
+PKG1157 vasprintf 6
+PKG1578 bt_utils 4
+PKG525 ethers 2
+PKG143 vwarnx 2
+PKG856 auth_subr 18
+PKG1225 mrand48
+PKG364 _rand48 1
+PKG1507 fwalk
+PKG991 fputc 4
+PKG952 rmd160hl 1
+PKG1170 ptrace
+PKG982 getsubopt
+PKG743 getnameinfo 3
+PKG164 svc_auth_unix 3
+PKG65 rec_utils 5
+PKG195 lrand48
+PKG1133 getproto 3
+PKG1202 Lint_sbrk 3
+PKG1118 setregid 2
+PKG113 xdr_ypresp_key_val
+PKG530 xdr_ypresp_all 2
+PKG632 pmap_getmaps 1
+PKG395 rec_open 5
+PKG1053 sprintf 1
+PKG1593 syslog 4
+PKG1066 if_nametoindex
+PKG92 strsignal
+PKG818 __strsignal 1
+PKG397 fputs 4
+PKG836 rec_utils 2
+PKG1484 rresvport 3
+PKG1059 errno 4
+PKG533 srand48
+PKG816 lcong48 4
+PKG1335 bt_delete 4
+PKG160 ohash_interval 1
+PKG1570 tcflow
+PKG1051 setregid
+PKG942 __setregid 1
+PKG371 ctype 11
+PKG981 bt_get 2
+PKG925 atexit 2
+PKG259 rec_put 5
+PKG714 getwd 1
+PKG1223 inet_network 2
+PKG1502 ipx_ntoa
+PKG1111 rget
+PKG781 tcsetpgrp
+PKG1401 rpc_prot 2
+PKG592 pmap_prot 1
+PKG1404 freeaddrinfo 4
+PKG100 ypinternal 1
+PKG1293 uio 2
+PKG1169 stdio 616
+PKG97 sethostid
+PKG1045 scandir 1
+PKG1304 fflush 3
+PKG404 merge
+PKG136 getgrouplist
+PKG1250 jrand48 1
+PKG908 float 1
+PKG564 vwarn 2
+PKG620 strncpy 2
+PKG1567 auth_unix 4
+PKG244 ypprot_err 1
+PKG722 asprintf
+PKG28 snprintf 6
+PKG761 pmap_getmaps
+PKG159 herror
+PKG679 netdb 3
+PKG563 ttyslot 2
+PKG1048 xdr_ypmaplist
+PKG1313 authunix_prot 6
+PKG1116 svc_raw 2
+PKG721 getnameinfo 7
+PKG532 if_indextoname 1
+PKG698 bt_search 2
+PKG1479 thread_private 6
+PKG1495 getservbyname 3
+PKG21 setbuf 6
+PKG383 bt_page 6
+PKG414 xdr_ypresp_maplist 2
+PKG260 warnx 1
+PKG1182 getaddrinfo 7
+PKG1552 scanf
+PKG495 isatty
+PKG1508 bt_seq
+PKG844 getprotoname 2
+PKG1091 rec_seq
+PKG1593 netdb 1
+PKG1542 rget 2
+PKG290 crypt 2
+PKG783 Lint_brk 2
+PKG1287 bt_conv 2
+PKG417 hash_bigkey 5
+PKG505 hash_page 3
+PKG542 svc_auth
+PKG1194 strlen 6
+PKG501 rec_delete 1
+PKG969 fstab 2
+PKG413 setmode 1
+PKG881 __strsignal 4
+PKG1379 bt_delete 3
+PKG209 hash_buf 8
+PKG990 setenv 6
+PKG1435 readpassphrase 1
+PKG111 lseek 1
+PKG594 tcdrain
+PKG1198 rec_search 1
+PKG1132 hash_page 18
+PKG460 dlfcn_stubs
+PKG909 printf 5
+PKG139 rpc_prot 4
+PKG1304 svc_raw
+PKG618 disklabel 35
+PKG1377 lseek 2
+PKG929 res_comp 7
+PKG1150 getcap 13
+PKG1335 resolv 7
+PKG180 setruid
+PKG430 extattr_name
+PKG259 strtoq
+PKG785 login_cap 4
+PKG266 sprintf 2
+PKG1474 getnetent 5
+PKG1135 hash_bigkey 9
+PKG1530 authenticate 18
+PKG907 stdio 12
+PKG1327 getrpcport
+PKG1327 pmap_getport 1
+PKG586 xdr_valdat
+PKG885 xdr_ypresp_val 2
+PKG297 ohash_qlookupi 4
+PKG484 vsnprintf
+PKG1519 getopt 2
+PKG1101 fgetpos
+PKG121 ftell 3
+PKG1473 strcoll 2
+PKG1553 vfprintf 2
+PKG714 bt_open 15
+PKG579 refill 2
+PKG1289 ialloc 12
+PKG1351 res_query 2
+PKG1412 setreuid 2
+PKG1111 hash 17
+PKG31 atoi 1
+PKG1593 setbuffer 10
+PKG1021 res_debug 9
+PKG538 bt_seq 1
+PKG965 authenticate 43
+PKG608 db 2
+PKG286 getopt 3
+PKG770 pwcache 2
+PKG275 rthdr
+PKG1422 ctype
+PKG583 tolower_ 1
+PKG894 getc 3
+PKG286 ypmatch_cache 4
+PKG1485 pw_dup
+PKG1313 disklabel 2
+PKG233 mcount
+PKG637 gmon 2
+PKG483 fread 2
+PKG552 basename 4
+PKG766 fdopen 2
+PKG1153 ungetc 1
+PKG322 printf
+PKG192 malloc 19
+PKG586 yp_master 2
+PKG1379 timezone 2
+PKG1503 fputc 2
+PKG611 auth_unix 2
+PKG369 getcap 7
+PKG1168 res_mkquery 4
+PKG143 Lint_sigsuspend
+PKG1084 sigcompat 1
+PKG510 rcmd 6
+PKG439 scheck
+PKG78 sscanf 1
+PKG551 catclose
+PKG635 mman 1
+PKG621 crypt 1
+PKG1438 yperr_string 1
+PKG976 malloc 15
+PKG352 rec_put 6
+PKG248 getifaddrs 3
+PKG1409 fwrite 2
+PKG1528 rec_open 3
+PKG752 gethostname 1
+PKG1543 xdr_valdat 3
+PKG1395 getlogin 2
+PKG1280 bt_delete 2
+PKG966 strstr
+PKG930 getnetgrent 2
+PKG671 getw
+PKG678 fread 1
+PKG981 clnt_tcp 8
+PKG244 ypinternal 6
+PKG967 authunix_prot
+PKG542 xdr_array 1
+PKG1083 blf 6
+PKG581 xdr 3
+PKG460 xdr_array 2
+PKG414 srand48 1
+PKG1568 ftok
+PKG1261 strtok
+PKG928 yp_all 1
+PKG895 thread_private 5
+PKG1069 yp_first 2
+PKG770 putc 2
+PKG962 malloc 23
+PKG1129 setdomainname 3
+PKG1537 multibyte
+PKG1514 vfprintf 4
+PKG548 getrrsetbyname 8
+PKG1266 auth_subr 8
+PKG1149 getloadavg 3
+PKG1477 strtouq
+PKG88 readpassphrase 3
+PKG172 timezone 1
+PKG78 inet_ntop 1
+PKG820 sprintf 9
+PKG44 hash_page 12
+PKG296 xdr_ypstat 1
+PKG921 getc 2
+PKG151 setvbuf 6
+PKG1551 getenv
+PKG1195 setlocale 1
+PKG478 getttyent 3
+PKG156 abort 3
+PKG92 getcwd 6
+PKG965 isctype 3
+PKG526 Lint_sbrk
+PKG1376 getw 4
+PKG1268 ldiv
+PKG1087 random 2
+PKG1496 local 2
+PKG1058 ungetc 2
+PKG975 rget 4
+PKG577 thread_private 14
+PKG260 setproctitle 5
+PKG51 ldexp
+PKG663 erand48 1
+PKG1371 rec_close 2
+PKG1316 tmpnam
+PKG459 iso_addr
+PKG921 initgroups 4
+PKG634 scanf 4
+PKG1345 catgets
+PKG304 setrgid 1
+PKG1026 ftell 2
+PKG644 xdr_rec 3
+PKG488 fwrite 4
+PKG386 fgetc 2
+PKG1467 random
+PKG1212 clrerr 1
+PKG1530 ctype_ 1
+PKG633 timer_delete
+PKG299 thread_private 4
+PKG173 gethostnamadr 13
+PKG1027 xdr_mapname 1
+PKG1432 setmode 3
+PKG1265 yp_get_default_domain
+PKG509 getprotoent 1
+PKG911 vsscanf 6
+PKG465 popen 1
+PKG165 ypmatch_cache 5
+PKG197 ldexp 1
+PKG88 glob 7
+PKG344 timer_gettime
+PKG514 ip6opt 2
+PKG131 rec_delete 4
+PKG1157 atof
+PKG741 vprintf 4
+PKG1029 bt_get 4
+PKG332 pause 1
+PKG1254 xdr_ypresp_order 3
+PKG424 getcap 3
+PKG1305 xdr_ypmaplist 1
+PKG996 unistd 8
+PKG917 getnameinfo 8
+PKG895 ndbm 4
+PKG305 auth_subr 11
+PKG724 fcntl 8
+PKG1374 stdio 8
+PKG1295 findfp 2
+PKG1551 fvwrite 3
+PKG867 res_debug 22
+PKG357 fsetpos
+PKG621 xdr_ypresp_val
+PKG1330 ns_addr 2
+PKG860 fcntl 4
+PKG1311 ypinternal 7
+PKG232 bt_utils 3
+PKG1342 resolv 4
+PKG1515 strdup 7
+PKG1102 putc 1
+PKG629 localtime 1
+PKG287 strcat 2
+PKG127 vsscanf 2
+PKG1263 Lint_fork 2
+PKG210 bt_seq 18
+PKG40 rmd160 1
+PKG1003 pwrite 2
+PKG109 ypmatch_cache 3
+PKG1344 auth_unix 5
+PKG183 resolv 6
+PKG1257 strcmp 3
+PKG93 bt_split 1
+PKG1512 rec_utils 1
+PKG1574 mount 1
+PKG1362 xdr 2
+PKG1538 vfprintf 10
+PKG1147 heapsort 2
+PKG1292 merge 3
+PKG571 pw_dup 2
+PKG1550 db 1
+PKG762 setrgid
+PKG991 Lint_sbrk 5
+PKG959 sethostent
+PKG1132 devname 1
+PKG1506 clnt_perror 2
+PKG1557 bt_page 3
+PKG677 getusershell 1
+PKG303 strpbrk 3
+PKG91 fprintf 4
+PKG848 getlogin 1
+PKG632 rewinddir 3
+PKG1281 auth_subr 7
+PKG148 svc_udp 6
+PKG1592 hash 5
+PKG330 tcsendbreak
+PKG1389 ethers 3
+PKG238 err 8
+PKG1151 get_myaddress
+PKG953 setbuf
+PKG753 yp_get_default_domain 1
+PKG1027 udivdi3
+PKG802 time 3
+PKG1341 mpool 10
+PKG1214 res_query 7
+PKG104 inet_ntop 2
+PKG962 yp_order 3
+PKG1258 bt_seq 3
+PKG198 setjmperr
+PKG950 hash_page 4
+PKG1350 bt_search 9
+PKG1151 jrand48
+PKG1038 getnameinfo 6
+PKG1424 vsprintf 6
+PKG254 fgetc
+PKG1592 rget 1
+PKG601 fprintf 3
+PKG1575 rpc_prot 5
+PKG1266 iso_addr 2
+PKG1475 rthdr 2
+PKG247 wbuf 2
+PKG71 pmap_prot
+PKG553 rcmdsh 2
+PKG420 getnetbyaddr 1
+PKG1025 pmap_getport 4
+PKG229 fts 1
+PKG886 bm 2
+PKG171 strftime 3
+PKG360 rec_put 2
+PKG1257 heapsort
+PKG576 sigsetops
+PKG1485 yp_bind 3
+PKG1094 makebuf 3
+PKG1217 mpool 3
+PKG200 localtime 5
+PKG1320 bt_search 4
+PKG1162 bindresvport 2
+PKG705 inet_pton 2
+PKG1135 rresvport 1
+PKG904 rec_close 1
+PKG1577 confstr 1
+PKG1006 bcmp 1
+PKG424 bt_seq 2
+PKG1439 bt_split 21
+PKG776 socket 9
+PKG78 resolv 10
+PKG890 xdr_ypresp_master
+PKG719 Lint_sigsuspend 1
+PKG1363 getifaddrs 7
+PKG1040 _yp_check 1
+PKG1217 ohash_lookup_interval 5
+PKG1474 strstr 2
+PKG1489 ip6opt
+PKG377 res_comp 29
+PKG864 ftruncate 1
+PKG1529 toupper_
+PKG1181 Lint_fork 1
+PKG1140 unistd 6
+PKG431 ns_ntoa
+PKG380 iso_addr 1
+PKG1395 yp_bind 4
+PKG552 fdopen 4
+PKG658 getgrent 4
+PKG46 clnt_generic 5
+PKG1368 inet_addr 1
+PKG144 getaddrinfo 8
+PKG614 net_addrcmp 2
+PKG1580 ttyslot 1
+PKG1073 calloc 8
+PKG1513 rec_seq 3
+PKG1307 hash_bigkey 10
+PKG855 scandir 5
+PKG1499 rmd160hl 10
+PKG435 devname
+PKG625 alarm 1
+PKG192 fread 3
+PKG659 getchar
+PKG13 getifaddrs 4
+PKG160 clnt_tcp 3
+PKG296 svc_simple 1
+PKG1301 dirent 2
+PKG626 ethers 1
+PKG1524 clnt 3
+PKG876 inet_ntop 4
+PKG776 string 7
+PKG932 gethostnamadr 3
+PKG435 gethostid 3
+PKG1170 getrrsetbyname 4
+PKG428 getrpcport 4
+PKG705 dirname 2
+PKG1177 hash 7
+PKG1228 hash_buf 16
+PKG719 sigcompat
+PKG1192 exec 2
+PKG721 hash_buf 4
+PKG1103 sha1
+PKG1584 sha1hl 10
+PKG814 vis
+PKG583 putchar 4
+PKG1015 bcrypt 1
+PKG876 setenv 3
+PKG558 unistd 9
+PKG1066 Lint_brk
+PKG1334 svc_tcp 8
+PKG591 ipx_addr 3
+PKG1545 rmd160 5
+PKG613 vsnprintf 6
+PKG1196 multibyte 3
+PKG1528 yp_master 3
+PKG1093 getservent 2
+PKG10 xdr_valdat 1
+PKG712 res_debug 4
+PKG1389 errno 18
+PKG1270 mpool 9
+PKG217 mmap 2
+PKG920 warnx 2
+PKG1037 perror 4
+PKG450 err 5
+PKG646 glue 6
+PKG636 svc_tcp 1
+PKG1386 ipx_addr 23
+PKG766 vprintf
+PKG489 errx 3
+PKG498 psignal 2
+PKG430 gethostname
+PKG297 auth_unix 1
+PKG432 wait3
+PKG697 l64a
+PKG33 strptime 2
+PKG243 inet_ntoa 2
+PKG46 getttyent 2
+PKG412 fgetpos 2
+PKG228 ohash_qlookupi
+PKG798 ohash_lookup_interval 1
+PKG1291 rec_get 2
+PKG1509 toupper_ 1
+PKG134 db 3
+PKG1201 strsignal 2
+PKG559 Lint_sigprocmask 4
+PKG12 umoddi3
+PKG994 raise
+PKG720 res_send 13
+PKG1378 fcntl 1
+PKG80 getservbyname 1
+PKG411 ns_ntoa 2
+PKG738 inet_ntoa 6
+PKG718 sigcompat 4
+PKG761 getusershell 3
+PKG424 getusershell 2
+PKG671 authenticate 6
+PKG887 glob 2
+PKG780 stat 4
+PKG340 fts 16
+PKG968 seekdir 1
+PKG464 vfprintf 12
+PKG329 strspn
+PKG268 fpurge 2
+PKG43 putc 3
+PKG677 svc_run 1
+PKG1411 sprintf 6
+PKG1007 svc_auth_unix 2
+PKG637 res_comp 13
+PKG1515 herror 2
+PKG99 tmpnam 2
+PKG885 scheck 1
+PKG930 getttyent 4
+PKG1388 uname 3
+PKG1190 recv
+PKG1402 getservent 4
+PKG181 skipjack
+PKG318 getservbyname 2
+PKG1284 makebuf 2
+PKG221 atol 1
+PKG1561 tolower_
+PKG1333 hash_bigkey 22
+PKG1581 bt_put 7
+PKG148 strtofflags 2
+PKG1126 rcmd 13
+PKG1562 fstab 4
+PKG1563 clnt_tcp 7
+PKG164 nlist 20
+PKG653 bcmp
+PKG951 confstr 2
+PKG428 clrerr
+PKG635 getcwd 11
+PKG1371 fts 2
+PKG309 bm 1
+PKG699 strtod 2
+PKG405 strtol 6
+PKG579 authenticate 1
+PKG342 getprotoname 3
+PKG11 disklabel 5
+PKG753 ns_addr 3
+PKG1427 socket 7
+PKG675 puts 1
+PKG1032 clnt_tcp 1
+PKG1156 bt_seq 9
+PKG342 extern 4
+PKG425 strsep 2
+PKG590 ctype 4
+PKG1188 err 2
+PKG795 dirname 1
+PKG456 ohash_qlookup 3
+PKG506 asctime 1
+PKG233 mpool 7
+PKG1424 ohash_interval 2
+PKG1508 xdr_peername 1
+PKG333 setlocale 9
+PKG688 errno 15
+PKG20 rpc_dtablesize
+PKG1164 gethostname 3
+PKG1233 getnetbyname 2
+PKG98 atof 1
+PKG1068 mktemp 1
+PKG995 res_init 8
+PKG1479 drand48 2
+PKG88 hash_log2
+PKG1019 ethers 4
+PKG1449 xdr_ypresp_all 1
+PKG1370 tsearch
+PKG1353 rresvport 2
+PKG847 setmode 4
+PKG976 rec_seq 5
+PKG1186 getc 1
+PKG725 atol
+PKG489 strtok 3
+PKG1361 setvbuf 4
+PKG1055 getproto 1
+PKG1099 rec_put 7
+PKG157 getloadavg
+PKG236 bt_page 5
+PKG792 glue 3
+PKG873 nlist 8
+PKG1543 ctermid
+PKG1130 seekdir 2
+PKG1015 malloc 9
+PKG852 bt_utils 13
+PKG955 bt_overflow 4
+PKG1235 bt_put 9
+PKG1487 bt_search 14
+PKG220 svc_simple 8
+PKG1276 tcgetattr 2
+PKG551 clnt_udp 4
+PKG805 getdtablesize 3
+PKG585 fprintf 6
+PKG760 opendir 7
+PKG1372 timer_settime
+PKG240 warn
+PKG1545 bt_close 1
+PKG542 getcwd 2
+PKG1391 fgets 4
+PKG839 uname
+PKG268 res_comp 4
+PKG354 hsearch 3
+PKG395 svc_tcp 9
+PKG1517 xdr_ypmaplist 2
+PKG508 timer_getoverrun
+PKG1506 putc 4
+PKG814 setvbuf 1
+PKG571 fsetpos 4
+PKG553 setruid 1
+PKG694 if_nameindex 1
+PKG796 morecrypt
+PKG1395 crypt 29
+PKG1484 nrand48
+PKG682 unistd 21
+PKG889 xdr_domainname 2
+PKG483 strtoul 3
+PKG235 login_cap 19
+PKG107 rpc_prot 27
+PKG1444 hash_buf 3
+PKG1069 svc 6
+PKG906 initgroups 1
+PKG1574 clnt_raw 8
+PKG776 bt_delete 6
+PKG8 yp_first 3
+PKG708 errno 5
+PKG832 setproctitle 1
+PKG329 refill 4
+PKG568 xdr_ypresp_order 1
+PKG852 rpc_callmsg 10
+PKG1144 strerror 3
+PKG285 a64l
+PKG1181 killpg
+PKG1279 divdi3
+PKG98 quad 2
+PKG77 warnx 3
+PKG147 ldiv 2
+PKG707 pwcache 4
+PKG333 res_data 2
+PKG1559 bt_delete 10
+PKG471 inet_ntoa 1

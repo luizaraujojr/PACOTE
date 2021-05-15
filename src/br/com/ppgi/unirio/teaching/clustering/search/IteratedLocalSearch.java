@@ -158,7 +158,7 @@ public class IteratedLocalSearch
 	 */
 	public int[] execute() throws Exception
 	{
-		int[] bestSolution = constructor.createSolution(mdg);
+		int[] bestSolution = constructor.createSolution(mdg, a1, a2, b1, b2);
 		this.metrics = new ClusterMetrics(mdg, bestSolution, a1, a2, b1, b2);
 		
 		this.bestFitness = metrics.calculateMQ();
@@ -188,6 +188,46 @@ public class IteratedLocalSearch
 				this.bestFitness = fitness;
 			}
 		}
+
+		return bestSolution;
+	}
+
+	
+	/**
+	 * Main loop of the algorithm
+	 */
+	public int[] executeConstructor() throws Exception
+	{
+		int[] bestSolution = constructor.createSolution(mdg, a1, a2, b1, b2);
+		this.metrics = new ClusterMetrics(mdg, bestSolution, a1, a2, b1, b2);
+		
+		this.bestFitness = metrics.calculateMQ();
+//		++evaluationsConsumed;
+//
+//		localSearch(this.metrics);
+//		double fitness = metrics.calculateMQ();
+//		++evaluationsConsumed;
+//		
+//		if (fitness > bestFitness)
+//		{
+//			bestSolution = this.metrics.cloneSolution();
+//			this.bestFitness = fitness;
+//		}
+//		
+//		while (getEvaluationsConsumed() < getMaximumEvaluations())
+//		{
+//			applyPerturbation(this.metrics, PERTURBATION_SIZE);
+//			
+//			localSearch(this.metrics);
+//			fitness = metrics.calculateMQ();
+//			++evaluationsConsumed;
+//			
+//			if (fitness > this.bestFitness)
+//			{
+//				bestSolution = this.metrics.cloneSolution();
+//				this.bestFitness = fitness;
+//			}
+//		}
 
 		return bestSolution;
 	}

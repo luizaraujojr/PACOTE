@@ -1,0 +1,17 @@
+PKG4 CliServLayout.h
+PKG9 ../common/common.h
+PKG14 PosDet.c
+PKG14 DetermineLayout.c
+PKG11 DetermineLayout.h
+PKG10 LevelLayout.c
+PKG6 SugiyamaLayout.c
+PKG2 ../common/ParseGraph.h
+PKG6 main.c
+PKG10 PosDet.h
+PKG0 LevelLayout.h
+PKG9 SugiyamaLayout.h
+PKG4 ../common/globalVars.h
+PKG12 ../common/globalProcs.h
+PKG4 CliServLayout.c
+PKG0 ../common/HashRoutines.h
+PKG6 ../common/support.h

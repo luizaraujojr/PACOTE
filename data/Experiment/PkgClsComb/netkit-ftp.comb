@@ -1,0 +1,88 @@
+PKG24 ftp
+PKG58 inet 2
+PKG48 cmds
+PKG48 domacro 2
+PKG62 domacro
+PKG69 string 4
+PKG79 cmds 1
+PKG66 main 7
+PKG15 glob
+PKG64 main 1
+PKG21 main
+PKG16 unistd 6
+PKG33 pwd 2
+PKG6 ruserpass
+PKG35 libio 4
+PKG67 main 6
+PKG62 ftp 2
+PKG24 stdlib 3
+PKG27 stdio 15
+PKG73 stat
+PKG6 ftp 4
+PKG48 setjmp 7
+PKG73 cmds 2
+PKG6 stat 1
+PKG25 socket 15
+PKG21 string 10
+PKG56 cmds 6
+PKG60 errno 1
+PKG21 domacro 3
+PKG2 unistd 1
+PKG17 cmdtab 6
+PKG74 stdlib 16
+PKG6 stdio 10
+PKG84 netdb 3
+PKG20 signal 14
+PKG21 readline 2
+PKG73 glob 5
+PKG48 ctype 4
+PKG73 ruserpass 2
+PKG22 socket 1
+PKG6 string 13
+PKG12 glob 1
+PKG21 history 1
+PKG29 main 4
+PKG48 ftp_var 241
+PKG73 dirent 1
+PKG6 ctype 1
+PKG14 wait 1
+PKG16 netdb 2
+PKG24 select 1
+PKG24 domacro 1
+PKG49 signal 13
+PKG48 errno 2
+PKG68 string 17
+PKG62 stdio 2
+PKG24 unistd 27
+PKG6 ftp_var 7
+PKG55 errno 5
+PKG58 pwd 4
+PKG84 ftp_var 38
+PKG36 dirent 6
+PKG23 string 26
+PKG75 unistd 11
+PKG29 ftp_var
+PKG29 cmds 22
+PKG38 in 2
+PKG29 ftp 12
+PKG21 stdlib 2
+PKG48 string 32
+PKG15 cmds 8
+PKG77 setjmp 3
+PKG50 ftp_var 96
+PKG3 stdio 1
+PKG1 cmds 63
+PKG86 libio 9
+PKG54 stat 4
+PKG4 glob 8
+PKG45 ftp 47
+PKG54 stdlib 6
+PKG13 stat 3
+PKG21 signal 2
+PKG85 ruserpass 1
+PKG62 ftp_var 9
+PKG57 stdio 91
+PKG50 time 2
+PKG33 in 4
+PKG15 stdlib 8
+PKG50 stdio 96

@@ -1,0 +1,15 @@
+PKG2 javax.servlet.jsp.jstl.core.LoopTag
+PKG8 javax.servlet.jsp.jstl.core.LoopTagStatus
+PKG0 javax.servlet.jsp.jstl.core.LoopTagSupport$1Status
+PKG14 javax.servlet.jsp.jstl.core.LoopTagSupport
+PKG11 javax.servlet.jsp.jstl.fmt.LocaleSupport
+PKG12 javax.servlet.jsp.jstl.fmt.LocalizationContext
+PKG13 javax.servlet.jsp.jstl.sql.ResultImpl
+PKG3 javax.servlet.jsp.jstl.sql.Result
+PKG9 javax.servlet.jsp.jstl.sql.ResultSupport
+PKG5 javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV$1
+PKG1 javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV
+PKG4 javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV$PermittedTaglibsHandler
+PKG5 javax.servlet.jsp.jstl.tlv.ScriptFreeTLV$1
+PKG10 javax.servlet.jsp.jstl.tlv.ScriptFreeTLV
+PKG13 javax.servlet.jsp.jstl.tlv.ScriptFreeTLV$MyContentHandler

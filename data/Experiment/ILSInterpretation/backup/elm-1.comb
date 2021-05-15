@@ -1,0 +1,494 @@
+PKG339 leavembox
+PKG85 elm_curses 2
+PKG364 showmsg
+PKG480 unistd 8
+PKG147 lock
+PKG333 errno 3
+PKG266 sndattach
+PKG244 sndmsg 1
+PKG62 sndmsg
+PKG475 elm_lib 4
+PKG137 options
+PKG137 curses 26
+PKG55 addr_util
+PKG372 reply 4
+PKG413 out_utils
+PKG302 encode 3
+PKG360 wordwrap
+PKG131 curses 8
+PKG113 elm
+PKG113 elm_defs 7
+PKG292 elm_globals
+PKG254 getopt 2
+PKG167 quit
+PKG277 newmbox 2
+PKG453 curses
+PKG198 out_utils 11
+PKG443 newmbox
+PKG309 elm_globals 20
+PKG142 help
+PKG237 stdlib 2
+PKG423 strings 3
+PKG123 limit
+PKG312 ctype 1
+PKG331 file_util
+PKG107 errno 2
+PKG420 reply
+PKG427 fileio 1
+PKG131 savecopy
+PKG485 alias 2
+PKG173 nl_types 6
+PKG186 delete
+PKG186 save 1
+PKG115 in_utils
+PKG231 alias 7
+PKG241 screen
+PKG241 elm_curses 6
+PKG29 calendar 1
+PKG180 alias
+PKG119 unistd 2
+PKG244 sndpart_io
+PKG368 a_quit 1
+PKG54 file_ops
+PKG413 sndpart_lib 1
+PKG85 editmsg
+PKG171 errno 4
+PKG275 savecopy 2
+PKG91 string 19
+PKG373 stdio 10
+PKG70 sndhdrs
+PKG211 elm_globals 6
+PKG387 elm_defs 9
+PKG252 elm_globals 13
+PKG432 fbrowser 12
+PKG64 string 2
+PKG144 returnadd
+PKG380 showmsg_c 1
+PKG70 sndmsg 5
+PKG140 sndpart_io 2
+PKG288 elm_globals 29
+PKG288 softkeys 1
+PKG365 a_quit
+PKG454 out_utils 1
+PKG420 out_utils 5
+PKG79 a_sendmsg
+PKG331 elm_globals 5
+PKG179 stdio 11
+PKG52 in_utils 1
+PKG192 strings
+PKG55 sndhdrs 2
+PKG416 showmsg_c
+PKG412 showmsg 2
+PKG430 reply 13
+PKG415 hdrconfg 2
+PKG394 nl_types 9
+PKG36 options 3
+PKG180 elm_curses 10
+PKG373 elm_lib
+PKG123 utils 1
+PKG158 utils
+PKG40 lock 1
+PKG404 string 5
+PKG52 softkeys
+PKG459 stdio 8
+PKG378 showmsg_c 4
+PKG200 editmsg 1
+PKG366 elm_globals 7
+PKG394 pattern
+PKG394 elm_globals 43
+PKG439 a_screen
+PKG364 elm_curses 3
+PKG330 libio 4
+PKG54 fcntl 2
+PKG151 sndattach 1
+PKG386 in_utils 10
+PKG389 stat
+PKG152 alias 3
+PKG337 string 17
+PKG298 builtin
+PKG246 curses 1
+PKG85 string 12
+PKG377 elm_defs 6
+PKG241 delete 2
+PKG179 elm_globals 51
+PKG301 syscall 2
+PKG155 unistd 1
+PKG286 save_opts
+PKG54 fileio 2
+PKG265 hdrconfg
+PKG269 string
+PKG13 elm_defs 2
+PKG393 a_edit
+PKG240 elm_globals 1
+PKG78 find_alias
+PKG78 elm_lib 1
+PKG393 stdio 1
+PKG84 fileio
+PKG161 libio 3
+PKG192 hdrconfg 1
+PKG338 stdlib 3
+PKG26 aliaslib
+PKG454 save 2
+PKG361 sort
+PKG360 string 4
+PKG420 ctype 5
+PKG467 leavembox 4
+PKG411 sndpart_lib
+PKG235 elm_defs 1
+PKG218 nl_types 7
+PKG326 edit
+PKG374 nl_types 1
+PKG427 elm_curses 1
+PKG439 screen 7
+PKG443 addr_util 1
+PKG27 utils 4
+PKG228 elm_globals 11
+PKG485 save
+PKG266 fbrowser 2
+PKG299 signals
+PKG134 stdio 21
+PKG54 stdio 12
+PKG342 sndhdrs 1
+PKG412 date
+PKG412 time 8
+PKG249 file_ops 4
+PKG187 utime 1
+PKG167 elm_globals 4
+PKG131 elm_lib 5
+PKG413 reply 1
+PKG243 fbrowser
+PKG411 elm_lib 13
+PKG292 a_sort 1
+PKG251 reply 2
+PKG389 leavembox 2
+PKG77 expires
+PKG127 time 4
+PKG379 a_sendmsg 1
+PKG180 stat 2
+PKG72 stdio 4
+PKG193 syscall
+PKG443 stat 1
+PKG248 elm_defs 15
+PKG26 ctype 2
+PKG406 read_rc
+PKG302 elm_defs 11
+PKG488 a_quit 2
+PKG240 elm 1
+PKG424 sndmsg 14
+PKG323 ctype 3
+PKG206 bouncebk 2
+PKG29 a_sort 2
+PKG30 newmbox 6
+PKG267 sndmsg 7
+PKG150 elm_globals 15
+PKG64 bouncebk
+PKG485 showmsg_c 2
+PKG84 file_ops 2
+PKG439 elm_defs 4
+PKG137 nl_types 15
+PKG413 nl_types 5
+PKG244 elm_lib 10
+PKG299 setjmp 3
+PKG145 calendar 2
+PKG211 elm_globals 41
+PKG204 ctype 8
+PKG70 elm_lib 8
+PKG226 a_screen 3
+PKG79 sndmsg 2
+PKG299 elm_defs 8
+PKG396 screen 11
+PKG245 in_utils 2
+PKG187 nl_types 4
+PKG180 a_screen 1
+PKG327 string 15
+PKG174 init
+PKG74 args
+PKG74 elm_globals 9
+PKG411 string 7
+PKG408 nl_types 3
+PKG211 sndattach 7
+PKG372 curses 2
+PKG188 sndattach 6
+PKG85 setjmp 2
+PKG251 forms
+PKG328 reply 3
+PKG185 string 1
+PKG450 strings 1
+PKG123 elm_defs 3
+PKG6 a_edit 1
+PKG322 alias 14
+PKG269 returnadd 1
+PKG427 encode
+PKG170 file_util 2
+PKG164 elm 3
+PKG476 fileio 3
+PKG54 elm_lib 3
+PKG21 in_utils 22
+PKG468 mime
+PKG413 newmbox 5
+PKG307 stdio 3
+PKG389 file_util 6
+PKG67 elm_defs
+PKG408 read_rc 1
+PKG488 file_ops 11
+PKG151 elm_curses 9
+PKG335 ioctl 1
+PKG268 fcntl 6
+PKG13 a_sort
+PKG420 stdlib 1
+PKG360 stdio 7
+PKG18 options 4
+PKG267 time 1
+PKG430 addr_util 2
+PKG91 elm_lib 6
+PKG369 errno 1
+PKG149 out_utils 4
+PKG490 screen 1
+PKG339 signal 4
+PKG222 curses 13
+PKG416 help 1
+PKG204 file_util 10
+PKG365 alias 1
+PKG90 aliaslib 2
+PKG144 elm_lib 11
+PKG349 expires 3
+PKG286 sort 2
+PKG62 elm_lib 17
+PKG176 forms 6
+PKG332 curses 11
+PKG300 in_utils 3
+PKG133 sndmsg 6
+PKG28 string 10
+PKG47 stdlib 4
+PKG192 editmsg 2
+PKG105 screen 3
+PKG251 unistd 6
+PKG365 elm_globals 12
+PKG241 stdio 2
+PKG179 sndattach 8
+PKG493 pattern 2
+PKG158 elm_curses 15
+PKG434 time 7
+PKG207 encode 1
+PKG117 date 1
+PKG62 curses 17
+PKG336 stdio 15
+PKG379 elm_curses 7
+PKG62 hdrconfg 7
+PKG326 out_utils 2
+PKG209 forms 1
+PKG435 savecopy 3
+PKG357 string 3
+PKG289 file_ops 1
+PKG444 elm_lib 14
+PKG84 encode 2
+PKG91 fbrowser 1
+PKG240 wait 2
+PKG115 softkeys 2
+PKG45 pattern 7
+PKG260 screen 2
+PKG359 elm_defs 5
+PKG184 delete 1
+PKG244 out_utils 6
+PKG22 file_ops 5
+PKG269 elm_globals 2
+PKG361 nl_types 2
+PKG223 out_utils 25
+PKG467 stdlib 10
+PKG306 signals 1
+PKG306 save_opts 6
+PKG442 string 11
+PKG229 curses 18
+PKG305 save_opts 13
+PKG84 libio 1
+PKG263 elm_lib 7
+PKG292 file_util 1
+PKG131 sndmsg 9
+PKG193 out_utils 7
+PKG94 string 25
+PKG62 forms 4
+PKG195 elm_defs 12
+PKG130 out_utils 10
+PKG416 limit 4
+PKG434 help 7
+PKG480 file_ops 3
+PKG144 string 13
+PKG180 aliaslib 3
+PKG332 elm_curses
+PKG286 curses 4
+PKG28 sndpart_io 4
+PKG429 unistd 10
+PKG115 nl_types 8
+PKG366 init 1
+PKG50 elm_curses 4
+PKG180 in_utils 12
+PKG115 save 5
+PKG123 elm_globals 47
+PKG348 sndmsg 3
+PKG93 out_utils 22
+PKG41 pattern 8
+PKG310 calendar
+PKG462 in_utils 9
+PKG266 curses 19
+PKG147 curses 3
+PKG156 mailfile 4
+PKG428 savecopy 10
+PKG41 save 15
+PKG10 save 4
+PKG389 fbrowser 8
+PKG468 elm_lib 2
+PKG49 getopt 5
+PKG457 delete 9
+PKG60 elm_defs 17
+PKG453 termios 3
+PKG424 out_utils 13
+PKG167 leavembox 3
+PKG113 curses 14
+PKG444 sndmsg 8
+PKG425 addr_util 3
+PKG198 nl_types 13
+PKG99 curses 5
+PKG137 save_opts 7
+PKG212 curses 6
+PKG265 ctype 6
+PKG116 alias 4
+PKG261 mime 1
+PKG390 string 9
+PKG147 signal 2
+PKG106 savecopy 7
+PKG197 stdio 29
+PKG244 file_ops 13
+PKG85 ctype 4
+PKG319 showmsg 3
+PKG310 out_utils 3
+PKG147 unistd 12
+PKG77 date 2
+PKG134 limit 9
+PKG10 hdrconfg 4
+PKG180 string 33
+PKG205 sndpart_io 1
+PKG368 nl_types 14
+PKG400 quit 1
+PKG196 unistd 4
+PKG364 stdio 9
+PKG310 stdio 5
+PKG39 string 14
+PKG101 elm_defs 27
+PKG428 time 3
+PKG161 errno 5
+PKG453 pattern 3
+PKG136 curses 15
+PKG242 elm_defs 25
+PKG346 stdio 20
+PKG281 nl_types 17
+PKG392 sort 1
+PKG143 sndattach 15
+PKG125 limit 1
+PKG286 read_rc 7
+PKG335 options 25
+PKG401 libio 2
+PKG341 stdlib 5
+PKG493 sndpart_lib 19
+PKG178 sndmsg 11
+PKG331 stat 3
+PKG413 syscall 4
+PKG56 sndhdrs 5
+PKG368 elm_globals 16
+PKG126 elm_globals 71
+PKG113 elm_globals 75
+PKG243 save 9
+PKG120 unistd 3
+PKG375 elm_globals 45
+PKG54 save 3
+PKG434 sndmsg 18
+PKG174 unistd 7
+PKG370 string 6
+PKG316 delete 3
+PKG478 ndbz 6
+PKG113 out_utils 19
+PKG118 strings 2
+PKG299 leavembox 1
+PKG72 file_util 3
+PKG264 elm_globals 8
+PKG289 options 1
+PKG269 a_screen 4
+PKG142 curses 10
+PKG141 sndpart_io 23
+PKG357 string2
+PKG199 parseaddrs 3
+PKG165 wordwrap 3
+PKG67 getopt 1
+PKG406 elm_lib 22
+PKG234 elm_globals 28
+PKG379 mailfile 6
+PKG482 strings 4
+PKG243 elm_defs 20
+PKG134 elm 19
+PKG375 newmbox 1
+PKG84 save_opts 2
+PKG216 fbrowser 3
+PKG117 builtin 4
+PKG455 a_screen 2
+PKG84 stat 4
+PKG19 nl_types 20
+PKG473 builtin 3
+PKG471 curses 16
+PKG100 sndpart_lib 5
+PKG406 showmsg 1
+PKG453 help 5
+PKG1 options 8
+PKG261 out_utils 17
+PKG292 limit 8
+PKG76 elm_globals 10
+PKG236 curses 12
+PKG274 sndparts 1
+PKG453 syscall 1
+PKG437 fbrowser 24
+PKG361 args 2
+PKG485 savecopy 1
+PKG414 stdio 18
+PKG58 errno 12
+PKG44 file_ops 16
+PKG453 save 7
+PKG244 time 2
+PKG3 lock 4
+PKG266 out_utils 16
+PKG220 unistd 20
+PKG411 sndattach 28
+PKG68 sndmsg 4
+PKG392 in_utils 4
+PKG216 options 2
+PKG108 elm 17
+PKG14 elm_lib 16
+PKG116 returnadd 6
+PKG470 editmsg 13
+PKG274 elm_curses 17
+PKG188 alias 19
+PKG53 pattern 5
+PKG329 elm_curses 8
+PKG80 string 21
+PKG197 expires 1
+PKG490 read_rc 6
+PKG371 unistd 5
+PKG243 out_utils 24
+PKG316 curses 25
+PKG217 sndpart_io 15
+PKG100 fcntl 1
+PKG82 elm_globals 17
+PKG243 string 32
+PKG409 elm_curses 12
+PKG443 out_utils 14
+PKG269 aliaslib 1
+PKG41 string 26
+PKG299 signal 1
+PKG8 elm_curses 16
+PKG441 savecopy 4
+PKG421 elm_globals 73
+PKG453 wordwrap 5
+PKG198 read_rc 2
+PKG283 dirent 5
+PKG46 sndpart_lib 29
+PKG237 limit 2
+PKG372 lock 2
+PKG298 showmsg 7
+PKG377 softkeys 8

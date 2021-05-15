@@ -1,0 +1,134 @@
+PKG8 setroute
+PKG21 stdio 2
+PKG76 util
+PKG18 ax25 3
+PKG67 slip_ac
+PKG119 string 2
+PKG93 proc
+PKG7 string 7
+PKG123 netrom
+PKG59 errno 1
+PKG31 iptunnel
+PKG31 string 17
+PKG76 utsname 1
+PKG17 unix 2
+PKG95 hw
+PKG95 activate 7
+PKG64 getargs
+PKG64 string 3
+PKG115 ax25_gr
+PKG91 stdio 6
+PKG76 arcnet 1
+PKG125 util-ank
+PKG125 iptunnel 12
+PKG116 string 1
+PKG54 inet_gr
+PKG131 af 2
+PKG128 inet_sr
+PKG128 ioctl 1
+PKG22 interface
+PKG22 util 7
+PKG76 getroute 2
+PKG74 af
+PKG20 ax25_gr 1
+PKG54 proc 6
+PKG24 ax25
+PKG76 netrom 2
+PKG104 ipx_gr
+PKG114 arcnet
+PKG46 stdio 1
+PKG21 ppp_ac
+PKG108 activate
+PKG29 hw 2
+PKG112 stdlib 4
+PKG121 ether
+PKG67 ioctl 2
+PKG47 getroute
+PKG47 af 7
+PKG54 stdio 17
+PKG132 inet_sr 3
+PKG118 ipx
+PKG32 util 1
+PKG123 ctype 3
+PKG8 af 5
+PKG66 socket 2
+PKG113 inet
+PKG38 in 12
+PKG3 stdlib 20
+PKG21 ppp
+PKG39 in 4
+PKG32 loopback
+PKG66 stdio 3
+PKG76 stdlib 5
+PKG114 ctype 1
+PKG76 ddp 1
+PKG59 tr
+PKG23 sockets
+PKG74 netrom_sr 1
+PKG12 util 2
+PKG112 stdio 8
+PKG22 af 4
+PKG1 netdb 18
+PKG101 inet 2
+PKG100 nstrcmp
+PKG100 stdlib 1
+PKG115 stdlib 2
+PKG54 inet 1
+PKG14 util-ank 10
+PKG20 inet_sr 1
+PKG51 af 3
+PKG19 loopback 1
+PKG112 netrom_gr
+PKG128 unistd 1
+PKG90 inet_gr 1
+PKG47 ipx_gr 1
+PKG113 ctype 2
+PKG104 stdio 10
+PKG12 unix
+PKG38 stdlib 6
+PKG6 ddp
+PKG6 in 2
+PKG105 in 6
+PKG80 errno 2
+PKG24 util 3
+PKG127 sockets 2
+PKG125 string 11
+PKG23 net-support 2
+PKG132 stdio 20
+PKG70 ddp_gr 1
+PKG122 ipx_sr 1
+PKG108 ppp_ac 2
+PKG22 ioctl 3
+PKG21 ddp_gr
+PKG128 stdio 7
+PKG22 string 8
+PKG110 string
+PKG110 irda 1
+PKG77 interface 2
+PKG38 string 12
+PKG14 getroute 1
+PKG9 slip_ac 10
+PKG116 irda
+PKG93 stdio 4
+PKG27 netrom 1
+PKG49 net-support 10
+PKG93 inet_gr 3
+PKG47 netrom_gr 1
+PKG98 netrom_sr
+PKG60 inet_sr 4
+PKG118 stdlib 3
+PKG97 ipx_sr
+PKG14 errno 3
+PKG46 frame
+PKG66 interface 4
+PKG109 ipx 1
+PKG48 socket 12
+PKG86 ether 1
+PKG78 frame 2
+PKG71 ax25 1
+PKG31 unistd 6
+PKG54 string 4
+PKG75 nstrcmp 1
+PKG53 stdio 11
+PKG31 ioctl 12
+PKG74 setroute 1

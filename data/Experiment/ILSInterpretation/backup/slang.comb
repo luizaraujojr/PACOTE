@@ -1,0 +1,201 @@
+PKG188 slerr
+PKG60 slparse 5
+PKG172 slfile
+PKG107 errno 2
+PKG38 slunix
+PKG38 unistd 1
+PKG5 stdio 6
+PKG125 slclass
+PKG109 slerr 1
+PKG186 slang 2
+PKG8 string 1
+PKG196 slsmg
+PKG149 slang 22
+PKG63 slstd
+PKG63 slmisc 9
+PKG155 slang
+PKG146 slerr 19
+PKG162 _slang
+PKG20 slerrno 1
+PKG69 slrline
+PKG25 slkeymap 5
+PKG34 slregexp
+PKG63 slsearch 1
+PKG117 slsignal
+PKG117 signal 8
+PKG48 sltoken 4
+PKG161 sldisply
+PKG55 slkeymap 1
+PKG106 slparse
+PKG30 libio 2
+PKG56 slutty 4
+PKG107 slmath
+PKG140 slprepr 1
+PKG111 sltoken
+PKG188 stdlib 1
+PKG7 string 3
+PKG92 slcurses
+PKG143 slgetkey 4
+PKG92 signal 3
+PKG58 slmisc
+PKG58 slregexp 1
+PKG58 slarray 1
+PKG13 stdlib 17
+PKG89 stat
+PKG89 slunix 4
+PKG20 stdlib 38
+PKG1 slsearch
+PKG78 string 2
+PKG58 slang 4
+PKG125 sltypes 3
+PKG193 stdio 20
+PKG67 slerr 2
+PKG107 slang 8
+PKG112 slmalloc
+PKG112 stdio 3
+PKG62 slutty
+PKG193 errno 8
+PKG69 slang 17
+PKG39 slprepr 2
+PKG71 slfile 8
+PKG62 fcntl 1
+PKG56 calc
+PKG187 slclass 2
+PKG96 slgetkey 1
+PKG172 slerrno 2
+PKG68 slgetkey
+PKG97 string 13
+PKG195 slgetkey 2
+PKG141 slkeypad
+PKG96 stdio 15
+PKG134 stdlib 3
+PKG65 slstd 1
+PKG36 sldisply 7
+PKG58 slrline 1
+PKG43 stdlib 8
+PKG56 libio 1
+PKG159 slmemcmp
+PKG159 slkeymap 3
+PKG118 slcmd 4
+PKG19 slunix 3
+PKG67 slkeymap
+PKG119 slmisc 2
+PKG196 _slang 2
+PKG60 unistd 3
+PKG67 sldisply 2
+PKG107 slsignal 2
+PKG182 stdio 12
+PKG104 string 19
+PKG97 slmisc 1
+PKG56 slrline 4
+PKG56 stdlib 2
+PKG188 slang 11
+PKG67 stdlib 6
+PKG83 sltermin
+PKG54 stdlib 14
+PKG15 string 39
+PKG155 slsearch 6
+PKG110 mathcalls 22
+PKG27 stdio 4
+PKG62 stdio 8
+PKG55 slkeymap 6
+PKG143 slstd 10
+PKG155 slkeymap 2
+PKG111 sltermin 2
+PKG177 slcurses 3
+PKG20 _slang 1
+PKG155 stdio 7
+PKG141 unistd 4
+PKG172 unistd 2
+PKG157 slstd 2
+PKG9 _slang 10
+PKG151 slarray
+PKG14 slarray 32
+PKG196 slcurses 28
+PKG38 errno 1
+PKG65 slprepr
+PKG185 slmisc 6
+PKG44 _slang 12
+PKG11 termios 6
+PKG15 slrline 20
+PKG166 slutty 2
+PKG153 slang 41
+PKG54 string 4
+PKG151 slang 32
+PKG7 slcmd
+PKG83 slang 1
+PKG131 slmath 14
+PKG92 slutty 5
+PKG151 stdlib 10
+PKG63 slparse 2
+PKG129 stdlib 27
+PKG161 slsmg 13
+PKG27 slfile 1
+PKG92 sldisply 6
+PKG152 sltypes 1
+PKG67 slkeypad 6
+PKG74 slang 9
+PKG92 slsmg 18
+PKG167 slstd 4
+PKG65 slparse 3
+PKG155 slrline 2
+PKG65 string 6
+PKG194 sltypes
+PKG47 slclass 3
+PKG106 slerr 6
+PKG79 slerr 8
+PKG99 sltoken 6
+PKG98 string 18
+PKG121 stat 3
+PKG192 slmisc 4
+PKG114 slunix 1
+PKG155 sltypes 5
+PKG165 slarray 2
+PKG146 slstd 91
+PKG39 sldisply 16
+PKG196 slsignal 8
+PKG145 string 10
+PKG68 slutty 6
+PKG196 stdio 2
+PKG133 slerrno
+PKG133 _slang 3
+PKG52 slcurses 6
+PKG180 slang 12
+PKG162 sldisply 1
+PKG38 time 2
+PKG152 calc 2
+PKG151 slclass 10
+PKG157 _slang 17
+PKG95 slregexp 3
+PKG199 slang 35
+PKG194 slang 7
+PKG116 slang 16
+PKG139 libio 6
+PKG97 slmalloc 2
+PKG161 select 1
+PKG115 slsmg 12
+PKG92 slang 13
+PKG158 slgetkey 3
+PKG112 stdlib 7
+PKG125 stdlib 9
+PKG69 calc 3
+PKG167 slang 103
+PKG100 slparse 8
+PKG155 string 17
+PKG35 slmemcmp 1
+PKG111 stdio 1
+PKG185 stdio 9
+PKG63 time 4
+PKG21 slkeypad 2
+PKG43 stat 1
+PKG86 _slang 45
+PKG153 slstd 3
+PKG117 slmath 1
+PKG150 slerr 4
+PKG152 signal 1
+PKG119 ioctl 1
+PKG179 termios 1
+PKG70 slarray 12
+PKG83 sltoken 2
+PKG52 stdlib 4
+PKG111 slparse 7

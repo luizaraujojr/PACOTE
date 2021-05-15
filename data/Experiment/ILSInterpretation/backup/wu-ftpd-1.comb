@@ -1,0 +1,192 @@
+PKG78 ftpd
+PKG13 setjmp 5
+PKG137 acl
+PKG63 stdlib 6
+PKG38 extensions
+PKG38 acl 13
+PKG113 access
+PKG87 signal 3
+PKG78 socket 29
+PKG178 realpath
+PKG130 sigfix 2
+PKG123 ftpcmd
+PKG156 stdio 19
+PKG113 extensions 14
+PKG174 ctype 1
+PKG95 paths
+PKG92 ftpd 4
+PKG183 rdservers
+PKG183 netdb 2
+PKG18 errno 10
+PKG21 syslog 3
+PKG78 signal 8
+PKG62 stat 1
+PKG78 sigfix 12
+PKG105 fcntl 6
+PKG100 ftpd 27
+PKG165 bison
+PKG48 proto 3
+PKG178 ftpcmd 2
+PKG119 stat
+PKG108 paths 2
+PKG93 logwtmp 2
+PKG104 glob 2
+PKG78 stat 18
+PKG41 conversions
+PKG99 stdio 5
+PKG178 unistd 19
+PKG173 errno 2
+PKG150 acl 25
+PKG65 unistd 29
+PKG119 pathnames 1
+PKG23 ftpd 50
+PKG68 authenticate
+PKG68 string 1
+PKG91 glob 3
+PKG104 paths 3
+PKG99 hostacc
+PKG41 syslog 2
+PKG178 fcntl 2
+PKG51 fcntl 7
+PKG36 unistd 1
+PKG47 time 22
+PKG23 stat 4
+PKG183 inet 1
+PKG78 access 29
+PKG141 glob 5
+PKG110 popen 3
+PKG101 private
+PKG101 grp 5
+PKG132 unistd 70
+PKG101 string 10
+PKG154 access 17
+PKG29 string 41
+PKG23 time 4
+PKG141 libio 10
+PKG99 string 8
+PKG70 grp 7
+PKG130 popen
+PKG43 resource 1
+PKG125 string 166
+PKG98 glob
+PKG7 string 18
+PKG78 hostacc 1
+PKG4 shadow 4
+PKG112 errno 1
+PKG180 ftw 1
+PKG137 string 7
+PKG130 ftpd 3
+PKG120 stdlib 3
+PKG150 bison 2
+PKG55 stdio 77
+PKG119 dirent 1
+PKG97 COPYRIGHT
+PKG118 stdio 1
+PKG98 dirent 6
+PKG98 popen 2
+PKG139 acl 1
+PKG66 pwd 4
+PKG95 stdio 3
+PKG78 ftp 4
+PKG14 authenticate 1
+PKG38 grp 4
+PKG113 stdio 18
+PKG135 in 15
+PKG101 stdlib 9
+PKG32 realpath 1
+PKG167 signal 5
+PKG9 socket 1
+PKG62 logwtmp
+PKG15 realpath 10
+PKG185 conversions 3
+PKG107 stdlib 4
+PKG178 bison 1
+PKG98 pwd 2
+PKG168 setjmp 1
+PKG38 pwd 3
+PKG151 grp 9
+PKG142 pathnames 2
+PKG62 unistd 2
+PKG71 unistd 13
+PKG43 time 1
+PKG68 ftpd 2
+PKG30 COPYRIGHT 4
+PKG170 stdlib 8
+PKG41 stdlib 7
+PKG151 acl 3
+PKG104 signal 1
+PKG130 glob 1
+PKG15 extensions 31
+PKG124 ftpcmd 65
+PKG130 string 3
+PKG95 pathnames 5
+PKG93 stdlib 25
+PKG20 ftp 3
+PKG160 unistd 7
+PKG78 pwd 14
+PKG7 ftpcmd 11
+PKG10 wu_fnmatch 3
+PKG12 access 1
+PKG141 ftpcmd 3
+PKG136 hostacc 3
+PKG6 getopt 2
+PKG114 ftpd 52
+PKG137 extensions 13
+PKG12 ftpcmd 6
+PKG70 syslog 10
+PKG119 conversions 2
+PKG75 string 5
+PKG165 stat 3
+PKG42 unistd 3
+PKG104 ftpd 84
+PKG179 regex 4
+PKG115 glob 4
+PKG95 syslog 1
+PKG76 bison 14
+PKG132 wu_fnmatch 6
+PKG60 ftpd 36
+PKG98 extensions 2
+PKG119 ftpd 23
+PKG81 inet 2
+PKG60 stat 7
+PKG4 stdio 7
+PKG69 select 2
+PKG42 rdservers 1
+PKG78 logwtmp 3
+PKG78 syslog 23
+PKG119 extensions 10
+PKG106 access 2
+PKG156 stat 2
+PKG147 inet 10
+PKG123 string 20
+PKG80 time 13
+PKG119 realpath 2
+PKG183 string 4
+PKG12 extensions 1
+PKG38 stdio 24
+PKG105 private 2
+PKG54 ftpd 5
+PKG113 proto 1
+PKG78 ctype 4
+PKG41 string 6
+PKG77 ftpd 47
+PKG28 popen 5
+PKG178 extensions 35
+PKG190 wait 2
+PKG92 stat 14
+PKG184 string 78
+PKG163 time 3
+PKG176 acl 2
+PKG32 in 1
+PKG150 bison 16
+PKG46 acl 17
+PKG37 ftpd 12
+PKG109 netdb 12
+PKG113 stdlib 32
+PKG123 libio 4
+PKG40 extensions 5
+PKG6 ftpcmd 5
+PKG152 stdlib 5
+PKG117 file 6
+PKG153 realpath 13
+PKG172 stdlib 61

@@ -1,0 +1,24 @@
+PKG22 stat
+PKG8 tftpd 2
+PKG0 tftpd
+PKG19 pwd 2
+PKG2 signal 2
+PKG23 stat 1
+PKG2 stdio 4
+PKG16 tftpsubs
+PKG7 ioctl 1
+PKG14 socket 1
+PKG0 libio 3
+PKG14 string 8
+PKG8 errno 4
+PKG15 stdlib 4
+PKG15 unistd 3
+PKG3 tftpsubs 12
+PKG11 fcntl 2
+PKG19 setjmp 3
+PKG7 syslog 6
+PKG22 socket 14
+PKG0 ctype 3
+PKG11 in 12
+PKG15 unistd 11
+PKG15 tftpd 12

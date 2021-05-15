@@ -1,0 +1,25 @@
+PKG24 CharacterArrayCharacterIterator
+PKG8 CharacterIterator  1
+PKG19 RE
+PKG1 RECompiler  2
+PKG19 REProgram  6
+PKG19 StringCharacterIterator  1
+PKG4 ReaderCharacterIterator
+PKG1 recompile
+PKG1 REProgram  1
+PKG5 RECompiler
+PKG5 RESyntaxException  1
+PKG18 REDebugCompiler
+PKG18 RECompiler  11
+PKG0 REDemo
+PKG3 RE  7
+PKG0 RECompiler  1
+PKG0 REDebugCompiler  2
+PKG6 RETest
+PKG13 RE  24
+PKG6 REDebugCompiler  4
+PKG24 REProgram  2
+PKG10 REUtil
+PKG10 RE  3
+PKG8 StreamCharacterIterator
+PKG8 StringCharacterIterator

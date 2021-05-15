@@ -1,0 +1,138 @@
+PKG134 ui
+PKG114 micq 145
+PKG65 file_util
+PKG119 ctype 1
+PKG19 icq_response
+PKG90 micq 23
+PKG74 util_ui
+PKG65 ioctl 1
+PKG109 micq
+PKG42 ui 2
+PKG68 stdlib 17
+PKG10 server
+PKG18 micq 32
+PKG9 mreadline
+PKG92 micq 6
+PKG0 network
+PKG76 util_ui 1
+PKG131 socket 15
+PKG23 mreadline 2
+PKG59 errno 1
+PKG91 mselect 5
+PKG97 util
+PKG72 util_ui 7
+PKG133 stdlib 4
+PKG13 jp_conv
+PKG36 string 3
+PKG45 fcntl 8
+PKG120 server 3
+PKG75 util 2
+PKG76 termios 4
+PKG102 util 5
+PKG46 char_conv
+PKG81 icq_response 8
+PKG76 micq 42
+PKG98 unistd 2
+PKG5 icq_response 1
+PKG72 util 36
+PKG2 server 26
+PKG87 util 68
+PKG43 rus_conv
+PKG5 string 1
+PKG4 stat
+PKG135 util 15
+PKG57 msg_queue
+PKG69 util_ui 28
+PKG106 unistd 1
+PKG96 char_conv 5
+PKG17 sendmsg
+PKG14 util_ui 5
+PKG11 time 7
+PKG48 stdlib 9
+PKG108 string
+PKG35 util 4
+PKG83 netdb 4
+PKG31 util_ui 3
+PKG68 assert 1
+PKG121 assert 2
+PKG42 msg_queue 1
+PKG59 micq 14
+PKG84 string 15
+PKG2 micq 101
+PKG62 ui 53
+PKG21 stdio 7
+PKG137 server 11
+PKG63 util_ui 13
+PKG5 file_util 6
+PKG20 ui 1
+PKG77 string 6
+PKG124 stdio 1
+PKG42 in 1
+PKG59 stdio 2
+PKG116 sendmsg 1
+PKG12 util_ui 19
+PKG11 sendmsg 4
+PKG120 unistd 4
+PKG62 file_util 5
+PKG126 util 1
+PKG102 string 7
+PKG82 util 96
+PKG52 assert 3
+PKG3 network 2
+PKG60 in 14
+PKG128 file_util 3
+PKG74 string 13
+PKG39 stdio 6
+PKG24 stdio 8
+PKG81 micq 1
+PKG13 sendmsg 6
+PKG92 micq 2
+PKG122 file_util 1
+PKG127 micq 3
+PKG62 mreadline 3
+PKG101 msg_queue 9
+PKG0 rus_conv 1
+PKG83 stdio 4
+PKG25 icq_response 61
+PKG123 stdlib 19
+PKG46 time 3
+PKG87 mreadline 6
+PKG43 unistd 3
+PKG107 time 6
+PKG52 mselect
+PKG69 select 1
+PKG96 char_conv 2
+PKG44 stdlib 18
+PKG48 util 6
+PKG44 sendmsg 138
+PKG9 mreadline 7
+PKG129 string 21
+PKG44 mreadline 4
+PKG40 stdio 11
+PKG28 stat 3
+PKG105 inet 5
+PKG100 in 4
+PKG12 server 8
+PKG0 util 14
+PKG58 time 5
+PKG136 icq_response 11
+PKG117 jp_conv 1
+PKG117 util_ui 9
+PKG35 sendmsg 25
+PKG128 termios 3
+PKG80 sendmsg 2
+PKG73 stdlib 7
+PKG6 string 57
+PKG47 icq_response 7
+PKG53 char_conv 4
+PKG104 msg_queue 7
+PKG72 ui 3
+PKG17 sendmsg 33
+PKG117 string 33
+PKG110 time 4
+PKG38 ui 16
+PKG12 server 1
+PKG112 wait 1
+PKG93 sendmsg 3
+PKG28 stdlib 2
+PKG61 micq 175

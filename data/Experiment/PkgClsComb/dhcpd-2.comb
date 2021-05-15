@@ -1,0 +1,108 @@
+PKG17 daemon
+PKG17 main 2
+PKG69 hostinfo
+PKG69 if 3
+PKG84 socket-if
+PKG106 error-handler 5
+PKG77 client
+PKG34 arp 3
+PKG69 memory 3
+PKG6 signal-handler
+PKG6 if 2
+PKG88 main 4
+PKG44 error-handler 2
+PKG23 wait 1
+PKG71 error-handler
+PKG71 stdio 12
+PKG104 arp
+PKG104 time 2
+PKG68 if
+PKG68 hostinfo 1
+PKG34 in 2
+PKG27 syslog 4
+PKG24 main
+PKG33 unistd 2
+PKG91 dhcp 69
+PKG72 dhcp
+PKG70 main 1
+PKG95 stat
+PKG95 hostinfo 2
+PKG84 if 1
+PKG69 error-handler 7
+PKG84 options 1
+PKG104 unistd 1
+PKG68 error-handler 8
+PKG68 ioctl 4
+PKG18 stdio 9
+PKG29 stdlib 14
+PKG107 string 2
+PKG84 arp 2
+PKG50 in 9
+PKG71 stdlib 4
+PKG72 stdlib 1
+PKG24 string 4
+PKG41 socket-if 19
+PKG16 memory
+PKG16 stdlib 2
+PKG10 socket 6
+PKG36 dhcp 1
+PKG102 stdio 1
+PKG74 hostinfo 6
+PKG91 string 8
+PKG68 inet 3
+PKG83 socket 8
+PKG84 client 29
+PKG17 stat 1
+PKG17 signal 1
+PKG69 stdio 4
+PKG31 options
+PKG24 client 3
+PKG6 client 2
+PKG100 string
+PKG104 socket 3
+PKG90 in 8
+PKG77 error-handler 16
+PKG24 time 1
+PKG29 dhcp 4
+PKG81 in 1
+PKG100 inet 1
+PKG31 socket-if 2
+PKG24 daemon 2
+PKG77 unistd 11
+PKG27 stat 3
+PKG15 swab
+PKG91 byteorder 14
+PKG38 dhcp 7
+PKG100 hostinfo 5
+PKG64 error-handler 3
+PKG90 unistd 7
+PKG69 unistd 13
+PKG47 error-handler 6
+PKG71 errno 4
+PKG51 inet 8
+PKG100 dhcp 2
+PKG33 string 16
+PKG29 select 1
+PKG77 fcntl 2
+PKG17 string 1
+PKG22 string 11
+PKG77 utsname 1
+PKG30 stdlib 6
+PKG24 signal-handler 1
+PKG84 socket 13
+PKG44 dhcp 6
+PKG77 if 21
+PKG17 errno 1
+PKG19 string 7
+PKG102 fcntl 4
+PKG72 client 15
+PKG41 in 36
+PKG31 string 6
+PKG31 error-handler 1
+PKG25 client 4
+PKG41 in 4
+PKG79 byteorder
+PKG79 swab 24
+PKG21 signal 2
+PKG10 time 7
+PKG69 fcntl 6

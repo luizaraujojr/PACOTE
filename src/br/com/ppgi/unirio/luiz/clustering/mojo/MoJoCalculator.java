@@ -421,7 +421,7 @@ public class MoJoCalculator {
             {
                 StringTokenizer st = new StringTokenizer(line);
 //                if (st.countTokens() != 3)
-                if (st.countTokens() != 2)
+                if (st.countTokens() == 1)
                 {
                     String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);
@@ -584,7 +584,7 @@ public class MoJoCalculator {
             {
                 StringTokenizer st = new StringTokenizer(line);
 //                if (st.countTokens() != 3)
-                if (st.countTokens() != 2)
+                if (st.countTokens() ==1)
                 {
                     String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);

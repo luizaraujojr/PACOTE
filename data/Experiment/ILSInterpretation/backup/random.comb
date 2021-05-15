@@ -1,0 +1,24 @@
+PKG16 typeChecker
+PKG16 dictionary   1
+PKG21 argCntStack
+PKG21 parser   1
+PKG18 dictStack
+PKG18 typeStack   1
+PKG20 scanner
+PKG14 declarations
+PKG9 argCntStack   1
+PKG5 main
+PKG5 dictStack   1
+PKG6 scanner   1
+PKG9 codeGenerator
+PKG9 dictIdxStack   1
+PKG6 dictIdxStack
+PKG7 typeChecker   1
+PKG22 parser
+PKG22 addrStack   1
+PKG20 scopeController   1
+PKG9 declarations   1
+PKG7 dictionary
+PKG14 codeGenerator   1
+PKG18 main   1
+PKG21 addrStack

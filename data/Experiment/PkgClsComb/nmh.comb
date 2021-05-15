@@ -1,0 +1,1081 @@
+PKG157 error
+PKG993 folder_delmsgs 2
+PKG299 whom
+PKG951 rcvdist 15
+PKG399 ap
+PKG815 termsbr 1
+PKG441 stat
+PKG883 mhparse 5
+PKG34 seq_nameok
+PKG43 seq_add 2
+PKG893 dp
+PKG164 mh 2
+PKG629 getcpy
+PKG911 pwd 1
+PKG554 strcasecmp
+PKG896 mts 2
+PKG749 smtp
+PKG940 string 23
+PKG1062 spost
+PKG600 mf 5
+PKG976 ambigsw
+PKG1060 whom 1
+PKG292 mh 3
+PKG749 unistd 21
+PKG344 mhshow 20
+PKG360 mhbuild
+PKG453 mhbuildsbr 1
+PKG570 context_find
+PKG28 forw 1
+PKG302 concat
+PKG232 getfolder 1
+PKG622 forw
+PKG196 stdio 13
+PKG997 sendsbr
+PKG498 cpydgst 1
+PKG1022 dist
+PKG10 smatch 1
+PKG39 seq_setunseen
+PKG642 show 1
+PKG701 slocal
+PKG274 dtime 2
+PKG404 fmt_scan
+PKG804 error 1
+PKG974 mshcmds
+PKG202 smatch 18
+PKG390 packf
+PKG528 msh 1
+PKG1029 inc 1
+PKG44 getbbent
+PKG735 stdlib 9
+PKG828 comp
+PKG654 m_maildir 1
+PKG619 post
+PKG1063 stat 1
+PKG1006 strindex 1
+PKG370 rcvdist 2
+PKG102 mhlsbr
+PKG1035 unistd 15
+PKG317 brkstring
+PKG897 whom 2
+PKG430 m_getfld 1
+PKG843 print_help
+PKG473 send 1
+PKG423 replsbr
+PKG618 fmt_scan 4
+PKG940 mf
+PKG905 add 5
+PKG62 mhpath
+PKG352 prototypes 1
+PKG506 seq_del
+PKG282 mshcmds 3
+PKG896 vmhsbr
+PKG326 msh 25
+PKG852 msh
+PKG321 cpydgst 2
+PKG294 mhmisc
+PKG309 mshcmds 28
+PKG824 done
+PKG1055 mhparam 1
+PKG257 check_charset 1
+PKG499 mhshowsbr
+PKG826 mhlist 1
+PKG211 post 2
+PKG258 scansbr
+PKG469 error 2
+PKG149 mhn 1
+PKG871 sortm
+PKG378 string 7
+PKG301 context_save 1
+PKG93 mh 1
+PKG1029 makedir
+PKG767 m_draft 1
+PKG135 anno
+PKG418 sendsbr 1
+PKG707 gans
+PKG707 replsbr 1
+PKG477 stdio 41
+PKG122 unistd 9
+PKG961 mhcachesbr
+PKG1030 lock_file 6
+PKG1052 uprf
+PKG477 distsbr 2
+PKG69 mhmisc 2
+PKG824 pidstatus 1
+PKG329 unistd 6
+PKG472 context_find 4
+PKG408 conflict
+PKG110 dirent 5
+PKG190 config
+PKG220 dist 1
+PKG968 mhbuildsbr
+PKG656 m_convert 1
+PKG523 mh
+PKG803 folder 1
+PKG482 pick
+PKG75 m_convert
+PKG337 pick 3
+PKG5 pidwait
+PKG992 sortm 1
+PKG43 mhparse 2
+PKG427 folder
+PKG1021 addrsbr 36
+PKG472 mhstoresbr
+PKG425 whatnowproc
+PKG64 m_tmpfil
+PKG826 stdio 1
+PKG929 seq_setprev
+PKG522 mhlist 3
+PKG493 m_name
+PKG32 context_foil
+PKG199 string 2
+PKG287 m_gmprot 1
+PKG834 dropsbr
+PKG1008 mf 7
+PKG924 mh 9
+PKG834 stat 4
+PKG488 m_draft 2
+PKG470 dist 2
+PKG393 fmt_rfc2047 1
+PKG893 fmt_compile
+PKG848 mhpath 3
+PKG467 print_help 14
+PKG258 seq_save 2
+PKG746 folder_free
+PKG7 pick 1
+PKG295 rcvtty
+PKG659 stdio 8
+PKG420 add
+PKG902 msh 2
+PKG407 remdir 1
+PKG629 stdlib 2
+PKG680 post 4
+PKG468 config 2
+PKG998 msh 13
+PKG19 mhparse 1
+PKG190 ctype 3
+PKG315 print_version 1
+PKG551 dtime 12
+PKG485 mhfree 1
+PKG168 prompter
+PKG1000 setjmp 4
+PKG720 ctype 4
+PKG143 distsbr
+PKG408 makedir 1
+PKG562 folder_read 2
+PKG188 strcasecmp 1
+PKG5 context_read 1
+PKG57 mhlsbr 2
+PKG470 refile
+PKG860 prototypes 4
+PKG758 getans
+PKG731 setjmp 2
+PKG456 seq_add
+PKG716 string 6
+PKG803 context_del
+PKG29 mh 5
+PKG4 seq_setcur
+PKG639 mhtest 2
+PKG45 context_find 2
+PKG510 unistd 14
+PKG378 stdlib 6
+PKG36 dtime 4
+PKG264 trimcpy
+PKG113 mhcachesbr 2
+PKG559 msh 5
+PKG143 show 2
+PKG425 putenv 2
+PKG445 prototypes 2
+PKG735 show
+PKG38 mhl 1
+PKG560 copyip
+PKG1076 mshcmds 2
+PKG613 scansbr 8
+PKG134 signal 1
+PKG116 flist
+PKG11 ctype 1
+PKG622 stat 2
+PKG408 mf 3
+PKG747 mh 4
+PKG291 comp 1
+PKG1004 send
+PKG309 m_tmpfil 1
+PKG556 repl 1
+PKG977 m_getfld 2
+PKG241 path
+PKG643 stdlib 1
+PKG581 context_replace
+PKG884 folder 4
+PKG540 termsbr 2
+PKG46 getarguments
+PKG971 folder 2
+PKG788 ftpsbr
+PKG831 string 15
+PKG567 r1bindex 1
+PKG568 repl 2
+PKG725 comp 3
+PKG610 mhmail 1
+PKG566 m_getfld
+PKG445 mhshow 3
+PKG177 concat 3
+PKG722 m_draft
+PKG190 fmt_new 1
+PKG808 string 44
+PKG569 client
+PKG738 brkstring 1
+PKG422 showfile 1
+PKG980 mhn 2
+PKG820 anno 2
+PKG465 viamail
+PKG778 mhmisc 11
+PKG503 folder_delmsgs
+PKG835 m_name 4
+PKG585 mhlist
+PKG620 mhcachesbr 1
+PKG273 mhlistsbr
+PKG371 mhbuild 3
+PKG399 mhlsbr 3
+PKG625 mhbuild 1
+PKG915 stdlib 21
+PKG613 m_backup 1
+PKG151 folder_free 1
+PKG0 m_atoi
+PKG558 refile 1
+PKG396 ftpsbr 2
+PKG241 mf 2
+PKG268 flist 6
+PKG44 folder_read 1
+PKG476 getarguments 1
+PKG774 rcvdist 5
+PKG111 rcvstore 5
+PKG199 hosts
+PKG861 stdio 4
+PKG1049 config 1
+PKG868 stdio 25
+PKG264 mhlistsbr 3
+PKG804 mhlist 2
+PKG622 anno 1
+PKG356 unistd 25
+PKG356 dtime
+PKG356 time 6
+PKG181 seq_save
+PKG259 packf 1
+PKG352 rmf
+PKG513 stdio 2
+PKG819 prompter 1
+PKG105 folder_read
+PKG836 folder_addmsg
+PKG171 m_name 2
+PKG327 flist 1
+PKG456 distsbr 8
+PKG566 whatnowsbr 4
+PKG878 cpydgst
+PKG751 post 3
+PKG65 mhtest 1
+PKG920 picksbr 2
+PKG951 r1bindex 2
+PKG839 whatnowsbr
+PKG781 pidwait 4
+PKG473 pidwait 1
+PKG699 pidstatus 2
+PKG358 mhtest
+PKG463 mhoutsbr 1
+PKG651 dropsbr 4
+PKG422 ioctl 1
+PKG322 pwd 3
+PKG576 smatch
+PKG960 aliasbr
+PKG882 send 4
+PKG168 mhmail 2
+PKG14 concat 1
+PKG228 r1bindex 4
+PKG298 rcvtty 10
+PKG536 pidwait 2
+PKG47 mhlistsbr 2
+PKG353 inc 35
+PKG329 tws 1
+PKG492 lock_file 2
+PKG557 folder_realloc 2
+PKG370 mhshow 1
+PKG509 send 9
+PKG343 termsbr
+PKG2 termcap 14
+PKG75 dropsbr 1
+PKG203 repl
+PKG419 m_name 1
+PKG749 libio 1
+PKG627 refile 4
+PKG546 r1bindex
+PKG769 rmf 1
+PKG925 picksbr
+PKG531 error 8
+PKG555 m_maildir
+PKG890 rmm 1
+PKG342 cpydata
+PKG1033 getanswer
+PKG1042 vfgets
+PKG247 stdio 3
+PKG466 spost 1
+PKG465 stat 3
+PKG856 seq_setprev 1
+PKG860 ap 2
+PKG694 annosbr
+PKG1037 send 2
+PKG1028 scansbr 4
+PKG222 stdio 27
+PKG875 fmt_scan 1
+PKG676 mark
+PKG312 stdlib 3
+PKG500 mhshow 2
+PKG202 seq_getnum
+PKG212 seq_print 2
+PKG234 sortm 2
+PKG785 string 1
+PKG854 burst 1
+PKG235 forw 40
+PKG988 whatnow 2
+PKG841 mhn
+PKG80 seq_bits 1
+PKG746 rcvstore 1
+PKG615 m_scratch
+PKG712 mhlsbr 4
+PKG416 mts
+PKG181 stdio 5
+PKG234 getcpy 3
+PKG614 peekc
+PKG341 mshcmds 1
+PKG511 putenv 1
+PKG906 forw 2
+PKG559 fmt_compile 8
+PKG733 sendsbr 4
+PKG180 stdlib 5
+PKG56 aliasbr 11
+PKG590 scansbr 1
+PKG297 mhparse
+PKG15 seq_list
+PKG298 whatnowsbr 3
+PKG302 inc 2
+PKG598 rcvdist 1
+PKG512 whatnowsbr 6
+PKG988 showfile
+PKG546 m_getfld 4
+PKG177 lock_file 3
+PKG153 snprintb
+PKG213 addrsbr 2
+PKG88 mhbuildsbr 4
+PKG139 dtime 10
+PKG498 scan
+PKG107 m_convert 2
+PKG419 signals 1
+PKG700 gans 1
+PKG817 unistd 7
+PKG641 slocal 1
+PKG987 forw 7
+PKG123 stdlib 10
+PKG679 mhmail 10
+PKG638 context_foil 1
+PKG869 whatnowsbr 1
+PKG730 signals 2
+PKG113 sortm 3
+PKG577 rcvpack 1
+PKG374 spost 23
+PKG794 stat 5
+PKG1069 addrsbr 9
+PKG294 mhstore 1
+PKG746 mhbuild 2
+PKG57 rcvtty 1
+PKG632 error 25
+PKG641 comp 2
+PKG147 mhpath 1
+PKG849 msh 154
+PKG343 context_read 2
+PKG1053 trimcpy 4
+PKG1031 scan 1
+PKG996 folder 5
+PKG975 path 2
+PKG510 mhl 2
+PKG269 mhn 38
+PKG635 sendsbr 10
+PKG1057 rcvstore 19
+PKG553 mark 1
+PKG861 addrsbr
+PKG792 ali 7
+PKG1062 refile 2
+PKG359 m_scratch 2
+PKG467 mhn 3
+PKG735 uprf 2
+PKG954 strcasecmp 3
+PKG632 mhmail
+PKG51 m_backup
+PKG746 mts 1
+PKG741 mhparse 3
+PKG451 copy 2
+PKG744 termios 2
+PKG645 ssequal 1
+PKG574 mhstore
+PKG227 mshcmds 6
+PKG325 context_read
+PKG319 string 4
+PKG695 concat 7
+PKG710 m_maildir 3
+PKG229 setjmp 1
+PKG552 mshcmds 9
+PKG442 ambigsw 1
+PKG147 getans 3
+PKG1037 conflict 1
+PKG929 seq_save 1
+PKG1006 getanswer 2
+PKG844 unistd 1
+PKG212 fmt_new
+PKG569 signal 2
+PKG995 pwd 2
+PKG98 slocal 8
+PKG61 show 4
+PKG911 fmtdump 1
+PKG713 aliasbr 4
+PKG342 mhshowsbr 5
+PKG324 stdio 17
+PKG729 brkstring 4
+PKG172 cpydata 1
+PKG911 msgchk
+PKG297 stdlib 25
+PKG321 errno 1
+PKG532 msh 16
+PKG139 gans 2
+PKG758 brkstring 2
+PKG501 context_find 1
+PKG588 install-mh
+PKG848 string 3
+PKG1019 ap 5
+PKG584 fmt_compile 1
+PKG505 seq_add 1
+PKG785 fmt_addr
+PKG371 mhoutsbr
+PKG638 fcntl 2
+PKG762 send 23
+PKG731 mhbuild 7
+PKG150 ap 1
+PKG727 md5 6
+PKG124 unistd 10
+PKG824 rcvstore
+PKG225 folder_addmsg 1
+PKG459 error 5
+PKG619 fcntl 4
+PKG353 getfolder
+PKG420 m_scratch 1
+PKG1000 rcvtty 19
+PKG604 stdio 9
+PKG531 mts 16
+PKG72 seq_getnum 1
+PKG202 scan 2
+PKG471 mhbuild 27
+PKG381 path 3
+PKG69 sortm 5
+PKG125 post 1
+PKG804 conflict 18
+PKG129 msgchk 3
+PKG202 seq_list 2
+PKG589 error 3
+PKG274 burst
+PKG197 getanswer 1
+PKG856 fcntl 6
+PKG997 mhbuild 6
+PKG87 sendsbr 6
+PKG825 string 9
+PKG273 mhshowsbr 2
+PKG719 mhparam 2
+PKG921 spost 2
+PKG558 string 12
+PKG293 dp 3
+PKG960 stdlib 11
+PKG800 mhshow
+PKG506 mark 4
+PKG99 inc 3
+PKG191 dist 4
+PKG1003 prototypes 8
+PKG1021 dp 2
+PKG463 mhbuild 4
+PKG14 done 1
+PKG390 mhlsbr 13
+PKG372 fmt_rfc2047
+PKG633 spost 6
+PKG258 forw 3
+PKG744 ali
+PKG809 mhmisc 4
+PKG388 fmtdump
+PKG336 ssequal
+PKG743 print_sw 2
+PKG949 fmt_new 2
+PKG42 dp 1
+PKG949 rcvdist
+PKG672 prompter 30
+PKG433 stdio 7
+PKG782 addrsbr 11
+PKG23 msgchk 1
+PKG940 libio 2
+PKG360 mshcmds 4
+PKG122 context_save
+PKG431 mh 7
+PKG479 dtime 3
+PKG536 signals
+PKG590 inc
+PKG141 show 6
+PKG781 m_name 3
+PKG86 mhbuild 15
+PKG212 fcntl 1
+PKG717 mhstoresbr 1
+PKG722 remdir
+PKG977 seq_read
+PKG968 mhfree 3
+PKG874 cpydata 2
+PKG341 folder_realloc
+PKG721 folder_pack 2
+PKG232 seq_bits
+PKG388 install-mh 1
+PKG183 concat 4
+PKG764 error 4
+PKG386 picksbr 8
+PKG801 rcvstore 3
+PKG742 stdio 23
+PKG359 fmt_scan 2
+PKG892 print_help 2
+PKG127 replsbr 4
+PKG895 putenv
+PKG967 error 6
+PKG210 msh 33
+PKG56 locale 1
+PKG398 fmt_compile 3
+PKG105 smatch 4
+PKG790 post 11
+PKG303 unistd 4
+PKG822 seq_setprev 13
+PKG698 mf 1
+PKG1054 mts 7
+PKG579 snprintb 1
+PKG340 annosbr 1
+PKG617 whatnowsbr 2
+PKG512 config 6
+PKG626 push 1
+PKG704 uprf 1
+PKG1031 seq_setprev 2
+PKG1022 getans 1
+PKG206 conflict 2
+PKG764 sendsbr 2
+PKG1078 lock_file
+PKG911 mts 5
+PKG456 seq_nameok 2
+PKG895 distsbr 1
+PKG894 ali 1
+PKG1051 context_save 4
+PKG1042 forw 9
+PKG1004 viamail 1
+PKG721 mf 12
+PKG175 folder_realloc 1
+PKG795 mh 10
+PKG973 fmt_new 3
+PKG610 pidstatus
+PKG202 annosbr 5
+PKG619 smtp 25
+PKG675 rcvpack 8
+PKG205 string 26
+PKG682 readconfig 2
+PKG105 seq_read 1
+PKG792 readconfig
+PKG792 mhstore 2
+PKG351 scansbr 2
+PKG514 mf 47
+PKG548 mhbuildsbr 27
+PKG925 time 1
+PKG719 mhbuildsbr 10
+PKG144 ambigsw 3
+PKG878 sendsbr 3
+PKG988 mhtest 21
+PKG771 string 17
+PKG397 mhparam
+PKG968 mts 4
+PKG487 install-mh 2
+PKG719 mh 8
+PKG172 smtp 4
+PKG317 sortm 4
+PKG969 rcvpack 5
+PKG196 fmt_compile 2
+PKG557 folder_pack
+PKG114 replsbr 2
+PKG98 path 1
+PKG139 rcvtty 4
+PKG125 discard
+PKG262 mhbuildsbr 30
+PKG736 post 7
+PKG1070 fmt_compile 4
+PKG102 prototypes 3
+PKG1044 replsbr 6
+PKG987 fmtdump 12
+PKG560 msh 6
+PKG459 stdlib 7
+PKG34 context_del 1
+PKG515 ftpsbr 4
+PKG366 m_name 5
+PKG109 m_atoi 2
+PKG57 getarguments 4
+PKG980 ap 3
+PKG722 signal 5
+PKG576 picksbr 3
+PKG82 errno 4
+PKG846 scan 30
+PKG645 msh 4
+PKG606 comp 4
+PKG76 getarguments 2
+PKG655 rcvpack
+PKG44 stdio 53
+PKG986 path 5
+PKG547 context_find 8
+PKG837 mhshowsbr 1
+PKG572 ali 2
+PKG242 mf 11
+PKG1033 fcntl 9
+PKG944 seq_read 4
+PKG232 mhpath 2
+PKG464 string 20
+PKG317 client 1
+PKG1080 print_sw 1
+PKG182 rcvdist 7
+PKG281 ctype 10
+PKG661 seq_getnum 8
+PKG244 grp 2
+PKG929 stdio 15
+PKG411 in 2
+PKG689 mf 43
+PKG631 getans 2
+PKG323 mh 12
+PKG961 packf 19
+PKG643 unistd 3
+PKG598 seq_read 2
+PKG273 mhtest 3
+PKG1063 fmt_scan 5
+PKG730 picksbr 9
+PKG602 libio 3
+PKG623 folder 3
+PKG936 concat 11
+PKG187 sortm 6
+PKG1064 picksbr 1
+PKG29 mshcmds 11
+PKG844 closefds
+PKG753 flist 2
+PKG103 peekc 1
+PKG862 mhstoresbr 4
+PKG325 readconfig 1
+PKG316 folder_addmsg 2
+PKG611 aliasbr 2
+PKG703 check_charset
+PKG907 seq_del 1
+PKG815 whatnowproc 7
+PKG867 context_replace 1
+PKG176 context_read 3
+PKG337 stdio 12
+PKG124 grp 8
+PKG303 md5 3
+PKG99 mhparse 23
+PKG116 mf 20
+PKG42 seq_setunseen 3
+PKG1064 burst 19
+PKG221 conflict 4
+PKG467 peekc 2
+PKG61 picksbr 5
+PKG956 copyip 2
+PKG275 concat 2
+PKG84 netdb 2
+PKG468 mhstoresbr 8
+PKG960 spost 3
+PKG584 trimcpy 2
+PKG619 whom 3
+PKG997 vmhsbr 1
+PKG934 mshcmds 5
+PKG694 mshcmds 10
+PKG172 slocal 28
+PKG447 folder_delmsgs 1
+PKG494 signals 7
+PKG485 post 76
+PKG987 mhstore 3
+PKG1078 errno 2
+PKG107 slocal 4
+PKG589 push
+PKG515 seq_print
+PKG281 seq_list 4
+PKG704 strindex
+PKG421 dropsbr 2
+PKG130 stdlib 4
+PKG211 viamail 14
+PKG106 print_version
+PKG454 mh 6
+PKG518 mhcachesbr 3
+PKG154 netdb 3
+PKG475 print_sw
+PKG684 picksbr 4
+PKG445 unistd 40
+PKG113 dist 28
+PKG418 mhlsbr 1
+PKG58 viamail 4
+PKG1011 msgchk 21
+PKG414 send 5
+PKG921 annosbr 2
+PKG409 fmt_scan 3
+PKG887 packf 3
+PKG596 ctype 7
+PKG317 context_save 2
+PKG300 mhlsbr 5
+PKG586 error 13
+PKG279 mf 4
+PKG996 unistd 22
+PKG1075 scansbr 9
+PKG92 scan 10
+PKG1074 m_maildir 2
+PKG742 fdcompare 1
+PKG604 context_find 7
+PKG910 dist 8
+PKG278 unistd 2
+PKG864 fcntl 3
+PKG697 addrsbr 1
+PKG843 mhshowsbr 10
+PKG937 dtime 6
+PKG25 whom 4
+PKG538 stat 7
+PKG968 context_find 3
+PKG630 burst 2
+PKG778 copyip 1
+PKG587 whatnowproc 1
+PKG47 stdlib 8
+PKG97 seq_setunseen 1
+PKG935 string 37
+PKG147 mhmisc 5
+PKG989 context_del 2
+PKG205 rcvstore 2
+PKG1071 mhparse 4
+PKG810 annosbr 3
+PKG15 seq_print 4
+PKG596 annosbr 8
+PKG854 slocal 6
+PKG757 aliasbr 7
+PKG68 ambigsw 2
+PKG501 atooi
+PKG346 string 32
+PKG595 m_gmprot 3
+PKG344 scan 3
+PKG598 mhbuildsbr 12
+PKG493 utsname 2
+PKG697 signals 3
+PKG429 slocal 9
+PKG53 ftpsbr 6
+PKG747 mshcmds 8
+PKG231 m_gmprot
+PKG371 mhbuildsbr 3
+PKG1042 time 2
+PKG76 m_atoi 1
+PKG267 mhbuildsbr 266
+PKG715 m_backup 2
+PKG418 rcvpack 2
+PKG76 libio 8
+PKG580 stdio 115
+PKG47 mhfree
+PKG527 fmt_addr 29
+PKG909 fmt_rfc2047 3
+PKG210 ap 16
+PKG320 unistd 5
+PKG728 signals 4
+PKG577 mhbuildsbr 7
+PKG729 whatnowsbr 5
+PKG144 r1bindex 3
+PKG111 addrsbr 5
+PKG213 setjmp 3
+PKG397 msgchk 2
+PKG811 prototypes 5
+PKG1030 dtime 1
+PKG235 mhparse 7
+PKG566 md5
+PKG64 mhbuildsbr 20
+PKG461 fmtdump 2
+PKG860 dp 13
+PKG416 ctype 2
+PKG63 m_gmprot 2
+PKG168 replsbr 3
+PKG1051 inc 4
+PKG598 refile 28
+PKG133 context_replace 2
+PKG701 spost 4
+PKG79 folder_addmsg 6
+PKG1075 seq_getnum 2
+PKG751 libio 4
+PKG82 stdio 103
+PKG518 post 19
+PKG947 error 9
+PKG709 mts 14
+PKG646 rmm
+PKG936 packf 2
+PKG279 viamail 2
+PKG616 mhstoresbr 3
+PKG645 mhparse 18
+PKG108 stdio 14
+PKG32 ioctl 2
+PKG429 mts 3
+PKG235 rcvtty 2
+PKG649 mhn 17
+PKG549 getbbent 4
+PKG683 prompter 4
+PKG438 stdio 24
+PKG401 mshcmds 15
+PKG444 ftpsbr 1
+PKG1023 strcasecmp 2
+PKG647 smatch 2
+PKG720 folder_read 3
+PKG748 hosts 4
+PKG1074 r1bindex 11
+PKG61 refile 3
+PKG701 unistd 26
+PKG898 distsbr 4
+PKG263 fmt_scan 6
+PKG355 string 8
+PKG40 socket 4
+PKG111 slocal 2
+PKG1012 inc 9
+PKG620 forw 52
+PKG112 m_name 7
+PKG762 mhcachesbr 4
+PKG1058 rmf 11
+PKG828 rmm 14
+PKG261 m_scratch 5
+PKG346 mf 6
+PKG878 mh 35
+PKG165 crypt 1
+PKG701 unistd 20
+PKG519 hosts 10
+PKG213 rmm 3
+PKG619 anno 18
+PKG423 string 5
+PKG501 rcvdist 4
+PKG1057 mhn 8
+PKG536 vfgets 1
+PKG278 pwd
+PKG883 mhmisc 8
+PKG896 m_draft 3
+PKG720 string 16
+PKG475 print_help 1
+PKG1052 ctype 6
+PKG587 grp 1
+PKG327 rmf 2
+PKG597 trimcpy 1
+PKG964 rmm 2
+PKG958 mhfree 6
+PKG531 mhbuildsbr 2
+PKG354 inc 8
+PKG299 error 11
+PKG311 wait 3
+PKG947 smtp 3
+PKG809 post 41
+PKG796 forw 4
+PKG436 aliasbr 1
+PKG1010 mark 23
+PKG260 repl 10
+PKG1017 unistd 49
+PKG424 mark 2
+PKG988 closefds 1
+PKG745 mhparse 65
+PKG844 mhcachesbr 6
+PKG0 copy
+PKG37 m_convert 14
+PKG22 burst 21
+PKG555 stdio 29
+PKG608 tws 7
+PKG301 sigmsg 1
+PKG380 mhbuildsbr 8
+PKG478 fmt_compile 6
+PKG589 mhmisc 1
+PKG837 conflict 3
+PKG713 stdlib 15
+PKG309 grp 9
+PKG245 m_tmpfil 4
+PKG1034 mhparse 6
+PKG262 mhlist 8
+PKG391 pidwait 3
+PKG331 ali 6
+PKG86 mhmisc 3
+PKG942 unistd 24
+PKG821 slocal 5
+PKG793 stat 6
+PKG855 stdio 32
+PKG449 termcap
+PKG469 mhlsbr 19
+PKG423 m_gmprot 4
+PKG463 r1bindex 6
+PKG1035 msh 3
+PKG1061 rmf 4
+PKG750 check_charset 5
+PKG582 folder_pack 1
+PKG516 mhlsbr 11
+PKG241 brkstring 3
+PKG120 folder_free 2
+PKG214 addrsbr 3
+PKG954 inc 5
+PKG17 m_getfld 3
+PKG352 show 3
+PKG1011 mshcmds 30
+PKG696 pidstatus 4
+PKG140 mhstore 20
+PKG23 m_name 10
+PKG212 mhstoresbr 5
+PKG450 strcasecmp 4
+PKG126 stdio 21
+PKG16 netdb 1
+PKG1022 readconfig 3
+PKG1068 concat 5
+PKG541 whatnowproc 2
+PKG917 seq_save 4
+PKG553 anno 5
+PKG470 mhmisc 6
+PKG1008 rcvtty 3
+PKG1075 distsbr 5
+PKG261 addrsbr 7
+PKG839 mhparam 17
+PKG998 folder 31
+PKG888 seq_setcur 2
+PKG681 prompter 2
+PKG590 slocal 11
+PKG1030 fcntl 5
+PKG450 trimcpy 3
+PKG863 msh 8
+PKG449 post 5
+PKG814 ndbm 6
+PKG501 m_scratch 10
+PKG177 string 11
+PKG118 mf 26
+PKG1018 flist 7
+PKG320 mf 9
+PKG404 strindex 2
+PKG871 m_name 6
+PKG249 aliasbr 8
+PKG388 mhmail 22
+PKG351 dist 3
+PKG865 mhlistsbr 1
+PKG860 readconfig 4
+PKG188 burst 4
+PKG836 mhstoresbr 2
+PKG664 copy 1
+PKG546 getfolder 2
+PKG146 flist 26
+PKG380 stdio 6
+PKG160 tws 2
+PKG633 fmt_scan 8
+PKG66 folder_addmsg 5
+PKG459 anno 3
+PKG751 discard 1
+PKG481 packf 7
+PKG453 stat 8
+PKG158 print_version 2
+PKG233 mhshowsbr 4
+PKG1073 dropsbr 8
+PKG376 mf 10
+PKG816 show 25
+PKG232 ap 14
+PKG1043 msh 7
+PKG61 mhlsbr 6
+PKG856 mhparse 13
+PKG62 seq_del 2
+PKG162 m_tmpfil 2
+PKG880 m_maildir 8
+PKG785 unistd 12
+PKG253 repl 5
+PKG7 dp 5
+PKG324 folder 7
+PKG628 pick 22
+PKG914 rcvdist 10
+PKG709 mark 3
+PKG380 pwd 6
+PKG246 stdio 93
+PKG407 mshcmds 14
+PKG227 flist 4
+PKG432 closefds 3
+PKG796 replsbr 5
+PKG457 pick 2
+PKG487 scansbr 3
+PKG713 mhcachesbr 5
+PKG581 sendsbr 9
+PKG538 mf 8
+PKG878 mhshowsbr 9
+PKG343 mh 19
+PKG786 libio 5
+PKG158 client 2
+PKG605 rcvstore 4
+PKG85 config 3
+PKG1077 mshcmds 43
+PKG381 send 3
+PKG27 m_getfld 5
+PKG237 pwd 8
+PKG1026 replsbr 8
+PKG559 lock_file 1
+PKG188 mhparse 10
+PKG284 termios 1
+PKG300 signals 12
+PKG820 ctype 5
+PKG152 mshcmds 7
+PKG809 strcasecmp 9
+PKG917 hosts 2
+PKG690 mhparse 8
+PKG1053 ali 20
+PKG38 pick 4
+PKG981 mf 18
+PKG996 mh 26
+PKG361 addrsbr 18
+PKG970 context_save 3
+PKG286 string 21
+PKG218 m_maildir 5
+PKG211 addrsbr 4
+PKG147 folder_addmsg 4
+PKG1047 mshcmds 12
+PKG761 string 31
+PKG828 slocal 3
+PKG1074 tws 8
+PKG216 burst 8
+PKG320 mf 15
+PKG597 sortm 31
+PKG1050 unistd 39
+PKG788 socket 10
+PKG585 comp 25
+PKG476 repl 33
+PKG105 aliasbr 6
+PKG872 uio 1
+PKG407 wait 2
+PKG207 spost 16
+PKG507 forw 13
+PKG312 m_atoi 3
+PKG70 mhbuild 16
+PKG907 client 3
+PKG170 install-mh 17
+PKG269 strindex 4
+PKG501 copyip 4
+PKG434 inet 5
+PKG571 snprintb 2
+PKG116 repl 8
+PKG596 comp 5
+PKG793 seq_setunseen 2
+PKG1022 send 34
+PKG285 vmhsbr 30
+PKG569 repl 3
+PKG26 stdio 63
+PKG674 string 24
+PKG523 check_charset 2
+PKG842 mhmail 3
+PKG921 msh 20
+PKG768 burst 3
+PKG231 atooi 1
+PKG957 termsbr 9
+PKG92 aliasbr 3
+PKG313 fdcompare
+PKG920 fmt_addr 4
+PKG738 mhlist 27
+PKG9 mhpath 13
+PKG519 post 10
+PKG784 forw 43
+PKG617 ctype 8
+PKG547 mshcmds 13
+PKG424 mh 13
+PKG244 ambigsw 14
+PKG374 mark 6
+PKG574 stdlib 24

@@ -1,0 +1,450 @@
+PKG9 lib_acs
+PKG9 term 2
+PKG312 write_entry
+PKG312 string 14
+PKG15 lib_setup
+PKG432 term 10
+PKG236 curses
+PKG165 lib_options 8
+PKG73 getenv_num 2
+PKG17 lib_getch
+PKG305 lib_setup 1
+PKG62 comp_scan
+PKG255 stdio 5
+PKG269 lib_mouse
+PKG167 keyok 1
+PKG264 tty_update
+PKG203 doalloc 2
+PKG61 home_terminfo
+PKG112 stdio 1
+PKG293 lib_addch
+PKG178 lib_getstr 4
+PKG52 lib_insch 2
+PKG29 doalloc
+PKG224 comp_expand 3
+PKG21 alloc_ttype
+PKG141 stdlib 2
+PKG441 lib_redrawln
+PKG273 lib_touch 1
+PKG327 tries
+PKG411 define_key 2
+PKG43 lib_ti
+PKG43 string 3
+PKG367 parse_entry
+PKG431 lib_tputs
+PKG431 lib_napms 1
+PKG17 lib_slk
+PKG0 stdlib 3
+PKG219 lib_delwin
+PKG150 lib_move
+PKG16 lib_getstr 3
+PKG370 access
+PKG370 unistd 1
+PKG143 lib_delch 1
+PKG226 lib_mvwin
+PKG226 lib_delwin 1
+PKG420 lib_set_term
+PKG362 lib_newterm 2
+PKG298 hashmap
+PKG298 lib_redrawln 2
+PKG15 errno 1
+PKG273 lib_scroll 3
+PKG41 termcap
+PKG38 termios 1
+PKG43 lib_slkset
+PKG30 curses 2
+PKG92 tic
+PKG93 lib_print
+PKG414 term 5
+PKG411 add_tries
+PKG411 keyok 2
+PKG17 lib_addch 1
+PKG14 lib_ttyflags 1
+PKG46 keyok
+PKG137 comp_parse
+PKG139 alloc_ttype 1
+PKG300 safe_sprintf
+PKG417 libio 1
+PKG107 ctype 1
+PKG150 lib_slk 2
+PKG352 lib_bkgd
+PKG329 lib_mvwin 2
+PKG285 wresize
+PKG136 lib_addch 2
+PKG447 term 1
+PKG136 lib_clrbot
+PKG383 lib_restart
+PKG13 lib_echo 2
+PKG194 lib_window
+PKG333 lib_vline
+PKG0 lib_pad
+PKG216 tty_update 1
+PKG269 unistd 2
+PKG366 lib_scroll
+PKG333 lib_window 1
+PKG412 lib_tracechr
+PKG412 captoinfo 1
+PKG320 lib_window 5
+PKG144 lib_addstr
+PKG228 lib_baudrate 1
+PKG243 captoinfo
+PKG29 lib_tparm 4
+PKG391 name_match 1
+PKG44 lib_printw 2
+PKG114 lib_slkatrset 1
+PKG250 lib_mvcur
+PKG36 curses 4
+PKG44 stdlib 1
+PKG346 lib_tparm
+PKG89 string 6
+PKG184 lib_color
+PKG184 curses 22
+PKG126 lib_box 9
+PKG313 lib_vidattr 1
+PKG173 comp_error
+PKG173 comp_scan 3
+PKG258 lib_bkgd 4
+PKG122 comp_error 7
+PKG132 term
+PKG132 lib_cur_term 1
+PKG13 lib_newwin 2
+PKG103 lib_box
+PKG393 lib_addch 9
+PKG188 stdio 9
+PKG49 trace_buf
+PKG249 doalloc 3
+PKG420 lib_tstp 1
+PKG381 lib_slkrefr 1
+PKG28 lib_screen
+PKG28 time 2
+PKG175 lib_napms
+PKG408 lib_tputs 1
+PKG403 lib_trace 1
+PKG372 lib_scanw
+PKG2 lib_move 4
+PKG10 resizeterm
+PKG266 curses 8
+PKG221 lib_move 1
+PKG137 term_entry 10
+PKG328 lib_getstr
+PKG420 lib_acs 1
+PKG330 lib_window 2
+PKG335 lib_touch
+PKG194 lib_bkgd 1
+PKG228 lib_newterm
+PKG88 lib_initscr 1
+PKG177 lib_newwin
+PKG177 lib_screen 2
+PKG284 unctrl 2
+PKG120 lib_vidattr 3
+PKG62 string 11
+PKG388 lib_window 3
+PKG92 comp_parse 3
+PKG173 comp_parse 2
+PKG350 write_entry 1
+PKG221 lib_addstr 1
+PKG222 setbuf
+PKG121 curses 7
+PKG272 hardscroll 1
+PKG367 captoinfo 2
+PKG412 comp_scan 2
+PKG413 lib_clrbot 1
+PKG366 string 1
+PKG211 lib_slk 4
+PKG429 lib_flash
+PKG18 tty_update 2
+PKG293 lib_vline 2
+PKG97 lib_erase
+PKG97 lib_clear 1
+PKG39 define_key
+PKG419 curses 1
+PKG126 lib_overlay 2
+PKG397 stat
+PKG397 write_entry 5
+PKG27 lib_trace
+PKG27 trace_buf 3
+PKG205 wresize 1
+PKG288 term 18
+PKG214 poll 1
+PKG69 lib_echo 1
+PKG299 ctype 3
+PKG276 lib_slkinit
+PKG258 lib_hline
+PKG344 lib_baudrate
+PKG358 termcap 3
+PKG175 time 1
+PKG192 lib_vline 1
+PKG392 lib_insstr
+PKG23 read_entry
+PKG203 hardscroll
+PKG264 lib_scroll 1
+PKG297 lib_ttyflags
+PKG297 term 8
+PKG359 stdio 3
+PKG258 lib_screen 1
+PKG32 lib_twait
+PKG305 lib_cur_term
+PKG30 lib_slkcolor
+PKG394 lib_baudrate 4
+PKG61 string 2
+PKG338 lib_beep
+PKG338 lib_tputs 2
+PKG70 string 5
+PKG51 comp_scan 4
+PKG41 term 4
+PKG372 curses 5
+PKG176 curses 37
+PKG305 free_ttype 1
+PKG441 hashmap 1
+PKG108 home_terminfo 2
+PKG230 lib_slkclear
+PKG178 lib_refresh 1
+PKG19 alloc_entry
+PKG84 parse_entry 12
+PKG240 lib_box 1
+PKG297 lib_options 2
+PKG211 resizeterm 1
+PKG301 lib_screen 4
+PKG62 lib_tracechr 2
+PKG436 term 12
+PKG271 lib_mvwin 1
+PKG10 lib_ungetch 1
+PKG291 lib_printw
+PKG26 lib_vidattr
+PKG335 lib_redrawln 3
+PKG57 parametrized 2
+PKG227 stdlib 4
+PKG346 comp_error 1
+PKG17 lib_getstr 2
+PKG300 curses 3
+PKG350 termcap 4
+PKG435 lib_nl
+PKG158 lib_termcap
+PKG158 capdefaults 2
+PKG120 lib_refresh 2
+PKG141 comp_expand
+PKG174 free_ttype
+PKG205 lib_tracechr 1
+PKG243 parse_entry 1
+PKG414 lib_options
+PKG340 lib_raw 1
+PKG221 lib_slkrefr
+PKG447 lib_dft_fgbg
+PKG382 lib_trace 2
+PKG15 lib_newterm 3
+PKG224 lib_restart 3
+PKG186 lib_newwin 1
+PKG24 add_tries 1
+PKG36 lib_raw
+PKG254 lib_ttyflags 7
+PKG282 lib_tstp
+PKG222 lib_set_term 1
+PKG148 lib_erase 1
+PKG282 lib_endwin 2
+PKG183 comp_hash
+PKG402 tic 6
+PKG415 read_entry 1
+PKG30 lib_longname
+PKG24 init_keytry
+PKG92 comp_scan 5
+PKG1 lib_addstr 2
+PKG309 lib_slk 1
+PKG198 wresize 4
+PKG144 lib_slkrefr 4
+PKG323 write_entry 9
+PKG328 lib_addch 3
+PKG131 lib_newwin 5
+PKG151 write_entry 3
+PKG273 lib_clear
+PKG109 lib_erase 2
+PKG25 lib_nl 2
+PKG277 termcap 2
+PKG282 curses 6
+PKG132 lib_setup 3
+PKG438 capdefaults
+PKG19 stdlib 6
+PKG18 lib_refresh
+PKG351 lib_overlay
+PKG151 lib_mvwin 4
+PKG16 access 1
+PKG262 string 10
+PKG334 lib_set_term 15
+PKG186 stdlib 7
+PKG128 lib_termname
+PKG94 init_keytry 2
+PKG367 tic 31
+PKG410 tty_update 4
+PKG349 fcntl 2
+PKG163 lib_getstr 1
+PKG399 lib_vidattr 2
+PKG23 string 9
+PKG180 lib_window 4
+PKG133 lib_ttyflags 2
+PKG388 lib_scroll 4
+PKG63 lib_has_cap 2
+PKG228 lib_options 1
+PKG265 keybound
+PKG265 tries 1
+PKG398 lib_pad 8
+PKG367 comp_error 6
+PKG68 lib_tparm 1
+PKG322 curses 10
+PKG333 lib_insdel
+PKG442 lib_clreol 2
+PKG398 lib_setup 2
+PKG241 name_match
+PKG241 comp_parse 4
+PKG222 stdio 2
+PKG45 lib_addch 4
+PKG164 lib_mvwin 7
+PKG5 lib_delwin 4
+PKG369 lib_scanw 5
+PKG77 lib_delwin 2
+PKG376 lib_delch
+PKG428 setbuf 1
+PKG392 lib_getch 1
+PKG177 lib_set_term 5
+PKG184 lib_tparm 5
+PKG291 safe_sprintf 2
+PKG157 define_key 1
+PKG333 lib_clreol
+PKG207 lib_tputs 9
+PKG224 ioctl 1
+PKG216 lib_endwin
+PKG343 string 22
+PKG405 lib_pad 3
+PKG93 unistd 3
+PKG10 lib_clearok 1
+PKG93 lib_tparm 2
+PKG73 lib_initscr
+PKG425 stdio 4
+PKG352 keyok 3
+PKG106 comp_hash 7
+PKG81 parametrized 1
+PKG257 lib_getch 3
+PKG9 lib_has_cap
+PKG236 lib_slkatrof 1
+PKG320 term 6
+PKG17 lib_twait 2
+PKG34 lib_slkatron 1
+PKG370 string 4
+PKG27 parse_entry 2
+PKG28 stdio 13
+PKG419 lib_slkattr
+PKG225 alloc_entry 10
+PKG29 trace_buf 4
+PKG157 lib_tparm 7
+PKG285 resizeterm 3
+PKG21 alloc_entry 2
+PKG13 lib_tputs 25
+PKG77 lib_tputs 3
+PKG324 lib_insch
+PKG324 lib_insstr 2
+PKG377 lib_insch 1
+PKG174 read_entry 2
+PKG216 lib_mvcur 1
+PKG30 lib_slkatr_set
+PKG185 comp_scan 1
+PKG26 tty_update 9
+PKG428 term 7
+PKG274 lib_termcap 2
+PKG295 tty_update 19
+PKG179 lib_isendwin
+PKG28 stat 1
+PKG250 string 15
+PKG288 lib_clreol 1
+PKG71 make_keys
+PKG273 lib_bkgd 2
+PKG162 lib_raw 2
+PKG448 resizeterm 7
+PKG95 lib_slkatrof
+PKG219 lib_insdel 5
+PKG418 resizeterm 2
+PKG143 hardscroll 4
+PKG238 lib_slkinit 1
+PKG17 lib_hline 1
+PKG236 lib_slkcolor 1
+PKG236 lib_mvcur 2
+PKG83 term 3
+PKG188 lib_color 1
+PKG46 lib_mouse 1
+PKG3 lib_insdel 1
+PKG314 lib_slkatron
+PKG94 lib_nl 1
+PKG193 tries 3
+PKG311 nc_panel
+PKG29 stdlib 5
+PKG165 lib_vidattr 12
+PKG6 lib_ungetch
+PKG383 lib_raw 4
+PKG395 curses 26
+PKG71 stdio 12
+PKG196 keybound 2
+PKG388 lib_slklab
+PKG264 lib_has_cap 1
+PKG304 lib_beep 1
+PKG278 tic 15
+PKG356 lib_clearok
+PKG168 term_entry
+PKG394 lib_hline 2
+PKG182 setbuf 2
+PKG201 lib_echo
+PKG158 term 13
+PKG49 lib_termcap 1
+PKG418 tty_update 3
+PKG39 tries 2
+PKG173 tic 3
+PKG183 capdefaults 1
+PKG158 string 8
+PKG410 alloc_entry 3
+PKG6 lib_getch 2
+PKG178 curses 72
+PKG227 getenv_num
+PKG319 lib_slkatrset
+PKG155 lib_slktouch
+PKG370 lib_screen 3
+PKG103 curses 9
+PKG304 errno 2
+PKG194 lib_insstr 1
+PKG433 doalloc 4
+PKG112 version
+PKG425 lib_cur_term 2
+PKG200 lib_color 4
+PKG243 tic 1
+PKG431 lib_slkrefr 2
+PKG168 stat 5
+PKG49 read_entry 12
+PKG255 lib_tputs 8
+PKG164 stdlib 10
+PKG263 lib_printw 5
+PKG219 tty_update 7
+PKG53 signal 12
+PKG375 hashmap 7
+PKG83 lib_kernel
+PKG179 init_keytry 1
+PKG274 unistd 4
+PKG220 lib_color 15
+PKG11 lib_slkatr_set 2
+PKG315 captoinfo 7
+PKG427 lib_kernel 4
+PKG138 name_match 3
+PKG195 lib_newterm 1
+PKG419 lib_colorset
+PKG399 curses 14
+PKG28 access 3
+PKG328 lib_scanw 2
+PKG143 lib_pad 4
+PKG177 stdlib 8
+PKG114 lib_newwin 3
+PKG255 lib_mouse 6
+PKG56 free_ttype 2
+PKG192 lib_kernel 1
+PKG149 lib_getch 4
+PKG228 lib_set_term 2
+PKG137 tic 4
+PKG276 curses 13
+PKG140 access 4
+PKG414 lib_has_cap 4
+PKG249 termios 2
+PKG418 curses 34
+PKG32 poll 2

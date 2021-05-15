@@ -1,0 +1,237 @@
+PKG124 socket
+PKG231 signal 2
+PKG54 fileio
+PKG29 strings 7
+PKG75 display
+PKG7 fileio 1
+PKG231 attacher
+PKG83 errno 4
+PKG162 input
+PKG162 stdlib 1
+PKG189 help
+PKG189 screen 46
+PKG97 
+PKG119 utmp 1
+PKG47 screen
+PKG89 window 14
+PKG208 pty
+PKG208 window 2
+PKG53 misc 13
+PKG221 process
+PKG135 misc 12
+PKG154 stdio 9
+PKG59 resize
+PKG117 ioctl 2
+PKG91 unistd 18
+PKG214 tty
+PKG214 errno 5
+PKG184 termcap
+PKG184 window 1
+PKG167 screen 47
+PKG225 misc
+PKG189 acls 1
+PKG124 utmp 2
+PKG54 fcntl 2
+PKG154 screen 203
+PKG155 termcap 2
+PKG149 input 17
+PKG231 stdlib 10
+PKG184 display 1
+PKG223 stat
+PKG104 fileio 2
+PKG58 stat 5
+PKG23 tty 1
+PKG214 ansi 1
+PKG40 window
+PKG179 process 7
+PKG21 process 4
+PKG103 loadav 1
+PKG45 search 7
+PKG75 misc 4
+PKG231 socket 8
+PKG116 dirent 5
+PKG225 window 5
+PKG132 stdlib 18
+PKG51 stdio 2
+PKG29 utmp
+PKG29 time 1
+PKG1 strings 1
+PKG210 strings 9
+PKG225 help 9
+PKG138 stdio 4
+PKG221 socket 19
+PKG71 libio 1
+PKG173 pwd 5
+PKG223 attacher 2
+PKG48 strings 2
+PKG39 process 39
+PKG174 ansi
+PKG86 errno 3
+PKG151 unistd 39
+PKG168 acls 2
+PKG54 stdio 12
+PKG76 strings 5
+PKG214 process 3
+PKG193 utmp 3
+PKG168 mark
+PKG152 display 2
+PKG75 unistd 5
+PKG37 fcntl 7
+PKG73 termcap 1
+PKG188 search
+PKG188 input 3
+PKG130 fileio 3
+PKG203 utmpx 12
+PKG4 wait 2
+PKG80 acls
+PKG184 help 7
+PKG144 term 1
+PKG28 attacher 14
+PKG140 misc 16
+PKG17 tty 4
+PKG212 termcap 16
+PKG40 stat 4
+PKG29 window 3
+PKG230 ansi 6
+PKG47 select 3
+PKG25 process 2
+PKG229 resize 7
+PKG213 termios 1
+PKG39 stdio 8
+PKG160 time 6
+PKG56 strings 3
+PKG209 process 1
+PKG1 display 4
+PKG220 window 7
+PKG0 termios 2
+PKG124 osdef 1
+PKG124 resize 1
+PKG208 misc 2
+PKG196 screen 41
+PKG174 window 8
+PKG188 display 5
+PKG124 fileio 7
+PKG65 misc 8
+PKG183 acls 5
+PKG59 stdlib 15
+PKG206 display 58
+PKG93 utmp 10
+PKG91 termios 5
+PKG134 time 2
+PKG75 osdef 13
+PKG87 ansi 20
+PKG95 resize 2
+PKG80 screen 28
+PKG148 ansi 4
+PKG54 errno 2
+PKG23 mark 7
+PKG204 term 8
+PKG210 input 2
+PKG136 help 6
+PKG141 fcntl 4
+PKG56 stdlib 9
+PKG213 display 21
+PKG113 socket 3
+PKG153 stdlib 23
+PKG161 socket 17
+PKG149 ansi 118
+PKG69 screen 52
+PKG233 fcntl 1
+PKG51 stat 2
+PKG22 strings 4
+PKG193 mark 37
+PKG40 tty 9
+PKG54 stdlib 13
+PKG33 fileio 24
+PKG80 process 19
+PKG45 input 6
+PKG221 tty 5
+PKG175 socket 2
+PKG225 screen 48
+PKG97 screen 1
+PKG19 unistd 50
+PKG99 loadav
+PKG93 stdio 3
+PKG103 screen 148
+PKG174 misc 10
+PKG95 fcntl 3
+PKG29 unistd 1
+PKG47 misc 29
+PKG123 search 1
+PKG156 stdlib 6
+PKG102 ioctl 3
+PKG50 misc 1
+PKG225 pty 1
+PKG13 stdlib 14
+PKG225 socket 5
+PKG37 shadow 3
+PKG205 process 9
+PKG29 socket 1
+PKG128 socket 7
+PKG174 tty 2
+PKG90 signal 4
+PKG103 stdio 6
+PKG188 screen 35
+PKG214 pty 2
+PKG225 ansi 10
+PKG101 resize 5
+PKG223 screen 6
+PKG222 attacher 1
+PKG19 unistd 15
+PKG125 resize 4
+PKG143 errno 6
+PKG75 search 8
+PKG188 mark 5
+PKG47 attacher 5
+PKG147 screen 51
+PKG115 misc 6
+PKG13 screen 20
+PKG140 process 14
+PKG203 stdio 1
+PKG174 strings 18
+PKG40 pty 4
+PKG113 display 3
+PKG10 ioctl 1
+PKG168 screen 93
+PKG40 ansi 7
+PKG56 tty 14
+PKG100 term 2
+PKG122 stdlib 3
+PKG74 screen 23
+PKG189 termcap 3
+PKG122 screen 113
+PKG145 ansi 17
+PKG106 stdlib 5
+PKG13 misc 20
+PKG159 unistd 6
+PKG85 stat 8
+PKG130 screen 67
+PKG1 acls 20
+PKG119 time 9
+PKG82 fcntl 5
+PKG181 stdlib 11
+PKG196 search 12
+PKG26 fileio 8
+PKG234 socket 6
+PKG193 unistd 8
+PKG183 help 27
+PKG90 display 35
+PKG81 osdef 4
+PKG189 misc 9
+PKG98 unistd 12
+PKG149 acls 3
+PKG146 screen 76
+PKG184 fileio 5
+PKG154 resize 3
+PKG174 display 89
+PKG207 display 13
+PKG40 unistd 23
+PKG232 ansi 16
+PKG14 ansi 2
+PKG57 resource 1
+PKG163 stdio 15
+PKG54 process 8
+PKG170 mark 11
+PKG162 screen 17
+PKG170 help 31
+PKG133 errno 1

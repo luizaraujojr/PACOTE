@@ -1,0 +1,138 @@
+PKG45 ui
+PKG33 micq 145
+PKG114 file_util
+PKG114 ctype 1
+PKG125 icq_response
+PKG97 micq 23
+PKG94 util_ui
+PKG94 ioctl 1
+PKG128 micq
+PKG99 ui 2
+PKG41 stdlib 17
+PKG49 server
+PKG85 micq 32
+PKG14 mreadline
+PKG14 micq 6
+PKG86 network
+PKG86 util_ui 1
+PKG83 socket 15
+PKG86 mreadline 2
+PKG121 errno 1
+PKG128 mselect 5
+PKG109 util
+PKG4 util_ui 7
+PKG14 stdlib 4
+PKG89 jp_conv
+PKG93 string 3
+PKG114 fcntl 8
+PKG77 server 3
+PKG50 util 2
+PKG0 termios 4
+PKG51 util 5
+PKG28 char_conv
+PKG69 icq_response 8
+PKG109 micq 42
+PKG132 unistd 2
+PKG45 icq_response 1
+PKG127 util 36
+PKG34 server 26
+PKG76 util 68
+PKG3 rus_conv
+PKG3 string 1
+PKG50 stat
+PKG49 util 15
+PKG60 msg_queue
+PKG103 util_ui 28
+PKG36 unistd 1
+PKG33 char_conv 5
+PKG66 sendmsg
+PKG49 util_ui 5
+PKG84 time 7
+PKG119 stdlib 9
+PKG126 string
+PKG126 util 4
+PKG128 netdb 4
+PKG14 util_ui 3
+PKG86 assert 1
+PKG94 assert 2
+PKG49 msg_queue 1
+PKG94 micq 14
+PKG81 string 15
+PKG106 micq 101
+PKG61 ui 53
+PKG114 stdio 7
+PKG109 server 11
+PKG134 util_ui 13
+PKG80 file_util 6
+PKG49 ui 1
+PKG125 string 6
+PKG125 stdio 1
+PKG15 in 1
+PKG0 stdio 2
+PKG114 sendmsg 1
+PKG107 util_ui 19
+PKG56 sendmsg 4
+PKG94 unistd 4
+PKG128 file_util 5
+PKG62 util 1
+PKG14 string 7
+PKG102 util 96
+PKG96 assert 3
+PKG52 network 2
+PKG128 in 14
+PKG17 file_util 3
+PKG94 string 13
+PKG14 stdio 6
+PKG94 stdio 8
+PKG89 micq 1
+PKG91 sendmsg 6
+PKG25 micq 2
+PKG25 file_util 1
+PKG60 micq 3
+PKG8 mreadline 3
+PKG105 msg_queue 9
+PKG39 rus_conv 1
+PKG31 stdio 4
+PKG45 icq_response 61
+PKG58 stdlib 19
+PKG114 time 3
+PKG101 mreadline 6
+PKG44 unistd 3
+PKG9 time 6
+PKG117 mselect
+PKG117 select 1
+PKG3 char_conv 2
+PKG118 stdlib 18
+PKG60 util 6
+PKG38 sendmsg 138
+PKG79 mreadline 7
+PKG35 string 21
+PKG13 mreadline 4
+PKG38 stdio 11
+PKG67 stat 3
+PKG106 inet 5
+PKG5 in 4
+PKG116 server 8
+PKG75 util 14
+PKG109 time 5
+PKG93 icq_response 11
+PKG28 jp_conv 1
+PKG114 util_ui 9
+PKG17 sendmsg 25
+PKG14 termios 3
+PKG19 sendmsg 2
+PKG5 stdlib 7
+PKG76 string 57
+PKG95 icq_response 7
+PKG66 char_conv 4
+PKG109 msg_queue 7
+PKG114 ui 3
+PKG115 sendmsg 33
+PKG102 string 33
+PKG94 time 4
+PKG63 ui 16
+PKG60 server 1
+PKG128 wait 1
+PKG125 sendmsg 3
+PKG5 stdlib 2
+PKG12 micq 175

@@ -1,0 +1,375 @@
+PKG243 tty
+PKG152 macro 1
+PKG131 b
+PKG0 vfile 59
+PKG62 pw
+PKG284 config 5
+PKG260 time 1
+PKG284 va
+PKG315 rc 1
+PKG233 undo
+PKG140 blocks 2
+PKG31 blocks
+PKG31 b 65
+PKG223 vfile
+PKG260 fcntl 6
+PKG295 ushell
+PKG3 qw 1
+PKG373 w
+PKG90 config 6
+PKG163 macro
+PKG132 main 9
+PKG214 cmd
+PKG214 config 2
+PKG31 help 2
+PKG87 uerror
+PKG86 w 4
+PKG112 ublock
+PKG218 tty 3
+PKG304 tw
+PKG10 ufile 7
+PKG90 kbd
+PKG7 rc 13
+PKG29 path
+PKG224 rc 4
+PKG323 usearch
+PKG166 regex 2
+PKG159 uisrch
+PKG245 ufile 2
+PKG374 tab
+PKG64 b 17
+PKG131 blocks 29
+PKG374 w 5
+PKG69 ufile
+PKG302 ushell 2
+PKG243 errno 4
+PKG138 uisrch 4
+PKG109 termcap
+PKG180 va 3
+PKG290 libio 2
+PKG367 kbd 2
+PKG245 stdio 1
+PKG302 uerror 1
+PKG238 utag
+PKG337 b 10
+PKG373 menu 7
+PKG126 scrn 4
+PKG102 vs 26
+PKG229 queue
+PKG366 uerror 5
+PKG87 bw 4
+PKG181 ushell 8
+PKG281 uformat
+PKG281 ublock 9
+PKG318 zstr
+PKG163 pw 1
+PKG238 w 1
+PKG217 ublock 5
+PKG29 ufile 4
+PKG235 fcntl 4
+PKG226 bw
+PKG269 zstr 6
+PKG304 bw 29
+PKG195 rc
+PKG205 poshist
+PKG226 main 1
+PKG195 path 2
+PKG373 zstr 1
+PKG270 pw 2
+PKG48 queue 6
+PKG323 main 2
+PKG195 uedit 1
+PKG103 tty 2
+PKG245 stat
+PKG152 termcap 12
+PKG5 uedit
+PKG79 ublock 4
+PKG92 queue 2
+PKG278 uisrch 9
+PKG367 vs 2
+PKG303 undo 2
+PKG318 rc 18
+PKG295 tw 3
+PKG113 b 26
+PKG58 help
+PKG175 w 2
+PKG298 scrn 9
+PKG90 termcap 4
+PKG136 scrn
+PKG136 ublock 1
+PKG361 regex
+PKG239 termcap 5
+PKG155 kbd 3
+PKG242 zstr 17
+PKG263 pwd 2
+PKG283 help 7
+PKG373 queue 5
+PKG64 macro 6
+PKG304 b 15
+PKG226 ufile 18
+PKG6 scrn 8
+PKG323 vs 11
+PKG246 config 3
+PKG332 vs
+PKG6 ufile 15
+PKG82 regex 20
+PKG57 help 3
+PKG237 b 3
+PKG102 w 7
+PKG193 uformat 2
+PKG204 main
+PKG370 qw
+PKG233 config 11
+PKG310 stdio 6
+PKG131 undo 70
+PKG69 menu 1
+PKG105 termcap 3
+PKG61 poshist 3
+PKG296 ushell 18
+PKG76 main 3
+PKG69 macro 4
+PKG345 va 2
+PKG89 hash
+PKG239 cmd 8
+PKG292 stdio 31
+PKG284 vs 22
+PKG160 va 9
+PKG69 scrn 2
+PKG101 menu 4
+PKG101 usearch 1
+PKG201 vs 4
+PKG307 main 7
+PKG29 vs 16
+PKG230 tty 4
+PKG295 vs 7
+PKG263 tab 32
+PKG346 bw 2
+PKG188 config 1
+PKG301 poshist 2
+PKG181 vfile 12
+PKG66 ublock 210
+PKG334 path 16
+PKG214 vs 14
+PKG195 zstr 18
+PKG42 cmd 4
+PKG268 queue 34
+PKG257 kbd 4
+PKG243 termios 6
+PKG112 zstr 4
+PKG194 pw 5
+PKG213 tw 1
+PKG62 ushell 3
+PKG44 menu
+PKG284 tab 9
+PKG284 cmd 9
+PKG133 path 3
+PKG256 umath
+PKG177 stdio 2
+PKG73 vfile 9
+PKG78 bw 39
+PKG112 b 151
+PKG5 qw 9
+PKG243 ushell 7
+PKG321 va 1
+PKG295 b 14
+PKG141 config 12
+PKG112 w 17
+PKG68 ublock 3
+PKG318 hash 2
+PKG166 ufile 5
+PKG112 uedit 2
+PKG238 vs 5
+PKG102 blocks 1
+PKG136 config 8
+PKG159 cmd 3
+PKG362 uformat 88
+PKG2 stdio 5
+PKG109 stat 1
+PKG158 rc 6
+PKG69 pw 11
+PKG169 tab 11
+PKG61 umath 3
+PKG324 w 14
+PKG256 rc 2
+PKG238 b 7
+PKG12 b 19
+PKG306 termcap 2
+PKG323 utag 5
+PKG154 stdio 20
+PKG339 ufile 3
+PKG69 config 4
+PKG205 w 3
+PKG257 qw 5
+PKG88 zstr 2
+PKG360 kbd 5
+PKG226 uedit 3
+PKG323 uisrch 8
+PKG370 ufile 17
+PKG236 cmd 2
+PKG8 uedit 6
+PKG67 b 5
+PKG89 config 7
+PKG373 usearch 3
+PKG374 menu 5
+PKG44 vs 6
+PKG177 usearch 5
+PKG58 scrn 10
+PKG69 main 5
+PKG16 usearch 4
+PKG12 b 8
+PKG280 tty 9
+PKG243 signal 16
+PKG229 b 33
+PKG245 tab 5
+PKG303 qw 8
+PKG204 w 8
+PKG171 tty 5
+PKG318 menu 2
+PKG306 tw 7
+PKG84 path 5
+PKG130 stdio 10
+PKG46 b 4
+PKG260 ioctl 2
+PKG318 uerror 11
+PKG25 b 53
+PKG134 cmd 1
+PKG211 queue 16
+PKG204 macro 8
+PKG129 bw 18
+PKG29 zstr 8
+PKG62 usearch 14
+PKG9 vs 18
+PKG171 vs 3
+PKG65 hash 5
+PKG351 umath 2
+PKG131 main 6
+PKG69 path 6
+PKG272 tty 19
+PKG132 ublock 14
+PKG339 uerror 6
+PKG361 uformat 1
+PKG191 cmd 17
+PKG140 scrn 1
+PKG349 tty 6
+PKG70 tty 1
+PKG164 queue 4
+PKG256 b 2
+PKG251 config 13
+PKG99 tw 30
+PKG109 regex 5
+PKG318 termcap 9
+PKG5 stdio 3
+PKG78 uisrch 1
+PKG286 b 42
+PKG315 termcap 39
+PKG136 tw 18
+PKG317 stdio 11
+PKG50 utag 1
+PKG75 utime 1
+PKG323 w 6
+PKG332 regex 7
+PKG365 usearch 67
+PKG18 va 25
+PKG87 zstr 7
+PKG223 b 22
+PKG129 tab 1
+PKG63 bw 3
+PKG136 main 10
+PKG58 rc 5
+PKG112 bw 1
+PKG71 uedit 20
+PKG195 config 16
+PKG49 tab 2
+PKG293 utag 17
+PKG136 uedit 8
+PKG361 macro 3
+PKG214 macro 11
+PKG260 tty 8
+PKG163 cmd 15
+PKG176 uerror 2
+PKG112 undo 1
+PKG107 w 15
+PKG210 tw 2
+PKG238 ufile 1
+PKG47 ublock 7
+PKG250 utag 3
+PKG56 blocks 5
+PKG274 ufile 14
+PKG88 ushell 1
+PKG57 uisrch 7
+PKG312 pw 33
+PKG204 scrn 6
+PKG214 rc 3
+PKG4 vs 8
+PKG183 pw 15
+PKG256 signal 2
+PKG315 va 7
+PKG54 signal 1
+PKG24 uedit 15
+PKG304 vs 15
+PKG339 bw 6
+PKG305 vs 17
+PKG132 b 129
+PKG312 qw 34
+PKG114 rc 8
+PKG347 w 11
+PKG268 zstr 12
+PKG262 path 19
+PKG246 tab 22
+PKG277 dirent 5
+PKG370 vs 9
+PKG109 zstr 3
+PKG68 b 12
+PKG86 bw 10
+PKG5 scrn 3
+PKG181 macro 5
+PKG206 poshist 11
+PKG334 pw 19
+PKG28 tw 8
+PKG253 uisrch 15
+PKG216 main 11
+PKG3 ublock 10
+PKG56 scrn 66
+PKG129 undo 8
+PKG106 uedit 11
+PKG343 errno 1
+PKG46 ufile 6
+PKG356 tw 36
+PKG180 bw 24
+PKG87 queue 7
+PKG31 scrn 81
+PKG69 uerror 3
+PKG298 va 4
+PKG256 macro 7
+PKG9 w 33
+PKG203 usearch 6
+PKG198 umath 5
+PKG5 umath 9
+PKG13 uedit 4
+PKG204 vfile 2
+PKG322 usearch 2
+PKG302 uedit 132
+PKG109 config 9
+PKG358 b 29
+PKG332 utag 18
+PKG33 cmd 16
+PKG18 pw 4
+PKG223 path 4
+PKG29 tab 10
+PKG3 qw 4
+PKG240 usearch 9
+PKG69 w 16
+PKG226 tw 32
+PKG103 rc 10
+PKG61 bw 33
+PKG136 blocks 15
+PKG236 queue 9
+PKG98 umath 1
+PKG197 b 74
+PKG22 cmd 7
+PKG36 stat 2
+PKG90 macro 2
+PKG131 uerror 18
+PKG322 termcap 27
+PKG229 undo 14
+PKG87 b 21

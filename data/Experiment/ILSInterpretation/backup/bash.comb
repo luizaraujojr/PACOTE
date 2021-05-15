@@ -1,0 +1,529 @@
+PKG219 subst
+PKG13 braces 2
+PKG316 execute_cmd
+PKG211 ulimit 2
+PKG429 setattr
+PKG365 break 1
+PKG363 history
+PKG394 bashhist 4
+PKG475 mkbuiltins
+PKG320 unistd 4
+PKG367 getopts
+PKG70 general 4
+PKG472 variables
+PKG423 getopts 4
+PKG44 set
+PKG362 bashgetopt 5
+PKG155 common
+PKG62 string 35
+PKG492 general
+PKG490 bashline 5
+PKG475 source 3
+PKG496 error
+PKG363 variables 2
+PKG138 bashline
+PKG21 bashhist 9
+PKG102 kill 1
+PKG435 unwind_prot
+PKG29 execute_cmd 20
+PKG113 source
+PKG481 stdlib 1
+PKG386 read
+PKG284 variables 4
+PKG110 subst 3
+PKG74 alias 4
+PKG96 builtins 8
+PKG110 flags
+PKG390 shell 1
+PKG423 return 5
+PKG405 type
+PKG144 print_cmd 2
+PKG371 wait
+PKG54 unwind_prot 2
+PKG212 expr 5
+PKG114 shell
+PKG145 stdlib 7
+PKG170 kill
+PKG33 general 1
+PKG211 flags 9
+PKG299 tilde
+PKG178 general 3
+PKG181 exec
+PKG181 dispose_cmd 1
+PKG244 fg_bg 1
+PKG400 variables 45
+PKG463 error 6
+PKG432 cd 2
+PKG332 subst 1
+PKG114 return 4
+PKG366 bashhist
+PKG45 flags 1
+PKG107 expr
+PKG262 stdlib 4
+PKG459 socket 2
+PKG496 stdio 18
+PKG465 bind
+PKG117 readline 10
+PKG113 alias 1
+PKG451 bashgetopt
+PKG28 string 2
+PKG133 copy_cmd 3
+PKG280 common 9
+PKG509 general 2
+PKG415 bashhist 3
+PKG147 stdio 3
+PKG214 signal 10
+PKG301 help
+PKG381 libio 1
+PKG493 unwind_prot 5
+PKG86 time 1
+PKG194 bracecomp
+PKG319 readline 8
+PKG444 kill 2
+PKG456 input 3
+PKG469 readline
+PKG138 bind 1
+PKG475 copy_cmd 2
+PKG180 subst 2
+PKG279 input 4
+PKG386 stdio 9
+PKG489 command
+PKG145 unwind_prot 3
+PKG219 trap 4
+PKG113 unistd 3
+PKG481 shift
+PKG383 umask
+PKG437 common 5
+PKG313 input
+PKG174 string 3
+PKG472 dispose_cmd 3
+PKG318 getcwd
+PKG318 errno 5
+PKG124 declare 1
+PKG100 unistd 24
+PKG388 string 52
+PKG311 hash
+PKG259 common 7
+PKG505 copy_cmd
+PKG489 bison 1
+PKG316 break 13
+PKG247 test
+PKG496 errno 1
+PKG257 dispose_cmd 13
+PKG145 fc
+PKG190 history 12
+PKG181 common 1
+PKG414 type 4
+PKG506 newversion 19
+PKG465 common 2
+PKG107 error 2
+PKG444 nojobs
+PKG277 wait 6
+PKG277 execute_cmd 7
+PKG471 bashhist 2
+PKG403 dispose_cmd 2
+PKG372 fg_bg
+PKG170 signal 3
+PKG208 setattr 1
+PKG15 jobs
+PKG360 general 32
+PKG49 string 83
+PKG404 trap 1
+PKG306 read 1
+PKG398 dispose_cmd 4
+PKG475 builtins 1
+PKG355 common 8
+PKG187 tilde 8
+PKG310 parse
+PKG501 exit 5
+PKG127 exit
+PKG137 setjmp 1
+PKG202 variables 21
+PKG310 quit 2
+PKG410 bracecomp 1
+PKG425 let 1
+PKG10 mkbuiltins 7
+PKG223 termios 2
+PKG358 string 1
+PKG14 mailcheck
+PKG14 string 10
+PKG504 stat
+PKG506 bashhist 6
+PKG484 fc 1
+PKG490 subst 28
+PKG442 alias
+PKG442 general 12
+PKG158 parse 4
+PKG154 bison 5
+PKG78 dispose_cmd
+PKG195 subst 24
+PKG113 string 4
+PKG429 variables 13
+PKG18 make_cmd
+PKG303 shell 13
+PKG50 execute_cmd 48
+PKG233 trap
+PKG375 kill 3
+PKG249 echo
+PKG470 make_cmd 16
+PKG274 return
+PKG55 mkbuiltins 2
+PKG428 fc 2
+PKG450 subst 4
+PKG504 shell 2
+PKG156 endian
+PKG175 stdio 2
+PKG479 stat 3
+PKG56 subst 30
+PKG301 enable
+PKG383 stat 4
+PKG502 declare 2
+PKG112 shell 11
+PKG420 tilde 5
+PKG164 test 4
+PKG99 execute_cmd 15
+PKG503 read 2
+PKG288 general 48
+PKG400 bashline 19
+PKG436 print_cmd
+PKG311 execute_cmd 5
+PKG442 type 1
+PKG389 hash 1
+PKG135 cd
+PKG135 common 19
+PKG283 copy_cmd 1
+PKG155 execute_cmd 17
+PKG78 variables 3
+PKG434 mailcheck 2
+PKG17 execute_cmd 1
+PKG478 psize
+PKG289 stat 2
+PKG429 common 3
+PKG117 print_cmd 1
+PKG160 set 1
+PKG263 command 1
+PKG86 stdlib 10
+PKG178 shell 15
+PKG390 suspend
+PKG467 return 2
+PKG229 fnmatch 1
+PKG78 parse 1
+PKG258 cd 1
+PKG354 nojobs 53
+PKG384 fcntl 2
+PKG417 ctype 1
+PKG294 signal 2
+PKG405 execute_cmd 6
+PKG222 general 19
+PKG277 nojobs 2
+PKG256 expr 6
+PKG469 variables 1
+PKG15 execute_cmd 3
+PKG521 variables 9
+PKG28 ulimit
+PKG135 errno 2
+PKG393 input 30
+PKG290 stdlib 2
+PKG451 jobs 1
+PKG478 unistd 1
+PKG505 exec 1
+PKG284 alias 12
+PKG194 general 8
+PKG479 string 8
+PKG310 bind 4
+PKG364 test 5
+PKG382 make_cmd 4
+PKG65 stat 1
+PKG308 general 43
+PKG429 stdio 1
+PKG209 execute_cmd 2
+PKG468 stdlib 36
+PKG178 general 30
+PKG146 stdio 20
+PKG479 history 31
+PKG399 shell 16
+PKG81 dirent 5
+PKG143 expr 2
+PKG212 setjmp 3
+PKG328 eval 1
+PKG233 string 15
+PKG131 variables 60
+PKG148 test 1
+PKG435 alias 2
+PKG336 signal 1
+PKG4 setjmp 10
+PKG108 execute_cmd 19
+PKG311 hashcom 9
+PKG5 braces
+PKG247 shell 6
+PKG20 flags 12
+PKG398 bashgetopt 9
+PKG179 stdio 13
+PKG258 type 3
+PKG219 unistd 10
+PKG79 signames
+PKG249 stdio 4
+PKG404 variables 7
+PKG514 let
+PKG336 siglist
+PKG150 mailcheck 4
+PKG386 unwind_prot 4
+PKG313 error 1
+PKG286 copy_cmd 13
+PKG125 subst 8
+PKG321 alias 8
+PKG18 parse 16
+PKG135 stdlib 8
+PKG510 input 2
+PKG173 quit 1
+PKG497 newversion
+PKG284 stdlib 6
+PKG301 builtins 4
+PKG138 variables 12
+PKG145 libio 2
+PKG313 general 10
+PKG35 alias 3
+PKG292 parse 24
+PKG393 stdio 11
+PKG332 declare
+PKG332 variables 16
+PKG189 readline 2
+PKG323 shift 1
+PKG403 unwind_prot 1
+PKG58 flags 3
+PKG330 read 5
+PKG284 jobs 11
+PKG389 hashcom
+PKG354 builtin
+PKG475 variables 33
+PKG477 common 34
+PKG414 execute_cmd 10
+PKG231 bashhist 5
+PKG301 stdio 6
+PKG305 subst 25
+PKG156 signames 1
+PKG375 stdlib 3
+PKG60 general 29
+PKG69 bind 2
+PKG117 bison 30
+PKG93 exec 2
+PKG333 parse 9
+PKG141 string 78
+PKG33 signal
+PKG360 siglist 1
+PKG75 signames 2
+PKG305 jobs 16
+PKG199 common 12
+PKG488 source 2
+PKG489 make_cmd 2
+PKG435 general 5
+PKG50 read 10
+PKG436 type 2
+PKG155 hash 8
+PKG265 getopt 1
+PKG145 string 29
+PKG267 getopt
+PKG509 hashcom 6
+PKG277 break 5
+PKG474 general 108
+PKG297 bashhist 1
+PKG310 string 39
+PKG392 set 7
+PKG79 newversion 1
+PKG410 mkbuiltins 22
+PKG143 set 2
+PKG121 break 2
+PKG402 history 2
+PKG362 jobs 4
+PKG339 bracecomp 4
+PKG238 exit 1
+PKG92 return 1
+PKG155 set 4
+PKG187 externs 2
+PKG19 parse 6
+PKG182 nojobs 1
+PKG415 enable 1
+PKG15 quit 4
+PKG322 endian 2
+PKG424 hash 3
+PKG16 mailcheck 1
+PKG409 command 2
+PKG76 signames 7
+PKG132 general 22
+PKG29 trap 8
+PKG227 execute_cmd 8
+PKG8 print_cmd 9
+PKG18 general 56
+PKG283 bison
+PKG233 shell 9
+PKG254 times
+PKG490 string 6
+PKG247 setjmp 4
+PKG306 variables 10
+PKG475 execute_cmd 24
+PKG240 errno 4
+PKG235 bashline 3
+PKG316 resource 1
+PKG222 cd 6
+PKG188 declare 16
+PKG289 suspend 4
+PKG47 libio 3
+PKG63 setjmp 6
+PKG128 stdlib 19
+PKG371 jobs 8
+PKG475 string 22
+PKG304 common 4
+PKG207 return 15
+PKG37 trap 12
+PKG67 time 3
+PKG192 break
+PKG192 builtin 1
+PKG44 variables 15
+PKG220 signal 4
+PKG362 error 5
+PKG271 string 21
+PKG85 stdlib 26
+PKG224 error 4
+PKG341 getcwd 4
+PKG276 unistd 7
+PKG127 common 6
+PKG282 bashgetopt 1
+PKG139 mailcheck 5
+PKG151 command 3
+PKG480 trap 11
+PKG15 fg_bg 4
+PKG319 common 13
+PKG405 parse 2
+PKG176 readline 101
+PKG180 eval
+PKG111 source 4
+PKG337 stdlib 5
+PKG504 mailcheck 8
+PKG87 hash 5
+PKG353 shell 4
+PKG323 general 14
+PKG31 string 14
+PKG440 suspend 3
+PKG372 bracecomp 6
+PKG276 jobs 13
+PKG282 errno 6
+PKG380 string 13
+PKG254 subst 42
+PKG472 tilde 4
+PKG126 input 1
+PKG170 trap 5
+PKG96 mkbuiltins 1
+PKG220 tilde 2
+PKG435 unistd 2
+PKG155 bashline 1
+PKG393 error 10
+PKG44 flags 8
+PKG58 fnmatch 2
+PKG77 make_cmd 5
+PKG480 getopts 2
+PKG120 readline 1
+PKG235 bashline 2
+PKG304 keymaps 5
+PKG47 time 4
+PKG472 hash 18
+PKG392 copy_cmd 4
+PKG364 setattr 7
+PKG290 wait 7
+PKG313 fcntl 4
+PKG341 getopts 1
+PKG360 subst 12
+PKG248 shell 23
+PKG93 braces 13
+PKG129 shell 5
+PKG382 kill 4
+PKG458 setjmp 5
+PKG349 umask 2
+PKG138 keymaps 4
+PKG42 subst 7
+PKG193 psize 7
+PKG339 unwind_prot 27
+PKG81 history 7
+PKG74 jobs 14
+PKG526 pwd 3
+PKG95 exit 2
+PKG472 general 80
+PKG283 make_cmd 32
+PKG129 command 4
+PKG220 string 47
+PKG309 general 6
+PKG502 fcntl 5
+PKG283 parse 38
+PKG327 exec 16
+PKG12 wait 1
+PKG345 cd 7
+PKG212 unwind_prot 6
+PKG347 shell 3
+PKG243 jobs 36
+PKG422 execute_cmd 4
+PKG352 error 8
+PKG61 bashline 37
+PKG107 general 13
+PKG282 mailcheck 3
+PKG462 flags 7
+PKG396 alias 10
+PKG125 stdio 7
+PKG81 shell 8
+PKG437 common 17
+PKG174 flags 10
+PKG257 newversion 2
+PKG342 common 14
+PKG366 stdio 26
+PKG358 make_cmd 6
+PKG507 print_cmd 4
+PKG388 trap 3
+PKG191 parse 11
+PKG292 string 123
+PKG83 stdlib 17
+PKG160 bashgetopt 6
+PKG45 fcntl 3
+PKG120 general 59
+PKG396 break 4
+PKG464 fc 14
+PKG267 getopts 9
+PKG252 execute_cmd 13
+PKG494 stdlib 14
+PKG145 stdio 8
+PKG261 stdio 5
+PKG367 variables 8
+PKG377 print_cmd 3
+PKG114 common 28
+PKG218 make_cmd 28
+PKG314 stdio 10
+PKG12 suspend 1
+PKG310 shell 39
+PKG243 alias 6
+PKG15 flags 4
+PKG237 jobs 26
+PKG498 shift 2
+PKG473 flags 2
+PKG519 parse 10
+PKG45 string 5
+PKG60 stdio 30
+PKG492 parse 3
+PKG381 variables 19
+PKG126 exit 3
+PKG83 quit 9
+PKG261 ulimit 1
+PKG240 builtins 2
+PKG346 braces 7
+PKG187 trap 10
+PKG510 endian 11
+PKG55 shell 28
+PKG316 stat 6
+PKG181 jobs 2
+PKG418 string 11
+PKG497 stdio 17
+PKG450 setjmp 2
+PKG399 signal 71
+PKG300 getopt 12
+PKG365 readline 3
+PKG418 resource 4
+PKG316 fcntl 10
+PKG312 stdio 12
+PKG297 ctype 4
+PKG306 unistd 27

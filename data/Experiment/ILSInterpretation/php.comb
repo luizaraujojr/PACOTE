@@ -1,0 +1,165 @@
+PKG152 php_open_temporary_file
+PKG124 zend_alloc 3
+PKG95 main
+PKG155 syslog 1
+PKG108 stat
+PKG56 fopen_wrappers 4
+PKG2 php_ini
+PKG83 zend_alloc 11
+PKG6 safe_mode 3
+PKG104 mergesort
+PKG14 stdlib 3
+PKG79 rfc1867
+PKG153 zend 3
+PKG82 zend 2
+PKG8 zend_hash 4
+PKG146 zend_API 7
+PKG81 SAPI
+PKG6 php_content_types 2
+PKG155 fopen_wrappers
+PKG28 php_ini 2
+PKG8 php_globals
+PKG36 rfc1867 4
+PKG108 zend_operators
+PKG21 stdlib 40
+PKG158 dl 1
+PKG71 php_output 2
+PKG22 zend_execute
+PKG63 zend_alloc 39
+PKG41 strlcat
+PKG25 string 1
+PKG2 locale 1
+PKG132 php_variables 3
+PKG86 php_globals 3
+PKG38 php_variables
+PKG159 rfc1867 6
+PKG12 string 21
+PKG3 zend_variables 4
+PKG156 stdio 8
+PKG90 zend_variables 3
+PKG108 SAPI 6
+PKG87 php_logos
+PKG158 logos 6
+PKG80 php_content_types
+PKG107 stdlib 2
+PKG66 php_variables 2
+PKG91 php_ini 5
+PKG92 stdlib 1
+PKG99 php_ticks
+PKG50 php_globals 5
+PKG78 time 8
+PKG1 stat 2
+PKG34 zend_hash 5
+PKG156 zend_globals_macros 139
+PKG155 zend_alloc 9
+PKG19 internal_functions 2
+PKG37 zend_globals_macros 1
+PKG57 zend_list 2
+PKG160 zend_alloc 29
+PKG96 stdio 4
+PKG52 php_globals 20
+PKG10 php_ticks 4
+PKG157 strlcpy 1
+PKG62 main 5
+PKG17 rfc1867 1
+PKG20 strlcpy
+PKG163 fopen_wrappers 2
+PKG45 zend_hash 2
+PKG16 zend_ini 1
+PKG81 php_output 4
+PKG84 safe_mode
+PKG153 unistd 1
+PKG71 stdlib 4
+PKG104 stdio 1
+PKG115 setjmp 3
+PKG6 unistd 3
+PKG2 zend 10
+PKG117 php_string
+PKG30 string 6
+PKG139 zend_llist 5
+PKG33 errno 1
+PKG129 credits 1
+PKG68 zend_operators 1
+PKG109 zend_hash 3
+PKG137 string 5
+PKG156 zend_execute 6
+PKG139 zend_llist 4
+PKG23 php 2
+PKG21 zend_API 2
+PKG139 zend_compile 9
+PKG13 zend 4
+PKG122 string 23
+PKG140 ctype 3
+PKG9 string 25
+PKG24 type 2
+PKG99 network
+PKG86 zend_alloc 4
+PKG141 zend_globals_macros
+PKG157 main 1
+PKG59 stdlib 5
+PKG89 stdio 3
+PKG61 info 3
+PKG125 SAPI 20
+PKG17 zend_variables 1
+PKG113 fopen_wrappers 7
+PKG98 zend_alloc 14
+PKG89 php_variables 1
+PKG18 internal_functions 4
+PKG163 unistd 2
+PKG44 pageinfo 2
+PKG13 SAPI 4
+PKG36 pwd 2
+PKG21 zend_extensions 1
+PKG83 stdio 13
+PKG95 SAPI 5
+PKG35 zend_alloc 1
+PKG148 php_output 1
+PKG38 zend 1
+PKG82 main 3
+PKG98 string 22
+PKG22 php_open_temporary_file 2
+PKG52 php_logos 2
+PKG121 in 3
+PKG157 zend_highlight 1
+PKG138 main 2
+PKG91 zend_operators 2
+PKG111 zend_ini 8
+PKG86 zend_constants 1
+PKG2 url 4
+PKG73 zend_globals_macros 6
+PKG78 php_content_types 1
+PKG98 stat 1
+PKG32 php_string 4
+PKG94 tsrm_virtual_cwd 2
+PKG19 zend_hash 1
+PKG93 php_main 1
+PKG46 socket 3
+PKG25 fsock 2
+PKG42 php_globals 15
+PKG121 zend_globals_macros 3
+PKG156 netdb 4
+PKG150 fopen_wrappers 5
+PKG103 php_globals 10
+PKG40 base64 2
+PKG155 mathcalls 1
+PKG69 string 7
+PKG18 string 2
+PKG17 php_logos 3
+PKG50 zend_alloc 26
+PKG7 php_globals 1
+PKG140 SAPI 2
+PKG54 internal_functions
+PKG155 ctype 1
+PKG151 SAPI 1
+PKG11 zend_execute 76
+PKG29 fopen_wrappers 1
+PKG31 string 35
+PKG162 zend_hash 9
+PKG19 tsrm_virtual_cwd 1
+PKG51 php_output 11
+PKG63 zend_globals_macros 27
+PKG141 zend_API 1
+PKG42 safe_mode 1
+PKG53 strlcat 2
+PKG28 zend_hash 7
+PKG98 zend_hash 20

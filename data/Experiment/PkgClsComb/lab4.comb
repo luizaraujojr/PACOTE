@@ -1,0 +1,15 @@
+PKG2 Arralg.c
+PKG2 Arralg.h
+PKG3 Arralgtest.c
+PKG3 String.h
+PKG7 BTIAtest.c
+PKG8 BinTree.h
+PKG7 IntArr.h
+PKG8 BTtest.c
+PKG8 BinTree.c
+PKG7 IAtest.c
+PKG7 IntArr.c
+PKG14 List.c
+PKG14 List.h
+PKG3 memtrace.h
+PKG14 Listtest.c

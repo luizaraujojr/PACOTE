@@ -1,0 +1,72 @@
+PKG43 syslogd
+PKG35 uio 2
+PKG60 klogd
+PKG37 pidfile 5
+PKG30 ksym
+PKG30 stdlib 8
+PKG63 utmp 5
+PKG48 unistd 18
+PKG49 stdio 28
+PKG70 stat
+PKG70 klogd 1
+PKG51 ksym_mod 6
+PKG57 pidfile 1
+PKG49 netdb 9
+PKG13 syslog
+PKG13 errno 2
+PKG62 pidfile
+PKG62 signal 1
+PKG35 string 59
+PKG13 fcntl 2
+PKG26 ksym_mod
+PKG40 klogd 3
+PKG27 stdio 14
+PKG60 syslogd 62
+PKG29 stdlib 7
+PKG6 ctype 10
+PKG60 ksym_mod 2
+PKG60 socket 2
+PKG32 wait 1
+PKG67 netdb 1
+PKG70 syslogd 2
+PKG17 unistd 6
+PKG55 errno 11
+PKG25 signal 6
+PKG60 getopt 6
+PKG30 stdio 29
+PKG2 fcntl 8
+PKG26 errno 1
+PKG26 stdlib 13
+PKG40 socket 3
+PKG62 string 1
+PKG60 ctype 2
+PKG30 string 13
+PKG0 select 1
+PKG60 syslog 3
+PKG62 syslogd 3
+PKG12 stdio 2
+PKG62 file 1
+PKG30 utsname 2
+PKG21 errno 4
+PKG63 unistd 17
+PKG38 time 3
+PKG55 stdlib 19
+PKG60 stat 1
+PKG29 setjmp 2
+PKG37 socket 11
+PKG57 klogd 13
+PKG59 unistd 5
+PKG60 inet 1
+PKG24 stat 2
+PKG62 fcntl 3
+PKG46 uio 1
+PKG26 unistd 2
+PKG43 stdio 19
+PKG43 getopt 1
+PKG45 klog 4
+PKG13 string 8
+PKG28 time 11
+PKG35 ksym 6
+PKG26 string 9
+PKG50 syslog 4
+PKG16 ksym 5

@@ -12,12 +12,14 @@ import br.com.ppgi.unirio.teaching.clustering.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.reader.DependencyReader;
 import br.com.ppgi.unirio.teaching.clustering.search.IteratedLocalSearch;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
+import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAglomerativeMQ;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveRandom;
 
 public class MainProgram
 {
 //	private static String BASE_DIRECTORY = "C:\\Users\\User\\Desktop\\Codigos\\HillClimbing\\data\\clustering\\";
 //	private static String ODEM_BASE_DIRECTORY = "data//ODEMFile//";
+	private static String EXPERIMENT_DIRECTORY = "data//Experiment//";
 	private static String DEP_BASE_DIRECTORY = "data//Experiment//ClsDepComb//";
 	private static String ILS_INTERPRETATION_DIRECTORY = "data//Experiment//ILSInterpretation//";
 	private static String PKG_BASE_DIRECTORY = "data//Experiment//PkgClsComb//";
@@ -397,15 +399,22 @@ public class MainProgram
 				
 		public static final void main(String[] args) throws Exception
 		{
+			
+			
+//			System.out.println (runMOJOComparison (PKG_BASE_DIRECTORY + "jmetal.comb", PKG_BASE_DIRECTORY + "jmetal.comb", "-fm"));
+			
+			
+			
 			File file = new File(DEP_BASE_DIRECTORY);
 			DecimalFormat df4 = new DecimalFormat("0.0000");
 			
-			//ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
-			ConstrutiveAbstract constructor = new ConstrutiveRandom();
-
+			ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
+//			ConstrutiveAbstract constructor = new ConstrutiveRandom();
+			
+			StringBuilder sb1 = new StringBuilder();
 	        for (String projectName : file.list()) 
 	        {
-	        	for(int n=1; n<=100; n++){
+	        	for(int n=1; n<=1; n++){
 
 	        		long startTimestamp = System.currentTimeMillis();
 		        	
@@ -413,15 +422,32 @@ public class MainProgram
 		    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
 
 		    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, 100_000, 1.0, 0.0, 1.0, 0.5);
-		    		int[] bestSolution = ils.execute();
+//		    		int[] bestSolution = ils.execute();
+		    		int[] bestSolution = ils.executeConstructor();
 		    		
 		    		long finishTimestamp = System.currentTimeMillis();
 		    		long seconds = (finishTimestamp - startTimestamp);
 		    		
 		    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-		    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB" + " MOJOFM " + padRight("" + runMOJOComparison(generateSolution(project, projectName, bestSolution), PKG_BASE_DIRECTORY + projectName + ".comb", "-fm") , 10) + "%") ;
+		    		
+		    		
+		    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB" + " MOJOFM " + padRight("" + runMOJOComparison(generateSolution(project, projectName, bestSolution), PKG_BASE_DIRECTORY + projectName + ".comb", "-fm") , 10) + "%");
+		    		sb1.append(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB" + " MOJOFM " + padRight("" + runMOJOComparison(generateSolution(project, projectName, bestSolution), PKG_BASE_DIRECTORY + projectName + ".comb", "-fm") , 10) + "%");
+					sb1.append(System.lineSeparator());
 	        	}	        	
 	        }
+			File file1 = new File(EXPERIMENT_DIRECTORY + "RESULTADO.comb");
+		    BufferedWriter writer = new BufferedWriter(new FileWriter(file1));
+		    try {
+		        writer.write(sb1.toString());	    
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			   
+			} finally {
+				writer.close();
+			}
+
 		}
 		
 
@@ -436,7 +462,7 @@ public class MainProgram
 				}
 			}
 
-			File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName + getStringTime()+ ".comb");
+			File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb");
 		    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 		    try {
 		        writer.write(sb1.toString());	    
