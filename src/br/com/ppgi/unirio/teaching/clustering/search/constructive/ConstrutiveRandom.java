@@ -11,7 +11,7 @@ import br.com.ppgi.unirio.teaching.clustering.search.utils.PseudoRandom;
 public class ConstrutiveRandom extends ConstrutiveAbstract
 {
 	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg)
+	public int[] createSolution(ModuleDependencyGraph mdg, double a1, double a2, double b1, double b2)
 	{
 		int classCount = mdg.getSize();
 		int[] solution = new int[classCount];
