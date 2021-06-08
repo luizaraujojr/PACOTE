@@ -1,6 +1,7 @@
 package br.com.ppgi.unirio.teaching.clustering.search.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -28,23 +29,7 @@ public class ClusterMetrics
 	/**
 	 * variable to used in the fitness calculation
 	 */
-	private static double a1;
-	
-	/**
-	 * variable to used in the fitness calculation
-	 */
-	private static double a2;
-	 
-	/**
-	 * variable to used in the fitness calculation
-	 */
-	private static double b1;
-	
-	/**
-	 * variable to used in the fitness calculation
-	 */
-	private static double b2;
-	
+	private static int[] functionParams;
 
 	// usado para clonar o objeto
 	private ClusterMetrics(ModuleDependencyGraph mdg)
@@ -52,7 +37,7 @@ public class ClusterMetrics
 		this.mdg = mdg;
 	}
 
-	public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, double a1, double a2, double b1, double b2)
+	public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, int[] functionParams)
 	{
 		this.mdg = mdg;
 		this.solution = solution;
@@ -65,10 +50,7 @@ public class ClusterMetrics
 		externalDependencyWeight = new int[mdg.getSize() + 1];
 		modularizationFactor = new double[mdg.getSize() + 1];
 		
-		this.a1 = a1;
-		this.a2 = a2;
-		this.b1 = b1;
-		this.b2 = b2;
+		this.functionParams = functionParams;
 
 		resetAllMetrics();
 	}
@@ -107,8 +89,7 @@ public class ClusterMetrics
 		}
 
 		resetAllMF();// calcula o MF de todos os módulos
-	}
-
+	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 	/**
 	 * Verifica se existe dependência entre os módulos i e j. Se houver, atualiza as metricas.
 	 */
@@ -150,13 +131,24 @@ public class ClusterMetrics
 	 */
 	private static double calculateClusterModularizationFactor(int i, int j)
 	{
+		double x = (double) i;
+		double y= (double) j;
 		if (i == 0)
 		{
 			return 0;
 		} else
 		{
 //			return (a1*i +) / (i + 0.5 * j);
-			return (a1* i + a2* j) / (b1 * i+ b2 * j); 
+//			return (1* i + 0* j) / (1 * i+ 0.5 * j);
+			double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * (Math.pow (x, (double)functionParams[4])); 
+			double fa2 = (((double)functionParams[1]-5.0)/2.0 ) * (Math.pow (y, (double)functionParams[5]));  
+			double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * (Math.pow (x, (double)functionParams[6])); 
+			double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * (Math.pow (y, (double)functionParams[7])); 
+			
+			if (fb1+fb2!=0) {			
+				return (fa1+fa2) / (fb1+fb2);
+			}
+			else return 0;
 		}
 	}
 
@@ -190,7 +182,7 @@ public class ClusterMetrics
 		solution[module] = toCluster;
 
 		// atualizar valores nos arrays
-		if (fromCluster != -1)
+ 		if (fromCluster != -1)
 		{
 			internalDependencyWeight[fromCluster] = metrics[0];
 			externalDependencyWeight[fromCluster] = metrics[1];

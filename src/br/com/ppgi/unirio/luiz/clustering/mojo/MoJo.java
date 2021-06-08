@@ -134,6 +134,14 @@ public class MoJo {
                     
                     resultMojo = mjc.mojofm();
                 }
+                /* -fm asks for MoJoFM value */
+                if (args[2].equalsIgnoreCase("-fmnew"))
+                {
+                    mjc = new MoJoCalculator(sourceFile, targetFile, relFile);
+                    
+                    resultMojo = mjc.mojofmnew();
+                }
+                
                 else
                 // -e indicates EdgeMoJo (requires extra argument)
                 if (args[2].equalsIgnoreCase("-e"))
@@ -167,6 +175,17 @@ public class MoJo {
         {
             System.out.println(e.getMessage());
         }
+		return resultMojo;
+    }
+    
+    
+    public static double MojoFMSB(StringBuilder sf, StringBuilder tf) {
+    	double resultMojo = 0;
+   
+    	MoJoCalculator mjc = new MoJoCalculator(sf, tf, "");
+        
+        resultMojo = mjc.mojofmnew();
+         
 		return resultMojo;
     }
 

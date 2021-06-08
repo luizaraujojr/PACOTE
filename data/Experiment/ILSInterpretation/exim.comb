@@ -1,664 +1,118 @@
-PKG120 tree
-PKG54 ctype 2
-PKG585 readconf
-PKG606 globals 136
-PKG171 smtp
-PKG330 string 51
-PKG601 match
-PKG154 expand 5
-PKG577 expand
-PKG537 match 2
-PKG438 iplookup
-PKG284 direct 4
-PKG97 aliasfile
-PKG180 store 3
-PKG453 globals
-PKG22 version 2
-PKG108 accept
-PKG591 header 2
-PKG620 dbmdb
-PKG437 search 2
-PKG400 df_extracted 1
-PKG348 verify
-PKG590 smtp_out 5
-PKG38 id_open
-PKG646 select 2
-PKG183 direct 1
-PKG326 db 2
-PKG174 pipe
-PKG492 store 4
-PKG58 version
-PKG345 string 3
-PKG449 forwardfile
-PKG255 stdio 6
-PKG631 string
-PKG407 df_generated 4
-PKG459 rewrite
-PKG336 store 5
-PKG531 exim
-PKG46 os 2
-PKG463 direct
-PKG428 debug 6
-PKG304 get
-PKG69 pcre 6
-PKG479 daemon
-PKG149 socket 9
-PKG621 parse
-PKG180 queue 7
-PKG200 ipliteral
-PKG120 log 1
-PKG248 search 6
-PKG94 moan 9
-PKG180 moan
-PKG218 accept 8
-PKG5 smartuser 10
-PKG334 os-linux
-PKG463 globals 46
-PKG200 filter
-PKG638 libio 2
-PKG427 autoreply
-PKG534 stat 1
-PKG264 signal 4
-PKG286 ipliteral 8
-PKG530 aliasfile 9
-PKG74 header
-PKG10 spool_in 1
-PKG643 log
-PKG28 smtp_in 1
-PKG365 deliver
-PKG303 exim 11
-PKG64 spool_out 1
-PKG591 smtp_in
-PKG391 string 67
-PKG500 search
-PKG188 lsearch 6
-PKG306 route
-PKG167 smartuser 11
-PKG371 spool_in
-PKG33 readconf 6
-PKG311 time 1
-PKG384 pcre
-PKG125 chartables 2
-PKG200 log 4
-PKG64 child
-PKG187 errno 6
-PKG80 unistd 7
-PKG162 aliasfile 10
-PKG388 queryprogram
-PKG621 route 2
-PKG428 store 25
-PKG431 directory 1
-PKG635 directory
-PKG227 globals 9
-PKG645 grp 2
-PKG536 store
-PKG36 xtextencode 1
-PKG468 errno 2
-PKG545 retry
-PKG173 exim 4
-PKG645 domainlist
-PKG250 globals 17
-PKG147 tod
-PKG552 globals 2
-PKG399 stat 4
-PKG123 plaintext
-PKG557 smtp_out 2
-PKG116 df_lookup
-PKG30 accept 1
-PKG588 tod 1
-PKG172 stat
-PKG74 stdio 2
-PKG553 pwd 2
-PKG16 queue
-PKG663 host 2
-PKG102 direct 7
-PKG293 deliver 1
-PKG59 globals 7
-PKG549 pcre 2
-PKG202 moan 3
-PKG637 ctype 7
-PKG175 dnsdb
-PKG146 debug 1
-PKG192 dns 2
-PKG322 header 1
-PKG478 stdlib 5
-PKG443 socket 6
-PKG502 smtp_out
-PKG100 smtp 18
-PKG64 ctype 1
-PKG412 cdb
-PKG51 mman 3
-PKG340 string 16
-PKG108 id_parse
-PKG139 ident 7
-PKG310 tod 2
-PKG235 os-linux 1
-PKG183 globals 28
-PKG65 accept 35
-PKG85 queue 1
-PKG451 rewrite 7
-PKG103 child 10
-PKG503 store 1
-PKG648 host
-PKG252 queryprogram 14
-PKG284 transport
-PKG443 globals 82
-PKG569 parse 2
-PKG167 os 1
-PKG92 dnsdb 3
-PKG198 daemon 6
-PKG367 grp 1
-PKG480 exim 2
-PKG424 maketables
-PKG594 b64encode
-PKG573 plaintext 2
-PKG39 match 11
-PKG413 string 9
-PKG89 fcntl 2
-PKG551 dbfn 1
-PKG374 expand 4
-PKG51 debug 7
-PKG609 store 9
-PKG137 syslog 3
-PKG68 df_generated
-PKG235 parse 9
-PKG445 unistd 22
-PKG32 log 2
-PKG410 deliver 69
-PKG481 rewrite 2
-PKG514 os
-PKG153 socket 2
-PKG381 smtp_in 9
-PKG109 tree 7
-PKG439 globals 56
-PKG471 transport 1
-PKG330 readconf 2
-PKG431 globals 20
-PKG392 globals 200
-PKG569 deliver 44
-PKG404 transport 5
-PKG89 readconf 4
-PKG11 stdio 1
-PKG177 filter 36
-PKG38 verify 1
-PKG0 lmtp 5
-PKG395 stdio 18
-PKG634 tree 2
-PKG70 direct 11
-PKG74 lookuphost
-PKG454 globals 6
-PKG151 debug 2
-PKG318 call_pam
-PKG267 pgsql 1
-PKG601 globals 108
-PKG613 debug 3
-PKG122 moan 1
-PKG208 inet 2
-PKG445 debug
-PKG618 deliver 2
-PKG11 string 7
-PKG177 header 4
-PKG262 appendfile 1
-PKG351 smtp 8
-PKG108 netdb 4
-PKG356 string 34
-PKG303 store 18
-PKG386 stdlib 4
-PKG593 forwardfile 10
-PKG177 accept 24
-PKG68 tree 1
-PKG342 dbfn
-PKG14 verify 13
-PKG97 localuser
-PKG222 id_close
-PKG396 stdlib 1
-PKG341 queue 6
-PKG200 support 6
-PKG118 wait 4
-PKG112 spool_out
-PKG446 string 1
-PKG487 id_query
-PKG629 unistd 2
-PKG526 stdio 17
-PKG502 lmtp 4
-PKG640 stat 2
-PKG118 debug 12
-PKG421 transport 37
-PKG330 store 2
-PKG114 xtestdecode
-PKG27 ctype 3
-PKG44 queryprogram 3
-PKG462 expand 2
-PKG391 unistd 3
-PKG336 iplookup 2
-PKG411 smtp_in 6
-PKG660 transport 13
-PKG79 forwardfile 1
-PKG479 accept 27
-PKG267 host 10
-PKG53 in 2
-PKG434 string 48
-PKG615 parse 3
-PKG626 in 1
-PKG8 smtp 2
-PKG327 drtables
-PKG353 ldap 1
-PKG404 lookuphost 8
-PKG98 xtestdecode 1
-PKG637 debug 5
-PKG3 globals 112
-PKG541 unistd 4
-PKG330 nisplus 1
-PKG591 get_data 2
-PKG630 filter 11
-PKG378 cram_md5
-PKG535 match 4
-PKG15 expand 11
-PKG361 lmtp
-PKG360 signal 3
-PKG223 smtp_in 5
-PKG571 readconf 7
-PKG326 fcntl 4
-PKG124 verify 4
-PKG298 host 5
-PKG390 inet 1
-PKG52 df_extracted
-PKG89 log 3
-PKG559 retry 5
-PKG43 support
-PKG601 ident 1
-PKG101 readconf 9
-PKG145 ctype 14
-PKG109 appendfile
-PKG204 string 50
-PKG609 ident
-PKG298 id_query 2
-PKG599 filter 14
-PKG535 exim 7
-PKG261 socket 10
-PKG247 tree 3
-PKG405 errno 4
-PKG633 smtp 25
-PKG418 dbfn 10
-PKG467 study
-PKG137 string 2
-PKG135 signal 1
-PKG266 ident 2
-PKG38 errno 8
-PKG20 filter 4
-PKG608 spool_in 17
-PKG654 stdio 10
-PKG583 pcre 1
-PKG223 smtp 3
-PKG116 localuser 1
-PKG332 match 3
-PKG470 unistd 18
-PKG516 expand 3
-PKG467 plaintext 5
-PKG381 errno 3
-PKG54 unistd 6
-PKG469 stdlib 2
-PKG227 smtp 7
-PKG376 exim 1
-PKG419 domainlist 8
-PKG572 tls 1
-PKG576 direct 9
-PKG123 pipe 7
-PKG493 globals 1
-PKG242 string 6
-PKG268 retry 1
-PKG641 parse 5
-PKG340 pipe 1
-PKG415 ident 3
-PKG232 pcre 3
-PKG651 errno 1
-PKG102 get_data
-PKG8 b64encode 1
-PKG629 match 1
-PKG583 unistd 23
-PKG199 expand 14
-PKG285 host 1
-PKG178 pwd 5
-PKG652 df_lookup 12
-PKG131 debug 4
-PKG538 df_lookup 2
-PKG433 b64decode
-PKG353 cram_md5 4
-PKG368 dns
-PKG37 pwd 4
-PKG386 plaintext 8
-PKG475 aliasfile 4
-PKG42 id_parse 2
-PKG18 search 1
-PKG642 cram_md5 1
-PKG428 pipe 28
-PKG292 string 4
-PKG2 smartuser 5
-PKG234 queryprogram 9
-PKG149 readconf 1
-PKG33 child 4
-PKG258 setjmp 2
-PKG72 aliasfile 7
-PKG100 string 56
-PKG408 filter 2
-PKG369 globals 87
-PKG405 smartuser
-PKG234 tod 3
-PKG648 time 2
-PKG458 smtp_in 4
-PKG37 host 3
-PKG163 stdio 13
-PKG98 child 3
-PKG344 store 15
-PKG332 exim 3
-PKG657 autoreply 7
-PKG185 route 1
-PKG357 string 15
-PKG441 search 4
-PKG279 globals 40
-PKG573 time 6
-PKG553 exim 6
-PKG343 transport 3
-PKG209 transport 9
-PKG9 inet 4
-PKG569 forwardfile 4
-PKG239 iplookup 1
-PKG7 localuser 9
-PKG527 smtp_in 3
-PKG246 expand 7
-PKG531 domainlist 13
-PKG23 host 7
-PKG171 exim 23
-PKG546 deliver 8
-PKG36 time 5
-PKG186 in 3
-PKG498 tod 5
-PKG320 stat 3
-PKG137 df_generated 2
-PKG352 expand 10
-PKG75 exim 14
-PKG576 smtp_in 11
-PKG297 deliver 18
-PKG421 rewrite 21
-PKG476 appendfile 10
-PKG586 nis 1
-PKG362 globals 41
-PKG472 moan 8
-PKG633 spool_in 3
-PKG522 utsname 1
-PKG52 expand 9
-PKG659 stdlib 12
-PKG371 sysinfo 1
-PKG567 resolv 1
-PKG165 resolv 8
-PKG234 dbmdb 2
-PKG564 string 19
-PKG218 cdb 6
-PKG372 smtp_out 13
-PKG182 expand 76
-PKG571 mysql 1
-PKG578 ctype 9
-PKG510 exim 5
-PKG105 spool_out 2
-PKG625 stdio 3
-PKG250 tree 6
-PKG465 stdlib 3
-PKG586 queue 5
-PKG519 ctype 6
-PKG71 parse 11
-PKG486 queue 2
-PKG548 deliver 6
-PKG471 globals 3
-PKG227 accept 2
-PKG577 smartuser 2
-PKG181 unistd 1
-PKG439 aliasfile 2
-PKG44 cram_md5 2
-PKG438 lsearch 1
-PKG5 wait 2
-PKG21 socket 7
-PKG299 ident 4
-PKG344 wait 1
-PKG338 direct 5
-PKG616 queryprogram 1
-PKG177 stdlib 6
-PKG66 string 5
-PKG584 expand 38
-PKG449 accept 3
-PKG384 moan 4
-PKG575 smartuser 8
-PKG464 smartuser 1
-PKG66 globals 38
-PKG530 aliasfile 8
-PKG191 queryprogram 8
-PKG104 directory 2
-PKG84 search 7
-PKG193 fcntl 3
-PKG563 queue 3
-PKG404 pcre 9
-PKG587 testdb 1
-PKG428 string 22
-PKG194 transport 4
-PKG517 retry 2
-PKG31 direct 2
-PKG360 string 17
-PKG26 df_generated 1
-PKG228 version 1
-PKG212 log 14
-PKG57 lmtp 1
-PKG497 signal 2
-PKG298 rewrite 9
-PKG586 autoreply 3
-PKG462 daemon 4
-PKG659 ipliteral 2
-PKG114 stdio 7
-PKG444 autoreply 1
-PKG238 filter 3
-PKG434 lookuphost 9
-PKG146 accept 5
-PKG381 rewrite 3
-PKG392 queue 8
-PKG620 appendfile 4
-PKG331 retry 4
-PKG563 fcntl 1
-PKG120 string 10
-PKG277 domainlist 2
-PKG196 dirent 5
-PKG217 fcntl 6
-PKG155 globals 68
-PKG210 string 72
-PKG496 autoreply 2
-PKG381 host 6
-PKG171 lsearch
-PKG386 os-linux 2
-PKG376 dbfn 25
-PKG546 accept 10
-PKG343 smartuser 13
-PKG502 call_pam 1
-PKG396 aliasfile 13
-PKG491 string 45
-PKG149 string 52
-PKG303 deliver 3
-PKG3 match 26
-PKG182 daemon 1
-PKG507 xtextencode
-PKG398 store 6
-PKG630 lmtp 6
-PKG70 globals 27
-PKG490 domainlist 9
-PKG389 exim 18
-PKG661 iplookup 8
-PKG345 errno 7
-PKG249 smtp 15
-PKG376 lmtp 11
-PKG596 stdio 20
-PKG476 deliver 9
-PKG345 deliver 4
-PKG308 deliver 20
-PKG647 readconf 19
-PKG144 lookuphost 14
-PKG549 globals 5
-PKG373 ipliteral 9
-PKG324 store 17
-PKG6 string 18
-PKG149 stdio 23
-PKG283 exim 12
-PKG458 md5
-PKG477 cram_md5 12
-PKG270 drtables 1
-PKG45 string 13
-PKG271 accept 6
-PKG363 cram_md5 5
-PKG319 forwardfile 11
-PKG655 testdb
-PKG394 pipe 6
-PKG274 expand 13
-PKG82 stat 5
-PKG186 string 12
-PKG187 ctype 5
-PKG464 lookuphost 4
-PKG551 string 11
-PKG233 parse 4
-PKG10 route 8
-PKG325 globals 48
-PKG122 netdb 2
-PKG56 direct 8
-PKG165 id_close 1
-PKG237 tree 5
-PKG93 df_generated 5
-PKG88 string 47
-PKG529 pipe 4
-PKG231 domainlist 19
-PKG351 appendfile 2
-PKG219 id_parse 3
-PKG449 errno 5
-PKG647 transport 2
-PKG11 store 12
-PKG451 utime 1
-PKG232 match 10
-PKG316 dns 3
-PKG444 exim 75
-PKG547 resolv 2
-PKG25 domainlist 3
-PKG375 dnsdb 7
-PKG109 appendfile 5
-PKG111 string 81
-PKG238 pipe 21
-PKG51 search 8
-PKG474 debug 9
-PKG420 verify 9
-PKG180 parse 6
-PKG70 globals 19
-PKG553 globals 70
-PKG56 support 2
-PKG20 rewrite 1
-PKG142 b64decode 2
-PKG637 expand 8
-PKG450 forwardfile 2
-PKG363 stdio 8
-PKG299 dns 21
-PKG446 route 3
-PKG25 ctype 21
-PKG38 store 10
-PKG392 plaintext 3
-PKG491 string 41
-PKG480 cdb 2
-PKG293 verify 7
-PKG280 verify 2
-PKG285 route 5
-PKG163 log 5
-PKG507 smtp_in 13
-PKG135 string 99
-PKG377 socket 1
-PKG44 direct 10
-PKG481 string 8
-PKG344 unistd 8
-PKG618 ipliteral 7
-PKG305 retry 15
-PKG643 host 24
-PKG83 globals 14
-PKG379 localuser 16
-PKG538 ioctl 1
-PKG458 statfs 1
-PKG305 store 20
-PKG503 dnsdb 11
-PKG193 df_extracted 2
-PKG622 host 4
-PKG391 stdio 19
-PKG632 smtp 10
-PKG353 verify 16
-PKG395 dbfn 12
-PKG166 globals 231
-PKG69 parse 7
-PKG473 dbfn 13
-PKG308 time 4
-PKG169 lookuphost 2
-PKG644 fcntl 8
-PKG542 verify 14
-PKG292 iplookup 3
-PKG431 queue 4
-PKG284 globals 21
-PKG410 host 27
-PKG494 store 23
-PKG336 cdb 3
-PKG465 string 42
-PKG196 stdio 14
-PKG95 dns 1
-PKG414 id_open 2
-PKG180 expand 6
-PKG612 smtp_in 23
-PKG14 stdio 39
-PKG58 spool_in 2
-PKG395 time 8
-PKG609 appendfile 7
-PKG51 resource 1
-PKG523 smtp_in 29
-PKG632 globals 74
-PKG583 host 8
-PKG183 log 8
-PKG311 globals 42
-PKG312 smtp_in 2
-PKG402 unistd 13
-PKG656 globals 12
-PKG395 verify 11
-PKG223 ctype 8
-PKG389 globals 190
-PKG547 aliasfile 1
-PKG372 search 5
-PKG285 rewrite 4
-PKG248 string 75
-PKG203 direct 12
-PKG124 forwardfile 7
-PKG30 netdb 1
-PKG69 b64decode 1
-PKG320 get_data 1
-PKG143 deliver 15
-PKG512 socket 4
-PKG254 readconf 43
-PKG644 string 20
-PKG224 b64decode 3
-PKG39 dbmdb 5
-PKG208 log 6
-PKG321 host 19
-PKG41 globals 330
-PKG657 dns 7
-PKG174 spool_in 5
-PKG337 direct 22
-PKG250 string 37
-PKG583 child 8
-PKG286 functions 3
-PKG272 queryprogram 2
-PKG510 filter 1
-PKG7 unistd 42
-PKG183 route 9
-PKG80 md5 3
-PKG285 lsearch 8
-PKG463 globals 16
-PKG266 string 23
-PKG144 in 4
-PKG53 stdio 25
-PKG246 globals 54
-PKG160 moan 6
-PKG199 forwardfile 19
-PKG387 globals 13
-PKG638 daemon 3
+PKG50 tree
+PKG77 ctype
+PKG106 readconf
+PKG115 globals
+PKG76 smtp
+PKG110 string
+PKG83 match
+PKG68 expand
+PKG95 iplookup
+PKG89 direct
+PKG66 aliasfile
+PKG94 store
+PKG25 version
+PKG115 accept
+PKG47 header
+PKG22 dbmdb
+PKG51 search
+PKG66 df_extracted
+PKG115 verify
+PKG86 smtp_out
+PKG90 id_open
+PKG93 select
+PKG22 db
+PKG117 pipe
+PKG39 forwardfile
+PKG25 stdio
+PKG40 df_generated
+PKG43 rewrite
+PKG115 exim
+PKG114 os
+PKG116 debug
+PKG101 get
+PKG101 pcre
+PKG88 daemon
+PKG90 socket
+PKG43 parse
+PKG50 queue
+PKG89 ipliteral
+PKG81 log
+PKG39 moan
+PKG40 smartuser
+PKG107 os-linux
+PKG43 filter
+PKG43 libio
+PKG45 autoreply
+PKG45 stat
+PKG82 signal
+PKG47 spool_in
+PKG115 smtp_in
+PKG116 deliver
+PKG50 spool_out
+PKG51 lsearch
+PKG89 route
+PKG64 time
+PKG101 chartables
+PKG82 child
+PKG76 errno
+PKG116 unistd
+PKG68 queryprogram
+PKG113 directory
+PKG106 grp
+PKG94 xtextencode
+PKG104 retry
+PKG68 domainlist
+PKG64 tod
+PKG103 plaintext
+PKG66 df_lookup
+PKG106 pwd
+PKG68 host
+PKG108 dnsdb
+PKG101 dns
+PKG115 stdlib
+PKG73 cdb
+PKG73 mman
+PKG91 id_parse
+PKG90 ident
+PKG76 transport
+PKG77 maketables
+PKG99 b64encode
+PKG81 fcntl
+PKG104 dbfn
+PKG81 syslog
+PKG82 lmtp
+PKG83 lookuphost
+PKG109 call_pam
+PKG109 pgsql
+PKG86 inet
+PKG113 appendfile
+PKG88 netdb
+PKG89 localuser
+PKG90 id_close
+PKG91 support
+PKG117 wait
+PKG93 id_query
+PKG94 xtestdecode
+PKG95 in
+PKG109 drtables
+PKG109 ldap
+PKG109 nisplus
+PKG99 get_data
+PKG112 cram_md5
+PKG101 study
+PKG109 tls
+PKG103 b64decode
+PKG104 setjmp
+PKG109 nis
+PKG106 utsname
+PKG107 sysinfo
+PKG108 resolv
+PKG109 mysql
+PKG110 testdb
+PKG113 dirent
+PKG112 md5
+PKG113 utime
+PKG114 ioctl
+PKG115 statfs
+PKG116 resource
+PKG117 functions

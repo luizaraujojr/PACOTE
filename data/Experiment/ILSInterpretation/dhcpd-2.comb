@@ -1,108 +1,31 @@
-PKG69 daemon
-PKG13 main 2
-PKG98 hostinfo
-PKG56 if 3
-PKG32 socket-if
-PKG107 error-handler 5
-PKG29 client
-PKG4 arp 3
-PKG26 memory 3
-PKG4 signal-handler
-PKG31 if 2
-PKG77 main 4
-PKG90 error-handler 2
-PKG99 wait 1
-PKG31 error-handler
-PKG107 stdio 12
-PKG31 arp
-PKG98 time 2
-PKG87 if
-PKG8 hostinfo 1
-PKG68 in 2
-PKG11 syslog 4
-PKG73 main
-PKG65 unistd 2
-PKG64 dhcp 69
-PKG70 dhcp
-PKG13 main 1
-PKG16 stat
-PKG0 hostinfo 2
-PKG26 if 1
-PKG31 error-handler 7
-PKG71 options 1
-PKG93 unistd 1
-PKG72 error-handler 8
-PKG13 ioctl 4
-PKG49 stdio 9
-PKG52 stdlib 14
-PKG11 string 2
-PKG65 arp 2
-PKG24 in 9
-PKG70 stdlib 4
-PKG77 stdlib 1
-PKG29 string 4
-PKG81 socket-if 19
-PKG36 memory
-PKG93 stdlib 2
-PKG66 socket 6
-PKG28 dhcp 1
-PKG62 stdio 1
-PKG20 hostinfo 6
-PKG64 string 8
-PKG8 inet 3
-PKG24 socket 8
-PKG20 client 29
-PKG38 stat 1
-PKG50 signal 1
-PKG5 stdio 4
-PKG91 options
-PKG18 client 3
-PKG57 client 2
-PKG85 string
-PKG101 socket 3
-PKG69 in 8
-PKG87 error-handler 16
-PKG68 time 1
-PKG107 dhcp 4
-PKG61 in 1
-PKG17 inet 1
-PKG102 socket-if 2
-PKG13 daemon 2
-PKG73 unistd 11
-PKG69 stat 3
-PKG25 swab
-PKG95 byteorder 14
-PKG4 dhcp 7
-PKG2 hostinfo 5
-PKG48 error-handler 3
-PKG45 unistd 7
-PKG26 unistd 13
-PKG64 error-handler 6
-PKG29 errno 4
-PKG105 inet 8
-PKG51 dhcp 2
-PKG48 string 16
-PKG37 select 1
-PKG1 fcntl 2
-PKG5 string 1
-PKG4 string 11
-PKG13 utsname 1
-PKG96 stdlib 6
-PKG34 signal-handler 1
-PKG16 socket 13
-PKG51 dhcp 6
-PKG59 if 21
-PKG0 errno 1
-PKG52 string 7
-PKG41 fcntl 4
-PKG77 client 15
-PKG33 in 36
-PKG44 string 6
-PKG21 error-handler 1
-PKG1 client 4
-PKG46 in 4
-PKG63 byteorder
-PKG34 swab 24
-PKG10 signal 2
-PKG81 time 7
-PKG79 fcntl 6
+PKG15 daemon
+PKG15 main
+PKG17 hostinfo
+PKG29 if
+PKG28 socket-if
+PKG27 error-handler
+PKG30 client
+PKG28 arp
+PKG17 memory
+PKG24 signal-handler
+PKG17 wait
+PKG15 stdio
+PKG28 time
+PKG30 in
+PKG27 syslog
+PKG15 unistd
+PKG30 dhcp
+PKG17 stat
+PKG28 options
+PKG29 ioctl
+PKG30 stdlib
+PKG27 string
+PKG28 socket
+PKG29 inet
+PKG24 signal
+PKG26 swab
+PKG26 byteorder
+PKG27 errno
+PKG28 select
+PKG29 fcntl
+PKG30 utsname

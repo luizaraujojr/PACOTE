@@ -1,134 +1,48 @@
-PKG24 setroute
-PKG28 stdio 2
-PKG32 util
-PKG44 ax25 3
-PKG30 slip_ac
-PKG53 string 2
-PKG82 proc
-PKG41 string 7
-PKG55 netrom
-PKG13 errno 1
-PKG76 iptunnel
-PKG117 string 17
-PKG64 utsname 1
-PKG111 unix 2
-PKG84 hw
-PKG118 activate 7
-PKG20 getargs
-PKG78 string 3
-PKG16 ax25_gr
-PKG58 stdio 6
-PKG54 arcnet 1
-PKG88 util-ank
-PKG127 iptunnel 12
-PKG76 string 1
-PKG100 inet_gr
-PKG107 af 2
-PKG61 inet_sr
-PKG43 ioctl 1
-PKG6 interface
-PKG95 util 7
-PKG94 getroute 2
-PKG79 af
-PKG125 ax25_gr 1
-PKG60 proc 6
-PKG8 ax25
-PKG43 netrom 2
-PKG56 ipx_gr
-PKG106 arcnet
-PKG85 stdio 1
-PKG44 ppp_ac
-PKG130 activate
-PKG40 hw 2
-PKG71 stdlib 4
-PKG57 ether
-PKG12 ioctl 2
-PKG104 getroute
-PKG90 af 7
-PKG120 stdio 17
-PKG124 inet_sr 3
-PKG30 ipx
-PKG7 util 1
-PKG127 ctype 3
-PKG70 af 5
-PKG87 socket 2
-PKG79 inet
-PKG37 in 12
-PKG106 stdlib 20
-PKG35 ppp
-PKG121 in 4
-PKG130 loopback
-PKG115 stdio 3
-PKG68 stdlib 5
-PKG104 ctype 1
-PKG103 ddp 1
-PKG79 tr
-PKG77 sockets
-PKG126 netrom_sr 1
-PKG53 util 2
-PKG71 stdio 8
-PKG13 af 4
-PKG63 netdb 18
-PKG91 inet 2
-PKG26 nstrcmp
-PKG27 stdlib 1
-PKG46 stdlib 2
-PKG95 inet 1
-PKG57 util-ank 10
-PKG123 inet_sr 1
-PKG21 af 3
-PKG70 loopback 1
-PKG88 netrom_gr
-PKG7 unistd 1
-PKG19 inet_gr 1
-PKG98 ipx_gr 1
-PKG112 ctype 2
-PKG10 stdio 10
-PKG21 unix
-PKG90 stdlib 6
-PKG62 ddp
-PKG100 in 2
-PKG64 in 6
-PKG34 errno 2
-PKG71 util 3
-PKG114 sockets 2
-PKG38 string 11
-PKG13 net-support 2
-PKG43 stdio 20
-PKG10 ddp_gr 1
-PKG51 ipx_sr 1
-PKG47 ppp_ac 2
-PKG101 ioctl 3
-PKG99 ddp_gr
-PKG53 stdio 7
-PKG76 string 8
-PKG0 string
-PKG107 irda 1
-PKG105 interface 2
-PKG108 string 12
-PKG68 getroute 1
-PKG16 slip_ac 10
-PKG16 irda
-PKG107 stdio 4
-PKG21 netrom 1
-PKG66 net-support 10
-PKG68 inet_gr 3
-PKG34 netrom_gr 1
-PKG32 netrom_sr
-PKG122 inet_sr 4
-PKG41 stdlib 3
-PKG63 ipx_sr
-PKG82 errno 3
-PKG42 frame
-PKG20 interface 4
-PKG99 ipx 1
-PKG95 socket 12
-PKG126 ether 1
-PKG106 frame 2
-PKG85 ax25 1
-PKG46 unistd 6
-PKG121 string 4
-PKG85 nstrcmp 1
-PKG14 stdio 11
-PKG86 ioctl 12
-PKG54 setroute 1
+PKG45 setroute
+PKG33 stdio
+PKG34 util
+PKG33 ax25
+PKG21 slip_ac
+PKG46 string
+PKG18 proc
+PKG46 netrom
+PKG36 errno
+PKG17 iptunnel
+PKG34 utsname
+PKG34 unix
+PKG47 hw
+PKG47 activate
+PKG46 getargs
+PKG26 ax25_gr
+PKG29 arcnet
+PKG17 util-ank
+PKG18 inet_gr
+PKG44 af
+PKG42 inet_sr
+PKG21 ioctl
+PKG40 interface
+PKG44 getroute
+PKG44 ipx_gr
+PKG47 ppp_ac
+PKG26 stdlib
+PKG34 ether
+PKG29 ipx
+PKG29 ctype
+PKG43 socket
+PKG39 inet
+PKG35 in
+PKG33 ppp
+PKG34 loopback
+PKG35 ddp
+PKG36 tr
+PKG43 sockets
+PKG45 netrom_sr
+PKG39 netdb
+PKG40 nstrcmp
+PKG44 netrom_gr
+PKG42 unistd
+PKG43 net-support
+PKG44 ddp_gr
+PKG45 ipx_sr
+PKG46 irda
+PKG47 frame

@@ -1,35 +1,19 @@
-PKG8 xmalloc
-PKG18 error 1
-PKG0 error
-PKG14 stdio 10
-PKG5 md5
-PKG10 string 2
-PKG6 errno 1
-PKG19 string 1
-PKG18 whoami
-PKG9 pwd 3
-PKG26 stdlib 8
-PKG3 xgetcwd
-PKG3 unistd 2
-PKG3 uudecode
-PKG4 libintl 6
-PKG9 xstrdup
-PKG15 utsname 1
-PKG4 stdio 18
-PKG28 pwd 2
-PKG0 stdlib 2
-PKG32 errno 2
-PKG7 libintl 1
-PKG27 stdlib 1
-PKG27 uudecode 2
-PKG16 string 8
-PKG0 locale 1
-PKG1 xmalloc 4
-PKG11 libio 2
-PKG27 xstrdup 1
-PKG0 xmalloc 1
-PKG7 xgetcwd 3
-PKG1 getopt 6
-PKG32 error 4
-PKG10 stdio 3
-PKG19 stat 1
+PKG13 xmalloc
+PKG18 error
+PKG3 stdio
+PKG3 md5
+PKG13 string
+PKG18 errno
+PKG14 whoami
+PKG14 pwd
+PKG10 stdlib
+PKG10 xgetcwd
+PKG10 unistd
+PKG18 uudecode
+PKG18 libintl
+PKG13 xstrdup
+PKG14 utsname
+PKG18 locale
+PKG18 libio
+PKG18 getopt
+PKG18 stat

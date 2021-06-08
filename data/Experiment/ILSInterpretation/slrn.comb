@@ -1,257 +1,45 @@
-PKG151 menu
-PKG6 post 1
-PKG41 xover
-PKG48 string 15
-PKG228 group
-PKG151 vfile 3
-PKG145 group 1
-PKG236 util
-PKG14 print 1
-PKG177 sortdate
-PKG249 string 1
-PKG232 editscore 1
-PKG133 vfile
-PKG235 fcntl 2
-PKG75 slrn
-PKG29 signal 2
-PKG15 misc
-PKG204 group 28
-PKG20 editscore
-PKG25 menu 11
-PKG248 mime
-PKG199 slrn 5
-PKG13 interp
-PKG33 stdlib 2
-PKG255 slang 17
-PKG57 version
-PKG161 string 2
-PKG251 server 1
-PKG200 chmap 1
-PKG237 startup
-PKG212 misc 10
-PKG184 art 16
-PKG73 art
-PKG71 time 2
-PKG121 post
-PKG153 unistd 4
-PKG30 slrndir
-PKG228 uudecode 3
-PKG244 artmisc
-PKG207 util 19
-PKG101 libio 2
-PKG105 print 4
-PKG119 util 1
-PKG217 unistd 3
-PKG239 time 3
-PKG92 interp 5
-PKG146 score 1
-PKG12 string 12
-PKG32 chkslang
-PKG82 stdio 1
-PKG12 slrn 41
-PKG138 stat
-PKG58 util 6
-PKG76 slang 130
-PKG196 ttymsg
-PKG79 misc 7
-PKG225 slrn 1
-PKG233 uudecode
-PKG107 libio 4
-PKG254 misc 37
-PKG114 stdio 22
-PKG7 string 4
-PKG26 post 12
-PKG226 menu 6
-PKG147 stat 1
-PKG127 score
-PKG14 slang 10
-PKG17 art 5
-PKG92 spool 6
-PKG193 server 2
-PKG126 spool
-PKG192 util 33
-PKG244 version 2
-PKG200 slang 50
-PKG235 stdio 30
-PKG60 help
-PKG211 stdio 3
-PKG213 stdio 20
-PKG59 assert 2
-PKG89 help 1
-PKG185 stat 3
-PKG143 art 4
-PKG202 string 7
-PKG122 server 6
-PKG204 slang 63
-PKG157 slang 2
-PKG103 chmap
-PKG181 server 34
-PKG250 vfile 1
-PKG139 print
-PKG12 misc 1
-PKG135 misc 2
-PKG50 menu 3
-PKG81 server 15
-PKG166 util 16
-PKG117 misc 8
-PKG176 art 2
-PKG238 art 1
-PKG178 string 8
-PKG138 menu 4
-PKG189 libio 6
-PKG209 group 5
-PKG18 slang 6
-PKG250 startup 6
-PKG84 uudecode 11
-PKG252 dirent 5
-PKG112 post 2
-PKG210 slang
-PKG248 charmaps 4
-PKG178 stdio 44
-PKG122 libio 1
-PKG52 slang 3
-PKG114 libio 3
-PKG114 misc 31
-PKG101 interp 1
-PKG128 hash
-PKG232 sortdate 1
-PKG145 xover 2
-PKG238 misc 6
-PKG10 score 2
-PKG94 stdio 8
-PKG35 netdb 3
-PKG170 stdio 24
-PKG55 string 3
-PKG193 slrndir 2
-PKG239 artmisc 33
-PKG226 util 72
-PKG206 stdio 9
-PKG150 hash 5
-PKG65 stdlib 6
-PKG98 startup 5
-PKG3 util 38
-PKG68 slang 16
-PKG224 group 11
-PKG132 spool 25
-PKG29 group 10
-PKG87 util 8
-PKG20 interp 2
-PKG75 stat 2
-PKG182 stdio 6
-PKG215 util 7
-PKG199 mime 16
-PKG239 util 2
-PKG44 server 37
-PKG233 art 10
-PKG221 mime 10
-PKG251 uudecode 5
-PKG144 server 10
-PKG184 artmisc 3
-PKG148 stdio 26
-PKG226 util 31
-PKG87 hash 8
-PKG113 ttymsg 3
-PKG39 misc 3
-PKG186 stdio 5
-PKG141 post 33
-PKG183 artmisc 2
-PKG26 mime 4
-PKG209 slang 40
-PKG222 art 57
-PKG25 slrn 17
-PKG190 stdio 42
-PKG172 stdio 2
-PKG253 errno 4
-PKG163 ctype 2
-PKG109 server 3
-PKG131 stdlib 1
-PKG70 errno 1
-PKG124 server 17
-PKG164 misc 12
-PKG237 post 6
-PKG0 art 53
-PKG54 slrn 2
-PKG119 string 17
-PKG125 score 23
-PKG205 slang 1
-PKG57 chmap 3
-PKG16 server
-PKG6 art 3
-PKG97 version 1
-PKG42 stdlib 12
-PKG180 ctype 3
-PKG198 post 17
-PKG99 slrn 18
-PKG73 score 10
-PKG69 string 19
-PKG153 stdlib 21
-PKG60 help 4
-PKG22 slrn 11
-PKG155 group 16
-PKG17 stdlib 8
-PKG152 misc 13
-PKG168 group 3
-PKG201 unistd 7
-PKG214 interp 19
-PKG145 slang 14
-PKG120 interp 14
-PKG176 startup 15
-PKG28 string 31
-PKG164 mime 24
-PKG235 unistd 1
-PKG138 art 42
-PKG86 interp 9
-PKG105 slrn 40
-PKG45 menu 2
-PKG146 startup 1
-PKG13 group 2
-PKG223 spool 4
-PKG116 util 4
-PKG245 interp 21
-PKG88 sltcp 2
-PKG222 util 27
-PKG186 editscore 6
-PKG67 unistd 2
-PKG7 startup 8
-PKG37 slrn 7
-PKG3 pwd 2
-PKG52 string 47
-PKG206 misc 177
-PKG221 string 20
-PKG10 slang 70
-PKG150 ctype 6
-PKG96 artmisc 18
-PKG256 misc 57
-PKG2 slang 7
-PKG119 util 35
-PKG224 slang 8
-PKG13 misc 27
-PKG79 string 16
-PKG58 hash 2
-PKG43 chmap 9
-PKG50 misc 5
-PKG146 xover 15
-PKG109 stdlib 13
-PKG211 misc 9
-PKG214 server 4
-PKG11 mime 9
-PKG32 time 4
-PKG65 stdlib 7
-PKG32 mime 2
-PKG150 slrn 13
-PKG111 misc 78
-PKG58 interp 3
-PKG145 sortdate 3
-PKG123 xover 9
-PKG56 group 20
-PKG169 xover 4
-PKG199 slrn 10
-PKG95 chkslang 7
-PKG178 startup 2
-PKG107 slrndir 11
-PKG97 ctype 1
-PKG227 help 5
-PKG121 slrndir 10
-PKG185 slang 41
-PKG248 art 40
-PKG233 stdlib 9
+PKG22 menu
+PKG22 post
+PKG39 xover
+PKG22 string
+PKG32 group
+PKG41 vfile
+PKG22 util
+PKG17 print
+PKG42 sortdate
+PKG29 editscore
+PKG41 fcntl
+PKG43 slrn
+PKG43 signal
+PKG44 misc
+PKG28 mime
+PKG17 interp
+PKG18 stdlib
+PKG17 slang
+PKG18 version
+PKG22 server
+PKG38 chmap
+PKG27 startup
+PKG22 art
+PKG29 time
+PKG32 unistd
+PKG37 slrndir
+PKG28 uudecode
+PKG27 artmisc
+PKG28 libio
+PKG29 score
+PKG31 chkslang
+PKG31 stdio
+PKG32 stat
+PKG44 ttymsg
+PKG37 spool
+PKG43 help
+PKG37 assert
+PKG37 dirent
+PKG38 charmaps
+PKG39 hash
+PKG44 netdb
+PKG41 errno
+PKG42 ctype
+PKG43 sltcp
+PKG44 pwd

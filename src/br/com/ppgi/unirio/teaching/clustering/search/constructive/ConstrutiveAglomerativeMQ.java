@@ -11,28 +11,28 @@ import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph
 public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 {
 	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, double a1, double a2, double b1, double b2)
+	public int[] createSolution(ModuleDependencyGraph mdg, int[] functionParams)
 	{
-		return createSolution(mdg, 1, a1, a2, b1, b2)[0];
+		return createSolution(mdg, 1, functionParams)[0];
 	}
 
-	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, double a1, double a2, double b1, double b2)
+	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] functionParams)
 	{
 		int[] solution = new int[mdg.getSize()];
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			solution[index] = index;
 
-		return aglomerateClustering(mdg, solution, quantity, a1, a2, b1, b2);
+		return aglomerateClustering(mdg, solution, quantity, functionParams);
 	}
 
-	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, double a1, double a2, double b1, double b2)
+	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] functionParams)
 	{
 		int[][] topSolutions = new int[solutionsQuantity][solution.length];
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, a1, a2, b1, b2);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, functionParams);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
@@ -51,7 +51,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 				for (int auxj = auxi + 1; auxj < cm.getTotalClusteres(); auxj++)
 				{
 					int i = cm.convertToClusterNumber(auxi);
-					int j = cm.convertToClusterNumber(auxj);
+					int j = cm.convertToClusterNumber(auxj); 
 					
 					// verificar o delta da uniao desses dois clusteres
 					double currentDelta = cm.calculateMergeClustersDelta(i, j);
@@ -98,5 +98,17 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 				currentSolutionMQ = auxSolutionMQ;
 			}
 		}
+	}
+
+	@Override
+	public int[] createSolution(int paramNumber, double factor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int[] createSolution(ModuleDependencyGraph mdg, double a1, double a2, double b1, double b2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

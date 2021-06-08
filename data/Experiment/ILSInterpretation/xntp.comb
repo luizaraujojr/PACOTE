@@ -1,417 +1,111 @@
-PKG308 ntp_refclock
-PKG325 stdio 4
-PKG317 ntp_util
-PKG334 refclock_arbiter 3
-PKG154 ntp_filegen
-PKG395 emalloc 8
-PKG342 ntp_io
-PKG159 ntp_proto 17
-PKG153 refclock_hpgps
-PKG244 ntp_control 2
-PKG365 refclock_local
-PKG50 ntp_refclock 1
-PKG398 mfptoa
-PKG344 systime 10
-PKG88 atolfp
-PKG366 ntp_util 2
-PKG74 ntp_proto
-PKG367 ntp_io 6
-PKG100 numtoa
-PKG251 numtohost 1
-PKG372 ntp_timer
-PKG238 ntp_leap 2
-PKG368 in 19
-PKG284 ntp_loopfilter
-PKG203 ntp_proto 5
-PKG220 refclock_atom
-PKG229 emalloc 2
-PKG363 ntp_restrict
-PKG166 stdio 2
-PKG37 ntp_config
-PKG259 stdlib 21
-PKG173 errno 1
-PKG0 emalloc
-PKG349 msyslog 1
-PKG48 time 1
-PKG275 authkeys 10
-PKG152 stat
-PKG232 ntp_filegen 2
-PKG42 refclock_leitch
-PKG226 clocktime 1
-PKG105 signal 1
-PKG198 atoint
-PKG82 systime
-PKG181 string 1
-PKG346 statestr 1
-PKG30 ntp_io 2
-PKG134 dofptoa
-PKG148 ntp_peer
-PKG221 ntp_config 8
-PKG4 ntp_config 3
-PKG18 authusekey
-PKG268 authreadkeys 3
-PKG368 md5
-PKG207 authkeys 2
-PKG134 string 5
-PKG324 refclock_nmea
-PKG385 ntp_util 1
-PKG286 ntp_control
-PKG295 systime 5
-PKG243 auth12crypt
-PKG109 authkeys 8
-PKG117 prettydate
-PKG344 time 2
-PKG138 numtohost
-PKG167 numtoa 1
-PKG188 ntp_unixclock
-PKG316 ntp_unixtime 3
-PKG162 syssignal
-PKG158 stdlib 1
-PKG336 ntp_intres
-PKG356 emalloc 3
-PKG219 unistd 3
-PKG295 ntp_filegen 1
-PKG247 ntp_intres 1
-PKG354 ntp_loopfilter 6
-PKG387 ntp_monitor 2
-PKG0 refclock_wwvb
-PKG77 ntp_control 94
-PKG68 calyearstart
-PKG312 string 2
-PKG260 stdlib 4
-PKG76 refclock_as2201
-PKG287 dolfptoa 1
-PKG211 ntp_leap 4
-PKG149 signal 3
-PKG56 authdes
-PKG73 ntp_io 1
-PKG210 refclock_pst
-PKG297 refclock_trak
-PKG87 socket 7
-PKG253 utsname 1
-PKG70 a_md5encrypt
-PKG300 fptoa
-PKG306 dofptoa 1
-PKG165 refclock_arc
-PKG395 ntp_refclock 5
-PKG251 refclock_leitch 6
-PKG244 authkeys
-PKG376 authencrypt 2
-PKG30 mfptoms
-PKG57 ntp_loopfilter 1
-PKG80 signal 2
-PKG326 msyslog 4
-PKG160 ntp_control 43
-PKG358 stdio 8
-PKG397 refclock_pst 15
-PKG156 systime 4
-PKG57 wait 1
-PKG78 ntpd
-PKG251 ntp_config 2
-PKG175 utvtoa
-PKG406 lib_strbuf 6
-PKG208 ntp_control 4
-PKG406 humandate
-PKG38 lib_strbuf 12
-PKG234 fptoa 3
-PKG37 ctype 1
-PKG390 authreadkeys
-PKG189 dolfptoa
-PKG204 uglydate
-PKG64 stdio 1
-PKG334 select 2
-PKG199 unistd 5
-PKG305 ntp_request
-PKG299 ntp_refclock 3
-PKG139 string 4
-PKG385 stdlib 2
-PKG87 auth12crypt 28
-PKG413 refclock_local 1
-PKG406 ranny
-PKG260 ntp_restrict 1
-PKG19 ntp_loopfilter 12
-PKG406 refnumtoa
-PKG60 in 9
-PKG85 ntp_control 5
-PKG87 systime 1
-PKG78 systime 2
-PKG222 authdecrypt 5
-PKG111 atouint
-PKG239 ntp_intres 3
-PKG35 fcntl 2
-PKG236 ntp_refclock 8
-PKG107 ntp_leap
-PKG299 msyslog 2
-PKG189 refnumtoa 2
-PKG152 getopt 4
-PKG100 unistd 2
-PKG0 a_md5decrypt
-PKG283 auth12crypt 2
-PKG255 clocktime 2
-PKG164 netdb 2
-PKG248 msyslog 6
-PKG386 unistd 1
-PKG187 uinttoa
-PKG37 calleapwhen
-PKG90 ntp_leap 6
-PKG265 emalloc 11
-PKG74 mfptoa 2
-PKG271 ntp_filegen 3
-PKG319 refclock_arbiter
-PKG351 msyslog
-PKG363 string 6
-PKG256 syssignal 1
-PKG216 authdecrypt
-PKG355 mfptoa 4
-PKG298 ntp_peer 3
-PKG325 authkeys 4
-PKG217 ntp_loopfilter 2
-PKG302 authdecrypt 1
-PKG133 atoint 1
-PKG36 ntp_request 5
-PKG107 mfptoms 4
-PKG350 refclock_hpgps 4
-PKG189 stdlib 3
-PKG316 stdio 9
-PKG86 stdio 3
-PKG230 socket 14
-PKG118 ntp_refclock 2
-PKG261 systime 7
-PKG49 refclock_nmea 14
-PKG120 in 10
-PKG12 syslog 2
-PKG141 statestr
-PKG87 authreadkeys 2
-PKG325 ntp_proto 13
-PKG73 ntp_syslog 1
-PKG150 refclock_hpgps 2
-PKG261 systime 20
-PKG147 ntp_io 5
-PKG205 unistd 6
-PKG170 ntp_proto 21
-PKG4 findconfig
-PKG225 ntp_config 1
-PKG105 stdio 27
-PKG416 fptoms
-PKG129 ntp_control 3
-PKG174 errno 3
-PKG110 stdio 6
-PKG289 setjmp 2
-PKG66 caljulian
-PKG287 ntp_filegen 5
-PKG299 mfptoa 3
-PKG21 buftvtots
-PKG206 ntp_unixtime 6
-PKG151 ntp_util 8
-PKG106 clocktime
-PKG299 ntp_refclock 7
-PKG278 ntp_util 13
-PKG381 fcntl 3
-PKG356 modetoa
-PKG4 syslog 1
-PKG344 tvtoa
-PKG66 refclock_nmea 2
-PKG148 netof 1
-PKG347 ntp_control 13
-PKG138 ntp_request 2
-PKG150 auth12crypt 6
-PKG216 mfptoa 5
-PKG225 inttoa
-PKG124 string 39
-PKG214 caljulian 2
-PKG345 a_md5encrypt 2
-PKG236 ntp_proto 4
-PKG263 termios 3
-PKG154 authdecrypt 4
-PKG85 time 4
-PKG144 stdio 11
-PKG294 errno 5
-PKG164 ntp_peer 9
-PKG396 errno 2
-PKG347 refclock_hpgps 14
-PKG256 mfptoa 1
-PKG296 systime 6
-PKG109 stdio 7
-PKG115 ntpd 1
-PKG85 msyslog 9
-PKG75 a_md512crypt 3
-PKG355 clocktypes
-PKG395 refnumtoa 1
-PKG351 refclock_as2201 1
-PKG0 authusekey 4
-PKG44 emalloc 4
-PKG338 ntp_peer 17
-PKG80 ntp_syslog 3
-PKG372 a_md5decrypt 2
-PKG76 caltontp 2
-PKG405 numtoa 4
-PKG259 ranny 2
-PKG262 md5 3
-PKG44 refclock_true
-PKG29 refclock_true 14
-PKG233 ntp_unixtime 4
-PKG124 lib_strbuf 1
-PKG86 authkeys 1
-PKG356 refclock_arbiter 2
-PKG42 getopt
-PKG141 refclock_pst 2
-PKG97 ntp_intres 5
-PKG66 unistd 4
-PKG31 ntp_proto 10
-PKG360 syslog 4
-PKG300 ntp_monitor 1
-PKG29 refclock_arbiter 13
-PKG356 a_md512crypt
-PKG377 authkeys 9
-PKG5 decodenetnum
-PKG402 in 2
-PKG193 refclock_as2201 2
-PKG270 ntp_refclock 9
-PKG149 ntp_io 3
-PKG307 ntp_leap 3
-PKG371 buftvtots 1
-PKG180 ntp_syslog
-PKG94 ntpd 4
-PKG398 in 1
-PKG220 ntp_config 7
-PKG149 refclock_hpgps 1
-PKG323 refclock_datum
-PKG111 ntp_refclock 4
-PKG360 fcntl 1
-PKG47 ntp_peer 1
-PKG97 emalloc 10
-PKG98 uglydate 2
-PKG365 authkeys 3
-PKG404 string 3
-PKG373 refclock_true 2
-PKG266 msyslog 8
-PKG169 hextolfp
-PKG155 ntp_config 5
-PKG80 refclock_wwvb 13
-PKG90 msyslog 5
-PKG162 md5 4
-PKG124 atolfp 1
-PKG201 stropts 1
-PKG109 authdes 2
-PKG89 refclock_local 6
-PKG158 ntp_proto 2
-PKG402 mstolfp
-PKG390 ntp_unixclock 1
-PKG272 calyearstart 2
-PKG255 ntp_timer 3
-PKG352 refclock_wwvb 2
-PKG150 ntp_control 17
-PKG101 authkeys 6
-PKG399 ntp_timer 1
-PKG135 string 11
-PKG25 time 6
-PKG137 stat 2
-PKG368 octtoint
-PKG86 ntp_monitor
-PKG291 dofptoa 2
-PKG344 systime 8
-PKG402 atouint 1
-PKG357 refclock_arc 12
-PKG197 ntp_unixtime 15
-PKG176 fptoms 3
-PKG244 authparity 1
-PKG247 refclock_datum 7
-PKG287 authencrypt
-PKG264 sched 3
-PKG416 refclock_atom 1
-PKG219 ntp_peer 4
-PKG415 string 7
-PKG310 fptoa 1
-PKG372 refclock_as2201 13
-PKG221 ntp_proto 3
-PKG79 numtoa 2
-PKG111 ntp_util 3
-PKG263 authparity
-PKG194 authusekey 1
-PKG12 ntp_proto 15
-PKG372 ntp_proto 1
-PKG24 ntp_syslog 2
-PKG68 statestr 3
-PKG119 clocktypes 2
-PKG56 ntp_control 46
-PKG113 mfptoms 2
-PKG8 stdio 5
-PKG207 ntp_unixtime 30
-PKG196 ntp_request 12
-PKG21 refclock_leitch 7
-PKG339 auth12crypt 4
-PKG284 ntp_util 4
-PKG233 timex 1
-PKG90 refclock_trak 14
-PKG360 ntp_config 4
-PKG126 auth12crypt 8
-PKG307 stdlib 6
-PKG153 ntp_peer 2
-PKG285 mman 1
-PKG78 in 18
-PKG291 ntp_unixtime 10
-PKG127 refclock_atom 11
-PKG77 timex 3
-PKG243 authdes 1
-PKG397 tvtoa 2
-PKG125 ntp_proto 20
-PKG32 ntp_restrict 2
-PKG280 caltontp
-PKG78 hextoint
-PKG329 ntp_request 6
-PKG129 ntp_loopfilter 4
-PKG161 termios 1
-PKG306 in 110
-PKG269 ntp_monitor 3
-PKG4 refclock_trak 2
-PKG169 string 10
-PKG267 ntp_peer 18
-PKG254 fptoms 4
-PKG50 numtoa 3
-PKG353 stat 1
-PKG93 ranny 1
-PKG2 ntp_control 1
-PKG185 refclock_atom 2
-PKG125 netof
-PKG91 refclock_datum 8
-PKG337 ctype 4
-PKG67 stdio 19
-PKG391 utvtoa 1
-PKG95 ntp_request 1
-PKG46 refclock_datum 3
-PKG248 ntp_leap 1
-PKG184 mfptoms 1
-PKG282 libio 1
-PKG299 ntp_config 19
-PKG210 dolfptoa 2
-PKG135 a_md5encrypt 5
-PKG215 refclock_nmea 4
-PKG115 stdlib 8
-PKG299 calleapwhen 2
-PKG360 refclock_arc 2
-PKG157 in 4
-PKG369 ntp_unixclock 2
-PKG146 ntp_request 18
-PKG85 systime 3
-PKG246 ntp_util 6
-PKG281 ntpd 2
-PKG48 ntp_filegen 6
-PKG382 ntpd 3
-PKG269 findconfig 2
-PKG205 ntp_control 10
-PKG240 termios 5
-PKG179 a_md512crypt 7
-PKG189 string 13
-PKG31 in 22
-PKG42 ntp_control 7
-PKG360 a_md5decrypt 5
-PKG212 refclock_hpgps 3
-PKG360 refclock_leitch 1
-PKG187 numtoa 10
-PKG407 refclock_usno 1
-PKG234 ntp_refclock 6
-PKG165 mstolfp 2
-PKG196 ntp_control 8
-PKG385 ntp_peer 10
-PKG388 ntp_syslog 4
-PKG208 refclock_trak 1
+PKG57 ntp_refclock
+PKG90 stdio
+PKG49 ntp_util
+PKG101 refclock_arbiter
+PKG96 ntp_filegen
+PKG49 emalloc
+PKG101 ntp_io
+PKG72 ntp_proto
+PKG49 refclock_hpgps
+PKG57 ntp_control
+PKG86 refclock_local
+PKG51 mfptoa
+PKG90 systime
+PKG102 atolfp
+PKG36 numtoa
+PKG79 numtohost
+PKG45 ntp_timer
+PKG81 ntp_leap
+PKG98 in
+PKG86 ntp_loopfilter
+PKG86 refclock_atom
+PKG91 ntp_restrict
+PKG84 ntp_config
+PKG49 stdlib
+PKG83 errno
+PKG83 msyslog
+PKG67 time
+PKG78 authkeys
+PKG96 stat
+PKG99 refclock_leitch
+PKG50 clocktime
+PKG45 signal
+PKG84 atoint
+PKG57 string
+PKG57 statestr
+PKG85 dofptoa
+PKG36 ntp_peer
+PKG104 authusekey
+PKG104 authreadkeys
+PKG94 md5
+PKG49 refclock_nmea
+PKG61 auth12crypt
+PKG67 prettydate
+PKG106 ntp_unixclock
+PKG99 ntp_unixtime
+PKG45 syssignal
+PKG75 ntp_intres
+PKG101 unistd
+PKG72 ntp_monitor
+PKG49 refclock_wwvb
+PKG50 calyearstart
+PKG51 refclock_as2201
+PKG69 dolfptoa
+PKG61 authdes
+PKG101 refclock_pst
+PKG88 refclock_trak
+PKG75 socket
+PKG57 utsname
+PKG94 a_md5encrypt
+PKG85 fptoa
+PKG82 refclock_arc
+PKG61 authencrypt
+PKG69 mfptoms
+PKG84 wait
+PKG107 ntpd
+PKG90 utvtoa
+PKG92 lib_strbuf
+PKG67 humandate
+PKG108 ctype
+PKG69 uglydate
+PKG75 select
+PKG72 ntp_request
+PKG72 ranny
+PKG95 refnumtoa
+PKG78 authdecrypt
+PKG75 atouint
+PKG99 fcntl
+PKG109 getopt
+PKG78 a_md5decrypt
+PKG79 netdb
+PKG92 uinttoa
+PKG81 calleapwhen
+PKG82 syslog
+PKG83 ntp_syslog
+PKG84 findconfig
+PKG85 fptoms
+PKG86 setjmp
+PKG96 caljulian
+PKG88 buftvtots
+PKG92 modetoa
+PKG90 tvtoa
+PKG91 netof
+PKG92 inttoa
+PKG99 termios
+PKG94 a_md512crypt
+PKG95 clocktypes
+PKG96 caltontp
+PKG110 refclock_true
+PKG98 decodenetnum
+PKG99 refclock_datum
+PKG108 hextolfp
+PKG101 stropts
+PKG102 mstolfp
+PKG108 octtoint
+PKG104 authparity
+PKG107 sched
+PKG106 timex
+PKG107 mman
+PKG108 hextoint
+PKG109 libio
+PKG110 refclock_usno

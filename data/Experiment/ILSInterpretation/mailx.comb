@@ -1,230 +1,41 @@
-PKG228 cmd2
-PKG22 popen 4
-PKG226 collect
-PKG18 aux 4
-PKG12 lex
-PKG5 stat 1
-PKG156 cmd3
-PKG18 collect 1
-PKG35 list 3
-PKG185 cmd1
-PKG213 stdlib 5
-PKG191 aux
-PKG75 stdio 8
-PKG134 edit
-PKG59 vars 2
-PKG209 quit
-PKG39 aux 6
-PKG76 fio
-PKG94 head 1
-PKG54 glob
-PKG180 edit 3
-PKG42 vars
-PKG97 stdlib 6
-PKG117 libio 8
-PKG21 libio 2
-PKG69 vars 21
-PKG46 strings 4
-PKG70 signal 1
-PKG176 names 3
-PKG37 lex 1
-PKG41 fio 12
-PKG90 names
-PKG222 main 8
-PKG36 popen
-PKG218 cmd1 4
-PKG212 ctype 1
-PKG111 cmd2 3
-PKG178 cmd3 4
-PKG13 strings 2
-PKG141 temp 1
-PKG172 stdio 33
-PKG115 send
-PKG224 fio 7
-PKG105 cmd1 2
-PKG139 stdio 19
-PKG215 v7
-PKG130 fio 3
-PKG177 send 4
-PKG143 cmd3 12
-PKG131 names 4
-PKG5 v7 1
-PKG58 names 12
-PKG62 vars 11
-PKG149 signal 2
-PKG186 glob 7
-PKG162 cmd2 2
-PKG4 popen 11
-PKG211 quit 3
-PKG23 string 4
-PKG22 list
-PKG44 glob 57
-PKG70 head
-PKG22 popen 16
-PKG44 vars 10
-PKG41 collect 9
-PKG76 string 5
-PKG81 main
-PKG29 fcntl 2
-PKG149 aux 5
-PKG224 setjmp 2
-PKG139 stat 3
-PKG129 unistd 1
-PKG181 glob 9
-PKG153 stat
-PKG175 stdio 1
-PKG214 fio 6
-PKG35 stdio 6
-PKG197 list 8
-PKG64 libio 1
-PKG137 fcntl 3
-PKG42 glob 33
-PKG47 temp
-PKG154 getname 1
-PKG222 getname
-PKG200 fio 2
-PKG67 cmd2 1
-PKG177 cmd3 1
-PKG225 temp 2
-PKG142 vars 7
-PKG131 glob 4
-PKG82 stdio 26
-PKG28 aux 1
-PKG18 setjmp 1
-PKG1 file 1
-PKG42 glob 38
-PKG163 edit 2
-PKG71 names 1
-PKG159 glob 8
-PKG154 stdio 12
-PKG180 stdio 2
-PKG162 stdlib 4
-PKG113 stdlib 2
-PKG5 dotlock
-PKG89 glob 2
-PKG57 lex 4
-PKG10 glob 32
-PKG137 stdio 15
-PKG156 names 10
-PKG215 popen 15
-PKG94 names 2
-PKG56 fio 1
-PKG216 tty
-PKG111 setjmp 4
-PKG120 collect 8
-PKG191 strings
-PKG42 popen 5
-PKG4 cmd3 3
-PKG42 glob 11
-PKG228 unistd 4
-PKG143 signal 19
-PKG9 libio 6
-PKG99 names 9
-PKG225 quit 6
-PKG44 list 7
-PKG207 string 6
-PKG16 strings 6
-PKG176 ctype 6
-PKG63 send 2
-PKG117 stdio 13
-PKG204 unistd 2
-PKG127 cmd1 5
-PKG40 termios 1
-PKG78 stdio 5
-PKG42 cmd2 7
-PKG215 collect 2
-PKG166 cmd3 9
-PKG33 list 6
-PKG30 glob 29
-PKG158 string 1
-PKG63 signal 7
-PKG135 send 11
-PKG226 glob 6
-PKG229 collect 3
-PKG121 aux 9
-PKG213 stat 2
-PKG32 send 1
-PKG204 popen 2
-PKG24 ctype 3
-PKG26 aux 15
-PKG217 quit 15
-PKG7 fio 5
-PKG42 send 17
-PKG180 fio 10
-PKG52 popen 6
-PKG121 lex 2
-PKG34 string 8
-PKG192 stdlib 1
-PKG103 lex 8
-PKG96 main 4
-PKG74 popen 1
-PKG104 libio 3
-PKG126 tty 1
-PKG56 fcntl 1
-PKG30 getopt 2
-PKG151 quit 1
-PKG220 glob 1
-PKG111 cmd1 6
-PKG229 ioctl 1
-PKG207 cmd3 6
-PKG9 stdlib 9
-PKG29 main 1
-PKG17 send 5
-PKG201 vars 1
-PKG155 edit 6
-PKG2 glob 17
-PKG57 stdio 9
-PKG45 time 1
-PKG221 strings 1
-PKG85 send 3
-PKG211 signal 4
-PKG213 ctype 2
-PKG190 cmd3 2
-PKG20 popen 7
-PKG129 vars 3
-PKG22 string 22
-PKG144 errno 1
-PKG21 dotlock 2
-PKG12 collect 16
-PKG64 unistd 8
-PKG54 signal 3
-PKG34 string 14
-PKG52 signal 15
-PKG149 stdio 11
-PKG34 aux 22
-PKG117 aux 7
-PKG25 names 5
-PKG73 unistd 7
-PKG118 edit 1
-PKG156 string 2
-PKG217 termios 3
-PKG213 glob 45
-PKG169 cmd1 7
-PKG45 quit 2
-PKG4 lex 7
-PKG47 errno 3
-PKG21 aux 16
-PKG50 cmd1 3
-PKG29 tty 3
-PKG206 popen 8
-PKG12 setjmp 3
-PKG180 fio 4
-PKG39 getname 2
-PKG126 pwd 4
-PKG20 signal 12
-PKG70 libio 9
-PKG73 list 2
-PKG137 wait 2
-PKG225 stdio 7
-PKG34 list 5
-PKG195 edit 4
-PKG38 stdio 29
-PKG110 stdio 3
-PKG51 stdio 27
-PKG21 main 5
-PKG46 aux 2
-PKG78 string 3
-PKG156 glob 15
-PKG151 v7 2
-PKG185 names 20
-PKG35 getopt 9
+PKG26 cmd2
+PKG40 popen
+PKG40 collect
+PKG24 aux
+PKG40 lex
+PKG11 stat
+PKG16 cmd3
+PKG40 list
+PKG24 cmd1
+PKG25 stdlib
+PKG16 stdio
+PKG11 edit
+PKG16 vars
+PKG31 quit
+PKG24 fio
+PKG22 head
+PKG16 glob
+PKG24 libio
+PKG26 strings
+PKG40 signal
+PKG35 names
+PKG35 main
+PKG22 ctype
+PKG25 temp
+PKG24 send
+PKG25 v7
+PKG26 string
+PKG35 fcntl
+PKG31 setjmp
+PKG40 unistd
+PKG39 getname
+PKG31 file
+PKG38 dotlock
+PKG36 tty
+PKG36 termios
+PKG35 getopt
+PKG36 ioctl
+PKG38 time
+PKG38 errno
+PKG39 pwd
+PKG40 wait

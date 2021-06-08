@@ -1,103 +1,32 @@
-PKG31 ed
-PKG33 tc 186
-PKG35 sh
-PKG49 stdlib 31
-PKG78 tw
-PKG72 stdlib 6
-PKG32 glob
-PKG51 ctype 1
-PKG46 stat
-PKG95 tw 7
-PKG9 tc
-PKG101 vms 1
-PKG20 termios 1
-PKG76 stat 3
-PKG5 setjmp 16
-PKG16 setjmp 4
-PKG6 netdb 3
-PKG41 stat 2
-PKG36 glob 6
-PKG58 unistd 16
-PKG60 unistd 8
-PKG97 tw 23
-PKG100 gethost
-PKG29 pwd 1
-PKG35 nl_types 9
-PKG73 termios 8
-PKG5 errno 2
-PKG16 signal 85
-PKG65 tc 203
-PKG72 signal 25
-PKG56 gethost 1
-PKG72 ctype 11
-PKG72 ed 36
-PKG46 time 12
-PKG97 inet 2
-PKG48 sh 127
-PKG31 ioctl 4
-PKG97 string 34
-PKG77 string 17
-PKG53 glob 4
-PKG28 ctype 2
-PKG16 ctype 19
-PKG81 sh 836
-PKG9 errno 4
-PKG47 wait 2
-PKG79 nl_types 17
-PKG38 unistd 103
-PKG17 fcntl 6
-PKG83 stdlib 2
-PKG82 nl_types 27
-PKG74 string 2
-PKG81 errno 1
-PKG62 setjmp 1
-PKG88 tc 61
-PKG61 fcntl 2
-PKG64 time 1
-PKG92 ed 5
-PKG54 string 36
-PKG30 string 3
-PKG40 locale 2
-PKG37 grp 4
-PKG76 resource 7
-PKG95 dirent 4
-PKG6 ctype 35
-PKG83 signal 5
-PKG85 ed 209
-PKG41 sh 8
-PKG66 nl_types 1
-PKG61 nl_types 25
-PKG40 tw 1
-PKG71 dirent 8
-PKG23 dirent 33
-PKG55 sh 29
-PKG79 grp 3
-PKG88 tc 1272
-PKG15 ma 1
-PKG37 ed 60
-PKG44 errno 3
-PKG76 tw 137
-PKG9 pwd 5
-PKG15 mi 1
-PKG64 stdlib 23
-PKG34 sh 203
-PKG32 stdlib 15
-PKG19 unistd 12
-PKG99 stat 13
-PKG79 setjmp 2
-PKG40 errno 23
-PKG14 tc 5
-PKG66 tw 72
-PKG93 pwd 4
-PKG31 socket 1
-PKG16 fcntl 18
-PKG12 ioctl 1
-PKG5 stdio 10
-PKG64 time 9
-PKG2 string 7
-PKG24 locale 1
-PKG32 signal 33
-PKG41 signal 9
-PKG96 stdlib 1
-PKG43 sh 198
-PKG74 grp 1
+PKG20 ed
+PKG30 tc
+PKG30 sh
+PKG30 stdlib
+PKG20 tw
+PKG27 glob
+PKG20 ctype
+PKG27 stat
+PKG30 vms
+PKG20 termios
+PKG20 setjmp
+PKG30 netdb
+PKG20 unistd
+PKG31 gethost
+PKG30 pwd
+PKG20 nl_types
+PKG30 errno
+PKG20 signal
+PKG30 time
+PKG30 inet
+PKG20 ioctl
+PKG30 string
+PKG30 wait
+PKG30 fcntl
+PKG31 locale
+PKG31 grp
+PKG30 resource
+PKG27 dirent
+PKG30 ma
+PKG30 mi
+PKG30 socket
+PKG31 stdio

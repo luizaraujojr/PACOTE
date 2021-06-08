@@ -1,17 +1,15 @@
-PKG4 ping
-PKG12 ctype 1
-PKG7 stdlib 12
-PKG1 netdb 6
-PKG2 unistd 9
-PKG5 unistd
-PKG0 ping 1
-PKG13 errno 1
-PKG8 signal 3
-PKG5 select 1
-PKG11 getopt 17
-PKG16 time 2
-PKG7 socket 7
-PKG0 inet 7
-PKG3 in 4
-PKG5 stdio 31
-PKG1 string 6
+PKG13 ping
+PKG13 ctype
+PKG13 stdlib
+PKG13 netdb
+PKG13 unistd
+PKG13 errno
+PKG13 signal
+PKG13 select
+PKG13 getopt
+PKG13 time
+PKG13 socket
+PKG13 inet
+PKG13 in
+PKG13 stdio
+PKG14 string

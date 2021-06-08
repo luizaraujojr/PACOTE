@@ -9,6 +9,8 @@ import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
 
 public class DependencyReader
 {
+	private static final String SPLITTER = "\\s+";//split por qualquer espacamento
+
 	public Project load(String filename) throws FileNotFoundException
 	{
 		FileInputStream fis = new FileInputStream(filename);
@@ -18,36 +20,31 @@ public class DependencyReader
 		while (sc.hasNextLine())
 		{
 			String line = sc.nextLine();
+			String[] token = line.split(SPLITTER);
 			
-			if (line.length() > 0)
-			{
-				int index = line.indexOf(' ');
+            if(token.length  >= 2){
+            	String firstClass = token[0];
+				String secondClass = token[1];
 				
-				if (index != -1)
+				int firstIndex = project.getClassIndex(firstClass);
+				
+				if (firstIndex == -1)
 				{
-					String firstClass = line.substring(0, index).trim();
-					String secondClass = line.substring(index).trim();
-					
-					int firstIndex = project.getClassIndex(firstClass);
-					
-					if (firstIndex == -1)
-					{
-						project.addClass(new ProjectClass(firstClass));
-						firstIndex = project.getClassCount() - 1;
-					}
-					
-					int secondIndex = project.getClassIndex(secondClass);
-					
-					if (secondIndex == -1)
-					{
-						project.addClass(new ProjectClass(secondClass));
-//						secondIndex = project.getClassCount() - 1;
-					}
-					
-					ProjectClass firstProjectClass = project.getClassIndex(firstIndex);
-					firstProjectClass.addDependency(secondClass);
+					project.addClass(new ProjectClass(firstClass));
+					firstIndex = project.getClassCount() - 1;
 				}
-			}
+				
+				int secondIndex = project.getClassIndex(secondClass);
+				
+				if (secondIndex == -1)
+				{
+					project.addClass(new ProjectClass(secondClass));
+//					secondIndex = project.getClassCount() - 1;
+				}
+				
+				ProjectClass firstProjectClass = project.getClassIndex(firstIndex);
+				firstProjectClass.addDependency(secondClass);
+            }
 		}
 
 		sc.close();

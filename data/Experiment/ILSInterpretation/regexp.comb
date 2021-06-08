@@ -1,25 +1,14 @@
-PKG11 CharacterArrayCharacterIterator
-PKG2 CharacterIterator  1
-PKG7 RE
-PKG24 RECompiler  2
-PKG23 REProgram  6
-PKG12 StringCharacterIterator  1
-PKG9 ReaderCharacterIterator
-PKG22 recompile
-PKG20 REProgram  1
-PKG13 RECompiler
-PKG23 RESyntaxException  1
-PKG3 REDebugCompiler
-PKG23 RECompiler  11
-PKG18 REDemo
-PKG11 RE  7
-PKG24 RECompiler  1
-PKG16 REDebugCompiler  2
-PKG12 RETest
-PKG13 RE  24
-PKG16 REDebugCompiler  4
-PKG18 REProgram  2
-PKG3 REUtil
-PKG14 RE  3
-PKG11 StreamCharacterIterator
-PKG7 StringCharacterIterator
+PKG13 CharacterArrayCharacterIterator
+PKG13 CharacterIterator
+PKG12 RE
+PKG11 RECompiler
+PKG7 REProgram
+PKG12 StringCharacterIterator
+PKG13 ReaderCharacterIterator
+PKG7 recompile
+PKG11 RESyntaxException
+PKG10 REDebugCompiler
+PKG10 REDemo
+PKG11 RETest
+PKG12 REUtil
+PKG13 StreamCharacterIterator

@@ -1,376 +1,51 @@
-PKG257 tty
-PKG160 macro 1
-PKG149 b
-PKG340 vfile 59
-PKG11 pw
-PKG128 config 5
-PKG343 time 1
-PKG341 va
-PKG97 rc 1
-PKG136 undo
-PKG367 blocks 2
-PKG303 blocks
-PKG81 b 65
-PKG217 vfile
-PKG0 fcntl 6
-PKG73 ushell
-PKG35 qw 1
-PKG352 w
-PKG85 config 6
-PKG242 macro
-PKG109 main 9
-PKG222 cmd
-PKG162 config 2
-PKG156 help 2
-PKG352 uerror
-PKG23 w 4
-PKG99 ublock
-PKG126 tty 3
-PKG257 tw
-PKG13 ufile 7
-PKG308 kbd
-PKG234 rc 13
-PKG52 path
-PKG282 rc 4
-PKG364 usearch
-PKG203 regex 2
-PKG229 uisrch
-PKG121 ufile 2
-PKG167 tab
-PKG153 b 17
-PKG348 blocks 29
-PKG175 w 5
-PKG113 ufile
-PKG198 ushell 2
-PKG178 errno 4
-PKG64 uisrch 4
-PKG123 termcap
-PKG32 va 3
-PKG7 libio 2
-PKG242 kbd 2
-PKG282 stdio 1
-PKG55 uerror 1
-PKG191 utag
-PKG42 b 10
-PKG324 menu 7
-PKG301 scrn 4
-PKG96 vs 26
-PKG57 queue
-PKG21 uerror 5
-PKG299 bw 4
-PKG114 ushell 8
-PKG220 uformat
-PKG304 ublock 9
-PKG358 zstr
-PKG19 pw 1
-PKG127 w 1
-PKG342 ublock 5
-PKG19 ufile 4
-PKG196 fcntl 4
-PKG8 bw
-PKG287 zstr 6
-PKG320 bw 29
-PKG77 rc
-PKG335 poshist
-PKG54 main 1
-PKG30 path 2
-PKG119 zstr 1
-PKG206 pw 2
-PKG51 queue 6
-PKG301 main 2
-PKG41 uedit 1
-PKG105 tty 2
-PKG333 stat
-PKG274 termcap 12
-PKG87 uedit
-PKG304 ublock 4
-PKG69 queue 2
-PKG263 uisrch 9
-PKG237 vs 2
-PKG236 undo 2
-PKG209 rc 18
-PKG299 tw 3
-PKG158 b 26
-PKG241 help
-PKG28 w 2
-PKG97 scrn 9
-PKG300 termcap 4
-PKG238 scrn
-PKG124 ublock 1
-PKG34 regex
-PKG3 termcap 5
-PKG200 kbd 3
-PKG330 zstr 17
-PKG315 pwd 2
-PKG240 help 7
-PKG324 queue 5
-PKG233 macro 6
-PKG143 b 15
-PKG236 ufile 18
-PKG371 scrn 8
-PKG27 vs 11
-PKG169 config 3
-PKG159 vs
-PKG62 ufile 15
-PKG279 regex 20
-PKG296 help 3
-PKG146 b 3
-PKG116 w 7
-PKG366 uformat 2
-PKG30 main
-PKG41 qw
-PKG156 config 11
-PKG71 stdio 6
-PKG349 undo 70
-PKG283 menu 1
-PKG119 termcap 3
-PKG122 poshist 3
-PKG94 ushell 18
-PKG104 main 3
-PKG171 macro 4
-PKG350 va 2
-PKG344 hash
-PKG55 cmd 8
-PKG274 stdio 31
-PKG247 vs 22
-PKG320 va 9
-PKG270 scrn 2
-PKG370 menu 4
-PKG166 usearch 1
-PKG158 vs 4
-PKG327 main 7
-PKG272 vs 16
-PKG206 tty 4
-PKG194 vs 7
-PKG53 tab 32
-PKG227 bw 2
-PKG184 config 1
-PKG333 poshist 2
-PKG283 vfile 12
-PKG350 ublock 210
-PKG52 path 16
-PKG143 vs 14
-PKG20 zstr 18
-PKG237 cmd 4
-PKG28 queue 34
-PKG230 kbd 4
-PKG275 termios 6
-PKG40 zstr 4
-PKG368 pw 5
-PKG3 tw 1
-PKG337 ushell 3
-PKG148 menu
-PKG70 tab 9
-PKG213 cmd 9
-PKG74 path 3
-PKG271 umath
-PKG327 stdio 2
-PKG243 vfile 9
-PKG225 bw 39
-PKG68 b 151
-PKG337 qw 9
-PKG158 ushell 7
-PKG82 va 1
-PKG54 b 14
-PKG364 config 12
-PKG12 w 17
-PKG51 ublock 3
-PKG111 hash 2
-PKG254 ufile 5
-PKG263 uedit 2
-PKG221 vs 5
-PKG101 blocks 1
-PKG100 config 8
-PKG209 cmd 3
-PKG202 uformat 88
-PKG274 stdio 5
-PKG216 stat 1
-PKG200 rc 6
-PKG350 pw 11
-PKG368 tab 11
-PKG27 umath 3
-PKG144 w 14
-PKG98 rc 2
-PKG195 b 7
-PKG168 b 19
-PKG190 termcap 2
-PKG152 utag 5
-PKG205 stdio 20
-PKG40 ufile 3
-PKG176 config 4
-PKG72 w 3
-PKG78 qw 5
-PKG20 zstr 2
-PKG128 kbd 5
-PKG220 uedit 3
-PKG42 uisrch 8
-PKG295 ufile 17
-PKG28 cmd 2
-PKG201 uedit 6
-PKG331 b 5
-PKG58 config 7
-PKG214 usearch 3
-PKG17 menu 5
-PKG10 vs 6
-PKG310 usearch 5
-PKG4 scrn 10
-PKG347 main 5
-PKG17 usearch 4
-PKG280 b 8
-PKG81 tty 9
-PKG175 signal 16
-PKG37 b 33
-PKG184 tab 5
-PKG266 qw 8
-PKG265 w 8
-PKG80 tty 5
-PKG61 menu 2
-PKG300 tw 7
-PKG143 path 5
-PKG345 stdio 10
-PKG130 b 4
-PKG83 ioctl 2
-PKG53 uerror 11
-PKG307 b 53
-PKG162 cmd 1
-PKG84 queue 16
-PKG89 macro 8
-PKG274 bw 18
-PKG197 zstr 8
-PKG302 usearch 14
-PKG198 vs 18
-PKG294 vs 3
-PKG268 hash 5
-PKG193 umath 2
-PKG365 main 6
-PKG334 path 6
-PKG206 tty 19
-PKG305 ublock 14
-PKG88 uerror 6
-PKG128 uformat 1
-PKG226 cmd 17
-PKG61 scrn 1
-PKG70 tty 6
-PKG45 tty 1
-PKG363 queue 4
-PKG24 b 2
-PKG87 config 13
-PKG341 tw 30
-PKG227 regex 5
-PKG333 termcap 9
-PKG205 stdio 3
-PKG129 uisrch 1
-PKG3 b 42
-PKG28 termcap 39
-PKG234 tw 18
-PKG295 stdio 11
-PKG123 utag 1
-PKG192 utime 1
-PKG320 w 6
-PKG44 regex 7
-PKG140 usearch 67
-PKG87 va 25
-PKG192 zstr 7
-PKG328 b 22
-PKG323 tab 1
-PKG350 bw 3
-PKG114 main 10
-PKG220 rc 5
-PKG276 bw 1
-PKG56 uedit 20
-PKG349 config 16
-PKG334 tab 2
-PKG291 utag 17
-PKG12 uedit 8
-PKG300 macro 3
-PKG328 macro 11
-PKG50 tty 8
-PKG278 cmd 15
-PKG303 uerror 2
-PKG335 undo 1
-PKG272 w 15
-PKG328 tw 2
-PKG153 ufile 1
-PKG162 ublock 7
-PKG111 utag 3
-PKG101 blocks 5
-PKG315 ufile 14
-PKG244 ushell 1
-PKG14 uisrch 7
-PKG220 pw 33
-PKG361 scrn 6
-PKG29 rc 3
-PKG31 vs 8
-PKG153 pw 15
-PKG267 signal 2
-PKG145 va 7
-PKG58 signal 1
-PKG120 uedit 15
-PKG35 vs 15
-PKG348 bw 6
-PKG183 vs 17
-PKG37 b 129
-PKG155 qw 34
-PKG372 rc 8
-PKG308 w 11
-PKG175 zstr 12
-PKG225 path 19
-PKG241 tab 22
-PKG123 dirent 5
-PKG193 vs 9
-PKG182 zstr 3
-PKG322 b 12
-PKG305 bw 10
-PKG199 scrn 3
-PKG153 macro 5
-PKG58 poshist 11
-PKG161 pw 19
-PKG174 tw 8
-PKG56 uisrch 15
-PKG205 main 11
-PKG55 ublock 10
-PKG99 scrn 66
-PKG241 undo 8
-PKG82 uedit 11
-PKG165 errno 1
-PKG296 ufile 6
-PKG135 tw 36
-PKG14 bw 24
-PKG367 queue 7
-PKG153 scrn 81
-PKG200 uerror 3
-PKG37 va 4
-PKG179 macro 7
-PKG152 w 33
-PKG325 usearch 6
-PKG23 umath 5
-PKG328 umath 9
-PKG8 uedit 4
-PKG52 vfile 2
-PKG315 usearch 2
-PKG140 uedit 132
-PKG188 config 9
-PKG183 b 29
-PKG164 utag 18
-PKG261 cmd 16
-PKG163 pw 4
-PKG323 path 4
-PKG363 tab 10
-PKG345 qw 4
-PKG9 usearch 9
-PKG43 w 16
-PKG128 tw 32
-PKG256 rc 10
-PKG148 bw 33
-PKG146 blocks 15
-PKG233 queue 9
-PKG276 umath 1
-PKG219 b 74
-PKG357 cmd 7
-PKG152 stat 2
-PKG271 macro 2
-PKG233 uerror 18
-PKG70 termcap 27
-PKG252 undo 14
-PKG41 b 21
- 21
+PKG48 tty
+PKG22 macro
+PKG43 b
+PKG10 vfile
+PKG49 pw
+PKG43 config
+PKG48 time
+PKG17 va
+PKG22 rc
+PKG43 undo
+PKG10 blocks
+PKG50 fcntl
+PKG48 ushell
+PKG26 qw
+PKG43 w
+PKG37 main
+PKG44 cmd
+PKG17 help
+PKG35 uerror
+PKG41 ublock
+PKG35 tw
+PKG49 ufile
+PKG22 kbd
+PKG50 path
+PKG25 usearch
+PKG25 regex
+PKG26 uisrch
+PKG33 tab
+PKG48 errno
+PKG42 termcap
+PKG42 libio
+PKG37 stdio
+PKG49 utag
+PKG33 menu
+PKG37 scrn
+PKG35 vs
+PKG40 queue
+PKG37 bw
+PKG41 uformat
+PKG49 zstr
+PKG40 poshist
+PKG41 uedit
+PKG42 stat
+PKG43 pwd
+PKG44 hash
+PKG48 termios
+PKG47 umath
+PKG47 signal
+PKG48 ioctl
+PKG49 utime
+PKG50 dirent

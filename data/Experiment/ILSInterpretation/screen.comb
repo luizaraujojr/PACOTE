@@ -1,237 +1,42 @@
-PKG188 socket
-PKG120 signal 2
-PKG156 fileio
-PKG8 strings 7
-PKG201 display
-PKG204 fileio 1
-PKG120 attacher
-PKG120 errno 4
-PKG235 input
-PKG193 stdlib 1
-PKG233 help
-PKG109 screen 46
-PKG19 
-PKG19 utmp 1
-PKG108 screen
-PKG35 window 14
-PKG48 pty
-PKG48 window 2
-PKG0 misc 13
-PKG169 process
-PKG226 misc 12
-PKG29 stdio 9
-PKG55 resize
-PKG205 ioctl 2
-PKG127 unistd 18
-PKG227 tty
-PKG22 errno 5
-PKG191 termcap
-PKG188 window 1
-PKG97 screen 47
-PKG90 misc
-PKG233 acls 1
-PKG224 utmp 2
-PKG42 fcntl 2
-PKG169 screen 203
-PKG37 termcap 2
-PKG70 input 17
-PKG173 stdlib 10
-PKG143 display 1
-PKG87 stat
-PKG87 fileio 2
-PKG151 stat 5
-PKG104 tty 1
-PKG28 ansi 1
-PKG49 window
-PKG191 process 7
-PKG64 process 4
-PKG202 loadav 1
-PKG235 search 7
-PKG173 misc 4
-PKG173 socket 8
-PKG112 dirent 5
-PKG85 window 5
-PKG117 stdlib 18
-PKG163 stdio 2
-PKG42 utmp
-PKG22 time 1
-PKG9 strings 1
-PKG220 strings 9
-PKG90 help 9
-PKG233 stdio 4
-PKG80 socket 19
-PKG156 libio 1
-PKG102 pwd 5
-PKG70 attacher 2
-PKG236 strings 2
-PKG28 process 39
-PKG71 ansi
-PKG90 errno 3
-PKG75 unistd 39
-PKG86 acls 2
-PKG37 stdio 12
-PKG151 strings 5
-PKG144 process 3
-PKG221 utmp 3
-PKG86 mark
-PKG56 display 2
-PKG112 unistd 5
-PKG101 fcntl 7
-PKG127 termcap 1
-PKG96 search
-PKG96 input 3
-PKG227 fileio 3
-PKG113 utmpx 12
-PKG234 wait 2
-PKG170 acls
-PKG170 help 7
-PKG49 term 1
-PKG134 attacher 14
-PKG77 misc 16
-PKG83 tty 4
-PKG169 termcap 16
-PKG230 stat 4
-PKG42 window 3
-PKG233 ansi 6
-PKG89 select 3
-PKG55 process 2
-PKG224 resize 7
-PKG230 termios 1
-PKG32 stdio 8
-PKG210 time 6
-PKG55 strings 3
-PKG18 process 1
-PKG49 display 4
-PKG227 window 7
-PKG201 termios 2
-PKG120 osdef 1
-PKG173 resize 1
-PKG48 misc 2
-PKG55 screen 41
-PKG71 window 8
-PKG169 display 5
-PKG22 fileio 7
-PKG131 misc 8
-PKG53 acls 5
-PKG55 stdlib 15
-PKG223 display 58
-PKG210 utmp 10
-PKG11 termios 5
-PKG201 time 2
-PKG181 osdef 13
-PKG93 ansi 20
-PKG201 resize 2
-PKG170 screen 28
-PKG163 ansi 4
-PKG196 errno 2
-PKG92 mark 7
-PKG191 term 8
-PKG88 input 2
-PKG97 help 6
-PKG22 fcntl 4
-PKG170 stdlib 9
-PKG86 display 21
-PKG222 socket 3
-PKG108 stdlib 23
-PKG50 socket 17
-PKG201 ansi 118
-PKG17 screen 52
-PKG63 fcntl 1
-PKG183 stat 2
-PKG17 strings 4
-PKG56 mark 37
-PKG165 tty 9
-PKG153 stdlib 13
-PKG215 fileio 24
-PKG12 process 19
-PKG154 input 6
-PKG181 tty 5
-PKG37 socket 2
-PKG95 screen 48
-PKG232 screen 1
-PKG108 unistd 50
-PKG18 loadav
-PKG60 stdio 3
-PKG0 screen 148
-PKG60 misc 10
-PKG227 fcntl 3
-PKG25 unistd 1
-PKG220 misc 29
-PKG26 search 1
-PKG137 stdlib 6
-PKG23 ioctl 3
-PKG142 misc 1
-PKG143 pty 1
-PKG201 stdlib 14
-PKG222 socket 5
-PKG108 shadow 3
-PKG141 process 9
-PKG231 socket 1
-PKG201 socket 7
-PKG71 tty 2
-PKG12 signal 4
-PKG127 stdio 6
-PKG28 screen 35
-PKG227 pty 2
-PKG15 ansi 10
-PKG194 resize 5
-PKG197 screen 6
-PKG80 attacher 1
-PKG90 unistd 15
-PKG155 resize 4
-PKG49 errno 6
-PKG105 search 8
-PKG96 mark 5
-PKG108 attacher 5
-PKG46 screen 51
-PKG100 misc 6
-PKG193 screen 20
-PKG235 process 14
-PKG42 stdio 1
-PKG134 strings 18
-PKG45 pty 4
-PKG117 display 3
-PKG90 ioctl 1
-PKG7 screen 93
-PKG181 ansi 7
-PKG95 tty 14
-PKG64 term 2
-PKG114 stdlib 3
-PKG227 screen 23
-PKG233 termcap 3
-PKG71 screen 113
-PKG55 ansi 17
-PKG71 stdlib 5
-PKG157 misc 20
-PKG236 unistd 6
-PKG108 stat 8
-PKG13 screen 67
-PKG169 acls 20
-PKG151 time 9
-PKG108 fcntl 5
-PKG49 stdlib 11
-PKG86 search 12
-PKG80 fileio 8
-PKG49 socket 6
-PKG144 unistd 8
-PKG3 help 27
-PKG131 display 35
-PKG105 osdef 4
-PKG38 misc 9
-PKG174 unistd 12
-PKG35 acls 3
-PKG29 screen 76
-PKG135 fileio 5
-PKG169 resize 3
-PKG172 display 89
-PKG235 display 13
-PKG84 unistd 23
-PKG200 ansi 16
-PKG135 ansi 2
-PKG88 resource 1
-PKG163 stdio 15
-PKG160 process 8
-PKG145 mark 11
-PKG16 screen 17
-PKG220 help 31
-PKG63 errno 1
+PKG41 socket
+PKG35 signal
+PKG41 fileio
+PKG33 strings
+PKG33 display
+PKG35 attacher
+PKG41 errno
+PKG28 input
+PKG23 stdlib
+PKG23 help
+PKG40 screen
+PKG34 
+PKG34 utmp
+PKG41 window
+PKG38 pty
+PKG41 misc
+PKG41 process
+PKG27 stdio
+PKG19 resize
+PKG19 ioctl
+PKG41 unistd
+PKG41 tty
+PKG39 termcap
+PKG23 acls
+PKG38 fcntl
+PKG35 stat
+PKG41 ansi
+PKG27 loadav
+PKG28 search
+PKG41 dirent
+PKG34 time
+PKG41 libio
+PKG40 pwd
+PKG33 mark
+PKG34 utmpx
+PKG35 wait
+PKG39 term
+PKG40 select
+PKG38 termios
+PKG39 osdef
+PKG40 shadow
+PKG41 resource

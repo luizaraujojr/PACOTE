@@ -1,265 +1,53 @@
-PKG29 ipop2d
-PKG15 string 14
-PKG128 smanager
-PKG37 pop3 3
-PKG144 mail
-PKG124 linkage 18
-PKG109 nntp
-PKG256 flstring 2
-PKG66 smtp
-PKG235 string 22
-PKG45 gr_waitp
-PKG219 signal 1
-PKG177 ipop3d
-PKG103 tcp_unix 9
-PKG54 env_unix 12
-PKG30 stat
-PKG207 imapd 2
-PKG36 misc 11
-PKG127 utf8
-PKG55 fs_unix 32
-PKG55 linkage 15
-PKG87 tcp_unix
-PKG244 select 12
-PKG107 imap4r1
-PKG212 misc 42
-PKG138 rfc822
-PKG140 ftl_unix 3
-PKG2 fs_unix
-PKG76 imapd 32
-PKG198 ftl_unix 2
-PKG125 stdio 10
-PKG96 string 100
-PKG197 smtp 5
-PKG239 inet 17
-PKG91 iso_8859 22
-PKG139 env_unix
-PKG235 stdio 15
-PKG109 misc
-PKG0 mail 63
-PKG69 newsrc 11
-PKG41 mail 14
-PKG229 stdlib 4
-PKG63 stdio 1
-PKG169 rfc822 10
-PKG218 pop3
-PKG167 misc 8
-PKG41 fs_unix 13
-PKG237 netmsg 2
-PKG52 string 6
-PKG96 gr_waitp 1
-PKG178 utf8 17
-PKG37 stdlib 23
-PKG240 netmsg 4
-PKG75 fs_unix 8
-PKG168 imap4r1 13
-PKG184 ipop3d 2
-PKG153 imapd 188
-PKG210 unistd 8
-PKG5 syslog 1
-PKG153 imapd
-PKG0 netmsg 1
-PKG255 mail 20
-PKG261 nntp 2
-PKG194 tcp_unix 2
-PKG81 env_unix 16
-PKG156 string 57
-PKG8 auth_log 16
-PKG150 socket 12
-PKG151 unistd 13
-PKG253 ipop3d 3
-PKG234 newsrc
-PKG249 nntp 17
-PKG30 nl_unix 2
-PKG142 ftl_unix 10
-PKG18 ipop3d 4
-PKG112 file 2
-PKG168 string 141
-PKG204 string 20
-PKG27 utf8 1
-PKG95 smanager 4
-PKG251 pop3 10
-PKG56 stdlib 1
-PKG71 fs_unix 27
-PKG45 mail 147
-PKG125 cns11643 4
-PKG105 string
-PKG200 imapd 3
-PKG45 gb_2312 2
-PKG10 misc 1
-PKG247 ipop3d 53
-PKG227 unistd 30
-PKG224 netdb 2
-PKG113 env_unix 30
-PKG80 env_unix 14
-PKG71 imap4r1 6
-PKG244 ksc_5601 2
-PKG32 time 2
-PKG26 imapd 23
-PKG200 mail 2
-PKG55 tz_sv4
-PKG138 env_unix 4
-PKG33 smanager 2
-PKG24 nntp 14
-PKG0 string 29
-PKG191 ctype 3
-PKG246 netmsg
-PKG168 linkage 4
-PKG30 rfc822 6
-PKG42 stdio 41
-PKG79 env_unix 2
-PKG108 mail 62
-PKG200 newsrc 1
-PKG22 string 2
-PKG190 time 1
-PKG40 rfc822 1
-PKG141 rfc822 21
-PKG180 ipop3d 1
-PKG123 libio 15
-PKG101 errno 8
-PKG124 newsrc 8
-PKG246 stdio 9
-PKG215 tcp_unix 1
-PKG96 ctype 5
-PKG115 stdlib 2
-PKG201 stdlib 7
-PKG225 string 16
-PKG30 misc 29
-PKG215 mail 12
-PKG36 stdio 19
-PKG208 ftl_unix
-PKG137 imap4r1 156
-PKG161 misc 40
-PKG213 stdio 36
-PKG253 imapd 16
-PKG142 select 1
-PKG121 stdlib 18
-PKG48 mail 54
-PKG119 nntp 1
-PKG84 pop3 54
-PKG228 fs_unix 25
-PKG19 ipop2d 15
-PKG187 ipop2d 61
-PKG174 write
-PKG123 unistd 4
-PKG246 linkage 5
-PKG8 errno 1
-PKG16 pwd 22
-PKG230 rfc822 8
-PKG135 ctype 4
-PKG18 ftl_unix 1
-PKG2 imapd 181
-PKG76 syslog 9
-PKG163 ipop3d 10
-PKG111 misc 18
-PKG0 stdlib 10
-PKG137 pop3 23
-PKG75 tcp_unix 36
-PKG12 ipop3d 34
-PKG49 tcp_unix 16
-PKG124 auth_log
-PKG119 fs_unix 2
-PKG176 misc 31
-PKG223 string 12
-PKG115 string 1
-PKG186 fs_unix 89
-PKG26 libio 2
-PKG164 env_unix 6
-PKG209 newsrc 2
-PKG32 string 46
-PKG124 env_unix 7
-PKG215 misc 39
-PKG253 rfc822 19
-PKG82 fs_unix 5
-PKG121 stdio 4
-PKG170 pop3 4
-PKG52 tz_sv4 1
-PKG250 unistd 7
-PKG114 stdio 90
-PKG63 flstring
-PKG150 libio 4
-PKG17 smtp 13
-PKG166 time 4
-PKG176 misc 5
-PKG88 socket 1
-PKG226 string 60
-PKG202 mail 16
-PKG98 misc 6
-PKG165 stdio 21
-PKG220 stdio 8
-PKG95 imap4r1 80
-PKG149 smtp 4
-PKG174 ipop3d 5
-PKG52 fs_unix 3
-PKG103 utf8 7
-PKG69 stat 6
-PKG198 stdio 12
-PKG91 imap4r1 1
-PKG1 wait 1
-PKG75 unistd 1
-PKG221 time 9
-PKG31 unistd 12
-PKG115 mail 58
-PKG71 ipop2d 1
-PKG133 ctype 1
-PKG249 time 8
-PKG174 string 13
-PKG251 osdep
-PKG23 smtp 10
-PKG38 string 32
-PKG199 fs_unix 14
-PKG241 stat 1
-PKG112 errno 2
-PKG93 tis_620 2
-PKG29 nl_unix
-PKG235 fs_unix 4
-PKG1 fs_unix 24
-PKG170 ipop3d 15
-PKG11 ctype 2
-PKG252 ipop2d 18
-PKG199 utf8 4
-PKG162 ipop3d 17
-PKG134 time 14
-PKG76 jis_0208 4
-PKG92 syslog 5
-PKG99 netdb 36
-PKG181 mail 86
-PKG214 ctype 6
-PKG137 tcp_unix 13
-PKG260 mail 181
-PKG66 misc 2
-PKG226 ipop3d 14
-PKG75 rfc822 3
-PKG129 jis_0212 2
-PKG173 nntp 92
-PKG169 fs_unix 17
-PKG73 osdep 4
-PKG147 netdb 4
-PKG118 ipop2d 4
-PKG225 imapd 8
-PKG32 viscii 2
-PKG86 fcntl 3
-PKG146 misc 13
-PKG233 ipop2d 5
-PKG160 imapd 12
-PKG252 auth_log 12
-PKG40 imap4r1 24
-PKG241 pop3 5
-PKG10 linkage 3
-PKG234 nntp 23
-PKG16 mail 49
-PKG142 syslog 4
-PKG129 stdlib 19
-PKG80 write 2
-PKG155 string 8
-PKG69 unistd 2
-PKG40 errno 5
-PKG207 fcntl 1
-PKG225 ipop3d 11
-PKG79 nntp 4
-PKG101 rfc822 2
-PKG103 ctype 12
-PKG169 stdio 33
-PKG78 nl_unix 6
-PKG167 stdio 5
-PKG155 imap4r1 36
+PKG27 ipop2d
+PKG20 string
+PKG5 smanager
+PKG5 pop3
+PKG27 mail
+PKG5 linkage
+PKG28 nntp
+PKG42 flstring
+PKG27 smtp
+PKG46 gr_waitp
+PKG46 signal
+PKG27 ipop3d
+PKG52 tcp_unix
+PKG47 env_unix
+PKG43 stat
+PKG43 imapd
+PKG27 misc
+PKG51 utf8
+PKG31 fs_unix
+PKG52 select
+PKG20 imap4r1
+PKG33 rfc822
+PKG30 ftl_unix
+PKG28 stdio
+PKG52 inet
+PKG51 iso_8859
+PKG41 newsrc
+PKG27 stdlib
+PKG28 netmsg
+PKG44 unistd
+PKG30 syslog
+PKG31 auth_log
+PKG52 socket
+PKG33 nl_unix
+PKG47 file
+PKG51 cns11643
+PKG51 gb_2312
+PKG52 netdb
+PKG51 ksc_5601
+PKG40 time
+PKG40 tz_sv4
+PKG41 ctype
+PKG42 libio
+PKG43 errno
+PKG44 write
+PKG47 pwd
+PKG46 wait
+PKG47 osdep
+PKG51 tis_620
+PKG51 jis_0208
+PKG51 jis_0212
+PKG51 viscii
+PKG52 fcntl

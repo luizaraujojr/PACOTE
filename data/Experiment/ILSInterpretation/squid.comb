@@ -1,4 +1,2 @@
 PKG0 getopt
-PKG2 helpers 4
-PKG0 helpers
-PKG0 getopt 1
+PKG1 helpers

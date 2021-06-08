@@ -1,0 +1,24 @@
+data <- read.table("D:/Backup/eclipse-workspace/PACOTE/data/experiment/resultadocamq1.comb", header=TRUE);
+
+library(tidyverse)
+library(ggplot2)
+
+
+
+
+
+table <- aggregate(data[, 2]/data[, 3], list(data$instance), mean)
+table <- aggregate(data$constructfitness/data$bestfitness, list(data$instance), mean)
+
+bestfitness
+table[order(table$nclasse), ]
+
+
+library(tidyverse)
+library(ggplot2)
+
+
+data <- read.table("D:/Backup/eclipse-workspace/PACOTE/data/experiment/histogram.txt", header=TRUE);
+
+	table <- subset(data, instance =="pdf_renderer");
+	qplot(table$mojo,binwidth = 1,  geom="histogram") 
