@@ -1,9 +1,7 @@
 package br.com.ppgi.unirio.teaching.clustering.search;
 
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
-import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
 
 public class ClusteringCalculator
 {

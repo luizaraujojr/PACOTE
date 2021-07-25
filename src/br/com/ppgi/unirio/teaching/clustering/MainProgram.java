@@ -13,7 +13,8 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.controller.ProjectLoader;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.reader.DependencyReader;
 import br.com.ppgi.unirio.teaching.clustering.search.ILS;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
@@ -220,9 +221,11 @@ public class MainProgram
 //		
 				
 		public static final void main(String[] args) throws Exception
-		{				
+		{			
 			File file = new File(DEP_BASE_DIRECTORY);
 			DecimalFormat df4 = new DecimalFormat("0.0000");
+			
+			ProjectLoader loader = new ProjectLoader(ODEM_BASE_DIRECTORY);
 			
 			ConstrutiveAbstract construtiveMQ = new ConstrutiveAglomerativeMQ();
 			ConstrutiveAbstract construtiveRandom = new ConstrutiveRandom();
@@ -233,8 +236,11 @@ public class MainProgram
 	        	StringBuilder sb1 = new StringBuilder();	        	
 	    		long startTimestamp = System.currentTimeMillis();
 	        	
-	    		DependencyReader reader = new DependencyReader();
-	    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
+	    		DependencyReader reader = new DependencyReader();		
+	    		
+	    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectName + ".odem");
+	    		
+//	    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
 	    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 50000, 8, 0.5);

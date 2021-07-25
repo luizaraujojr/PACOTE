@@ -1,5 +1,6 @@
 package br.com.ppgi.unirio.teaching.clustering.search.constructive;
 
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import br.com.ppgi.unirio.teaching.clustering.search.utils.PseudoRandom;
 
@@ -40,7 +41,7 @@ public int[] createSolution(ModuleDependencyGraph mdg, double a1, double a2, dou
 }
 
 @Override
-public int[] createSolution(ModuleDependencyGraph mdg, int[] functionParams) {
+public int[] createSolution(ModuleDependencyGraph mdg, int[] functionParams, Project project) {
 	// TODO Auto-generated method stub
 	return null;
 }

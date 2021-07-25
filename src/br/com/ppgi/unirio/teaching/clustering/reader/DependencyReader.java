@@ -4,8 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
-import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
 
 public class DependencyReader
 {

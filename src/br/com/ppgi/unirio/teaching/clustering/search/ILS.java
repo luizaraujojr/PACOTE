@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
-import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
 import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import br.com.ppgi.unirio.teaching.clustering.search.model.MojoCalculator;
@@ -126,8 +126,8 @@ public class ILS {
 	{
 		MojoCalculator mojoCalculator = new MojoCalculator(project, projectName, mdg, construtiveMQ, sbRefDepFile);
 		
-		int[] bestSolution = construtiveRandom.createSolution(paramNumber, multiplyFactor);
-//		int[] bestSolution = {1,5,1,3};
+//		int[] bestSolution = construtiveRandom.createSolution(paramNumber, multiplyFactor);
+		int[] bestSolution = {2, 5, 5, 5, 2, 3, 7, 7};
 		history.add(bestSolution);
 //		newSolution(bestSolution);
 		this.bestFitness = evaluate(bestSolution, mojoCalculator);
@@ -250,7 +250,11 @@ public class ILS {
 		{
 //			System.out.println(evaluationsConsumed + "; " + bestFitness +  " " + Arrays.toString(solution));
 		}
-		return mojoCalculator.calculateFitness(solution);
+//		System.out.println("evaluate" + Arrays.toString(solution));
+		
+		double result = mojoCalculator.calculateFitness(solution);
+		System.out.println(result);
+		return result;
 	}
 
 	/**

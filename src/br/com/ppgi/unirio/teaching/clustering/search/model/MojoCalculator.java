@@ -1,14 +1,17 @@
 package br.com.ppgi.unirio.teaching.clustering.search.model;
 
-import static br.com.ppgi.unirio.teaching.clustering.Common.*;
+import static br.com.ppgi.unirio.teaching.clustering.Common.ILS_INTERPRETATION_DIRECTORY;
+import static br.com.ppgi.unirio.teaching.clustering.Common.getStringTime;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
+
 import br.com.ppgi.unirio.luiz.clustering.mojo.MoJo;
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
 
 public class MojoCalculator {
@@ -37,8 +40,11 @@ public class MojoCalculator {
 	
 	public double calculateFitness(int[] functionParams) throws IOException
 	{		
-		int[] bestSolution = constructorMQ.createSolution(mdg, functionParams);
+		int[] bestSolution = constructorMQ.createSolution(mdg, functionParams, project);
 //		new ClusterMetrics(mdg, bestSolution, functionParams);
+		
+		
+		System.out.println (Arrays.toString(bestSolution));
 				
 		return MoJo.MojoFMSB( sbRefDepFile,generateSBSolution (project, projectName, bestSolution, false));
 	}

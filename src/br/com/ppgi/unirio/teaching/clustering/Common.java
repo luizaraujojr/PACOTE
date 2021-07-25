@@ -1,5 +1,6 @@
 package br.com.ppgi.unirio.teaching.clustering;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 
@@ -12,6 +13,7 @@ public final class Common {
 	public static final String VALIDATION_DIRECTORY = "data//Experiment//validation//";
 	public static final String DEP_BASE_DIRECTORY = "data//Experiment//ClsDepComb//";
 	public static final String PKG_BASE_DIRECTORY = "data//Experiment//PkgClsComb//";
+	public static final String ODEM_BASE_DIRECTORY = new File("").getAbsolutePath() + "\\data\\Experiment\\ODEMFile\\";
 	
 	
 	public static String getStringTime() {

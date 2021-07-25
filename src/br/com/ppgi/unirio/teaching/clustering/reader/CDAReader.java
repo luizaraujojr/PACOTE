@@ -13,12 +13,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import br.com.ppgi.unirio.teaching.clustering.model.DependencyType;
-import br.com.ppgi.unirio.teaching.clustering.model.ElementType;
-import br.com.ppgi.unirio.teaching.clustering.model.ElementVisibility;
-import br.com.ppgi.unirio.teaching.clustering.model.Project;
-import br.com.ppgi.unirio.teaching.clustering.model.ProjectClass;
-import br.com.ppgi.unirio.teaching.clustering.model.ProjectPackage;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.DependencyType;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ElementType;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ElementVisibility;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectPackage;
 
 public class CDAReader
 {

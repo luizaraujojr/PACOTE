@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+
 /**
  * Metricas utilizadas para calulos e operacoes na clusterizacao
  * 
@@ -24,6 +26,7 @@ public class ClusterMetrics
 	private double[] modularizationFactor;
 	private Stack<Integer> availableClusters;
 	private List<Integer> usedClusters;
+	private Project project;
 	
 
 	/**
@@ -37,7 +40,7 @@ public class ClusterMetrics
 		this.mdg = mdg;
 	}
 
-	public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, int[] functionParams)
+	public ClusterMetrics(ModuleDependencyGraph mdg, int[] solution, int[] functionParams, Project project)
 	{
 		this.mdg = mdg;
 		this.solution = solution;
@@ -51,6 +54,7 @@ public class ClusterMetrics
 		modularizationFactor = new double[mdg.getSize() + 1];
 		
 		this.functionParams = functionParams;
+		this.project = project;
 
 		resetAllMetrics();
 	}
@@ -157,11 +161,53 @@ public class ClusterMetrics
 	 */
 	public double calculateMQ()
 	{
+//		double mq = 0;
+//		for (int auxi = 0; auxi < totalClusteres; auxi++)
+//		{
+//			int i = convertToClusterNumber(auxi);
+//			mq += modularizationFactor[i];
+//		}
+//		
+//		return mq;
+		return  calculateMQ1();		
+	}
+	
+	
+	
+	public double calculateMQ1()
+	{
 		double mq = 0;
 		for (int auxi = 0; auxi < totalClusteres; auxi++)
 		{
-			int i = convertToClusterNumber(auxi);
-			mq += modularizationFactor[i];
+			double x = (double) internalDependencyWeight[convertToClusterNumber(auxi)];
+			double y= (double) externalDependencyWeight[convertToClusterNumber(auxi)];
+			double z = this.project.getClassIndex(auxi).isAbstract() ? 1 : 0;
+			double w = this.project.getClassIndex(auxi).isAbstract() ? 0 : 1;
+//			if (x==y=!= 0)
+//			{
+//				return (a1*i +) / (i + 0.5 * j);
+//				return (1* i + 0* j) / (1 * i+ 0.5 * j);
+//				double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * (Math.pow (x, (double)functionParams[4])); 
+//				double fa2 = (((double)functionParams[1]-5.0)/2.0 ) * (Math.pow (y, (double)functionParams[5]));  
+//				double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * (Math.pow (x, (double)functionParams[6])); 
+//				double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * (Math.pow (y, (double)functionParams[7]));
+				
+				
+				double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * x; 
+				double fa2 = (((double)functionParams[1]-5.0)/2.0 ) * y;  
+				double fa3 = (((double)functionParams[2]-5.0)/2.0 ) * z; 
+				double fa4 = (((double)functionParams[3]-5.0)/2.0 ) * w;
+				double fb1 = (((double)functionParams[4]-5.0)/2.0 ) * x; 
+				double fb2 = (((double)functionParams[5]-5.0)/2.0 ) * y; 
+				double fb3 = (((double)functionParams[6]-5.0)/2.0 ) * z; 
+				double fb4 = (((double)functionParams[7]-5.0)/2.0 ) * w;
+				
+				
+				
+				if (fa1+fa2+fa3+fa4!=0) {			
+					mq += (fa1+fa2+fa3+fa4) / (fb1+fb2+fb3+fb4);
+				}
+//			}
 		}
 		return mq;
 	}

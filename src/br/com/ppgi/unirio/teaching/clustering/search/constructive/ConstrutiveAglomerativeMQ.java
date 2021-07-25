@@ -1,6 +1,7 @@
 package br.com.ppgi.unirio.teaching.clustering.search.constructive;
 
-import br.com.ppgi.unirio.teaching.clustering.search.model.ClusterMetrics;
+import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
+import br.com.ppgi.unirio.teaching.clustering.search.model.FitnessMetric;
 import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 
 /**
@@ -11,28 +12,28 @@ import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph
 public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 {
 	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, int[] functionParams)
+	public int[] createSolution(ModuleDependencyGraph mdg, int[] functionParams, Project project)
 	{
-		return createSolution(mdg, 1, functionParams)[0];
+		return createSolution(mdg, 1, functionParams, project)[0];
 	}
 
-	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] functionParams)
+	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] functionParams, Project project)
 	{
 		int[] solution = new int[mdg.getSize()];
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			solution[index] = index;
 
-		return aglomerateClustering(mdg, solution, quantity, functionParams);
+		return aglomerateClustering(mdg, solution, quantity, functionParams, project);
 	}
 
-	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] functionParams)
+	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] functionParams, Project project)
 	{
 		int[][] topSolutions = new int[solutionsQuantity][solution.length];
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, functionParams);
+		FitnessMetric cm = new FitnessMetric(mdg, solution, functionParams, project);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
