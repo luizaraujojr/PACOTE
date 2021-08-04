@@ -44,7 +44,7 @@ public class MojoCalculator {
 //		new ClusterMetrics(mdg, bestSolution, functionParams);
 		
 		
-		System.out.println (Arrays.toString(bestSolution));
+//		System.out.println (Arrays.toString(bestSolution));
 				
 		return MoJo.MojoFMSB( sbRefDepFile,generateSBSolution (project, projectName, bestSolution, false));
 	}

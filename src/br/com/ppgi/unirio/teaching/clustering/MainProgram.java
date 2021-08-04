@@ -13,6 +13,8 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import javax.management.modelmbean.XMLParseException;
+
 import br.com.ppgi.unirio.luiz.softwareanalysis.controller.ProjectLoader;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.reader.DependencyReader;
@@ -222,7 +224,51 @@ public class MainProgram
 				
 		public static final void main(String[] args) throws Exception
 		{			
-			File file = new File(DEP_BASE_DIRECTORY);
+//			generateReference();
+			executeExperiment();
+		}
+		
+		private static void executeExperiment() throws Exception
+		{
+			File file = new File(ODEM_BASE_DIRECTORY);
+			DecimalFormat df4 = new DecimalFormat("0.0000");
+			
+			ProjectLoader loader = new ProjectLoader(ODEM_BASE_DIRECTORY);
+			
+			ConstrutiveAbstract construtiveMQ = new ConstrutiveAglomerativeMQ();
+			ConstrutiveAbstract construtiveRandom = new ConstrutiveRandom();
+			
+			int runTimeMax = 10;
+			
+	        for (String projectFile : file.list()) 
+	        {
+	        	String projectName = projectFile.split(".odem")[0];
+	        	for(int runTime=0; runTime<runTimeMax; runTime++)
+	        	{
+		        	StringBuilder sb1 = new StringBuilder();	        	
+		    		long startTimestamp = System.currentTimeMillis();
+		        	
+		    		DependencyReader reader = new DependencyReader();		
+		    		
+		    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectFile);
+		    		
+		//    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
+		    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
+		
+		    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 100000, 8, 0.5);
+		    		int[] bestSolution = ils.execute();
+		    		long finishTimestamp = System.currentTimeMillis();
+		    		long seconds = (finishTimestamp - startTimestamp);	
+		    		
+		    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);	    		
+		    		System.out.println(projectName +";"+ runTime + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed()); 
+	        	}
+	       }
+		}
+		
+		private static void generateReference() throws Exception
+		{			
+			File file = new File(ODEM_BASE_DIRECTORY);
 			DecimalFormat df4 = new DecimalFormat("0.0000");
 			
 			ProjectLoader loader = new ProjectLoader(ODEM_BASE_DIRECTORY);
@@ -231,46 +277,36 @@ public class MainProgram
 			ConstrutiveAbstract construtiveRandom = new ConstrutiveRandom();
 			
 			
-	        for (String projectName : file.list()) 
+	        for (String projectFile : file.list()) 
 	        {
+	        	
+	        	String projectName = projectFile.split(".odem")[0]; 
+	        	
 	        	StringBuilder sb1 = new StringBuilder();	        	
 	    		long startTimestamp = System.currentTimeMillis();
 	        	
 	    		DependencyReader reader = new DependencyReader();		
 	    		
-	    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectName + ".odem");
+	    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectFile);
 	    		
 //	    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
-	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
+	    		StringBuilder sbRefDepFile = null;
 	
-	    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 50000, 8, 0.5);
-	    		int[] bestSolution = ils.execute();
+	    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 100000, 8, 0.5);
+	    		int[] bestSolution = ils.executeConstructor();
 	    		long finishTimestamp = System.currentTimeMillis();
 	    		long seconds = (finishTimestamp - startTimestamp);	
 	    		
-	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);	    		
-//	    		System.out.println(projectName + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + "MOJOFM:" + runMOJOComparison(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb", generateSolution(project, projectName, bestSolution), "-fm") + "%;");
-	    		System.out.println(projectName + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed()); 
+	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+	    		
+	    		System.out.println(projectName + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed());
+	    		generateSolution(project, projectName, bestSolution);
 
-	 //	    		sb1.append(projectName + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + "MOJOFM:" + runMOJOComparison(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb", generateSolution(project, projectName, bestSolution), "-fm") + "%;" + "a1:" + a1 + ";" + "a2:" + a2 + ";" +"b1:" + b1 + ";" +"b2:"+ b2 + ";" + Arrays.toString(bestSolution));
-	//		    		sb1.append(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB" + " MOJOFM " + padRight("" + runMOJOComparison(generateSolution(project, projectName, bestSolution), PKG_BASE_DIRECTORY + projectName + ".comb", "-fm") , 10) + "%");
-	//		    		sb1.append(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB" + " MOJOFM " + padRight("" + runMOJOComparison(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb", PKG_BASE_DIRECTORY + projectName + ".comb", "-fm") , 10) + "%");		    		
-	//		    		sb1.append(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + " " + padRight(df4.format(ils.getBestFitnessConstructor()),10)  + " " + padRight(df4.format(ils.getBestFitness()),10) + " " + Arrays.toString(bestSolution));
-//				sb1.append(System.lineSeparator());
-	        	
-//	        	File file1 = new File(EXPERIMENT_DIRECTORY + "RESULTADOValidacaoMQ_"+projectName + ".comb");
-//			    BufferedWriter writer = new BufferedWriter(new FileWriter(file1));
-//			    try {
-//			        writer.write(sb1.toString());	    
-//				} catch (FileNotFoundException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				   
-//				} finally {
-//					writer.close();
-//				}
 	       }
 		}
+
+		
+		
 
 		private static String generateSolution(Project project, String projectName, int[] bestSolution) throws IOException{
 					

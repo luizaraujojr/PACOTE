@@ -126,62 +126,104 @@ public class FitnessMetric
 //			}
 //			
 //			return mq;
-			return  calculateMQ1();		
+			return  calculateFitness();		
 		}
 		
 		
 		
-		public double calculateMQ1()
+		public double calculateFitness()
 		{
 			double fitness = 0;
-			System.out.println (totalClusteres + ";" + Arrays.toString(solution));
-			for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++)
-			{
-				double internalDependencyCount = (double) internalDependencyWeight[convertToClusterNumber(clusterNumber)];
-				double externalDependencyCount  = (double) externalDependencyWeight[convertToClusterNumber(clusterNumber)];
-				double abstractClassCount = 0;
-				double concreteClassCount = 0;
+			
+			if (functionParams.length==4) {
+			
+				for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
+					double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes 
+					double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
+					double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
 				
-				double internalClassDependencyCount = 0;
-				double externalClassDependencyCount =0;
-				
-				for (int classNumber : getModulesOnCluster(convertToClusterNumber(clusterNumber))) {
-					boolean internalClassDependencyFound = false;
-					boolean externalClassDependencyFound = false;
-					
-					for (int classDependencyNumber : mdg.moduleDependencies (classNumber)) {
-						if (classDependencyNumber ==-1) break;
-						
-						if (solution[classNumber]==solution[classDependencyNumber]) {	
-							internalClassDependencyFound = true;
-						}
-						else externalClassDependencyFound = true;
+					if (fa1!=0) {			
+						fitness += (fa1) / (fb1+fb2);
 					}
-					if (internalClassDependencyFound) internalClassDependencyCount++;
-					if (externalClassDependencyFound) externalClassDependencyCount++;
+				}
+
+				
+			}
+			
+			else {
+				int[] outsidepackageDepCount = new int[mdg.getSize()];
+				int[] outsideClassDepCount = new int[mdg.getSize()];
+				
+				int[] abstractClassCount = new int[mdg.getSize()]; //Número de classe abstratas
+				int[] concreteClassCount = new int[mdg.getSize()]; //Número de classe concretas
+				
+				int[] insidePackageDependencyClassCount = new int[mdg.getSize()]; // Número de classes com dependências diretas dentro do pacote
+				int[] outsidePackageDependencyClassCount = new int[mdg.getSize()];  //Número de classes do pacote sob análise com dependências para classes de outro pacote
+				
+				int[] outsideInternalDependencyClassCount = new int[mdg.getSize()]; //Número de classes de outro pacote com dependências para classes de um pacote sob análise
+				
+				int[] outsideInternalDependencyPackageCount = new int[mdg.getSize()];   //Número de pacotes cujas classes dependem das classes do pacote em análise
+				int[] outsideExternalDependencyPackageCount = new int[mdg.getSize()];  //Número de pacotes dos quais as classes do pacote em análise dependem
+				
+				int[] insidePackageClassDependencyCount = new int[mdg.getSize()];   //Número de dependências diretas entre classes
+				int[] outsidePackageClassDependencyCount  = new int[mdg.getSize()];  //Número de dependências entre classes de pacotes diferentes
+				
+				
+				for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++)
+				{
+					insidePackageClassDependencyCount[clusterNumber] = internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
+					outsidePackageClassDependencyCount[clusterNumber]  = externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
+									
+					for (int classNumber : getModulesOnCluster(convertToClusterNumber(clusterNumber))) {
+						boolean internalClassDependencyFound = false;
+						boolean externalClassDependencyFound = false;
+						ArrayList<Integer> packages = new ArrayList<>();
+						
+						abstractClassCount[clusterNumber] =+ (this.project.getClassIndex(classNumber).isAbstract() ? 1 : 0);
+						concreteClassCount[clusterNumber] =+ (this.project.getClassIndex(classNumber).isAbstract() ? 0 : 1);
+						
+						for (int classDependencyNumber : mdg.moduleDependencies (classNumber)) {
+							
+							if (classDependencyNumber ==-1) break;
+							
+							outsideInternalDependencyClassCount[convertToClusterNumber(solution[classDependencyNumber])]++;
+							
+							if (solution[classNumber]==solution[classDependencyNumber]) {	
+								internalClassDependencyFound = true;
+							}
+							else {
+								externalClassDependencyFound = true;
+								
+								boolean repeatedPackage =false;
+								for (int _package : packages) {
+									if (_package==solution[classDependencyNumber]) repeatedPackage = true;
+								}
+								if (!repeatedPackage) {
+									packages.add(solution[classDependencyNumber]);
+									outsideExternalDependencyPackageCount[convertToClusterNumber(solution[classDependencyNumber])]++;
+								}
+							}						
+						}
+						outsideInternalDependencyPackageCount[clusterNumber] =+ packages.size();
+						
+						if (internalClassDependencyFound) insidePackageDependencyClassCount[clusterNumber]++;
+						if (externalClassDependencyFound) outsidePackageDependencyClassCount[clusterNumber]++;
+					}
 				}
 				
-				System.out.println (internalClassDependencyCount);
-				System.out.println (externalClassDependencyCount);
-				
-				
-				for (int classNumber : getModulesOnCluster(convertToClusterNumber(clusterNumber))) {
-					abstractClassCount =+ (this.project.getClassIndex(classNumber).isAbstract() ? 1 : 0);
-					concreteClassCount =+ (this.project.getClassIndex(classNumber).isAbstract() ? 0 : 1);					
-				}		
-					
-				double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyCount; 
-				double fa2 = (((double)functionParams[1]-5.0)/2.0 ) * externalDependencyCount;  
-				double fa3 = (((double)functionParams[2]-5.0)/2.0 ) * abstractClassCount; 
-				double fa4 = (((double)functionParams[3]-5.0)/2.0 ) * concreteClassCount;
-				double fb1 = (((double)functionParams[4]-5.0)/2.0 ) * internalDependencyCount; 
-				double fb2 = (((double)functionParams[5]-5.0)/2.0 ) * externalDependencyCount; 
-				double fb3 = (((double)functionParams[6]-5.0)/2.0 ) * abstractClassCount; 
-				double fb4 = (((double)functionParams[7]-5.0)/2.0 ) * concreteClassCount;
-						
-					
-				if (fa1+fa2+fa3+fa4!=0) {			
-					fitness += (fa1+fa2+fa3+fa4) / (fb1+fb2+fb3+fb4);
+				for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
+					double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * insidePackageClassDependencyCount[clusterNumber]; 
+					double fa2 = (((double)functionParams[1]-5.0)/2.0 ) * outsidePackageClassDependencyCount[clusterNumber];  
+					double fa3 = (((double)functionParams[2]-5.0)/2.0 ) * abstractClassCount[clusterNumber]; 
+					double fa4 = (((double)functionParams[3]-5.0)/2.0 ) * concreteClassCount[clusterNumber];
+					double fb1 = (((double)functionParams[4]-5.0)/2.0 ) * insidePackageClassDependencyCount[clusterNumber]; 
+					double fb2 = (((double)functionParams[5]-5.0)/2.0 ) * outsidePackageClassDependencyCount[clusterNumber]; 
+					double fb3 = (((double)functionParams[6]-5.0)/2.0 ) * abstractClassCount[clusterNumber]; 
+					double fb4 = (((double)functionParams[7]-5.0)/2.0 ) * concreteClassCount[clusterNumber];
+							
+					if (fa1+fa2+fa3+fa4!=0) {			
+						fitness += (fa1+fa2+fa3+fa4) / (fb1+fb2+fb3+fb4);
+					}
 				}
 			}
 			return fitness;

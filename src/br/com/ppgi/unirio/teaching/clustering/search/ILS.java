@@ -9,6 +9,7 @@ import java.util.List;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
 import br.com.ppgi.unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
+import br.com.ppgi.unirio.teaching.clustering.search.model.FitnessMetric;
 import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import br.com.ppgi.unirio.teaching.clustering.search.model.MojoCalculator;
 
@@ -70,6 +71,7 @@ public class ILS {
 	 */
 	
 	private String projectName;
+	private FitnessMetric metrics;
 	
 	public ILS(ConstrutiveAbstract construtiveRandom, ConstrutiveAbstract construtiveMQ, Project project, String projectName, StringBuilder sbRefDepFile,  int maxEvaluations, int paramNumber, double  multiplyFactor) throws Exception
 	{
@@ -156,6 +158,18 @@ public class ILS {
 			}
 		}
 
+		return bestSolution;
+	}
+	
+	
+	 /* Generation of the reference clusterization
+	 */
+	public int[] executeConstructor() throws Exception
+	{		
+		int[] functionParams= {9,5,9,7};//MQ
+		
+		int[] bestSolution = construtiveMQ.createSolution(mdg, functionParams, project);
+	
 		return bestSolution;
 	}
 
@@ -253,7 +267,7 @@ public class ILS {
 //		System.out.println("evaluate" + Arrays.toString(solution));
 		
 		double result = mojoCalculator.calculateFitness(solution);
-		System.out.println(result);
+//		System.out.println(result);
 		return result;
 	}
 
