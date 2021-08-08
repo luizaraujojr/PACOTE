@@ -594,10 +594,17 @@ public class ProjectLoader
 		for (File file1: files) {
 			if(file1.isDirectory() == false && getFileExtension(file1).equals("odem")) {
 				String tokens[] = file1.getName().split("-");
-				if (tokens.length>1) {
+				if (tokens.length==3) {
 					PROJECT_INFO[count][0] = tokens[0];
 					PROJECT_INFO[count][1] = tokens[1];
 					PROJECT_INFO[count][2] = tokens[2].substring(0,8);	
+				}
+				else if(tokens.length==2) {
+						PROJECT_INFO[count][0] = tokens[0];
+						PROJECT_INFO[count][1] = tokens[1];
+					}
+				else if(tokens.length==1) {
+					PROJECT_INFO[count][0] = tokens[0];
 				}
 			}
 			count++;
