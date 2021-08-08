@@ -128,10 +128,10 @@ public class ILS {
 	{
 		MojoCalculator mojoCalculator = new MojoCalculator(project, projectName, mdg, construtiveMQ, sbRefDepFile);
 		
-//		int[] bestSolution = construtiveRandom.createSolution(paramNumber, multiplyFactor);
-		int[] bestSolution = {2, 5, 5, 5, 2, 3, 7, 7};
+		int[] bestSolution = construtiveRandom.createSolution(paramNumber, multiplyFactor);
+//		int[] bestSolution = {2, 5, 5, 5, 2, 3, 7, 7};
 		history.add(bestSolution);
-//		newSolution(bestSolution);
+
 		this.bestFitness = evaluate(bestSolution, mojoCalculator);
 		
 		int[] solution = null;
@@ -262,7 +262,7 @@ public class ILS {
 	{
 		if (++evaluationsConsumed % 100 == 0)
 		{
-//			System.out.println(evaluationsConsumed + "; " + bestFitness +  " " + Arrays.toString(solution));
+			System.out.println(evaluationsConsumed + "; " + bestFitness +  " " + Arrays.toString(solution));
 		}
 //		System.out.println("evaluate" + Arrays.toString(solution));
 		
@@ -356,7 +356,7 @@ public class ILS {
 	}
 	
 	/**
-	 * Builds the project's dependency graph from its representation
+	 * Include a new solution to the list of unique solutions
 	 */
 	private boolean newSolution (int[] solution) {
 		boolean isNew = true;

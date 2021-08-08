@@ -233,36 +233,57 @@ public class MainProgram
 			File file = new File(ODEM_BASE_DIRECTORY);
 			DecimalFormat df4 = new DecimalFormat("0.0000");
 			
-			ProjectLoader loader = new ProjectLoader(ODEM_BASE_DIRECTORY);
+			ProjectLoader loader = new ProjectLoader();
 			
 			ConstrutiveAbstract construtiveMQ = new ConstrutiveAglomerativeMQ();
+			
 			ConstrutiveAbstract construtiveRandom = new ConstrutiveRandom();
 			
-			int runTimeMax = 5;
+			int runTimeMax = 1;
 			
 	        for (String projectFile : file.list()) 
 	        {
 	        	String projectName = projectFile.split(".odem")[0];
+	        	
+	        	StringBuilder _stringBuilder = new StringBuilder();
+	        	
 	        	for(int runTime=0; runTime<runTimeMax; runTime++)
 	        	{
-		        	StringBuilder sb1 = new StringBuilder();	        	
+//		        		        	
 		    		long startTimestamp = System.currentTimeMillis();
 		        	
-		    		DependencyReader reader = new DependencyReader();		
+//		    		DependencyReader reader = new DependencyReader();		
 		    		
 		    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectFile);
 		    		
 		//    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
+		    		
 		    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 		
 		    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 100000, 8, 0.5);
 		    		int[] bestSolution = ils.execute();
+		    		
 		    		long finishTimestamp = System.currentTimeMillis();
 		    		long seconds = (finishTimestamp - startTimestamp);	
 		    		
-		    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);	    		
-		    		System.out.println(projectName +";"+ runTime + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed()); 
+//		    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);	    		
+		    		System.out.println(projectName +";"+ runTime + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed());
+		    		
+		    		_stringBuilder.append(projectName +";"+ runTime + ";" + project.getClassCount() + ";" + df4.format(ils.getBestFitness()) + ";" + seconds + "ms;" + Arrays.toString(bestSolution ) + ";" + ils.getEvaluationsConsumed());
+		    		_stringBuilder.append(System.lineSeparator());
 	        	}
+	        	
+				File outPutFile = new File(ILS_OUTPUT_DIRECTORY + projectName+ getStringTime() +".comb");
+			    BufferedWriter writer = new BufferedWriter(new FileWriter(outPutFile));
+			    try {
+			        writer.write(_stringBuilder.toString());	    
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				   
+				} finally {
+					writer.close();
+				}
 	       }
 		}
 		
@@ -281,15 +302,11 @@ public class MainProgram
 	        {
 	        	
 	        	String projectName = projectFile.split(".odem")[0]; 
-	        	
-	        	StringBuilder sb1 = new StringBuilder();	        	
+	        		        	
 	    		long startTimestamp = System.currentTimeMillis();
 	        	
-	    		DependencyReader reader = new DependencyReader();		
-	    		
 	    		Project project = loader.loadODEMRealVersion(ODEM_BASE_DIRECTORY + projectFile);
 	    		
-//	    		Project project = reader.load(DEP_BASE_DIRECTORY + projectName);
 	    		StringBuilder sbRefDepFile = null;
 	
 	    		ILS ils = new ILS(construtiveRandom, construtiveMQ, project, projectName, sbRefDepFile, 100000, 8, 0.5);
@@ -304,9 +321,6 @@ public class MainProgram
 
 	       }
 		}
-
-		
-		
 
 		private static String generateSolution(Project project, String projectName, int[] bestSolution) throws IOException{
 					

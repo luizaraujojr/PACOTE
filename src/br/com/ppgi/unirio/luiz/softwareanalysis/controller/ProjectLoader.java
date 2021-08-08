@@ -46,6 +46,11 @@ public class ProjectLoader
 		
 	public String[][] PROJECT_INFO; 
 	
+	
+	public  ProjectLoader() {
+		
+	}
+	
 	public  ProjectLoader(String PROJECT_ODEM_DIRECTORY) throws XMLParseException{
 		loadODEMRealVersionInfo(PROJECT_ODEM_DIRECTORY);	
 	}

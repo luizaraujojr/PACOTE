@@ -9,6 +9,7 @@ import br.com.ppgi.unirio.luiz.clustering.mojo.MoJo;
 public final class Common {
 
 	public static final String ILS_INTERPRETATION_DIRECTORY = "data//Experiment//ILSInterpretation//";
+	public static final String ILS_OUTPUT_DIRECTORY = "data//Experiment//ILSOutput//ILS+CTR//";
 	public static final String EXPERIMENT_DIRECTORY = "data//Experiment//";
 	public static final String VALIDATION_DIRECTORY = "data//Experiment//validation//";
 	public static final String DEP_BASE_DIRECTORY = "data//Experiment//ClsDepComb//";
