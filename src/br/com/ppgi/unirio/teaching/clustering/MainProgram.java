@@ -224,8 +224,8 @@ public class MainProgram
 				
 		public static final void main(String[] args) throws Exception
 		{			
-//			generateReference();
-			executeExperiment();
+			generateReference();
+//			executeExperiment();
 		}
 		
 		private static void executeExperiment() throws Exception
