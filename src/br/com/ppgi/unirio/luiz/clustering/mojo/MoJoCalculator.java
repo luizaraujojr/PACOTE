@@ -8,6 +8,8 @@ public class MoJoCalculator {
 
     /* File info */
     private String sourceFile, targetFile, relFile;
+    
+    private StringBuilder sourceSB, targetSB;
 
     private BufferedReader br_s, br_t, br_r;
 
@@ -16,6 +18,13 @@ public class MoJoCalculator {
         targetFile = tf;
         relFile = rf;
     }
+    
+    public MoJoCalculator(StringBuilder sf, StringBuilder tf, String rf) {
+        sourceSB = sf;
+        targetSB = tf;
+        relFile = rf;
+    }
+
 
     /* The mapping between objects and clusters in B */
     private Map<String, String> mapObjectClusterInB = new Hashtable<String, String>();
@@ -90,6 +99,21 @@ public class MoJoCalculator {
         /* Calculate MoJoFM value */
         return mojofmValue(cardinalitiesInB, numberOfObjectsInA, calculateCost());
     }
+    
+    public double mojofmnew() {
+
+        commonPrepnew();
+
+        /* tag assigment */
+        tagAssignment("MoJo");
+
+        /* draw graph and matching */
+        maxbipartiteMatching();
+
+        /* Calculate MoJoFM value */
+        return mojofmValue(cardinalitiesInB, numberOfObjectsInA, calculateCost());
+    }
+    
 
     public double edgemojo() {
 
@@ -164,6 +188,45 @@ public class MoJoCalculator {
             A[i] = new Cluster(i, l, m);
         }
     }
+    
+    private void commonPrepnew() {
+
+        numberOfObjectsInA = 0;
+
+        /* Read target file first to update mapObjectClusterInB */
+//        if (isBunch(targetFile)) readTargetBunchFile();
+//        else readTargetRSFFile();
+        readTargetSB();
+
+        /* Read source file */
+//        if (isBunch(sourceFile)) readSourceBunchFile();
+//        else readSourceRSFfile();
+        readSourceSB();
+
+        l = mapClusterTagA.size(); /* number of clusters in A */
+        m = mapClusterTagB.size(); /* number of clusters in B */
+
+        A = new Cluster[l]; /* create A */
+        groupscount = new int[m]; /* the count of each group, 0 if empty */
+        grouptags = new Cluster[m]; /*
+                                     * the first cluster in each group, null if
+                                     * empty
+                                     */
+
+        /* init group tags */
+        for (int j = 0; j < m; j++)
+        {
+            grouptags[j] = null;
+        }
+
+        /* create each cluster in A */
+        for (int i = 0; i < l; i++)
+        {
+            A[i] = new Cluster(i, l, m);
+        }
+    }
+
+    
 
     private double edgeCost() {
         /* Perform join operation first */
@@ -420,13 +483,14 @@ public class MoJoCalculator {
             for (String line = br_s.readLine(); line != null; line = br_s.readLine())
             {
                 StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
+//                if (st.countTokens() != 3)
+                if (st.countTokens() == 1)
                 {
                     String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);
                 }
                 // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
 
                 int index = -1;
                 String clusterName = st.nextToken();
@@ -468,6 +532,53 @@ public class MoJoCalculator {
         long extraInB = mapObjectClusterInB.keySet().size() - numberOfObjectsInA;
         if (extraInB > 0) put("Warning: " + extraInB + " objects in " + targetFile + " were not found in " + sourceFile + ". They will be ignored.");
     }
+    
+    
+    
+    private void readSourceSB() {
+        long extraInA = 0;
+       
+    	for (String line : sourceSB.toString().split(System.lineSeparator()))
+        {
+            StringTokenizer st = new StringTokenizer(line);
+//                if (st.countTokens() != 3)
+            if (st.countTokens() == 1)
+            {
+                String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
+                throw new RuntimeException(message);
+            }
+            // Ignore lines that do not start with contain
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+
+            int index = -1;
+            String clusterName = st.nextToken();
+            String objectName = st.nextToken();
+
+            if (mapObjectClusterInB.keySet().contains(objectName))
+            {
+                numberOfObjectsInA++;
+                Integer objectIndex = mapClusterTagA.get(clusterName);
+                if (objectIndex == null)
+                {
+                    index = mapClusterTagA.size();
+                    clusterNamesInA.addElement(clusterName);
+                    mapClusterTagA.put(clusterName, new Integer(index));
+                    partitionA.addElement(new Vector<String>());
+                }
+                else
+                {
+                    index = objectIndex.intValue();
+                }
+                partitionA.elementAt(index).addElement(objectName);
+            }
+            else extraInA++;
+        }
+        if (extraInA > 0) put("Warning: " + extraInA + " objects in " + sourceFile + " were not found in " + targetFile + ". They will be ignored.");
+        long extraInB = mapObjectClusterInB.keySet().size() - numberOfObjectsInA;
+        if (extraInB > 0) put("Warning: " + extraInB + " objects in " + targetFile + " were not found in " + sourceFile + ". They will be ignored.");
+    }
+
+    
 
     private void readRelationRSFfile() {
         try
@@ -582,13 +693,14 @@ public class MoJoCalculator {
             for (String line = br_t.readLine(); line != null; line = br_t.readLine())
             {
                 StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
+//                if (st.countTokens() != 3)
+                if (st.countTokens() ==1)
                 {
                     String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
                     throw new RuntimeException(message);
                 }
                 // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
 
                 String clusterName = st.nextToken();
                 /* Remove quotes from the token */
@@ -635,6 +747,51 @@ public class MoJoCalculator {
         }
     }
 
+    private void readTargetSB() {
+        for (String line : targetSB.toString().split(System.lineSeparator()))
+        {
+            StringTokenizer st = new StringTokenizer(line);
+//                if (st.countTokens() != 3)
+            if (st.countTokens() ==1)
+            {
+                String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
+                throw new RuntimeException(message);
+            }
+            // Ignore lines that do not start with contain
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+
+            String clusterName = st.nextToken();
+            /* Remove quotes from the token */
+            int first_quote_index = clusterName.indexOf("\"");
+            if (first_quote_index == 0 && clusterName.indexOf("\"", first_quote_index + 1) == clusterName.length() - 1)
+                clusterName = clusterName.substring(first_quote_index + 1, clusterName.length() - 1);
+
+            String objectName = st.nextToken();
+            int index = -1;
+
+            /* Search for the cluster name in mapClusterTagB */
+            Integer objectIndex = mapClusterTagB.get(clusterName);
+
+            if (objectIndex == null)
+            {
+                // This cluster is not in mapClusterTagB yet
+                index = mapClusterTagB.size();
+                // Since it is a new cluster, it currently contains 1 object
+                cardinalitiesInB.addElement(new Integer(1));
+                mapClusterTagB.put(clusterName, new Integer(index));
+            }
+            else
+            {
+                index = objectIndex.intValue();
+                // Increase the cluster's cardinality in vector
+                // cardinalitiesInB
+                int newCardinality = 1 + cardinalitiesInB.elementAt(index).intValue();
+                cardinalitiesInB.setElementAt(new Integer(newCardinality), index);
+            }
+            mapObjectClusterInB.put(objectName, clusterName);
+        }
+    }  
+    
     private boolean isBunch(String file) {
         int dot = file.lastIndexOf(".");
         if (dot < 0) return false;

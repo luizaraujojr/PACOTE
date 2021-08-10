@@ -1,0 +1,209 @@
+PKG32 stat
+PKG19 config 2
+PKG161 window
+PKG167 windiv 37
+PKG47 updown
+PKG47 sysdep1 5
+PKG58 sysdep2 4
+PKG192 wkeys
+PKG129 termcap 3
+PKG75 unistd 30
+PKG133 file
+PKG129 stdlib 9
+PKG44 main
+PKG202 minicom 66
+PKG21 sysdep1
+PKG188 dial 1
+PKG199 windiv
+PKG29 window 44
+PKG67 minicom
+PKG193 updown 4
+PKG159 string 11
+PKG20 stdio 8
+PKG154 ipc
+PKG32 configsym 1
+PKG2 sysdep2
+PKG36 stdlib 3
+PKG173 dial
+PKG71 fcntl 2
+PKG208 config
+PKG22 rwconf 5
+PKG52 getsdir
+PKG52 file 3
+PKG185 windiv 6
+PKG154 config 1
+PKG126 window 63
+PKG6 termcap
+PKG6 window 1
+PKG26 util 4
+PKG2 sysdep1 2
+PKG39 configsym 35
+PKG67 dial 15
+PKG52 wildmat 2
+PKG127 libintl 10
+PKG132 window 162
+PKG188 configsym
+PKG69 vt100 2
+PKG34 sysdep2 2
+PKG160 util 12
+PKG133 unistd 6
+PKG58 pwd 2
+PKG27 util
+PKG22 stdlib 11
+PKG131 termios 4
+PKG115 string 22
+PKG207 minicom 9
+PKG173 stdio 18
+PKG5 help
+PKG5 minicom 2
+PKG176 rwconf
+PKG176 libintl 2
+PKG133 windiv 9
+PKG132 vt100 1
+PKG121 configsym 6
+PKG17 ctype 7
+PKG174 fcntl 4
+PKG27 updown 3
+PKG180 minicom 38
+PKG87 wkeys 6
+PKG132 setjmp 2
+PKG167 main 7
+PKG106 config 241
+PKG149 signal 4
+PKG200 common 1
+PKG204 util 1
+PKG103 common
+PKG108 errno 2
+PKG186 window 43
+PKG63 termcap 54
+PKG83 libintl 14
+PKG2 ioctl 1
+PKG29 common 3
+PKG167 file 35
+PKG109 unistd 15
+PKG16 util 8
+PKG10 help 9
+PKG86 common 10
+PKG156 minicom 5
+PKG27 fcntl 1
+PKG47 minicom 40
+PKG130 libintl 16
+PKG67 string 13
+PKG105 vt100
+PKG146 minicom 12
+PKG146 window 29
+PKG126 stdio 7
+PKG21 stdlib 2
+PKG189 windiv 10
+PKG100 getsdir 2
+PKG62 time 2
+PKG134 configsym 3
+PKG176 configsym 8
+PKG158 ipc 3
+PKG127 wait 2
+PKG189 wkeys 2
+PKG161 stdio 6
+PKG7 minicom 16
+PKG207 sysdep2 5
+PKG28 file 7
+PKG119 minicom 61
+PKG173 main 8
+PKG47 ctype 3
+PKG193 stat 2
+PKG34 unistd 1
+PKG32 main 1
+PKG126 stdio 5
+PKG50 minicom 1
+PKG130 dial 34
+PKG179 file 14
+PKG11 updown 2
+PKG123 stdio 1
+PKG2 window 2
+PKG17 vt100 5
+PKG189 minicom 19
+PKG105 updown 1
+PKG62 vt100 33
+PKG153 configsym 14
+PKG173 getsdir 1
+PKG160 sysdep1 3
+PKG55 window 34
+PKG52 stat 1
+PKG99 config 9
+PKG47 dial 3
+PKG110 configsym 11
+PKG27 dial 2
+PKG120 ctype 2
+PKG67 main 21
+PKG202 stdlib 16
+PKG120 errno 1
+PKG190 libintl 6
+PKG205 stdio 2
+PKG11 time 4
+PKG85 stdlib 4
+PKG196 window 38
+PKG29 select 1
+PKG50 help 2
+PKG167 charmap 2
+PKG5 window 14
+PKG174 stat 3
+PKG161 minicom 110
+PKG176 config 5
+PKG167 configsym 16
+PKG100 wildmat
+PKG50 time 1
+PKG166 unistd 8
+PKG146 string 4
+PKG139 stdlib 1
+PKG146 ipc 1
+PKG47 util 7
+PKG74 string 25
+PKG154 unistd 2
+PKG33 windiv 17
+PKG173 ipc 12
+PKG103 libintl 1
+PKG161 wkeys 5
+PKG119 string 30
+PKG83 window 72
+PKG36 configsym 4
+PKG192 select 2
+PKG91 libintl 36
+PKG78 windiv 12
+PKG86 signal 2
+PKG51 unistd 13
+PKG27 string 12
+PKG167 dial 128
+PKG128 unistd 14
+PKG109 updown 25
+PKG159 sysdep1 7
+PKG174 sysdep2 1
+PKG47 file 2
+PKG113 libintl 13
+PKG52 stdlib 6
+PKG52 string 6
+PKG189 windiv 1
+PKG125 time 3
+PKG108 ipc 4
+PKG199 config 3
+PKG119 stdio 21
+PKG204 libintl 5
+PKG81 libintl 90
+PKG199 dial 5
+PKG56 ipc 2
+PKG154 wkeys 1
+PKG160 wildmat 1
+PKG174 util 5
+PKG178 stdlib 10
+PKG97 termios 13
+PKG141 ioctl 6
+PKG151 main 4
+PKG62 sysdep1 6
+PKG47 stdlib 8
+PKG51 main 2
+PKG52 dirent 5
+PKG208 dial 6
+PKG192 unistd 3
+PKG47 signal 5
+PKG105 main 6
+PKG58 string 3
+PKG165 stdio 17
+PKG42 string 18

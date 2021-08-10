@@ -1,0 +1,18 @@
+PKG8 pam_ldap
+PKG17 errno 1
+PKG8 syslog 10
+PKG8 crypt 2
+PKG8 time 7
+PKG0 md5
+PKG0 string 1
+PKG8 ldap 73
+PKG8 pam_modules 16
+PKG8 stdio 9
+PKG0 pam_ldap 7
+PKG8 string 47
+PKG3 _pam_types 13
+PKG16 unistd 9
+PKG8 stdlib 31
+PKG5 netdb 1
+PKG8 md5 3
+PKG6 lber 8

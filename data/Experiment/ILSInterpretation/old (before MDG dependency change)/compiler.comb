@@ -1,0 +1,13 @@
+PKG4 main
+PKG12 declarations
+PKG4 parser
+PKG9 codeGenerator
+PKG4 scanner
+PKG10 scopeController
+PKG12 typeChecker
+PKG10 dictionary
+PKG10 dictIdxStack
+PKG9 addrStack
+PKG10 dictStack
+PKG12 typeStack
+PKG12 argCntStack

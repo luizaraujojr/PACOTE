@@ -13,7 +13,7 @@ public class ProjectClass
 	private ProjectPackage _package;
 	private ElementType type;
 	private ElementVisibility visibility;
-	private boolean isAbstract;
+	public boolean isAbstract;
 	private Vector<Dependency> dependencies;
 
 	/**

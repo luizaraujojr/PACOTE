@@ -1,0 +1,96 @@
+PKG45 dlopen
+PKG29 client 3
+PKG54 checkpw
+PKG85 client 2
+PKG6 saslutil
+PKG6 time 6
+PKG82 db_berkeley
+PKG4 db 2
+PKG70 config
+PKG37 common 3
+PKG31 db_gdbm
+PKG41 saslint 2
+PKG69 common
+PKG38 string 21
+PKG61 db_none
+PKG58 common 1
+PKG93 db_ndbm
+PKG7 common 4
+PKG0 pam_appl 5
+PKG31 gdbm 3
+PKG54 common 9
+PKG61 db_ndbm 7
+PKG44 checkpw 4
+PKG70 server 1
+PKG94 db_ndbm 12
+PKG20 server
+PKG67 config 2
+PKG93 saslint 6
+PKG55 client 23
+PKG40 saslint 42
+PKG19 saslint 8
+PKG89 stdlib 1
+PKG93 db_berkeley 35
+PKG34 client
+PKG34 server 7
+PKG70 stdio 4
+PKG28 common 2
+PKG5 stdio 5
+PKG33 ndbm 10
+PKG85 saslint
+PKG72 md5
+PKG72 checkpw 7
+PKG20 string 16
+PKG91 db_ndbm 2
+PKG76 db_gdbm 6
+PKG54 pwd 2
+PKG49 saslint 15
+PKG38 saslint 23
+PKG82 db_gdbm 10
+PKG21 db_none 2
+PKG53 server 4
+PKG5 stdlib 3
+PKG62 errno 1
+PKG76 in 4
+PKG82 string 5
+PKG18 assert 1
+PKG85 common 8
+PKG4 md5 16
+PKG69 stdlib 4
+PKG52 client 21
+PKG17 db_ndbm 8
+PKG7 string 7
+PKG20 dlopen 3
+PKG51 gdbm 7
+PKG70 ctype 4
+PKG28 checkpw 20
+PKG19 md5 3
+PKG45 saslint 1
+PKG6 saslint 3
+PKG69 server 36
+PKG76 unistd 4
+PKG56 string 1
+PKG30 saslutil 10
+PKG34 ctype 1
+PKG20 common 31
+PKG11 db_berkeley 7
+PKG93 string 10
+PKG71 config 6
+PKG39 stdio 1
+PKG45 string 6
+PKG6 unistd 2
+PKG8 shadow 2
+PKG90 db_berkeley 5
+PKG29 syslog 1
+PKG93 db_gdbm 40
+PKG56 getsubopt
+PKG0 db_gdbm 8
+PKG45 dlfcn 7
+PKG85 server 2
+PKG41 checkpw 3
+PKG7 checkpw 2
+PKG88 common 21
+PKG69 unistd 1
+PKG92 dirent 5
+PKG31 string 3
+PKG17 saslutil 4

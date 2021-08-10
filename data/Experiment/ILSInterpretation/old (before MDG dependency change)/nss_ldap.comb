@@ -1,0 +1,15 @@
+PKG14 pam_ldap
+PKG14 errno
+PKG14 syslog
+PKG14 crypt
+PKG14 time
+PKG6 md5
+PKG6 string
+PKG14 ldap
+PKG14 pam_modules
+PKG14 stdio
+PKG14 _pam_types
+PKG14 unistd
+PKG14 stdlib
+PKG14 netdb
+PKG14 lber

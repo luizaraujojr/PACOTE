@@ -1,0 +1,16 @@
+PKG0 errlst.c
+PKG0 nosfs.h
+PKG4 fcall.c
+PKG4 log.c
+PKG1 nos.h
+PKG4 sysd.h
+PKG2 fids.c
+PKG2 fids.h
+PKG10 oosfs.h
+PKG10 fork.c
+PKG4 nosfs.c
+PKG5 pwdgrp.c
+PKG5 pwdgrp.h
+PKG10 serv.c
+PKG10 oosfs.c
+PKG1 oosfid.c

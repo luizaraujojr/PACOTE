@@ -15,6 +15,8 @@ import br.com.ppgi.unirio.luiz.softwareanalysis.model.Project;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectClass;
 import br.com.ppgi.unirio.luiz.softwareanalysis.model.ProjectPackage;
 
+import static br.com.ppgi.unirio.teaching.clustering.Common.*;
+
 /**
  * Class that loads real and optimized versions of Apache Ant
  * 
@@ -30,19 +32,24 @@ public class ProjectLoader
 	 * Input directory for real versions
 	 */
 	
-	private static String ODEM_DIRECTORY = new File("").getAbsolutePath() + "\\data\\ODEMFile";
-
-	private static String JAR_DIRECTORY = new File("").getAbsolutePath() + "\\data\\JARFile";
-
-	private static String ODEMProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMProjectCharacteristics";
-	
-	private static String ODEMPackageCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMPackageCharacteristics";
-	
-	private static String JARProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\JARProjectCharacteristics";
-
+//	private static String ODEM_DIRECTORY = new File("").getAbsolutePath() + "\\data\\ODEMFile";
+//
+//	private static String JAR_DIRECTORY = new File("").getAbsolutePath() + "\\data\\JARFile";
+//
+//	private static String ODEMProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMProjectCharacteristics";
+//	
+//	private static String ODEMPackageCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\ODEMPackageCharacteristics";
+//	
+//	private static String JARProjectCharacteristics_DIRECTORY= new  File("").getAbsolutePath() + "\\data\\JARProjectCharacteristics";
+//
 	private static List<String> instanceFilenames = new ArrayList<String>();
 		
 	public String[][] PROJECT_INFO; 
+	
+	
+	public  ProjectLoader() {
+		
+	}
 	
 	public  ProjectLoader(String PROJECT_ODEM_DIRECTORY) throws XMLParseException{
 		loadODEMRealVersionInfo(PROJECT_ODEM_DIRECTORY);	
@@ -542,7 +549,7 @@ public class ProjectLoader
 	{
 		CDAReader reader = new CDAReader();
 		reader.setIgnoredClasses(REAL_VERSION_EXTERNAL_DEPENDENCIES);
-		return reader.execute(ODEM_DIRECTORY + "\\"+ versao + ".odem");
+		return reader.execute(ODEM_BASE_DIRECTORY + "\\"+ versao + ".odem");
 	}
 	
 	
@@ -592,10 +599,18 @@ public class ProjectLoader
 		for (File file1: files) {
 			if(file1.isDirectory() == false && getFileExtension(file1).equals("odem")) {
 				String tokens[] = file1.getName().split("-");
-				
-				PROJECT_INFO[count][0] = tokens[0];
-				PROJECT_INFO[count][1] = tokens[1];
-				PROJECT_INFO[count][2] = tokens[2].substring(0,8);	
+				if (tokens.length==3) {
+					PROJECT_INFO[count][0] = tokens[0];
+					PROJECT_INFO[count][1] = tokens[1];
+					PROJECT_INFO[count][2] = tokens[2].substring(0,8);	
+				}
+				else if(tokens.length==2) {
+						PROJECT_INFO[count][0] = tokens[0];
+						PROJECT_INFO[count][1] = tokens[1];
+					}
+				else if(tokens.length==1) {
+					PROJECT_INFO[count][0] = tokens[0];
+				}
 			}
 			count++;
 		}				
@@ -731,7 +746,7 @@ public class ProjectLoader
 	public static Vector<Project> runProjectsReading() throws Exception {
 		//
 		/*setting the folder for app.jar file after the convertion from .apk to .jar */
-		File jarFilesFolder = new File(ODEM_DIRECTORY); // current directory
+		File jarFilesFolder = new File(ODEM_BASE_DIRECTORY); // current directory
 			/*looping throw the files to add the .jar files*/
 			for (File file : listFilesOnly(jarFilesFolder)) {
 				if (!file.isDirectory()  && getFileExtension(file).equals("odem") ) {

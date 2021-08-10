@@ -1,0 +1,76 @@
+PKG4 utility
+PKG29 select 2
+PKG65 telnetd
+PKG40 state 5
+PKG49 syslog 1
+PKG27 unistd 7
+PKG49 state
+PKG27 termstat 1
+PKG40 errno 3
+PKG4 state 20
+PKG9 errno 6
+PKG65 fcntl 2
+PKG70 stdlib 6
+PKG9 unistd 8
+PKG66 string 11
+PKG48 sys_term
+PKG40 pty 1
+PKG12 unistd
+PKG53 stdlib 1
+PKG52 termstat
+PKG72 ioctl 1
+PKG4 string 10
+PKG52 sys_term 8
+PKG65 term 1
+PKG53 setproctitle
+PKG38 stdio 1
+PKG68 ext
+PKG16 utility 9
+PKG21 telnet 5
+PKG61 termios 4
+PKG57 stdlib 12
+PKG75 stdio 4
+PKG75 socket 1
+PKG13 telnetd 5
+PKG75 stat 1
+PKG75 ioctl 2
+PKG68 getopt 2
+PKG65 signal 1
+PKG4 stdio 10
+PKG20 stdio 5
+PKG12 string 1
+PKG12 setproctitle 2
+PKG48 utility 4
+PKG13 utility 18
+PKG52 state 4
+PKG61 syslog 2
+PKG65 stdlib 5
+PKG61 ext 13
+PKG75 utmp 2
+PKG68 sys_term 1
+PKG58 unistd 2
+PKG2 unistd 1
+PKG51 sys_term 16
+PKG44 stdlib 2
+PKG48 unistd 10
+PKG51 socket 9
+PKG48 telnetd 2
+PKG65 netdb 6
+PKG4 socket 2
+PKG68 string 3
+PKG53 string 12
+PKG52 utility 1
+PKG38 telnetd 3
+PKG55 getopt 7
+PKG70 ext 56
+PKG4 telnetd 8
+PKG13 ext 50
+PKG48 termstat 6
+PKG8 sys_term 2
+PKG49 ext 52
+PKG25 state 12
+PKG43 ctype 2
+PKG49 ctype 3
+PKG52 ext 1
+PKG4 utsname 1
+PKG62 syslog 3

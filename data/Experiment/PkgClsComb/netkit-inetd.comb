@@ -1,0 +1,27 @@
+PKG1 inetd
+PKG1 libio 2
+PKG1 fcntl 1
+PKG8 signal 7
+PKG1 resource 4
+PKG2 daemon
+PKG2 unistd 6
+PKG17 getopt 7
+PKG1 wait 2
+PKG2 fcntl 2
+PKG6 ctype 1
+PKG1 pwd 2
+PKG26 time 2
+PKG23 string 30
+PKG1 inet 2
+PKG3 stdlib 21
+PKG3 pmap_clnt 3
+PKG21 in 4
+PKG1 grp 4
+PKG21 daemon 1
+PKG1 select 2
+PKG1 stdio 25
+PKG9 syslog 11
+PKG1 socket 19
+PKG1 netdb 6
+PKG9 errno 2
+PKG1 unistd 28

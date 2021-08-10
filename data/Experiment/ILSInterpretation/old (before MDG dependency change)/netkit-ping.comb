@@ -1,0 +1,15 @@
+PKG13 ping
+PKG13 ctype
+PKG13 stdlib
+PKG13 netdb
+PKG13 unistd
+PKG13 errno
+PKG13 signal
+PKG13 select
+PKG13 getopt
+PKG13 time
+PKG13 socket
+PKG13 inet
+PKG13 in
+PKG13 stdio
+PKG14 string
