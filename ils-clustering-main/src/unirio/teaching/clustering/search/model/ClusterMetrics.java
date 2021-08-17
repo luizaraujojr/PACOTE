@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-//import br.com.ppgi.unirio.teaching.clustering.search.model.FitnessMetric;
-
 /**
  * Metricas utilizadas para calulos e operacoes na clusterizacao
  * 
@@ -139,51 +137,32 @@ public class ClusterMetrics
 	 */
 	public double calculateMQ()
 	{
-		int[] functionParams= {9,5,9,7};
-		double mq = 0;
+//		double mq = 0;
 //		for (int auxi = 0; auxi < totalClusteres; auxi++)
 //		{
 //			int i = convertToClusterNumber(auxi);
 //			mq += modularizationFactor[i];
 //		}
+//		return mq;
 		
-		for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
-			double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes 
-			double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
-			double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
+		int[] functionParams = {9,5,9,7};
+		double fitness = 0;
 		
-			if (fa1!=0) {			
-				mq += (fa1) / (fb1+fb2);
+		if (functionParams.length==4) {
+		
+			for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
+				double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes 
+				double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
+				double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
+			
+				if (fa1!=0) {			
+					fitness += (fa1) / (fb1+fb2);
+				}
 			}
 		}
+		return fitness;
 		
-		
-		return mq;
 	}
-	
-	/**
-	 * Calcula o MQ com base nos MFs existentes
-	 */
-	public double calculateClusterMQ(int clusterNumber)
-	{
-		int[] functionParams= {9,5,9,7};
-		double mq = 0;
-//		for (int auxi = 0; auxi < totalClusteres; auxi++)
-//		{
-//			int i = convertToClusterNumber(auxi);
-//			mq += modularizationFactor[i];
-//		}
-		
-		
-		double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes 
-		double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
-		double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
-	
-		if (fa1!=0) mq += (fa1) / (fb1+fb2);
-		
-		return mq;
-	}
-	
 
 	/**
 	 * Retira o modulo de seu cluster atual e o coloca no toCluster
@@ -374,15 +353,42 @@ public class ClusterMetrics
 //				+ (calculateClusterModularizationFactor(joinClusterInternalDependency, joinClusterExternalDependency)
 //						- modularizationFactor[cluster2]);
 		
-		ClusterMetrics cmTest = this.clone();
-		double fitnessCalc = this.calculateClusterMQ (cluster1) + this.calculateClusterMQ (cluster2);
-		cmTest.makeMergeClusters(cluster1, cluster2);
-//		calculateClusterMQ (cluster2)
+		int[] functionParams = {9,5,9,7};
+		double fitness = 0;
+		ClusterMetrics cmtemp = this.clone();
+		double before = 0;
 		
-		return cmTest.calculateClusterMQ (cluster2);
+		double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências diretas entre classes 
+		double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências diretas entre classes
+		double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências entre classes de pacotes diferentes
+	
+		if (fa1!=0) {			
+			before  += (fa1) / (fb1+fb2);
+		}
+		
+		fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes 
+		fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes
+		fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências entre classes de pacotes diferentes
+	
+		if (fa1!=0) {			
+			before  += (fa1) / (fb1+fb2);
+		}
+		
+		cmtemp.makeMergeClusters (cluster1, cluster2);
+		
+		double after = 0;
+		
+		fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes 
+		fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes
+		fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências entre classes de pacotes diferentes
+	
+		if (fa1!=0) {			
+			after += (fa1) / (fb1+fb2);
+		}
+	
 		
 		
-//		return cmTest.calculateMQ();
+		return before - after;
 	}
 
 	/**

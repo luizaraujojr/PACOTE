@@ -14,7 +14,7 @@ import unirio.teaching.clustering.search.constructive.ConstrutiveAglomerativeMQ;
 public class MainProgram
 {
 //	private static String BASE_DIRECTORY = "C:\\Users\\User\\Desktop\\Codigos\\ils-clustering\\data\\clustering\\odem-temp";
-	private static String BASE_DIRECTORY = 	"D:\\Backup\\eclipse-workspace\\ils-clustering-main\\data\\clustering\\odem-temp";
+	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "\\data\\clustering\\odem-temp";
 	
 	public static final void main(String[] args) throws Exception
 	{

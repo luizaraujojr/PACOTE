@@ -176,7 +176,25 @@ public class ClusterMetrics
 	
 	public double calculateMQ1()
 	{
+		
+		
 		double mq = 0;
+		
+		if (functionParams.length==4) {
+			
+			for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
+				double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes 
+				double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências diretas entre classes
+				double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(clusterNumber)]; //Número de dependências entre classes de pacotes diferentes
+			
+				if (fa1!=0) {			
+					mq += (fa1) / (fb1+fb2);
+				}
+			}
+		}
+		
+		else {
+		
 		for (int auxi = 0; auxi < totalClusteres; auxi++)
 		{
 			double x = (double) internalDependencyWeight[convertToClusterNumber(auxi)];
@@ -208,6 +226,7 @@ public class ClusterMetrics
 					mq += (fa1+fa2+fa3+fa4) / (fb1+fb2+fb3+fb4);
 				}
 //			}
+		}
 		}
 		return mq;
 	}

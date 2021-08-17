@@ -55,8 +55,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 					
 					// verificar o delta da uniao desses dois clusteres
 					double currentDelta = cm.calculateMergeClustersDelta(i, j);
-					System.out.println(currentDelta);
-
+//					System.out.println(currentDelta);
 					if (currentMaxDelta == null || currentDelta > currentMaxDelta)
 					{
 						aglutinatei = i;

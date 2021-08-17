@@ -1,7 +1,7 @@
 package br.com.ppgi.unirio.teaching.clustering.search.constructive;
 
 import br.com.ppgi.unirio.teaching.clustering.model.Project;
-import br.com.ppgi.unirio.teaching.clustering.search.model.FitnessMetric;
+import br.com.ppgi.unirio.teaching.clustering.search.model.ClusterMetrics;
 import br.com.ppgi.unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 
 /**
@@ -33,7 +33,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		FitnessMetric cm = new FitnessMetric(mdg, solution, functionParams, project);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, functionParams, project);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
@@ -56,7 +56,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 					
 					// verificar o delta da uniao desses dois clusteres
 					double currentDelta = cm.calculateMergeClustersDelta(i, j);
-
+					System.out.println (currentDelta);
 					if (currentMaxDelta == null || currentDelta > currentMaxDelta)
 					{
 						aglutinatei = i;
