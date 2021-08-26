@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -46,14 +47,14 @@ public class MainProgram
 	    		
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 10, sbRefDepFile);
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 400, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment();
 	    		
 	    		long finishTimestamp = System.currentTimeMillis();
 	    		long seconds = (finishTimestamp - startTimestamp);
 	    		
 	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-	    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + padRight("" + countClusters(solution), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
+	    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + Arrays.toString(solution) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
 	    	}
 	    }
 
