@@ -139,30 +139,30 @@ public class IteratedLocalSearch
 		this.bestFitness = metrics.calculateMQ();
 		++evaluationsConsumed;
 
-		localSearch(this.metrics);
-		double fitness = metrics.calculateMQ();
-		++evaluationsConsumed;
-		
-		if (fitness > bestFitness)
-		{
-			bestSolution = this.metrics.cloneSolution();
-			this.bestFitness = fitness;
-		}
-		
-		while (getEvaluationsConsumed() < getMaximumEvaluations())
-		{
-			applyPerturbation(this.metrics, PERTURBATION_SIZE);
-			
-			localSearch(this.metrics);
-			fitness = metrics.calculateMQ();
-			++evaluationsConsumed;
-			
-			if (fitness > this.bestFitness)
-			{
-				bestSolution = this.metrics.cloneSolution();
-				this.bestFitness = fitness;
-			}
-		}
+//		localSearch(this.metrics);
+//		double fitness = metrics.calculateMQ();
+//		++evaluationsConsumed;
+//		
+//		if (fitness > bestFitness)
+//		{
+//			bestSolution = this.metrics.cloneSolution();
+//			this.bestFitness = fitness;
+//		}
+//		
+//		while (getEvaluationsConsumed() < getMaximumEvaluations())
+//		{
+//			applyPerturbation(this.metrics, PERTURBATION_SIZE);
+//			
+//			localSearch(this.metrics);
+//			fitness = metrics.calculateMQ();
+//			++evaluationsConsumed;
+//			
+//			if (fitness > this.bestFitness)
+//			{
+//				bestSolution = this.metrics.cloneSolution();
+//				this.bestFitness = fitness;
+//			}
+//		}
 
 		return bestSolution;
 	}

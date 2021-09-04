@@ -155,7 +155,7 @@ public class IteratedLocalSearch
 	 */
 	public int[] executeExperiment() throws Exception
 	{
-		int paramNumber = 8;  
+		int paramNumber = 4;  
 		int minValue = 1;
 		int maxValue = 9;
 		
