@@ -41,7 +41,9 @@ public class MainProgram
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
 	        	
-	    		//DependencyReader reader = new DependencyReader();
+	        	
+	        	
+//	    		//DependencyReader reader = new DependencyReader();
 	        	CDAReader reader = new CDAReader();
 	    		Project project = reader.load(BASE_DIRECTORY + "\\" + projectName);
 	    		
