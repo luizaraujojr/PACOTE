@@ -160,12 +160,13 @@ public class ClusterMetrics
 		for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) {
 			int _clusterNumber = convertToClusterNumber(clusterNumber);
 			
-			double fa1 = functionParamsDouble[0] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes 
+			double fa1 = functionParamsDouble[0] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes
+			double fa2 = functionParamsDouble[1] * externalDependencyWeight[_clusterNumber]; //Número de dependências entre classes de pacotes diferentes
 			double fb1 = functionParamsDouble[2] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes
 			double fb2 = functionParamsDouble[3] * externalDependencyWeight[_clusterNumber]; //Número de dependências entre classes de pacotes diferentes
 		
-			if (fa1!=0) {			
-				fitness += (fa1) / (fb1+fb2);
+			if ((fa1+fa2)!=0) {			
+				fitness += (fa1+fa2) / (fb1+fb2);
 			}
 		}
 
