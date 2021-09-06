@@ -33,7 +33,7 @@ public class MainProgram
 	//	ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
 		ConstrutiveAbstract constructor = new ConstrutiveRandom();
 		
-		int runTimeMax = 1;
+		int runTimeMax = 20;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -49,7 +49,7 @@ public class MainProgram
 	    		
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 20, sbRefDepFile);
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 400, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment();
 	    		
 	    		long finishTimestamp = System.currentTimeMillis();

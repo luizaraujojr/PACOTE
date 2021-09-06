@@ -171,7 +171,7 @@ public class IteratedLocalSearch
 
 		double fitness =  bestFitness;
 		
-		while (getEvaluationsConsumed() < getMaximumEvaluations() || bestFitness == 100)
+		while (getEvaluationsConsumed() < getMaximumEvaluations() && bestFitness < 100)
 		{
 			int[] solution = applyPerturbation(bestSolution, PERTURBATION_SIZE);
 					

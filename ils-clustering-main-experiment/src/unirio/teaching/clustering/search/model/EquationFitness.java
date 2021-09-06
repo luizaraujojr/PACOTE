@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 import unirio.teaching.clustering.model.Project;
@@ -42,8 +43,11 @@ public class EquationFitness {
 		this.equationParams = equationParams;
 		
 		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams);
+		
+		double mojo = MoJo.MojoFMSB( sbRefDepFile, generateSBSolution (project, project.getName(), bestSolution, false));
+		System.out.println (Arrays.toString(equationParams) + " " + mojo);
 				
-		return MoJo.MojoFMSB( sbRefDepFile, generateSBSolution (project, project.getName(), bestSolution, false));
+		return mojo;
 
 	}
 	
