@@ -17,9 +17,9 @@ import unirio.teaching.clustering.search.constructive.ConstrutiveRandom;
 
 public class MainProgram
 {
-//	private static String BASE_DIRECTORY = "C:\\Users\\User\\Desktop\\Codigos\\ils-clustering\\data\\clustering\\odem-temp";
-	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "\\data\\clustering\\odem-temp";
-	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "\\data\\Experiment\\ILSInterpretation\\";
+//	private static String BASE_DIRECTORY = "C://Users//User//Desktop//Codigos//ils-clustering//data//clustering//odem-temp";
+	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering//odem-temp";
+	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//ILSInterpretation//";
 	
 	public static final void main(String[] args) throws Exception
 	{
@@ -45,7 +45,7 @@ public class MainProgram
 	        	
 //	    		//DependencyReader reader = new DependencyReader();
 	        	CDAReader reader = new CDAReader();
-	    		Project project = reader.load(BASE_DIRECTORY + "\\" + projectName);
+	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
 	    		
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
