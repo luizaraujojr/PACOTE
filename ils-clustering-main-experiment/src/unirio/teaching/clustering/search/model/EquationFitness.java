@@ -39,13 +39,13 @@ public class EquationFitness {
 	 * Calcula o MQ com base nos MFs existentes
 	 * @throws IOException 
 	 */
-	public double calculateFitness(int[] equationParams) throws IOException {
+	public double calculateFitness(int[] equationParams, int evaluationsConsumed ,  int runTime, long startTimestamp ) throws IOException {
 		this.equationParams = equationParams;
 		
 		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams);
 		
 		double mojo = MoJo.MojoFMSB( sbRefDepFile, generateSBSolution (project, project.getName(), bestSolution, false));
-		System.out.println (Arrays.toString(equationParams) + " " + mojo);
+		System.out.println (project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + mojo + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(equationParams));
 				
 		return mojo;
 

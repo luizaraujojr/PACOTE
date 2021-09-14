@@ -50,13 +50,13 @@ public class MainProgram
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
 	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 400, sbRefDepFile);
-	    		int[] solution = ils.executeExperiment();
+	    		int[] solution = ils.executeExperiment(runTime, startTimestamp);
 	    		
 	    		long finishTimestamp = System.currentTimeMillis();
 	    		long seconds = (finishTimestamp - startTimestamp);
 	    		
-	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-	    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + Arrays.toString(solution) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
+//	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+//	    		System.out.println(runTime+ ";" + padLeft(projectName, 20) + ";" + padRight("" + project.getClassCount(), 10) + Arrays.toString(solution) + ";" + padRight(df4.format(ils.getBestFitness()), 10) + ";" + padRight("" + seconds, 10) + " ms ");
 	    	}
 	    }
 

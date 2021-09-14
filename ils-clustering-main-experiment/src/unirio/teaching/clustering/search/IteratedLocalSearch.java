@@ -153,7 +153,7 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] executeExperiment() throws Exception
+	public int[] executeExperiment(int runTime, long startTimestamp ) throws Exception
 	{
 		int paramNumber = 4;  
 		int minValue = 1;
@@ -166,7 +166,7 @@ public class IteratedLocalSearch
 //		this.metrics = new 	ClusterMetrics(mdg, bestSolution);
 		this.equationFitness = new 	EquationFitness(mdg, project, sbRefDepFile);
 		
-		this.bestFitness = equationFitness.calculateFitness(bestSolution);
+		this.bestFitness = equationFitness.calculateFitness(bestSolution, evaluationsConsumed, runTime, startTimestamp);
 		++evaluationsConsumed;
 
 		double fitness =  bestFitness;
@@ -175,7 +175,7 @@ public class IteratedLocalSearch
 		{
 			int[] solution = applyPerturbation(bestSolution, PERTURBATION_SIZE);
 					
-			fitness = equationFitness.calculateFitness(solution);
+			fitness = equationFitness.calculateFitness(solution, evaluationsConsumed, runTime, startTimestamp );
 			++evaluationsConsumed;
 			
 			if (fitness > bestFitness)
