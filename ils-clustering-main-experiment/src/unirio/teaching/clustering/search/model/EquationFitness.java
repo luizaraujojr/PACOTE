@@ -45,7 +45,7 @@ public class EquationFitness {
 		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams);
 		
 		double mojo = MoJo.MojoFMSB( sbRefDepFile, generateSBSolution (project, project.getName(), bestSolution, false));
-		System.out.println (project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + mojo + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(equationParams));
+//		System.out.println (project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + mojo + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(equationParams));
 				
 		return mojo;
 

@@ -3,6 +3,11 @@ package unirio.teaching.clustering;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +25,7 @@ public class MainProgram
 //	private static String BASE_DIRECTORY = "C://Users//User//Desktop//Codigos//ils-clustering//data//clustering//odem-temp";
 	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering//odem-temp";
 	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//ILSInterpretation//";
+	private static String RESULT_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering";
 	
 	public static final void main(String[] args) throws Exception
 	{
@@ -37,6 +43,10 @@ public class MainProgram
 		
 	    for (String projectName : file.list()) 
 	    {
+	    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + projectName);
+	    	
+	    	writeLine(out, "instance;runtime;evaluationsConsumed;Fitness;Solution;bestFitness;Time;bestSolution");
+	    	
 	    	for(int runTime=0; runTime<runTimeMax; runTime++)
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
@@ -50,7 +60,7 @@ public class MainProgram
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
 	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 400, sbRefDepFile);
-	    		int[] solution = ils.executeExperiment(runTime, startTimestamp);
+	    		int[] solution = ils.executeExperiment(runTime, startTimestamp, out);
 	    		
 	    		long finishTimestamp = System.currentTimeMillis();
 	    		long seconds = (finishTimestamp - startTimestamp);
@@ -116,4 +126,17 @@ public class MainProgram
 		sc.close();
 		return sb;
 	}
+	
+	public static void writeLine(OutputStream os, String line) throws IOException {
+		  PrintWriter writer = new PrintWriter(new OutputStreamWriter(os));
+		  try {
+//		    for (String line : lines) {
+		      writer.println(line);
+//		    }
+		    writer.flush();
+		  } finally {
+//		    writer.close();
+		  }
+	}
+	
 }

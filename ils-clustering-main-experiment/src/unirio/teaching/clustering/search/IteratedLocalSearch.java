@@ -1,5 +1,9 @@
 package unirio.teaching.clustering.search;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -153,7 +157,7 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] executeExperiment(int runTime, long startTimestamp ) throws Exception
+	public int[] executeExperiment(int runTime, long startTimestamp, OutputStream out) throws Exception
 	{
 		int paramNumber = 4;  
 		int minValue = 1;
@@ -166,9 +170,11 @@ public class IteratedLocalSearch
 //		this.metrics = new 	ClusterMetrics(mdg, bestSolution);
 		this.equationFitness = new 	EquationFitness(mdg, project, sbRefDepFile);
 		
+		
 		this.bestFitness = equationFitness.calculateFitness(bestSolution, evaluationsConsumed, runTime, startTimestamp);
 		++evaluationsConsumed;
-
+		writeLine(out, project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + Arrays.toString( bestSolution) + ";"  + bestFitness + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+	
 		double fitness =  bestFitness;
 		
 		while (getEvaluationsConsumed() < getMaximumEvaluations() && bestFitness < 100)
@@ -183,6 +189,7 @@ public class IteratedLocalSearch
 				bestSolution = solution;
 				bestFitness = fitness;
 			}
+			writeLine(out, project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + fitness + ";"  + Arrays.toString( solution) + ";"  + bestFitness + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
 		}
 
 		return bestSolution;
@@ -313,6 +320,18 @@ public class IteratedLocalSearch
 			history.add(s1);
 		}
 		return isNew;		
-	}
+	}	
 
+	
+	public static void writeLine(OutputStream os, String line) throws IOException {
+		  PrintWriter writer = new PrintWriter(new OutputStreamWriter(os));
+		  try {
+//		    for (String line : lines) {
+		      writer.println(line);
+//		    }
+		    writer.flush();
+		  } finally {
+//		    writer.close();
+		  }
+	}
 }
