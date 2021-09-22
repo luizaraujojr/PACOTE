@@ -1,0 +1,6 @@
+ junit.extensions;0;0;0;0;0;0
+    junit.swingui;0;0;0;0;0;0
+     junit.textui;0;0;0;0;0;0
+         junit.ui;0;0;0;0;0;0
+       junit.util;0;1;1;1;0;0
+  junit.framework;1;1;1;1;0;0
