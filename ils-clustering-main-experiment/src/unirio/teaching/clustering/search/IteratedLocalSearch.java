@@ -160,8 +160,8 @@ public class IteratedLocalSearch
 	public int[] executeExperiment(int runTime, long startTimestamp, OutputStream out) throws Exception
 	{
 		int paramNumber = 4;  
-		int minValue = 1;
-		int maxValue = 9;
+		int minValue = -15;
+		int maxValue = 25;
 		
 //		int[] bestSolution = constructor.createSolution(mdg);
 		int[] bestSolution = constructor.createSolution(paramNumber, minValue, maxValue);
