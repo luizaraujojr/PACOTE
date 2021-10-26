@@ -39,7 +39,7 @@ public class MainProgram
 	//	ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
 		ConstrutiveAbstract constructor = new ConstrutiveRandom();
 		
-		int runTimeMax = 20;
+		int runTimeMax = 1;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -51,15 +51,13 @@ public class MainProgram
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
 	        	
-	        	
-	        	
 //	    		//DependencyReader reader = new DependencyReader();
 	        	CDAReader reader = new CDAReader();
 	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
 	    		
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 400, sbRefDepFile);
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 1, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment(runTime, startTimestamp, out);
 	    		
 	    		long finishTimestamp = System.currentTimeMillis();
@@ -67,6 +65,8 @@ public class MainProgram
 	    		
 //	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
 //	    		System.out.println(runTime+ ";" + padLeft(projectName, 20) + ";" + padRight("" + project.getClassCount(), 10) + Arrays.toString(solution) + ";" + padRight(df4.format(ils.getBestFitness()), 10) + ";" + padRight("" + seconds, 10) + " ms ");
+	    		
+	    		System.out.println("" + seconds + " ms ");
 	    	}
 	    }
 

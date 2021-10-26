@@ -159,7 +159,7 @@ public class IteratedLocalSearch
 	 */
 	public int[] executeExperiment(int runTime, long startTimestamp, OutputStream out) throws Exception
 	{
-		int paramNumber = 4;  
+		int paramNumber = 6;  
 		int minValue = -15;
 		int maxValue = 25;
 		

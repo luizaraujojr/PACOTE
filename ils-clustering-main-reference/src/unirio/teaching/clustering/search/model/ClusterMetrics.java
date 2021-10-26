@@ -23,6 +23,10 @@ public class ClusterMetrics
 	private double[] modularizationFactor;
 	private Stack<Integer> availableClusters;
 	private List<Integer> usedClusters;
+	
+	
+	private List<List<Integer>> classesWithDepOnCluster;
+	
 
 	// usado para clonar o objeto
 	private ClusterMetrics(ModuleDependencyGraph mdg)
@@ -43,6 +47,9 @@ public class ClusterMetrics
 		externalDependencyWeight = new int[mdg.getSize() + 1];
 		modularizationFactor = new double[mdg.getSize() + 1];
 
+		
+		classesWithDepOnCluster = new ArrayList<>();
+		
 		resetAllMetrics();
 	}
 
@@ -61,6 +68,7 @@ public class ClusterMetrics
 			externalDependencyWeight[i] = 0;
 			modularizationFactor[i] = 0d;
 			modulesOnCluster.add(new ArrayList<Integer>());
+			classesWithDepOnCluster.add(new ArrayList<Integer>());
 		}
 
 		for (int i = 0; i < solution.length; i++)

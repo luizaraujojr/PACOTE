@@ -23,6 +23,10 @@ public class ClusterMetrics
 	private double[] modularizationFactor;
 	private Stack<Integer> availableClusters;
 	private List<Integer> usedClusters;
+	
+	
+	private List<List<Integer>> classWithDepOnCluster;
+	
 
 	// usado para clonar o objeto
 	private ClusterMetrics(ModuleDependencyGraph mdg)
@@ -38,6 +42,7 @@ public class ClusterMetrics
 		totalClusteres = 0;
 		totalModulesOnCluster = new int[mdg.getSize() + 1];
 		modulesOnCluster = new ArrayList<>();
+		classWithDepOnCluster= new ArrayList<>();
 
 		internalDependencyWeight = new int[mdg.getSize() + 1];
 		externalDependencyWeight = new int[mdg.getSize() + 1];
@@ -61,6 +66,7 @@ public class ClusterMetrics
 			externalDependencyWeight[i] = 0;
 			modularizationFactor[i] = 0d;
 			modulesOnCluster.add(new ArrayList<Integer>());
+			classWithDepOnCluster.add(new ArrayList<Integer>());
 		}
 
 		for (int i = 0; i < solution.length; i++)
@@ -131,10 +137,49 @@ public class ClusterMetrics
 			return (i) / (i + 0.5 * j);
 		}
 	}
+	
+	
+	private static double calculateOneClusterFitness(int[] functionParams, double _internalDependencyWeight, double _externalDependencyWeight, double _classWithDepOnCluster)
+	{
+		double fitness = 0;
+		double[] functionParamsDouble = new double[functionParams.length];
+				
+		for (int n = 0; n <=functionParams.length-1; n++) {
+			functionParamsDouble[n] = (functionParams[n]-5.0)/2.0; 
+		}
+					
+		double fa1 = functionParamsDouble[0] * _internalDependencyWeight; //Número de dependências diretas entre classes
+		double fa2 = functionParamsDouble[1] * _externalDependencyWeight; //Número de dependências entre classes de pacotes diferentes
+		double fa3 = functionParamsDouble[2] * _classWithDepOnCluster; //Número de dependências entre classes de pacotes diferentes
+		
+		double fb1 = functionParamsDouble[3] * _internalDependencyWeight; //Número de dependências diretas entre classes
+		double fb2 = functionParamsDouble[4] * _externalDependencyWeight; //Número de dependências entre classes de pacotes diferentes
+		double fb3 = functionParamsDouble[5] * _classWithDepOnCluster; //Número de dependências entre classes de pacotes diferentes
+	
+		if ((fa1+fa2+fa3)!=0) {			
+			fitness = (fa1+fa2+fa3) / (fb1+fb2+fb3);
+		}
+
+		return fitness;
+	}
+
 
 	/**
 	 * Calcula o MQ com base nos MFs existentes
 	 */
+	
+	
+//	public double calculateMQ(int[] functionParams)
+//	{
+//		double mq = 0;
+//		for (int auxi = 0; auxi < totalClusteres; auxi++)
+//		{
+//			int i = convertToClusterNumber(auxi);
+//			mq += modularizationFactor[i];
+//		}
+//		return mq;
+//	}
+	
 	public double calculateMQ(int[] functionParams)
 	{
 //		double mq = 0;
@@ -151,9 +196,9 @@ public class ClusterMetrics
 //		functionParams[3] = 7;
 		
 		double fitness = 0;
-		double[] functionParamsDouble = new double[4];
+		double[] functionParamsDouble = new double[functionParams.length];
 				
-		for (int n = 0; n <=3; n++) {
+		for (int n = 0; n <=functionParams.length-1; n++) {
 			functionParamsDouble[n] = (functionParams[n]-5.0)/2.0; 
 		}
 				
@@ -162,11 +207,16 @@ public class ClusterMetrics
 			
 			double fa1 = functionParamsDouble[0] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes
 			double fa2 = functionParamsDouble[1] * externalDependencyWeight[_clusterNumber]; //Número de dependências entre classes de pacotes diferentes
-			double fb1 = functionParamsDouble[2] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes
-			double fb2 = functionParamsDouble[3] * externalDependencyWeight[_clusterNumber]; //Número de dependências entre classes de pacotes diferentes
+			double fa3 = functionParamsDouble[2] * classWithDepOnCluster.get(_clusterNumber).size(); //Número de dependências entre classes de pacotes diferentes
+//			double fa3 = 0 ; 
+					
+			double fb1 = functionParamsDouble[3] * internalDependencyWeight[_clusterNumber]; //Número de dependências diretas entre classes
+			double fb2 = functionParamsDouble[4] * externalDependencyWeight[_clusterNumber]; //Número de dependências entre classes de pacotes diferentes
+			double fb3 = functionParamsDouble[5] * classWithDepOnCluster.get(_clusterNumber).size(); //Número de dependências entre classes de pacotes diferentes
+//			double fb3 = 0; 
 		
-			if ((fa1+fa2)!=0) {			
-				fitness += (fa1+fa2) / (fb1+fb2);
+			if ((fa1+fa2+fa3)!=0) {			
+				fitness += (fa1+fa2+fa3) / (fb1+fb2+fb3);
 			}
 		}
 
@@ -222,61 +272,23 @@ public class ClusterMetrics
 
 			modulesOnCluster.get(toCluster).add(module);
 		}
+		
+		/*
+		 * Verificar se alguma classe do cluster (pacote) de destino possui dependência com a classe que está sendo movimentada.
+		 * 
+		 */
+				
+//		for (int i = 0; i < modulesOnCluster.get(toCluster).size(); i++)
+//		{
+//			if (mdg.checkHasDependency(module, modulesOnCluster.get(toCluster).get(i))) {
+//				if (!classWithDepOnCluster.get(toCluster).contains(module)) {
+//					classWithDepOnCluster.get(toCluster).add(module);
+//				};
+//				classWithDepOnCluster.get(toCluster).add(modulesOnCluster.get(toCluster).get(i));
+//			};			
+//		}
 	}
-
-	
-	
-	/**
-	 * Retira o modulo de seu cluster atual e o coloca no toCluster
-	 */
-	public void makeMoviment1(int module, int toCluster)
-	{
-		int fromCluster = solution[module];
-	
-		if (fromCluster == toCluster)
-			return; 
-
-		int[] metrics = calculateMovimentMetrics(module, toCluster);
-
-		// grava o movimento no array
-		solution[module] = toCluster;
-
-		// atualizar valores nos arrays
-		if (fromCluster != -1)
-		{
-			internalDependencyWeight[fromCluster] = metrics[0];
-			externalDependencyWeight[fromCluster] = metrics[1];
-//			modularizationFactor[fromCluster] = calculateClusterModularizationFactor(internalDependencyWeight[fromCluster], externalDependencyWeight[fromCluster]);
-
-			// acerta os totais de modulos em cada cluster
-			totalModulesOnCluster[fromCluster]--;
-
-			modulesOnCluster.get(fromCluster).remove((Integer) module);
-
-//			if (totalModulesOnCluster[fromCluster] == 0)
-//			{
-//				updateClusterRemovedInfo(fromCluster);
-//			}
-		}
-
-		if (toCluster != -1)
-		{
-			internalDependencyWeight[toCluster] = metrics[2];
-			externalDependencyWeight[toCluster] = metrics[3];
-			
-//			modularizationFactor[toCluster] = calculateClusterModularizationFactor(internalDependencyWeight[toCluster], externalDependencyWeight[toCluster]);
-			totalModulesOnCluster[toCluster]++;
-
-//			if (totalModulesOnCluster[toCluster] == 1)
-//			{
-//				updateClusterCreatedInfo(toCluster);
-//			}
-
-			modulesOnCluster.get(toCluster).add(module);
-		}
-	}
-
-	
+		
 	/**
 	 * Atualiza as estruturas de controle informando que um novo cluster foi criado
 	 */
@@ -392,10 +404,15 @@ public class ClusterMetrics
 	/**
 	 * Calcula a alteraÃ§Ã£o que a funÃ§Ã£o objetivo sofrerÃ¡ com o movimento de junÃ§Ã£o de dois clusteres
 	 */
-	public double calculateMergeClustersDelta(int cluster1, int cluster2)
+	public double calculateMergeClustersDelta(int[] functionParams, int cluster1, int cluster2)
 	{
 		double delta = 0 - modularizationFactor[cluster1];// esse mÃ³dulo deixarÃ¡ de existir
-
+		
+//		double beforeC1 = calculateOneClusterFitness(functionParams, internalDependencyWeight[cluster1], externalDependencyWeight[cluster1], classWithDepOnCluster.get(cluster1).size());
+//		double beforeC2 = calculateOneClusterFitness(functionParams, internalDependencyWeight[cluster2], externalDependencyWeight[cluster2], classWithDepOnCluster.get(cluster2).size());
+//
+		double joinClassWithDepOnCluster = classWithDepOnCluster.get(cluster1).size() + classWithDepOnCluster.get(cluster2).size();
+	
 		int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
 		int joinClusterExternalDependency = externalDependencyWeight[cluster1] + externalDependencyWeight[cluster2];
 
@@ -407,51 +424,17 @@ public class ClusterMetrics
 				joinClusterInternalDependency += dependencyEachOtherWeight;// aresta externa passou a ser interna
 				joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no
 																			// cluster1)
-				joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no
-																			// cluster2)
+				joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster2)
 			}
 		}
-
+		
+//		double after = calculateOneClusterFitness(functionParams, joinClusterInternalDependency, joinClusterExternalDependency, joinClassWithDepOnCluster);
+//		
+//		return after - (beforeC1+beforeC2);
 		return delta
 				+ (calculateClusterModularizationFactor(joinClusterInternalDependency, joinClusterExternalDependency)
 						- modularizationFactor[cluster2]);
 		
-//		int[] functionParams = {9,5,9,7};
-//		double fitness = 0;
-//		ClusterMetrics cmtemp = this.clone();
-//		double before = 0;
-//		
-//		double fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências diretas entre classes 
-//		double fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências diretas entre classes
-//		double fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster1)]; //Número de dependências entre classes de pacotes diferentes
-//	
-//		if (fa1!=0) {			
-//			before  += (fa1) / (fb1+fb2);
-//		}
-//		
-//		fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes 
-//		fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes
-//		fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências entre classes de pacotes diferentes
-//	
-//		if (fa1!=0) {			
-//			before  += (fa1) / (fb1+fb2);
-//		}
-//		
-//		cmtemp.makeMergeClusters1 (cluster1, cluster2);
-//		
-//		double after = 0;
-//		
-//		fa1 = (((double)functionParams[0]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes 
-//		fb1 = (((double)functionParams[2]-5.0)/2.0 ) * internalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências diretas entre classes
-//		fb2 = (((double)functionParams[3]-5.0)/2.0 ) * externalDependencyWeight[convertToClusterNumber(cluster2)]; //Número de dependências entre classes de pacotes diferentes
-//	
-//		if (fa1!=0) {			
-//			after += (fa1) / (fb1+fb2);
-//		}
-//	
-//		
-//		
-//		return before - after;
 	}
 
 	/**
@@ -459,30 +442,13 @@ public class ClusterMetrics
 	 */
 	public void makeMergeClusters(int cluster1, int cluster2)
 	{
-		// para cada mÃ³dulo, verificar se ele estÃ¡ no cluster i, se estiver, move-lo para o cluster j
+		// para cada mÃ³dulo, verificar se ele estÃ¡ no cluster 1, se estiver, move-lo para o cluster 2
 		int clusterNBefore = totalClusteres;
 		for (int module = 0; module < solution.length; module++)
 		{
 			if (solution[module] == cluster1)
-			{// modulo estÃ¡ no cluster i
+			{// modulo estÃ¡ no cluster 1
 				makeMoviment(module, cluster2);
-				if (totalClusteres < clusterNBefore)
-				{// acabou de remover o cluster1
-					break;
-				}
-			}
-		}
-	}
-
-	public void makeMergeClusters1(int cluster1, int cluster2)
-	{
-		// para cada mÃ³dulo, verificar se ele estÃ¡ no cluster i, se estiver, move-lo para o cluster j
-		int clusterNBefore = totalClusteres;
-		for (int module = 0; module < solution.length; module++)
-		{
-			if (solution[module] == cluster1)
-			{// modulo estÃ¡ no cluster i
-				makeMoviment1(module, cluster2);
 				if (totalClusteres < clusterNBefore)
 				{// acabou de remover o cluster1
 					break;
