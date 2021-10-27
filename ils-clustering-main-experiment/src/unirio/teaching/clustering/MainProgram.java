@@ -39,7 +39,7 @@ public class MainProgram
 	//	ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
 		ConstrutiveAbstract constructor = new ConstrutiveRandom();
 		
-		int runTimeMax = 1;
+		int runTimeMax = 20;
 		
 	    for (String projectName : file.list()) 
 	    {

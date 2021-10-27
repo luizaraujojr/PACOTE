@@ -32,23 +32,26 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
-		topSolutionsMQ[0] = cm.calculateMQ(equationParams);
+		topSolutionsMQ[0] = cm.calculateMQ();
 
+		
 		int k = 1;
 		while (n - k > 1)
 		{
+			int _cmgetTotalClusteres = cm.getTotalClusteres();
+			
 			// selecionar elementos para a aglutinacao
 			int aglutinatei = -1;
 			int aglutinatej = -1;
 			Double currentMaxDelta = null;
 
-			for (int auxi = 0; auxi < cm.getTotalClusteres(); auxi++)
+			for (int auxi = 0; auxi < _cmgetTotalClusteres; auxi++)
 			{
-				for (int auxj = auxi + 1; auxj < cm.getTotalClusteres(); auxj++)
+				for (int auxj = auxi + 1; auxj < _cmgetTotalClusteres; auxj++)
 				{
 					int i = cm.convertToClusterNumber(auxi);
 					int j = cm.convertToClusterNumber(auxj);
@@ -69,7 +72,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 			cm.makeMergeClusters(aglutinatei, aglutinatej);
 
 			// gravar solucao atual na lista de melhores
-			addSolutionOnTopSolutions(cm.cloneSolution(), cm.calculateMQ(equationParams), topSolutions, topSolutionsMQ);
+			addSolutionOnTopSolutions(cm.cloneSolution(), cm.calculateMQ(), topSolutions, topSolutionsMQ);
 
 			k += 1;
 		}
@@ -78,7 +81,8 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 
 	private void addSolutionOnTopSolutions(int[] currentSolution, double currentSolutionMQ, int[][] topSolutions, Double[] topSolutionsMQ)
 	{
-		for (int i = 0; i < topSolutionsMQ.length; i++)
+		int _topSolutionsMQlength = topSolutionsMQ.length;
+		for (int i = 0; i < _topSolutionsMQlength; i++)
 		{
 			if (topSolutionsMQ[i] == null)
 			{

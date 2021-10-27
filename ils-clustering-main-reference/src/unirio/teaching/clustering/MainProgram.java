@@ -30,25 +30,32 @@ public class MainProgram
 		
 		ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
 		//ConstrutiveAbstract constructor = new ConstrutiveRandom();
-
-        for (String projectName : file.list()) 
-        {
-        	long startTimestamp = System.currentTimeMillis();
-        	
-    		//DependencyReader reader = new DependencyReader();
-        	CDAReader reader = new CDAReader();
-    		Project project = reader.load(BASE_DIRECTORY + "\\" + projectName);
-
-    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, 100_000);
-    		int[] solution = ils.execute();
-    		
-    		long finishTimestamp = System.currentTimeMillis();
-    		long seconds = (finishTimestamp - startTimestamp);
-    		
-    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + padRight("" + countClusters(solution), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
-    		generateSolution(project, projectName, solution);
-        }
+		int runTimeMax = 20;
+		
+		for(int runTime=0; runTime<runTimeMax; runTime++)
+    	{
+	        for (String projectName : file.list()) 
+	        {
+	        	long startTimestamp = System.currentTimeMillis();
+	        	
+	    		//DependencyReader reader = new DependencyReader();
+	        	CDAReader reader = new CDAReader();
+	    		Project project = reader.load(BASE_DIRECTORY + "\\" + projectName);
+	
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, 100_000);
+	    		int[] solution = ils.execute();
+	    		
+	    		long finishTimestamp = System.currentTimeMillis();
+	    		long seconds = (finishTimestamp - startTimestamp);
+	    		
+	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+	//    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + padRight("" + countClusters(solution), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
+	//    		generateSolution(project, projectName, solution);
+	    		
+	    		System.out.println("" + seconds + " ms ");
+	    		
+	        }
+    	}
 	}
 
 	private static int countClusters(int[] solution)
