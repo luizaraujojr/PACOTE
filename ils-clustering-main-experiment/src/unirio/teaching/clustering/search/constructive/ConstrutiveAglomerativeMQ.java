@@ -36,7 +36,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
-		topSolutionsMQ[0] = cm.calculateMQ();
+		topSolutionsMQ[0] = cm.calculateFitness();
 
 		
 		int k = 1;
@@ -72,7 +72,7 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 			cm.makeMergeClusters(aglutinatei, aglutinatej);
 
 			// gravar solucao atual na lista de melhores
-			addSolutionOnTopSolutions(cm.cloneSolution(), cm.calculateMQ(), topSolutions, topSolutionsMQ);
+			addSolutionOnTopSolutions(cm.cloneSolution(), cm.calculateFitness(), topSolutions, topSolutionsMQ);
 
 			k += 1;
 		}

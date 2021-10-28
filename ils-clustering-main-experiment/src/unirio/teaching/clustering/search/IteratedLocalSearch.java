@@ -1,17 +1,10 @@
 package unirio.teaching.clustering.search;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.model.ProjectClass;
-import unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
-import unirio.teaching.clustering.search.model.ClusterMetrics;
 import unirio.teaching.clustering.search.model.EquationFitness;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import unirio.teaching.clustering.search.utils.PseudoRandom;
@@ -21,16 +14,14 @@ import unirio.teaching.clustering.search.utils.PseudoRandom;
  */
 public class IteratedLocalSearch
 {
+	private static int BOUNDS = 5;
 	
-	private List<int[]> history;
+	private static int PARAMETER_COUNT = 4;
+	
+//	private List<int[]> history;
 	
 	private int PERTURBATION_SIZE = 5;
 	
-	/**
-	 * Constructive method
-	 */
-	private ConstrutiveAbstract constructor;
-
 	/**
 	 * Number of classes in the project
 	 */
@@ -57,9 +48,8 @@ public class IteratedLocalSearch
 	private int iterationBestFound;
 	
 	/**
-	 * MQ calculator
+	 * Fitness calculator
 	 */
-	private ClusterMetrics metrics;
 	private EquationFitness equationFitness;
 
 	/**
@@ -72,27 +62,19 @@ public class IteratedLocalSearch
 	 */
 	private Project project; 
 
-	private StringBuilder sbRefDepFile;
-	
-	
 	/**
 	 * Initializes the ILS search process
-	 * @param sbRefDepFile2 
-   */
-	public IteratedLocalSearch(ConstrutiveAbstract constructor, Project project, StringBuilder sbRefDepFile2, int maxEvaluations, StringBuilder sbRefDepFile) throws Exception
+     */
+	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile) throws Exception
 	{
-		this.constructor = constructor;
 		this.classCount = project.getClassCount();
 		this.mdg = buildGraph(project, this.classCount);
 		this.maxEvaluations = maxEvaluations;
 		this.evaluationsConsumed = 0;
 		this.iterationBestFound = 0;
-		this.metrics = null;
 		this.bestFitness = -1_000_000_000_000.0;
 		this.project = project;
-		this.project = project;
-		this.sbRefDepFile = sbRefDepFile;
-		this.history = new ArrayList<int[]>();
+		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
 	}
 	
 	/**
@@ -157,58 +139,111 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] executeExperiment(int runTime, long startTimestamp, OutputStream out) throws Exception
+	public int[] executeExperiment(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
 	{
-		int paramNumber = 6;  
-		int minValue = -15;
-		int maxValue = 25;
-		
-//		int[] bestSolution = constructor.createSolution(mdg);
-		int[] bestSolution = constructor.createSolution(paramNumber, minValue, maxValue);
-		history.add(bestSolution);
-		
-//		this.metrics = new 	ClusterMetrics(mdg, bestSolution);
-		this.equationFitness = new 	EquationFitness(mdg, project, sbRefDepFile);
-		
-		
-		this.bestFitness = equationFitness.calculateFitness(bestSolution, evaluationsConsumed, runTime, startTimestamp);
-		++evaluationsConsumed;
-		writeLine(out, project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + Arrays.toString( bestSolution) + ";"  + bestFitness + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+		int[] bestSolution = createRandomSolution(PARAMETER_COUNT);
+		this.bestFitness = calculateFitness(bestSolution);
 	
-		double fitness =  bestFitness;
-		
-		while (getEvaluationsConsumed() < getMaximumEvaluations() && bestFitness < 100)
+		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+		writer.flush();
+
+		int[] solution = bestSolution;
+	
+		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
 		{
-			int[] solution = applyPerturbation(bestSolution, PERTURBATION_SIZE);
-					
-			fitness = equationFitness.calculateFitness(solution, evaluationsConsumed, runTime, startTimestamp );
-			++evaluationsConsumed;
+			int[] localSearchSolution = localSearch(solution);
+			double fitness = equationFitness.calculateFitness(localSearchSolution);
 			
 			if (fitness > bestFitness)
 			{
-				bestSolution = solution;
+				bestSolution = Arrays.copyOf(solution, solution.length);
 				bestFitness = fitness;
+				iterationBestFound = evaluationsConsumed;
 			}
-			writeLine(out, project.getName() + ";"  + runTime + ";"  + evaluationsConsumed + ";"  + fitness + ";"  + Arrays.toString( solution) + ";"  + bestFitness + ";" + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+			
+			solution = applyPerturbation(solution, PERTURBATION_SIZE);
+
+			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestSolution + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+			writer.flush();
 		}
 
 		return bestSolution;
 	}
+
+	/**
+	 * Creates a random solution within the bounds
+	 */
+	public int[] createRandomSolution(int paramNumber)
+	{
+		int[] solution = new int[paramNumber];
+		
+		for (int i = 0; i < paramNumber; i++)
+			solution[i] = PseudoRandom.randInt(0, 2 * BOUNDS);
+
+		return solution;
+	}
 	
 	/**
-	 * Applies the perturbation operator upon a solution
+	 * Performs the local search starting from a given solution
 	 */
-//	private void applyPerturbation(ClusterMetrics calculator, int amount)
-//	{
-//		for (int i = 0; i < amount; i++)
-//		{
-//			int source = PseudoRandom.randInt(0, classCount-1);
-//			int target = PseudoRandom.randInt(0, classCount-1);
-//			calculator.makeMoviment(source, target);
-//		}
-//	}
-	
-	
+	private int[] localSearch(int[] solution)
+	{
+		int[] newSolution = Arrays.copyOf(solution, solution.length);
+
+		while (evaluationsConsumed > maxEvaluations)
+		{
+			int[] results = visitNeighbors(newSolution);
+			
+			if (results == null)
+				return newSolution;
+			
+			newSolution = results;
+		}
+		
+		return newSolution;
+	}
+
+	/**
+	 * Runs a neighborhood visit starting from a given solution
+	 */
+	private int[] visitNeighbors(int[] solution)
+	{
+		int[] bestNeighbor = null;
+		double bestNeighborFitness = calculateFitness(solution);
+		
+		for (int i = 0; i < solution.length; i++)
+		{
+			int value = solution[i];
+			
+			if (value < BOUNDS)
+			{
+				solution[i] = value + 1;
+				double fitness = calculateFitness(solution);
+				
+				if (fitness > bestNeighborFitness)
+				{
+					bestNeighbor = Arrays.copyOf(solution, solution.length);
+					bestNeighborFitness = fitness;
+				}
+			}
+			
+			if (value > -BOUNDS)
+			{
+				solution[i] = value - 1;
+				double fitness = calculateFitness(solution);
+				
+				if (fitness > bestNeighborFitness)
+				{
+					bestNeighbor = Arrays.copyOf(solution, solution.length);
+					bestNeighborFitness = fitness;
+				}
+			}
+			
+			solution[i] = value;
+		}
+
+		return bestNeighbor;
+	}
 	
 	/**
 	 * Applies the perturbation operator upon a solution
@@ -219,119 +254,55 @@ public class IteratedLocalSearch
 
 		for (int i = 0; i < amount; i++)
 		{
-			do {
 			int classIndex = PseudoRandom.randInt(0, solution.length-1);
-			perturbedSolution[classIndex] = PseudoRandom.randInt(1, 9);
-			}
-			while (!newSolution(perturbedSolution));
+			perturbedSolution[classIndex] = PseudoRandom.randInt(0, BOUNDS * 2);
 		}
 
 		return perturbedSolution;
 	}
+
+	/**
+	 * Calculates the fitness accounting for the maximum budget
+	 */
+	private double calculateFitness(int[] solution)
+	{
+		double fitness = equationFitness.calculateFitness(solution);
+		System.out.print(" " + evaluationsConsumed);
+		++evaluationsConsumed;
+		return fitness;
+	}
 	
-//	private void applyPerturbation(int[] solution, int amount)
+//	private boolean newSolution(int[] solution)
 //	{
+//		boolean isNew = true;
+//		int[] s1 = Arrays.copyOf(solution, solution.length);
 //		
-//		int[] perturbedSolution = Arrays.copyOf(solution, solution.length);
-//
-//		for (int i = 0; i < amount; i++)
+//		for (int[] h : history)
 //		{
-//			do {
-//			int classIndex = PseudoRandom.randInt(0, solution.length-1);
-//			perturbedSolution[classIndex] = PseudoRandom.randInt(1, 9);
+//			int equal = 0;
+//
+//			for (int i = 0; i <= s1.length - 1; i++)
+//			{
+//				if (h[i] == s1[i])
+//				{
+//					equal++;
+//				} 
+//				else
+//					break;
 //			}
-////			while (!newSolution(perturbedSolution));
+//			
+//			if (equal == s1.length)
+//			{
+//				isNew = false;
+//				break;
+//			}
+//		}
+//		
+//		if (isNew)
+//		{
+//			history.add(s1);
 //		}
 //
-//		return perturbedSolution;
-		
-		
-//		for (int i = 0; i < amount; i++)
-//		{
-//			int source = PseudoRandom.randInt(0, classCount-1);
-//			int target = PseudoRandom.randInt(0, classCount-1);
-////			calculator.makeMoviment(source, target);
-//		}
+//		return isNew;
 //	}
-
-	/**
-	 * Performs the local search starting from a given solution
-	 */
-	private void localSearch(ClusterMetrics calculator)
-	{
-		while (visitNeighbors(calculator))
-			;
-	}
-
-	/**
-	 * Runs a neighborhood visit starting from a given solution
-	 */
-	private boolean visitNeighbors(ClusterMetrics calculator)
-	{
-		if (evaluationsConsumed > maxEvaluations)
-			return false;
-
-		int source = -1;
-		int target = -1;
-		double bestGain = Double.NEGATIVE_INFINITY;
-		
-		for (int i = 0; i < classCount; i++)
-		{
-			int newPackage = PseudoRandom.randInt(0, classCount-1);
-//			int newPackage = PseudoRandom.randInt(0, classCount-1);
-			double gain = calculator.calculateMovimentDelta(i, newPackage);
-			++evaluationsConsumed;
-
-			if (gain > bestGain)
-			{
-				source = i;
-				target = newPackage;
-				bestGain = gain;
-			}
-		}
-
-		if (bestGain > 0)
-		{
-			calculator.makeMoviment(source, target);
-			return true;
-		}
-		
-		return false;
-	}
-	
-	
-	private boolean newSolution (int[] solution) {
-		boolean isNew = true;
-		int[] s1 = Arrays.copyOf(solution, solution.length);   
-		for (int[] h : history) {
-			int equal=0;
-			for (int i = 0; i <= s1.length-1; i++) {
-				if (h[i]==s1[i]) {
-					equal++; 
-				}
-				else break;
-			}
-			if (equal==s1.length) {
-				isNew =false;
-				break;
-			}
-		}
-		if (isNew) {
-			history.add(s1);
-		}
-		return isNew;		
-	}	
-
-	
-	public static void writeLine(OutputStream os, String line) throws IOException {
-		  PrintWriter writer = new PrintWriter(new OutputStreamWriter(os));
-		  try {
-//		    for (String line : lines) {
-		      writer.println(line);
-//		    }
-		    writer.flush();
-		  } finally {
-//		    writer.close();
-		  }
-	}
 }

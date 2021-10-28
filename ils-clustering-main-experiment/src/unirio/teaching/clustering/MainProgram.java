@@ -4,21 +4,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.reader.CDAReader;
 import unirio.teaching.clustering.search.IteratedLocalSearch;
-import unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
-import unirio.teaching.clustering.search.constructive.ConstrutiveRandom;
 
 public class MainProgram
 {
@@ -32,47 +27,40 @@ public class MainProgram
 		executeExperiment();
 	}
 	
-	private static void executeExperiment() throws Exception {		
+	@SuppressWarnings("unused")
+	private static void executeExperiment() throws Exception 
+	{
 		File file = new File(BASE_DIRECTORY);
-		DecimalFormat df4 = new DecimalFormat("0.0000");
-		
-	//	ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
-		ConstrutiveAbstract constructor = new ConstrutiveRandom();
-		
-		int runTimeMax = 20;
+		int maxCycles = 20;
 		
 	    for (String projectName : file.list()) 
 	    {
 	    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + projectName);
+			PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
+			writer.println("instance;runtime;evaluationsConsumed;Fitness;Solution;bestFitness;Time;bestSolution");
 	    	
-	    	writeLine(out, "instance;runtime;evaluationsConsumed;Fitness;Solution;bestFitness;Time;bestSolution");
-	    	
-	    	for(int runTime=0; runTime<runTimeMax; runTime++)
+	    	for(int cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
 	        	
-//	    		//DependencyReader reader = new DependencyReader();
+	    		//DependencyReader reader = new DependencyReader();
 	        	CDAReader reader = new CDAReader();
 	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
-	    		
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(constructor, project, sbRefDepFile, 1, sbRefDepFile);
-	    		int[] solution = ils.executeExperiment(runTime, startTimestamp, out);
-	    		
-	    		long finishTimestamp = System.currentTimeMillis();
-	    		long seconds = (finishTimestamp - startTimestamp);
-	    		
-//	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
-//	    		System.out.println(runTime+ ";" + padLeft(projectName, 20) + ";" + padRight("" + project.getClassCount(), 10) + Arrays.toString(solution) + ";" + padRight(df4.format(ils.getBestFitness()), 10) + ";" + padRight("" + seconds, 10) + " ms ");
-	    		
-	    		System.out.println("" + seconds + " ms ");
-	    	}
-	    }
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 400, sbRefDepFile);
+	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 
+//	    		long finishTimestamp = System.currentTimeMillis();
+//	    		long seconds = (finishTimestamp - startTimestamp);
+//	    		System.out.println(runTime+ ";" + projectName + ";" + project.getClassCount() + ";" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + seconds + " ms");
+	    	}
+
+	    	writer.close();
+	    }
 	}
 	
-	private static int countClusters(int[] solution)
+	protected static int countClusters(int[] solution)
 	{
 		List<Integer> clusters = new ArrayList<Integer>();
 		
@@ -87,7 +75,7 @@ public class MainProgram
 		return clusters.size();
 	}
 
-	public static String padLeft(String s, int length) 
+	protected static String padLeft(String s, int length) 
 	{
 	    StringBuilder sb = new StringBuilder();
 	    sb.append(s);
@@ -98,7 +86,7 @@ public class MainProgram
 	    return sb.toString();
 	}
 
-	public static String padRight(String s, int length) 
+	protected static String padRight(String s, int length) 
 	{
 	    StringBuilder sb = new StringBuilder();
 	    
@@ -109,7 +97,7 @@ public class MainProgram
 	    return sb.toString();
 	}
 	
-	private static StringBuilder loadDepRefFile(String filename) throws FileNotFoundException
+	protected static StringBuilder loadDepRefFile(String filename) throws FileNotFoundException
 	{
 		StringBuilder sb  = new StringBuilder();
 		
@@ -126,17 +114,4 @@ public class MainProgram
 		sc.close();
 		return sb;
 	}
-	
-	public static void writeLine(OutputStream os, String line) throws IOException {
-		  PrintWriter writer = new PrintWriter(new OutputStreamWriter(os));
-		  try {
-//		    for (String line : lines) {
-		      writer.println(line);
-//		    }
-		    writer.flush();
-		  } finally {
-//		    writer.close();
-		  }
-	}
-	
 }
