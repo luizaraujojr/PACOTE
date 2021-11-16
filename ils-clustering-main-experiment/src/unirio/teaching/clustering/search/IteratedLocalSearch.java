@@ -152,7 +152,7 @@ public class IteratedLocalSearch
 		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
 		{
 			int[] localSearchSolution = localSearch(solution);
-			double fitness = equationFitness.calculateFitness(localSearchSolution);
+			double fitness = calculateFitness(localSearchSolution);
 			
 			if (fitness > bestFitness)
 			{
@@ -163,7 +163,7 @@ public class IteratedLocalSearch
 			
 			solution = applyPerturbation(solution, PERTURBATION_SIZE);
 
-			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestSolution + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
 			writer.flush();
 		}
 
@@ -190,7 +190,7 @@ public class IteratedLocalSearch
 	{
 		int[] newSolution = Arrays.copyOf(solution, solution.length);
 
-		while (evaluationsConsumed > maxEvaluations)
+		while (evaluationsConsumed < maxEvaluations)
 		{
 			int[] results = visitNeighbors(newSolution);
 			
@@ -267,8 +267,8 @@ public class IteratedLocalSearch
 	private double calculateFitness(int[] solution)
 	{
 		double fitness = equationFitness.calculateFitness(solution);
-		System.out.print(" " + evaluationsConsumed);
-		++evaluationsConsumed;
+//		System.out.print(" " + evaluationsConsumed);
+		evaluationsConsumed++;
 		return fitness;
 	}
 	

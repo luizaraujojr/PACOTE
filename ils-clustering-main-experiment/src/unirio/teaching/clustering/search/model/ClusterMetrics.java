@@ -345,6 +345,10 @@ public class ClusterMetrics
 		return calculateFitnessClusterMergeDelta(internalDependencyWeight[cluster1], externalDependencyWeight[cluster1], 
 			internalDependencyWeight[cluster2], externalDependencyWeight[cluster2], 
 			joinClusterInternalDependency, joinClusterExternalDependency);
+		
+//		return delta
+//				+ (calculateClusterModularizationFactor(joinClusterInternalDependency, joinClusterExternalDependency)
+//						- modularizationFactor[cluster2]);
 	}
 
 	/**

@@ -38,7 +38,6 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		topSolutions[0] = solution;
 		topSolutionsMQ[0] = cm.calculateFitness();
 
-		
 		int k = 1;
 		while (n - k > 1)
 		{

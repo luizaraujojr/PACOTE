@@ -31,24 +31,24 @@ public class MainProgram
 	private static void executeExperiment() throws Exception 
 	{
 		File file = new File(BASE_DIRECTORY);
-		int maxCycles = 20;
+		int maxCycles = 1;
 		
 	    for (String projectName : file.list()) 
 	    {
 	    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + projectName);
 			PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-			writer.println("instance;runtime;evaluationsConsumed;Fitness;Solution;bestFitness;Time;bestSolution");
+			writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
 	    	
 	    	for(int cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
 	        	
 	    		//DependencyReader reader = new DependencyReader();
-	        	CDAReader reader = new CDAReader();
+	        	CDAReader reader = new CDAReader();    
 	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 400, sbRefDepFile);
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 100, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 
 //	    		long finishTimestamp = System.currentTimeMillis();
