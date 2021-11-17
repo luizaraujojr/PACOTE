@@ -16,7 +16,7 @@ public class IteratedLocalSearch
 {
 	private static int BOUNDS = 5;
 	
-	private static int PARAMETER_COUNT = 4;
+	private static int PARAMETER_COUNT = 6; // 2 por métrica
 	
 //	private List<int[]> history;
 	

@@ -1,0 +1,6 @@
+instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
+Jung_graph_model;0;1;69.19;110;[0, 4, 8, 1]
+Jung_graph_model;0;10;69.19;731;[0, 4, 8, 1]
+Jung_graph_model;0;24;69.19;1683;[0, 4, 8, 1]
+Jung_graph_model;0;32;69.19;2214;[0, 4, 8, 1]
+Jung_graph_model;0;72;100.0;4906;[2, 4, 1, 6]

@@ -1,0 +1,6 @@
+instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
+eclipse_jgit;0;1;63.41;6440;[1, 2, 1, 1]
+eclipse_jgit;0;11;63.41;69017;[1, 2, 1, 1]
+eclipse_jgit;0;25;63.7;156412;[4, 2, 6, 6]
+eclipse_jgit;0;41;63.7;262175;[4, 2, 6, 6]
+eclipse_jgit;0;128;100.0;803367;[6, 10, 3, 4]

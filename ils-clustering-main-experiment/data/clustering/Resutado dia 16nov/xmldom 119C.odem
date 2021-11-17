@@ -1,0 +1,3 @@
+instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
+xmldom;0;1;78.63;17;[5, 8, 2, 3]
+xmldom;0;65;100.0;839;[5, 8, 2, 3]
