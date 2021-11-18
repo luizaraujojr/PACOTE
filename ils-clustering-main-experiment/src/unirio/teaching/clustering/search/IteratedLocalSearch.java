@@ -80,7 +80,7 @@ public class IteratedLocalSearch
 	/**
 	 * Builds the project's dependency graph from its representation
 	 */
-	private ModuleDependencyGraph buildGraph(Project project, int classCount) throws Exception
+	public static ModuleDependencyGraph buildGraph(Project project, int classCount) throws Exception
 	{
 		ModuleDependencyGraph mdg = new ModuleDependencyGraph(classCount);
 		

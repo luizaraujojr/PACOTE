@@ -33,7 +33,7 @@ public class ClusterMetrics
 	
 	double c1, c2, c3, c4, c5, c6, c7, c8;
 	
-	private List<List<Integer>> classWithDepOnCluster;
+	public List<List<Integer>> classWithDepOnCluster;
 	
 	/**
 	 * Inicializa o calculador de metricas
@@ -231,7 +231,9 @@ public class ClusterMetrics
 				if (!classWithDepOnCluster.get(toCluster).contains(module)) {
 					classWithDepOnCluster.get(toCluster).add(module);
 				};
-				classWithDepOnCluster.get(toCluster).add(_modulesOnClusterGet);
+				if (!classWithDepOnCluster.get(toCluster).contains(_modulesOnClusterGet)) {
+					classWithDepOnCluster.get(toCluster).add(_modulesOnClusterGet);
+				}
 			};			
 		}
 	}

@@ -97,7 +97,7 @@ public class MainProgram
 	    return sb.toString();
 	}
 	
-	protected static StringBuilder loadDepRefFile(String filename) throws FileNotFoundException
+	public static StringBuilder loadDepRefFile(String filename) throws FileNotFoundException
 	{
 		StringBuilder sb  = new StringBuilder();
 		

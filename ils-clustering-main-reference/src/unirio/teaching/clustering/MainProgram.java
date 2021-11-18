@@ -50,7 +50,7 @@ public class MainProgram
 	    		
 	    		long memory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
 	//    		System.out.println(padLeft(projectName, 20) + " " + padRight("" + project.getClassCount(), 10) + padRight("" + countClusters(solution), 10) + " " + padRight(df4.format(ils.getBestFitness()), 10) + " " + padRight("" + seconds, 10) + " ms " + padRight("" + memory, 10) + " MB");
-	//    		generateSolution(project, projectName, solution);
+	    		generateSolution(project, projectName, solution);
 	    		
 	    		System.out.println("" + seconds + " ms ");
 	    		
