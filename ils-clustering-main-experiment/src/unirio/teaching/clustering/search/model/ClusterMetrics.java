@@ -34,6 +34,7 @@ public class ClusterMetrics
 	double c1, c2, c3, c4, c5, c6, c7, c8;
 	
 	public List<List<Integer>> classWithDepOnCluster;
+	public List<List<Integer>> classWithDepOutCluster;
 	
 	/**
 	 * Inicializa o calculador de metricas
@@ -47,6 +48,7 @@ public class ClusterMetrics
 		totalModulesOnCluster = new int[mdg.getSize() + 1];
 		modulesOnCluster = new ArrayList<>();
 		classWithDepOnCluster = new ArrayList<>();
+		classWithDepOutCluster = new ArrayList<>();
 
 		internalDependencyWeight = new int[mdg.getSize() + 1];
 		externalDependencyWeight = new int[mdg.getSize() + 1];
@@ -80,7 +82,18 @@ public class ClusterMetrics
 			modularizationFactor[i] = 0d;
 			modulesOnCluster.add(new ArrayList<Integer>());
 			classWithDepOnCluster.add(new ArrayList<Integer>());
+			classWithDepOutCluster.add(new ArrayList<Integer>());
+			
+			for (int j = 0; j < mdg.getSize(); j++){
+				if (mdg.moduleDependencies(i)[j]!=-1) {
+					classWithDepOutCluster.get(i).add(mdg.moduleDependencies(i)[j]);				
+				}
+				else break;
+			}
+			
 		}
+		
+		
 
 		for (int i = 0; i < solution.length; i++)
 		{
@@ -126,16 +139,16 @@ public class ClusterMetrics
 		}
 	}
 
-	private double calculateFitnessClusterMergeDelta(int _internalDependencyWeightCluster1, int _externalDependencyWeightCluster1, int _internalDependencyWeightCluster2, int _externalDependencyWeightCluster2, int _joinClusterInternalDependency, int _joinClusterExternalDependency, int _classWithDepOnCluster1, int _classWithDepOnCluster2, int _joinClassWithDepOnCluster)
+	private double calculateFitnessClusterMergeDelta(int _internalDependencyWeightCluster1, int _externalDependencyWeightCluster1, int _internalDependencyWeightCluster2, int _externalDependencyWeightCluster2, int _joinClusterInternalDependency, int _joinClusterExternalDependency, int _classWithDepOnCluster1, int _classWithDepOnCluster2, int _joinClassWithDepOnCluster, int _classWithDepOutCluster1, int _classWithDepOutCluster2, int _joinClassWithDepOutCluster)
 
 	{		
-		double fitness = calculateClusterFitness(_joinClusterInternalDependency, _joinClusterExternalDependency, _joinClassWithDepOnCluster);
-		fitness -= calculateClusterFitness(_internalDependencyWeightCluster1, _externalDependencyWeightCluster1, _classWithDepOnCluster1);
-		fitness -= calculateClusterFitness(_internalDependencyWeightCluster2, _externalDependencyWeightCluster2, _classWithDepOnCluster2);
+		double fitness = calculateClusterFitness(_joinClusterInternalDependency, _joinClusterExternalDependency, _joinClassWithDepOnCluster, _joinClassWithDepOutCluster);
+		fitness -= calculateClusterFitness(_internalDependencyWeightCluster1, _externalDependencyWeightCluster1, _classWithDepOnCluster1, _classWithDepOutCluster1);
+		fitness -= calculateClusterFitness(_internalDependencyWeightCluster2, _externalDependencyWeightCluster2, _classWithDepOnCluster2, _classWithDepOutCluster2);
 		return fitness;
 	}
 
-	private double calculateClusterFitness(int internalDependencies, int externalDependencies, int classWithDepOnCluster)
+	private double calculateClusterFitness(int internalDependencies, int externalDependencies, int classWithDepOnCluster, int classWithDepOutCluster)
 	{
 		double ra1 = c1 * internalDependencies;
 		double ra2 = c2 * externalDependencies;
@@ -163,7 +176,7 @@ public class ClusterMetrics
 		for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) 
 		{
 			int _clusterNumber = convertToClusterNumber(clusterNumber);
-			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], modulesOnCluster.get(_clusterNumber).size());
+			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], classWithDepOnCluster.get(_clusterNumber).size(), classWithDepOutCluster.get(_clusterNumber).size());
 		}
 
 		return fitness;
@@ -338,13 +351,31 @@ public class ClusterMetrics
 	 */
 	public double calculateMergeClustersDelta(int[] functionParams, int cluster1, int cluster2)
 	{
+		List<Integer> joinClassWithDepOnCluster = new ArrayList<>();
+		List<Integer> joinClassWithDepOutCluster = new ArrayList<>();
+		
 		int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
 		int joinClusterExternalDependency = externalDependencyWeight[cluster1] + externalDependencyWeight[cluster2];
 		
 		int classWithDepOnCluster1 = classWithDepOnCluster.get(cluster1).size();
 		int classWithDepOnCluster2 = classWithDepOnCluster.get(cluster2).size();
 		
-		int joinClassWithDepOnCluster = classWithDepOnCluster1 + classWithDepOnCluster2;
+		int classWithDepOutCluster1 = classWithDepOutCluster.get(cluster1).size();
+		int classWithDepOutCluster2 = classWithDepOutCluster.get(cluster2).size();
+
+		
+		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster1));
+		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster2));
+		
+		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster1))) {
+			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster1));	
+		}
+		
+		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster2))) {
+			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster2));	
+		}
+		
+//		int joinClassWithDepOnCluster = classWithDepOnCluster1 + classWithDepOnCluster2;
 
 		for (int i : modulesOnCluster.get(cluster1))
 		{
@@ -354,8 +385,63 @@ public class ClusterMetrics
 				joinClusterInternalDependency += dependencyEachOtherWeight;// aresta externa passou a ser interna
 				joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster1)
 				joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster2)
+								
+				
+				if (mdg.checkHasDependency(i, j)) {
+					if (!joinClassWithDepOnCluster.contains(i)) {
+						joinClassWithDepOnCluster.add(i);
+					};
+					
+					if (!joinClassWithDepOnCluster.contains(j)) {
+						joinClassWithDepOnCluster.add(j);
+					};
+
+//					boolean include = true;
+//					for (int h = 0; h < mdg.moduleDependencies(i).length; i++) {
+//						if (mdg.moduleDependencies(i)[h]!=-1){
+//							if (solution[mdg.moduleDependencies(i)[h]]!=cluster1 && solution[mdg.moduleDependencies(i)[h]]!=cluster2 ) {
+//								include = true;
+//								break;	
+//							}
+//							else {
+//								include = false;	
+//							}
+//						}
+//						else break;
+//					}
+//					if (include) {
+//						if (!joinClassWithDepOutCluster.contains(i)) {
+//							joinClassWithDepOutCluster.add(i);	
+//						}
+//					}
+//					
+//					include = true;
+//					for (int h = 0; h < mdg.moduleDependencies(j).length; i++) {
+//						if (mdg.moduleDependencies(j)[h]!=-1){
+//							if (solution[mdg.moduleDependencies(j)[h]]!=cluster1 && solution[mdg.moduleDependencies(j)[h]]!=cluster2 ) {
+//								include = true;
+//								break;	
+//							}
+//							else {
+//								include = false;	
+//							}
+//						}
+//						else break;
+//					}
+//					if (include) {
+//						if (!joinClassWithDepOutCluster.contains(j)) {
+//							joinClassWithDepOutCluster.add(j);	
+//						}
+//					}				
+				}
+				else {
+					
+				}
 			}
 		}
+		
+		
+		
 		
 		return calculateFitnessClusterMergeDelta(
 				internalDependencyWeight[cluster1], 
@@ -366,7 +452,10 @@ public class ClusterMetrics
 				joinClusterExternalDependency,			
 				classWithDepOnCluster1,
 				classWithDepOnCluster1,
-				joinClassWithDepOnCluster)
+				joinClassWithDepOnCluster.size(),
+				classWithDepOutCluster1,
+				classWithDepOutCluster2,
+				joinClassWithDepOutCluster.size())
 				;
 		
 //		return delta

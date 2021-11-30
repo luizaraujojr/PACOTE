@@ -48,7 +48,7 @@ public class MainProgram
 	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
 	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
 	
-	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 100, sbRefDepFile);
+	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 1, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 
 //	    		long finishTimestamp = System.currentTimeMillis();

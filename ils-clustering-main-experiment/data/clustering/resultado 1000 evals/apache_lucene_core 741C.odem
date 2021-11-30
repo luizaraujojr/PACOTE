@@ -1,0 +1,10 @@
+instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
+apache_lucene_core;0;1;46.41;3496;[8, 5, 2, 10, 3, 10]
+apache_lucene_core;0;30;58.4;108394;[8, 5, 2, 10, 3, 10]
+apache_lucene_core;0;51;58.4;191949;[8, 5, 2, 10, 3, 10]
+apache_lucene_core;0;94;63.46;359367;[4, 3, 10, 2, 4, 10]
+apache_lucene_core;0;138;63.99;533489;[4, 0, 10, 6, 4, 6]
+apache_lucene_core;0;160;63.99;620315;[4, 0, 10, 6, 4, 6]
+apache_lucene_core;0;186;63.99;724354;[4, 0, 10, 6, 4, 6]
+apache_lucene_core;0;239;63.99;914475;[4, 0, 10, 6, 4, 6]
+apache_lucene_core;0;304;100.0;1167833;[2, 5, 5, 5, 3, 3]

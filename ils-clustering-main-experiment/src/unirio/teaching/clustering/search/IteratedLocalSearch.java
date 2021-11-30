@@ -1,7 +1,9 @@
 package unirio.teaching.clustering.search;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.model.ProjectClass;
@@ -18,7 +20,7 @@ public class IteratedLocalSearch
 	
 	private static int PARAMETER_COUNT = 6; // 2 por métrica
 	
-//	private List<int[]> history;
+	private List<int[]> history;
 	
 	private int PERTURBATION_SIZE = 5;
 	
@@ -75,6 +77,7 @@ public class IteratedLocalSearch
 		this.bestFitness = -1_000_000_000_000.0;
 		this.project = project;
 		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
+//		this.history = new ArrayList<>(); ;
 	}
 	
 	/**
@@ -143,6 +146,7 @@ public class IteratedLocalSearch
 	{
 		int[] bestSolution = createRandomSolution(PARAMETER_COUNT);
 		this.bestFitness = calculateFitness(bestSolution);
+//		newSolution(bestSolution);
 	
 		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
 		writer.flush();
@@ -218,26 +222,22 @@ public class IteratedLocalSearch
 			if (value < BOUNDS)
 			{
 				solution[i] = value + 1;
-				double fitness = calculateFitness(solution);
-				
-				if (fitness > bestNeighborFitness)
-				{
-					bestNeighbor = Arrays.copyOf(solution, solution.length);
-					bestNeighborFitness = fitness;
-				}
 			}
 			
 			if (value > -BOUNDS)
 			{
 				solution[i] = value - 1;
+			}
+			
+//			if (newSolution(solution)) {
 				double fitness = calculateFitness(solution);
 				
 				if (fitness > bestNeighborFitness)
 				{
 					bestNeighbor = Arrays.copyOf(solution, solution.length);
 					bestNeighborFitness = fitness;
-				}
-			}
+				}	
+//			}
 			
 			solution[i] = value;
 		}
