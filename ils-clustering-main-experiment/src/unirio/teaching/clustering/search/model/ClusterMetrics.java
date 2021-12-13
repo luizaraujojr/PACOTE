@@ -33,6 +33,9 @@ public class ClusterMetrics
 	
 	double c1, c2, c3, c4, c5, c6, c7, c8;
 	
+	
+	public int[] classWithDepOnClusterNew;
+	
 	public List<List<Integer>> classWithDepOnCluster;
 	public List<List<Integer>> classWithDepOutCluster;
 	
@@ -47,6 +50,9 @@ public class ClusterMetrics
 		totalClusteres = 0;
 		totalModulesOnCluster = new int[mdg.getSize() + 1];
 		modulesOnCluster = new ArrayList<>();
+		
+		classWithDepOnClusterNew =  new int[mdg.getSize() + 1];
+		
 		classWithDepOnCluster = new ArrayList<>();
 		classWithDepOutCluster = new ArrayList<>();
 
@@ -79,6 +85,9 @@ public class ClusterMetrics
 			availableClusters.push(mdg.getSize() - i - 1);
 			internalDependencyWeight[i] = 0;
 			externalDependencyWeight[i] = 0;
+			
+			classWithDepOnClusterNew[i] = 0; 
+			
 			modularizationFactor[i] = 0d;
 			modulesOnCluster.add(new ArrayList<Integer>());
 			classWithDepOnCluster.add(new ArrayList<Integer>());
@@ -100,6 +109,9 @@ public class ClusterMetrics
 			int cluster = solution[i];
 			modulesOnCluster.get(cluster).add(i);
 			totalModulesOnCluster[cluster]++;
+			classWithDepOnClusterNew[cluster] =0;
+			
+			
 			if (totalModulesOnCluster[cluster] == 1)
 			{
 				updateClusterCreatedInfo(cluster);
@@ -243,9 +255,12 @@ public class ClusterMetrics
 			if (mdg.checkHasDependency(module, _modulesOnClusterGet)) {
 				if (!classWithDepOnCluster.get(toCluster).contains(module)) {
 					classWithDepOnCluster.get(toCluster).add(module);
+					classWithDepOnClusterNew[toCluster]++; 
+					
 				};
 				if (!classWithDepOnCluster.get(toCluster).contains(_modulesOnClusterGet)) {
 					classWithDepOnCluster.get(toCluster).add(_modulesOnClusterGet);
+					classWithDepOnClusterNew[toCluster]++;
 				}
 			};			
 		}
@@ -357,23 +372,27 @@ public class ClusterMetrics
 		int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
 		int joinClusterExternalDependency = externalDependencyWeight[cluster1] + externalDependencyWeight[cluster2];
 		
-		int classWithDepOnCluster1 = classWithDepOnCluster.get(cluster1).size();
-		int classWithDepOnCluster2 = classWithDepOnCluster.get(cluster2).size();
+//		int classWithDepOnCluster1 = 0;
+//		int classWithDepOnCluster2= 0;
+		int classWithDepOutCluster1 = 0;
+		int classWithDepOutCluster2 = 0; 
+		int classWithDepOnCluster1 = classWithDepOnClusterNew[cluster1]; 
+		int classWithDepOnCluster2 = classWithDepOnClusterNew[cluster2]; 
 		
-		int classWithDepOutCluster1 = classWithDepOutCluster.get(cluster1).size();
-		int classWithDepOutCluster2 = classWithDepOutCluster.get(cluster2).size();
-
-		
-		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster1));
-		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster2));
-		
-		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster1))) {
-			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster1));	
-		}
-		
-		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster2))) {
-			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster2));	
-		}
+//		
+//		int classWithDepOutCluster1 = classWithDepOutCluster.get(cluster1).size();
+//		int classWithDepOutCluster2 = classWithDepOutCluster.get(cluster2).size();
+////		
+//		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster1));
+//		joinClassWithDepOnCluster.addAll(classWithDepOutCluster.get(cluster2));
+//		
+//		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster1))) {
+//			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster1));	
+//		}
+//		
+//		if (!joinClassWithDepOutCluster.contains(classWithDepOutCluster.get(cluster2))) {
+//			joinClassWithDepOutCluster.addAll(classWithDepOutCluster.get(cluster2));	
+//		}
 		
 //		int joinClassWithDepOnCluster = classWithDepOnCluster1 + classWithDepOnCluster2;
 
@@ -451,7 +470,7 @@ public class ClusterMetrics
 				joinClusterInternalDependency, 
 				joinClusterExternalDependency,			
 				classWithDepOnCluster1,
-				classWithDepOnCluster1,
+				classWithDepOnCluster2,
 				joinClassWithDepOnCluster.size(),
 				classWithDepOutCluster1,
 				classWithDepOutCluster2,
