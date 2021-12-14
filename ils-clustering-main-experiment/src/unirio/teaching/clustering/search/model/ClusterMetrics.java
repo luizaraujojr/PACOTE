@@ -138,11 +138,11 @@ public class ClusterMetrics
 			//this.classCluster[i] = cluster;
 		}
 
-		updateClassCusterReferences();
+		updateClassClusterReferences();
 //		System.out.println("Fim");
 	}
 	
-	private void updateClassCusterReferences()
+	private void updateClassClusterReferences()
 	{
 		for (int i = 0; i < solution.length; i++)
 		{
@@ -178,10 +178,32 @@ public class ClusterMetrics
 
 	private void updateClusterClassCount()
 	{
-		for (int i = 0; i < totalClusteres; i++)
+		for (int cluster = 0; cluster < totalClusteres; cluster++)
 		{
-			this.internalClassesInternalDependencies[i] = calculateInternalClassesWithInternalDependency(i);
-			this.internalClassesExternalDependencies[i] = calculateInternalClassesWithExternalDependency(i);
+			int countICID = 0;
+			
+			int countICED = 0;
+			
+			for (int classCluster : modulesOnCluster.get(cluster))
+			{
+				if (depends(classCluster, cluster))
+					countICID++;
+				
+				int walker = 0;
+				
+				while (this.classClusterReferences[classCluster][walker] != -1)
+				{
+					if (this.classClusterReferences[classCluster][walker] != cluster)
+					{
+						countICED++;
+						break;
+					}
+					walker++;
+				}
+			}
+			
+			this.internalClassesInternalDependencies[cluster] = countICID;
+			this.internalClassesExternalDependencies[cluster] = countICED;
 		}
 	}
 
@@ -476,7 +498,7 @@ public class ClusterMetrics
 //		}
 //		
 //		int joinClassWithDepOnCluster = classWithDepOnCluster1 + classWithDepOnCluster2;
-		System.out.println("" + totalClusteres);
+//		System.out.println("" + totalClusteres);
 
 		for (int i : modulesOnCluster.get(cluster1))
 		{
@@ -570,7 +592,7 @@ public class ClusterMetrics
 //						- modularizationFactor[cluster2]);
 	}
 
-	private int calculateInternalClassesWithInternalDependency(int cluster)
+	public int calculateInternalClassesWithInternalDependency(int cluster)
 	{
 		int count = 0;
 		
@@ -583,7 +605,7 @@ public class ClusterMetrics
 		return count;
 	}
 
-	private int calculateInternalClassesWithExternalDependency(int cluster)
+	public int calculateInternalClassesWithExternalDependency(int cluster)
 	{
 		int count = 0;
 		
@@ -644,7 +666,7 @@ public class ClusterMetrics
 			}
 		}
 		
-		updateClassCusterReferences();
+		updateClassClusterReferences();
 	}
 
 	/**

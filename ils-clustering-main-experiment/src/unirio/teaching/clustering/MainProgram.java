@@ -18,7 +18,10 @@ import unirio.teaching.clustering.search.IteratedLocalSearch;
 public class MainProgram
 {
 //	private static String BASE_DIRECTORY = "C://Users//User//Desktop//Codigos//ils-clustering//data//clustering//odem-temp";
-	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering//odem-temp";
+//	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//Test"; //use este para jodamoney
+	
+	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering//odem-temp"; //use este para a pasta tradicional
+	
 	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//ILSInterpretation//";
 	private static String RESULT_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering";
 	
