@@ -16,7 +16,7 @@ public class IteratedLocalSearch
 {
 	private static int BOUNDS = 5;
 	
-	private static int PARAMETER_COUNT = 6; // 2 por métrica
+	private static int solutionLength = 6; // 2 por métrica
 	
 //	private List<int[]> history;
 	
@@ -142,7 +142,7 @@ public class IteratedLocalSearch
 	 */
 	public int[] executeExperiment(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
 	{
-		int[] bestSolution = createRandomSolution(PARAMETER_COUNT);
+		int[] bestSolution = createRandomSolution(solutionLength);
 		this.bestFitness = calculateFitness(bestSolution);
 //		newSolution(bestSolution);
 	
@@ -158,7 +158,7 @@ public class IteratedLocalSearch
 			
 			if (fitness > bestFitness)
 			{
-				bestSolution = Arrays.copyOf(solution, solution.length);
+				bestSolution = Arrays.copyOf(solution, solutionLength);
 				bestFitness = fitness;
 				iterationBestFound = evaluationsConsumed;
 			}
@@ -190,7 +190,7 @@ public class IteratedLocalSearch
 	 */
 	private int[] localSearch(int[] solution)
 	{
-		int[] newSolution = Arrays.copyOf(solution, solution.length);
+		int[] newSolution = Arrays.copyOf(solution, solutionLength);
 
 		while (evaluationsConsumed < maxEvaluations)
 		{
@@ -213,7 +213,7 @@ public class IteratedLocalSearch
 		int[] bestNeighbor = null;
 		double bestNeighborFitness = calculateFitness(solution);
 		
-		for (int i = 0; i < solution.length; i++)
+		for (int i = 0; i < solutionLength; i++)
 		{
 			int value = solution[i];
 			
@@ -232,7 +232,7 @@ public class IteratedLocalSearch
 				
 				if (fitness > bestNeighborFitness)
 				{
-					bestNeighbor = Arrays.copyOf(solution, solution.length);
+					bestNeighbor = Arrays.copyOf(solution, solutionLength);
 					bestNeighborFitness = fitness;
 				}	
 //			}
@@ -248,11 +248,11 @@ public class IteratedLocalSearch
 	 */
 	private int[] applyPerturbation(int[] solution, int amount)
 	{
-		int[] perturbedSolution = Arrays.copyOf(solution, solution.length);
+		int[] perturbedSolution = Arrays.copyOf(solution, solutionLength);
 
 		for (int i = 0; i < amount; i++)
 		{
-			int classIndex = PseudoRandom.randInt(0, solution.length-1);
+			int classIndex = PseudoRandom.randInt(0, solutionLength-1);
 			perturbedSolution[classIndex] = PseudoRandom.randInt(0, BOUNDS * 2);
 		}
 
@@ -273,7 +273,7 @@ public class IteratedLocalSearch
 //	private boolean newSolution(int[] solution)
 //	{
 //		boolean isNew = true;
-//		int[] s1 = Arrays.copyOf(solution, solution.length);
+//		int[] s1 = Arrays.copyOf(solution, solutionLength);
 //		
 //		for (int[] h : history)
 //		{

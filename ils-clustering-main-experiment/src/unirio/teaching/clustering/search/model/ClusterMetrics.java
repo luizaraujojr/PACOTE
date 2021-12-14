@@ -56,6 +56,10 @@ public class ClusterMetrics
 	 */
 	private int[] internalClassesExternalDependencies;
 	
+	
+	
+	private int classCount; 
+	
 	/**
 	 * Inicializa o calculador de metricas
 	 */
@@ -68,7 +72,7 @@ public class ClusterMetrics
 		totalModulesOnCluster = new int[mdg.getSize() + 1];
 		
 		modulesOnCluster = new ArrayList<>();
-		int classCount = mdg.getSize();
+		classCount = mdg.getSize();
 		
 		internalDependencyWeight = new int[classCount + 1];
 		externalDependencyWeight = new int[classCount + 1];
@@ -97,8 +101,9 @@ public class ClusterMetrics
 	private void resetAllMetrics()
 	{
 		availableClusters = new Stack<>();
-		usedClusters = new ArrayList<>(mdg.getSize());
-		int classCount = mdg.getSize();
+		
+//		classCount = mdg.getSize();
+		usedClusters = new ArrayList<>(classCount);
 		
 		for (int i = 0; i < classCount; i++)
 		{
@@ -119,7 +124,7 @@ public class ClusterMetrics
 				updateClusterCreatedInfo(cluster);
 			}
 
-			for (int j = i; j < mdg.getSize(); j++)
+			for (int j = i; j < classCount; j++)
 			{
 				updateDependencyMetrics(i, j);
 			}
@@ -382,10 +387,12 @@ public class ClusterMetrics
 		int fromCluster = solution[module];
 
 		if (toCluster == -1)
-			toCluster = mdg.getSize();
+//			toCluster = mdg.getSize();
+			toCluster = classCount;
 		
 		if (fromCluster == -1)
-			fromCluster = mdg.getSize();
+//			fromCluster = mdg.getSize();
+			fromCluster = classCount;
 
 		// valores do cluster de onde o módulo vai sair
 		int fromInternalDependencyWeight = internalDependencyWeight[fromCluster];
