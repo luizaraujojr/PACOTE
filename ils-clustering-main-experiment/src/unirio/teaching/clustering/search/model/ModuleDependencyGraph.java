@@ -181,24 +181,6 @@ public class ModuleDependencyGraph
 	}
 
 	/**
-	 * Encontra a posicao de um modulo pelo seu nome
-	 */
-	/*private int findModulePosition(String moduleName)
-	{
-		int i = 0;
-		
-		for (String currentModuleName : moduleNames)
-		{
-			if (currentModuleName.equals(moduleName))
-				return i;
-
-			i++;
-		}
-
-		throw new RuntimeException("MODULE NOT FOUND");
-	}*/
-
-	/**
 	 * Retorna o unico modulo conectado ao modulo module, ou -1 caso nao seja verdade
 	 */
 	public int getUniqueModuleDependency(int module)

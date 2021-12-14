@@ -1,9 +1,7 @@
 package unirio.teaching.clustering.search;
 
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.model.ProjectClass;
@@ -20,7 +18,7 @@ public class IteratedLocalSearch
 	
 	private static int PARAMETER_COUNT = 6; // 2 por métrica
 	
-	private List<int[]> history;
+//	private List<int[]> history;
 	
 	private int PERTURBATION_SIZE = 5;
 	
