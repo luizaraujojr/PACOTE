@@ -42,15 +42,14 @@ public class MainProgram
 			PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 			writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
 	    	
+			CDAReader reader = new CDAReader();    
+    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
+    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
+    		
 	    	for(int cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
 	        	long startTimestamp = System.currentTimeMillis();
-	        	
-	    		//DependencyReader reader = new DependencyReader();
-	        	CDAReader reader = new CDAReader();    
-	    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
-	    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
-	
+	        		        	
 	    		IteratedLocalSearch ils = new IteratedLocalSearch(project, 1, sbRefDepFile);
 	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 
@@ -58,26 +57,10 @@ public class MainProgram
 //	    		long seconds = (finishTimestamp - startTimestamp);
 //	    		System.out.println(runTime+ ";" + projectName + ";" + project.getClassCount() + ";" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + seconds + " ms");
 	    	}
-
 	    	writer.close();
 	    }
 	}
 	
-	protected static int countClusters(int[] solution)
-	{
-		List<Integer> clusters = new ArrayList<Integer>();
-		
-		for (int i = 0; i < solution.length; i++)
-		{
-			int cluster = solution[i];
-			
-			if (!clusters.contains(cluster))
-				clusters.add(cluster);
-		}
-		
-		return clusters.size();
-	}
-
 	protected static String padLeft(String s, int length) 
 	{
 	    StringBuilder sb = new StringBuilder();

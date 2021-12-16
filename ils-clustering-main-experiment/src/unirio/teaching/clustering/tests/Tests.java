@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import unirio.teaching.clustering.model.Project;
@@ -26,7 +27,7 @@ public class Tests
 		testInstanceLoad();
 		
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		for (int index = 0; index < mdg.getSize(); index++)
@@ -39,7 +40,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		for (int index = 0; index < mdg.getSize(); index++)
@@ -52,7 +53,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		clusterMetrics.makeMergeClusters(1, 2);
@@ -72,7 +73,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -94,7 +95,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -117,7 +118,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 0, 1, 2, 3, 4, 5 };
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
 
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -135,6 +136,38 @@ public class Tests
 			assertEquals(assertValue2[index], clusterMetrics.calculateInternalClassesWithInternalDependency(index));
 	}
 
+	@Test
+	public void testCalculateDeltaMerge1() throws Exception
+	{
+		testInstanceLoad();
+
+		int[] solution = createFullyDistributedSolution();
+		int[] equationParams = { 5, 5, 7, 5, 5, 5, 8, 5};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+
+		double result = clusterMetrics.calculateMergeClustersDelta (2, 3);
+		double expected = (((2*1)/(2*1.5))-0-0);
+		Assert.assertEquals(expected, result, 0.00000001); 
+	}
+
+	
+	@Test
+	public void testCalculateDeltaMerge2() throws Exception
+	{
+		testInstanceLoad();
+
+		int[] solution = createFullyDistributedSolution();
+		int[] equationParams = { 5, 5, 7, 5, 5, 5, 8, 5};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+ 
+		clusterMetrics.makeMergeClusters(2, 3);
+		
+		double result = clusterMetrics.calculateMergeClustersDelta (3, 4);
+		double expected = (((3*1)/(3*1.5))-((2*1)/(2*1.5))- 0);
+		Assert.assertEquals(expected, result, 0.00000001); 
+	}
+	
+	
 	private void testInstanceLoad() throws Exception
 	{
 		CDAReader reader = new CDAReader();

@@ -16,7 +16,7 @@ public class IteratedLocalSearch
 {
 	private static int BOUNDS = 5;
 	
-	private static int solutionLength = 6; // 2 por métrica
+	private static int solutionLength = 8; // 2 por métrica
 	
 //	private List<int[]> history;
 	
@@ -75,7 +75,6 @@ public class IteratedLocalSearch
 		this.bestFitness = -1_000_000_000_000.0;
 		this.project = project;
 		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
-//		this.history = new ArrayList<>(); ;
 	}
 	
 	/**
@@ -144,7 +143,6 @@ public class IteratedLocalSearch
 	{
 		int[] bestSolution = createRandomSolution(solutionLength);
 		this.bestFitness = calculateFitness(bestSolution);
-//		newSolution(bestSolution);
 	
 		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
 		writer.flush();
@@ -265,42 +263,7 @@ public class IteratedLocalSearch
 	private double calculateFitness(int[] solution)
 	{
 		double fitness = equationFitness.calculateFitness(solution);
-//		System.out.print(" " + evaluationsConsumed);
 		evaluationsConsumed++;
 		return fitness;
 	}
-	
-//	private boolean newSolution(int[] solution)
-//	{
-//		boolean isNew = true;
-//		int[] s1 = Arrays.copyOf(solution, solutionLength);
-//		
-//		for (int[] h : history)
-//		{
-//			int equal = 0;
-//
-//			for (int i = 0; i <= s1.length - 1; i++)
-//			{
-//				if (h[i] == s1[i])
-//				{
-//					equal++;
-//				} 
-//				else
-//					break;
-//			}
-//			
-//			if (equal == s1.length)
-//			{
-//				isNew = false;
-//				break;
-//			}
-//		}
-//		
-//		if (isNew)
-//		{
-//			history.add(s1);
-//		}
-//
-//		return isNew;
-//	}
 }
