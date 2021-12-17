@@ -176,10 +176,9 @@ public class ClusterMetrics
 
 	private void updateClusterClassCount()
 	{
-		for (int cluster = 0; cluster < totalClusteres; cluster++)
+		for (int cluster = 0; cluster < classCount; cluster++)
 		{
 			int countICID = 0;
-			
 			int countICED = 0;
 			
 			for (int classCluster : modulesOnCluster.get(cluster))
@@ -279,7 +278,7 @@ public class ClusterMetrics
 	{
 		double fitness = 0;
 		
-		for (int clusterNumber = 0; clusterNumber < totalClusteres; clusterNumber++) 
+		for (int clusterNumber = 0; clusterNumber < classCount; clusterNumber++) 
 		{
 			int _clusterNumber = convertToClusterNumber(clusterNumber);
 			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], 0 /*classWithDepOnCluster.get(_clusterNumber).size()*/, 0 /*classWithDepOutCluster.get(_clusterNumber).size()*/);
