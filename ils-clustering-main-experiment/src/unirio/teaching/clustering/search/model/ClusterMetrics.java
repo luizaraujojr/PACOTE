@@ -476,14 +476,25 @@ public class ClusterMetrics
 		
 		for (int i : modulesOnCluster.get(cluster1))
 		{
-			boolean inverseDependency= false;
+			boolean inverseDependency = false, depinserted = false;
 			for (int j : modulesOnCluster.get(cluster2))
 			{
 				int dependencyEachOtherWeight = mdg.dependencyWeight(i, j);
-				
-				if (mdg.dependencyWeight(j, i)!= 0) 
-						if (!this.classClusterReferencesFlat[i][cluster1])
-								inverseDependency = true;
+				int dependencyEachOtherWeightinverse = mdg.dependencyWeight(j, i);					
+					
+				if (dependencyEachOtherWeightinverse== 2) {
+					inverseDependency = true;
+					if (this.classClusterReferencesFlat[i][cluster1]) {
+						depinserted = true;
+					}
+					
+				}
+				if (dependencyEachOtherWeightinverse== 1) {
+						if (!this.classClusterReferencesFlat[i][cluster1]) {
+							inverseDependency = true;
+						}
+						else depinserted = true;
+				}
 				
 				if (dependencyEachOtherWeight != 0)
 				{
@@ -491,7 +502,7 @@ public class ClusterMetrics
 					joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster1)
 					joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster2)
 
-					if (this.classClusterReferencesFlat[i][cluster2])
+					if (this.classClusterReferencesFlat[i][cluster2] && !depinserted)
 						joinClusterInternalClassesWithInternalDependency++;			// A dependia de B, agora a dependência é interna
 				
 					if (this.classClusterReferences[i][1] == -1)					// se só tem uma dependência externa, não tem mais ...
