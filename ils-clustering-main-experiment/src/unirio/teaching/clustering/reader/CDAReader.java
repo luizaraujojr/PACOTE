@@ -128,7 +128,13 @@ public class CDAReader
 			String name = getElementAttribute(child, "name");
 			String sClassification = getElementAttribute(child, "classification");
 			String sVisibility = getElementAttribute(child, "visibility");
-			String sAbstract = getElementAttribute(child, "isAbstract", "false");
+			String sAbstract = "";
+			
+			if (getElementAttribute(child, "isAbstract", "false").equals("yes")) {
+				sAbstract = "true";	
+			}
+			else sAbstract = "false"; 
+			
 			
 			ElementType classification = ElementType.fromIdentifier(sClassification);
 			

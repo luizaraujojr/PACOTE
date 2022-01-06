@@ -28,7 +28,7 @@ public class Tests
 		
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(1, clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -41,7 +41,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(0, clusterMetrics.calculateInternalClassesWithInternalDependency(index));
@@ -54,7 +54,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(1, 2);
 
@@ -75,7 +75,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		
@@ -98,7 +98,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -122,7 +122,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -150,7 +150,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -179,7 +179,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -208,7 +208,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -236,7 +236,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 5, 5, 5, 8, 5};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		double result = clusterMetrics.calculateMergeClustersDelta (2, 3);
 		
@@ -259,7 +259,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		
@@ -291,7 +291,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -323,7 +323,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -356,7 +356,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -389,7 +389,7 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);

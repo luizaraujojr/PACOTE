@@ -36,7 +36,7 @@ public class EquationFitness
 	 */
 	public double calculateFitness(int[] equationParams)
 	{
-		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams);
+		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams, project);
 		return mojoCalculator.mojofmnew(project, bestSolution);
 	}
 

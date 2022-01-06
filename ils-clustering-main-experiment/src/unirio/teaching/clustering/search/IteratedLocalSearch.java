@@ -16,7 +16,7 @@ public class IteratedLocalSearch
 {
 	private static int BOUNDS = 5;
 	
-	private static int solutionLength = 8; // 2 por métrica
+	private static int solutionLength = 18; // 2 por métrica
 	
 //	private List<int[]> history;
 	
@@ -87,7 +87,8 @@ public class IteratedLocalSearch
 		for (int i = 0; i < classCount; i++)
 		{
 			ProjectClass _class = project.getClassIndex(i);
-
+			if (i==1349)
+				i=i;
 			for (int j = 0; j < _class.getDependencyCount(); j++)
 			{
 				String targetName = _class.getDependencyIndex(j).getElementName();

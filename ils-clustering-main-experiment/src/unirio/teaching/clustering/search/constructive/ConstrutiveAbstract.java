@@ -1,5 +1,6 @@
 package unirio.teaching.clustering.search.constructive;
 
+import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 
 /**
@@ -13,5 +14,5 @@ public abstract class ConstrutiveAbstract
 
 	public abstract  int[] createSolution(int paramNumber, int minValue, int maxValue);
 
-	public abstract int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams);
+	public abstract int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project);
 }

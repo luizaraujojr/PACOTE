@@ -1,5 +1,6 @@
 package unirio.teaching.clustering.search.constructive;
 
+import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.search.model.ClusterMetrics;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 
@@ -11,28 +12,28 @@ import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 {
 	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams)
+	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project)
 	{
-		return createSolution(mdg, 1, equationParams)[0];
+		return createSolution(mdg, 1, equationParams, project)[0];
 	}
 
-	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] equationParams)
+	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] equationParams, Project project)
 	{
 		int[] solution = new int[mdg.getSize()];		
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			solution[index] = index;
 
-		return aglomerateClustering(mdg, solution, quantity, equationParams);
+		return aglomerateClustering(mdg, solution, quantity, equationParams, project);
 	}
 
-	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] equationParams)
+	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] equationParams, Project project)
 	{
 		int[][] topSolutions = new int[solutionsQuantity][solution.length];
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
