@@ -358,7 +358,7 @@ public class ClusterMetrics
 		return fitness;
 	}
 
-	private double calculateClusterFitness(int _numberInternalDependencies, int _numberExternalDependencies, int _numberInternalClassWithDepOnCluster, int _numberInternalClassWithDepOutCluster, int _numberExternalClassWithDepCluster, int _numberAbstractClasses, int _numberConcreteClasses, int _numberSubClasses, int _numberSuperClasses)
+	public double calculateClusterFitness(int _numberInternalDependencies, int _numberExternalDependencies, int _numberInternalClassWithDepOnCluster, int _numberInternalClassWithDepOutCluster, int _numberExternalClassWithDepCluster, int _numberAbstractClasses, int _numberConcreteClasses, int _numberSubClasses, int _numberSuperClasses)
 	{
 		double ra1 = c[0] * _numberInternalDependencies;
 		double ra2 = c[1] * _numberExternalDependencies;
@@ -371,8 +371,8 @@ public class ClusterMetrics
 		double ra9 = c[8] * _numberSuperClasses;
 		
 		
-		double fitness = ra1 + ra2 + ra3 + ra4 + ra5 + ra6 + ra7 + ra8 + ra9;		
 		
+		double fitness = ra1 + ra2 + ra3 + ra4 + ra5 + ra6 + ra7 + ra8 + ra9;		
 		if (fitness != 0.0) 
 		{
 			double rb1 = c[9] * _numberInternalDependencies;
@@ -382,8 +382,8 @@ public class ClusterMetrics
 			double rb5 = c[13] * _numberExternalClassWithDepCluster;
 			double rb6 = c[14] * _numberAbstractClasses;
 			double rb7 = c[15] * _numberConcreteClasses;
-			double rb8 = c[16] * _numberConcreteClasses;
-			double rb9 = c[17] * _numberConcreteClasses;
+			double rb8 = c[16] * _numberSubClasses;
+			double rb9 = c[17] * _numberSuperClasses;
 			double rb = rb1 + rb2 + rb3 + rb4 + rb5 + rb6 + rb7 + rb8 + rb9;			
 			fitness /= rb;
 		}

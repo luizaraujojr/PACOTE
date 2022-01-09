@@ -30,8 +30,10 @@ public class Tests
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
+		int[] assertValue = { 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+		
 		for (int index = 0; index < mdg.getSize(); index++)
-			assertEquals(1, clusterMetrics.calculateInternalClassesWithExternalDependency(index));
+			assertEquals(assertValue[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
 	}
 
 	@Test
@@ -58,7 +60,8 @@ public class Tests
 
 		clusterMetrics.makeMergeClusters(1, 2);
 
-		int[] assertValue1 = { 1, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
+		int[] assertValue1 = { 1, 0, 2, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -78,13 +81,13 @@ public class Tests
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		clusterMetrics.makeMergeClusters(2, 3);
-		
-		int[] assertValue1 = { 1, 1, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
+		int[] assertValue1 = { 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
 
-		int[] assertValue2 = { 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		int[] assertValue2 = { 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue2[index], clusterMetrics.calculateInternalClassesWithInternalDependency(index));
@@ -103,7 +106,7 @@ public class Tests
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
 
-		int[] assertValue1 = { 1, 1, 0, 0, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+		int[] assertValue1 = { 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -128,7 +131,7 @@ public class Tests
 		clusterMetrics.makeMergeClusters(3, 4);
 		clusterMetrics.makeMergeClusters(4, 25);
 
-		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
+		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -156,8 +159,8 @@ public class Tests
 		clusterMetrics.makeMergeClusters(3, 4);
 		clusterMetrics.makeMergeClusters(4, 25);
 		clusterMetrics.makeMergeClusters(7, 8);
-
-		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 1, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
+	
+		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 0, 0, 2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -187,7 +190,7 @@ public class Tests
 		clusterMetrics.makeMergeClusters(7, 8);
 		clusterMetrics.makeMergeClusters(8, 11);
 
-		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
+		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
@@ -217,17 +220,47 @@ public class Tests
 		clusterMetrics.makeMergeClusters(8, 11);
 		clusterMetrics.makeMergeClusters(11, 25);
 
-		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7 };
+		
+		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
 
-		int[] assertValue2 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7 };
+		int[] assertValue2 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6 };
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(assertValue2[index], clusterMetrics.calculateInternalClassesWithInternalDependency(index));
 	}
 
+	
+	public void testCalculateAfterMerge7() throws Exception
+	{		
+//		unindo os pacotes (2,3,4,25,7,8,11) que possuem referencia 2-3, 3-2, 4-2, 7-8, 8-7 o 25-11, 11-25
+		
+		testInstanceLoad();
+
+		int[] solution = createFullyDistributedSolution();
+		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+
+		clusterMetrics.makeMergeClusters(2, 3);
+		clusterMetrics.makeMergeClusters(3, 4);
+		clusterMetrics.makeMergeClusters(4, 25);
+		clusterMetrics.makeMergeClusters(7, 8);
+		clusterMetrics.makeMergeClusters(8, 11);
+		clusterMetrics.makeMergeClusters(11, 25);
+
+		
+		int[] assertValue1 = { 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5 };
+
+		for (int index = 0; index < mdg.getSize(); index++)
+			assertEquals(assertValue1[index], clusterMetrics.calculateInternalClassesWithExternalDependency(index));
+
+		int[] assertValue2 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6 };
+
+		for (int index = 0; index < mdg.getSize(); index++)
+			assertEquals(assertValue2[index], clusterMetrics.calculateInternalClassesWithInternalDependency(index));
+	}
 	
 	@Test
 	public void testCalculateDeltaMerge1() throws Exception
@@ -235,19 +268,55 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 5, 5, 5, 8, 5};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
 
 		double result = clusterMetrics.calculateMergeClustersDelta (2, 3);
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes
+		double[] c = new double[18];
 		
-
-		double expected = (((2*1)/(2*1.5))-0-0);
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
+		
+		int _numberInternalDependencies1 = 0;
+		int _numberExternalDependencies1 = 1;
+		int _numberInternalClassWithDepOnCluster1 = 0;
+		int _numberInternalClassWithDepOutCluster1 = 1;
+		int _numberExternalClassWithDepCluster1 = 2;
+		int _numberAbstractClasses1 = 0;
+		int _numberConcreteClasses1 = 1;
+		int _numberSubClasses1 = 1;
+		int _numberSuperClasses1 = 1;
+		
+		int _numberInternalDependencies2 = 0;
+		int _numberExternalDependencies2 = 5;
+		int _numberInternalClassWithDepOnCluster2 = 0;
+		int _numberInternalClassWithDepOutCluster2 = 1;
+		int _numberExternalClassWithDepCluster2 = 10;
+		int _numberAbstractClasses2 = 0;
+		int _numberConcreteClasses2 = 1;
+		int _numberSubClasses2 = 1;
+		int _numberSuperClasses2 = 1;
+		
+		int _numberInternalDependenciesj = 1;
+		int _numberExternalDependenciesj = 5;
+		int _numberInternalClassWithDepOnClusterj = 1;
+		int _numberInternalClassWithDepOutClusterj = 1;
+		int _numberExternalClassWithDepClusterj = 11;
+		int _numberAbstractClassesj = 0;
+		int _numberConcreteClassesj = 2;
+		int _numberSubClassesj = 2;
+		int _numberSuperClassesj = 2;
+	
+		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
 		Assert.assertEquals(expected, result, 0.00000001); 
 	}
 
@@ -258,28 +327,57 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		
 		double result = clusterMetrics.calculateMergeClustersDelta (3, 4);
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes
+		double[] c = new double[18];
 		
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
+		
+		int _numberInternalDependencies1 = 1;
+		int _numberExternalDependencies1 = 5;
+		int _numberInternalClassWithDepOnCluster1 = 1;
+		int _numberInternalClassWithDepOutCluster1 = 1;
+		int _numberExternalClassWithDepCluster1 = 11;
+		int _numberAbstractClasses1 = 0;
+		int _numberConcreteClasses1 = 2;
+		int _numberSubClasses1 = 2;
+		int _numberSuperClasses1 = 2;
+		
+		int _numberInternalDependencies2 = 0;
+		int _numberExternalDependencies2 = 1;
+		int _numberInternalClassWithDepOnCluster2 = 0;
+		int _numberInternalClassWithDepOutCluster2 = 1;
+		int _numberExternalClassWithDepCluster2 = 2;
+		int _numberAbstractClasses2 = 1;
+		int _numberConcreteClasses2 = 0;
+		int _numberSubClasses2 = 1;
+		int _numberSuperClasses2 = 1;
+		
+		int _numberInternalDependenciesj = 3;
+		int _numberExternalDependenciesj = 4;
+		int _numberInternalClassWithDepOnClusterj = 3;
+		int _numberInternalClassWithDepOutClusterj = 1;
+		int _numberExternalClassWithDepClusterj = 11;
+		int _numberAbstractClassesj = 1;
+		int _numberConcreteClassesj = 2;
+		int _numberSubClassesj = 3;
+		int _numberSuperClassesj = 3;
 	
-		double vj = (((3*1)+(3*1.5))/((3*1.5)+(3*2)));
-		double v1 = (((2*1)+(2*1.5))/((2*1.5)+(2*2)));
-		double v2 = (((0*1)+(1*1.5))/((0*1.5)+(1*2)));
 		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
 		
-		double expected = vj-v1-v2;
-
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
 		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
 		Assert.assertEquals(expected, result, 0.00000001); 
 	}
 
@@ -290,7 +388,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -298,22 +396,52 @@ public class Tests
 		
 		double result = clusterMetrics.calculateMergeClustersDelta (4, 25);
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes
+		double[] c = new double[18];
 		
-				
-		double vj = (((3*1)+(4*1.5))/((3*1.5)+(4*2)));
-		double v1 = (((3*1)+(3*1.5))/((3*1.5)+(3*2)));
-		double v2 = (((0*1)+(1*1.5))/((0*1.5)+(1*2)));
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
 		
+		int _numberInternalDependencies1 = 3;
+		int _numberExternalDependencies1 = 4;
+		int _numberInternalClassWithDepOnCluster1 = 3;
+		int _numberInternalClassWithDepOutCluster1 = 1;
+		int _numberExternalClassWithDepCluster1 = 11;
+		int _numberAbstractClasses1 = 1;
+		int _numberConcreteClasses1 = 2;
+		int _numberSubClasses1 = 3;
+		int _numberSuperClasses1 = 3;
 		
-		double expected = vj-v1-v2;
+		int _numberInternalDependencies2 = 0;
+		int _numberExternalDependencies2 = 1;
+		int _numberInternalClassWithDepOnCluster2 = 0;
+		int _numberInternalClassWithDepOutCluster2 = 1;
+		int _numberExternalClassWithDepCluster2 = 6;
+		int _numberAbstractClasses2 = 1;
+		int _numberConcreteClasses2 = 0;
+		int _numberSubClasses2 = 1;
+		int _numberSuperClasses2 = 1;
 		
+		int _numberInternalDependenciesj = 3;
+		int _numberExternalDependenciesj = 5;
+		int _numberInternalClassWithDepOnClusterj = 3;
+		int _numberInternalClassWithDepOutClusterj = 2;
+		int _numberExternalClassWithDepClusterj = 17;
+		int _numberAbstractClassesj = 2;
+		int _numberConcreteClassesj = 2;
+		int _numberSubClassesj = 4;
+		int _numberSuperClassesj = 4;
+	
+		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
 		Assert.assertEquals(expected, result, 0.00000001); 
-	}
+		}
 	
 	
 	@Test
@@ -322,7 +450,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -330,23 +458,53 @@ public class Tests
 		clusterMetrics.makeMergeClusters(4, 25);
 		
 		double result = clusterMetrics.calculateMergeClustersDelta (7, 8);
+	
+		double[] c = new double[18];
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes 
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
 		
-		double vj = (((2*1)+(2*1.5))/((2*1.5)+(2*2)));
-		double v1 = (((0*1)+(1*1.5))/((0*1.5)+(1*2)));
-		double v2 = (((0*1)+(1*1.5))/((0*1.5)+(1*2)));
+		int _numberInternalDependencies1 = 0;
+		int _numberExternalDependencies1 = 6;
+		int _numberInternalClassWithDepOnCluster1 = 0;
+		int _numberInternalClassWithDepOutCluster1 = 1;
+		int _numberExternalClassWithDepCluster1 = 4;
+		int _numberAbstractClasses1 = 0;
+		int _numberConcreteClasses1 = 1;
+		int _numberSubClasses1 = 1;
+		int _numberSuperClasses1 = 1;
 		
+		int _numberInternalDependencies2 = 0;
+		int _numberExternalDependencies2 = 3;
+		int _numberInternalClassWithDepOnCluster2 = 0;
+		int _numberInternalClassWithDepOutCluster2 = 1;
+		int _numberExternalClassWithDepCluster2 = 3;
+		int _numberAbstractClasses2 = 0;
+		int _numberConcreteClasses2 = 1;
+		int _numberSubClasses2 = 1;
+		int _numberSuperClasses2 = 1;
 		
-		double expected = vj-v1-v2;
+		int _numberInternalDependenciesj = 2;
+		int _numberExternalDependenciesj = 7;
+		int _numberInternalClassWithDepOnClusterj = 2;
+		int _numberInternalClassWithDepOutClusterj = 2;
+		int _numberExternalClassWithDepClusterj = 5;
+		int _numberAbstractClassesj = 0;
+		int _numberConcreteClassesj = 2;
+		int _numberSubClassesj = 2;
+		int _numberSuperClassesj = 2;
+	
 		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
 		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
 		Assert.assertEquals(expected, result, 0.00000001); 
-	}
+}
 
 	
 	@Test
@@ -355,7 +513,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -365,18 +523,50 @@ public class Tests
 		
 		double result = clusterMetrics.calculateMergeClustersDelta (8, 11);
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes		
+		double[] c = new double[18];
 		
-		double vj = (((2*1)+(3*1.5))/((2*1.5)+(3*2)));
-		double v1 = (((2*1)+(2*1.5))/((2*1.5)+(2*2)));
-		double v2 = (((0*1)+(1*1.5))/((0*1.5)+(1*2)));
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
 		
+		int _numberInternalDependencies1 = 2;
+		int _numberExternalDependencies1 = 7;
+		int _numberInternalClassWithDepOnCluster1 = 2;
+		int _numberInternalClassWithDepOutCluster1 = 2;
+		int _numberExternalClassWithDepCluster1 = 5;
+		int _numberAbstractClasses1 = 0;
+		int _numberConcreteClasses1 = 2;
+		int _numberSubClasses1 = 2;
+		int _numberSuperClasses1 = 2;
 		
-		double expected = vj-v1-v2;
+		int _numberInternalDependencies2 = 0;
+		int _numberExternalDependencies2 = 5;
+		int _numberInternalClassWithDepOnCluster2 = 0;
+		int _numberInternalClassWithDepOutCluster2 = 1;
+		int _numberExternalClassWithDepCluster2 = 1;
+		int _numberAbstractClasses2 = 0;
+		int _numberConcreteClasses2 = 1;
+		int _numberSubClasses2 = 1;
+		int _numberSuperClasses2 = 1;
+		
+		int _numberInternalDependenciesj = 2;
+		int _numberExternalDependenciesj = 12;
+		int _numberInternalClassWithDepOnClusterj = 2;
+		int _numberInternalClassWithDepOutClusterj = 3;
+		int _numberExternalClassWithDepClusterj = 6;
+		int _numberAbstractClassesj = 0;
+		int _numberConcreteClassesj = 3;
+		int _numberSubClassesj = 3;
+		int _numberSuperClassesj = 3;
+	
+		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
 		Assert.assertEquals(expected, result, 0.00000001); 
 	}
 	
@@ -388,7 +578,7 @@ public class Tests
 		testInstanceLoad();
 
 		int[] solution = createFullyDistributedSolution();
-		int[] equationParams = { 5, 5, 7, 8, 5, 5, 8, 9};
+		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
  
 		clusterMetrics.makeMergeClusters(2, 3);
@@ -399,20 +589,51 @@ public class Tests
 		
 		double result = clusterMetrics.calculateMergeClustersDelta (11, 25);
 		
-//		double v = (((ICID*1)+(ICED*1.5))/((ICID*1.5)+(ICED*2)));
-//		
-//		v1 = fromcluster
-//		v2 = tocluster
-//		vj = join dos dois pacotes	
+		double[] c = new double[18];
 		
-		double vj = (((7*1)+(7*1.5))/((7*1.5)+(7*2)));
-		double v1 = (((2*1)+(3*1.5))/((2*1.5)+(3*2)));
-		double v2 = (((3*1)+(4*1.5))/((3*1.5)+(4*2)));
+		for (int i = 0; i < equationParams.length; i++)
+		{
+			c[i] = (equationParams[i]-5.0)/2.0; 
+		}
 		
+		int _numberInternalDependencies1 = 2;
+		int _numberExternalDependencies1 = 12;
+		int _numberInternalClassWithDepOnCluster1 = 2;
+		int _numberInternalClassWithDepOutCluster1 = 3;
+		int _numberExternalClassWithDepCluster1 = 6;
+		int _numberAbstractClasses1 = 0;
+		int _numberConcreteClasses1 = 3;
+		int _numberSubClasses1 = 3;
+		int _numberSuperClasses1 = 3;
 		
-		double expected = vj-v1-v2;
-		Assert.assertEquals(expected, result, 0.00000001); 
-	}
+		int _numberInternalDependencies2 = 3;
+		int _numberExternalDependencies2 = 5;
+		int _numberInternalClassWithDepOnCluster2 = 3;
+		int _numberInternalClassWithDepOutCluster2 = 2;
+		int _numberExternalClassWithDepCluster2 = 17;
+		int _numberAbstractClasses2 = 2;
+		int _numberConcreteClasses2 = 2;
+		int _numberSubClasses2 = 4;
+		int _numberSuperClasses2 = 4;	
+		
+		int _numberInternalDependenciesj = 6;
+		int _numberExternalDependenciesj = 14;
+		int _numberInternalClassWithDepOnClusterj = 6;
+		int _numberInternalClassWithDepOutClusterj = 5;
+		int _numberExternalClassWithDepClusterj = 23;
+		int _numberAbstractClassesj = 2;
+		int _numberConcreteClassesj = 5;
+		int _numberSubClassesj = 7;
+		int _numberSuperClassesj = 7;
+	
+		
+		double expected = clusterMetrics.calculateClusterFitness(_numberInternalDependenciesj, _numberExternalDependenciesj, _numberInternalClassWithDepOnClusterj, _numberInternalClassWithDepOutClusterj, _numberExternalClassWithDepClusterj, _numberAbstractClassesj, _numberConcreteClassesj, _numberSubClassesj, _numberSuperClassesj);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies1, _numberExternalDependencies1, _numberInternalClassWithDepOnCluster1, _numberInternalClassWithDepOutCluster1, _numberExternalClassWithDepCluster1, _numberAbstractClasses1, _numberConcreteClasses1, _numberSubClasses1, _numberSuperClasses1);
+		
+		expected -= clusterMetrics.calculateClusterFitness(_numberInternalDependencies2, _numberExternalDependencies2, _numberInternalClassWithDepOnCluster2, _numberInternalClassWithDepOutCluster2, _numberExternalClassWithDepCluster2, _numberAbstractClasses2, _numberConcreteClasses2, _numberSubClasses2, _numberSuperClasses2);
+			
+		Assert.assertEquals(expected, result, 0.00000001); 	}
 	
 	
 	private void testInstanceLoad() throws Exception

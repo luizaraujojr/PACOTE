@@ -87,7 +87,7 @@ public class IteratedLocalSearch
 		for (int i = 0; i < classCount; i++)
 		{
 			ProjectClass _class = project.getClassIndex(i);
-			if (i==1349)
+			if (i==5)
 				i=i;
 			for (int j = 0; j < _class.getDependencyCount(); j++)
 			{

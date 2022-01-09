@@ -163,8 +163,8 @@ public class ModuleDependencyGraph
 	 */
 	public int dependencyWeight(int module, int otherModule)
 	{
-		if (module > otherModule)
-			return dependencyWeight(otherModule, module);
+//		if (module > otherModule)
+//			return dependencyWeight(otherModule, module);
 
 		return dependencyWeight[module][otherModule];
 	}
@@ -174,8 +174,8 @@ public class ModuleDependencyGraph
 	 */
 	public int dependencyCount(int module, int otherModule)
 	{
-		if (module > otherModule)
-			return dependencyCount(otherModule, module);
+//		if (module > otherModule)
+//			return dependencyCount(otherModule, module);
 		
 		return dependencyCount[module][otherModule];
 	}
