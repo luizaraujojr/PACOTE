@@ -1,0 +1,10 @@
+instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
+udt-java;0;1;39.22;37;[10, 1, 10, 3]
+udt-java;0;17;46.94;210;[10, 1, 10, 3]
+udt-java;0;28;64.15;284;[10, 1, 3, 6]
+udt-java;0;39;64.15;331;[10, 1, 3, 6]
+udt-java;0;45;64.15;353;[10, 1, 3, 6]
+udt-java;0;61;64.15;430;[10, 1, 3, 6]
+udt-java;0;82;64.15;539;[10, 1, 3, 6]
+udt-java;0;93;94.12;592;[2, 10, 1, 2]
+udt-java;0;104;100.0;645;[2, 6, 0, 2]

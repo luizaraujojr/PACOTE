@@ -21,7 +21,7 @@ public class PseudoRandom
 	private static void prepare()
 	{
 		if (!prepared)
-		{
+		{			
 			seed = (new Random(System.nanoTime())).nextDouble();
 			randomize();
 			prepared = true;

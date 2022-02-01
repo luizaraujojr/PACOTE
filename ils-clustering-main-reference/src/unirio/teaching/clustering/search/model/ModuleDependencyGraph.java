@@ -76,8 +76,8 @@ public class ModuleDependencyGraph
 	 */
 	public int addModuleDependency(int module, int dependsOn, int weight, int qty)
 	{
-		if (module > dependsOn)
-			return addModuleDependency(dependsOn, module, weight, qty);
+//		if (module > dependsOn)
+//			return addModuleDependency(dependsOn, module, weight, qty);
 		
 		/*
 		 * if(dependencyCount[module][dependsOn] == 0 && module != dependsOn){ //nao existe dependencia e nao e o
@@ -87,10 +87,10 @@ public class ModuleDependencyGraph
 		{
 			totalDependencyEdgeCount++;// adicona mais uma dependencia nova
 			moduleDependencies[module][moduleDependenciesCount[module]++] = dependsOn;
-			if (module != dependsOn)
-			{
-				moduleDependencies[dependsOn][moduleDependenciesCount[dependsOn]++] = module;
-			}
+//			if (module != dependsOn)
+//			{
+//				moduleDependencies[dependsOn][moduleDependenciesCount[dependsOn]++] = module;
+//			}
 		}
 
 		dependencyCount[module][dependsOn]++;// adiciona uma dependencia entre os módulos

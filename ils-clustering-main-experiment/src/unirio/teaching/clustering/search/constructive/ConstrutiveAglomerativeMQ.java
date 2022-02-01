@@ -12,28 +12,28 @@ import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 {
 	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project)
+	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project, boolean[] usedMetrics)
 	{
-		return createSolution(mdg, 1, equationParams, project)[0];
+		return createSolution(mdg, 1, equationParams, project, usedMetrics)[0];
 	}
 
-	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] equationParams, Project project)
+	private int[][] createSolution(ModuleDependencyGraph mdg, int quantity, int[] equationParams, Project project, boolean[] usedMetrics)
 	{
 		int[] solution = new int[mdg.getSize()];		
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			solution[index] = index;
 
-		return aglomerateClustering(mdg, solution, quantity, equationParams, project);
+		return aglomerateClustering(mdg, solution, quantity, equationParams, project, usedMetrics);
 	}
 
-	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] equationParams, Project project)
+	private int[][] aglomerateClustering(ModuleDependencyGraph mdg, int[] solution, int solutionsQuantity, int[] equationParams, Project project, boolean[] usedMetrics)
 	{
 		int[][] topSolutions = new int[solutionsQuantity][solution.length];
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
@@ -112,6 +112,12 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 
 	@Override
 	public int[] createSolution(ModuleDependencyGraph mdg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -28,7 +28,8 @@ public class Tests
 		
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		int[] assertValue = { 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 		
@@ -43,7 +44,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		for (int index = 0; index < mdg.getSize(); index++)
 			assertEquals(0, clusterMetrics.calculateInternalClassesWithInternalDependency(index));
@@ -56,7 +58,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(1, 2);
 
@@ -78,7 +81,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 
@@ -101,7 +105,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -125,7 +130,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -153,7 +159,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -182,7 +189,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -211,7 +219,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -241,7 +250,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 0, 1, 2, 3, 4, 5, 6, 7};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -269,7 +279,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
 
 		double result = clusterMetrics.calculateMergeClustersDelta (2, 3);
 		
@@ -328,7 +339,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		
@@ -389,7 +401,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -451,7 +464,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -514,7 +528,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);
@@ -579,7 +594,8 @@ public class Tests
 
 		int[] solution = createFullyDistributedSolution();
 		int[] equationParams = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8};
-		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project);
+		boolean[] usedMetrics =  {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		ClusterMetrics clusterMetrics = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
  
 		clusterMetrics.makeMergeClusters(2, 3);
 		clusterMetrics.makeMergeClusters(3, 4);

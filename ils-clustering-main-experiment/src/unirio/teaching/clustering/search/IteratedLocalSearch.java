@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.model.ProjectClass;
+import unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
+import unirio.teaching.clustering.search.constructive.ConstrutiveAglomerativeMQ;
+import unirio.teaching.clustering.search.model.ClusterMetrics;
 import unirio.teaching.clustering.search.model.EquationFitness;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import unirio.teaching.clustering.search.utils.PseudoRandom;
@@ -14,13 +17,24 @@ import unirio.teaching.clustering.search.utils.PseudoRandom;
  */
 public class IteratedLocalSearch
 {
-	private static int BOUNDS = 5;
+	/**
+	 * Number of metrics that will be considered for the optimization
+	 */
+	private int metricsSize = 1;
+	/**
+	 * Number of options for the parameters of the fitness function
+	 */
+	private static int BOUNDS = 10;
 	
-	private static int solutionLength = 18; // 2 por métrica
+	/**
+	 * Number of options for the parameters of the fitness function
+	 */
+	private int solutionLength = metricsSize * 2;
 	
-//	private List<int[]> history;
-	
-	private int PERTURBATION_SIZE = 5;
+	/**
+	 * Number of perturbations that will be used during the ILS neighbour search
+	 */
+	private int perturbationSize = solutionLength / 2;
 	
 	/**
 	 * Number of classes in the project
@@ -61,11 +75,13 @@ public class IteratedLocalSearch
 	 * Fitness of the best solution
 	 */
 	private Project project; 
+	
+	private boolean[] usedMetrics;
 
 	/**
 	 * Initializes the ILS search process
      */
-	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile) throws Exception
+	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics) throws Exception
 	{
 		this.classCount = project.getClassCount();
 		this.mdg = buildGraph(project, this.classCount);
@@ -75,6 +91,27 @@ public class IteratedLocalSearch
 		this.bestFitness = -1_000_000_000_000.0;
 		this.project = project;
 		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
+		this.metricsSize = metricsSize;
+		this.solutionLength = this.metricsSize * 2;
+		this.perturbationSize = this.solutionLength / 2;
+		this.usedMetrics = usedMetrics;
+	}
+	
+	
+	public IteratedLocalSearch(Project project, int maxEvaluations, int metricsSize, boolean[] usedMetrics) throws Exception
+	{
+		this.classCount = project.getClassCount();
+		this.mdg = buildGraph(project, this.classCount);
+		this.maxEvaluations = maxEvaluations;
+		this.evaluationsConsumed = 0;
+		this.iterationBestFound = 0;
+		this.bestFitness = -1_000_000_000_000.0;
+		this.project = project;
+//		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
+		this.metricsSize = metricsSize;
+		this.solutionLength = this.metricsSize * 2;
+		this.perturbationSize = this.solutionLength / 2;
+		this.usedMetrics = usedMetrics;
 	}
 	
 	/**
@@ -87,8 +124,6 @@ public class IteratedLocalSearch
 		for (int i = 0; i < classCount; i++)
 		{
 			ProjectClass _class = project.getClassIndex(i);
-			if (i==5)
-				i=i;
 			for (int j = 0; j < _class.getDependencyCount(); j++)
 			{
 				String targetName = _class.getDependencyIndex(j).getElementName();
@@ -140,13 +175,16 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] executeExperiment(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
+//	public int[] executeExperiment(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
+	
+	public int[] executeExperiment(int cycleNumber, long startTimestamp) throws Exception
 	{
 		int[] bestSolution = createRandomSolution(solutionLength);
+//		int[] bestSolution = {7, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 5, 5, 5, 5, 5, 5};
 		this.bestFitness = calculateFitness(bestSolution);
 	
-		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
-		writer.flush();
+//		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+//		writer.flush();
 
 		int[] solution = bestSolution;
 	
@@ -162,15 +200,32 @@ public class IteratedLocalSearch
 				iterationBestFound = evaluationsConsumed;
 			}
 			
-			solution = applyPerturbation(solution, PERTURBATION_SIZE);
+			solution = applyPerturbation(solution, perturbationSize);
 
-			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
-			writer.flush();
+//			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
+//			writer.flush();
 		}
 
 		return bestSolution;
 	}
 
+	
+	/**
+	 * Main loop of the algorithm
+	 */
+	public int[] executeMQReferenceGeneration(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
+	{
+		
+		int[] equationParams = {7, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 5, 5, 5, 5, 5, 5};
+		ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
+		int[] bestSolution = constructor.createSolution(mdg, equationParams, project, usedMetrics);
+		
+//		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project);
+
+		return bestSolution;
+	}
+
+	
 	/**
 	 * Creates a random solution within the bounds
 	 */
@@ -179,7 +234,7 @@ public class IteratedLocalSearch
 		int[] solution = new int[paramNumber];
 		
 		for (int i = 0; i < paramNumber; i++)
-			solution[i] = PseudoRandom.randInt(0, 2 * BOUNDS);
+			solution[i] = PseudoRandom.randInt(0, BOUNDS);
 
 		return solution;
 	}
@@ -216,12 +271,12 @@ public class IteratedLocalSearch
 		{
 			int value = solution[i];
 			
-			if (value < BOUNDS)
+			if (value < BOUNDS/2)
 			{
 				solution[i] = value + 1;
 			}
 			
-			if (value > -BOUNDS)
+			if (value > BOUNDS/2)  //confirmar com o márcio.
 			{
 				solution[i] = value - 1;
 			}
@@ -252,7 +307,7 @@ public class IteratedLocalSearch
 		for (int i = 0; i < amount; i++)
 		{
 			int classIndex = PseudoRandom.randInt(0, solutionLength-1);
-			perturbedSolution[classIndex] = PseudoRandom.randInt(0, BOUNDS * 2);
+			perturbedSolution[classIndex] = PseudoRandom.randInt(0, BOUNDS);
 		}
 
 		return perturbedSolution;
@@ -263,7 +318,7 @@ public class IteratedLocalSearch
 	 */
 	private double calculateFitness(int[] solution)
 	{
-		double fitness = equationFitness.calculateFitness(solution);
+		double fitness = equationFitness.calculateFitness(solution, usedMetrics);
 		evaluationsConsumed++;
 		return fitness;
 	}

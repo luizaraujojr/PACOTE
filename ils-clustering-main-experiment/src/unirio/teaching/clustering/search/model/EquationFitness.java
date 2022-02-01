@@ -34,9 +34,9 @@ public class EquationFitness
 	/**
 	 * Calcula o MQ com base nos MFs existentes
 	 */
-	public double calculateFitness(int[] equationParams)
+	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
-		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams, project);
+		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
 		return mojoCalculator.mojofmnew(project, bestSolution);
 	}
 
