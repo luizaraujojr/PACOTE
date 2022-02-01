@@ -1,7 +1,1 @@
 instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
-xmldom;0;1;65.22;38;[0, 5, 7, 10]
-xmldom;0;7;65.22;178;[0, 5, 7, 10]
-xmldom;0;13;65.22;320;[0, 5, 7, 10]
-xmldom;0;34;80.7;869;[6, 6, 7, 10]
-xmldom;0;40;80.7;1020;[6, 6, 7, 10]
-xmldom;0;66;100.0;1641;[6, 6, 7, 9]

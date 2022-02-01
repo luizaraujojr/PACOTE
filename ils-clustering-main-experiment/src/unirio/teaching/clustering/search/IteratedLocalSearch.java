@@ -78,6 +78,10 @@ public class IteratedLocalSearch
 	
 	private boolean[] usedMetrics;
 
+	
+	private double[][][][] history;
+
+	
 	/**
 	 * Initializes the ILS search process
      */
@@ -95,6 +99,7 @@ public class IteratedLocalSearch
 		this.solutionLength = this.metricsSize * 2;
 		this.perturbationSize = this.solutionLength / 2;
 		this.usedMetrics = usedMetrics;
+		this.history = new double [11][11][11][11];
 	}
 	
 	
@@ -318,8 +323,13 @@ public class IteratedLocalSearch
 	 */
 	private double calculateFitness(int[] solution)
 	{
-		double fitness = equationFitness.calculateFitness(solution, usedMetrics);
-		evaluationsConsumed++;
-		return fitness;
+		double fitness = history[solution[0]][solution[1]][solution[2]][solution[3]];
+		if (fitness<0.00000001) {
+			fitness = equationFitness.calculateFitness(solution, usedMetrics);
+			evaluationsConsumed++;
+			history[solution[0]][solution[1]][solution[2]][solution[3]] = fitness;
+		}
+		return fitness;	
+		
 	}
 }

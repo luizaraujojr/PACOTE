@@ -49,7 +49,7 @@ public class MainProgram
 		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
 		
 		executeExperiment(2, metricasUtilizadas2);
-//		
+		
 //		
 //		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
 //		
@@ -245,7 +245,8 @@ private static String generateSolution(Project project, String projectName, int[
 			}
 		}
 
-		File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ getStringTime() +".comb");
+//		File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ getStringTime() +".comb");
+		File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb");
 	    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 	    try {
 	        writer.write(sb1.toString());	    
