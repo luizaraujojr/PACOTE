@@ -46,14 +46,14 @@ public class MainProgram
 //		executeExperiment(1, metricasUtilizadas1);
 //		
 //		
-		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
-		
-		executeExperiment(2, metricasUtilizadas2);
+//		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
+//		
+//		executeExperiment(2, metricasUtilizadas2);
 		
 //		
-//		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
-//		
-//		executeExperiment(3, metricasUtilizadas3);
+		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
+		
+		executeExperiment(3, metricasUtilizadas3);
 
 		
 //		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
@@ -155,7 +155,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 2000, sbRefDepFile, metricsSize, usedMetrics);
+						ils = new IteratedLocalSearch(project, 1, sbRefDepFile, metricsSize, usedMetrics);
 						//	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 			    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		

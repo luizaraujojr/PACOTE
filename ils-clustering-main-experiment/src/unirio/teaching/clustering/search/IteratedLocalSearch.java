@@ -79,7 +79,7 @@ public class IteratedLocalSearch
 	private boolean[] usedMetrics;
 
 	
-	private double[][][][] history;
+	private double[][][][][][] history;
 
 	
 	/**
@@ -99,7 +99,7 @@ public class IteratedLocalSearch
 		this.solutionLength = this.metricsSize * 2;
 		this.perturbationSize = this.solutionLength / 2;
 		this.usedMetrics = usedMetrics;
-		this.history = new double [11][11][11][11];
+		this.history = new double [11][11][11][11][11][11];
 	}
 	
 	
@@ -323,11 +323,11 @@ public class IteratedLocalSearch
 	 */
 	private double calculateFitness(int[] solution)
 	{
-		double fitness = history[solution[0]][solution[1]][solution[2]][solution[3]];
+		double fitness = history[solution[0]][solution[1]][solution[2]][solution[3]][solution[4]][solution[5]];
 		if (fitness<0.00000001) {
 			fitness = equationFitness.calculateFitness(solution, usedMetrics);
 			evaluationsConsumed++;
-			history[solution[0]][solution[1]][solution[2]][solution[3]] = fitness;
+			history[solution[0]][solution[1]][solution[2]][solution[3]][solution[4]][solution[5]] = fitness;
 		}
 		return fitness;	
 		
