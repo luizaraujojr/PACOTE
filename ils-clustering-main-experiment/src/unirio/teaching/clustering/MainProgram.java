@@ -155,7 +155,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 1, sbRefDepFile, metricsSize, usedMetrics);
+						ils = new IteratedLocalSearch(project, 3000, sbRefDepFile, metricsSize, usedMetrics);
 						//	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
 			    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
