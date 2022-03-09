@@ -40,30 +40,30 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-//		boolean[] metricasUtilizadas1 = {true, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false};
-//		
-//		executeExperiment(1, metricasUtilizadas1);
-//		
+		boolean[] metricasUtilizadas1 = {true, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false};
+		
+		executeExperiment(1, metricasUtilizadas1, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
+		
 //		
 //		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
 //		
-//		executeExperiment(2, metricasUtilizadas2);
+//		executeExperiment(2, metricasUtilizadas2, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
 		
 //		
 //		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
 //		
-//		executeExperiment(3, metricasUtilizadas3);
-
+//		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		
 		
 //		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
 //		
-//		executeExperiment(4, metricasUtilizadas4);
-//		
+//		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		
 //		
 //		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
 //		
-//		executeExperiment(5, metricasUtilizadas5);
-//		
+//		executeExperiment(5, metricasUtilizadas5, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		
 //		
 //		
 //		boolean[] metricasUtilizadas6 = {true, true, true, true, true, true, false, false, false, true, true, true, true, true, true, false, false, false};
@@ -85,10 +85,10 @@ public class MainProgram
 		
 //		boolean[] metricasUtilizadas9 = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
 //		
-//		executeExperiment(9, metricasUtilizadas9, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
+//		executeExperiment(9, metricasUtilizadas9, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
 		
 //		
-		executeMQReferenceGeneration();
+//		executeMQReferenceGeneration();
 		
 		
 //		executeOriginalReference(testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
