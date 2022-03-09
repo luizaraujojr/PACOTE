@@ -1,7 +1,9 @@
 package unirio.teaching.clustering.search;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.model.ProjectClass;
@@ -64,13 +66,18 @@ public class IteratedLocalSearch
 	/**
 	 * Fitness calculator
 	 */
-	private EquationFitness equationFitness;
+	public EquationFitness equationFitness;
 
 	/**
 	 * Fitness of the best solution
 	 */
 	private double bestFitness; 
 
+	/**
+	 * eval of the best solution
+	 */
+	private int bestEval; 
+	
 	/**
 	 * Fitness of the best solution
 	 */
@@ -79,8 +86,10 @@ public class IteratedLocalSearch
 	private boolean[] usedMetrics;
 
 	
-	private double[][][][][][] history;
+//	private String[] history;
 
+	HashMap<String,Double> hashhistory = new HashMap<String,Double>();
+	ArrayList<String>  history = new ArrayList<String>();//Creating arraylist    
 	
 	/**
 	 * Initializes the ILS search process
@@ -99,7 +108,7 @@ public class IteratedLocalSearch
 		this.solutionLength = this.metricsSize * 2;
 		this.perturbationSize = this.solutionLength / 2;
 		this.usedMetrics = usedMetrics;
-		this.history = new double [11][11][11][11][11][11];
+//		this.history = new double [11][11][11][11][11][11];
 	}
 	
 	
@@ -176,41 +185,49 @@ public class IteratedLocalSearch
 	{
 		return bestFitness;
 	}
+
+	public int[] getClusterBestSolution()
+	{
+		return equationFitness.getBestSolution();
+	}
+	
+	
 	
 	/**
 	 * Main loop of the algorithm
 	 */
-//	public int[] executeExperiment(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
 	
 	public int[] executeExperiment(int cycleNumber, long startTimestamp) throws Exception
 	{
-		int[] bestSolution = createRandomSolution(solutionLength);
-//		int[] bestSolution = {7, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 5, 5, 5, 5, 5, 5};
+		int[] bestSolution = createRandomSolution(solutionLength);		
 		this.bestFitness = calculateFitness(bestSolution);
 	
-//		writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
-//		writer.flush();
 
 		int[] solution = bestSolution;
-	
+
+//		int difRatio = 0;
+		
+		
 		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
 		{
 			int[] localSearchSolution = localSearch(solution);
+//			if (bestFitness ==100) break;
+			
 			double fitness = calculateFitness(localSearchSolution);
 			
-			if (fitness > bestFitness)
-			{
-				bestSolution = Arrays.copyOf(solution, solutionLength);
+//			difRatio = (int)Math.ceil((100 - fitness) * solutionLength/100);
+			
+			if (fitness > bestFitness || bestFitness ==100)
+			{	
+				bestSolution = Arrays.copyOf(localSearchSolution, solutionLength);
 				bestFitness = fitness;
 				iterationBestFound = evaluationsConsumed;
 			}
 			
-			solution = applyPerturbation(solution, perturbationSize);
+			solution = applyPerturbation(localSearchSolution, perturbationSize);
 
-//			writer.println(project.getName() + ";"  + cycleNumber + ";"  + evaluationsConsumed + ";"  + bestFitness + ";"  + (System.currentTimeMillis() - startTimestamp) + ";" +  Arrays.toString(bestSolution));
-//			writer.flush();
+//			solution = applyPerturbation(solution, difRatio);			
 		}
-
 		return bestSolution;
 	}
 
@@ -218,7 +235,7 @@ public class IteratedLocalSearch
 	/**
 	 * Main loop of the algorithm
 	 */
-	public int[] executeMQReferenceGeneration(int cycleNumber, long startTimestamp, PrintWriter writer) throws Exception
+	public int[] executeMQReferenceGeneration(int cycleNumber) throws Exception
 	{
 		
 		int[] equationParams = {7, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 5, 5, 5, 5, 5, 5};
@@ -251,7 +268,7 @@ public class IteratedLocalSearch
 	{
 		int[] newSolution = Arrays.copyOf(solution, solutionLength);
 
-		while (evaluationsConsumed < maxEvaluations)
+		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
 		{
 			int[] results = visitNeighbors(newSolution);
 			
@@ -275,27 +292,36 @@ public class IteratedLocalSearch
 		for (int i = 0; i < solutionLength; i++)
 		{
 			int value = solution[i];
-			
-			if (value < BOUNDS/2)
+
+			if (value < BOUNDS)
 			{
 				solution[i] = value + 1;
-			}
-			
-			if (value > BOUNDS/2)  //confirmar com o márcio.
-			{
-				solution[i] = value - 1;
-			}
-			
-//			if (newSolution(solution)) {
 				double fitness = calculateFitness(solution);
-				
+
 				if (fitness > bestNeighborFitness)
 				{
 					bestNeighbor = Arrays.copyOf(solution, solutionLength);
 					bestNeighborFitness = fitness;
-				}	
-//			}
-			
+				}
+			}
+
+			if (value > 0)
+			{
+				solution[i] = value - 1;
+
+				double fitness = calculateFitness(solution);
+
+				if (fitness > bestNeighborFitness)
+				{
+					bestNeighbor = Arrays.copyOf(solution, solutionLength);
+					bestNeighborFitness = fitness;
+				}
+			}
+			if (bestNeighborFitness==100) {
+				bestFitness = bestNeighborFitness;
+				break;
+			}
+
 			solution[i] = value;
 		}
 
@@ -323,13 +349,9 @@ public class IteratedLocalSearch
 	 */
 	private double calculateFitness(int[] solution)
 	{
-		double fitness = history[solution[0]][solution[1]][solution[2]][solution[3]][solution[4]][solution[5]];
-		if (fitness<0.00000001) {
-			fitness = equationFitness.calculateFitness(solution, usedMetrics);
-			evaluationsConsumed++;
-			history[solution[0]][solution[1]][solution[2]][solution[3]][solution[4]][solution[5]] = fitness;
-		}
+		double fitness = 0;
+		fitness = equationFitness.calculateFitness(solution, usedMetrics);
+		evaluationsConsumed++;
 		return fitness;	
-		
 	}
 }

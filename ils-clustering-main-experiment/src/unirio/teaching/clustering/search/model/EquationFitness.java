@@ -21,6 +21,10 @@ public class EquationFitness
 	
 	private MoJoCalculator mojoCalculator;
 	
+	private StringBuilder depFile;
+	
+	int[] bestSolution; 
+	
 	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "\\data\\Experiment\\ILSInterpretation\\";
 
 	public EquationFitness(ModuleDependencyGraph mdg, Project project, StringBuilder sbRefDepFile)
@@ -28,7 +32,7 @@ public class EquationFitness
 		this.mdg = mdg;
 		this.project = project;
 		this.construtiveMQ = new ConstrutiveAglomerativeMQ();
-		this.mojoCalculator = new MoJoCalculator(sbRefDepFile);
+		this.depFile =  sbRefDepFile;
 	}
 
 	/**
@@ -36,7 +40,10 @@ public class EquationFitness
 	 */
 	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
-		int[] bestSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
+		
+		this.mojoCalculator = new MoJoCalculator(depFile);
+		bestSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
+
 		return mojoCalculator.mojofmnew(project, bestSolution);
 	}
 
@@ -70,6 +77,14 @@ public class EquationFitness
 		}
 		
 		return sb1;
+	}
+	
+	/**
+	 * Returns the best fitness found
+	 */
+	public int[] getBestSolution()
+	{
+		return bestSolution;
 	}
 
 	public String getStringTime()

@@ -1,6 +1,0 @@
-instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
-y_base;0;1;64.57;1851;[10, 2, 3, 5]
-y_base;0;9;64.57;12534;[10, 2, 3, 5]
-y_base;0;16;64.57;23029;[10, 2, 3, 5]
-y_base;0;38;64.57;55013;[10, 2, 3, 5]
-y_base;0;54;100.0;76592;[7, 6, 9, 8]

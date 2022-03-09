@@ -11,31 +11,30 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import javax.management.modelmbean.XMLParseException;
-
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.reader.CDAReader;
 import unirio.teaching.clustering.search.IteratedLocalSearch;
-import unirio.teaching.clustering.search.constructive.ConstrutiveAbstract;
-import unirio.teaching.clustering.search.constructive.ConstrutiveAglomerativeMQ;
 
 public class MainProgram
 {
-//	private static String BASE_DIRECTORY = "C://Users//User//Desktop//Codigos//ils-clustering//data//clustering//odem-temp";
-//	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//Test"; //use este para jodamoney
+	private static String referenceInstance_comb_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//referenceInstance_comb//";
+	private static String referenceInstance_odem_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//referenceInstance_odem";
 	
-	private static String BASE_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering//odem-temp"; //use este para a pasta tradicional
+	private static String testInstance_comb_MQ_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_comb_MQ";
+	private static String testInstance_comb_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_comb//";
+	private static String testInstance_odem_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_odem";
 	
-	private static String ILS_INTERPRETATION_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//ILSInterpretation//";
+	private static String pasta_teste_DIRECTORY_odem = new File("").getAbsolutePath() + "//data//Experiment//pastateste_odem";
+	private static String pasta_teste_DIRECTORY_comb = new File("").getAbsolutePath() + "//data//Experiment//pastateste_comb//";
+
 	private static String RESULT_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering";
+	
 	
 	static int cycleNumber=0;
 	
@@ -51,9 +50,9 @@ public class MainProgram
 //		executeExperiment(2, metricasUtilizadas2);
 		
 //		
-		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
-		
-		executeExperiment(3, metricasUtilizadas3);
+//		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
+//		
+//		executeExperiment(3, metricasUtilizadas3);
 
 		
 //		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
@@ -83,53 +82,57 @@ public class MainProgram
 //		executeExperiment(8, metricasUtilizadas8);
 //		
 //		
-//		
+		
 //		boolean[] metricasUtilizadas9 = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
 //		
-//		executeExperiment(9, metricasUtilizadas9);
+//		executeExperiment(9, metricasUtilizadas9, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
+		
 //		
-//		
-//		executeMQReferenceGeneration();
-	}
+		executeMQReferenceGeneration();
+		
+		
+//		executeOriginalReference(testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
+//	
+//		executeOriginalReference(referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+}
 	
 	private static void executeMQReferenceGeneration() throws Exception {
 
 		boolean[] usedMetrics = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
 	//	
 		
-		File file = new File(BASE_DIRECTORY);
+		File file = new File(testInstance_odem_DIRECTORY);
 		DecimalFormat df4 = new DecimalFormat("0.0000");
 		
 	    for (String projectName : file.list()) 
-	    {
-	    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + projectName);
-			PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-			writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
-	    	
+	    {	
 			CDAReader reader = new CDAReader();    
-    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
-//    		StringBuilder sbRefDepFile = null;//loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
+    		Project project = reader.load(testInstance_odem_DIRECTORY + "//" + projectName);
     		
-    		long startTimestamp = System.currentTimeMillis();
-        		        	
     		IteratedLocalSearch ils = new IteratedLocalSearch(project, 0, 2, usedMetrics);
-    		int[] solution = ils.executeMQReferenceGeneration(1, startTimestamp, writer);
-
-    		long finishTimestamp = System.currentTimeMillis();
-    		long seconds = (finishTimestamp - startTimestamp);
-    		generateSolution(project, projectName, solution);
-    		
-//    		System.out.println(cycleNumber+ ";" + projectName + ";" + project.getClassCount() + ";" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + seconds + " ms");
-	    	
-	    	writer.close();
+    		int[] solution = ils.executeMQReferenceGeneration(1);
+    	
+    		generateSolution(project, projectName, solution, testInstance_comb_MQ_DIRECTORY);
+	    }		
+	}
+	
+	private static void executeOriginalReference(String source, String target) throws Exception {
+		File file = new File(source);
+	
+	    for (String projectName : file.list()) 
+	    {	    	
+			CDAReader reader = new CDAReader();    
+    		Project project = reader.load(source + "//" + projectName);
+    		        		        	
+    		generateSolutionOriginal(project, projectName, target);
 	    }		
 	}
 	
 	
 	@SuppressWarnings("unused")
-	private static void executeExperiment(int metricsSize, boolean[] usedMetrics) throws Exception 
+	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir) throws Exception 
 	{
-		File file = new File(BASE_DIRECTORY);
+		File file = new File(odemDir);
 		int maxCycles = 10;
 		
 	    for (String projectName : file.list()) 
@@ -139,12 +142,10 @@ public class MainProgram
 //			writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
 	    	
 			CDAReader reader = new CDAReader();    
-    		Project project = reader.load(BASE_DIRECTORY + "//" + projectName);
-    		StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + projectName + ".comb");
+    		Project project = reader.load(odemDir + "//" + projectName);
+    		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		
-    		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -155,9 +156,9 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 3000, sbRefDepFile, metricsSize, usedMetrics);
-						//	    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp, writer);
-			    		int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
+						ils = new IteratedLocalSearch(project, 5000, sbRefDepFile, metricsSize, usedMetrics);
+						
+						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
 			    		long finishTimestamp = System.currentTimeMillis();
 			    		long seconds = (finishTimestamp - startTimestamp);
@@ -167,8 +168,8 @@ public class MainProgram
 				    	{
 			    			solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
 				    	}
-			    		
-			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";" + seconds + " ms");
+
+			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
 		    		
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -179,7 +180,7 @@ public class MainProgram
 		    	});
 	    	}
 	    	executor.shutdown();
-//	    	writer.close();
+////	    	writer.close();
 	    }
 	}
 	
@@ -235,7 +236,7 @@ public class MainProgram
 		return  String.format("%02d", dia) + String.format("%02d", mes) + String.format("%04d", ano) +String.format("%02d", hora) + String.format("%02d", minuto) + String.format("%02d", segundo);
 	}
 	
-private static String generateSolution(Project project, String projectName, int[] bestSolution) throws IOException{
+private static String generateSolution(Project project, String projectName, int[] bestSolution, String folderDestination) throws IOException{
 		
 		StringBuilder sb1 = new StringBuilder();
 		for(int i=0; i<(bestSolution.length); i++){
@@ -246,7 +247,7 @@ private static String generateSolution(Project project, String projectName, int[
 		}
 
 //		File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ getStringTime() +".comb");
-		File file = new File(ILS_INTERPRETATION_DIRECTORY + projectName+ ".comb");
+		File file = new File(folderDestination  + "//" +  projectName+ ".comb");
 	    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 	    try {
 	        writer.write(sb1.toString());	    
@@ -260,5 +261,27 @@ private static String generateSolution(Project project, String projectName, int[
 		return file.getCanonicalPath();
 	}
 
+
+private static String generateSolutionOriginal(Project project, String projectName, String target) throws IOException{
+	
+	StringBuilder sb1 = new StringBuilder();
+	for(int i=0; i<(project.getClassCount()); i++){		
+		sb1.append("PKG" + project.getIndexForPackage(project.getClassIndex(i).getPackage())  + " " + project.getClassIndex(i).getName());
+		sb1.append(System.lineSeparator());			
+	}
+
+	File file = new File(target + projectName+ ".comb");
+    BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+    try {
+        writer.write(sb1.toString());	    
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	   
+	} finally {
+		writer.close();
+	}
+	return file.getCanonicalPath();
+}
 
 }

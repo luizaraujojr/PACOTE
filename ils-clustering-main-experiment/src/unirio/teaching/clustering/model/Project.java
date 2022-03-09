@@ -85,6 +85,17 @@ public class Project
 		return packages;
 	}
 	
+	
+	
+	/**
+	 * Retorna uma enumeração das classes da aplicação
+	 */
+	public Iterable<ProjectClass> getClasses()
+	{
+		return classes;
+	}
+	
+	
 	/**
 	 * Retorna o número de classes do projeto
 	 */

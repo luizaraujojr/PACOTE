@@ -130,8 +130,6 @@ public class ClusterMetrics
 	
 	private boolean[] metricasUtilizadas;
 	
-//	private boolean[] metricasUtilizadas = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
-	
 	
 	/**
 	 * Inicializa o calculador de metricas
@@ -387,6 +385,33 @@ public class ClusterMetrics
 		fitness -= calculateClusterFitness(secondInternalDependencyWeightCluster, secondExternalDependencyWeightCluster, secondClusterInternalClassesWithInternalDependency, secondClusterInternalClassesWithExternalDependency, secondClusterExternalClassesWithInternalDependency, secondClusterAbstractClasses, secondClusterConcreteClasses, secondClusterSubClasses, secondClusterSuperClasses);
 		return fitness;
 	}
+	
+	
+	private double calculateFitnessClusterMergeDelta5Metric(
+			int firstInternalDependencyWeightCluster, 
+			int secondInternalDependencyWeightCluster,
+			int joinClusterInternalDependency, 
+			int firstExternalDependencyWeightCluster,
+			int secondExternalDependencyWeightCluster, 
+			int joinClusterExternalDependency,	
+			int firstClusterInternalClassesWithInternalDependency,
+			int secondClusterInternalClassesWithInternalDependency,
+			int joinClusterInternalClassesWithInternalDependency,
+			int firstClusterInternalClassesWithExternalDependency,
+			int secondClusterInternalClassesWithExternalDependency,
+			int joinClusterInternalClassesWithExternalDependency,
+			int firstClusterExternalClassesWithInternalDependency,
+			int secondClusterExternalClassesWithInternalDependency,
+			int joinClusterExternalClassesWithInternalDependency)
+	{		
+		
+		double fitness = calculateClusterFitness5Metric(joinClusterInternalDependency, joinClusterExternalDependency, joinClusterInternalClassesWithInternalDependency, joinClusterInternalClassesWithExternalDependency, joinClusterExternalClassesWithInternalDependency);
+		fitness -= calculateClusterFitness5Metric(firstInternalDependencyWeightCluster, firstExternalDependencyWeightCluster, firstClusterInternalClassesWithInternalDependency, firstClusterInternalClassesWithExternalDependency, firstClusterExternalClassesWithInternalDependency);
+		fitness -= calculateClusterFitness5Metric(secondInternalDependencyWeightCluster, secondExternalDependencyWeightCluster, secondClusterInternalClassesWithInternalDependency, secondClusterInternalClassesWithExternalDependency, secondClusterExternalClassesWithInternalDependency);
+		return fitness;
+	}
+
+	
 
 	public double calculateClusterFitness(int _numberInternalDependencies, int _numberExternalDependencies, int _numberInternalClassWithDepOnCluster, int _numberInternalClassWithDepOutCluster, int _numberExternalClassWithDepCluster, int _numberAbstractClasses, int _numberConcreteClasses, int _numberSubClasses, int _numberSuperClasses)
 	{
@@ -419,6 +444,31 @@ public class ClusterMetrics
 		}
 		return fitness;
 	}
+
+	
+	public double calculateClusterFitness5Metric(int _numberInternalDependencies, int _numberExternalDependencies, int _numberInternalClassWithDepOnCluster, int _numberInternalClassWithDepOutCluster, int _numberExternalClassWithDepCluster)
+	{
+		double ra1 = c[0] * _numberInternalDependencies;
+		double ra2 = c[1] * _numberExternalDependencies;
+		double ra3 = c[2] * _numberInternalClassWithDepOnCluster;
+		double ra4 = c[3] * _numberInternalClassWithDepOutCluster;
+		double ra5 = c[4] * _numberExternalClassWithDepCluster;		
+		
+		
+		double fitness = ra1 + ra2 + ra3 + ra4 + ra5;		
+		if (fitness != 0.0) 
+		{
+			double rb1 = c[5] * _numberInternalDependencies;
+			double rb2 = c[6] * _numberExternalDependencies;
+			double rb3 = c[7] * _numberInternalClassWithDepOnCluster;
+			double rb4 = c[8] * _numberInternalClassWithDepOutCluster;
+			double rb5 = c[9] * _numberExternalClassWithDepCluster;
+			double rb = rb1 + rb2 + rb3 + rb4 + rb5;			
+			fitness /= rb;
+		}
+		return fitness;
+	}
+
 	
 //	/**
 //	 * Calcula o fitness da solucao atual
@@ -430,8 +480,10 @@ public class ClusterMetrics
 		for (int clusterNumber = 0; clusterNumber < classCount; clusterNumber++) 
 		{
 			int _clusterNumber = convertToClusterNumber(clusterNumber);
+//			fitness += calculateClusterFitness5Metric(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber]); 
+
 			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber], abstractClasses [_clusterNumber], concreteClasses[_clusterNumber], subClasses [_clusterNumber], superClasses[_clusterNumber]); 
-					
+								
 		}
 		
 		return fitness;
@@ -587,6 +639,8 @@ public class ClusterMetrics
 	/**
 	 * Calcula a alteracao que a funcao objetivo sofrera com o movimento de juncao de dois clusteres
 	 */
+	
+//	BACKUP
 	public double calculateMergeClustersDelta(int cluster1, int cluster2)
 	{
 		int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
@@ -731,6 +785,142 @@ public class ClusterMetrics
 		
 	}
 
+	
+	public double calculateMergeClustersDelta5Metric(int cluster1, int cluster2)
+	{
+		int joinClusterInternalDependency = internalDependencyWeight[cluster1] + internalDependencyWeight[cluster2];
+		int joinClusterExternalDependency = externalDependencyWeight[cluster1] + externalDependencyWeight[cluster2];
+		
+		int firstClusterInternalClassesWithInternalDependency = internalClassesInternalDependencies[cluster1];
+		int firstClusterInternalClassesWithExternalDependency = internalClassesExternalDependencies[cluster1];
+		int firstClusterExternalClassesWithInternalDependency = externalClassesInternalDependencies[cluster1];
+		
+//		int firstClusterAbstractClasses = abstractClasses[cluster1];
+//		int firstClusterConcreteClasses = concreteClasses[cluster1];
+//		
+//		int firstClusterSubClasses = subClasses[cluster1];
+//		int firstClusterSuperClasses = superClasses[cluster1];
+		
+		int secondClusterInternalClassesWithInternalDependency = internalClassesInternalDependencies[cluster2];
+		int secondClusterInternalClassesWithExternalDependency = internalClassesExternalDependencies[cluster2];
+		int secondClusterExternalClassesWithInternalDependency = externalClassesInternalDependencies[cluster2];
+		
+//		int secondClusterAbstractClasses = abstractClasses[cluster2];
+//		int secondClusterConcreteClasses = concreteClasses[cluster2];
+//		
+//		int secondClusterSubClasses = subClasses[cluster2];
+//		int secondClusterSuperClasses = superClasses[cluster2];
+		
+		int joinClusterInternalClassesWithInternalDependency = firstClusterInternalClassesWithInternalDependency + secondClusterInternalClassesWithInternalDependency;
+		int joinClusterInternalClassesWithExternalDependency = firstClusterInternalClassesWithExternalDependency + secondClusterInternalClassesWithExternalDependency;
+		int joinClusterExternalClassesWithInternalDependency = firstClusterExternalClassesWithInternalDependency + secondClusterExternalClassesWithInternalDependency;
+		
+//		int joinClusterAbstractClasses = firstClusterAbstractClasses + secondClusterAbstractClasses;
+//		int joinClusterConcreteClasses = firstClusterConcreteClasses + secondClusterConcreteClasses;
+//		
+//		int joinClusterSubClasses = firstClusterSubClasses + secondClusterSubClasses;
+//		int joinClusterSuperClasses = firstClusterSuperClasses + secondClusterSuperClasses;
+		
+
+		for (int i : modulesOnCluster.get(cluster1))
+		{
+			boolean inverseDependency = false, depinserted = false;
+			for (int j : modulesOnCluster.get(cluster2))
+			{
+				int dependencyEachOtherWeight = mdg.dependencyWeight(i, j);
+				int dependencyEachOtherWeightinverse = mdg.dependencyWeight(j, i);					
+					
+				if (dependencyEachOtherWeightinverse== 2) {
+					inverseDependency = true;
+					if (this.classClusterReferencesFlat[i][cluster1]) {
+						depinserted = true;
+					}
+					
+				}
+				if (dependencyEachOtherWeightinverse== 1) {
+						if (!this.classClusterReferencesFlat[i][cluster1]) {
+							inverseDependency = true;
+						}
+						else depinserted = true;
+				}
+				
+				if (dependencyEachOtherWeight != 0)
+				{
+					joinClusterInternalDependency += dependencyEachOtherWeight;// aresta externa passou a ser interna
+					joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster1)
+					joinClusterExternalDependency -= dependencyEachOtherWeight;// aresta externa deixou de existir (no cluster2)
+
+					
+					if (this.classClusterReferencesFlat[i][cluster2] && !depinserted) {
+						joinClusterInternalClassesWithInternalDependency++;			// A dependia de B, agora a dependência é interna
+					}
+					
+					if (this.classClusterReferences[i][1] == -1)					// se só tem uma dependência externa, não tem mais ...
+						joinClusterInternalClassesWithExternalDependency--;
+				}
+			}
+			if (depinserted){
+				joinClusterExternalClassesWithInternalDependency--;
+			}
+			if (inverseDependency) {
+				joinClusterInternalClassesWithInternalDependency++;
+				joinClusterExternalClassesWithInternalDependency--;
+			}
+		}
+		
+		
+//		return calculateFitnessClusterMergeDelta(
+//				internalDependencyWeight[cluster1], 
+//				internalDependencyWeight[cluster2],
+//				joinClusterInternalDependency, 
+//				externalDependencyWeight[cluster1], 
+//				externalDependencyWeight[cluster2], 
+//				joinClusterExternalDependency,			
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0, 
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0,
+//				0);
+//		
+		
+		return calculateFitnessClusterMergeDelta5Metric(
+				internalDependencyWeight[cluster1], 
+				internalDependencyWeight[cluster2],
+				joinClusterInternalDependency, 
+				externalDependencyWeight[cluster1], 
+				externalDependencyWeight[cluster2], 
+				joinClusterExternalDependency,			
+				firstClusterInternalClassesWithInternalDependency,
+				secondClusterInternalClassesWithInternalDependency,
+				joinClusterInternalClassesWithInternalDependency,
+				firstClusterInternalClassesWithExternalDependency,
+				secondClusterInternalClassesWithExternalDependency,
+				joinClusterInternalClassesWithExternalDependency,
+				firstClusterExternalClassesWithInternalDependency,
+				secondClusterExternalClassesWithInternalDependency,
+				joinClusterExternalClassesWithInternalDependency);
+		
+	}
+
+	
+	
+	
 	/**
 	 * Calcula o numero de classes internas de um cluster com dependencias para classes do proprio cluster 
 	 */

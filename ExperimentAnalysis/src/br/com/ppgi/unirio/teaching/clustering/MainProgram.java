@@ -16,6 +16,7 @@ import java.util.Scanner;
 import javax.management.modelmbean.XMLParseException;
 
 import br.com.ppgi.unirio.teaching.clustering.model.ProjectLoader;
+import br.com.ppgi.unirio.teaching.clustering.mojo.MoJoCalculator;
 import br.com.ppgi.unirio.teaching.clustering.model.Project;
 import br.com.ppgi.unirio.teaching.clustering.reader.DependencyReader;
 import br.com.ppgi.unirio.teaching.clustering.search.ILS;
@@ -224,8 +225,26 @@ public class MainProgram
 				
 		public static final void main(String[] args) throws Exception
 		{			
-			generateReference();
+			mojoCompare();
+			
+			
+//			generateReference();
 //			executeExperiment();
+		}
+		
+		
+		private static void mojoCompare() throws Exception
+		{
+			
+//			StringBuilder sbRefDepFile = loadDepRefFile(ILS_INTERPRETATION_DIRECTORY + "junit-4.12.3.comb");
+			StringBuilder sbRefDepFile = loadDepRefFile("C://Users//luizantoniolao//Documents//GitHub//PACOTE//ils-clustering-main-experiment//data//Experiment//ILSInterpretation//junit-4.12.3.odem.comb");
+			
+			
+			MoJoCalculator mj = new MoJoCalculator(sbRefDepFile, sbRefDepFile, "-fm"); 
+			
+			System.out.println(mj.mojofmnew());
+			
+			
 		}
 		
 		private static void executeExperiment() throws Exception

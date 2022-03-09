@@ -1,4 +1,0 @@
-instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution
-javaws;0;1;29.52;455;[2, 9, 8, 4]
-javaws;0;15;70.21;6351;[2, 9, 8, 4]
-javaws;0;149;100.0;62708;[5, 9, 5, 1]
