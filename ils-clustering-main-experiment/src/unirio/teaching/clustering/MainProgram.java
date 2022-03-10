@@ -40,14 +40,19 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-		boolean[] metricasUtilizadas1 = {true, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false};
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "2metrica5keval20instanciasPequenas");
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
+		writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
+
 		
-		executeExperiment(1, metricasUtilizadas1, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
+//		boolean[] metricasUtilizadas1 = {true, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false};
+//		
+//		executeExperiment(1, metricasUtilizadas1, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY, writer);
 		
 //		
-//		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
-//		
-//		executeExperiment(2, metricasUtilizadas2, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
+		
+		executeExperiment(2, metricasUtilizadas2, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY, writer);
 		
 //		
 //		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
@@ -130,22 +135,19 @@ public class MainProgram
 	
 	
 	@SuppressWarnings("unused")
-	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir) throws Exception 
+	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
 		int maxCycles = 10;
 		
 	    for (String projectName : file.list()) 
 	    {
-//	    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + projectName);
-//			PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-//			writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
 	    	
 			CDAReader reader = new CDAReader();    
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(3);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -169,7 +171,10 @@ public class MainProgram
 			    			solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
 				    	}
 
-			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
+//			    		writer 
+			    		writer.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
+			    		writer.flush();
+//			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
 		    		
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
