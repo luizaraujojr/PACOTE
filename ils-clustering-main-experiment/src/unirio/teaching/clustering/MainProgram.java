@@ -26,7 +26,7 @@ public class MainProgram
 	private static String referenceInstance_comb_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//referenceInstance_comb//";
 	private static String referenceInstance_odem_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//referenceInstance_odem";
 	
-	private static String testInstance_comb_MQ_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_comb_MQ";
+	private static String testInstance_comb_MQ_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_comb_MQ//";
 	private static String testInstance_comb_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_comb//";
 	private static String testInstance_odem_DIRECTORY = new File("").getAbsolutePath() + "//data//Experiment//testInstance_odem";
 	
@@ -40,7 +40,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "2metrica5keval20instanciasPequenas");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "29metrica10keval20instanciasPequenasMQ1");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("instance;runtime;evaluationsConsumed;bestFitness;Time;bestSolution");
 
@@ -49,65 +49,60 @@ public class MainProgram
 //		
 //		executeExperiment(1, metricasUtilizadas1, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY, writer);
 		
-//		
+		
 		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
 		
-		executeExperiment(2, metricasUtilizadas2, testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY, writer);
-		
-//		
-//		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
-//		
-//		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		executeExperiment(2, metricasUtilizadas2, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 		
 		
-//		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
-//		
-//		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
 		
-//		
-//		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
-//		
-//		executeExperiment(5, metricasUtilizadas5, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 		
-//		
-//		
-//		boolean[] metricasUtilizadas6 = {true, true, true, true, true, true, false, false, false, true, true, true, true, true, true, false, false, false};
-//		
-//		executeExperiment(6, metricasUtilizadas6);
-//		
-//		
-//		boolean[] metricasUtilizadas7 = {true, true, true, true, true, true, true, false, false, true, true, true, true, true, true, true, false, false};
-//		
-//		executeExperiment(7, metricasUtilizadas7);
-//		
-//		
-//		
-//		boolean[] metricasUtilizadas8 = {true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, false};
-//		
-//		executeExperiment(8, metricasUtilizadas8);
-//		
-//		
 		
-//		boolean[] metricasUtilizadas9 = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
-//		
-//		executeExperiment(9, metricasUtilizadas9, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
+		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
 		
-//		
+		executeExperiment(4, metricasUtilizadas4, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
+		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
+		
+		executeExperiment(5, metricasUtilizadas5, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
+		boolean[] metricasUtilizadas6 = {true, true, true, true, true, true, false, false, false, true, true, true, true, true, true, false, false, false};
+		
+		executeExperiment(6, metricasUtilizadas6, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
+		boolean[] metricasUtilizadas7 = {true, true, true, true, true, true, true, false, false, true, true, true, true, true, true, true, false, false};
+		
+		executeExperiment(7, metricasUtilizadas7, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
+		boolean[] metricasUtilizadas8 = {true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, false};
+		
+		executeExperiment(8, metricasUtilizadas8, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
+		boolean[] metricasUtilizadas9 = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		
+		executeExperiment(9, metricasUtilizadas9, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+		
 //		executeMQReferenceGeneration();
 		
 		
 //		executeOriginalReference(testInstance_odem_DIRECTORY, testInstance_comb_DIRECTORY);
-//	
+	
 //		executeOriginalReference(referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
 }
 	
 	private static void executeMQReferenceGeneration() throws Exception {
 
 		boolean[] usedMetrics = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
-	//	
 		
 		File file = new File(testInstance_odem_DIRECTORY);
-		DecimalFormat df4 = new DecimalFormat("0.0000");
 		
 	    for (String projectName : file.list()) 
 	    {	
