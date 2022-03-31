@@ -88,8 +88,8 @@ public class IteratedLocalSearch
 	
 //	private String[] history;
 
-	HashMap<String,Double> hashhistory = new HashMap<String,Double>();
-	ArrayList<String>  history = new ArrayList<String>();//Creating arraylist    
+//	HashMap<String,Double> hashhistory = new HashMap<String,Double>();
+//	ArrayList<String>  history = new ArrayList<String>();//Creating arraylist    
 	
 	/**
 	 * Initializes the ILS search process

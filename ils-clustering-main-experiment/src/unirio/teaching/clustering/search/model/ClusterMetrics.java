@@ -221,7 +221,7 @@ public class ClusterMetrics
 				updateDependencyMetrics(i, j);
 			}
 		}
-		createClassInfoTable();
+//		createClassInfoTable();
 		updateClassClusterReferences();
 	}
 	
@@ -650,31 +650,31 @@ public class ClusterMetrics
 		int firstClusterInternalClassesWithExternalDependency = internalClassesExternalDependencies[cluster1];
 		int firstClusterExternalClassesWithInternalDependency = externalClassesInternalDependencies[cluster1];
 		
-		int firstClusterAbstractClasses = abstractClasses[cluster1];
-		int firstClusterConcreteClasses = concreteClasses[cluster1];
-		
-		int firstClusterSubClasses = subClasses[cluster1];
-		int firstClusterSuperClasses = superClasses[cluster1];
+//		int firstClusterAbstractClasses = abstractClasses[cluster1];
+//		int firstClusterConcreteClasses = concreteClasses[cluster1];
+//		
+//		int firstClusterSubClasses = subClasses[cluster1];
+//		int firstClusterSuperClasses = superClasses[cluster1];
 		
 		int secondClusterInternalClassesWithInternalDependency = internalClassesInternalDependencies[cluster2];
 		int secondClusterInternalClassesWithExternalDependency = internalClassesExternalDependencies[cluster2];
 		int secondClusterExternalClassesWithInternalDependency = externalClassesInternalDependencies[cluster2];
 		
-		int secondClusterAbstractClasses = abstractClasses[cluster2];
-		int secondClusterConcreteClasses = concreteClasses[cluster2];
-		
-		int secondClusterSubClasses = subClasses[cluster2];
-		int secondClusterSuperClasses = superClasses[cluster2];
+//		int secondClusterAbstractClasses = abstractClasses[cluster2];
+//		int secondClusterConcreteClasses = concreteClasses[cluster2];
+//		
+//		int secondClusterSubClasses = subClasses[cluster2];
+//		int secondClusterSuperClasses = superClasses[cluster2];
 		
 		int joinClusterInternalClassesWithInternalDependency = firstClusterInternalClassesWithInternalDependency + secondClusterInternalClassesWithInternalDependency;
 		int joinClusterInternalClassesWithExternalDependency = firstClusterInternalClassesWithExternalDependency + secondClusterInternalClassesWithExternalDependency;
 		int joinClusterExternalClassesWithInternalDependency = firstClusterExternalClassesWithInternalDependency + secondClusterExternalClassesWithInternalDependency;
 		
-		int joinClusterAbstractClasses = firstClusterAbstractClasses + secondClusterAbstractClasses;
-		int joinClusterConcreteClasses = firstClusterConcreteClasses + secondClusterConcreteClasses;
-		
-		int joinClusterSubClasses = firstClusterSubClasses + secondClusterSubClasses;
-		int joinClusterSuperClasses = firstClusterSuperClasses + secondClusterSuperClasses;
+//		int joinClusterAbstractClasses = firstClusterAbstractClasses + secondClusterAbstractClasses;
+//		int joinClusterConcreteClasses = firstClusterConcreteClasses + secondClusterConcreteClasses;
+//		
+//		int joinClusterSubClasses = firstClusterSubClasses + secondClusterSubClasses;
+//		int joinClusterSuperClasses = firstClusterSuperClasses + secondClusterSuperClasses;
 		
 
 		for (int i : modulesOnCluster.get(cluster1))
@@ -770,18 +770,30 @@ public class ClusterMetrics
 				firstClusterExternalClassesWithInternalDependency,
 				secondClusterExternalClassesWithInternalDependency,
 				joinClusterExternalClassesWithInternalDependency,
-				firstClusterAbstractClasses, 
-				secondClusterAbstractClasses,
-				joinClusterAbstractClasses,
-				firstClusterConcreteClasses,
-				secondClusterConcreteClasses,
-				joinClusterConcreteClasses,
-				firstClusterSubClasses,
-				secondClusterSubClasses,
-				joinClusterSubClasses,
-				firstClusterSuperClasses,
-				secondClusterSuperClasses,
-				joinClusterSuperClasses);
+				0, 
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0);
+//				firstClusterAbstractClasses, 
+//				secondClusterAbstractClasses,
+//				joinClusterAbstractClasses,
+//				firstClusterConcreteClasses,
+//				secondClusterConcreteClasses,
+//				joinClusterConcreteClasses,
+//				firstClusterSubClasses,
+//				secondClusterSubClasses,
+//				joinClusterSubClasses,
+//				firstClusterSuperClasses,
+//				secondClusterSuperClasses,
+//				joinClusterSuperClasses);
 		
 	}
 
