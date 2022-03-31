@@ -72,43 +72,43 @@ public class ClusterMetrics
 	/**
 	 * Numero de classes abstratas em cada cluster
 	 */
-	private int[] abstractClasses;
+//	private int[] abstractClasses;
 	
 	
 	/**
 	 * Numero de classes concretas em cada cluster
 	 */
-	private int[] concreteClasses;
+//	private int[] concreteClasses;
 	
 	
 	/**
 	 * vertor com as classes e seus status (true/false) de abstract
 	 */
-	private boolean[] abstractClassesFlat;
+//	private boolean[] abstractClassesFlat;
 	
 	
 	/**
 	 * Numero de classes abstratas em cada cluster
 	 */
-	private int[] subClasses;
+//	private int[] subClasses;
 
 	
 	/**
 	 * vertor com as classes e seus status (true/false) de subclasse
 	 */
-	private boolean[] subClassesFlat;
+//	private boolean[] subClassesFlat;
 	
 	
 	/**
 	 * Numero de classes concretas em cada cluster
 	 */
-	private int[] superClasses;
+//	private int[] superClasses;
 	
 	
 	/**
 	 * vertor com as classes e seus status (true/false) de superclasse
 	 */
-	private boolean[] superClassesFlat;
+//	private boolean[] superClassesFlat;
 	
 	
 	
@@ -158,31 +158,31 @@ public class ClusterMetrics
 		this.internalClassesExternalDependencies = new int[classCount];
 		this.externalClassesInternalDependencies = new int[classCount];
 		
-		this.abstractClasses = new int[classCount];
-		this.concreteClasses = new int[classCount];
-		this.abstractClassesFlat = new boolean[classCount];
+//		this.abstractClasses = new int[classCount];
+//		this.concreteClasses = new int[classCount];
+//		this.abstractClassesFlat = new boolean[classCount];
+//		
+//		this.subClasses = new int[classCount];
+//		this.superClasses = new int[classCount];
+//		
+//		this.subClassesFlat = new boolean[classCount];
+//		this.superClassesFlat = new boolean[classCount];
 		
-		this.subClasses = new int[classCount];
-		this.superClasses = new int[classCount];
-		
-		this.subClassesFlat = new boolean[classCount];
-		this.superClassesFlat = new boolean[classCount];
-		
-//		for (int i = 0; i < equationParams.length; i++)
-//		{
-//			c[i] = (equationParams[i]-5.0)/2.0; 
-//		}
-		this.metricasUtilizadas=  usedMetrics;
-		int j =0;
-		for (int i = 0; i < metricasUtilizadas.length; i++)
+		for (int i = 0; i < equationParams.length; i++)
 		{
-			if (metricasUtilizadas[i]) 
-			{
-				c[i] = (equationParams[j]-5.0)/2.0; 
-				j++;
-			}
-			
+			c[i] = (equationParams[i]-5.0)/2.0; 
 		}
+//		this.metricasUtilizadas=  usedMetrics;
+//		int j =0;
+//		for (int i = 0; i < metricasUtilizadas.length; i++)
+//		{
+//			if (metricasUtilizadas[i]) 
+//			{
+//				c[i] = (equationParams[j]-5.0)/2.0; 
+//				j++;
+//			}
+//			
+//		}
 		
 				
 		resetAllMetrics();
@@ -228,16 +228,16 @@ public class ClusterMetrics
 	
 	private void createClassInfoTable()
 	{		
-		for (int _class = 0; _class < classCount; _class++) {
-			
-			abstractClassesFlat[_class] = this.project.getClassIndex(_class).isAbstract();
-			
-			int[] dependencies = mdg.moduleDependencies(_class);
-			for (int j = 0; dependencies[j] != -1; j++) {
-				subClassesFlat[_class]=true;
-				superClassesFlat[dependencies[j]]=true;
-			}			
-		}
+//		for (int _class = 0; _class < classCount; _class++) {
+//			
+//			abstractClassesFlat[_class] = this.project.getClassIndex(_class).isAbstract();
+//			
+//			int[] dependencies = mdg.moduleDependencies(_class);
+//			for (int j = 0; dependencies[j] != -1; j++) {
+//				subClassesFlat[_class]=true;
+//				superClassesFlat[dependencies[j]]=true;
+//			}			
+//		}
 	}
 	
 	
@@ -252,7 +252,7 @@ public class ClusterMetrics
 			
 			for (int j = 0; dependencies[j] != -1; j++)
 			{
-				subClassesFlat[j]=true;
+//				subClassesFlat[j]=true;
 				
 				int classJ = dependencies[j];
 				
@@ -293,12 +293,12 @@ public class ClusterMetrics
 			
 			for (int classCluster : modulesOnCluster.get(cluster))
 			{
-				if (this.abstractClassesFlat[classCluster]) 
-					this.abstractClasses[cluster]++;
-					else this.concreteClasses[cluster]++; 				
-				
-				if (this.subClassesFlat[classCluster]) this.subClasses[cluster]++;
-				if (this.superClassesFlat[classCluster]) this.superClasses[cluster]++;
+//				if (this.abstractClassesFlat[classCluster]) 
+//					this.abstractClasses[cluster]++;
+//					else this.concreteClasses[cluster]++; 				
+//				
+//				if (this.subClassesFlat[classCluster]) this.subClasses[cluster]++;
+//				if (this.superClassesFlat[classCluster]) this.superClasses[cluster]++;
 								
 				if (this.classClusterReferencesFlat[classCluster][cluster])
 					countICID++;
@@ -480,9 +480,9 @@ public class ClusterMetrics
 		for (int clusterNumber = 0; clusterNumber < classCount; clusterNumber++) 
 		{
 			int _clusterNumber = convertToClusterNumber(clusterNumber);
-//			fitness += calculateClusterFitness5Metric(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber]); 
+			fitness += calculateClusterFitness5Metric(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber]); 
 
-			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber], abstractClasses [_clusterNumber], concreteClasses[_clusterNumber], subClasses [_clusterNumber], superClasses[_clusterNumber]); 
+//			fitness += calculateClusterFitness(internalDependencyWeight[_clusterNumber], externalDependencyWeight[_clusterNumber], internalClassesInternalDependencies [_clusterNumber], internalClassesExternalDependencies [_clusterNumber], externalClassesInternalDependencies [_clusterNumber], abstractClasses [_clusterNumber], concreteClasses[_clusterNumber], subClasses [_clusterNumber], superClasses[_clusterNumber]); 
 								
 		}
 		
