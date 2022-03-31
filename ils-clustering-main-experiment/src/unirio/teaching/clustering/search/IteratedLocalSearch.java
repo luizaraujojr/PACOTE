@@ -36,7 +36,7 @@ public class IteratedLocalSearch
 	/**
 	 * Number of perturbations that will be used during the ILS neighbour search
 	 */
-	private int perturbationSize = solutionLength * (3/4);
+	private int perturbationSize = solutionLength /2;
 	
 	/**
 	 * Number of classes in the project
