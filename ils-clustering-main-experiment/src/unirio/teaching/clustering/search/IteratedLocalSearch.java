@@ -85,16 +85,16 @@ public class IteratedLocalSearch
 	
 	private boolean[] usedMetrics;
 
-	
-//	private String[] history;
+	private PrintWriter writer;
 
-//	HashMap<String,Double> hashhistory = new HashMap<String,Double>();
-//	ArrayList<String>  history = new ArrayList<String>();//Creating arraylist    
+	private int cycle;
 	
+	private long startTimestamp;
+
 	/**
 	 * Initializes the ILS search process
      */
-	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics) throws Exception
+	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics, PrintWriter writer, int cycle, long startTimestamp) throws Exception
 	{
 		this.classCount = project.getClassCount();
 		this.mdg = buildGraph(project, this.classCount);
@@ -108,7 +108,9 @@ public class IteratedLocalSearch
 		this.solutionLength = this.metricsSize * 2;
 		this.perturbationSize = this.solutionLength / 2;
 		this.usedMetrics = usedMetrics;
-//		this.history = new double [11][11][11][11][11][11];
+		this.writer = writer;
+		this.cycle = cycle;
+		this.startTimestamp = startTimestamp;
 	}
 	
 	
@@ -121,7 +123,6 @@ public class IteratedLocalSearch
 		this.iterationBestFound = 0;
 		this.bestFitness = -1_000_000_000_000.0;
 		this.project = project;
-//		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
 		this.metricsSize = metricsSize;
 		this.solutionLength = this.metricsSize * 2;
 		this.perturbationSize = this.solutionLength / 2;
@@ -142,9 +143,6 @@ public class IteratedLocalSearch
 			{
 				String targetName = _class.getDependencyIndex(j).getElementName();
 				int classIndex = project.getClassIndex(targetName);
-				
-//				if (classIndex == -1)
-//					throw new Exception ("Class not registered in project: " + targetName);
 				
 				if (classIndex != -1)
 				mdg.addModuleDependency(i, classIndex, 1);
@@ -188,10 +186,8 @@ public class IteratedLocalSearch
 
 	public int[] getClusterBestSolution()
 	{
-		return equationFitness.getBestSolution();
+		return equationFitness.getClusterSolution();
 	}
-	
-	
 	
 	/**
 	 * Main loop of the algorithm
@@ -202,21 +198,14 @@ public class IteratedLocalSearch
 		int[] bestSolution = createRandomSolution(solutionLength);		
 		this.bestFitness = calculateFitness(bestSolution);
 	
-
 		int[] solution = bestSolution;
-
-//		int difRatio = 0;
-		
 		
 		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
 		{
 			int[] localSearchSolution = localSearch(solution);
-//			if (bestFitness ==100) break;
 			
 			double fitness = calculateFitness(localSearchSolution);
-			
-//			difRatio = (int)Math.ceil((100 - fitness) * solutionLength/100);
-			
+						
 			if (fitness > bestFitness || bestFitness ==100)
 			{	
 				bestSolution = Arrays.copyOf(localSearchSolution, solutionLength);
@@ -225,8 +214,6 @@ public class IteratedLocalSearch
 			}
 			
 			solution = applyPerturbation(localSearchSolution, perturbationSize);
-
-//			solution = applyPerturbation(solution, difRatio);			
 		}
 		return bestSolution;
 	}
@@ -351,7 +338,26 @@ public class IteratedLocalSearch
 	{
 		double fitness = 0;
 		fitness = equationFitness.calculateFitness(solution, usedMetrics);
+		
+		if (Integer.valueOf(evaluationsConsumed/1000)*1000==evaluationsConsumed) {
+			
+			String solutionText = ""; 
+			for(int h = 0; h < solution.length; h++)
+	    	{
+				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
+	    	}
+			
+			long finishTimestamp = System.currentTimeMillis();
+			long seconds = (finishTimestamp - startTimestamp);
+			
+			
+//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+			
+			writer.flush();
+		}
 		evaluationsConsumed++;
+					
 		return fitness;	
 	}
 }

@@ -298,7 +298,7 @@ public class MoJoCalculator {
     /* File info */
     private String sourceFile, targetFile, relFile;
 
-    private BufferedReader br_s, br_t, br_r;
+//    private BufferedReader br_s, br_t, br_r;
 
     public MoJoCalculator(String sf, String tf, String rf) {
         sourceFile = sf;
@@ -454,6 +454,8 @@ public class MoJoCalculator {
 //        if (isBunch(targetFile)) readTargetBunchFile();
 //        else 
 //        	readTargetRSFFile();
+        
+       
         	prepareTarget(target);
 
         /* Read source file */
@@ -680,54 +682,54 @@ public class MoJoCalculator {
         }
     }
 
-    private void readSourceBunchFile() {
-        try
-        {
-            br_s = new BufferedReader(new FileReader(sourceFile));
-        }
-        catch (FileNotFoundException e)
-        {
-            throw new RuntimeException("Could not open " + sourceFile);
-        }
-        try
-        {
-            for (String line = br_s.readLine(); line != null; line = br_s.readLine())
-            {
-                int equalMark = line.indexOf("=");
-                String strClusterA = line.substring(0, equalMark).trim();
-                String objList = line.substring(equalMark + 1).trim();
-                StringTokenizer st = new StringTokenizer(objList, ",");
-                int objNumber = st.countTokens();
-                numberOfObjectsInA += objNumber;
-                int index = mapClusterTagA.size();
-                clusterNamesInA.addElement(strClusterA);
-                mapClusterTagA.put(strClusterA, new Integer(index));
-                partitionA.addElement(new Vector<String>());
-                for (int i = 0; i < objNumber; i++)
-                {
-                    String obj = st.nextToken().trim();
-                    partitionA.elementAt(index).addElement(obj);
-                }
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not read from " + sourceFile);
-        }
-        try
-        {
-            br_s.close();
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not close " + sourceFile);
-        }
-    }
+//    private void readSourceBunchFile() {
+//        try
+//        {
+//            br_s = new BufferedReader(new FileReader(sourceFile));
+//        }
+//        catch (FileNotFoundException e)
+//        {
+//            throw new RuntimeException("Could not open " + sourceFile);
+//        }
+//        try
+//        {
+//            for (String line = br_s.readLine(); line != null; line = br_s.readLine())
+//            {
+//                int equalMark = line.indexOf("=");
+//                String strClusterA = line.substring(0, equalMark).trim();
+//                String objList = line.substring(equalMark + 1).trim();
+//                StringTokenizer st = new StringTokenizer(objList, ",");
+//                int objNumber = st.countTokens();
+//                numberOfObjectsInA += objNumber;
+//                int index = mapClusterTagA.size();
+//                clusterNamesInA.addElement(strClusterA);
+//                mapClusterTagA.put(strClusterA, new Integer(index));
+//                partitionA.addElement(new Vector<String>());
+//                for (int i = 0; i < objNumber; i++)
+//                {
+//                    String obj = st.nextToken().trim();
+//                    partitionA.elementAt(index).addElement(obj);
+//                }
+//            }
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not read from " + sourceFile);
+//        }
+//        try
+//        {
+//            br_s.close();
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not close " + sourceFile);
+//        }
+//    }
 
 	private void prepareSource(Project project, int[] solution)
 	{
 		
-		long extraInA = 0;
+//		long extraInA = 0;
         
 		int len = solution.length;
 		
@@ -758,174 +760,174 @@ public class MoJoCalculator {
                 }
                 partitionA.elementAt(index).addElement(objectName);
             }
-            else extraInA++;
+//            else extraInA++;
 		}
 	}
     
     
-    private void readSourceRSFfile() {
-  	
+//    private void readSourceRSFfile() {
+//  	
+////        try
+////        {
+////            br_s = new BufferedReader(new FileReader(sourceFile));
+////        }
+////        catch (FileNotFoundException e)
+////        {
+////            throw new RuntimeException("Could not open " + sourceFile);
+////        }
+//        long extraInA = 0;
 //        try
 //        {
-//            br_s = new BufferedReader(new FileReader(sourceFile));
+//            for (String line = br_s.readLine(); line != null; line = br_s.readLine())
+//            {
+//                StringTokenizer st = new StringTokenizer(line);
+//                if (st.countTokens() != 3)
+//                {
+//                    String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
+//                    throw new RuntimeException(message);
+//                }
+//                // Ignore lines that do not start with contain
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//
+//                int index = -1;
+//                String clusterName = st.nextToken();
+//                String objectName = st.nextToken();
+//
+//                if (mapObjectClusterInB.keySet().contains(objectName))
+//                {
+//                    numberOfObjectsInA++;
+//                    Integer objectIndex = mapClusterTagA.get(clusterName);
+//                    if (objectIndex == null)
+//                    {
+//                        index = mapClusterTagA.size();
+//                        clusterNamesInA.addElement(clusterName);
+//                        mapClusterTagA.put(clusterName, new Integer(index));
+//                        partitionA.addElement(new Vector<String>());
+//                    }
+//                    else
+//                    {
+//                        index = objectIndex.intValue();
+//                    }
+//                    partitionA.elementAt(index).addElement(objectName);
+//                }
+//                else extraInA++;
+//            }
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not read from " + sourceFile);
+//        }
+//        try
+//        {
+//            br_s.close();
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not close " + sourceFile);
+//        }
+//        if (extraInA > 0) put("Warning: " + extraInA + " objects in " + sourceFile + " were not found in " + targetFile + ". They will be ignored.");
+//        long extraInB = mapObjectClusterInB.keySet().size() - numberOfObjectsInA;
+//        if (extraInB > 0) put("Warning: " + extraInB + " objects in " + targetFile + " were not found in " + sourceFile + ". They will be ignored.");
+//    }
+
+//    private void readRelationRSFfile() {
+//        try
+//        {
+//            br_r = new BufferedReader(new FileReader(relFile));
 //        }
 //        catch (FileNotFoundException e)
 //        {
-//            throw new RuntimeException("Could not open " + sourceFile);
+//            throw new RuntimeException("Could not open " + relFile);
 //        }
-        long extraInA = 0;
-        try
-        {
-            for (String line = br_s.readLine(); line != null; line = br_s.readLine())
-            {
-                StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
-                {
-                    String message = "Incorrect RSF format in " + sourceFile + " in the following line:\n" + line;
-                    throw new RuntimeException(message);
-                }
-                // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//        try
+//        {
+//            for (String line = br_r.readLine(); line != null; line = br_r.readLine())
+//            {
+//                StringTokenizer st = new StringTokenizer(line);
+//                if (st.countTokens() != 3)
+//                {
+//                    String message = "Incorrect RSF format in " + relFile + " in the following line:\n" + line;
+//                    throw new RuntimeException(message);
+//                }
+//                // The relation name is not used
+//                st.nextToken();
+//                String obj1 = st.nextToken();
+//                String obj2 = st.nextToken();
+//                /*
+//                 * we use obj1+"%@$"+obj2 as the key, store it into hash table,
+//                 * for all kinds of relationship we consider them with same
+//                 * connection strength
+//                 */
+//                /*
+//                 * for example, if this time we see a call obj1 obj2, we store
+//                 * obj1+"%@$"+obj2 with value 1, next time we see a ref obj1
+//                 * obj2, we store obj1+"%@$"+obj2 with value 2
+//                 */
+//                if (tableR.get(obj1 + "%@$" + obj2) == null) tableR.put(obj1 + "%@$" + obj2, new Double(1));
+//                else
+//                {
+//                    double previous_value = ((Double) (tableR.get(obj1 + "%@$" + obj2))).doubleValue();
+//                    tableR.put(obj1 + "%@$" + obj2, new Double(previous_value + 1));
+//                }
+//            }
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not read from " + relFile);
+//        }
+//        try
+//        {
+//            br_r.close();
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not close " + relFile);
+//        }
+//    }
 
-                int index = -1;
-                String clusterName = st.nextToken();
-                String objectName = st.nextToken();
-
-                if (mapObjectClusterInB.keySet().contains(objectName))
-                {
-                    numberOfObjectsInA++;
-                    Integer objectIndex = mapClusterTagA.get(clusterName);
-                    if (objectIndex == null)
-                    {
-                        index = mapClusterTagA.size();
-                        clusterNamesInA.addElement(clusterName);
-                        mapClusterTagA.put(clusterName, new Integer(index));
-                        partitionA.addElement(new Vector<String>());
-                    }
-                    else
-                    {
-                        index = objectIndex.intValue();
-                    }
-                    partitionA.elementAt(index).addElement(objectName);
-                }
-                else extraInA++;
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not read from " + sourceFile);
-        }
-        try
-        {
-            br_s.close();
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not close " + sourceFile);
-        }
-        if (extraInA > 0) put("Warning: " + extraInA + " objects in " + sourceFile + " were not found in " + targetFile + ". They will be ignored.");
-        long extraInB = mapObjectClusterInB.keySet().size() - numberOfObjectsInA;
-        if (extraInB > 0) put("Warning: " + extraInB + " objects in " + targetFile + " were not found in " + sourceFile + ". They will be ignored.");
-    }
-
-    private void readRelationRSFfile() {
-        try
-        {
-            br_r = new BufferedReader(new FileReader(relFile));
-        }
-        catch (FileNotFoundException e)
-        {
-            throw new RuntimeException("Could not open " + relFile);
-        }
-        try
-        {
-            for (String line = br_r.readLine(); line != null; line = br_r.readLine())
-            {
-                StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
-                {
-                    String message = "Incorrect RSF format in " + relFile + " in the following line:\n" + line;
-                    throw new RuntimeException(message);
-                }
-                // The relation name is not used
-                st.nextToken();
-                String obj1 = st.nextToken();
-                String obj2 = st.nextToken();
-                /*
-                 * we use obj1+"%@$"+obj2 as the key, store it into hash table,
-                 * for all kinds of relationship we consider them with same
-                 * connection strength
-                 */
-                /*
-                 * for example, if this time we see a call obj1 obj2, we store
-                 * obj1+"%@$"+obj2 with value 1, next time we see a ref obj1
-                 * obj2, we store obj1+"%@$"+obj2 with value 2
-                 */
-                if (tableR.get(obj1 + "%@$" + obj2) == null) tableR.put(obj1 + "%@$" + obj2, new Double(1));
-                else
-                {
-                    double previous_value = ((Double) (tableR.get(obj1 + "%@$" + obj2))).doubleValue();
-                    tableR.put(obj1 + "%@$" + obj2, new Double(previous_value + 1));
-                }
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not read from " + relFile);
-        }
-        try
-        {
-            br_r.close();
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not close " + relFile);
-        }
-    }
-
-    private void readTargetBunchFile() {
-        try
-        {
-            br_t = new BufferedReader(new FileReader(targetFile));
-        }
-        catch (FileNotFoundException e)
-        {
-            throw new RuntimeException("Could not open " + targetFile);
-        }
-        try
-        {
-            for (String line = br_t.readLine(); line != null; line = br_t.readLine())
-            {
-                int equalMark = line.indexOf("=");
-                String strClusterB = line.substring(0, equalMark).trim();
-                String objList = line.substring(equalMark + 1, line.length()).trim();
-                StringTokenizer st = new StringTokenizer(objList, ",");
-                int objNumber = st.countTokens();
-
-                int index = mapClusterTagB.size();
-                cardinalitiesInB.addElement(new Integer(objNumber));
-                mapClusterTagB.put(strClusterB, new Integer(index));
-
-                for (int i = 0; i < objNumber; i++)
-                {
-                    String obj = st.nextToken().trim();
-                    mapObjectClusterInB.put(obj, strClusterB);
-                }
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not read from " + targetFile);
-        }
-        try
-        {
-            br_t.close();
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not close " + targetFile);
-        }
-    }
+//    private void readTargetBunchFile() {
+//        try
+//        {
+//            br_t = new BufferedReader(new FileReader(targetFile));
+//        }
+//        catch (FileNotFoundException e)
+//        {
+//            throw new RuntimeException("Could not open " + targetFile);
+//        }
+//        try
+//        {
+//            for (String line = br_t.readLine(); line != null; line = br_t.readLine())
+//            {
+//                int equalMark = line.indexOf("=");
+//                String strClusterB = line.substring(0, equalMark).trim();
+//                String objList = line.substring(equalMark + 1, line.length()).trim();
+//                StringTokenizer st = new StringTokenizer(objList, ",");
+//                int objNumber = st.countTokens();
+//
+//                int index = mapClusterTagB.size();
+//                cardinalitiesInB.addElement(new Integer(objNumber));
+//                mapClusterTagB.put(strClusterB, new Integer(index));
+//
+//                for (int i = 0; i < objNumber; i++)
+//                {
+//                    String obj = st.nextToken().trim();
+//                    mapObjectClusterInB.put(obj, strClusterB);
+//                }
+//            }
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not read from " + targetFile);
+//        }
+//        try
+//        {
+//            br_t.close();
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not close " + targetFile);
+//        }
+//    }
 
     
     private void prepareTarget(StringBuilder target)
@@ -963,89 +965,84 @@ public class MoJoCalculator {
                }
                mapObjectClusterInB.put(objectName, clusterName);
 		}
-	}    	
-
+	}
     
-    
-    private void readTargetRSFFile() {
-    	//        try
+//    private void readTargetRSFFile() {
+//    	//        try
+////        {
+////            br_t = new BufferedReader(new FileReader(targetFile));
+////        }
+////        catch (FileNotFoundException e)
+////        {
+////            throw new RuntimeException("Could not open " + targetFile);
+////        }
+//        try
 //        {
-//            br_t = new BufferedReader(new FileReader(targetFile));
+//            for (String line = br_t.readLine(); line != null; line = br_t.readLine())
+//            {
+//                StringTokenizer st = new StringTokenizer(line);
+//                if (st.countTokens() != 3)
+//                {
+//                    String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
+//                    throw new RuntimeException(message);
+//                }
+//                // Ignore lines that do not start with contain
+//                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//
+//                String clusterName = st.nextToken();
+//                /* Remove quotes from the token */
+//                int first_quote_index = clusterName.indexOf("\"");
+//                if (first_quote_index == 0 && clusterName.indexOf("\"", first_quote_index + 1) == clusterName.length() - 1)
+//                    clusterName = clusterName.substring(first_quote_index + 1, clusterName.length() - 1);
+//
+//                String objectName = st.nextToken();
+//                int index = -1;
+//
+//                /* Search for the cluster name in mapClusterTagB */
+//                Integer objectIndex = mapClusterTagB.get(clusterName);
+//
+//                if (objectIndex == null)
+//                {
+//                    // This cluster is not in mapClusterTagB yet
+//                    index = mapClusterTagB.size();
+//                    // Since it is a new cluster, it currently contains 1 object
+//                    cardinalitiesInB.addElement(new Integer(1));
+//                    mapClusterTagB.put(clusterName, new Integer(index));
+//                }
+//                else
+//                {
+//                    index = objectIndex.intValue();
+//                    // Increase the cluster's cardinality in vector
+//                    // cardinalitiesInB
+//                    int newCardinality = 1 + cardinalitiesInB.elementAt(index).intValue();
+//                    cardinalitiesInB.setElementAt(new Integer(newCardinality), index);
+//                }
+//                mapObjectClusterInB.put(objectName, clusterName);
+//            }
 //        }
-//        catch (FileNotFoundException e)
+//        catch (IOException e)
 //        {
-//            throw new RuntimeException("Could not open " + targetFile);
+//            throw new RuntimeException("Could not read from " + targetFile);
 //        }
-        try
-        {
-            for (String line = br_t.readLine(); line != null; line = br_t.readLine())
-            {
-                StringTokenizer st = new StringTokenizer(line);
-                if (st.countTokens() != 3)
-                {
-                    String message = "Incorrect RSF format in " + targetFile + " in the following line:\n" + line;
-                    throw new RuntimeException(message);
-                }
-                // Ignore lines that do not start with contain
-                if (!st.nextToken().toLowerCase().equals("contain")) continue;
+//        try
+//        {
+//            br_t.close();
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException("Could not close " + targetFile);
+//        }
+//    }
 
-                String clusterName = st.nextToken();
-                /* Remove quotes from the token */
-                int first_quote_index = clusterName.indexOf("\"");
-                if (first_quote_index == 0 && clusterName.indexOf("\"", first_quote_index + 1) == clusterName.length() - 1)
-                    clusterName = clusterName.substring(first_quote_index + 1, clusterName.length() - 1);
+//    private boolean isBunch(String file) {
+//        int dot = file.lastIndexOf(".");
+//        if (dot < 0) return false;
+//        String extend = file.substring(dot + 1).trim();
+//        if (extend.equalsIgnoreCase("bunch")) return true;
+//        return false;
+//    }
 
-                String objectName = st.nextToken();
-                int index = -1;
-
-                /* Search for the cluster name in mapClusterTagB */
-                Integer objectIndex = mapClusterTagB.get(clusterName);
-
-                if (objectIndex == null)
-                {
-                    // This cluster is not in mapClusterTagB yet
-                    index = mapClusterTagB.size();
-                    // Since it is a new cluster, it currently contains 1 object
-                    cardinalitiesInB.addElement(new Integer(1));
-                    mapClusterTagB.put(clusterName, new Integer(index));
-                }
-                else
-                {
-                    index = objectIndex.intValue();
-                    // Increase the cluster's cardinality in vector
-                    // cardinalitiesInB
-                    int newCardinality = 1 + cardinalitiesInB.elementAt(index).intValue();
-                    cardinalitiesInB.setElementAt(new Integer(newCardinality), index);
-                }
-                mapObjectClusterInB.put(objectName, clusterName);
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not read from " + targetFile);
-        }
-        try
-        {
-            br_t.close();
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException("Could not close " + targetFile);
-        }
-    }
-
-    private boolean isBunch(String file) {
-        int dot = file.lastIndexOf(".");
-        if (dot < 0) return false;
-        String extend = file.substring(dot + 1).trim();
-        if (extend.equalsIgnoreCase("bunch")) return true;
-        return false;
-    }
-
-    private void put(String message) {
-        if (verbose) System.out.println(message);
-    }
-    
-    
-    
+//    private void put(String message) {
+//        if (verbose) System.out.println(message);
+//    }
 }

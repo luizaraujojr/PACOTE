@@ -1,6 +1,5 @@
 package unirio.teaching.clustering.search.constructive;
 
-import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 import unirio.teaching.clustering.search.utils.PseudoRandom;
 
@@ -35,10 +34,4 @@ public class ConstrutiveRandom extends ConstrutiveAbstract
 		return solution;
 	}
 
-
-	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams,Project project) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

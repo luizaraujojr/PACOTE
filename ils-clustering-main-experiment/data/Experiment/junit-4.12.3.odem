@@ -7,7 +7,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="New Workset">
+  <context name="junit-4.12.3">
     <container name="D:/Backup/eclipse-workspace/PACOTE/data/jar/junit/junit-4.12.3.jar" classification="jar">
       <namespace name="junit.framework">
         <type name="junit.framework.TestResult$1" classification="class" visibility="default">

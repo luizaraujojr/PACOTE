@@ -57,10 +57,9 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 					int j = cm.convertToClusterNumber(auxj);
 					
 					// verificar o delta da uniao desses dois clusteres
-//					double currentDelta = cm.calculateMergeClustersDelta(i, j);
-					double currentDelta = cm.calculateMergeClustersDelta5Metric(i, j);
+					double currentDelta = cm.calculateMergeClustersDelta(i, j);
+//					double currentDelta = cm.calculateMergeClustersDelta5Metric(i, j);
 					
-//					System.out.println(currentDelta);
 					if (currentMaxDelta == null || currentDelta > currentMaxDelta)
 					{
 						aglutinatei = i;
@@ -118,9 +117,4 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		return null;
 	}
 
-	@Override
-	public int[] createSolution(ModuleDependencyGraph mdg, int[] equationParams, Project project) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
