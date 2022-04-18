@@ -142,7 +142,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -153,7 +153,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 1, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
+						ils = new IteratedLocalSearch(project, 50000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
