@@ -1,0 +1,191 @@
+
+# ======================================================================
+#
+# Calculates the probability distribution of the distance between two
+# unitary vectors in an N-dimensional space.
+#
+# Calculates the probability of this distance being under a given
+# thresholding values.
+#
+# ======================================================================
+
+#
+# Creates a random unitary vector
+#
+createRandomUnitaryVector <- function(dimensions) {
+  v <- runif(dimensions, min=-2.5, max=2.5)
+  norm <- sqrt(sum(v^2))
+  v / norm
+}
+
+
+#
+# Calculates the distance of two random unitary vectors
+#
+calculateDistance <- function(dimensions) {
+  v1 <- createRandomUnitaryVector(dimensions)
+  v2 <- createRandomUnitaryVector(dimensions)
+  sqrt(sum((v1 - v2) ^ 2))
+}
+
+
+#
+# Builds a distribution for the distance of two random unitary vectors
+#
+buildDistribution <- function(dimensions, count) {
+  results <- c()
+  
+  for (i in 1:count) {
+    results <- c(results, calculateDistance(dimensions))
+  }
+  
+  results
+}
+
+
+#
+# Calculate probability
+#
+calculateProbability <- function(distribution, thresholding) {
+  sum(distribution <= thresholding) / length(distribution)
+}
+
+
+
+data <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-10kEvals-20Instancias-025Perturb-MQref.csv", sep=";", header=TRUE);
+
+#data <- read.table("C:/Users/luizantoniolao/Desktop/resultado_43i_3000eval_10roddas_4metricas.txt", sep=";", header=TRUE);
+
+
+data$n1 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,1]])
+
+data$n2 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,2]])
+
+data$n3 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,3]])
+
+data$n4 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,4]])
+
+data$n5 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,5]])
+
+data$n6 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,6]])
+
+data$n7 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,7]])
+
+data$n8 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,8]])
+
+data$n9 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,9]])
+
+data$n10 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,10]])
+
+data$n11 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,11]])
+
+data$n12 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,12]])
+
+data$n13 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,13]])
+
+data$n14 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,14]])
+
+data$n15 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,15]])
+
+data$n16 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,16]])
+
+data$n17 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,17]])
+
+data$n18 = as.double(str_split(substring(data$solutionreal, 2, nchar(data$solutionreal)-2),",", simplify = TRUE)[[1,18]])
+
+
+data$vNormal = sqrt(data$n1^2+data$n2^2+data$n3^2+data$n4^2+data$n5^2+data$n6^2+data$n7^2+data$n8^2+data$n9^2+data$n10^2+data$n11^2+data$n12^2+data$n13^2+data$n14^2+data$n15^2+data$n16^2+data$n17^2+data$n18^2);
+
+
+#data$vNormal = sqrt(data$n1^2+data$n2^2+data$n3^2+data$n4^2+data$n5^2+data$n6^2+data$n7^2+data$n8^2);
+
+data$d1 = data$n1 / data$vNormal;
+data$d2 = data$n2 / data$vNormal;
+data$d3 = data$n3 / data$vNormal;
+data$d4 = data$n4 / data$vNormal;
+data$d5 = data$n5 / data$vNormal;
+data$d6 = data$n6 / data$vNormal;
+data$d7 = data$n7 / data$vNormal;
+data$d8 = data$n8 / data$vNormal;
+data$d9 = data$n9 / data$vNormal;
+data$d10 = data$n10 / data$vNormal;
+data$d11 = data$n11 / data$vNormal;
+data$d12 = data$n12 / data$vNormal;
+data$d13 = data$n13 / data$vNormal;
+data$d14 = data$n14 / data$vNormal;
+data$d15 = data$n15 / data$vNormal;
+data$d16 = data$n16 / data$vNormal;
+data$d17 = data$n17 / data$vNormal;
+data$d18 = data$n18 / data$vNormal;
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 1/1.5;
+dref4 = 0./1.5;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 0;
+
+
+
+data$distance = sqrt((data$d1-dref1)^2+(data$d2-dref2)^2+(data$d3-dref3)^2+(data$d4-dref4)^2+(data$d5-dref5)^2+(data$d6-dref6)^2+(data$d7-dref7)^2+(data$d8-dref8)^2);
+data_ordered <- data[order(data$nclasses),];
+	 
+install.packages("ggplot2")                  # Install & load ggplot2
+library("ggplot2")
+
+
+
+
+ ggplot(data, aes(x=distance, y=reorder(instance, -nclasses))) +       # Reordered boxplot in ggplot2
+    geom_boxplot();
+
+
+ ggplot(data, aes(x=mojo, y=reorder(instance, -nclasses))) +       # Reordered boxplot in ggplot2
+    geom_boxplot();
+
+
+ ggplot(data, aes(x=evals, y=reorder(instance, -nclasses))) +       # Reordered boxplot in ggplot2
+    geom_boxplot();
+
+
+
+
+instances <- sort(unique(data$instance));
+
+columns <- c("nClasses","minDistance", "probMin", "meanDistance", "probMean", "maxDistance", "probMax")
+
+result <- matrix(nrow=length(instances ), ncol=length(columns), dimnames=list(instances , columns));
+	
+distri <- buildDistribution(4, 100000);
+for (instance_ in instances)
+	{
+		iData <- subset(data, instance == instance_);
+		result[instance_, "nClasses"] <- iData$nclasses[1];
+		result[instance_, "minDistance"] <- min(iData$distance)
+		result[instance_, "probMin"] <- calculateProbability(distri, min(iData$distance))
+		result[instance_, "meanDistance"] <- mean(iData$distance)
+		result[instance_, "probMean"] <- calculateProbability(distri, mean(iData$distance))
+		result[instance_, "maxDistance"] <- max(iData$distance)
+		result[instance_, "probMax"] <- calculateProbability(distri, max(iData$distance))
+		
+		lastInstance = instance_ ;
+	}
+
+ggplot(data[order(data$nclasses),], aes(distance, instance)) +       # Reordered boxplot in ggplot2
+  geom_boxplot();
+
+par(mfrow=c(2,3), mar=c(3,3,2,2), oma=c(3,3,2,2))
+
+plot(x = result[,1], y = result[,3], main="Número de Classes x Probabilidade de Distância Mínima", xlab="Número de Classes", ylab="Probabilidade de Distância Mínima")
+plot(x = result[,1], y = result[,5], main="Número de Classes x Probabilidade de Distância Média", xlab="Número de Classes", ylab="Probabilidade de Distância Média")
+plot(x = result[,1], y = result[,7], main="Número de Classes x Probabilidade de Distância Máxima", xlab="Número de Classes", ylab="Probabilidade de Distância Máxima")
+
+hist(result[,3], main = "Probabilidades da Distância Mínima", xlab = "Probabilidades", ylab="Frequência");
+hist(result[,5], main = "Probabilidades da Distância Média", xlab = "Probabilidades", ylab="Frequência");
+hist(result[,7], main = "Probabilidades da Distância Máxima", xlab = "Probabilidades", ylab="Frequência");
+
+mtext(side=1, text="Probabilidade", outer=T);
+mtext(side=2, text="Frequência                                        Número de Classes", outer=T);

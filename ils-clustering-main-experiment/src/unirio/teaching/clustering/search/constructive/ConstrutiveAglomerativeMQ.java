@@ -2,6 +2,7 @@ package unirio.teaching.clustering.search.constructive;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.search.model.ClusterMetrics;
+import unirio.teaching.clustering.search.model.ClusterMetricsFull;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
 
 /**
@@ -33,8 +34,9 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
-
+//		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
+		ClusterMetricsFull cm = new ClusterMetricsFull(mdg, solution, equationParams, project, usedMetrics);
+		
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;
 		topSolutionsMQ[0] = cm.calculateFitness();
@@ -58,7 +60,6 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 					
 					// verificar o delta da uniao desses dois clusteres
 					double currentDelta = cm.calculateMergeClustersDelta(i, j);
-//					double currentDelta = cm.calculateMergeClustersDelta5Metric(i, j);
 					
 					if (currentMaxDelta == null || currentDelta > currentMaxDelta)
 					{

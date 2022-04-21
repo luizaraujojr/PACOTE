@@ -1,0 +1,56 @@
+
+	data25 <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-10kEvals-20Instancias-025Perturb-MQref.csv", sep=";", header=TRUE);
+	data50 <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-10kEvals-20Instancias-050Perturb-MQref.csv", sep=";", header=TRUE);
+	data75 <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-10kEvals-20Instancias-075Perturb-MQref.csv", sep=";", header=TRUE);
+	
+	numClasses <- sort(unique(RIGHT(paste("00", as.character(data25$nclasses), sep = ""), 3)));
+	
+	columns <- sort(unique(as.character(str_count(data25[,4],",")/2)));
+
+	result <- matrix(nrow=length(numClasses), ncol=length(columns), dimnames=list(numClasses, columns));
+	
+	resultwilcox <- matrix(nrow=length(numClasses), ncol=length(columns), dimnames=list(numClasses, columns));
+	
+	
+	for (numClasses_ in numClasses)
+	{
+		for (columns_ in columns)
+		{
+			newdata25 <- subset(data25, nclasses == as.numeric(numClasses_) & (str_count(data25$solutionreal,",")/2) == columns_);
+			newdata50 <- subset(data50, nclasses == as.numeric(numClasses_) & (str_count(data50$solutionreal,",")/2) == columns_);
+			newdata75 <- subset(data75, nclasses == as.numeric(numClasses_) & (str_count(data75$solutionreal,",")/2) == columns_);
+			
+			if (mean(newdata25$mojo)> mean(newdata50$mojo)){
+				if (mean(newdata25$mojo)> mean(newdata75$mojo)){
+					if(mean(newdata50$mojo)> mean(newdata75$mojo)){
+						bestPertub <- "25>50"
+						resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata25$mojo,newdata50$mojo)$p.value
+					} else {
+						bestPertub <- "25>75"
+						resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata25$mojo,newdata75$mojo)$p.value
+					}
+					
+				} else {	
+					bestPertub <- "75>25"	
+					resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata75$mojo,newdata25$mojo)$p.value					
+				}
+			} else {
+				if (mean(newdata50$mojo)> mean(newdata75$mojo)){
+					if(mean(newdata75$mojo)> mean(newdata25$mojo)){
+						bestPertub <- "50>75"
+						resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata50$mojo,newdata75$mojo)$p.value						
+					}
+					else {
+						bestPertub <- "50>25"
+						resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata50$mojo,newdata25$mojo)$p.value
+					}
+				}
+				else {
+					bestPertub <- "75>50"
+					resultwilcox[numClasses_, columns_] <-  wilcox.test(newdata75$mojo,newdata50$mojo)$p.value
+				}
+			}
+			result[numClasses_, columns_] <- bestPertub;
+		}
+	}
+	

@@ -35,7 +35,7 @@ public class EquationFitness
 	}
 
 	/**
-	 * Calcula o MQ com base nos MFs existentes
+	 * Calcula o MOJO entre da distribuição gerada com base nos parâmetros da equação e a distribuição de referência
 	 */
 	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
@@ -44,6 +44,18 @@ public class EquationFitness
 		clusterSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
 		return mojoCalculator.mojofmnew(project, clusterSolution);
 	}
+	
+	
+	/**
+	 * Calcula o MOJO entre da distribuição MQ e a distribuição de referênciao 
+	 */
+	public double calculateFitnessRef(int[] cluster)
+	{
+		this.mojoCalculator = new MoJoCalculator(depFile);
+		
+		return mojoCalculator.mojofmnew(project, cluster);
+	}
+	
 	
 	/**
 	 * Returns the best fitness found

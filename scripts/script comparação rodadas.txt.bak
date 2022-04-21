@@ -1,0 +1,31 @@
+
+
+install.packages("ggplot2")                  # Install & load ggplot2
+library("ggplot2")
+
+library("stringr");
+library("reshape2");
+
+data <- read.table("C:/Users/luizantoniolao/Desktop/doutorado/29metrica10keval20instanciasPequenasMQ1.csv", sep=";", header=TRUE);
+datanew <- data.frame(paste((str_count(data$solution,"\\,")+1)/2, 'Métricas'), data$instance, data$mojo, data$nclasses, data$besteval  )
+	names(datanew) <- c("metrics", "instance", "mojo", "nclasses", "besteval")
+
+
+
+datanew1 <- datanew[order(datanew$nclasses),]
+
+
+ ggplot(datanew1, aes(instance, mojo)) +
+     geom_boxplot(aes(fill = metrics)) +
+ scale_x_discrete(guide = guide_axis(angle=90)) 
+
+  ggplot(datanew1 , aes(nclasses, mojo)) +
+    geom_boxplot(aes(fill = metrics)) +
+	scale_x_discrete(guide = guide_axis(angle=90)) 
+
+rodar contra o MQ para 5, 10 com as 9 métricas
+calcular distância entre as soluçÕes 100% mojo e as soluções com o MQ original.
+
+
+decidir se vamos rodar experimentos sobre o tamanho da perturbação
+quinta as 15:00

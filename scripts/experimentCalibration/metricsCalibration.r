@@ -1,0 +1,462 @@
+
+# ======================================================================
+#
+# Calculates the probability distribution of the distance between two
+# unitary vectors in an N-dimensional space.
+#
+# Calculates the probability of this distance being under a given
+# thresholding values.
+#
+# ======================================================================
+
+#
+# Creates a random unitary vector
+#
+createRandomUnitaryVector <- function(dimensions) {
+  v <- runif(dimensions, min=-2.5, max=2.5)
+  norm <- sqrt(sum(v^2))
+  v / norm
+}
+
+
+#
+# Calculates the distance of two random unitary vectors
+#
+calculateDistance <- function(dimensions) {
+  v1 <- createRandomUnitaryVector(dimensions)
+  v2 <- createRandomUnitaryVector(dimensions)
+  sqrt(sum((v1 - v2) ^ 2))
+}
+
+
+#
+# Builds a distribution for the distance of two random unitary vectors
+#
+buildDistribution <- function(dimensions, count) {
+  results <- c()
+  
+  for (i in 1:count) {
+    results <- c(results, calculateDistance(dimensions))
+  }
+  
+  results
+}
+
+
+#
+# Calculate probability
+#
+calculateProbability <- function(distribution, thresholding) {
+  sum(distribution <= thresholding) / length(distribution)
+}
+
+
+
+
+
+
+install.packages("stringr")
+library("stringr") 
+
+
+data <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-20kEvals-20Instancias-050Perturb-MQref.csv", sep=";", header=TRUE);
+
+data$nmetricas = (str_count(data$solution,"\\,")+1)/2;
+
+dref1 = 1;
+dref2 = 0;
+dref3 = 1;
+dref4 = 0.5;
+
+data2 <- subset(data, nmetricas==2)
+
+data2$vNormal  = sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,4])^2)
+)
+
+data2$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,1]) / data2$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,2]) / data2$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,3]) / data2$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data2$solutionreal)), ",", simplify= TRUE)[,4]) / data2$vNormal)-dref4)^2)
+);
+
+
+dref1 = 1;
+dref2 = 0;
+dref3 = 0;
+dref4 = 1;
+dref5 = 0.5;
+dref6 = 0;
+
+
+
+data3 <- subset(data, nmetricas==3)
+
+data3$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,6])^2)
+)
+
+data3$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,1]) / data3$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,2]) / data3$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,3]) / data3$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,4]) / data3$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,5]) / data3$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data3$solutionreal)), ",", simplify= TRUE)[,6]) / data3$vNormal)-dref6)^2)
+);
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 1/1.5;
+dref6 = 0./1.5;
+dref7 = 0;
+dref8 = 0;
+
+data4 <- subset(data, nmetricas==4)
+
+data4$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,8])^2)
+)
+
+data4$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,1]) / data4$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,2]) / data4$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,3]) / data4$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,4]) / data4$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,5]) / data4$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,6]) / data4$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,7]) / data4$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data4$solutionreal)), ",", simplify= TRUE)[,8]) / data4$vNormal)-dref8)^2)
+);
+
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 1/1.5;
+dref7 = 0./1.5;
+dref8 = 0;
+dref9 = 0;
+dref10 = 0;
+
+
+data5 <- subset(data, nmetricas==5)
+
+data5$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,8])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,9])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,10])^2)
+)
+
+data5$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,1]) / data5$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,2]) / data5$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,3]) / data5$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,4]) / data5$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,5]) / data5$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,6]) / data5$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,7]) / data5$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,8]) / data5$vNormal)-dref8)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,9]) / data5$vNormal)-dref9)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data5$solutionreal)), ",", simplify= TRUE)[,10]) / data5$vNormal)-dref10)^2)
+);
+
+
+
+
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 1/1.5;
+dref8 = 0./1.5;
+dref9 = 0;
+dref10 = 0;
+dref11 = 0;
+dref12 = 0;
+
+
+data6 <- subset(data, nmetricas==6)
+
+data6$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,8])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,9])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,10])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,11])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,12])^2)
+)
+
+data6$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,1]) / data6$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,2]) / data6$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,3]) / data6$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,4]) / data6$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,5]) / data6$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,6]) / data6$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,7]) / data6$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,8]) / data6$vNormal)-dref8)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,9]) / data6$vNormal)-dref9)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,10]) / data6$vNormal)-dref10)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,11]) / data6$vNormal)-dref11)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data6$solutionreal)), ",", simplify= TRUE)[,12]) / data6$vNormal)-dref12)^2)
+);
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 1/1.5;
+dref9 = 0./1.5;
+dref10 = 0;
+dref11 = 0;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
+
+
+
+
+data7 <- subset(data, nmetricas==7)
+
+data7$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,8])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,9])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,10])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,11])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,12])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,13])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,14])^2)
+)
+
+data7$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,1]) / data7$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,2]) / data7$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,3]) / data7$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,4]) / data7$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,5]) / data7$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,6]) / data7$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,7]) / data7$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,8]) / data7$vNormal)-dref8)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,9]) / data7$vNormal)-dref9)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,10]) / data7$vNormal)-dref10)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,11]) / data7$vNormal)-dref11)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,12]) / data7$vNormal)-dref12)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,13]) / data7$vNormal)-dref13)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data7$solutionreal)), ",", simplify= TRUE)[,14]) / data7$vNormal)-dref14)^2)
+
+);
+
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 0;
+dref9 = 1/1.5;
+dref10 = 0./1.5;
+dref11 = 0;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
+dref15 = 0;
+dref16 = 0;
+
+data8 <- subset(data, nmetricas==8)
+
+data8$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,8])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,9])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,10])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,11])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,12])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,13])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,14])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,15])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,16])^2)
+)
+
+data8$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,1]) / data8$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,2]) / data8$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,3]) / data8$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,4]) / data8$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,5]) / data8$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,6]) / data8$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,7]) / data8$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,8]) / data8$vNormal)-dref8)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,9]) / data8$vNormal)-dref9)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,10]) / data8$vNormal)-dref10)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,11]) / data8$vNormal)-dref11)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,12]) / data8$vNormal)-dref12)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,13]) / data8$vNormal)-dref13)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,14]) / data8$vNormal)-dref14)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,15]) / data8$vNormal)-dref15)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data8$solutionreal)), ",", simplify= TRUE)[,16]) / data8$vNormal)-dref16)^2)
+
+);
+
+
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 0;
+dref9 = 0;
+dref10 = 1/1.5;
+dref11 = 0./1.5;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
+dref15 = 0;
+dref16 = 0;
+dref17 = 0;
+dref18 = 0;
+
+data9 <- subset(data, nmetricas==9)
+
+data9$vNormal  <- sqrt(
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,1])^2)+ 
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,2])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,3])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,4])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,5])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,6])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,7])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,8])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,9])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,10])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,11])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,12])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,13])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,14])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,15])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,16])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,17])^2)+
+(as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,18])^2)
+)
+
+data9$distance = sqrt(
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,1]) / data9$vNormal)-dref1)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,2]) / data9$vNormal)-dref2)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,3]) / data9$vNormal)-dref3)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,4]) / data9$vNormal)-dref4)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,5]) / data9$vNormal)-dref5)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,6]) / data9$vNormal)-dref6)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,7]) / data9$vNormal)-dref7)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,8]) / data9$vNormal)-dref8)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,9]) / data9$vNormal)-dref9)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,10]) / data9$vNormal)-dref10)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,11]) / data9$vNormal)-dref11)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,12]) / data9$vNormal)-dref12)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,13]) / data9$vNormal)-dref13)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,14]) / data9$vNormal)-dref14)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,15]) / data9$vNormal)-dref15)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,16]) / data9$vNormal)-dref16)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,17]) / data9$vNormal)-dref17)^2)+
+(((as.numeric(str_split(gsub("[[]", "", gsub("[,]]", "", data9$solutionreal)), ",", simplify= TRUE)[,18]) / data9$vNormal)-dref18)^2)
+);
+
+
+datafinal <- rbind(data2, data3, data4, data5, data6, data7, data8, data9)
+
+
+
+nClasses <- sort(unique(datafinal$nclasses));
+
+nMetricas <- sort(unique(datafinal$nmetricas));
+
+columns <- c("nClasses","nMetricas","minDistance", "probMin", "meanDistance", "probMean", "maxDistance", "probMax")
+	
+result <- matrix(nrow = 0, ncol=length(columns))  
+colnames(result1) <- columns  
+
+for (nmetrica_ in metricas)
+	{
+	distri <- buildDistribution(nmetrica_, 100000);
+	for (nClasses_ in nClasses)
+		{
+		iData <- subset(datafinal, nclasses == nClasses_ & nmetricas == nmetrica_ );
+		
+		result <- rbind(result, c(
+		nClasses_, 
+		nmetrica_,
+		min(iData$distance),
+		calculateProbability(distri, min(iData$distance)),
+		mean(iData$distance),
+		calculateProbability(distri, mean(iData$distance)),
+		max(iData$distance),
+		calculateProbability(distri, max(iData$distance))))
+	}
+}
+
+
+
+result1 <- matrix(nrow=length(instances )*length(metricas ), ncol=length(columns))
+
+
+result <- matrix(nrow=length(instances )*length(metricas ), ncol=length(columns), dimnames=list(, columns));
