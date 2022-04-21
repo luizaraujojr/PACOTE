@@ -351,8 +351,8 @@ public class IteratedLocalSearch
 			long seconds = (finishTimestamp - startTimestamp);
 			
 			
-//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
 			
 			writer.flush();
 		}
