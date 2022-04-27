@@ -925,14 +925,15 @@ public class ClusterMetrics
 	 */
 	public int convertToClusterNumber(int position)
 	{
-		if (position >= mdg.getSize())
-		{
-			throw new RuntimeException("POSICAO LIDA TEM QUE SER MENOR QUE O TOTAL!");
-		}
 		
 		if (position < (totalClusteres))
 		{
 			return usedClusters.get(position);
+		}
+		
+		if (position >= mdg.getSize())
+		{
+			throw new RuntimeException("POSICAO LIDA TEM QUE SER MENOR QUE O TOTAL!");
 		}
 		
 		return availableClusters.peek();

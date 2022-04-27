@@ -227,7 +227,7 @@ public class IteratedLocalSearch
 	public int[] executeMQReferenceGeneration(int cycleNumber) throws Exception
 	{
 		
-		int[] equationParams = {7, 5, 5, 5, 5, 7, 6, 5, 5, 5};
+		int[] equationParams = {7, 5, 5, 5, 5, 5, 5, 5, 5, 7, 6, 5, 5, 5, 5, 5, 5, 5};
 		ConstrutiveAbstract constructor = new ConstrutiveAglomerativeMQ();
 		int[] bestSolution = constructor.createSolution(mdg, equationParams, project, usedMetrics);
 		
@@ -343,23 +343,22 @@ public class IteratedLocalSearch
 		double fitness = 0;
 		fitness = equationFitness.calculateFitness(solution, usedMetrics);
 		
-//		if (Integer.valueOf(evaluationsConsumed/1000)*1000==evaluationsConsumed) {
-//			
-//			String solutionText = ""; 
-//			for(int h = 0; h < solution.length; h++)
-//	    	{
-//				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
-//	    	}
+		if (Integer.valueOf(evaluationsConsumed/5000)*5000==evaluationsConsumed) {
 			
-//			long finishTimestamp = System.currentTimeMillis();
-//			long seconds = (finishTimestamp - startTimestamp);
+			String solutionText = ""; 
+			for(int h = 0; h < solution.length; h++)
+	    	{
+				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
+	    	}
 			
+			long finishTimestamp = System.currentTimeMillis();
+			long seconds = (finishTimestamp - startTimestamp);
+				
+			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
 			
-//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-			
-//			writer.flush();
-//		}
+			writer.flush();
+		}
 		evaluationsConsumed++;
 					
 		return fitness;	

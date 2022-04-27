@@ -34,8 +34,8 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 		Double[] topSolutionsMQ = new Double[solutionsQuantity];
 
 		int n = mdg.getSize();
-//		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
-		ClusterMetricsFull cm = new ClusterMetricsFull(mdg, solution, equationParams, project, usedMetrics);
+		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
+//		ClusterMetricsFull cm = new ClusterMetricsFull(mdg, solution, equationParams, project, usedMetrics);
 		
 		// solucao de entrada e a melhor. Unica conhecida
 		topSolutions[0] = solution;

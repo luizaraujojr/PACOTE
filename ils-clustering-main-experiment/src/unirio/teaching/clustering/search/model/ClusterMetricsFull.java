@@ -110,12 +110,12 @@ public class ClusterMetricsFull
 	/**
 	 * Numero de pacotes externos que o pacote depende
 	 */
-	private int[] internalExternalPackageDep;
+//	private int[] internalExternalPackageDep;
 	
 	/**
 	 * Numero de pacotes externos que dependem do pacote
 	 */
-	private int[] externalInternalPackageDep;
+//	private int[] externalInternalPackageDep;
 	
 	
 	private Project project;

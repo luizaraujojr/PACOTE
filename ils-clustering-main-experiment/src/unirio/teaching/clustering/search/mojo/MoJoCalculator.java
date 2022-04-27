@@ -312,6 +312,7 @@ public class MoJoCalculator {
 //        targetFile = tf;
 //        relFile = rf;
     	this.target = sf;
+    	prepareTarget(target);
     }
     
     
@@ -448,7 +449,7 @@ public class MoJoCalculator {
 
     private void commonPrep(Project project, int[] solution) {
 
-        numberOfObjectsInA = 0;
+//        numberOfObjectsInA = 0;
 
         /* Read target file first to update mapObjectClusterInB */
 //        if (isBunch(targetFile)) readTargetBunchFile();
@@ -456,11 +457,12 @@ public class MoJoCalculator {
 //        	readTargetRSFFile();
         
        
-        	prepareTarget(target);
+//        	prepareTarget(target); //coloquei no construtor
 
         /* Read source file */
 //        if (isBunch(sourceFile)) readSourceBunchFile();
 //        else readSourceRSFfile();
+    	
         	prepareSource(project, solution);
 
         l = mapClusterTagA.size(); /* number of clusters in A */
@@ -737,6 +739,11 @@ public class MoJoCalculator {
 //		cardinalitiesInB.clear();
 //		mapObjectClusterInB.clear();
 		
+		numberOfObjectsInA=0;
+		mapClusterTagA.clear();
+		clusterNamesInA.clear();
+		partitionA.clear();
+		
 		for (int i = 0; i < len; i++)
 		{
 			String clusterName = "PKG" + solution[i];
@@ -952,8 +959,10 @@ public class MoJoCalculator {
                    // This cluster is not in mapClusterTagB yet
                    index = mapClusterTagB.size();
                    // Since it is a new cluster, it currently contains 1 object
-                   cardinalitiesInB.addElement(new Integer(1));
-                   mapClusterTagB.put(clusterName, new Integer(index));
+                   Integer integer1 = Integer.valueOf(1);
+                   Integer integer2 = Integer.valueOf(index);
+                   cardinalitiesInB.addElement(integer1);	
+                   mapClusterTagB.put(clusterName, integer2);
                }
                else
                {
@@ -961,7 +970,8 @@ public class MoJoCalculator {
                    // Increase the cluster's cardinality in vector
                    // cardinalitiesInB
                    int newCardinality = 1 + cardinalitiesInB.elementAt(index).intValue();
-                   cardinalitiesInB.setElementAt(new Integer(newCardinality), index);
+                   Integer integer3 = Integer.valueOf(newCardinality);
+                   cardinalitiesInB.setElementAt(integer3, index);
                }
                mapObjectClusterInB.put(objectName, clusterName);
 		}

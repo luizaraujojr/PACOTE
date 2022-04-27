@@ -32,6 +32,7 @@ public class EquationFitness
 		this.construtiveMQ = new ConstrutiveAglomerativeMQ();
 		this.depFile =  sbRefDepFile;
 		
+		this.mojoCalculator = new MoJoCalculator(depFile);
 	}
 
 	/**
@@ -39,8 +40,6 @@ public class EquationFitness
 	 */
 	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
-		this.mojoCalculator = new MoJoCalculator(depFile);
-		
 		clusterSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
 		return mojoCalculator.mojofmnew(project, clusterSolution);
 	}
