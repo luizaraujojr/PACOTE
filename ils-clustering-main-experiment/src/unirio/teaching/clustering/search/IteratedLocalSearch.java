@@ -343,22 +343,22 @@ public class IteratedLocalSearch
 		double fitness = 0;
 		fitness = equationFitness.calculateFitness(solution, usedMetrics);
 		
-		if (Integer.valueOf(evaluationsConsumed/5000)*5000==evaluationsConsumed) {
-			
-			String solutionText = ""; 
-			for(int h = 0; h < solution.length; h++)
-	    	{
-				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
-	    	}
-			
-			long finishTimestamp = System.currentTimeMillis();
-			long seconds = (finishTimestamp - startTimestamp);
-				
-			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-			
-			writer.flush();
-		}
+//		if (Integer.valueOf(evaluationsConsumed/5000)*5000==evaluationsConsumed) {
+//			
+//			String solutionText = ""; 
+//			for(int h = 0; h < solution.length; h++)
+//	    	{
+//				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
+//	    	}
+//			
+//			long finishTimestamp = System.currentTimeMillis();
+//			long seconds = (finishTimestamp - startTimestamp);
+//				
+//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+//			
+//			writer.flush();
+//		}
 		evaluationsConsumed++;
 					
 		return fitness;	

@@ -1,0 +1,18 @@
+library("ggplot2")
+
+library("stringr");
+library("reshape2");
+
+
+data1 <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/5metricas20variacoes-20kEvals-6instanciaspequenas-050Perturb-MQref.csv", sep=";", header=TRUE);
+
+
+data2 <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/5metricasfixas-20kEvals-6instanciaspequenas-050Perturb-MQref.csv", sep=";", header=TRUE);
+	
+	
+data <- rbind(data1, data2)
+
+	
+	
+ggplot(data, aes(factor(nclasses), mojo)) +
+     geom_boxplot(aes(fill = tipo))

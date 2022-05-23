@@ -41,7 +41,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "T5metricas-50kEvals-JHOTDRAW-050Perturb-MQref");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "4metricas-mq-sub-super-20kEvals-20Instancias-050Perturb-MQref");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -54,8 +54,8 @@ public class MainProgram
 //		boolean[] metricasUtilizadas2 = {true, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false};
 //		
 //		executeExperiment(2, metricasUtilizadas2, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
-		
-		
+//		
+//		
 //		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
 //		
 //		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
@@ -64,31 +64,124 @@ public class MainProgram
 //		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
 //		
 //		executeExperiment(4, metricasUtilizadas4, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
-		
-		
-		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
-		
-		executeExperiment(5, metricasUtilizadas5, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
-		
-		
+////		
+////		
+//		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
+//		
+//		executeExperiment(5, metricasUtilizadas5, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		
 //		boolean[] metricasUtilizadas6 = {true, true, true, true, true, true, false, false, false, true, true, true, true, true, true, false, false, false};
 //		
 //		executeExperiment(6, metricasUtilizadas6, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
-//		boolean[] metricasUtilizadas7 = {true, true, true, true, true, true, true, false, false, true, true, true, true, true, true, true, false, false};
-//		
-//		executeExperiment(7, metricasUtilizadas7, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		boolean[] metricasUtilizadas7 = {true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false, true, true};
+		
+		executeExperiment(4, metricasUtilizadas7, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
 //		boolean[] metricasUtilizadas8 = {true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, false};
 //		
 //		executeExperiment(8, metricasUtilizadas8, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
-//		
-//		
+		
+		
 //		boolean[] metricasUtilizadas9 = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
+		
+		
+//		boolean[] metricasUtilizadas9 = {true, false, true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true};
 //		
-//		executeExperiment(9, metricasUtilizadas9, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		executeExperiment(5, metricasUtilizadas9, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		
+
+//		boolean[] metricasUtilizadas51 = {true, true, true, true, true, false, false, false, false};
+		
+		
+		
+		
+		//cenario para 5 metricas e 20 combinações
+			
+		
+//		boolean[] metricasUtilizadas51 = {true, true, false, false, false, true, true, true, false, true, true, false, false, false, true, true, true, false};
+//
+//		executeExperiment(5, metricasUtilizadas51, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas52 = {false, false, true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false};
+//	
+//		executeExperiment(5, metricasUtilizadas52, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas53 = {true, true, false, false, false, false, true, true, true, true, true, false, false, false, false, true, true, true};
+//		
+//		executeExperiment(5, metricasUtilizadas53, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas54 = {true, true, true, false, true, false, true, false, false, true, true, true, false, true, false, true, false, false};
+//		
+//		executeExperiment(5, metricasUtilizadas54, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas55 = {true, false, true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true};
+//		
+//		executeExperiment(5, metricasUtilizadas55, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas56 = {false, true, true, false, false, true, true, true, false, false, true, true, false, false, true, true, true, false};
+//		
+//		executeExperiment(5, metricasUtilizadas56, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas57 = {true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true, true, false};
+//		
+//		executeExperiment(5, metricasUtilizadas57, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//
+//		boolean[] metricasUtilizadas58 = {false, true, true, false, true, false, true, true, false, false, true, true, false, true, false, true, true, false};
+//		
+//		executeExperiment(5, metricasUtilizadas58, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas59 = {false, true, false, true, true, false, true, true, false, false, true, false, true, true, false, true, true, false};
+//		
+//		executeExperiment(5, metricasUtilizadas59, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas510 = {false, true, false, true, false, true, true, true, false, false, true, false, true, false, true, true, true, false};
+//		
+//		executeExperiment(5, metricasUtilizadas510, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas511 = {false, true, false, true, false, true, true, false, true, false, true, false, true, false, true, true, false, true};
+//
+//		executeExperiment(5, metricasUtilizadas511, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas512 = {false, false, false, true, false, true, true, true, true, false, false, false, true, false, true, true, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas512, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas513 = {true, false, false, false, false, true, true, true, true, true, false, false, false, false, true, true, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas513, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas514 = {true, false, true, false, false, true, false, true, true, true, false, true, false, false, true, false, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas514, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas515 = {false, true, true, false, false, true, false, true, true, false, true, true, false, false, true, false, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas515, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas516 = {false, true, false, false, true, true, false, true, true, false, true, false, false, true, true, false, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas516, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas517 = {true, true, false, false, true, true, false, false, true, true, true, false, false, true, true, false, false, true};
+//
+//		executeExperiment(5, metricasUtilizadas517, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas518 = {true, false, false, true, true, true, false, false, true, true, false, false, true, true, true, false, false, true};
+//
+//		executeExperiment(5, metricasUtilizadas518, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas519 = {true, false, false, true, false, true, false, true, true, true, false, false, true, false, true, false, true, true};
+//
+//		executeExperiment(5, metricasUtilizadas519, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		
+//		boolean[] metricasUtilizadas520 = {true, false, false, true, false, false, true, true, true, true, false, false, true, false, false, true, true, true};
+//		
+//		executeExperiment(5, metricasUtilizadas520, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);		
 		
 		
 //		executeMQReferenceGeneration();
@@ -156,7 +249,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 50000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
+						ils = new IteratedLocalSearch(project, 20000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
@@ -170,7 +263,7 @@ public class MainProgram
 				    	}
 
 //			    		writer 
-			    		writer.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
+			    		writer.println(cycle+ ";" + projectName + ";" + project.getClassCount()  + ";[" + solutionText + "];" +  Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()) + ";[" + Arrays.toString(usedMetrics) + "];");
 			    		writer.flush();
 //			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
 		    		

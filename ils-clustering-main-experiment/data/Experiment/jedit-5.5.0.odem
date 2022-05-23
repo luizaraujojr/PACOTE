@@ -8,7 +8,7 @@
       <provider>Manfred Duchrow Consulting &amp; Software</provider>
     </created-by>
   </header>
-  <context name="jedit">
+  <context name="jedit-5.5.0">
     <container name="E:/Downloads/Doutorado/Jedit/jedit-5.5.0.jar" classification="jar">
       <namespace name="org.gjt.sp.jedit">
         <type name="org.gjt.sp.jedit.Abbrevs$Expansion" classification="class" visibility="default">
