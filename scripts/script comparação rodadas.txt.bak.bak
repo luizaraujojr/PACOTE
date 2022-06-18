@@ -7,9 +7,6 @@ library("stringr");
 library("reshape2");
 
 data <- read.table("C:/Users/luizantoniolao/Desktop/doutorado/29metrica10keval20instanciasPequenasMQ1.csv", sep=";", header=TRUE);
-
-data <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/2-9metricas-20kEvals-20Instancias-050Perturb-MQref.csv", sep=";", header=TRUE);
-
 datanew <- data.frame(paste((str_count(data$solution,"\\,")+1)/2, 'Métricas'), data$instance, data$mojo, data$nclasses, data$besteval  )
 	names(datanew) <- c("metrics", "instance", "mojo", "nclasses", "besteval")
 

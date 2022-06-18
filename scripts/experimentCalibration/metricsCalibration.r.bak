@@ -59,14 +59,14 @@ install.packages("stringr")
 library("stringr") 
 
 
-data <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/2-9metricas-20kEvals-20Instancias-050Perturb-MQref.csv", sep=";", header=TRUE);
+data <- read.table("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/perturbacao/2-9metricas-20kEvals-20Instancias-050Perturb-MQref.csv", sep=";", header=TRUE);
 
 data$nmetricas = (str_count(data$solution,"\\,")+1)/2;
 
-dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 1/1.5;
-dref4 = 0.5/1.5;
+dref1 = 1;
+dref2 = 0;
+dref3 = 1;
+dref4 = 0.5;
 
 data2 <- subset(data, nmetricas==2)
 
@@ -85,12 +85,12 @@ data2$distance = sqrt(
 );
 
 
-dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 1/1.5;
-dref5 = 0.5/1.5;
-dref6 = 0/1.5;
+dref1 = 1;
+dref2 = 0;
+dref3 = 0;
+dref4 = 1;
+dref5 = 0.5;
+dref6 = 0;
 
 
 
@@ -116,13 +116,13 @@ data3$distance = sqrt(
 
 
 dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 0/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
 dref5 = 1/1.5;
-dref6 = 0.5/1.5;
-dref7 = 0/1.5;
-dref8 = 0/1.5;
+dref6 = 0./1.5;
+dref7 = 0;
+dref8 = 0;
 
 data4 <- subset(data, nmetricas==4)
 
@@ -151,15 +151,15 @@ data4$distance = sqrt(
 
 
 dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 0/1.5;
-dref5 = 0/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
 dref6 = 1/1.5;
-dref7 = 0.5/1.5;
-dref8 = 0/1.5;
-dref9 = 0/1.5;
-dref10 = 0/1.5;
+dref7 = 0./1.5;
+dref8 = 0;
+dref9 = 0;
+dref10 = 0;
 
 
 data5 <- subset(data, nmetricas==5)
@@ -196,17 +196,17 @@ data5$distance = sqrt(
 
 
 dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 0/1.5;
-dref5 = 0/1.5;
-dref6 = 0/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
 dref7 = 1/1.5;
-dref8 = 0.5/1.5;
-dref9 = 0/1.5;
-dref10 = 0/1.5;
-dref11 = 0/1.5;
-dref12 = 0/1.5;
+dref8 = 0./1.5;
+dref9 = 0;
+dref10 = 0;
+dref11 = 0;
+dref12 = 0;
 
 
 data6 <- subset(data, nmetricas==6)
@@ -242,20 +242,20 @@ data6$distance = sqrt(
 );
 
 
-dref1 =   1/1.5;
-dref2 =   0/1.5;
-dref3 =   0/1.5;
-dref4 =   0/1.5;
-dref5 =   0/1.5;
-dref6 =   0/1.5;
-dref7 =   0/1.5;
-dref8 =   1/1.5;
-dref9 = 0.5/1.5;
-dref10 =  0/1.5;
-dref11 =  0/1.5;
-dref12 =  0/1.5;
-dref13 =  0/1.5;
-dref14 =  0/1.5;
+dref1 = 1/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 1/1.5;
+dref9 = 0./1.5;
+dref10 = 0;
+dref11 = 0;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
 
 
 
@@ -300,21 +300,21 @@ data7$distance = sqrt(
 
 
 dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 0/1.5;
-dref5 = 0/1.5;
-dref6 = 0/1.5;
-dref7 = 0/1.5;
-dref8 = 0/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 0;
 dref9 = 1/1.5;
-dref10 = 0.5/1.5;
-dref11 = 0/1.5;
-dref12 = 0/1.5;
-dref13 = 0/1.5;
-dref14 = 0/1.5;
-dref15 = 0/1.5;
-dref16 = 0/1.5;
+dref10 = 0./1.5;
+dref11 = 0;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
+dref15 = 0;
+dref16 = 0;
 
 data8 <- subset(data, nmetricas==8)
 
@@ -359,23 +359,23 @@ data8$distance = sqrt(
 
 
 dref1 = 1/1.5;
-dref2 = 0/1.5;
-dref3 = 0/1.5;
-dref4 = 0/1.5;
-dref5 = 0/1.5;
-dref6 = 0/1.5;
-dref7 = 0/1.5;
-dref8 = 0/1.5;
-dref9 = 0/1.5;
+dref2 = 0;
+dref3 = 0;
+dref4 = 0;
+dref5 = 0;
+dref6 = 0;
+dref7 = 0;
+dref8 = 0;
+dref9 = 0;
 dref10 = 1/1.5;
-dref11 = 0.5/1.5;
-dref12 = 0/1.5;
-dref13 = 0/1.5;
-dref14 = 0/1.5;
-dref15 = 0/1.5;
-dref16 = 0/1.5;
-dref17 = 0/1.5;
-dref18 = 0/1.5;
+dref11 = 0./1.5;
+dref12 = 0;
+dref13 = 0;
+dref14 = 0;
+dref15 = 0;
+dref16 = 0;
+dref17 = 0;
+dref18 = 0;
 
 data9 <- subset(data, nmetricas==9)
 
@@ -430,65 +430,33 @@ nClasses <- sort(unique(datafinal$nclasses));
 
 nMetricas <- sort(unique(datafinal$nmetricas));
 
-columns <- c("nClasses","nMetricas","minDistance", "probMin", "meanDistance", "probMean", "maxDistance", "probMax", "prob<0.5", "prob<1.0")
+columns <- c("nClasses","nMetricas","minDistance", "probMin", "meanDistance", "probMean", "maxDistance", "probMax")
 	
 result <- matrix(nrow = 0, ncol=length(columns))  
-colnames(result) <- columns  
+colnames(result1) <- columns  
 
-for (nMetrica_ in nMetricas)
+for (nmetrica_ in metricas)
 	{
-	distri <- buildDistribution(nMetrica_, 100000);
+	distri <- buildDistribution(nmetrica_, 100000);
 	for (nClasses_ in nClasses)
 		{
-		iData <- subset(datafinal, nclasses == nClasses_ & nmetricas == nMetrica_ );
+		iData <- subset(datafinal, nclasses == nClasses_ & nmetricas == nmetrica_ );
 		
 		result <- rbind(result, c(
 		nClasses_, 
-		nMetrica_,
+		nmetrica_,
 		min(iData$distance),
 		calculateProbability(distri, min(iData$distance)),
 		mean(iData$distance),
 		calculateProbability(distri, mean(iData$distance)),
 		max(iData$distance),
-		calculateProbability(distri, max(iData$distance)),
-		calculateProbability(distri, 0.5),
-		calculateProbability(distri, 1.0)
-		))
+		calculateProbability(distri, max(iData$distance))))
 	}
 }
 
-result1	= as.data.frame(result);
-
-#install.packages("ggplot2")                  # Install & load ggplot2
-library("ggplot2")
 
 
-pdf(paste("C:/Users/luizantoniolao/Documents/GitHub/PACOTE/ils-clustering-main-experiment/data/Calibração/boxplot-metric-distance20keval-9metricas.pdf", sep = ""), width=8,height=8)
-	
-ggplot(datafinal, aes(factor(nmetricas), as.numeric(distance))) +
-    geom_boxplot(aes(fill = factor(nmetricas))) +
-	xlab("Número de Métricas") + 
-	ylab("Distância euclidiana") + 
-    theme(legend.position="none") +
-	facet_wrap(~nclasses)
-	 
-	 	dev.off();
-	 
-	 
-	 
-ggplot(datafinal, aes(nmetricas, as.numeric(distance)))
-	 
-	 
-	 
-	 
- scale_x_discrete(guide = guide_axis(angle=90))
- 
- 
-factor(pop)
+result1 <- matrix(nrow=length(instances )*length(metricas ), ncol=length(columns))
 
 
-ggplot(result1, aes(x=nClasses, y=factor(meanDistance), fill=nMetricas)) + 
-    geom_boxplot() 
-	
-	class(result1$nMetricas)
-
+result <- matrix(nrow=length(instances )*length(metricas ), ncol=length(columns), dimnames=list(, columns));

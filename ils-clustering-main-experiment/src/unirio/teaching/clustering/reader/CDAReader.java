@@ -22,6 +22,30 @@ import unirio.teaching.clustering.model.ProjectPackage;
 
 public class CDAReader
 {
+	private String[] ignoredClasses = null;
+	
+	/**
+	 * Indica a lista de classes ignoradas
+	 */
+	public void setIgnoredClasses(String[] classes)
+	{
+		this.ignoredClasses = classes;
+	}
+	
+	/**
+	 * Verifica se uma classe deve ser ignorada
+	 */
+	private boolean isIgnored(String class_)
+	{
+		if (ignoredClasses == null)
+			return false;
+		
+		for (String s : ignoredClasses)
+			if (s.compareToIgnoreCase(class_) == 0)
+				return true;
+		
+		return false;
+	}
 	/**
 	 * Carrega um arquivo XML para a memória
 	 */
@@ -206,6 +230,40 @@ public class CDAReader
 		if (doc == null)
 			return null;
 
-		return loadApplication(doc.getDocumentElement());
+		Project project = loadApplication(doc.getDocumentElement());
+
+		if (project == null)
+			return null;
+
+		checkDependencies(project);
+		return project;
+	}
+	/**
+	 * Verifica as dependï¿½ncias de um projeto
+	 */
+	
+	private void checkDependencies (Project project) throws XMLParseException
+	{
+		int classCount = project.getClassCount();
+		
+		for (int i = 0; i < classCount; i++)
+		{
+			ProjectClass _class = project.getClassIndex(i);
+	
+			for (int j = _class.getDependencyCount()-1; j >= 0; j--)
+			{
+				String targetName = _class.getDependencyIndex(j).getElementName();
+				int classIndex = project.getClassIndex(targetName);
+				
+				if (classIndex == -1)
+				{
+					if (!isIgnored(targetName))
+						System.out.println ( "Class not registered in project: " + targetName);
+//						throw new XMLParseException ("Class not registered in project: " + targetName);
+						_class.removeDependency(j);
+//						break;
+				}
+			}
+		}
 	}
 }

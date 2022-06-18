@@ -135,4 +135,12 @@ public class ProjectClass
 	{
 		return dependencies;
 	}
+	
+	/**
+	 * Remove uma depend�ncia da classe
+	 */
+	public void removeDependency(int index)
+	{
+		dependencies.remove(index);
+	}
 }
