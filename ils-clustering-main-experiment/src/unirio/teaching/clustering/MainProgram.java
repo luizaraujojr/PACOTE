@@ -47,7 +47,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "teste2.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "4metricas-50kEvals-JEDIT-050Perturb-DEVref.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
