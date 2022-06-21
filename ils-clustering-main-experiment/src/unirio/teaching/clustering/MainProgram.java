@@ -47,7 +47,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "34metricas-50kAvals-Instancias-050Perturb-MQref");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "teste2.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -68,19 +68,19 @@ public class MainProgram
 //		executeExperiment(2, metricasUtilizadas2, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 		
 		
-		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
-		
-		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		boolean[] metricasUtilizadas3 = {true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false};
+//		
+//		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
-		boolean[] metricasUtilizadas4 = {true, true, true, true, false, false, false, false, false, true, true, true, true, false, false, false, false, false};
+		boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
 		
-		executeExperiment(4, metricasUtilizadas4, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 //		
 //		
 //		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
 //		
-//		executeExperiment(5, metricasUtilizadas5, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
+//		executeExperiment(5, metricasUtilizadas5,referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 //		
 //		
 //		boolean[] metricasUtilizadas6 = {true, true, true, true, true, true, false, false, false, true, true, true, true, true, true, false, false, false};
@@ -252,7 +252,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(3);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -263,7 +263,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 50000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
+						ils = new IteratedLocalSearch(project, 1, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		

@@ -258,7 +258,7 @@ public class CDAReader
 				if (classIndex == -1)
 				{
 					if (!isIgnored(targetName))
-						System.out.println ( "Class not registered in project: " + targetName);
+//						System.out.println ( "Class not registered in project: " + targetName);
 //						throw new XMLParseException ("Class not registered in project: " + targetName);
 						_class.removeDependency(j);
 //						break;

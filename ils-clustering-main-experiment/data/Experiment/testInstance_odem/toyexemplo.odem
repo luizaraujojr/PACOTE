@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<!DOCTYPE ODEM PUBLIC "-//PFSW//DTD ODEM 1.1" "http://pfsw.org/ODEM/schema/dtd/odem-1.1.dtd">
+-->
+
+<ODEM version="1">
+  <header>
+    <created-by>
+      <exporter version="1.1.1">org.pf.tools.cda.ext.export.xml.XmlFileODEMExporter</exporter>
+      <provider>Manfred Duchrow Consulting &amp; Software</provider>
+    </created-by>
+  </header>
+  <context name="toyexemplo">
+    <container name="C:/Users/Marcio Barros/Documents/My Dropbox/Academia/Projetos/2011/SBSE/Meus Papers/Pacotes/Analises/exemplos/jstl/jstl-1.0.6 18C.jar" classification="jar">
+      <namespace name="pacote1">
+        <type name="pacote1.classe1" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="1">
+			<depends-on name="pacote1.classe2" classification="extends" />
+          </dependencies>
+        </type>
+		<type name="pacote1.classe2" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="3">
+			<depends-on name="pacote1.classe4" classification="extends" />
+			<depends-on name="pacote2.classe5" classification="extends" />
+		  <depends-on name="pacote3.classe6" classification="extends" />
+		  </dependencies>
+        </type>
+		<type name="pacote1.classe3" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+			<depends-on name="pacote1.classe1" classification="extends" />
+			<depends-on name="pacote1.classe2" classification="extends" />
+          </dependencies>
+        </type>
+		<type name="pacote1.classe4" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="3">
+		  <depends-on name="pacote1.classe1" classification="extends" />
+		  <depends-on name="pacote1.classe3" classification="extends" />
+		  <depends-on name="pacote3.classe6" classification="extends" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="pacote2">
+        <type name="pacote2.classe5" classification="class" visibility="public">
+          <dependencies count="0">
+          </dependencies>
+		  </type>
+      </namespace>
+      <namespace name="pacote3">
+        <type name="pacote3.classe6" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="1">
+		  <depends-on name="pacote3.classe7" classification="extends" />
+          </dependencies>
+        </type>
+		<type name="pacote3.classe7" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="1">
+		  <depends-on name="pacote3.classe8" classification="extends" />
+          
+          </dependencies>
+        </type>
+		<type name="pacote3.classe8" classification="interface" visibility="public" isAbstract="yes">
+          <dependencies count="0">
+		  </dependencies>
+        </type>
+      </namespace>
+    </container>
+  </context>
+</ODEM>
