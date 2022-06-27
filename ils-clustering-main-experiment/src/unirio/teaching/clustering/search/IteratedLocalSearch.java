@@ -1,5 +1,9 @@
 package unirio.teaching.clustering.search;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -88,14 +92,20 @@ public class IteratedLocalSearch
 
 	private PrintWriter writer;
 
+	private String[] logData;
+
+	private String logFile;
+	
 	private int cycle;
 	
 	private long startTimestamp;
+	
+	private int[] bestSolution;
 
 	/**
 	 * Initializes the ILS search process
      */
-	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics, PrintWriter writer, int cycle, long startTimestamp) throws Exception
+	public IteratedLocalSearch(Project project, int maxEvaluations, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics, PrintWriter writer, int cycle, long startTimestamp, String[] logData, String logFile) throws Exception
 	{
 		this.classCount = project.getClassCount();
 		this.mdg = buildGraph(project, this.classCount);
@@ -112,6 +122,11 @@ public class IteratedLocalSearch
 		this.writer = writer;
 		this.cycle = cycle;
 		this.startTimestamp = startTimestamp;
+	
+		this.logData = logData;
+		this.logFile = logFile;
+		this.bestSolution =  new int[solutionLength];
+		
 	}
 	
 	
@@ -197,9 +212,21 @@ public class IteratedLocalSearch
 	
 	public int[] executeExperiment(int cycleNumber, long startTimestamp) throws Exception
 	{
-		int[] bestSolution = createRandomSolution(solutionLength);		
-		this.bestFitness = calculateFitness(bestSolution);
-	
+		if (logData[0] == null) {
+			bestSolution = createRandomSolution(solutionLength);		
+			this.bestFitness = calculateFitness(bestSolution);	
+		}
+		else {
+			String[] logSolution = logData[2].replace("[", "").replace("]", "").replace(" ", "").split(",");
+			for(int i=0; i<solutionLength; i++) {
+				bestSolution[i] = Integer.parseInt(logSolution[i]);
+			}
+			
+//			bestSolution = int.Parse(logData.split(";")[1]).toArray();		
+			this.bestFitness = Double.parseDouble (logData[3]);
+			this.evaluationsConsumed = Integer.parseInt(logData[4]);
+		}
+		
 		int[] solution = bestSolution;
 		
 		while (evaluationsConsumed < maxEvaluations && bestFitness < 100)
@@ -254,8 +281,9 @@ public class IteratedLocalSearch
 	
 	/**
 	 * Performs the local search starting from a given solution
+	 * @throws FileNotFoundException 
 	 */
-	private int[] localSearch(int[] solution)
+	private int[] localSearch(int[] solution) throws FileNotFoundException
 	{
 		int[] newSolution = Arrays.copyOf(solution, solutionLength);
 
@@ -274,8 +302,9 @@ public class IteratedLocalSearch
 
 	/**
 	 * Runs a neighborhood visit starting from a given solution
+	 * @throws FileNotFoundException 
 	 */
-	private int[] visitNeighbors(int[] solution)
+	private int[] visitNeighbors(int[] solution) throws FileNotFoundException
 	{
 		int[] bestNeighbor = null;
 		double bestNeighborFitness = calculateFitness(solution);
@@ -337,29 +366,44 @@ public class IteratedLocalSearch
 
 	/**
 	 * Calculates the fitness accounting for the maximum budget
+	 * @throws FileNotFoundException 
 	 */
-	private double calculateFitness(int[] solution)
+	private double calculateFitness(int[] solution) throws FileNotFoundException
 	{
 		double fitness = 0;
 		fitness = equationFitness.calculateFitness(solution, usedMetrics);
 		
-		if (Integer.valueOf(evaluationsConsumed/10000)*10000==evaluationsConsumed) {
-			
-			String solutionText = ""; 
-			for(int h = 0; h < solution.length; h++)
-	    	{
-				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
-	    	}
-			
-			long finishTimestamp = System.currentTimeMillis();
-			long seconds = (finishTimestamp - startTimestamp);
-				
-			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
-			
-			writer.flush();
-		}
+//		if (Integer.valueOf(evaluationsConsumed/10000)*10000==evaluationsConsumed) {
+//			
+//			String solutionText = ""; 
+//			for(int h = 0; h < solution.length; h++)
+//	    	{
+//				solutionText = solutionText  + String.valueOf((solution[h]-5.0)/2.0) + ",";
+//	    	}
+//			
+//			long finishTimestamp = System.currentTimeMillis();
+//			long seconds = (finishTimestamp - startTimestamp);
+//				
+//			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + getBestFitness() + ";" + getEvaluationsConsumed() + ";"+ getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+////			writer.println(cycle + ";" + project.getName() + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + fitness + ";" + evaluationsConsumed + ";"+ evaluationsConsumed + ";" + seconds + " ; " + Arrays.toString(getClusterBestSolution()));
+//			
+//			writer.flush();
+//		}
 		evaluationsConsumed++;
+		
+		OutputStream logOut = new FileOutputStream (this.logFile);
+		PrintWriter logWriter = new PrintWriter(new OutputStreamWriter(logOut));
+		if (fitness >= this.bestFitness) {
+			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(solution) + ";" + fitness + ";" + this.evaluationsConsumed);
+			
+		}
+		else {
+			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(this.bestSolution) + ";" + this.bestFitness + ";" + this.evaluationsConsumed);	
+		}
+			
+			
+		logWriter.flush();
+		logWriter.close();
 					
 		return fitness;	
 	}

@@ -40,6 +40,9 @@ public class MainProgram
 	private static String pasta_teste_DIRECTORY_odem = new File("").getAbsolutePath() + "//data//Experiment//pastateste_odem";
 	private static String pasta_teste_DIRECTORY_comb = new File("").getAbsolutePath() + "//data//Experiment//pastateste_comb//";
 
+	private static String pasta_log = new File("").getAbsolutePath() + "//data//Experiment//log//";
+
+	
 	private static String RESULT_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering";
 	
 	
@@ -47,7 +50,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "4metricas-50kEvals-JEDIT-050Perturb-DEVref.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "teste.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -247,23 +250,39 @@ public class MainProgram
 		
 	    for (String projectName : file.list()) 
 	    {
-	    	
 			CDAReader reader = new CDAReader();    
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
 	    		int cycle = cycleNumber;
 	    		executor.submit(() -> {
-		
+
+	    			String[] logdata = new String[5];
+	    			String logfile = (pasta_log + cycle + ";" + project.getName() );
+	    			
+	    			File fileLog = new File(logfile);
+	    			if (fileLog.exists()) {
+	    				FileInputStream fis1 = new FileInputStream(fileLog);
+		    			Scanner sc1 = new Scanner(fis1);
+		    			
+		    			logdata = sc1.nextLine().split(";");
+		    			sc1.close();	
+	    			}    	
+	    			
+//	    			OutputStream logOut = new FileOutputStream (logfile);
+//	    			PrintWriter logWriter = new PrintWriter(new OutputStreamWriter(logOut));
+//	    			logWriter.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
+	    			
+	    			
 		        	long startTimestamp = System.currentTimeMillis();
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 50000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp);
+						ils = new IteratedLocalSearch(project, 10000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp, logdata, logfile);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
@@ -280,7 +299,9 @@ public class MainProgram
 			    		writer.println(cycle+ ";" + projectName + ";" + project.getClassCount()  + ";[" + solutionText + "];" +  Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()) + ";[" + Arrays.toString(usedMetrics) + "];");
 			    		writer.flush();
 //			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
-		    		
+//			    		sc1.close();
+			    		fileLog.delete();
+			    		
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
