@@ -50,7 +50,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "teste.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "4metricas-50kEvals-JHOTDRAW-050Perturb-DEVref.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -246,7 +246,7 @@ public class MainProgram
 	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
-		int maxCycles = 10;
+		int maxCycles = 5;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -254,7 +254,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -282,7 +282,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 10000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp, logdata, logfile);
+						ils = new IteratedLocalSearch(project, 20000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp, logdata, logfile);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
