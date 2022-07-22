@@ -50,7 +50,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "4metricas-50kEvals-JHOTDRAW-050Perturb-DEVref.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JEDIT-050Perturb-DEVref1.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -76,9 +76,13 @@ public class MainProgram
 //		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
-		boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
+		boolean[] metricasUtilizadas3 = {true, false, false, true, true, false, false, false, false, true, false, false, true, true, false, false, false, false};
 		
-		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+
+		//		boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
+		
+//		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 //		
 //		
 //		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};

@@ -2,6 +2,7 @@ package unirio.teaching.clustering.search.constructive;
 
 import unirio.teaching.clustering.model.Project;
 import unirio.teaching.clustering.search.model.ClusterMetrics;
+import unirio.teaching.clustering.search.model.ClusterMetrics3;
 import unirio.teaching.clustering.search.model.ClusterMetrics4;
 import unirio.teaching.clustering.search.model.ClusterMetricsFull;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
@@ -36,7 +37,8 @@ public class ConstrutiveAglomerativeMQ extends ConstrutiveAbstract
 
 		int n = mdg.getSize();
 //		ClusterMetrics cm = new ClusterMetrics(mdg, solution, equationParams, project, usedMetrics);
-		ClusterMetrics4 cm = new ClusterMetrics4(mdg, solution, equationParams, project, usedMetrics);
+		ClusterMetrics3 cm = new ClusterMetrics3(mdg, solution, equationParams, project, usedMetrics);
+//		ClusterMetrics4 cm = new ClusterMetrics4(mdg, solution, equationParams, project, usedMetrics);
 //		ClusterMetricsFull cm = new ClusterMetricsFull(mdg, solution, equationParams, project, usedMetrics);
 		
 		// solucao de entrada e a melhor. Unica conhecida
