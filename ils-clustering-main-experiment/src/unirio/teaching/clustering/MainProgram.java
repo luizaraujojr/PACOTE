@@ -26,6 +26,7 @@ import unirio.teaching.clustering.model.ProjectPackage;
 import unirio.teaching.clustering.reader.CDAReader;
 import unirio.teaching.clustering.search.IteratedLocalSearch;
 import unirio.teaching.clustering.search.model.ModuleDependencyGraph;
+import unirio.teaching.clustering.search.mojo.MoJoCalculator;
 
 public class MainProgram
 {
@@ -42,6 +43,8 @@ public class MainProgram
 
 	private static String pasta_log = new File("").getAbsolutePath() + "//data//Experiment//log//";
 
+	private static String pasta_result = new File("").getAbsolutePath() + "//data//Experiment//result//";
+
 	
 	private static String RESULT_DIRECTORY = new File("").getAbsolutePath() + "//data//clustering";
 	
@@ -50,7 +53,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JEDIT-050Perturb-DEVref1.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVref1teste.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 
@@ -76,12 +79,25 @@ public class MainProgram
 //		executeExperiment(3, metricasUtilizadas3, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
+		
+		
+		
+		
 		boolean[] metricasUtilizadas3 = {true, false, false, true, true, false, false, false, false, true, false, false, true, true, false, false, false, false};
 		
 		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 
-		//		boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
 		
+		
+		
+		
+		
+		
+		
+		
+		
+//				boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
+////		
 //		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 //		
 //		
@@ -204,6 +220,9 @@ public class MainProgram
 //		
 //		executeExperiment(5, metricasUtilizadas520, testInstance_odem_DIRECTORY, testInstance_comb_MQ_DIRECTORY, writer);		
 		
+//		executeSolutionGeneration();
+		
+//		CompareSolutions();
 		
 //		executeMQReferenceGeneration();
 		
@@ -213,6 +232,104 @@ public class MainProgram
 //		executeOriginalReference(referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
 }
 	
+	private static void CompareSolutions() {
+		// TODO Auto-generated method stub
+		
+		String[] f = new String[10];
+//		f[0] = "jhotdraw-7.6.0.odem-0.comb";
+//		f[1] = "jhotdraw-7.6.0.odem-1.comb";
+//		f[2] = "jhotdraw-7.6.0.odem-2.comb";
+//		f[3] = "jhotdraw-7.6.0.odem-3.comb";
+//		f[4] = "jhotdraw-7.6.0.odem-4.comb";
+//		f[5] = "jhotdraw-7.6.0.odem-5.comb";
+//		f[6] = "jhotdraw-7.6.0.odem-6.comb";
+//		f[7] = "jhotdraw-7.6.0.odem-7.comb";
+//		f[8] = "jhotdraw-7.6.0.odem-8.comb";
+//		f[9] = "jhotdraw-7.6.0.odem-9.comb";
+		
+
+		f[0] = "junit-4.12.3.odem-0.comb";
+		f[1] = "junit-4.12.3.odem-1.comb";
+		f[2] = "junit-4.12.3.odem-2.comb";
+		f[3] = "junit-4.12.3.odem-3.comb";
+		f[4] = "junit-4.12.3.odem-4.comb";
+		f[5] = "junit-4.12.3.odem-5.comb";
+		f[6] = "junit-4.12.3.odem-6.comb";
+		f[7] = "junit-4.12.3.odem-7.comb";
+		f[8] = "junit-4.12.3.odem-8.comb";
+		f[9] = "junit-4.12.3.odem-9.comb";
+		
+		for(int x = 0; x < 10; x++) {	
+//		    MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[0], "fm");
+//		    System.out.println(f[x] + ";"+  f[0] + ";"+ mc.mojofmOriginal());
+		    for(int y = 0; y < 10; y++) {
+		    	MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[y], "fm");
+			    System.out.println(f[x] + ";"+  f[y] + ";"+ mc.mojofmOriginal());	
+		    }			
+		}
+	}
+
+
+	private static void CompareSolutions1() {
+		// TODO Auto-generated method stub
+		
+		String[] f = new String[11];
+		f[0] = "jedit-5.5.0.odem-0.comb";
+		f[1] = "jhotdraw-7.6.0.odem-1.comb";
+		f[2] = "jedit-5.5.0.odem-2.comb";
+		f[3] = "jedit-5.5.0.odem-3.comb";
+		f[4] = "jedit-5.5.0.odem-4.comb";
+		f[5] = "jedit-5.5.0.odem-5.comb";
+		f[6] = "jedit-5.5.0.odem-6.comb";
+		f[7] = "jedit-5.5.0.odem-7.comb";
+		f[8] = "jedit-5.5.0.odem-8.comb";
+		f[9] = "jedit-5.5.0.odem-9.comb";
+		
+		f[10] = "jhotdraw-7.6.0.odem.comb";
+		
+//		for(int x = 0; x < 10; x++) {	
+//		    MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[0], "fm");
+//		    System.out.println(f[x] + ";"+  f[0] + ";"+ mc.mojofmOriginal());
+//		    for(int y = 0; y < 10; y++) {
+		    	MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[1], pasta_result + "//"+ f[10], "fm");
+			    System.out.println(f[1] + ";"+  f[10] + ";"+ mc.mojofmOriginal());	
+//		    }			
+//		}
+	}
+	
+	private static void executeSolutionGeneration() throws IOException, XMLParseException {
+		File file = new File(pasta_result);
+		
+	    for (String _file : file.list()) 
+	    {	
+	    	File resultFile = new File(pasta_result + "//"+ _file);
+			if (resultFile.exists()) {
+				FileInputStream fis1 = new FileInputStream(resultFile);
+    			Scanner sc = new Scanner(fis1);
+    			sc.nextLine();
+    			String[] resultData = new String[5];
+    			while (sc.hasNextLine())
+    			{
+    				resultData = sc.nextLine().split(";");
+    				CDAReader reader = new CDAReader();    
+    				Project project = reader.load(referenceInstance_odem_DIRECTORY + "//" + resultData[1]);
+    				
+    				
+    				String[] textSolution = resultData[9].replace("[", "").replace("]", "").replace(" ", "").split(",");
+    				int[] bestSolution = new int[textSolution.length];
+    				
+    				for(int i=0; i<textSolution.length; i++) {
+    					bestSolution[i] = Integer.parseInt(textSolution[i]);
+    				}
+    				
+    				generateSolution(project, resultData[1]+ "-" + resultData[0] , bestSolution, pasta_result);
+    					
+       			}
+    			sc.close();	
+			}
+	    }
+	}
+
 	private static void executeMQReferenceGeneration() throws Exception {
 
 		boolean[] usedMetrics = {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
@@ -250,7 +367,7 @@ public class MainProgram
 	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
-		int maxCycles = 5;
+		int maxCycles = 10;
 		
 	    for (String projectName : file.list()) 
 	    {

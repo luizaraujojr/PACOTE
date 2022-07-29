@@ -212,8 +212,12 @@ public class IteratedLocalSearch
 	
 	public int[] executeExperiment(int cycleNumber, long startTimestamp) throws Exception
 	{
+//		int[] bs = {1, 2, 3, 8, 4, 3, 3, 3};
+//		this.bestFitness = calculateFitness(bs);	
+		
+		
 		if (logData[0] == null) {
-			bestSolution = createRandomSolution(solutionLength);		
+			bestSolution = createRandomSolution(solutionLength);
 			this.bestFitness = calculateFitness(bestSolution);	
 		}
 		else {
