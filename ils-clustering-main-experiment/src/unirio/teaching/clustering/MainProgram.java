@@ -50,14 +50,20 @@ public class MainProgram
 	
 	
 	static int cycleNumber=0;
+
+	static int a1 = 0;
+	static int a3 = 0;
+	static int b2 = 0;
+	static int b3 = 0;
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVref1teste.csv");
-		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
-
-		
+//    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVrefreduzido4coeficientes.csv");
+//		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
+//		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
+//		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
+//		
+//		executeBruteForce(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 		
 //		executeMetricExtraction (referenceInstance_odem_DIRECTORY);
 //
@@ -83,12 +89,17 @@ public class MainProgram
 		
 		
 		
-		boolean[] metricasUtilizadas3 = {true, false, false, true, true, false, false, false, false, true, false, false, true, true, false, false, false, false};
-		
-		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+//		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
+//		
+//		executeExperiment(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 
 		
 		
+		
+//	boolean[] metricasUtilizadas3 = {true, false, false, true, true, false, false, false, false, true, false, false, true, true, false, false, false, false};
+//		
+//		executeExperiment(3, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+//		
 		
 		
 		
@@ -224,6 +235,10 @@ public class MainProgram
 		
 //		CompareSolutions();
 		
+//		CompareSolutionsJEDIT();
+//		CompareSolutionsJUNIT();
+		CompareSolutionsJHOTDRAW();
+		
 //		executeMQReferenceGeneration();
 		
 		
@@ -232,22 +247,11 @@ public class MainProgram
 //		executeOriginalReference(referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY);
 }
 	
-	private static void CompareSolutions() {
+	private static void CompareSolutionsJUNIT() {
 		// TODO Auto-generated method stub
 		
 		String[] f = new String[10];
-//		f[0] = "jhotdraw-7.6.0.odem-0.comb";
-//		f[1] = "jhotdraw-7.6.0.odem-1.comb";
-//		f[2] = "jhotdraw-7.6.0.odem-2.comb";
-//		f[3] = "jhotdraw-7.6.0.odem-3.comb";
-//		f[4] = "jhotdraw-7.6.0.odem-4.comb";
-//		f[5] = "jhotdraw-7.6.0.odem-5.comb";
-//		f[6] = "jhotdraw-7.6.0.odem-6.comb";
-//		f[7] = "jhotdraw-7.6.0.odem-7.comb";
-//		f[8] = "jhotdraw-7.6.0.odem-8.comb";
-//		f[9] = "jhotdraw-7.6.0.odem-9.comb";
-		
-
+	
 		f[0] = "junit-4.12.3.odem-0.comb";
 		f[1] = "junit-4.12.3.odem-1.comb";
 		f[2] = "junit-4.12.3.odem-2.comb";
@@ -269,13 +273,62 @@ public class MainProgram
 		}
 	}
 
-
+	private static void CompareSolutionsJHOTDRAW() {
+		// TODO Auto-generated method stub
+		
+		String[] f = new String[10];
+		f[0] = "jhotdraw-7.6.0.odem-0.comb";
+		f[1] = "jhotdraw-7.6.0.odem-1.comb";
+		f[2] = "jhotdraw-7.6.0.odem-2.comb";
+		f[3] = "jhotdraw-7.6.0.odem-3.comb";
+		f[4] = "jhotdraw-7.6.0.odem-4.comb";
+		f[5] = "jhotdraw-7.6.0.odem-5.comb";
+		f[6] = "jhotdraw-7.6.0.odem-6.comb";
+		f[7] = "jhotdraw-7.6.0.odem-7.comb";
+		f[8] = "jhotdraw-7.6.0.odem-8.comb";
+		f[9] = "jhotdraw-7.6.0.odem-9.comb";
+				
+		for(int x = 0; x < 10; x++) {	
+//		    MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[0], "fm");
+//		    System.out.println(f[x] + ";"+  f[0] + ";"+ mc.mojofmOriginal());
+		    for(int y = 0; y < 10; y++) {
+		    	MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[y], "fm");
+			    System.out.println(f[x] + ";"+  f[y] + ";"+ mc.mojofmOriginal());	
+		    }			
+		}
+	}
+	
+	private static void CompareSolutionsJEDIT() {
+		// TODO Auto-generated method stub
+		
+		String[] f = new String[10];
+		f[0] = "jedit-5.5.0.odem-0.comb";
+		f[1] = "jedit-5.5.0.odem-1.comb";
+		f[2] = "jedit-5.5.0.odem-2.comb";
+		f[3] = "jedit-5.5.0.odem-3.comb";
+		f[4] = "jedit-5.5.0.odem-4.comb";
+		f[5] = "jedit-5.5.0.odem-5.comb";
+		f[6] = "jedit-5.5.0.odem-6.comb";
+		f[7] = "jedit-5.5.0.odem-7.comb";
+		f[8] = "jedit-5.5.0.odem-8.comb";
+		f[9] = "jedit-5.5.0.odem-9.comb";
+				
+		for(int x = 0; x < 10; x++) {	
+//		    MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[0], "fm");
+//		    System.out.println(f[x] + ";"+  f[0] + ";"+ mc.mojofmOriginal());
+		    for(int y = 0; y < 10; y++) {
+		    	MoJoCalculator mc = new MoJoCalculator(pasta_result + "//"+ f[x], pasta_result + "//"+ f[y], "fm");
+			    System.out.println(f[x] + ";"+  f[y] + ";"+ mc.mojofmOriginal());	
+		    }			
+		}
+	}
+	
 	private static void CompareSolutions1() {
 		// TODO Auto-generated method stub
 		
 		String[] f = new String[11];
 		f[0] = "jedit-5.5.0.odem-0.comb";
-		f[1] = "jhotdraw-7.6.0.odem-1.comb";
+		f[1] = "jedit-5.5.0.odem-1.comb";
 		f[2] = "jedit-5.5.0.odem-2.comb";
 		f[3] = "jedit-5.5.0.odem-3.comb";
 		f[4] = "jedit-5.5.0.odem-4.comb";
@@ -298,11 +351,11 @@ public class MainProgram
 	}
 	
 	private static void executeSolutionGeneration() throws IOException, XMLParseException {
-		File file = new File(pasta_result);
+		File file = new File(pasta_result + "//files//");
 		
 	    for (String _file : file.list()) 
 	    {	
-	    	File resultFile = new File(pasta_result + "//"+ _file);
+	    	File resultFile = new File(pasta_result + "//files//"+ _file);
 			if (resultFile.exists()) {
 				FileInputStream fis1 = new FileInputStream(resultFile);
     			Scanner sc = new Scanner(fis1);
@@ -367,7 +420,7 @@ public class MainProgram
 	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
-		int maxCycles = 10;
+		int maxCycles = 5;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -375,7 +428,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -435,6 +488,70 @@ public class MainProgram
 ////	    	writer.close();
 	    }
 	}
+
+	
+	
+	@SuppressWarnings({ "unused", "null" })
+	private static void executeBruteForce(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
+	{
+		File file = new File(odemDir);
+//		int maxCycles = 5;
+		
+	    for (String projectName : file.list()) 
+	    {
+			CDAReader reader = new CDAReader();    
+    		Project project = reader.load(odemDir + "//" + projectName);
+    		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
+    	
+    		String[] logdata = new String[5];
+//			String logfile = (pasta_log + cycle + ";" + project.getName() );
+    		String logfile="";
+//			File fileLog = new File(logfile);
+//			if (fileLog.exists()) {
+//				FileInputStream fis1 = new FileInputStream(fileLog);
+//    			Scanner sc1 = new Scanner(fis1);
+//    			
+//    			logdata = sc1.nextLine().split(";");
+//    			sc1.close();	
+//			}    	
+
+    		ThreadPoolExecutor executor1 = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
+    					
+
+        	long startTimestamp = System.currentTimeMillis();
+          	
+
+        	int[] bestSolution = new int[4];
+    		IteratedLocalSearch ils;
+    		ils = new IteratedLocalSearch(project, 20000, sbRefDepFile, metricsSize, usedMetrics, writer, 0, startTimestamp, logdata, logfile);
+    		
+    		for(a1 = 0; a1 < 3; a1++) {
+    			for(a3 = 0; a3 < 3; a3++) {
+    				for(b2 = 0; b2 < 3; b2++) {
+    					for(b3 = 0; b3 < 3; b3++) {
+    						executor1.submit(() -> {
+
+	    						try {
+	    						bestSolution[0] = a1;
+								bestSolution[1] = a3;
+								bestSolution[2] = b2;
+								bestSolution[3] = b3;
+								
+	    						System.out.println(a1 + ";"  + a3 + ";" +b2 + ";"  + b3+ ";" + ils.calculateFitness(bestSolution));	    																
+								} catch (FileNotFoundException e) {
+//									 TODO Auto-generated catch block
+									e.printStackTrace();
+								} 
+    						});
+                		}	
+            		}	
+        		}	
+    		}
+    			
+	    	executor1.shutdown();
+	    }
+	}
+
 	
 	private static void executeMetricExtraction(String odemDir) throws Exception {
 		File file = new File(odemDir);

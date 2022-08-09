@@ -212,8 +212,54 @@ public class IteratedLocalSearch
 	
 	public int[] executeExperiment(int cycleNumber, long startTimestamp) throws Exception
 	{
-//		int[] bs = {1, 2, 3, 8, 4, 3, 3, 3};
+//		int[] bs = 		{1, 6, 8, 5, 3, 0};
 //		this.bestFitness = calculateFitness(bs);	
+//		System.out.println(this.bestFitness);
+//		int[] bs3 = {0, 5, 7, 5, 4, 3};
+//		this.bestFitness = calculateFitness(bs3);	
+//		System.out.println(this.bestFitness);
+//		int[] 		bs4 = {3, 5, 10, 5, 2, 0};
+//		
+//		this.bestFitness = calculateFitness(bs4);
+//		System.out.println(this.bestFitness);
+//		int[] 		bs5 = {2, 5, 10, 5, 3, 1};
+//		
+//		this.bestFitness = calculateFitness(bs5);
+//		System.out.println(this.bestFitness);
+//		int[] bs6 = {1, 6, 10, 5, 3, 1};
+//		
+//		this.bestFitness = calculateFitness(bs6);
+//		System.out.println(this.bestFitness);
+//		int[] 		bs7 = {1, 6, 6, 5, 3, 0};
+//		
+//		this.bestFitness = calculateFitness(bs7);
+//		System.out.println(this.bestFitness);
+//		int[] bs8 = {4, 5, 9, 5, 4, 4};
+//		
+//		this.bestFitness = calculateFitness(bs8);
+//		System.out.println(this.bestFitness);
+//		int[] bs9 = {2, 5, 10, 5, 3, 1};
+//		
+//		this.bestFitness = calculateFitness(bs9);
+//		System.out.println(this.bestFitness);
+//		int[] bs10 = {3, 6, 9, 5, 4, 4};
+//		this.bestFitness = calculateFitness(bs10);
+//		System.out.println(this.bestFitness);
+//		int[] bs11 = {3, 10, 10, 5, 0, 7};		
+//		this.bestFitness = calculateFitness(bs11);
+//		System.out.println(this.bestFitness);
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 		
 		
 		if (logData[0] == null) {
@@ -372,7 +418,7 @@ public class IteratedLocalSearch
 	 * Calculates the fitness accounting for the maximum budget
 	 * @throws FileNotFoundException 
 	 */
-	private double calculateFitness(int[] solution) throws FileNotFoundException
+	public double calculateFitness(int[] solution) throws FileNotFoundException
 	{
 		double fitness = 0;
 		fitness = equationFitness.calculateFitness(solution, usedMetrics);
@@ -395,19 +441,19 @@ public class IteratedLocalSearch
 //		}
 		evaluationsConsumed++;
 		
-		OutputStream logOut = new FileOutputStream (this.logFile);
-		PrintWriter logWriter = new PrintWriter(new OutputStreamWriter(logOut));
-		if (fitness >= this.bestFitness) {
-			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(solution) + ";" + fitness + ";" + this.evaluationsConsumed);
-			
-		}
-		else {
-			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(this.bestSolution) + ";" + this.bestFitness + ";" + this.evaluationsConsumed);	
-		}
-			
-			
-		logWriter.flush();
-		logWriter.close();
+//		OutputStream logOut = new FileOutputStream (this.logFile);
+//		PrintWriter logWriter = new PrintWriter(new OutputStreamWriter(logOut));
+//		if (fitness >= this.bestFitness) {
+//			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(solution) + ";" + fitness + ";" + this.evaluationsConsumed);
+//			
+//		}
+//		else {
+//			logWriter.println(this.cycle + ";" + project.getName() + ";" + Arrays.toString(this.bestSolution) + ";" + this.bestFitness + ";" + this.evaluationsConsumed);	
+//		}
+//			
+//			
+//		logWriter.flush();
+//		logWriter.close();
 					
 		return fitness;	
 	}

@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Calendar;
 
 import unirio.teaching.clustering.model.Project;
@@ -41,6 +42,7 @@ public class EquationFitness
 	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
 		clusterSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
+		System.out.println(Arrays.toString(clusterSolution));
 		return mojoCalculator.mojofmnew(project, clusterSolution);
 	}
 	
