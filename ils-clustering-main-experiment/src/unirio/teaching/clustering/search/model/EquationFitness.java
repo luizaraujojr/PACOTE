@@ -42,7 +42,7 @@ public class EquationFitness
 	public double calculateFitness(int[] equationParams, boolean[] usedMetrics)
 	{
 		clusterSolution = construtiveMQ.createSolution(mdg, equationParams, project, usedMetrics);
-		System.out.println(Arrays.toString(clusterSolution));
+//		System.out.println(Arrays.toString(clusterSolution));
 		return mojoCalculator.mojofmnew(project, clusterSolution);
 	}
 	

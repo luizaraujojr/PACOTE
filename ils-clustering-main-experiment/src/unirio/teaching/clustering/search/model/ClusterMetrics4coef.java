@@ -132,7 +132,7 @@ public class ClusterMetrics4coef
 		this.classCount = mdg.getSize();
 		
 //		this.c = new double[18];
-		this.c = new double[8]; //alteração para 5 métricas somente
+		this.c = new double[4]; //alteração para 4 coeficientes
 		
 		this.internalDependencyWeight = new int[classCount + 1];
 //		this.externalDependencyWeight = new int[classCount + 1];

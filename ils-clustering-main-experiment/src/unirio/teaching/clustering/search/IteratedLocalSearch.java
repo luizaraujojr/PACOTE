@@ -146,6 +146,31 @@ public class IteratedLocalSearch
 		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
 	}
 	
+//	CReated for bruteforce test
+	public IteratedLocalSearch(Project project, StringBuilder sbRefDepFile, int metricsSize, boolean[] usedMetrics, ModuleDependencyGraph _mdg) throws Exception
+	{
+		this.classCount = project.getClassCount();
+		this.mdg = _mdg;
+//		this.maxEvaluations = maxEvaluations;
+		this.evaluationsConsumed = 0;
+		this.iterationBestFound = 0;
+		this.bestFitness = -1_000_000_000_000.0;
+		this.project = project;
+		this.equationFitness = new	EquationFitness(mdg, project, sbRefDepFile);
+		this.metricsSize = metricsSize;
+		this.solutionLength = this.metricsSize * 2;
+		this.perturbationSize = this.solutionLength / 2;
+		this.usedMetrics = usedMetrics;
+//		this.writer = writer;
+//		this.cycle = cycle;
+//		this.startTimestamp = startTimestamp;
+//	
+//		this.logData = logData;
+//		this.logFile = logFile;
+		this.bestSolution =  new int[solutionLength];
+		
+	}
+	
 	/**
 	 * Builds the project's dependency graph from its representation
 	 */

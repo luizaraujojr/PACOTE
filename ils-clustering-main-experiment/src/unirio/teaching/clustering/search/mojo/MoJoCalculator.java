@@ -571,7 +571,7 @@ public class MoJoCalculator {
 */
 
     private void maxbipartiteMatching() {
-        
+        try {
         /* Create the graph and add all the edges */
         BipartiteGraph bgraph = new BipartiteGraph(l + m, l, m);
 
@@ -598,8 +598,12 @@ public class MoJoCalculator {
                 A[index].setGroup(i - l);
             }
         }
+        
+    } catch (Exception e) {
+    	System.out.println(e);
 
     }
+}
 
     /*
      * Calculates the MoJoFM value, using the formula MoJoFM(M) = 1 - mno(A,B)/

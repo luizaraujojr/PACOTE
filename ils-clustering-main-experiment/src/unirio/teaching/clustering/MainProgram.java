@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -55,15 +56,17 @@ public class MainProgram
 	static int a3 = 0;
 	static int b2 = 0;
 	static int b3 = 0;
+	static int[] bestSolution;
+	static double mojo;
 	
 	public static final void main(String[] args) throws Exception
 	{
-//    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVrefreduzido4coeficientes.csv");
-//		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-//		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
-//		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVrefreduzido4coeficientes.csv");
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
+		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
+		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
 //		
-//		executeBruteForce(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+		executeBruteForce(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 		
 //		executeMetricExtraction (referenceInstance_odem_DIRECTORY);
 //
@@ -237,7 +240,7 @@ public class MainProgram
 		
 //		CompareSolutionsJEDIT();
 //		CompareSolutionsJUNIT();
-		CompareSolutionsJHOTDRAW();
+//		CompareSolutionsJHOTDRAW();
 		
 //		executeMQReferenceGeneration();
 		
@@ -428,7 +431,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -495,7 +498,6 @@ public class MainProgram
 	private static void executeBruteForce(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
-//		int maxCycles = 5;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -504,54 +506,99 @@ public class MainProgram
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     	
     		String[] logdata = new String[5];
-//			String logfile = (pasta_log + cycle + ";" + project.getName() );
     		String logfile="";
-//			File fileLog = new File(logfile);
-//			if (fileLog.exists()) {
-//				FileInputStream fis1 = new FileInputStream(fileLog);
-//    			Scanner sc1 = new Scanner(fis1);
-//    			
-//    			logdata = sc1.nextLine().split(";");
-//    			sc1.close();	
-//			}    	
 
-    		ThreadPoolExecutor executor1 = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
-    					
-
-        	long startTimestamp = System.currentTimeMillis();
+    		long startTimestamp = System.currentTimeMillis();
           	
-
-        	int[] bestSolution = new int[4];
-    		IteratedLocalSearch ils;
-    		ils = new IteratedLocalSearch(project, 20000, sbRefDepFile, metricsSize, usedMetrics, writer, 0, startTimestamp, logdata, logfile);
     		
-    		for(a1 = 0; a1 < 3; a1++) {
-    			for(a3 = 0; a3 < 3; a3++) {
-    				for(b2 = 0; b2 < 3; b2++) {
-    					for(b3 = 0; b3 < 3; b3++) {
-    						executor1.submit(() -> {
-
-	    						try {
-	    						bestSolution[0] = a1;
-								bestSolution[1] = a3;
-								bestSolution[2] = b2;
-								bestSolution[3] = b3;
-								
-	    						System.out.println(a1 + ";"  + a3 + ";" +b2 + ";"  + b3+ ";" + ils.calculateFitness(bestSolution));	    																
-								} catch (FileNotFoundException e) {
-//									 TODO Auto-generated catch block
-									e.printStackTrace();
-								} 
-    						});
+    		ExecutorService executor = Executors.newFixedThreadPool(10);
+    		ModuleDependencyGraph mdg = buildGraph(project, project.getClassCount());
+    		for(a1 = 0; a1 < 11; a1++) {
+    			for(a3 = 0; a3 < 11; a3++) {
+    				for(b2 = 0; b2 < 11; b2++) {
+    					for(b3 = 0; b3 < 11; b3++) {			
+    						Runnable worker = new MyRunnable(a1, a3, b2, b3, project, sbRefDepFile, metricsSize, usedMetrics, mdg);
+    						executor.execute(worker);
                 		}	
             		}	
         		}	
     		}
-    			
-	    	executor1.shutdown();
+    		executor.shutdown();
+		while (!executor.isTerminated()) {
+		    // empty body
+		}
+		System.out.println("final");
+	    
+		System.out.println(Arrays.toString(bestSolution));
+		System.out.println(mojo);
 	    }
 	}
 
+	
+	
+	public static class MyRunnable implements Runnable {
+		private int[] solution;
+//		private final IteratedLocalSearch ils;
+		private final int a1;
+		private final int a3;
+		private final int b2;
+		private final int b3;
+		
+		private final Project project;
+		private final StringBuilder sbRefDepFile;
+		private final int metricsSize;
+		private final boolean[] usedMetrics;
+		private final ModuleDependencyGraph mdg;
+		
+		MyRunnable(int a1, int a3, int b2, int b3, Project _project, StringBuilder _sbRefDepFile, int _metricsSize, boolean[] _usedMetrics, ModuleDependencyGraph mdg) {
+//			this.ils = null;
+			this.a1 = a1;
+			this.a3 = a3;
+			this.b2 = b2;
+			this.b3 = b3;
+//			this.ils = _ils; 
+			this.solution = new int[4];
+//			this.solution = solution;
+			this.solution[0] = a1;
+			this.solution[1] = a3;
+			this.solution[2] = b2;
+			this.solution[3] = b3;
+			this.project = _project;
+			this.sbRefDepFile = _sbRefDepFile;
+			this.metricsSize = _metricsSize;
+			this.usedMetrics = _usedMetrics;
+			this.mdg = mdg;
+			
+		}
+		
+		@Override
+		public void run() {
+			try {
+				IteratedLocalSearch ils;
+	    		
+				ils = new IteratedLocalSearch(project, sbRefDepFile, metricsSize, usedMetrics, mdg);
+
+				
+//				System.out.println(Arrays.toString(solution));
+				double i = ils.calculateFitness(solution);
+//				String a = Arrays.toString(solution) + ";" + i;
+//				System.out.println(a);
+				if (i>mojo) {
+					mojo=i;
+					bestSolution =solution; 
+					System.out.println(Arrays.toString(bestSolution));
+					System.out.println(mojo);
+				}
+			} catch (Exception e) {
+				String a = Arrays.toString(solution);
+				System.out.println(a);
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+//			
+		}
+	}
+	
 	
 	private static void executeMetricExtraction(String odemDir) throws Exception {
 		File file = new File(odemDir);
