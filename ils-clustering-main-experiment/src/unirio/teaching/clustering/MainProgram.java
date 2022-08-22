@@ -61,7 +61,7 @@ public class MainProgram
 	
 	public static final void main(String[] args) throws Exception
 	{
-    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVrefreduzido4coeficientes.csv");
+    	OutputStream out = new FileOutputStream (RESULT_DIRECTORY+ "//" + "3metricas-20kEvals-JHOTDRAW-050Perturb-DEVrefreduzido4coeficientesaaaaa.csv");
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
@@ -423,7 +423,7 @@ public class MainProgram
 	private static void executeExperiment(int metricsSize, boolean[] usedMetrics, String odemDir, String combDir, PrintWriter writer) throws Exception 
 	{
 		File file = new File(odemDir);
-		int maxCycles = 5;
+		int maxCycles = 1;
 		
 	    for (String projectName : file.list()) 
 	    {
@@ -459,7 +459,7 @@ public class MainProgram
 		        		        	
 		    		IteratedLocalSearch ils;
 					try {
-						ils = new IteratedLocalSearch(project, 20000, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp, logdata, logfile);
+						ils = new IteratedLocalSearch(project, 1, sbRefDepFile, metricsSize, usedMetrics, writer, cycle, startTimestamp, logdata, logfile);
 						
 						int[] solution = ils.executeExperiment(cycleNumber, startTimestamp);
 		
@@ -475,7 +475,7 @@ public class MainProgram
 //			    		writer 
 			    		writer.println(cycle+ ";" + projectName + ";" + project.getClassCount()  + ";[" + solutionText + "];" +  Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()) + ";[" + Arrays.toString(usedMetrics) + "];");
 			    		writer.flush();
-//			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
+			    		System.out.println(cycle+ ";" + projectName + ";" + project.getClassCount() + ";[" + solutionText + "];" + Arrays.toString(solution) + ";" + ils.getBestFitness() + ";" + ils.getEvaluationsConsumed() + ";"+ ils.getIterationBestFound() + ";" + seconds + " ; " + Arrays.toString(ils.getClusterBestSolution()));
 //			    		sc1.close();
 			    		fileLog.delete();
 			    		
