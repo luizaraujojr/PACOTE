@@ -276,8 +276,41 @@ public class IteratedLocalSearch
 		
 
 		
-		
-		
+int[] bs0 = {10, 5, 3, 1, 9, 9, 8, 3}; this.bestFitness = calculateFitness(bs0 ); System.out.println(this.bestFitness);
+int[] bs1 = {8, 4, 2, 1, 6, 6, 9, 1}; this.bestFitness = calculateFitness(bs1 ); System.out.println(this.bestFitness);
+int[] bs2 = {5, 3, 3, 2, 7, 8, 8, 6}; this.bestFitness = calculateFitness(bs2 ); System.out.println(this.bestFitness);
+int[] bs3 = {5, 6, 8, 9, 2, 4, 2, 9}; this.bestFitness = calculateFitness(bs3 ); System.out.println(this.bestFitness);
+int[] bs4 = {4, 5, 5, 8, 2, 3, 0, 7}; this.bestFitness = calculateFitness(bs4 ); System.out.println(this.bestFitness);
+int[] bs5 = {3, 0, 4, 5, 8, 10, 6, 4}; this.bestFitness = calculateFitness(bs5 ); System.out.println(this.bestFitness);
+int[] bs6 = {10, 6, 8, 0, 8, 6, 8, 9}; this.bestFitness = calculateFitness(bs6 ); System.out.println(this.bestFitness);
+int[] bs7 = {8, 2, 1, 2, 10, 8, 9, 3}; this.bestFitness = calculateFitness(bs7 ); System.out.println(this.bestFitness);
+int[] bs8 = {2, 5, 7, 10, 1, 4, 3, 6}; this.bestFitness = calculateFitness(bs8 ); System.out.println(this.bestFitness);
+int[] bs9 = {3, 9, 5, 6, 2, 2, 5, 8}; this.bestFitness = calculateFitness(bs9 ); System.out.println(this.bestFitness);
+
+
+int[] bs10 = {1, 4, 0, 9, 4, 4, 1, 0}; this.bestFitness = calculateFitness(bs10 ); System.out.println(this.bestFitness);
+int[] bs11 = {1, 4, 3, 8, 4, 4, 2, 1}; this.bestFitness = calculateFitness(bs11 ); System.out.println(this.bestFitness);
+int[] bs12 = {3, 5, 5, 10, 2, 4, 0, 0}; this.bestFitness = calculateFitness(bs12 ); System.out.println(this.bestFitness);
+int[] bs13 = {0, 3, 0, 2, 4, 4, 2, 0}; this.bestFitness = calculateFitness(bs13 ); System.out.println(this.bestFitness);
+int[] bs14 = {10, 7, 5, 1, 8, 7, 5, 7}; this.bestFitness = calculateFitness(bs14 ); System.out.println(this.bestFitness);
+int[] bs15 = {10, 5, 4, 3, 7, 9, 9, 10}; this.bestFitness = calculateFitness(bs15 ); System.out.println(this.bestFitness);
+int[] bs16 = {6, 5, 5, 1, 10, 8, 6, 7}; this.bestFitness = calculateFitness(bs16 ); System.out.println(this.bestFitness);
+int[] bs17 = {0, 3, 0, 2, 4, 4, 2, 0}; this.bestFitness = calculateFitness(bs17 ); System.out.println(this.bestFitness);
+int[] bs18 = {6, 5, 5, 3, 8, 7, 6, 8}; this.bestFitness = calculateFitness(bs18 ); System.out.println(this.bestFitness);
+int[] bs19 = {7, 6, 6, 2, 6, 7, 7, 10}; this.bestFitness = calculateFitness(bs19 ); System.out.println(this.bestFitness);
+
+
+int[] bs20 = {9, 8, 7, 5, 6, 7, 7, 10}; this.bestFitness = calculateFitness(bs20 ); System.out.println(this.bestFitness);
+int[] bs21 = {1, 2, 2, 10, 5, 1, 1, 1}; this.bestFitness = calculateFitness(bs21 ); System.out.println(this.bestFitness);
+int[] bs22 = {2, 0, 1, 4, 8, 7, 6, 0}; this.bestFitness = calculateFitness(bs22 ); System.out.println(this.bestFitness);
+int[] bs23 = {10, 9, 7, 0, 6, 8, 7, 8}; this.bestFitness = calculateFitness(bs23 ); System.out.println(this.bestFitness);
+int[] bs24 = {6, 7, 10, 5, 3, 4, 2, 10}; this.bestFitness = calculateFitness(bs24 ); System.out.println(this.bestFitness);
+int[] bs25 = {4, 1, 1, 3, 5, 2, 2, 2}; this.bestFitness = calculateFitness(bs25 ); System.out.println(this.bestFitness);
+int[] bs26 = {9, 9, 8, 6, 1, 2, 3, 9}; this.bestFitness = calculateFitness(bs26 ); System.out.println(this.bestFitness);
+int[] bs27 = {3, 4, 3, 7, 5, 4, 3, 1}; this.bestFitness = calculateFitness(bs27 ); System.out.println(this.bestFitness);
+int[] bs28 = {3, 3, 2, 10, 5, 2, 0, 1}; this.bestFitness = calculateFitness(bs28 ); System.out.println(this.bestFitness);
+int[] bs29 = {1, 2, 3, 8, 4, 3, 3, 3}; this.bestFitness = calculateFitness(bs29 ); System.out.println(this.bestFitness);
+
 		
 		
 		

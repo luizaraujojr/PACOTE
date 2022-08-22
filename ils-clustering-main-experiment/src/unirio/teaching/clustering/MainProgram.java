@@ -66,7 +66,7 @@ public class MainProgram
 		writer.println("cicle;instance;nclasses;solutionreal;solution;mojo;evalsconsumed;besteval;time;cluster");
 		boolean[] metricasUtilizadas3 = {true, false, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false};
 //		
-		executeBruteForce(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+//		executeBruteForce(2, metricasUtilizadas3, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
 		
 //		executeMetricExtraction (referenceInstance_odem_DIRECTORY);
 //
@@ -110,9 +110,9 @@ public class MainProgram
 		
 		
 		
-//				boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
-////		
-//		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_DIRECTORY, writer);
+		boolean[] metricasUtilizadas4 = {true, true, false, true, true, false, false, false, false, true, true, false, true, true, false, false, false, false};
+//		
+		executeExperiment(4, metricasUtilizadas4, referenceInstance_odem_DIRECTORY, referenceInstance_comb_MQ_DIRECTORY, writer);
 //		
 //		
 //		boolean[] metricasUtilizadas5 = {true, true, true, true, true, false, false, false, false, true, true, true, true, true, false, false, false, false};
@@ -431,7 +431,7 @@ public class MainProgram
     		Project project = reader.load(odemDir + "//" + projectName);
     		StringBuilder sbRefDepFile = loadDepRefFile(combDir + projectName + ".comb");
     		
-    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+    		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(1);
     		
 	    	for(cycleNumber = 0; cycleNumber < maxCycles; cycleNumber++)
 	    	{
@@ -511,7 +511,7 @@ public class MainProgram
     		long startTimestamp = System.currentTimeMillis();
           	
     		
-    		ExecutorService executor = Executors.newFixedThreadPool(10);
+    		ExecutorService executor = Executors.newFixedThreadPool(5);
     		ModuleDependencyGraph mdg = buildGraph(project, project.getClassCount());
     		for(a1 = 0; a1 < 11; a1++) {
     			for(a3 = 0; a3 < 11; a3++) {
